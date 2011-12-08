@@ -1,0 +1,2189 @@
+<?xml version="1.0" standalone="yes"?>
+<CinemaDataSet xmlns="http://tempuri.org/CinemaDataSet.xsd">
+  <xs:schema id="CinemaDataSet" targetNamespace="http://tempuri.org/CinemaDataSet.xsd" xmlns:mstns="http://tempuri.org/CinemaDataSet.xsd" xmlns="http://tempuri.org/CinemaDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+    <xs:element name="CinemaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Users_Genres">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="UserId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="GenreId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Genre">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Movie_Genres">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="MovieId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="GenreId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Country">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ParentalGuidance">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="NewsItem">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="Subject" type="xs:string" minOccurs="0" />
+                <xs:element name="Text" type="xs:string" minOccurs="0" />
+                <xs:element name="StartDate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="EndDate" type="xs:dateTime" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Rating">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="UserId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+                <xs:element name="MovieId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+                <xs:element name="Rating" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Distributor">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Movie">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="Title" type="xs:string" minOccurs="0" />
+                <xs:element name="OriginalTitle" type="xs:string" minOccurs="0" />
+                <xs:element name="CountryId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+                <xs:element name="Year" type="xs:int" minOccurs="0" />
+                <xs:element name="StartDate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="Description" type="xs:string" minOccurs="0" />
+                <xs:element name="Picture" type="xs:string" minOccurs="0" />
+                <xs:element name="Length" type="xs:int" minOccurs="0" />
+                <xs:element name="ParentalGuidanceId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+                <xs:element name="DistributorId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+                <xs:element name="Inactive" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="NewItem_NewsCategories">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="NewsItemId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="CategoryId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="User">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="UserAccount" type="xs:string" minOccurs="0" />
+                <xs:element name="Password" type="xs:string" minOccurs="0" />
+                <xs:element name="LastName" type="xs:string" minOccurs="0" />
+                <xs:element name="FirstName" type="xs:string" minOccurs="0" />
+                <xs:element name="Street" type="xs:string" minOccurs="0" />
+                <xs:element name="ZipCode" type="xs:string" minOccurs="0" />
+                <xs:element name="City" type="xs:string" minOccurs="0" />
+                <xs:element name="EMail" type="xs:string" minOccurs="0" />
+                <xs:element name="Newsletter" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Inactive" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Room">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                <xs:element name="ScreenDiagonal" type="xs:int" minOccurs="0" />
+                <xs:element name="SeatCount" type="xs:int" minOccurs="0" />
+                <xs:element name="Inactive" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Performance">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="MovieId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+                <xs:element name="Date" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="RoomId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+                <xs:element name="Price" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Inactive" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Movie_Persons">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="MovieId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="PersonId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="ActorType" type="xs:int" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="NewsCategory">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                <xs:element name="Number" type="xs:int" minOccurs="0" />
+                <xs:element name="Inactive" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Person">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Tickets">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" />
+                <xs:element name="PerformanceId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+                <xs:element name="UserId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+                <xs:element name="TicketCode" type="xs:string" minOccurs="0" />
+                <xs:element name="Quantity" type="xs:int" minOccurs="0" />
+                <xs:element name="IsPaid" type="xs:boolean" minOccurs="0" />
+                <xs:element name="IsDispatched" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:Users_Genres" />
+        <xs:field xpath="mstns:UserId" />
+        <xs:field xpath="mstns:GenreId" />
+      </xs:unique>
+      <xs:unique name="Genre_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:Genre" />
+        <xs:field xpath="mstns:Id" />
+      </xs:unique>
+      <xs:unique name="Movie_Genres_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:Movie_Genres" />
+        <xs:field xpath="mstns:MovieId" />
+        <xs:field xpath="mstns:GenreId" />
+      </xs:unique>
+      <xs:unique name="Country_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:Country" />
+        <xs:field xpath="mstns:Id" />
+      </xs:unique>
+      <xs:unique name="ParentalGuidance_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:ParentalGuidance" />
+        <xs:field xpath="mstns:Id" />
+      </xs:unique>
+      <xs:unique name="NewsItem_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:NewsItem" />
+        <xs:field xpath="mstns:Id" />
+      </xs:unique>
+      <xs:unique name="Rating_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:Rating" />
+        <xs:field xpath="mstns:Id" />
+      </xs:unique>
+      <xs:unique name="Distributor_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:Distributor" />
+        <xs:field xpath="mstns:Id" />
+      </xs:unique>
+      <xs:unique name="Movie_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:Movie" />
+        <xs:field xpath="mstns:Id" />
+      </xs:unique>
+      <xs:unique name="NewItem_NewsCategories_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:NewItem_NewsCategories" />
+        <xs:field xpath="mstns:NewsItemId" />
+        <xs:field xpath="mstns:CategoryId" />
+      </xs:unique>
+      <xs:unique name="User_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:User" />
+        <xs:field xpath="mstns:Id" />
+      </xs:unique>
+      <xs:unique name="Room_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:Room" />
+        <xs:field xpath="mstns:Id" />
+      </xs:unique>
+      <xs:unique name="Performance_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:Performance" />
+        <xs:field xpath="mstns:Id" />
+      </xs:unique>
+      <xs:unique name="Movie_Persons_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:Movie_Persons" />
+        <xs:field xpath="mstns:MovieId" />
+        <xs:field xpath="mstns:ActorType" />
+        <xs:field xpath="mstns:PersonId" />
+      </xs:unique>
+      <xs:unique name="NewsCategory_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:NewsCategory" />
+        <xs:field xpath="mstns:Id" />
+      </xs:unique>
+      <xs:unique name="Person_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:Person" />
+        <xs:field xpath="mstns:Id" />
+      </xs:unique>
+      <xs:unique name="Tickets_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:Tickets" />
+        <xs:field xpath="mstns:Id" />
+      </xs:unique>
+    </xs:element>
+    <xs:annotation>
+      <xs:appinfo>
+        <msdata:Relationship name="Genre_Users_Genres" msdata:parent="Genre" msdata:child="Users_Genres" msdata:parentkey="Id" msdata:childkey="GenreId" />
+        <msdata:Relationship name="User_Users_Genres" msdata:parent="User" msdata:child="Users_Genres" msdata:parentkey="Id" msdata:childkey="UserId" />
+        <msdata:Relationship name="Movie_Movie_Genres" msdata:parent="Movie" msdata:child="Movie_Genres" msdata:parentkey="Id" msdata:childkey="MovieId" />
+        <msdata:Relationship name="Genre_Movie_Genres" msdata:parent="Genre" msdata:child="Movie_Genres" msdata:parentkey="Id" msdata:childkey="GenreId" />
+        <msdata:Relationship name="Distributor_Movie" msdata:parent="Distributor" msdata:child="Movie" msdata:parentkey="Id" msdata:childkey="DistributorId" />
+        <msdata:Relationship name="Rating_Movie" msdata:parent="Rating" msdata:child="Movie" msdata:parentkey="MovieId" msdata:childkey="Id" />
+        <msdata:Relationship name="ParentalGuidance_Movie" msdata:parent="ParentalGuidance" msdata:child="Movie" msdata:parentkey="Id" msdata:childkey="ParentalGuidanceId" />
+        <msdata:Relationship name="Country_Movie" msdata:parent="Country" msdata:child="Movie" msdata:parentkey="Id" msdata:childkey="CountryId" />
+        <msdata:Relationship name="Movie_Movie_Persons" msdata:parent="Movie" msdata:child="Movie_Persons" msdata:parentkey="Id" msdata:childkey="MovieId" />
+        <msdata:Relationship name="Person_Movie_Persons" msdata:parent="Person" msdata:child="Movie_Persons" msdata:parentkey="Id" msdata:childkey="PersonId" />
+        <msdata:Relationship name="NewsItem_NewItem_NewsCategories" msdata:parent="NewsItem" msdata:child="NewItem_NewsCategories" msdata:parentkey="Id" msdata:childkey="NewsItemId" />
+        <msdata:Relationship name="NewsCategory_NewItem_NewsCategories" msdata:parent="NewsCategory" msdata:child="NewItem_NewsCategories" msdata:parentkey="Id" msdata:childkey="CategoryId" />
+        <msdata:Relationship name="Room_Performance" msdata:parent="Room" msdata:child="Performance" msdata:parentkey="Id" msdata:childkey="RoomId" />
+        <msdata:Relationship name="Movie_Performance" msdata:parent="Movie" msdata:child="Performance" msdata:parentkey="Id" msdata:childkey="MovieId" />
+        <msdata:Relationship name="User_Tickets" msdata:parent="User" msdata:child="Tickets" msdata:parentkey="Id" msdata:childkey="UserId" />
+        <msdata:Relationship name="Performance_Tickets" msdata:parent="Performance" msdata:child="Tickets" msdata:parentkey="Id" msdata:childkey="PerformanceId" />
+        <msdata:Relationship name="User_Rating" msdata:parent="User" msdata:child="Rating" msdata:parentkey="Id" msdata:childkey="UserId" />
+      </xs:appinfo>
+    </xs:annotation>
+  </xs:schema>
+  <Users_Genres>
+    <UserId>3ddf4183-1486-4c88-9cd3-a6bff1ab6904</UserId>
+    <GenreId>dea37d93-341f-4155-b60c-664aa4db4a1c</GenreId>
+  </Users_Genres>
+  <Users_Genres>
+    <UserId>3ddf4183-1486-4c88-9cd3-a6bff1ab6904</UserId>
+    <GenreId>971dffeb-d7a5-4c1c-9296-ebba55347155</GenreId>
+  </Users_Genres>
+  <Users_Genres>
+    <UserId>a0779f59-a598-4d6e-888c-9e35d3291463</UserId>
+    <GenreId>382a9830-3dd1-4ba3-981c-d063e1176bc8</GenreId>
+  </Users_Genres>
+  <Users_Genres>
+    <UserId>2bbc7b8f-87f9-4bd8-aae0-f3dd4e234c21</UserId>
+    <GenreId>5970507c-5b77-4fcc-8be7-be3b67cd5d10</GenreId>
+  </Users_Genres>
+  <Users_Genres>
+    <UserId>d9fd4147-192c-4d75-825c-2e43fb857984</UserId>
+    <GenreId>70b8344e-de7d-49c8-8e9c-419c41fe7ad8</GenreId>
+  </Users_Genres>
+  <Users_Genres>
+    <UserId>05956660-0c1f-4a8b-99af-423f8cbc04ba</UserId>
+    <GenreId>dea37d93-341f-4155-b60c-664aa4db4a1c</GenreId>
+  </Users_Genres>
+  <Users_Genres>
+    <UserId>05956660-0c1f-4a8b-99af-423f8cbc04ba</UserId>
+    <GenreId>e9c84e7f-c207-407b-b517-7d72c90a8a6a</GenreId>
+  </Users_Genres>
+  <Users_Genres>
+    <UserId>8e783df9-c9f1-43b3-93b0-f2c7fe2e7114</UserId>
+    <GenreId>42ec39a8-a17a-4aeb-898e-bcc8aef0eaa1</GenreId>
+  </Users_Genres>
+  <Users_Genres>
+    <UserId>a0779f59-a598-4d6e-888c-9e35d3291463</UserId>
+    <GenreId>5970507c-5b77-4fcc-8be7-be3b67cd5d10</GenreId>
+  </Users_Genres>
+  <Users_Genres>
+    <UserId>d9fd4147-192c-4d75-825c-2e43fb857984</UserId>
+    <GenreId>7df96043-a05c-467f-9ec7-5903dc7502f4</GenreId>
+  </Users_Genres>
+  <Users_Genres>
+    <UserId>2bbc7b8f-87f9-4bd8-aae0-f3dd4e234c21</UserId>
+    <GenreId>7df96043-a05c-467f-9ec7-5903dc7502f4</GenreId>
+  </Users_Genres>
+  <Users_Genres>
+    <UserId>4542a11a-1ee9-4f40-b656-e79fddc74e6e</UserId>
+    <GenreId>7df96043-a05c-467f-9ec7-5903dc7502f4</GenreId>
+  </Users_Genres>
+  <Users_Genres>
+    <UserId>c40859d0-7b04-4478-b232-6b5ce6d352e7</UserId>
+    <GenreId>87c6480d-9a2b-4c2a-9301-aa48215922ef</GenreId>
+  </Users_Genres>
+  <Users_Genres>
+    <UserId>4542a11a-1ee9-4f40-b656-e79fddc74e6e</UserId>
+    <GenreId>87c6480d-9a2b-4c2a-9301-aa48215922ef</GenreId>
+  </Users_Genres>
+  <Users_Genres>
+    <UserId>c40859d0-7b04-4478-b232-6b5ce6d352e7</UserId>
+    <GenreId>42ec39a8-a17a-4aeb-898e-bcc8aef0eaa1</GenreId>
+  </Users_Genres>
+  <Users_Genres>
+    <UserId>d000a9dd-ba14-4ee8-94b0-199be33f93d3</UserId>
+    <GenreId>dea37d93-341f-4155-b60c-664aa4db4a1c</GenreId>
+  </Users_Genres>
+  <Users_Genres>
+    <UserId>d000a9dd-ba14-4ee8-94b0-199be33f93d3</UserId>
+    <GenreId>e9c84e7f-c207-407b-b517-7d72c90a8a6a</GenreId>
+  </Users_Genres>
+  <Users_Genres>
+    <UserId>d000a9dd-ba14-4ee8-94b0-199be33f93d3</UserId>
+    <GenreId>971dffeb-d7a5-4c1c-9296-ebba55347155</GenreId>
+  </Users_Genres>
+  <Users_Genres>
+    <UserId>d000a9dd-ba14-4ee8-94b0-199be33f93d3</UserId>
+    <GenreId>42ec39a8-a17a-4aeb-898e-bcc8aef0eaa1</GenreId>
+  </Users_Genres>
+  <Users_Genres>
+    <UserId>d000a9dd-ba14-4ee8-94b0-199be33f93d3</UserId>
+    <GenreId>5970507c-5b77-4fcc-8be7-be3b67cd5d10</GenreId>
+  </Users_Genres>
+  <Genre>
+    <Id>70b8344e-de7d-49c8-8e9c-419c41fe7ad8</Id>
+    <Name>Thriller</Name>
+  </Genre>
+  <Genre>
+    <Id>7df96043-a05c-467f-9ec7-5903dc7502f4</Id>
+    <Name>Trickfilm</Name>
+  </Genre>
+  <Genre>
+    <Id>dea37d93-341f-4155-b60c-664aa4db4a1c</Id>
+    <Name>Action</Name>
+  </Genre>
+  <Genre>
+    <Id>e9c84e7f-c207-407b-b517-7d72c90a8a6a</Id>
+    <Name>Horror</Name>
+  </Genre>
+  <Genre>
+    <Id>87c6480d-9a2b-4c2a-9301-aa48215922ef</Id>
+    <Name>SciFi</Name>
+  </Genre>
+  <Genre>
+    <Id>42ec39a8-a17a-4aeb-898e-bcc8aef0eaa1</Id>
+    <Name>Romantik</Name>
+  </Genre>
+  <Genre>
+    <Id>5970507c-5b77-4fcc-8be7-be3b67cd5d10</Id>
+    <Name>Dokumentation</Name>
+  </Genre>
+  <Genre>
+    <Id>382a9830-3dd1-4ba3-981c-d063e1176bc8</Id>
+    <Name>Komödie</Name>
+  </Genre>
+  <Genre>
+    <Id>971dffeb-d7a5-4c1c-9296-ebba55347155</Id>
+    <Name>Abenteuer</Name>
+  </Genre>
+  <Movie_Genres>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <GenreId>70b8344e-de7d-49c8-8e9c-419c41fe7ad8</GenreId>
+  </Movie_Genres>
+  <Movie_Genres>
+    <MovieId>d983a79b-a077-4558-9f3e-7a6d68550146</MovieId>
+    <GenreId>70b8344e-de7d-49c8-8e9c-419c41fe7ad8</GenreId>
+  </Movie_Genres>
+  <Movie_Genres>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <GenreId>971dffeb-d7a5-4c1c-9296-ebba55347155</GenreId>
+  </Movie_Genres>
+  <Movie_Genres>
+    <MovieId>1ed76f78-2ec3-4e16-a271-946abb7e9c24</MovieId>
+    <GenreId>5970507c-5b77-4fcc-8be7-be3b67cd5d10</GenreId>
+  </Movie_Genres>
+  <Movie_Genres>
+    <MovieId>1ed76f78-2ec3-4e16-a271-946abb7e9c24</MovieId>
+    <GenreId>70b8344e-de7d-49c8-8e9c-419c41fe7ad8</GenreId>
+  </Movie_Genres>
+  <Movie_Genres>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <GenreId>42ec39a8-a17a-4aeb-898e-bcc8aef0eaa1</GenreId>
+  </Movie_Genres>
+  <Movie_Genres>
+    <MovieId>4dd3a3b0-aef0-4731-af48-a12b951e4539</MovieId>
+    <GenreId>70b8344e-de7d-49c8-8e9c-419c41fe7ad8</GenreId>
+  </Movie_Genres>
+  <Movie_Genres>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <GenreId>e9c84e7f-c207-407b-b517-7d72c90a8a6a</GenreId>
+  </Movie_Genres>
+  <Movie_Genres>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <GenreId>dea37d93-341f-4155-b60c-664aa4db4a1c</GenreId>
+  </Movie_Genres>
+  <Movie_Genres>
+    <MovieId>4dd3a3b0-aef0-4731-af48-a12b951e4539</MovieId>
+    <GenreId>87c6480d-9a2b-4c2a-9301-aa48215922ef</GenreId>
+  </Movie_Genres>
+  <Movie_Genres>
+    <MovieId>d983a79b-a077-4558-9f3e-7a6d68550146</MovieId>
+    <GenreId>7df96043-a05c-467f-9ec7-5903dc7502f4</GenreId>
+  </Movie_Genres>
+  <Movie_Genres>
+    <MovieId>e23bc67f-6963-4770-9950-ad321b51f3d9</MovieId>
+    <GenreId>5970507c-5b77-4fcc-8be7-be3b67cd5d10</GenreId>
+  </Movie_Genres>
+  <Country>
+    <Id>0bf2ace3-c19e-4227-a4af-3100e48a88f2</Id>
+    <Name>Griechenland</Name>
+  </Country>
+  <Country>
+    <Id>5cabc0b8-25eb-45ba-81c2-8298764b0d57</Id>
+    <Name>Deutschland</Name>
+  </Country>
+  <Country>
+    <Id>3f46869d-36db-4a3b-88d8-8a28a9d068bc</Id>
+    <Name>USA</Name>
+  </Country>
+  <Country>
+    <Id>51975089-24b4-4d36-a7e7-965507a6cdd9</Id>
+    <Name>China</Name>
+  </Country>
+  <Country>
+    <Id>68be230b-13bd-421a-b7ff-9964f4f85f9d</Id>
+    <Name>Frankreich</Name>
+  </Country>
+  <Country>
+    <Id>420c3d5a-9fa8-4416-aace-cb35346c4138</Id>
+    <Name>Japan</Name>
+  </Country>
+  <Country>
+    <Id>93c40340-5172-4373-9914-d6ca2e7fcf5e</Id>
+    <Name>England</Name>
+  </Country>
+  <Country>
+    <Id>145501c7-1b1c-4fcd-96fe-f02e60fddb19</Id>
+    <Name>Italien</Name>
+  </Country>
+  <ParentalGuidance>
+    <Id>c784662c-3c63-4e8b-beaa-215098eefbe2</Id>
+    <Name>FSK16</Name>
+  </ParentalGuidance>
+  <ParentalGuidance>
+    <Id>76582ca3-35a8-4d6c-8e55-2a9993f1b991</Id>
+    <Name>FSK18</Name>
+  </ParentalGuidance>
+  <ParentalGuidance>
+    <Id>87e2f6c6-9df6-4cde-96f8-96283c2ecf15</Id>
+    <Name>FSK0</Name>
+  </ParentalGuidance>
+  <ParentalGuidance>
+    <Id>1f6e9feb-38eb-4dce-8936-adb35330228c</Id>
+    <Name>FSK6</Name>
+  </ParentalGuidance>
+  <ParentalGuidance>
+    <Id>a72e5a97-5d5d-4c4e-a45c-b310e0f955d0</Id>
+    <Name>FSK12</Name>
+  </ParentalGuidance>
+  <NewsItem>
+    <Id>6f0a848b-b8d7-40ed-88f8-1362fc4a5858</Id>
+    <Subject>Neue Leckereien sind da!</Subject>
+    <Text>Das Zweitschönste an einem Kinobesuch sind die Leckereien die man sich vor dem Film kauft. Wir sind bemüht, immer die neuesten Trends der Kinoverköstigung anzubieten. So haben alle unsere Snack-Bars ab diesem Winter ein komplett neues Sweets-Sortiment im Angebot. Wir haben lange mit Lieferanten verhandelt um das möglichst beste Produkte für unsere Kunden bekommen zu können. Neu wird z.B. das "Live-Zuckerwattering" sein - eine Zubereitung der Zuckerwatte durch den Zuckerwatte-Master direkt vor den Augen des Publikums. Ein unglaublicher Event!</Text>
+    <StartDate>2006-08-01T00:00:00+01:00</StartDate>
+    <EndDate>2006-12-01T00:00:00+01:00</EndDate>
+  </NewsItem>
+  <NewsItem>
+    <Id>42b9fe69-e74b-4138-a27d-3438195cbea6</Id>
+    <Subject>Verliebt bei Dreharbeiten?</Subject>
+    <Text>Die beiden Hauptdarsteller von "Mit Dir", Don Richardson und Marie Dubois, scheinen nicht nur auf Zelluloid zu einander gefunden zu haben. Auch im echten Leben sind sie seit kurzem ein Paar. "Es hat von Anfang an gefunkt, wir hatten gleich so einen guten Draht zu einander," beschreibt Don seine neue Liebe. Marie ergänzt "Vielleicht ist es ja Schicksal. Hätte Sean (Sean Purcell, Produzent des Films, Anm. d. R.) nicht dieses wunderbare und herzergreifende Drehbuch umgesetzt, wären Don und ich uns doch eventuell nie begegnet." Die beiden scheinen wirklich gut zu einander zu passen. "Ich bin so glücklich und am Set spürte man das auch. Ich denke es ist so viel Liebe in diesem Film, jeder sollte ihn sehen", sagt Don und blickt zu seiner Lebensgefährtin. Der Film "Mit Dir" (Filmstart Mitte Dezember) gilt als beste Romanze der letzten Jahre und Hoffnungsträger der Branche. Marie Dubois war zuletzt mit dem Schauspieler Rob Barker verheiratet. Die beiden schlossen die Ehe zum Filmstart eines Liebesfilms im Jahre 2003 und trennten sich nach 3 Wochen wieder.</Text>
+    <StartDate>2005-12-01T00:00:00+01:00</StartDate>
+    <EndDate>2006-04-30T00:00:00+01:00</EndDate>
+  </NewsItem>
+  <NewsItem>
+    <Id>262e2623-68f6-48ac-974f-3d450f6b673b</Id>
+    <Subject>Schocker des Jahres - Waste Streets</Subject>
+    <Text>Der in den USA bereits angelaufene Horror-Film Waste Streets hat das Potential der erfolgreichste Film seines Genres im Jahre 2006 zu werden. "Wir stehen noch sehr früh im Jahr aber die Zahlen die ich sehe und meine 30-jährige Erfahrung im Geschäft sagen mir, dass einige Leute über diesen Film reden werden müssen - ob sie wollen oder nicht", so David Campbell - Produzent des Films, der damit seine Ansprüche an die großen Preisverleihungen im Herbst deutlich anmeldet. Waste Streets hatte in der ersten Woche Rekordzahlen eingespielt und kann sich - zumidest was die relativen Besucherzahlen angeht - durchaus mit Klassikern wie Blood Quenz messen. Die Horror-Fans in Deutschland freuen sich auf den 28. Januar - dann ist Kinostart auch in ihrem Adventure Works Kino!</Text>
+    <StartDate>2006-01-07T00:00:00+01:00</StartDate>
+    <EndDate>2006-03-31T00:00:00+01:00</EndDate>
+  </NewsItem>
+  <NewsItem>
+    <Id>df40094b-d059-4225-a6dc-5c358be9d7b3</Id>
+    <Subject>Neue Website gestartet</Subject>
+    <Text>Die Adventure Works Cinemas zeigen sich mit einer neuen Internetpräsenz im Internet. Ab sofort wird es unseren Kunden noch einfacher gemacht Tickets über das Netz zu bestellen. Außerdem gibt es eine erweiterte Filminformation - surfen Sie doch etwas herum!</Text>
+    <StartDate>2006-01-01T00:00:00+01:00</StartDate>
+    <EndDate>2006-04-01T00:00:00+01:00</EndDate>
+  </NewsItem>
+  <NewsItem>
+    <Id>bff19de3-1b72-4756-bb3a-7510807f8105</Id>
+    <Subject>Grosser Schoko-Tag</Subject>
+    <Text>Zum Filmstart von "Paula Die Rosa Kröte" veranstaltet das Adventure Works Cinema einen großen Schoko-Tag. Zusammen mit einem namenhaften Hersteller rosa Schokoladenprodukte bieten wir Spiele, Spaß, Gewinne und gratis Besuche der Premiere. Voraussetzung ist eine rechtzeitige Anmeldung und das Erscheinen in komplett rosa-farbender Kleidung. Weitere Informationen folgen demnächst.</Text>
+    <StartDate>2005-12-15T00:00:00+01:00</StartDate>
+    <EndDate>2006-02-28T00:00:00+01:00</EndDate>
+  </NewsItem>
+  <NewsItem>
+    <Id>8df8361a-dd37-46fd-a8f6-bc05df5c29ec</Id>
+    <Subject>Ausbau der Beschallungsanlagen</Subject>
+    <Text>Adventure Works Cinema nimmt die Wünsche seiner Kunden ernst. Die im letzten Frühjahr durchgeführte Zufriedenheitsanalyse hat ergeben, dass viele unserer Gäste sich eine noch bessere Soundanlage wünschen. Die Geschäftsführung nahm dazu wie folgt Stellung: "Mit der bestehenden Anlage sind wir bereits jetzt, an allen unseren Standorten, das am besten ausgestattete Kino. Damit das so bleibt, werden wir im kommenden Jahr in eine weitere Ausbaustufe unser Beschallungsanlagen investieren." Die Gäste der Adventure Works Cinemas können sich also auf ein noch größeres Hörerlebnis freuen.</Text>
+    <StartDate>2006-09-01T00:00:00+01:00</StartDate>
+    <EndDate>2007-01-31T00:00:00+01:00</EndDate>
+  </NewsItem>
+  <NewsItem>
+    <Id>06505b3d-f7f6-4305-844a-d6338baa0545</Id>
+    <Subject>Günstige Specials für unsere Gäste</Subject>
+    <Text>Gäste der Adventure Works Cinemas kommen ab März in den Genuss besonderer Angebote und Specials der neuen "Cinema Partners". Ausgewählte Partner werden ihnen ihre Produkte zu besonders günstigen Preisen und exklusiv anbieten. "Wir schließen da eine ganz wichtige Lücke in unserem Serviceangebot. Unseren Partnern bieten wir eine spannende Umgebung, in denen sie ihre Produkte präsentieren können. Unsere Gäste erhalten im Gegenzug traumhafte Angbebote. Eine klassische Win-Win-Situation", berichtet die Marketing-Sprecherin der Adventure Works Cinemas sichtlich erfreut. Schwerpunkte werden in den Bereichen "Urlaub und Reise" sowie "Financial Services" liegen.</Text>
+    <StartDate>2006-06-01T00:00:00+01:00</StartDate>
+    <EndDate>2006-10-01T00:00:00+01:00</EndDate>
+  </NewsItem>
+  <NewsItem>
+    <Id>10f5becc-3cc6-4976-b817-ecbb44256fc2</Id>
+    <Subject>Vorbildlich in Sicherheit und Gästeschutz</Subject>
+    <Text>Bei der jährlichen Abnahme der Feuerschutzmaßnahmen durch die örtliche Feuerwehr wurden Adventure Works Cinema erneut Top-Noten gegeben. Sowohl die passiven Vorrichtungen als auch die Organisation der Fluchtwege sowie die Schulung der Mitarbeiter können vorbildlich genannt werden, sagte ein Verantwortlicher der zuständigen Behörde. "Wir möchten ein Ort sein, wo eine Familie eine gute Zeit haben kann, ohne sich Sorgen um die Sicherheit machen zu müssen. Wir investieren viel Mühe, Zeit und Geld in diese Dinge und wir tun das gern! Der Erfolg gibt uns schließlich Recht und die Gäste spüren das", so der Sprecher der Geschäftsführung zu dem guten Ergebnis.</Text>
+    <StartDate>2006-04-15T00:00:00+01:00</StartDate>
+    <EndDate>2006-07-31T00:00:00+01:00</EndDate>
+  </NewsItem>
+  <Distributor>
+    <Id>2261a49c-16d9-46f6-a8f2-154bb9fc2892</Id>
+    <Name>Neil And Partners Lmtd</Name>
+  </Distributor>
+  <Distributor>
+    <Id>8fa7a539-bbf7-4135-96f8-2f2e0d4ba1da</Id>
+    <Name>Meier, Schulz und Söhne</Name>
+  </Distributor>
+  <Distributor>
+    <Id>d1dd88d4-d1af-4e85-99ea-9bf3b7c79435</Id>
+    <Name>Movie AA Corp</Name>
+  </Distributor>
+  <Distributor>
+    <Id>0215c100-2b86-41f5-816f-da48863dc8a1</Id>
+    <Name>Rollin`s Dreams Inc</Name>
+  </Distributor>
+  <Distributor>
+    <Id>d3ceae8e-6ae7-40e9-af73-df3584413107</Id>
+    <Name>Purcell Films</Name>
+  </Distributor>
+  <Movie>
+    <Id>d983a79b-a077-4558-9f3e-7a6d68550146</Id>
+    <Title>Paula Die Rosa Kröte</Title>
+    <OriginalTitle>Paula die Rosa Kröte</OriginalTitle>
+    <CountryId>5cabc0b8-25eb-45ba-81c2-8298764b0d57</CountryId>
+    <Year>2006</Year>
+    <StartDate>2006-01-01T00:00:00+01:00</StartDate>
+    <Description>Die rosa Kröte Paula bewohnt den Teich im Garten des alten Herrn Y. Wie in der gleichnamigen TV-Serie erlebt sie wieder ein spannendes Abenteuer mit all ihren Freunden.</Description>
+    <Length>84</Length>
+    <ParentalGuidanceId>87e2f6c6-9df6-4cde-96f8-96283c2ecf15</ParentalGuidanceId>
+    <DistributorId>8fa7a539-bbf7-4135-96f8-2f2e0d4ba1da</DistributorId>
+    <Inactive>false</Inactive>
+  </Movie>
+  <Movie>
+    <Id>1ed76f78-2ec3-4e16-a271-946abb7e9c24</Id>
+    <Title>Alt+F4 - </Title>
+    <OriginalTitle>Alt-F4</OriginalTitle>
+    <CountryId>5cabc0b8-25eb-45ba-81c2-8298764b0d57</CountryId>
+    <Year>2006</Year>
+    <StartDate>2006-07-01T00:00:00+01:00</StartDate>
+    <Description>"Ja, brummen tut er noch und leuchten auch, glaube ich" - mit diesem Worten beginnt die 2006 fertig gestellte Dokumentation des mit zahlreichen Preisen bedachten Regisseurs Seely Scott - einem echten Superstar der europäischen avantgarde Tech-Doku. Der Zuschauer begleitet 24 Stunden lang die Angestellten eines IT-Departments in einem deutschen Großunternehmen. Erleben Sie wie es bei kleinen Zwischenfällen  - Blumenwasser im Netzteil -  auch schon einmal menschelt oder wie der 42-jährige Buildmaster K. nach der siebenundvierzigsten schlaflosen Nacht den Freitod wählt.</Description>
+    <Length>101</Length>
+    <ParentalGuidanceId>a72e5a97-5d5d-4c4e-a45c-b310e0f955d0</ParentalGuidanceId>
+    <DistributorId>8fa7a539-bbf7-4135-96f8-2f2e0d4ba1da</DistributorId>
+    <Inactive>false</Inactive>
+  </Movie>
+  <Movie>
+    <Id>4dd3a3b0-aef0-4731-af48-a12b951e4539</Id>
+    <Title>QD1-D.A.R.K. Gods Knight</Title>
+    <OriginalTitle>QD1-D.A.R.K.</OriginalTitle>
+    <CountryId>3f46869d-36db-4a3b-88d8-8a28a9d068bc</CountryId>
+    <Year>2006</Year>
+    <StartDate>2006-11-11T00:00:00+01:00</StartDate>
+    <Description>Die Erde steht vor ihrer ultimativen Zerstörung - Die Q11-D genannten Mächte fremder Galaxien haben bereits einen Großteil der Metropolen dieser Welt unter ihre Kontrolle gebracht. Die menschlichen Armeen können nur machtlos zusehen. Als letzten Ausweg kommen die Führer aller menschlichen Religionen zu einem Zirkel zusammen und erschaffen die Gods Knights. </Description>
+    <Length>140</Length>
+    <ParentalGuidanceId>76582ca3-35a8-4d6c-8e55-2a9993f1b991</ParentalGuidanceId>
+    <DistributorId>0215c100-2b86-41f5-816f-da48863dc8a1</DistributorId>
+    <Inactive>false</Inactive>
+  </Movie>
+  <Movie>
+    <Id>e23bc67f-6963-4770-9950-ad321b51f3d9</Id>
+    <Title>Jacques Debut</Title>
+    <OriginalTitle>Jacques Debut</OriginalTitle>
+    <CountryId>68be230b-13bd-421a-b7ff-9964f4f85f9d</CountryId>
+    <Year>2006</Year>
+    <StartDate>2006-09-01T00:00:00+01:00</StartDate>
+    <Description>Begleiten Sie den jungen französischen Schauspieler Jacques vom Anfang seiner Karriere bis zur ersten grossen Rolle an einem bekannten Haus. Dieser liebenswerte französische Low-Budget-Film eröffnet einen Blick hinter die Kulissen des grossen Theater-Geschäfts und auf seine spannenden Hauptdarsteller.</Description>
+    <Length>97</Length>
+    <ParentalGuidanceId>1f6e9feb-38eb-4dce-8936-adb35330228c</ParentalGuidanceId>
+    <DistributorId>d1dd88d4-d1af-4e85-99ea-9bf3b7c79435</DistributorId>
+    <Inactive>false</Inactive>
+  </Movie>
+  <Movie>
+    <Id>7ca98b3f-15b0-47f0-92b4-c208fc537615</Id>
+    <Title>Silver And Gray</Title>
+    <OriginalTitle>Silver And Gray</OriginalTitle>
+    <CountryId>3f46869d-36db-4a3b-88d8-8a28a9d068bc</CountryId>
+    <Year>2005</Year>
+    <StartDate>2005-12-01T00:00:00+01:00</StartDate>
+    <Description>Zwei alternde Kleinkriminelle wollen ein letztes Mal versuchen das "ultimative Ding" zu drehen. Anstatt finanziell ausgesorgt zu haben, erleben sie die rasanteste Reise ihres Lebens.</Description>
+    <Length>97</Length>
+    <ParentalGuidanceId>c784662c-3c63-4e8b-beaa-215098eefbe2</ParentalGuidanceId>
+    <DistributorId>2261a49c-16d9-46f6-a8f2-154bb9fc2892</DistributorId>
+    <Inactive>false</Inactive>
+  </Movie>
+  <Movie>
+    <Id>4e59b37f-3b8f-492f-a946-c94914729674</Id>
+    <Title>Mit Dir</Title>
+    <OriginalTitle>Since You Came</OriginalTitle>
+    <CountryId>3f46869d-36db-4a3b-88d8-8a28a9d068bc</CountryId>
+    <Year>2005</Year>
+    <StartDate>2006-12-15T00:00:00+01:00</StartDate>
+    <Description>50 Jahre, unzählige verlorene Lieben und Lebensträume nach dem der Lebemann  - und zeitweise erfolgreiche Rockstar -  Mike seine ländliche Heimat verließ um die Welt zu entdecken, trifft er seine Jugenliebe Charlotte wieder. Ein Film über die Liebe, die Zeit und die Relativität des Erlebten.</Description>
+    <Length>170</Length>
+    <ParentalGuidanceId>87e2f6c6-9df6-4cde-96f8-96283c2ecf15</ParentalGuidanceId>
+    <DistributorId>d3ceae8e-6ae7-40e9-af73-df3584413107</DistributorId>
+    <Inactive>false</Inactive>
+  </Movie>
+  <Movie>
+    <Id>45227998-cdc2-4282-952d-da6ea3125fcd</Id>
+    <Title>Waste Streets</Title>
+    <OriginalTitle>Waste Streets</OriginalTitle>
+    <CountryId>93c40340-5172-4373-9914-d6ca2e7fcf5e</CountryId>
+    <Year>2006</Year>
+    <StartDate>2006-01-28T00:00:00+01:00</StartDate>
+    <Description>Das entlegene irische Dorf schien der perfekte Ort zu sein, als die psychatrische Klinik des Professor D. im Jahre 1840 eine neue Immobilie suchte. Unter den scheuen Blicken der alten Dorfbewohner beginnt die medizinische Arbeit im alten Gemäuer. Doch alles soll eine unglaubliche Wendung nehmen!</Description>
+    <Length>112</Length>
+    <ParentalGuidanceId>76582ca3-35a8-4d6c-8e55-2a9993f1b991</ParentalGuidanceId>
+    <DistributorId>d3ceae8e-6ae7-40e9-af73-df3584413107</DistributorId>
+    <Inactive>false</Inactive>
+  </Movie>
+  <Movie>
+    <Id>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</Id>
+    <Title>Dunkle Sonnen</Title>
+    <OriginalTitle>Dunkle Sonnen</OriginalTitle>
+    <CountryId>5cabc0b8-25eb-45ba-81c2-8298764b0d57</CountryId>
+    <Year>2006</Year>
+    <StartDate>2006-04-01T00:00:00+01:00</StartDate>
+    <Description>Der deutsche Forscher R. bricht zu seiner bisher grössten Expedition auf. Er kann nicht wissen, dass sein Schicksal zu diesem Zeitpunkt bereits besiegelt ist; hat er doch die dunklen Geister bereits erweckt. Begleiten Sie ihn auf dieser spannenden Reise durch die mystische Unterwelt fremder Länder und den Dschungel unseres überheblichen Halbwissens.</Description>
+    <Length>125</Length>
+    <ParentalGuidanceId>a72e5a97-5d5d-4c4e-a45c-b310e0f955d0</ParentalGuidanceId>
+    <DistributorId>8fa7a539-bbf7-4135-96f8-2f2e0d4ba1da</DistributorId>
+    <Inactive>false</Inactive>
+  </Movie>
+  <User>
+    <Id>d000a9dd-ba14-4ee8-94b0-199be33f93d3</Id>
+    <UserAccount>Administrator</UserAccount>
+    <Password>admin</Password>
+    <LastName>Tester</LastName>
+    <FirstName>Hans</FirstName>
+    <Street></Street>
+    <ZipCode></ZipCode>
+    <City></City>
+    <EMail></EMail>
+    <Newsletter>false</Newsletter>
+    <Inactive>false</Inactive>
+  </User>
+  <User>
+    <Id>d9fd4147-192c-4d75-825c-2e43fb857984</Id>
+    <UserAccount>scholl</UserAccount>
+    <Password>sowasvongeheim</Password>
+    <LastName>Scholl</LastName>
+    <FirstName>Thorsten</FirstName>
+    <Street>Konrad-Zuse-Str. 1</Street>
+    <ZipCode>85716</ZipCode>
+    <City>Unterschleißheim</City>
+    <EMail>thorsten@contoso.com</EMail>
+    <Newsletter>true</Newsletter>
+    <Inactive>false</Inactive>
+  </User>
+  <User>
+    <Id>05956660-0c1f-4a8b-99af-423f8cbc04ba</Id>
+    <UserAccount>melspeck</UserAccount>
+    <Password>geheimstesderwelt</Password>
+    <LastName>Speckmann</LastName>
+    <FirstName>Melanie</FirstName>
+    <Street>Konrad-Zuse-Str. 1</Street>
+    <ZipCode>85716</ZipCode>
+    <City>Unterschleißheim</City>
+    <EMail>melanie@alpineskihouse.com</EMail>
+    <Newsletter>false</Newsletter>
+    <Inactive>false</Inactive>
+  </User>
+  <User>
+    <Id>c40859d0-7b04-4478-b232-6b5ce6d352e7</Id>
+    <UserAccount>nina81</UserAccount>
+    <Password>geheimergehtsfastnicht</Password>
+    <LastName>Vietzen</LastName>
+    <FirstName>Nina</FirstName>
+    <Street>Konrad-Zuse-Str. 1</Street>
+    <ZipCode>85716</ZipCode>
+    <City>Unterschleißheim</City>
+    <EMail>nina@contoso.com</EMail>
+    <Newsletter>true</Newsletter>
+    <Inactive>false</Inactive>
+  </User>
+  <User>
+    <Id>a0779f59-a598-4d6e-888c-9e35d3291463</Id>
+    <UserAccount>wackerroland</UserAccount>
+    <Password>nocheinweniggeheimer</Password>
+    <LastName>Wacker</LastName>
+    <FirstName>Roland</FirstName>
+    <Street>Konrad-Zuse-Str. 1</Street>
+    <ZipCode>85716</ZipCode>
+    <City>Unterschleißheim</City>
+    <EMail>roland@cpandl.com</EMail>
+    <Newsletter>false</Newsletter>
+    <Inactive>false</Inactive>
+  </User>
+  <User>
+    <Id>3ddf4183-1486-4c88-9cd3-a6bff1ab6904</Id>
+    <UserAccount>peter1</UserAccount>
+    <Password>geheim</Password>
+    <LastName>Brehm</LastName>
+    <FirstName>Peter</FirstName>
+    <Street>Konrad-Zuse-Str. 1</Street>
+    <ZipCode>85716</ZipCode>
+    <City>Unterschleißheim</City>
+    <EMail>peter@southridgevideo.com</EMail>
+    <Newsletter>false</Newsletter>
+    <Inactive>false</Inactive>
+  </User>
+  <User>
+    <Id>4542a11a-1ee9-4f40-b656-e79fddc74e6e</Id>
+    <UserAccount>franzK</UserAccount>
+    <Password>sehrgeheim</Password>
+    <LastName>Kohl</LastName>
+    <FirstName>Franz</FirstName>
+    <Street>Konrad-Zuse-Str. 1</Street>
+    <ZipCode>85716</ZipCode>
+    <City>Unterschleißheim</City>
+    <EMail>franz@thephone-company.com</EMail>
+    <Newsletter>false</Newsletter>
+    <Inactive>false</Inactive>
+  </User>
+  <User>
+    <Id>8e783df9-c9f1-43b3-93b0-f2c7fe2e7114</Id>
+    <UserAccount>heiko</UserAccount>
+    <Password>strenggeheim</Password>
+    <LastName>Elmsheuser</LastName>
+    <FirstName>Heiko</FirstName>
+    <Street>Konrad-Zuse-Str. 1</Street>
+    <ZipCode>85716</ZipCode>
+    <City>Unterschleißheim</City>
+    <EMail>heiko@tailspintoys.com</EMail>
+    <Newsletter>false</Newsletter>
+    <Inactive>false</Inactive>
+  </User>
+  <User>
+    <Id>2bbc7b8f-87f9-4bd8-aae0-f3dd4e234c21</Id>
+    <UserAccount>tPlate</UserAccount>
+    <Password>totalgeheim</Password>
+    <LastName>Plate</LastName>
+    <FirstName>Tanja</FirstName>
+    <Street>Konrad-Zuse-Str. 1</Street>
+    <ZipCode>85716</ZipCode>
+    <City>Unterschleißheim</City>
+    <EMail>tanja@litwareinc.com</EMail>
+    <Newsletter>false</Newsletter>
+    <Inactive>false</Inactive>
+  </User>
+  <Room>
+    <Id>efdbd190-9c8d-42bd-9d50-47db648cc939</Id>
+    <Name>C</Name>
+    <ScreenDiagonal>14</ScreenDiagonal>
+    <SeatCount>389</SeatCount>
+    <Inactive>false</Inactive>
+  </Room>
+  <Room>
+    <Id>57692a5f-4b52-467c-8604-641b7eb9119f</Id>
+    <Name>D</Name>
+    <ScreenDiagonal>8</ScreenDiagonal>
+    <SeatCount>97</SeatCount>
+    <Inactive>false</Inactive>
+  </Room>
+  <Room>
+    <Id>fef4b291-5cba-4585-9e07-8717582388df</Id>
+    <Name>A</Name>
+    <ScreenDiagonal>11</ScreenDiagonal>
+    <SeatCount>201</SeatCount>
+    <Inactive>false</Inactive>
+  </Room>
+  <Room>
+    <Id>285d6973-981f-4418-9f20-981ed19c04f6</Id>
+    <Name>B</Name>
+    <ScreenDiagonal>10</ScreenDiagonal>
+    <SeatCount>114</SeatCount>
+    <Inactive>false</Inactive>
+  </Room>
+  <Performance>
+    <Id>82416c18-99dc-40c0-85b1-001f437a7e7a</Id>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <Date>2006-04-01T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>7.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>06ca3cf5-3fef-4e0d-8410-03283ad18cd8</Id>
+    <MovieId>e23bc67f-6963-4770-9950-ad321b51f3d9</MovieId>
+    <Date>2006-09-15T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>9f9e9960-45b6-4e41-9b77-03c0964e4703</Id>
+    <MovieId>e23bc67f-6963-4770-9950-ad321b51f3d9</MovieId>
+    <Date>2006-10-06T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>dac3717c-7e5d-4311-a5c1-0540cb32029a</Id>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <Date>2006-05-20T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>6.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>75d24792-58b7-428c-913d-068d4a4ac946</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2007-03-20T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>50567b8e-778a-4df6-b0f2-074f15acdbef</Id>
+    <MovieId>4dd3a3b0-aef0-4731-af48-a12b951e4539</MovieId>
+    <Date>2006-11-25T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>5.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>7898f978-8237-4ed6-a825-0882da92a05a</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2007-04-17T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>b341cdeb-4505-47bf-92ce-08b5d2442824</Id>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <Date>2006-05-27T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>6.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>83253916-bcfb-4c4b-aa9b-0a6c0490b9f0</Id>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <Date>2006-01-22T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>e4245aa0-a9c9-457b-8760-0d0f14f01f40</Id>
+    <MovieId>4dd3a3b0-aef0-4731-af48-a12b951e4539</MovieId>
+    <Date>2006-11-18T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>5.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>c75380a8-54c4-4476-9c71-0de4a9fae5a5</Id>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <Date>2006-06-17T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>6.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>b4e4ba7d-f989-46dd-8876-0eabc501d712</Id>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <Date>2006-04-15T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>7.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>d3de66dd-c562-4a05-89e7-0fa12764890a</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2007-01-23T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>faa72c16-3c1d-4c55-a92c-110ef02ea748</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2006-12-22T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>a861e7af-185f-4477-95e1-14d74f56778b</Id>
+    <MovieId>e23bc67f-6963-4770-9950-ad321b51f3d9</MovieId>
+    <Date>2006-11-10T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>9a6c2834-d552-48fd-b97e-157d11a2365c</Id>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <Date>2006-07-01T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>6.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>70da5991-3f73-49a9-b9cc-1a9376408543</Id>
+    <MovieId>1ed76f78-2ec3-4e16-a271-946abb7e9c24</MovieId>
+    <Date>2006-07-08T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>7.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>8343ce53-4682-432a-b0ac-1c027af68898</Id>
+    <MovieId>1ed76f78-2ec3-4e16-a271-946abb7e9c24</MovieId>
+    <Date>2006-07-01T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>7.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>78208c54-7118-4dcc-8c72-1fcad02a4aaf</Id>
+    <MovieId>e23bc67f-6963-4770-9950-ad321b51f3d9</MovieId>
+    <Date>2006-09-08T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>0e5f9213-ca31-4a34-9e13-254c39cc31b9</Id>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <Date>2006-02-11T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>7.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>8bc48623-5a2e-46ba-9476-26f2caa3c6dd</Id>
+    <MovieId>d983a79b-a077-4558-9f3e-7a6d68550146</MovieId>
+    <Date>2006-02-12T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>5.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>6f7c0906-eeae-43fb-af68-2862e0bda0ea</Id>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <Date>2006-01-08T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>e4894d5a-21b4-42e7-b897-2bfdd4e15fe5</Id>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <Date>2005-12-04T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>b487c171-7265-4be9-af3e-3321586e74b4</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2007-04-03T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>d01f9155-a2d8-4a98-8fd5-33faa7040beb</Id>
+    <MovieId>1ed76f78-2ec3-4e16-a271-946abb7e9c24</MovieId>
+    <Date>2006-08-12T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>7.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>ee84de23-5289-4713-9b2d-3495e0d33234</Id>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <Date>2006-02-18T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>7.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>9da48a9f-3aa2-4486-8fc7-36f0df0c3fbf</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2007-03-06T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>93902ad4-c652-41ca-8ab8-386cfa188f8d</Id>
+    <MovieId>1ed76f78-2ec3-4e16-a271-946abb7e9c24</MovieId>
+    <Date>2006-09-30T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>7.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>211865af-0462-4c52-8cc5-3968e6d8119d</Id>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <Date>2006-07-08T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>6.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>57143b70-9244-48ee-8405-39815e60bd86</Id>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <Date>2006-04-08T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>6.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>d16c3ba4-33ea-436a-8a60-3b335d5d8546</Id>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <Date>2006-06-24T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>6.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>1918d4fa-9183-4b34-aeff-42a1d580ce05</Id>
+    <MovieId>1ed76f78-2ec3-4e16-a271-946abb7e9c24</MovieId>
+    <Date>2006-08-19T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>7.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>b1d48ca0-a184-454e-adea-43acd601e056</Id>
+    <MovieId>4dd3a3b0-aef0-4731-af48-a12b951e4539</MovieId>
+    <Date>2006-11-11T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>5.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>13622e6b-5209-46e3-a9d1-44158fb28e1f</Id>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <Date>2006-04-01T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>6.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>7f5d4e8b-1c22-4df2-a384-4602e40f4407</Id>
+    <MovieId>e23bc67f-6963-4770-9950-ad321b51f3d9</MovieId>
+    <Date>2006-12-01T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>139bfbac-81f6-4d9f-8c1f-462c9263ce31</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2006-12-29T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>afb581e9-4182-447d-b4d5-47a28a50e034</Id>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <Date>2006-01-19T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>e1c22891-99eb-47b1-a496-48172f540a0e</Id>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <Date>2006-05-06T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>7.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>f2e8108b-0e5c-4cb2-91da-490bfbe1466e</Id>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <Date>2006-02-09T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>fbf73e0d-4fc5-4ce7-8703-4bb8d05c2707</Id>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <Date>2006-04-22T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>6.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>8b6b6951-f53d-48cb-a105-4dde03023cf9</Id>
+    <MovieId>d983a79b-a077-4558-9f3e-7a6d68550146</MovieId>
+    <Date>2006-01-01T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>5.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>ac884296-2dfe-4f20-a7fd-4eb5b5751ca8</Id>
+    <MovieId>e23bc67f-6963-4770-9950-ad321b51f3d9</MovieId>
+    <Date>2006-10-27T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>b34973c3-9578-4d0f-b587-5238972d4178</Id>
+    <MovieId>4dd3a3b0-aef0-4731-af48-a12b951e4539</MovieId>
+    <Date>2007-01-27T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>5.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>c771ba2b-b2fd-4e9a-95c2-52ab97536fe2</Id>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <Date>2006-07-29T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>6.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>2756ed43-f085-4e28-8505-549cfd17995f</Id>
+    <MovieId>d983a79b-a077-4558-9f3e-7a6d68550146</MovieId>
+    <Date>2006-01-29T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>5.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>91facd10-a131-46b9-b53b-59aa4bdb25b3</Id>
+    <MovieId>1ed76f78-2ec3-4e16-a271-946abb7e9c24</MovieId>
+    <Date>2006-08-26T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>7.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>6a47dc10-8182-4616-8415-5dede56d6bd7</Id>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <Date>2006-01-28T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>7.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>89a24560-de1b-4e14-8919-610fcc643980</Id>
+    <MovieId>1ed76f78-2ec3-4e16-a271-946abb7e9c24</MovieId>
+    <Date>2006-07-22T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>7.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>c3d207ab-531d-4efd-9fe2-620ca034fe92</Id>
+    <MovieId>e23bc67f-6963-4770-9950-ad321b51f3d9</MovieId>
+    <Date>2006-10-13T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>933b3693-1c84-4722-a485-64f3c9c1684e</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2007-03-27T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>258b9927-711a-4870-9a8d-651dc2ff374b</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2007-01-12T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>93b58947-034f-4c2f-bd97-65da24af1c32</Id>
+    <MovieId>1ed76f78-2ec3-4e16-a271-946abb7e9c24</MovieId>
+    <Date>2006-10-07T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>7.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>a1b3032d-dc11-4132-8020-66a6684f0e11</Id>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <Date>2006-01-26T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>41ab260b-6382-4ef3-8244-67806031cd34</Id>
+    <MovieId>d983a79b-a077-4558-9f3e-7a6d68550146</MovieId>
+    <Date>2006-01-08T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>5.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>8a7dee53-3675-4f64-8437-67a1c9ba46b2</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2007-01-19T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>c1e94089-8f31-4cbf-8aaa-690d11c8d1fd</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2007-04-24T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>65fe08cb-667b-4a27-a538-69b768e14871</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2007-01-02T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>006b23a0-5bbe-4892-994a-69eba4ee3e52</Id>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <Date>2006-02-02T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>de8588ad-23f2-4424-8518-69fe33a531af</Id>
+    <MovieId>1ed76f78-2ec3-4e16-a271-946abb7e9c24</MovieId>
+    <Date>2006-09-09T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>7.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>6285a9fe-48d7-49cf-b09d-6c3d801663b8</Id>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <Date>2006-01-05T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>1d8a91db-1bbb-493a-8835-6d2f7f546c69</Id>
+    <MovieId>4dd3a3b0-aef0-4731-af48-a12b951e4539</MovieId>
+    <Date>2006-12-23T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>5.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>fb19a730-79fb-4aec-98a4-6e29703e9f12</Id>
+    <MovieId>e23bc67f-6963-4770-9950-ad321b51f3d9</MovieId>
+    <Date>2006-12-08T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>7aafae5a-2e9d-4edf-9424-6fba2fff7a0e</Id>
+    <MovieId>1ed76f78-2ec3-4e16-a271-946abb7e9c24</MovieId>
+    <Date>2006-09-23T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>7.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>2443d3b3-5ff6-442a-a478-7074ae935b73</Id>
+    <MovieId>e23bc67f-6963-4770-9950-ad321b51f3d9</MovieId>
+    <Date>2006-09-22T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>5b9ec629-4abe-4a90-89b1-70b1657b8e74</Id>
+    <MovieId>d983a79b-a077-4558-9f3e-7a6d68550146</MovieId>
+    <Date>2006-03-05T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>5.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>1f48a584-3b48-4378-a3e8-73f4b687a8a9</Id>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <Date>2006-01-12T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>04558d15-dc2c-4f11-abc2-750fd455e014</Id>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <Date>2006-07-15T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>6.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>571c6620-cbed-4b57-a17c-7881a1d04eeb</Id>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <Date>2006-03-25T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>7.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>b294474c-9cc1-4297-bf4b-7a18d2311a7c</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2006-12-26T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>34b7a43a-c33f-490a-ae24-7d6e0c99bcfd</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2007-02-20T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>6cdad7da-8408-47d5-a2e5-7d8474623813</Id>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <Date>2006-02-04T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>7.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>ec76eaf8-a37f-48e1-b8ff-7e6fac3b49c1</Id>
+    <MovieId>e23bc67f-6963-4770-9950-ad321b51f3d9</MovieId>
+    <Date>2006-09-29T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>75eaa821-2159-4d77-8042-7e8d2c72ca81</Id>
+    <MovieId>d983a79b-a077-4558-9f3e-7a6d68550146</MovieId>
+    <Date>2006-04-02T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>5.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>1a89f0af-24c7-4072-80c5-7f12ccac414e</Id>
+    <MovieId>e23bc67f-6963-4770-9950-ad321b51f3d9</MovieId>
+    <Date>2006-10-20T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>148e73af-59dc-4ed7-879f-80083f971c99</Id>
+    <MovieId>4dd3a3b0-aef0-4731-af48-a12b951e4539</MovieId>
+    <Date>2007-01-20T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>5.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>6ae51ff3-d013-41ff-a278-81078b258fc1</Id>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <Date>2006-04-22T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>7.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>00a10794-3a7b-47ab-8cf2-81e327b37b6f</Id>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <Date>2005-12-18T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>63951c95-0bdd-4914-bb02-82a5acd72361</Id>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <Date>2006-01-15T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>c1f5ac98-83a7-4794-8226-85ac393dc382</Id>
+    <MovieId>4dd3a3b0-aef0-4731-af48-a12b951e4539</MovieId>
+    <Date>2007-02-03T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>5.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>8b2cd0b0-a63d-4391-ac03-86481e779785</Id>
+    <MovieId>4dd3a3b0-aef0-4731-af48-a12b951e4539</MovieId>
+    <Date>2007-01-06T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>5.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>a47edb36-a266-43c9-b652-86714084bdba</Id>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <Date>2006-06-03T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>6.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>959519e2-0c96-43d4-97dc-87481b39a7eb</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2006-12-15T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>e2713e5b-9d94-47bd-9035-8814cec4a101</Id>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <Date>2006-04-29T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>6.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>8dde7649-f143-4b53-b53b-8978f41d0653</Id>
+    <MovieId>d983a79b-a077-4558-9f3e-7a6d68550146</MovieId>
+    <Date>2006-02-19T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>5.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>fe4b1f49-b2a0-48ff-9509-8bfcdd5252ed</Id>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <Date>2006-05-27T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>7.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>54a9d1b6-e23f-47a4-810d-8fc042d5b808</Id>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <Date>2005-12-11T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>25968b55-36ef-4020-b16a-91e6ae77c0fb</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2007-01-30T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>a54a4cbf-6d03-44ce-8a14-930f10550d2b</Id>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <Date>2006-06-10T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>6.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>f16d006f-ca0c-4909-a7f0-94292b778ec1</Id>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <Date>2006-03-18T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>7.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>fb5c60cb-aa08-4f3c-b7a6-962a783d65f4</Id>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <Date>2006-08-05T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>6.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>6ee21568-a046-427f-9345-9e3b0cc79a08</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2007-01-05T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>d4c18aab-617a-4b54-a0cb-9f8814873acf</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2006-12-19T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>14501f32-94f4-4ca8-b8fc-a08f933d71e1</Id>
+    <MovieId>e23bc67f-6963-4770-9950-ad321b51f3d9</MovieId>
+    <Date>2006-11-24T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>699952dc-cc26-45b5-88eb-a126bb88c18f</Id>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <Date>2006-07-22T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>6.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>761f6496-18ca-4fa9-8371-a35441ec21b5</Id>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <Date>2006-02-05T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>139596e5-9d35-4b8d-9053-a35b4c5eebfd</Id>
+    <MovieId>d983a79b-a077-4558-9f3e-7a6d68550146</MovieId>
+    <Date>2006-02-05T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>5.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>4ed23cfb-ba84-4fd6-8e10-a83b8e701ea3</Id>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <Date>2006-03-11T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>7.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>09f49a2e-0c07-4c7a-9204-ae388a72a2da</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2007-02-13T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>b37e06df-4f1a-467f-9a93-b2901d8c437d</Id>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <Date>2006-04-29T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>7.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>105063fb-9a65-4d3b-8f36-b33f7882018d</Id>
+    <MovieId>d983a79b-a077-4558-9f3e-7a6d68550146</MovieId>
+    <Date>2006-04-09T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>5.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>fad3f9c1-e7be-407d-8e4e-ba3a166676f5</Id>
+    <MovieId>1ed76f78-2ec3-4e16-a271-946abb7e9c24</MovieId>
+    <Date>2006-09-16T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>7.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>74e1ee50-f950-4beb-a748-bc04e8d735cd</Id>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <Date>2006-02-25T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>7.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>af73e3e2-b5a9-428c-9402-bd138f804fa7</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2007-01-16T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>24db27bc-97f7-41c4-8901-bf6bd962fd81</Id>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <Date>2006-05-13T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>6.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>c2688b2b-3131-4f31-b095-bfd87b3ec029</Id>
+    <MovieId>e23bc67f-6963-4770-9950-ad321b51f3d9</MovieId>
+    <Date>2006-11-17T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>833668dc-8847-46fb-b394-c11a048fe520</Id>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <Date>2005-12-08T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>906cd915-dc53-44fb-a1af-c2f28bb18b9c</Id>
+    <MovieId>1ed76f78-2ec3-4e16-a271-946abb7e9c24</MovieId>
+    <Date>2006-07-29T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>7.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>eddb9c50-2116-4e20-b687-c7140438d870</Id>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <Date>2005-12-22T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>da913e24-0d7c-4a6e-979a-c774b23aba95</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2007-01-26T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>87e5d0a8-b2dd-4c5e-8313-cb36a0e26a78</Id>
+    <MovieId>e23bc67f-6963-4770-9950-ad321b51f3d9</MovieId>
+    <Date>2006-11-03T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>88bd3bb5-298d-4ab6-879b-cc4bbf8e43a4</Id>
+    <MovieId>e23bc67f-6963-4770-9950-ad321b51f3d9</MovieId>
+    <Date>2006-09-01T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>24a098d1-d624-47a0-a3b4-cd9eba4cd117</Id>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <Date>2005-12-29T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>ccfe1060-8585-49c7-8dec-cfdbbd6e10fa</Id>
+    <MovieId>d983a79b-a077-4558-9f3e-7a6d68550146</MovieId>
+    <Date>2006-03-26T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>5.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>cd44fb34-a219-491d-aa23-d236d9361b10</Id>
+    <MovieId>4dd3a3b0-aef0-4731-af48-a12b951e4539</MovieId>
+    <Date>2006-12-02T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>5.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>a976dd56-7238-46d4-868b-d2f39655d7ed</Id>
+    <MovieId>1ed76f78-2ec3-4e16-a271-946abb7e9c24</MovieId>
+    <Date>2006-09-02T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>7.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>4e9b9227-c00a-49cb-af91-d6bb61bb6b79</Id>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <Date>2006-04-15T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>6.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>830a7ccd-fb57-4e04-982b-d93297862536</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2007-02-06T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>aee87bfb-80d0-4c89-a304-dcfe57eccf7f</Id>
+    <MovieId>d983a79b-a077-4558-9f3e-7a6d68550146</MovieId>
+    <Date>2006-03-19T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>5.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>d053a290-77ef-486c-b031-dd9c5f0687db</Id>
+    <MovieId>4dd3a3b0-aef0-4731-af48-a12b951e4539</MovieId>
+    <Date>2007-01-13T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>5.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>2fb1bdf9-a09b-464d-a272-dde825f3fc6a</Id>
+    <MovieId>4dd3a3b0-aef0-4731-af48-a12b951e4539</MovieId>
+    <Date>2007-02-10T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>5.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>c52f29b2-b487-40bd-ac51-dde9699c49f0</Id>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <Date>2006-04-08T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>7.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>e1c0c0a7-7af8-40f6-a717-de858e73b86f</Id>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <Date>2005-12-01T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>541d97a1-1df4-4040-b741-decc8baaf77c</Id>
+    <MovieId>4dd3a3b0-aef0-4731-af48-a12b951e4539</MovieId>
+    <Date>2006-12-09T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>5.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>0c713f3b-0f1b-4028-9d43-df0fbc1cb8fe</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2007-02-27T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>24b2e05f-5c84-45de-bf50-dfac775dd7f2</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2007-01-09T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>f7639ff0-5184-45b7-9fe5-e0dc2bfe8b25</Id>
+    <MovieId>d983a79b-a077-4558-9f3e-7a6d68550146</MovieId>
+    <Date>2006-01-22T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>5.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>cf671bbd-a28c-4257-91dd-e11c1994227f</Id>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <Date>2006-05-13T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>7.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>abcdff15-5660-4682-ab94-e58dd3050400</Id>
+    <MovieId>4dd3a3b0-aef0-4731-af48-a12b951e4539</MovieId>
+    <Date>2006-12-16T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>5.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>d040933c-a9b7-40fd-baca-e7c6fd667bcd</Id>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <Date>2005-12-15T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>c1d33285-73a7-4aa4-a115-e85c38386db7</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2007-03-13T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>4e3f4581-17a4-4e98-b395-e915c7d1557c</Id>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <Date>2006-01-29T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>6.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>2b1e38a1-d504-4d86-b7a3-ebce920787ac</Id>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <Date>2006-05-20T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>7.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>92b158d3-7d62-4843-a835-ec8fcde3c309</Id>
+    <MovieId>d983a79b-a077-4558-9f3e-7a6d68550146</MovieId>
+    <Date>2006-01-15T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>5.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>e2fc6b94-a858-45b7-b1e9-f13c79fb92ba</Id>
+    <MovieId>1ed76f78-2ec3-4e16-a271-946abb7e9c24</MovieId>
+    <Date>2006-08-05T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>7.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>9f3e3370-a2c3-4d74-971d-f1ca9add2e29</Id>
+    <MovieId>1ed76f78-2ec3-4e16-a271-946abb7e9c24</MovieId>
+    <Date>2006-07-15T20:00:00+01:00</Date>
+    <RoomId>fef4b291-5cba-4585-9e07-8717582388df</RoomId>
+    <Price>7.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>629f2055-4ffa-4af6-a60a-f24d9e75a00b</Id>
+    <MovieId>d983a79b-a077-4558-9f3e-7a6d68550146</MovieId>
+    <Date>2006-03-12T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>5.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>3c8b5cae-f495-4371-a6ef-f31531971a87</Id>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <Date>2007-04-10T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>8.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>647c43d6-964d-4928-bea6-fa7b54ae4000</Id>
+    <MovieId>4dd3a3b0-aef0-4731-af48-a12b951e4539</MovieId>
+    <Date>2006-12-30T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>5.5000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>3aff2522-4565-46db-82a5-faa7647d93f3</Id>
+    <MovieId>d983a79b-a077-4558-9f3e-7a6d68550146</MovieId>
+    <Date>2006-02-26T20:00:00+01:00</Date>
+    <RoomId>285d6973-981f-4418-9f20-981ed19c04f6</RoomId>
+    <Price>5.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>dbb8c310-2070-4b9b-83f3-fcec92e8e599</Id>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <Date>2006-05-06T20:00:00+01:00</Date>
+    <RoomId>57692a5f-4b52-467c-8604-641b7eb9119f</RoomId>
+    <Price>6.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Performance>
+    <Id>86b519f8-364d-4ac3-9712-ff97a148db32</Id>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <Date>2006-03-04T20:00:00+01:00</Date>
+    <RoomId>efdbd190-9c8d-42bd-9d50-47db648cc939</RoomId>
+    <Price>7.0000</Price>
+    <Inactive>false</Inactive>
+  </Performance>
+  <Movie_Persons>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <PersonId>0c84211c-c019-4581-9f14-c4e21687112b</PersonId>
+    <ActorType>1</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <PersonId>be2a1b5b-f2bb-4120-938e-c2add34687e6</PersonId>
+    <ActorType>2</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <PersonId>873f72c2-8738-462e-824f-ede89faefc30</PersonId>
+    <ActorType>0</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <PersonId>8439c067-28ae-489d-921b-8b97abf4bd59</PersonId>
+    <ActorType>2</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <PersonId>01935cbd-04b3-42d1-92df-93156b441368</PersonId>
+    <ActorType>0</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <PersonId>47e500c3-c431-47aa-aa46-0ec6274fa492</PersonId>
+    <ActorType>0</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>e23bc67f-6963-4770-9950-ad321b51f3d9</MovieId>
+    <PersonId>acf7b3ca-e6e1-44ea-9af2-7c75e3d85996</PersonId>
+    <ActorType>1</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <PersonId>e009cdad-fa21-406a-901c-a19bc88ba4e5</PersonId>
+    <ActorType>1</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>4dd3a3b0-aef0-4731-af48-a12b951e4539</MovieId>
+    <PersonId>3de2e25c-4838-4ddf-b248-ae3668c35d9e</PersonId>
+    <ActorType>1</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>e23bc67f-6963-4770-9950-ad321b51f3d9</MovieId>
+    <PersonId>2d6de293-d065-43ed-8dfc-8bf9c7758876</PersonId>
+    <ActorType>2</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>1ed76f78-2ec3-4e16-a271-946abb7e9c24</MovieId>
+    <PersonId>47e500c3-c431-47aa-aa46-0ec6274fa492</PersonId>
+    <ActorType>0</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <PersonId>cb210792-155a-4444-b726-520aca2ea4bd</PersonId>
+    <ActorType>0</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <PersonId>e6be6d75-5046-4dfb-87fc-33e8b6f3c95a</PersonId>
+    <ActorType>0</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <PersonId>acf7b3ca-e6e1-44ea-9af2-7c75e3d85996</PersonId>
+    <ActorType>1</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>4dd3a3b0-aef0-4731-af48-a12b951e4539</MovieId>
+    <PersonId>9eae6838-7cc9-4372-84fc-47da4d7f120a</PersonId>
+    <ActorType>2</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>d983a79b-a077-4558-9f3e-7a6d68550146</MovieId>
+    <PersonId>337c1bb5-ba3a-4c53-a162-412ac465bcf7</PersonId>
+    <ActorType>2</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>45227998-cdc2-4282-952d-da6ea3125fcd</MovieId>
+    <PersonId>b9be7b00-fa15-4244-bc78-7466e8f7f4db</PersonId>
+    <ActorType>0</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>7bcf11e1-6396-4c19-bf99-fecbaf90a24d</MovieId>
+    <PersonId>be2a1b5b-f2bb-4120-938e-c2add34687e6</PersonId>
+    <ActorType>2</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <PersonId>9eae6838-7cc9-4372-84fc-47da4d7f120a</PersonId>
+    <ActorType>2</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>d983a79b-a077-4558-9f3e-7a6d68550146</MovieId>
+    <PersonId>669fab37-59ea-4ed9-a42e-24ae212d9bac</PersonId>
+    <ActorType>0</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>1ed76f78-2ec3-4e16-a271-946abb7e9c24</MovieId>
+    <PersonId>337c1bb5-ba3a-4c53-a162-412ac465bcf7</PersonId>
+    <ActorType>2</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>e23bc67f-6963-4770-9950-ad321b51f3d9</MovieId>
+    <PersonId>e6be6d75-5046-4dfb-87fc-33e8b6f3c95a</PersonId>
+    <ActorType>0</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>4dd3a3b0-aef0-4731-af48-a12b951e4539</MovieId>
+    <PersonId>e9687fe1-84a7-4d73-9e3f-d012a55b1151</PersonId>
+    <ActorType>0</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>d983a79b-a077-4558-9f3e-7a6d68550146</MovieId>
+    <PersonId>e009cdad-fa21-406a-901c-a19bc88ba4e5</PersonId>
+    <ActorType>1</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>7ca98b3f-15b0-47f0-92b4-c208fc537615</MovieId>
+    <PersonId>0c84211c-c019-4581-9f14-c4e21687112b</PersonId>
+    <ActorType>1</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>4e59b37f-3b8f-492f-a946-c94914729674</MovieId>
+    <PersonId>f1b82cb8-b78e-401e-8012-95814c240f0a</PersonId>
+    <ActorType>0</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>4dd3a3b0-aef0-4731-af48-a12b951e4539</MovieId>
+    <PersonId>f0b0ef86-7c8d-40f2-8239-53c6e94a56c8</PersonId>
+    <ActorType>0</ActorType>
+  </Movie_Persons>
+  <Movie_Persons>
+    <MovieId>1ed76f78-2ec3-4e16-a271-946abb7e9c24</MovieId>
+    <PersonId>3de2e25c-4838-4ddf-b248-ae3668c35d9e</PersonId>
+    <ActorType>1</ActorType>
+  </Movie_Persons>
+  <NewsCategory>
+    <Id>e97a1945-6d7d-47f0-9807-02746fc4a297</Id>
+    <Name>Events</Name>
+    <Number>1</Number>
+    <Inactive>false</Inactive>
+  </NewsCategory>
+  <NewsCategory>
+    <Id>31181bbc-e89e-4333-896b-1ae187d35c3a</Id>
+    <Name>Boulevard</Name>
+    <Number>2</Number>
+    <Inactive>false</Inactive>
+  </NewsCategory>
+  <NewsCategory>
+    <Id>fbcc301a-d6d6-4e17-b38e-6b8e87247133</Id>
+    <Name>Gästeinformation</Name>
+    <Number>3</Number>
+    <Inactive>false</Inactive>
+  </NewsCategory>
+  <NewsCategory>
+    <Id>eca79dcd-aff4-41c7-84e7-9e35e7f266d4</Id>
+    <Name>Filmankündigung</Name>
+    <Number>4</Number>
+    <Inactive>false</Inactive>
+  </NewsCategory>
+  <Person>
+    <Id>47e500c3-c431-47aa-aa46-0ec6274fa492</Id>
+    <Name>Cremerius-Guenther, Armin</Name>
+  </Person>
+  <Person>
+    <Id>669fab37-59ea-4ed9-a42e-24ae212d9bac</Id>
+    <Name>Jacobsen, Lola</Name>
+  </Person>
+  <Person>
+    <Id>e6be6d75-5046-4dfb-87fc-33e8b6f3c95a</Id>
+    <Name>Adams, Terry</Name>
+  </Person>
+  <Person>
+    <Id>337c1bb5-ba3a-4c53-a162-412ac465bcf7</Id>
+    <Name>Kiel, Oliver</Name>
+  </Person>
+  <Person>
+    <Id>9eae6838-7cc9-4372-84fc-47da4d7f120a</Id>
+    <Name>Charney, Neil</Name>
+  </Person>
+  <Person>
+    <Id>cb210792-155a-4444-b726-520aca2ea4bd</Id>
+    <Name>Waxman, Peter</Name>
+  </Person>
+  <Person>
+    <Id>f0b0ef86-7c8d-40f2-8239-53c6e94a56c8</Id>
+    <Name>Rockfeld, Scott</Name>
+  </Person>
+  <Person>
+    <Id>b9be7b00-fa15-4244-bc78-7466e8f7f4db</Id>
+    <Name>Ploenes, Christiane</Name>
+  </Person>
+  <Person>
+    <Id>acf7b3ca-e6e1-44ea-9af2-7c75e3d85996</Id>
+    <Name>Struve-Christensen, Stig</Name>
+  </Person>
+  <Person>
+    <Id>8439c067-28ae-489d-921b-8b97abf4bd59</Id>
+    <Name>Purcell, Sean</Name>
+  </Person>
+  <Person>
+    <Id>2d6de293-d065-43ed-8dfc-8bf9c7758876</Id>
+    <Name>Rollin, Kelly</Name>
+  </Person>
+  <Person>
+    <Id>01935cbd-04b3-42d1-92df-93156b441368</Id>
+    <Name>Barker, Rob</Name>
+  </Person>
+  <Person>
+    <Id>f1b82cb8-b78e-401e-8012-95814c240f0a</Id>
+    <Name>Richardson, Don</Name>
+  </Person>
+  <Person>
+    <Id>e009cdad-fa21-406a-901c-a19bc88ba4e5</Id>
+    <Name>Lee, Soo Jung</Name>
+  </Person>
+  <Person>
+    <Id>3de2e25c-4838-4ddf-b248-ae3668c35d9e</Id>
+    <Name>Seely, Scott</Name>
+  </Person>
+  <Person>
+    <Id>be2a1b5b-f2bb-4120-938e-c2add34687e6</Id>
+    <Name>Campbell, David</Name>
+  </Person>
+  <Person>
+    <Id>0c84211c-c019-4581-9f14-c4e21687112b</Id>
+    <Name>Nelson, Jeremy</Name>
+  </Person>
+  <Person>
+    <Id>e9687fe1-84a7-4d73-9e3f-d012a55b1151</Id>
+    <Name>Hendergart, James</Name>
+  </Person>
+  <Person>
+    <Id>873f72c2-8738-462e-824f-ede89faefc30</Id>
+    <Name>Dubois, Marie</Name>
+  </Person>
+</CinemaDataSet>

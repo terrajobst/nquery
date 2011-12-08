@@ -1,0 +1,58 @@
+﻿<topic>
+	<head>
+		<title>Metadata Context Class</title>
+		<toc index="4" />
+		<links>
+			<link href="Overview.html">Overview</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The MetadataContext class represents a provider for meta information such as how to compare certain types and what properties
+				and methods a type has.
+			</p>
+		</summary>
+
+		<section title="Sharing">
+			<p>
+				The <see cref="T:NQuery.MetadataContext">MetadataContext</see> can be shared across multiple different <see cref="T:NQuery.DataContext">DataContexts</see>.
+				Thefore, it can also be shared across multiple different queries and expressions.
+			</p>
+		</section>
+
+		<section title="Elements in a Metadata Context">
+			<p>
+				A <see cref="T:NQuery.MetadataContext">MetadataContext</see> may contain different items. The following table lists all of them.
+			</p>
+
+			<table>
+				<tr>
+					<th>Element</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>Property Provider</td>
+					<td>
+						A property provider specifies which properties a type has. See <a href="/Extensibility/CustomProperties.html">Custom Properties</a>
+						for details how to use them.
+					</td>
+				</tr>
+				<tr>
+					<td>Method Provider</td>
+					<td>
+						A method provider specifies which methods a type has. See <a href="/Extensibility/CustomMethods.html">Custom Methods</a>
+						for details how to use them.
+					</td>
+				</tr>
+				<tr>
+					<td>Comparer</td>
+					<td>
+						A comparer specifies how instances of a type should be compared. See <a href="/Extensibility/CustomComparers.html">Custom Comparers</a>
+						for details how to use them.
+					</td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</topic>

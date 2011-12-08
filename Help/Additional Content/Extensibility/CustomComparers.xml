@@ -1,0 +1,58 @@
+﻿<topic>
+	<head>
+		<title>Custom Comparers</title>
+		<keywords>
+			<keyword term="extending, comparers" />
+			<keyword term="customizing, comparers" />
+			<keyword term="adding, comparers" />
+			<keyword term="IComparer interface, using" />
+			<keyword term="System.IComparer interface, using" />
+		</keywords>
+	</head>
+	<body>
+		<summary>
+			<p>
+				One of the most useful operations in SQL is sorting. Sorting is used to implement some types of joining, duplicate removal,
+				grouping and many other operations. Therefore is is crucial to be able to compare two values.
+			</p>
+			<p>
+				Sometimes the data types you are using do not support comparing (i.e. do not implement
+				<see cref="T:System.IComparable">IComparable</see>). In this case you can register a custom
+				<see cref="T:System.Collections.IComparer">IComparer</see> for those data types.
+			</p>
+		</summary>
+
+		<section title="Implementing a Custom Comparer">
+			<p>
+				In this sample we want to create a custom comparer for an external data type, i.e. a data type we are using but don't
+				have access to its source code. If we would have access to the source code it would probably be better to let this type
+				implement <see cref="T:System.IComparable">IComparable</see> directly.
+			</p>
+			<p>
+				The external data type looks like this:
+			</p>
+			<sampleCode lang="cs" title="The External Data Type"
+						source="..\Samples\Extensibility\CustomComparer\MyComparer.cs" region="ExternalPersonDataType"  />
+
+			<p>
+				In most cases we are not really interested in a specific ordering; all we want is that the data type supports any kind
+				of ordering. For effeciency it is best if the ordering is unique, i.e. no rows are equal with respect to the ordering
+				critieria. In this case we are just using the <c>Id</c> property of <c>ExternalPersonDataType</c>.
+			</p>
+			<note>
+				<p>
+					Please note that the comparer must handle <c>NULL</c> values correctly. The convention ist that <c>NULL</c> values
+					are the lowest possible values and that two <c>NULL</c> values are considered equal with respect to their sort order.
+				</p>
+			</note>
+			<sampleCode lang="cs" title="Implementing IComparer"
+						source="..\Samples\Extensibility\CustomComparer\MyComparer.cs" region="MyComparer"  />
+
+			<p>
+				To use the comparer it must be registered with the <see cref="T:NQuery.MetadataContext">MetadataContext</see>:
+			</p>
+			<sampleCode lang="cs" title="Using a Custom Comparer"
+						source="..\Samples\Extensibility\CustomComparer\Form1.cs" region="Usage"  />
+		</section>
+	</body>
+</topic>

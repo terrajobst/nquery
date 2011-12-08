@@ -1,0 +1,6 @@
+<test>
+  <sql>SELECT	@DictionäryProps.Age</sql>
+  <expectedErrors>
+    <expectedError id="UndeclaredParameter" text="Parameter 'DictionäryProps' is not declared." />
+  </expectedErrors>
+</test>

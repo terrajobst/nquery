@@ -1,0 +1,59 @@
+<topic>
+	<head>
+		<title>COALESCE</title>
+		<keywords>
+			<keyword term="functions, COALESCE" />
+			<keyword term="system functions, COALESCE" />
+			<keyword term="COALESCE system function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="System Functions.html">System Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns the first non-<c>NULL</c> expression among its arguments.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve"><b>COALESCE</b> <b>(</b> <i>expression</i> [ <b>,...</b><i>n</i> ] <b>)</b></code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="expression">
+					<p>Is an expression of any type.</p>
+				</param>
+				<param name="n">
+					<p>
+						Is a placeholder indicating that multiple expressions can be specified. All expressions must be of the same
+						type or must be implicitly convertible to the same type.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				Returns the highest precedence type from the set of types in <c>expression</c>.
+			</p>
+		</returns>
+
+		<remarks>
+			<p>
+				If all arguments are <c>NULL</c>, <c>COALESCE</c> returns <c>NULL</c>. <c>COALESCE(expression1,...n)</c> is equivalent
+				to this <c>CASE</c> function:
+			</p>
+			<code xml:space="preserve"><b>CASE</b>
+   <b>WHEN (</b><i>expression1</i> <b>IS NOT NULL) THEN</b> <i>expression1</i>
+   <b>...</b>
+   <b>WHEN (</b><i>expressionN</i> <b>IS NOT NULL) THEN</b> <i>expressionN</i>
+   <b>ELSE NULL</b>
+<b>END</b>        
+</code>
+		</remarks>
+	</body>
+</topic>

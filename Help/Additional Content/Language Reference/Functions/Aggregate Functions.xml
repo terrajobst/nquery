@@ -1,0 +1,45 @@
+<topic>
+	<head>
+		<title>Aggregate Functions </title>
+		<links>
+			<link href="Functions.html">Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>The following aggregate functions are available:</p>
+			<ul>
+				<li>
+					<a href="AVG.html">AVG</a>
+				</li>
+				<li>
+					<a href="CONCAT.html">CONCAT</a>
+				</li>
+				<li>
+					<a href="COUNT.html">COUNT</a>
+				</li>
+				<li>
+					<a href="FIRST.html">FIRST</a>
+				</li>
+				<li>
+					<a href="LAST.html">LAST</a>
+				</li>
+				<li>
+					<a href="MAX.html">MAX</a>
+				</li>
+				<li>
+					<a href="MIN.html">MIN</a>
+				</li>
+				<li>
+					<a href="STDEV.html">STDEV</a>
+				</li>
+				<li>
+					<a href="SUM.html">SUM</a>
+				</li>
+				<li>
+					<a href="VAR.html">VAR</a>
+				</li>
+			</ul>
+		</summary>
+	</body>
+</topic>

@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="NQuery.Compilation.AlgebraNode">
+    <Position X="6.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AST\AlgebraNode.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Method Name="AlgebraNode" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="NQuery.Compilation.UnaryAlgebraNode">
+    <Position X="12" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AST\AlgebraNode.cs</FileName>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Input" />
+    </ShowAsAssociation>
+    <Members>
+      <Field Name="_input" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="NQuery.Compilation.AlgebraNode" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.125" Y="2.658" />
+        <Point X="7.125" Y="3.625" />
+        <Point X="10.542" Y="3.625" Type="JumpStart" />
+        <Point X="10.708" Y="3.625" Type="JumpEnd" />
+        <Point X="10.792" Y="3.625" Type="JumpStart" />
+        <Point X="10.958" Y="3.625" Type="JumpEnd" />
+        <Point X="12.688" Y="3.625" />
+        <Point X="12.688" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="Input" Type="NQuery.Compilation.AlgebraNode" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.875" Y="4" />
+        <Point X="12.875" Y="1.938" />
+        <Point X="7.75" Y="1.938" />
+      </Path>
+    </AssociationLine>
+  </Class>
+  <Class Name="NQuery.Compilation.TableAlgebraNode">
+    <Position X="3.5" Y="4" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>AST\AlgebraNode.cs</FileName>
+      <HashCode>AAAAACAAAAAAAAAAACAgAACAAAAAAAAABAAAAAAAABA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_neededColumns" Hidden="true" />
+      <Field Name="_tableAliasBinding" Hidden="true" />
+      <Property Name="NeededColumns" Hidden="true" />
+      <Property Name="NodeType" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="NQuery.Compilation.AlgebraNode" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.125" Y="2.658" />
+        <Point X="7.125" Y="3.625" />
+        <Point X="6.771" Y="3.625" Type="JumpStart" />
+        <Point X="6.605" Y="3.625" Type="JumpEnd" />
+        <Point X="4.646" Y="3.625" />
+        <Point X="4.646" Y="4" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="NQuery.Compilation.JoinAlgebraNode">
+    <Position X="8.5" Y="4" Width="3.25" />
+    <TypeIdentifier>
+      <FileName>AST\AlgebraNode.cs</FileName>
+      <HashCode>AAAAAGAAAAAAAACAAAAABAgEAAAAEAACCACBAAAACBA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Left" />
+      <Property Name="Right" />
+    </ShowAsAssociation>
+    <Members>
+      <Field Name="_externalColumnDependencies" Hidden="true" />
+      <Field Name="_leftNode" Hidden="true" />
+      <Field Name="_normalizedCondition" Hidden="true" />
+      <Field Name="_op" Hidden="true" />
+      <Field Name="_rightNode" Hidden="true" />
+      <Method Name="Clone" Hidden="true" />
+      <Property Name="NodeType" Hidden="true" />
+      <Method Name="SwapSides" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="NQuery.Compilation.JoinAlgebraNode.JoinOperator">
+        <TypeIdentifier>
+          <NewMemberFileName>AST\AlgebraNode.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <InheritanceLine Type="NQuery.Compilation.AlgebraNode" FixedFromPoint="true">
+      <Path>
+        <Point X="7.125" Y="2.658" />
+        <Point X="7.125" Y="3.625" />
+        <Point X="10.125" Y="3.625" />
+        <Point X="10.125" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="Left" Type="NQuery.Compilation.AlgebraNode" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.625" Y="4" />
+        <Point X="10.625" Y="2.562" />
+        <Point X="7.75" Y="2.562" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Right" Type="NQuery.Compilation.AlgebraNode" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.875" Y="4" />
+        <Point X="10.875" Y="2.25" />
+        <Point X="7.75" Y="2.25" />
+      </Path>
+    </AssociationLine>
+  </Class>
+  <Class Name="NQuery.Compilation.ConstantScanAlgebraNode">
+    <Position X="1" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>AST\AlgebraNode.cs</FileName>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAggAAABA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_expressions" Hidden="true" />
+      <Method Name="Clone" Hidden="true" />
+      <Property Name="NodeType" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="NQuery.Compilation.AlgebraNode" FixedFromPoint="true">
+      <Path>
+        <Point X="7.125" Y="2.658" />
+        <Point X="7.125" Y="3.625" />
+        <Point X="6.771" Y="3.625" Type="JumpStart" />
+        <Point X="6.605" Y="3.625" Type="JumpEnd" />
+        <Point X="2.125" Y="3.625" />
+        <Point X="2.125" Y="4" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="NQuery.Compilation.ConcatAlgebraNode">
+    <Position X="6.25" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>AST\AlgebraNode.cs</FileName>
+      <HashCode>AAAAACAAAAAAAAAAQAAAAAAAEAAAAAAAAAAAAAAAABA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Inputs" />
+    </ShowAsAssociation>
+    <Members>
+      <Field Name="_inputNodes" Hidden="true" />
+      <Method Name="Clone" Hidden="true" />
+      <Property Name="NodeType" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="NQuery.Compilation.AlgebraNode" FixedFromPoint="true">
+      <Path>
+        <Point X="7.125" Y="2.658" />
+        <Point X="7.125" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="Inputs" Type="NQuery.Compilation.AlgebraNode" FixedToPoint="true">
+      <Path>
+        <Point X="6.688" Y="4" />
+        <Point X="6.688" Y="2.658" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.083" Y="0.259" />
+      </MemberNameLabel>
+    </AssociationLine>
+  </Class>
+  <Class Name="NQuery.Compilation.SortAlgebraNode">
+    <Position X="13.25" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <FileName>AST\AlgebraNode.cs</FileName>
+      <HashCode>AAAAASAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAgAIBA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_columns" Hidden="true" />
+      <Field Name="_distinct" Hidden="true" />
+      <Method Name="Clone" Hidden="true" />
+      <Property Name="NodeType" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="NQuery.Compilation.UnaryAlgebraNode" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.688" Y="4.908" />
+        <Point X="12.688" Y="5.875" />
+        <Point X="13.25" Y="5.875" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="NQuery.Compilation.AggregateAlgebraNode">
+    <Position X="13.25" Y="9.25" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>AST\AlgebraNode.cs</FileName>
+      <HashCode>CAAAAGAAAAAAAAgAAAAAAIAAAAAAAAAAAAAAAAAAABA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_aggregates" Hidden="true" />
+      <Field Name="_groups" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="NQuery.Compilation.UnaryAlgebraNode" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.688" Y="4.908" />
+        <Point X="12.688" Y="10.125" />
+        <Point X="13.25" Y="10.125" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="NQuery.Compilation.TopAlgebraNode">
+    <Position X="13.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AST\AlgebraNode.cs</FileName>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAQAAAAAAAAAAAACAAAAAABA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_limit" Hidden="true" />
+      <Method Name="Clone" Hidden="true" />
+      <Property Name="NodeType" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="NQuery.Compilation.UnaryAlgebraNode" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.688" Y="4.908" />
+        <Point X="12.688" Y="7.297" />
+        <Point X="13.25" Y="7.297" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="NQuery.Compilation.FilterAlgebraNode">
+    <Position X="13.25" Y="8" Width="2.75" />
+    <TypeIdentifier>
+      <FileName>AST\AlgebraNode.cs</FileName>
+      <HashCode>AAAAAGAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAABA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_normalizedCondition" Hidden="true" />
+      <Method Name="Clone" Hidden="true" />
+      <Property Name="NodeType" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="NQuery.Compilation.UnaryAlgebraNode" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.688" Y="4.908" />
+        <Point X="12.688" Y="8.656" />
+        <Point X="13.25" Y="8.656" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="NQuery.Compilation.AstNode" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AST\AstNode.cs</FileName>
+      <HashCode>AAAAACAAAAAAAAAEBAAAAAAAQAAEAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

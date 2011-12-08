@@ -1,0 +1,54 @@
+<topic>
+	<head>
+		<title>ABS</title>
+		<keywords>
+			<keyword term="functions, ABS" />
+			<keyword term="mathematical functions, ABS" />
+			<keyword term="ABS function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Mathematical Functions.html">Mathematical Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				A mathematical function that returns the absolute (positive) value of the specified numeric expression.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">ABS(value AS decimal) RETURNS decimal
+ABS(value AS double) RETURNS double
+ABS(value AS short) RETURNS short
+ABS(value AS int) RETURNS int
+ABS(value AS long) RETURNS long
+ABS(value AS sbyte) RETURNS sbyte
+ABS(value AS float) RETURNS float</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						Is a numeric expression for which the absolute value should be determined.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				A number, <c>x</c>, such that <c>0 ≤ x ≤ MaxValue</c>.
+			</p>
+		</returns>
+
+		<examples>
+			<p>
+				The following example shows the results of using the ABS function on three different numbers.
+			</p>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">SELECT ABS(-1.0) AS [ABS(-1.0)], ABS(0.0) AS [ABS(0.0)], ABS(1.0) AS [ABS(1.0)]</sampleCode>
+		</examples>
+	</body>
+</topic>

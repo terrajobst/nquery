@@ -1,0 +1,7 @@
+<test>
+  <sql>SELECT	CAST('17' AS "System.Int32")
+FROM	Employees</sql>
+  <expectedErrors>
+    <expectedError id="InvalidTypeReference" text="Type reference &quot;System.Int32&quot; is malformed. Neither quoted nor parenthesized identifiers can be used in type references. Use string literals to express case sensitivity." />
+  </expectedErrors>
+</test>

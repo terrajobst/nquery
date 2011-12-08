@@ -1,0 +1,25 @@
+<test>
+  <sql>WITH EmployeeHierarchy (EmployeeID) AS
+(				
+   -- Base case
+   SELECT	e.EmployeeID
+   FROM		Employees e
+   WHERE	ReportsTo IS NULL
+
+   UNION ALL
+
+   -- Recursive step
+   SELECT	e.EmployeeID
+   FROM		Employees e
+				INNER JOIN EmployeeHierarchy eh ON e.ReportsTo = eh.EmployeeID
+), EmployeeHierarchy AS (
+	SELECT	e.EmployeeId
+	FROM	Employees
+)
+SELECT	*
+FROM	EmployeeHierarchy eh
+ORDER	BY Path</sql>
+  <expectedErrors>
+    <expectedError id="CteHasDuplicateTableName" text="Duplicate common table expression name 'EmployeeHierarchy' was specified." />
+  </expectedErrors>
+</test>

@@ -1,0 +1,6 @@
+<test>
+  <sql>SELECT	CAST(1 AS Int33)</sql>
+  <expectedErrors>
+    <expectedError id="UndeclaredType" text="Cannot resolve type: Int33" />
+  </expectedErrors>
+</test>

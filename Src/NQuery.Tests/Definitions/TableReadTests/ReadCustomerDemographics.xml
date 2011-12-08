@@ -1,0 +1,61 @@
+<test>
+  <sql>SELECT	*
+FROM	CustomerDemographics</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="CustomerTypeID" type="xs:string" minOccurs="0" />
+                <xs:element name="CustomerDesc" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="CustomerDemographics.CustomerTypeID AS CustomerTypeID" />
+          <property name="Output List.[0].Table" value="CustomerDemographics" />
+          <property name="Output List.[0].Column" value="CustomerTypeID" />
+          <property name="Output List.[0].DataType" value="String" />
+          <property name="Output List.[0].Output Name" value="CustomerTypeID" />
+          <property name="Output List.[1]" value="CustomerDemographics.CustomerDesc AS CustomerDesc" />
+          <property name="Output List.[1].Table" value="CustomerDemographics" />
+          <property name="Output List.[1].Column" value="CustomerDesc" />
+          <property name="Output List.[1].DataType" value="String" />
+          <property name="Output List.[1].Output Name" value="CustomerDesc" />
+        </properties>
+        <input>
+          <element operator="TableScan">
+            <properties>
+              <property name="Table" value="CustomerDemographics AS CustomerDemographics" />
+              <property name="Output List.[0]" value="CustomerDemographics.CustomerTypeID" />
+              <property name="Output List.[0].Table" value="CustomerDemographics" />
+              <property name="Output List.[0].Column" value="CustomerTypeID" />
+              <property name="Output List.[0].DataType" value="String" />
+              <property name="Output List.[1]" value="CustomerDemographics.CustomerDesc" />
+              <property name="Output List.[1].Table" value="CustomerDemographics" />
+              <property name="Output List.[1].Column" value="CustomerDesc" />
+              <property name="Output List.[1].DataType" value="String" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="0" />
+              <property name="Statistics.Average Row Count" value="0" />
+            </properties>
+            <input />
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

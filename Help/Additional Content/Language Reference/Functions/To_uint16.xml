@@ -1,0 +1,46 @@
+<topic>
+	<head>
+		<title>TO_UINT16</title>
+		<keywords>
+			<keyword term="functions, TO_UINT16" />
+			<keyword term="conversion functions, TO_UINT16" />
+			<keyword term="TO_UINT16 function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Conversion Functions.html">Conversion Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Converts a given value to a 16-bit unsigned integer.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">TO_UINT16(value AS object) RETURNS ushort</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						A value to be converted.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<examples>
+			<p>
+				The following shows <c>TO_UINT16</c> results for some input data:
+			</p>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">SELECT 'The TO_UINT16 result of value ''1'' is: ' AS Input, TO_UINT16('1') AS Value
+UNION  ALL
+SELECT 'The TO_UINT16 result of value 32000.999 is: ' AS Input, TO_UINT16(32000.999) AS Value
+UNION  ALL
+SELECT 'The TO_UINT16 result of value 32001.999 is: ' AS Input, TO_UINT16(32001.999) AS Value</sampleCode>
+		</examples>
+	</body>
+</topic>

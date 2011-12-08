@@ -1,0 +1,14 @@
+<test>
+  <sql>SELECT	SUM(
+			CASE
+				WHEN e.EmployeeID % 2 = 0
+				THEN (SELECT COUNT(*) FROM Orders o WHERE o.EmployeeID = e.EmployeeID)
+				ELSE 0
+			END
+		)
+FROM	Employees e</sql>
+  <expectedErrors>
+    <expectedError id="AggregateCannotContainAggregate" text="Cannot perform aggregate function on an expression containing a subquery: &quot;SUM&quot;(CASE WHEN &quot;e&quot;.&quot;EmployeeID&quot; % 2 = 0 THEN (   SELECT &quot;COUNT&quot;(*)&#xD;&#xA;     FROM Orders AS o&#xD;&#xA;    WHERE &quot;o&quot;.&quot;EmployeeID&quot; = &quot;e&quot;.&quot;EmployeeID&quot;) ELSE 0 END)." />
+    <expectedError id="AggregateCannotContainAggregate" text="Cannot perform aggregate function 'SUM' on an expression containing an aggregate ('COUNT'): &quot;SUM&quot;(CASE WHEN &quot;e&quot;.&quot;EmployeeID&quot; % 2 = 0 THEN (   SELECT &quot;COUNT&quot;(*)&#xD;&#xA;     FROM Orders AS o&#xD;&#xA;    WHERE &quot;o&quot;.&quot;EmployeeID&quot; = &quot;e&quot;.&quot;EmployeeID&quot;) ELSE 0 END)." />
+  </expectedErrors>
+</test>

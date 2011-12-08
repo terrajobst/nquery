@@ -1,0 +1,51 @@
+<topic>
+	<head>
+		<title>SUM</title>
+		<keywords>
+			<keyword term="functions, SUM" />
+			<keyword term="aggregates, SUM" />
+			<keyword term="aggregate functions, SUM" />
+			<keyword term="SUM aggregate" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Aggregate Functions.html">Aggregate Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns the sum of the expression in a group. <c>NULL</c> values are ignored.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">SUM ( expression )</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						An expression to determine the sum for.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The sum of all evaluated values of <c>expression</c> in a group. <c>NULL</c> values are ignored.
+			</p>
+		</returns>
+
+		<remarks>
+			<p>
+				The <c>SUM</c> aggregate function is not limited to certain data types. However, the data type <c>T</c> must provide
+				the following operator:
+
+				<code xml:space="preserve">OPERATOR +(left AS T, right AS T) RETURNS T</code>
+			</p>
+		</remarks>
+	</body>
+</topic>

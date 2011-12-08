@@ -1,0 +1,71 @@
+<topic>
+	<head>
+		<title>ATAN</title>
+		<keywords>
+			<keyword term="functions, ATAN" />
+			<keyword term="mathematical functions, ATAN" />
+			<keyword term="ATAN function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Mathematical Functions.html">Mathematical Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				A mathematical function that returns the angle, in radians, whose tangent is a specified double expression; also called arctangent.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">ATAN (value AS double) RETURNS double</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						A number representing a tangent.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				An angle, θ, measured in radians, such that <c>-π/2 ≤ θ ≤ π/2</c>,
+			</p>
+			<p>
+				-or-
+			</p>
+			<p>
+				<c>NaN</c> if <c>value</c> equals <c>NaN</c>,
+			</p>
+			<p>
+				-or-
+			</p>
+			<p>
+				<c>-π/2</c> rounded to double precision (-1.5707963267949) if <c>value</c> equals <c>NegativeInfinity</c>,
+			</p>
+			<p>
+				-or-
+			</p>
+			<p>
+				<c>π/2</c> rounded to double precision (1.5707963267949) if <c>value</c> equals <c>PositiveInfinity</c>.
+			</p>
+		</returns>
+
+		<examples>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">SELECT 'The ATAN of the angle -181.01 is: ' + TO_STRING(ATAN(-181.01))
+UNION  ALL
+SELECT 'The ATAN of the angle 0 is: ' + TO_STRING(ATAN(0))
+UNION  ALL
+SELECT 'The ATAN of the angle 0.1472738 is: ' + TO_STRING(ATAN(0.1472738))
+UNION  ALL
+SELECT 'The ATAN of the angle 0.1472738 is: ' + TO_STRING(ATAN(0.1472738))
+UNION  ALL
+SELECT 'The ATAN of the angle 197.1099392 is: ' + TO_STRING(ATAN(197.1099392))</sampleCode>
+		</examples>
+	</body>
+</topic>

@@ -1,0 +1,9 @@
+<test>
+  <sql>SELECT	COUNT(*),
+		e.FirstName
+FROM	Employees e
+GROUP	BY e.City</sql>
+  <expectedErrors>
+    <expectedError id="SelectExpressionNotAggregatedOrGrouped" text="Column 'e.FirstName' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause." />
+  </expectedErrors>
+</test>

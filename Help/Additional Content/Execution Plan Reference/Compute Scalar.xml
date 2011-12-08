@@ -1,0 +1,40 @@
+﻿<topic>
+	<head>
+		<title>Compute Scalar</title>
+		<keywords>
+			<keyword term="execution plan, compute scalar"/>
+			<keyword term="physical operators, compute scalar"/>
+			<keyword term="logical operators, compute scalar"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Compute Scalar</b> operator evaluates an expression to produce a computed scalar value. This may then be returned
+				to the user, referenced elsewhere in the query, or both. An example of both is in a filter predicate or join predicate.
+				The <c>Defined Values</c> property indicates what values are to be computed by this operator.
+			</p>
+			<p>
+				<b>Compute Scalar</b> is a logical and physical operator.
+			</p>
+		</summary>
+
+		<section title="Properties">
+			<table>
+				<tr>
+					<th>Property Name</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>Defined Values</td>
+					<td>
+						Specifies the set of expressions computed by the <b>Compute Scalar</b> operator.
+					</td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</topic>

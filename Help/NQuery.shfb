@@ -1,0 +1,63 @@
+﻿<project schemaVersion="1.6.0.7">
+    <assemblies>
+        <assembly assemblyPath="..\Output\Bin\NQuery.dll" xmlCommentsPath="..\Output\Bin\NQuery.xml" commentsOnly="False" />
+        <assembly assemblyPath="..\Output\Bin\NQuery.UI.Actipro40.dll" xmlCommentsPath="..\Output\Bin\NQuery.UI.Actipro40.xml" commentsOnly="False" />
+        <assembly assemblyPath="..\Output\Bin\NQuery.UI.dll" xmlCommentsPath="..\Output\Bin\NQuery.UI.xml" commentsOnly="False" />
+    </assemblies>
+    <namespaceSummaries>
+        <namespaceSummaryItem name="" isDocumented="False" />
+        <namespaceSummaryItem name="NQuery" isDocumented="True">Contains the most importantant NQuery classes.</namespaceSummaryItem>
+        <namespaceSummaryItem name="NQuery.CodeAssistance" isDocumented="False" />
+        <namespaceSummaryItem name="NQuery.Compilation" isDocumented="False" />
+        <namespaceSummaryItem name="NQuery.Runtime" isDocumented="True">Contains runtime support classes and classes used to extend NQuery.</namespaceSummaryItem>
+        <namespaceSummaryItem name="NQuery.Runtime.ExecutionPlan" isDocumented="False" />
+        <namespaceSummaryItem name="NQuery.UI" isDocumented="True">Contains components used to simplify query authoring.</namespaceSummaryItem>
+    </namespaceSummaries>
+    <additionalContent contentSiteMap="" topicFileTransform="">
+        <contentItem sourcePath="..\Output\Additional Content\*.*" destPath="" excludeItems="False" />
+    </additionalContent>
+    <helpAttributes>
+        <helpAttribute name="DocSet" value="NQuery" />
+    </helpAttributes>
+    <ProjectSummary />
+    <MissingTags>Summary, Parameter, AutoDocumentCtors, Namespace, TypeParameter</MissingTags>
+    <VisibleItems>Attributes, InheritedMembers, InheritedFrameworkMembers, Protected, SealedProtected</VisibleItems>
+    <HtmlHelp1xCompilerPath path="" />
+    <HtmlHelp2xCompilerPath path="" />
+    <OutputPath>..\Output\Help\</OutputPath>
+    <SandcastlePath path="" />
+    <WorkingPath path="" />
+    <CleanIntermediates>True</CleanIntermediates>
+    <KeepLogFile>False</KeepLogFile>
+    <BuildLogFile path="" />
+    <HelpFileFormat>Help1xAndHelp2x</HelpFileFormat>
+    <CppCommentsFixup>False</CppCommentsFixup>
+    <FrameworkVersion>2.0.50727</FrameworkVersion>
+    <IndentHtml>False</IndentHtml>
+    <Preliminary>False</Preliminary>
+    <RootNamespaceContainer>True</RootNamespaceContainer>
+    <RootNamespaceTitle>Class Library Reference</RootNamespaceTitle>
+    <HelpTitle>NQuery Documentation</HelpTitle>
+    <HtmlHelpName>NQuery</HtmlHelpName>
+    <Language>en-US</Language>
+    <CopyrightHref />
+    <CopyrightText>Copyright © 2005 - 2009 by Immo Landwerth</CopyrightText>
+    <FeedbackEMailAddress>terrajobst@web.de</FeedbackEMailAddress>
+    <FeedbackEMailLinkText>Immo Landwerth</FeedbackEMailLinkText>
+    <HeaderText />
+    <FooterText />
+    <ProjectLinkType>Local</ProjectLinkType>
+    <SdkLinkType>Index</SdkLinkType>
+    <SdkLinkTarget>Blank</SdkLinkTarget>
+    <PresentationStyle>vs2005</PresentationStyle>
+    <NamingMethod>Guid</NamingMethod>
+    <SyntaxFilters>CSharp</SyntaxFilters>
+    <ShowFeedbackControl>False</ShowFeedbackControl>
+    <BinaryTOC>True</BinaryTOC>
+    <IncludeFavorites>False</IncludeFavorites>
+    <CollectionTocStyle>Hierarchical</CollectionTocStyle>
+    <IncludeStopWordList>True</IncludeStopWordList>
+    <PlugInNamespaces>ms.vsipcc+, ms.vsexpresscc+</PlugInNamespaces>
+    <HelpFileVersion>0.9.4.0</HelpFileVersion>
+    <ContentPlacement>AboveNamespaces</ContentPlacement>
+</project>

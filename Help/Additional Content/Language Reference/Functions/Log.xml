@@ -1,0 +1,53 @@
+<topic>
+	<head>
+		<title>LOG</title>
+		<keywords>
+			<keyword term="functions, LOG" />
+			<keyword term="mathematical functions, LOG" />
+			<keyword term="LOG function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Mathematical Functions.html">Mathematical Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns the logarithm of a specified number.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">LOG(value AS double) RETURNS double
+LOG(value AS double, newBase AS double) RETURNS double</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						A number whose logarithm is to be found.
+					</p>
+				</param>
+				<param name="newBase">
+					<p>
+						The base of the logarithm.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				Either the natural (base-<c>e</c>) logarithm
+			</p>
+			<p>
+				- or -
+			</p>
+			<p>
+				the logarithm in the specified base.
+			</p>
+		</returns>
+	</body>
+</topic>

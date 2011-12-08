@@ -1,0 +1,51 @@
+<topic>
+	<head>
+		<title>REPLACE</title>
+		<keywords>
+			<keyword term="functions, REPLACE" />
+			<keyword term="string functions, REPLACE" />
+			<keyword term="REPLACE function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="String Functions.html">String Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Replaces all occurrences of a string contained in a second string with a third string.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">REPLACE(text AS string, oldValue AS string, newValue AS string) RETURNS string</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="text">
+					<p>
+						Is the string to be searched.
+					</p>
+				</param>
+				<param name="oldValue">
+					<p>
+						Is the string expression to try to find.
+					</p>
+				</param>
+				<param name="newValue">
+					<p>
+						Is the replacement string for <c>oldValue</c>.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				A String equivalent to <c>text</c> but with all instances of <c>oldValue</c> replaced with <c>newValue</c>.
+			</p>
+		</returns>
+	</body>
+</topic>

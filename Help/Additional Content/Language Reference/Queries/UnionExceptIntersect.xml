@@ -1,0 +1,85 @@
+<topic>
+	<head>
+		<title>UNION, EXCEPT, and INTERSECT</title>
+		<toc index="8" />
+		<keywords>
+			<keyword term="SELECT statement, UNION" />
+			<keyword term="SELECT statement, EXCEPT" />
+			<keyword term="SELECT statement, INTERSECT" />
+			<keyword term="UNION" />
+			<keyword term="EXCEPT" />
+			<keyword term="INTERSECT" />
+		</keywords>
+		<links>
+			<link href="Queries.html">SELECT Syntax</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <c>UNION</c> operator is used to combine the results of two or more queries into a single result set that includes all the
+				rows that belong to all queries in the union. The <c>UNION</c> operation is different from using joins that combine columns from
+				two tables.
+			</p>
+			<p>
+				The <c>EXCEPT</c> and <c>INTERSECT</c> operators return distinct values by comparing the results of two queries.
+				<c>EXCEPT</c> returns any distinct values from the left query that are not also found on the right query.
+				<c>INTERSECT</c> returns any distinct values that are returned by both the query on the left and right sides of the
+				<c>INTERSECT</c> operand.
+			</p>
+			<p>
+				The following are basic rules for combining the result sets of two queries by using <c>UNION</c>, <c>EXCEPT</c> and <c>INTERSECT:</c>
+			</p>
+			<ul>
+				<li>The number and the order of the columns must be the same in all queries.</li>
+				<li>The data types must be compatible.</li>
+				<li>The data types must be sortable.</li>
+			</ul>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">{ &lt;query_specification&gt; | <b>(</b> &lt;query_expression&gt; <b>)</b> } 
+[  { <b>UNION</b> [ <b>ALL</b> ] | <b>EXCEPT</b> | <b>INTERSECT</b> }
+&lt;query_specification&gt; | <b>(</b> &lt;query_expression&gt; <b>)</b> ]</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="&lt;query_specification&gt; | ( &lt;query_expression&gt; )">
+					<p>
+						Is a query specification or query expression that returns data to be compared with the data from another query
+						specification or query expression. The definitions of the columns that are part of an <c>UNION</c>,
+						<c>EXCEPT</c>, or <c>INTERSECT</c> operation do not have to be the same, but they must be comparable through
+						implicit conversion. When data types differ, the type that is used to perform the comparison and return results
+						is determined based on the rules for data type precedence.
+					</p>
+					<p>
+						All data types must be sortable, i.e. they must either implement <c>IComparable</c> or the data context
+						must provide a custom <c>IComparer</c> for them.
+					</p>
+				</param>
+				<param name="UNION">
+					<p>
+						Specifies that multiple result sets are to be combined and returned as a single result set.
+					</p>
+				</param>
+				<param name="ALL">
+					<p>
+						Incorporates all rows into the results. This includes duplicates. If not specified, duplicate rows are removed.
+					</p>
+				</param>
+				<param name="EXCEPT">
+					<p>
+						Returns any distinct values from the query to the left of the <c>EXCEPT</c> operand that are not also returned
+						from the right query.
+					</p>
+				</param>
+				<param name="INTERSECT">
+					<p>
+						Returns any distinct values that are returned by both the query on the left and right sides of the <c>INTERSECT</c> operand.
+					</p>
+				</param>
+			</params>
+		</parameters>
+	</body>
+</topic>

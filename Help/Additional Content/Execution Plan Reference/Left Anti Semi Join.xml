@@ -1,0 +1,23 @@
+﻿<topic>
+	<head>
+		<title>Left Anti Semi Join</title>
+		<keywords>
+			<keyword term="execution plan, left anti semi join"/>
+			<keyword term="logical operators, left anti semi join"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Left Anti Semi Join</b> operator returns each row from the first (top) input when there is no matching row in
+				the second (bottom) input. If no join predicate exists in the <c>Predicate</c> property, each row is a matching row.
+			</p>
+			<p>
+				<b>Left Anti Semi Join</b> is a logical operator.
+			</p>
+		</summary>
+	</body>
+</topic>

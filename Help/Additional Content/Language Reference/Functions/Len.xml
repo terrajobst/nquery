@@ -1,0 +1,42 @@
+<topic>
+	<head>
+		<title>LEN</title>
+		<keywords>
+			<keyword term="functions, LEN" />
+			<keyword term="string functions, LEN" />
+			<keyword term="LEN function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="String Functions.html">String Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns the number of characters of a specified string, including any white space characters.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">LEN(text AS string) RETURNS int</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="text">
+					<p>
+						String to get the length of.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				If <c>text</c> is <c>NULL</c> the return value is <c>NULL</c>. Otherwise the return value
+				is the number of characters in <c>text</c>, including any white space characters.
+			</p>
+		</returns>
+	</body>
+</topic>

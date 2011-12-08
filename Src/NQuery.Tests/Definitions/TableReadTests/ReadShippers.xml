@@ -1,0 +1,86 @@
+<test>
+  <sql>SELECT	*
+FROM	Shippers</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ShipperID" type="xs:int" minOccurs="0" />
+                <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+                <xs:element name="Phone" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <ShipperID>1</ShipperID>
+    <CompanyName>Speedy Express</CompanyName>
+    <Phone>(503) 555-9831</Phone>
+  </Table1>
+  <Table1>
+    <ShipperID>2</ShipperID>
+    <CompanyName>United Package</CompanyName>
+    <Phone>(503) 555-3199</Phone>
+  </Table1>
+  <Table1>
+    <ShipperID>3</ShipperID>
+    <CompanyName>Federal Shipping</CompanyName>
+    <Phone>(503) 555-9931</Phone>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="Shippers.ShipperID AS ShipperID" />
+          <property name="Output List.[0].Table" value="Shippers" />
+          <property name="Output List.[0].Column" value="ShipperID" />
+          <property name="Output List.[0].DataType" value="Int32" />
+          <property name="Output List.[0].Output Name" value="ShipperID" />
+          <property name="Output List.[1]" value="Shippers.CompanyName AS CompanyName" />
+          <property name="Output List.[1].Table" value="Shippers" />
+          <property name="Output List.[1].Column" value="CompanyName" />
+          <property name="Output List.[1].DataType" value="String" />
+          <property name="Output List.[1].Output Name" value="CompanyName" />
+          <property name="Output List.[2]" value="Shippers.Phone AS Phone" />
+          <property name="Output List.[2].Table" value="Shippers" />
+          <property name="Output List.[2].Column" value="Phone" />
+          <property name="Output List.[2].DataType" value="String" />
+          <property name="Output List.[2].Output Name" value="Phone" />
+        </properties>
+        <input>
+          <element operator="TableScan">
+            <properties>
+              <property name="Table" value="Shippers AS Shippers" />
+              <property name="Output List.[0]" value="Shippers.ShipperID" />
+              <property name="Output List.[0].Table" value="Shippers" />
+              <property name="Output List.[0].Column" value="ShipperID" />
+              <property name="Output List.[0].DataType" value="Int32" />
+              <property name="Output List.[1]" value="Shippers.CompanyName" />
+              <property name="Output List.[1].Table" value="Shippers" />
+              <property name="Output List.[1].Column" value="CompanyName" />
+              <property name="Output List.[1].DataType" value="String" />
+              <property name="Output List.[2]" value="Shippers.Phone" />
+              <property name="Output List.[2].Table" value="Shippers" />
+              <property name="Output List.[2].Column" value="Phone" />
+              <property name="Output List.[2].DataType" value="String" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="3" />
+              <property name="Statistics.Average Row Count" value="3" />
+            </properties>
+            <input />
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

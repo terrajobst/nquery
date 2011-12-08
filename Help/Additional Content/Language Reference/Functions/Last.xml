@@ -1,0 +1,42 @@
+<topic>
+	<head>
+		<title>LAST</title>
+		<keywords>
+			<keyword term="functions, LAST" />
+			<keyword term="aggregates, LAST" />
+			<keyword term="aggregate functions, LAST" />
+			<keyword term="LAST aggregate" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Aggregate Functions.html">Aggregate Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns the last value of the values in a group.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">LAST ( expression )</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						An expression to determine the last value of. <c>expression</c> can be of any type.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The last of all evaluated values of <c>expression</c> in a group.
+			</p>
+		</returns>
+	</body>
+</topic>

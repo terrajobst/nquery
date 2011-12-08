@@ -1,0 +1,7 @@
+<test>
+  <sql>SELECT	FORMAT(12, 'N2'),
+		FORMET(12, 'N2')</sql>
+  <expectedErrors>
+    <expectedError id="UndeclaredFunction" text="Function 'FORMET(Int32,String)' is not declared." />
+  </expectedErrors>
+</test>

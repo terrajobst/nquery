@@ -1,0 +1,94 @@
+<topic>
+	<head>
+		<title>SELECT Syntax</title>
+		<toc index="2"/>
+		<keywords>
+			<keyword term="SELECT statement, about"/>
+		</keywords>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Retrieves rows from a data context and enables the selection of one or many rows or columns from one or many tables.
+				The full syntax of the <c>SELECT</c> statement is complex, but the main clauses can be summarized as:
+			</p>
+			<code xml:space="preserve">[ <b>WITH</b> <i>common_table_expression</i>] 
+<b>SELECT</b> <i>select_list</i>
+[ <b>FROM</b> <i>table_source</i> ]
+[ <b>WHERE</b> <i>search_condition</i> ]
+[ <b>GROUP BY</b> <i>group_by_expression</i> ]
+[ <b>HAVING</b> <i>search_condition</i> ]
+[ <b>ORDER BY</b> <i>order_expression</i> [ <b>ASC</b> | <b>DESC</b> ] ]</code>
+			<p>
+				The <c>UNION</c>, <c>EXCEPT</c> and <c>INTERSECT</c> operators can be used between queries to combine or compare
+				their results into one result set.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve"><b>&lt;select_statement&gt; ::= </b>
+    [<b>WITH</b> &lt;common_table_expression&gt; [<b>,...</b><i>n</i>]]
+    &lt;query_expression&gt; 
+    [ <b>ORDER BY</b> { <i>order_by_expression</i> | <i>column_position</i> [ <b>ASC</b> | <b>DESC</b> ] } [ <b>,</b>...<i>n</i>] ] 
+                            
+<b>&lt;query_expression&gt; ::= </b>
+    { &lt;query_specification&gt; | <b>(</b> &lt;query_expression&gt; <b>)</b> } 
+    [  { <b>UNION</b> [ <b>ALL</b> ] | <b>EXCEPT</b> | <b>INTERSECT</b> }
+       &lt;query_specification&gt; | <b>(</b> &lt;query_expression&gt; <b>)</b> ]
+
+<b>&lt;query_specification&gt; ::= </b>
+    <b>SELECT</b>  [ <b>ALL</b> | <b>DISTINCT</b> ]
+            [ <b>TOP</b> <i>integer_literal</i> [ <b>WITH TIES</b> ] ] 
+            &lt;select_list&gt; 
+[     <b>FROM</b>  { &lt;table_source&gt; } [ <b>,...</b><i>n</i> ] ] 
+[    <b>WHERE</b>  &lt;search_condition&gt; ] 
+[ <b>GROUP BY</b>  group_by_expression [ <b>,...</b><i>n</i> ] ]
+[   <b>HAVING</b>  &lt;search_condition&gt; ]</code>
+		</syntax>
+
+		<remarks>
+			<p>
+				Because of the complexity of the SELECT statement, detailed syntax elements and arguments are shown by clause:
+			</p>
+			<table>
+				<tr>
+					<td>
+						<a href="CommonTableExpression.html">WITH common_table_expression</a>
+					</td>
+					<td>
+						<a href="GroupByClause.html">GROUP BY clause</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="SelectClause.html">SELECT clause</a>
+					</td>
+					<td>
+						<a href="HavingClause.html">HAVING clause</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="TopClause.html">TOP clause</a>
+					</td>
+					<td>
+						<a href="OrderByClause.html">ORDER BY clause</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="FromClause.html">FROM clause</a>
+					</td>
+					<td>
+						<a href="UnionExceptIntersect.html">UNION, EXCEPT, and INTERSECT</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="WhereClause.html">WHERE clause</a>
+					</td>
+				</tr>
+			</table>
+		</remarks>
+	</body>
+</topic>

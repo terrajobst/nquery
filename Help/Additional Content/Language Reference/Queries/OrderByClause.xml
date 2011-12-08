@@ -1,0 +1,68 @@
+<topic>
+	<head>
+		<title>ORDER BY Clause</title>
+		<toc index="7" />
+		<keywords>
+			<keyword term="SELECT statement, ORDER BY clause" />
+			<keyword term="ORDER BY clause, about" />
+		</keywords>
+		<links>
+			<link href="Queries.html">SELECT Syntax</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Specifies the sort order used on columns returned in a <c>SELECT</c> statement. The <c>ORDER BY</c> clause is not valid in
+				derived tables and subqueries, unless <c>TOP</c> is also specified.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">[ <b>ORDER BY</b> { <i>order_by_expression</i> | <i>column_position</i> [ <b>ASC</b> | <b>DESC</b> ] } [ <b>,</b>...<i>n</i>] ]</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="order_by_expression">
+					<p>
+						Specifies a column on which to sort. A sort column can be specified as a name or column alias, or a nonnegative integer representing
+						the position of the name or alias in the select list. Column names and aliases can be qualified by the table name.
+					</p>
+					<p>
+						Multiple sort columns can be specified. The sequence of the sort columns in the <c>ORDER BY</c> clause defines the organization of
+						the sorted result set.
+					</p>
+					<p>
+						The <c>ORDER BY</c> clause can include items not appearing in the select list. However, if <c>SELECT DISTINCT</c> is specified, or
+						if the <c>SELECT</c> statement contains a <c>UNION</c> operator, the sort columns must appear in the select list.
+					</p>
+					<p>
+						Additionally, when the <c>SELECT</c> statement includes a UNION operator, the column names or column aliases must be those specified
+						in the first select list.
+					</p>
+					<p>
+						<i>order_by_expression</i> must be sortable, i.e. the type of the expression must either implement <c>IComparable</c> or
+						the data context must provide a custom <c>IComparer</c> for it.
+					</p>
+				</param>
+				<param name="ASC">
+					<p>
+						Specifies that the values in the specified column should be sorted in ascending order, from lowest value to highest value.
+					</p>
+				</param>
+				<param name="DESC">
+					<p>
+						Specifies that the values in the specified column should be sorted in descending order, from highest value to lowest value.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<remarks>
+			<p>
+				<c>NULL</c> values are treated as the lowest possible values.
+			</p>
+		</remarks>
+	</body>
+</topic>

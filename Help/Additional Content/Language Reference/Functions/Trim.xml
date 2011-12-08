@@ -1,0 +1,41 @@
+<topic>
+	<head>
+		<title>TRIM</title>
+		<keywords>
+			<keyword term="functions, TRIM" />
+			<keyword term="string functions, TRIM" />
+			<keyword term="TRIM function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="String Functions.html">String Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Removes all occurrences of white space characters from the beginning and end of a specified string.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">TRIM(text AS string) RETURNS string</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="text">
+					<p>
+						A string containing white space characters at the beginning and/or end.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				A string equivalent to <c>text</c> after white space characters are removed from the beginning and end.
+			</p>
+		</returns>
+	</body>
+</topic>

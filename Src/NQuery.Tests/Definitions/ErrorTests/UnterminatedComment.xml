@@ -1,0 +1,8 @@
+<test>
+  <sql>/*</sql>
+  <expectedErrors>
+    <expectedError id="UnterminatedComment" text="Comment '/*' is not properly terminated." />
+    <expectedError id="UnterminatedComment" text="Comment '/*' is not properly terminated." />
+    <expectedError id="TokenExpected" text="Found '&lt;End-of-File&gt;' but expected 'SELECT'." />
+  </expectedErrors>
+</test>

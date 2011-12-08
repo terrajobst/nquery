@@ -1,0 +1,24 @@
+﻿<topic>
+	<head>
+		<title>Right Outer Join</title>
+		<keywords>
+			<keyword term="execution plan, right outer join"/>
+			<keyword term="logical operators, right outer join"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Right Outer Join</b> operator returns each row that satisfies the join of the second (bottom) input with each matching
+				row from the first (top) input. It also returns any rows from the second input that had no matching rows in the first input,
+				joined with <c>NULL</c>. If no join predicate exists in the <c>Predicate</c> property, each row is a matching row.
+			</p>
+			<p>
+				<b>Right Outer Join</b> is a logical operator.
+			</p>
+		</summary>
+	</body>
+</topic>

@@ -1,0 +1,30 @@
+<test>
+  <sql>WITH EmployeeHierarchy AS
+(
+	   -- Base case
+	   SELECT	EmployeeID
+	   FROM		Employees
+	   WHERE	ReportsTo IS NULL
+
+	   UNION ALL
+	   (
+	   -- Recursive step
+	   SELECT	e.EmployeeId
+	   FROM		EmployeeHierarchy eh 
+					INNER JOIN Employees e ON e.ReportsTo = eh.EmployeeID
+
+	   EXCEPT
+
+	   -- Recursive step
+	   SELECT	e.EmployeeId
+	   FROM		EmployeeHierarchy eh 
+					INNER JOIN Employees e ON e.ReportsTo = eh.EmployeeID
+	   )
+)
+SELECT	*
+FROM	EmployeeHierarchy
+</sql>
+  <expectedErrors>
+    <expectedError id="CteContainsMultipleRecursiveReferences" text="Recursive member of a common table expression 'EmployeeHierarchy' has multiple recursive references." />
+  </expectedErrors>
+</test>

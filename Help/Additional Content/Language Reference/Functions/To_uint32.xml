@@ -1,0 +1,46 @@
+<topic>
+	<head>
+		<title>TO_UINT32</title>
+		<keywords>
+			<keyword term="functions, TO_UINT32" />
+			<keyword term="conversion functions, TO_UINT32" />
+			<keyword term="TO_UINT32 function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Conversion Functions.html">Conversion Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Converts a given value to a 32-bit unsigned integer.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">TO_UINT32(value AS object) RETURNS uint</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						A value to be converted.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<examples>
+			<p>
+				The following shows <c>TO_UINT32</c> results for some input data:
+			</p>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">SELECT 'The TO_UINT32 result of value ''1'' is: ' AS Input, TO_UINT32('1') AS Value
+UNION  ALL
+SELECT 'The TO_UINT32 result of value 120000.999 is: ' AS Input, TO_UINT32(120000.999) AS Value
+UNION  ALL
+SELECT 'The TO_UINT32 result of value 120001.999 is: ' AS Input, TO_UINT32(120001.999) AS Value</sampleCode>
+		</examples>
+	</body>
+</topic>

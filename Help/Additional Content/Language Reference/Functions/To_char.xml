@@ -1,0 +1,50 @@
+<topic>
+	<head>
+		<title>TO_CHAR</title>
+		<keywords>
+			<keyword term="functions, TO_CHAR" />
+			<keyword term="conversion functions, TO_CHAR" />
+			<keyword term="TO_CHAR function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Conversion Functions.html">Conversion Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Converts a given value to a Unicode character.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">TO_CHAR(value AS object) RETURNS char</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						A value to be converted.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<examples>
+			<p>
+				The following shows <c>TO_CHAR</c> results for some input data:
+			</p>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">SELECT 'The TO_CHAR result of value ''0'' is: ' AS Input, TO_CHAR('0') AS Value
+UNION  ALL
+SELECT 'The TO_CHAR result of value ''A'' is: ', TO_CHAR('A')
+UNION  ALL
+SELECT 'The TO_CHAR result of value 48 is: ' AS Input, TO_CHAR(48) AS Value
+UNION  ALL
+SELECT 'The TO_CHAR result of value 65 is: ', TO_CHAR(65)
+UNION  ALL
+SELECT 'The TO_CHAR result of value 1250 is: ', TO_CHAR(1250)</sampleCode>
+		</examples>
+	</body>
+</topic>

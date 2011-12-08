@@ -1,0 +1,8 @@
+<test>
+  <sql>SELECT	*
+FROM	Employees e
+			INNER JOIN EmployeeTerritories et ON AVG(e.EmployeeID) = et.EmployeeID</sql>
+  <expectedErrors>
+    <expectedError id="AggregateInOn" text="An aggregate cannot appear in an ON clause unless it is in a subquery contained in a HAVING clause or select list, and the column being aggregated is an outer reference." />
+  </expectedErrors>
+</test>

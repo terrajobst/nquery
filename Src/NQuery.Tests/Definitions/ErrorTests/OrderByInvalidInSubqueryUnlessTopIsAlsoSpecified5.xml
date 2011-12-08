@@ -1,0 +1,17 @@
+<test>
+  <sql>(
+	SELECT	*
+	FROM	Employees
+	ORDER	BY 1
+)
+UNION	ALL
+(
+	SELECT	*
+	FROM	Employees
+	ORDER	BY 1
+)</sql>
+  <expectedErrors>
+    <expectedError id="OrderByInvalidInSubqueryUnlessTopIsAlsoSpecified" text="The ORDER BY clause is invalid in derived tables, subqueries, and common table expressions, unless TOP is also specified." />
+    <expectedError id="OrderByInvalidInSubqueryUnlessTopIsAlsoSpecified" text="The ORDER BY clause is invalid in derived tables, subqueries, and common table expressions, unless TOP is also specified." />
+  </expectedErrors>
+</test>

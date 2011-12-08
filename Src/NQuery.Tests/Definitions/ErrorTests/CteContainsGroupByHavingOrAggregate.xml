@@ -1,0 +1,21 @@
+<test>
+  <sql>WITH EmployeeHierarchy AS
+(
+	-- Base case
+	SELECT	EmployeeID
+	FROM	Employees
+	WHERE	ReportsTo IS NULL
+
+	UNION ALL
+
+	-- Recursive step
+	SELECT	SUM(eh.EmployeeId)
+	FROM	EmployeeHierarchy eh 
+				INNER JOIN Employees e ON e.ReportsTo = eh.EmployeeID
+)
+SELECT	*
+FROM	EmployeeHierarchy</sql>
+  <expectedErrors>
+    <expectedError id="CteContainsGroupByHavingOrAggregate" text="GROUP BY, HAVING, or aggregate functions are not allowed in the recursive part of a recursive common table expression 'EmployeeHierarchy'." />
+  </expectedErrors>
+</test>

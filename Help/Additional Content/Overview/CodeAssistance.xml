@@ -1,0 +1,52 @@
+﻿<topic>
+	<head>
+		<title>Code Assistance</title>
+		<toc index="6" />
+		<links>
+			<link href="Overview.html">Overview</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				NQuery provides member completion and parameter info code assistance features. These features are directly built into the NQuery
+				core assembly. So if you cannot use the provided <see cref="T:NQuery.UI.ActiproLink">Actipro Synatx Editor Integration</see> you
+				can still use these features to integrate in your own syntax editor without starting from scratch. See
+				<a href="..\Extensibility\CustomCodeAssistance.html">Custom Code Assistance</a> for details.
+			</p>
+		</summary>
+
+		<section title="Member Completion">
+			<p>
+				Member completion is a code assistance feature that helps you to explore the tables, properties, functions, methods and all
+				other stuff by providing a list of all elements that are accessible at a certain location in the source code.
+			</p>
+			<p>
+				Since this feature is context-aware the contents of member completion list depends on usage. For example, it can provide
+				a list of all elements of the <a href="DataContext.html">DataContext</a>:
+			</p>
+			<img src="MemberCompletionSimple.png" />
+
+			<p>
+				In a join context it provides you a list with all reachable tables:
+			</p>
+			<img src="MemberCompletionTable.png" />
+			<p>
+				In a join condition context it provides you a list of all applicable join conditions:
+			</p>
+			<img src="MemberCompletionJoinCondition.png" />
+
+			<p>
+				In an expresion context it provides a list of members (i.e. columns, properties and methods):
+			</p>
+			<img src="MemberCompletionMethods.png" />
+		</section>
+
+		<section title="Parameter Info">
+			<p>
+				Parameter info provides you with a list of function- or method signatures applicable at a certain source code location.
+			</p>
+			<img src="ParameterInfo.png" />
+		</section>
+	</body>
+</topic>

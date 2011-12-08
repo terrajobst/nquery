@@ -1,0 +1,91 @@
+﻿<topic>
+	<head>
+		<title>Parameters</title>
+		<toc index="5" />
+		<links>
+			<link href="Overview.html">Overview</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Both queries and expressions need often be executed against a set of values that are meant to change. For example, consider
+				an expression that is used to filter a list of objects. You would have to iterate over the objects and bind the expression to
+				every element in the list to evaluate the expression to check wheter the element should be included in the result or not.
+			</p>
+			<p>
+				Changing the <a href="DataContext.html">DataContext</a>, <a href="MetadataContext.html">MetadataContext</a>, or the query's or
+				expressions's <see cref="P:NQuery.Evaluatable.Text">Text</see> will require recompilation. Frequent recompilations will affect
+				the performance of your application and therefore should be avoided.
+			</p>
+			<p>
+				Parameters allow you to change certain values in your query or expression without forcing a recompilation. The concept of parameters
+				is very similar to parameters used in ADO.NET.
+			</p>
+		</summary>
+
+		<section title="Parameters vs. Constants">
+			<p>
+				You can use constants to include named values in your query or expression that will never change. Constants are treated as if the
+				value has been directly inserted in the query or expression. For example if you have a constant named <c>MagicValue</c> with the
+				value <c>42</c> and the expression having a text of <c>"MagicValue * 2"</c> NQuery will compute the result at compile time t
+				<c>84</c>. That means that at runtime the value <c>84</c> is directly returned without performing any computation.
+			</p>
+			<p>
+				To demonstrate the differences we will run two different scenarios and measure the time and count of compilations needed. In both
+				scenarios we will compute the same expression <c>"TO_STRING(MagicValue * 42 / 1000.0) + ' the result'"</c>. Both scenarios will
+				use a constant as well as a parameter to represent <c>MagicValue</c>.
+			</p>
+		</section>
+
+		<section title="Scenario 1: When do Constants Perform Better?">
+			<p>
+				In the first scenario we will set <c>MagicValue</c> statically to <c>42</c> and execute the expression 1,000,000 times. Since
+				the value never changes constants are performing better.
+			</p>
+			<sampleCode lang="cs" title="Scenario 1"
+						source="..\Samples\Overview\ParametersVsConstants\Program.cs" region="Constant Scenario" />
+
+			<p>
+				The console ouput is as follows:
+			</p>
+			<code xml:space="preserve">Using constants and parameters in scenario where the value never changes.
+Executing scenario 1,000,000 times.
+Constants
+        Needed Time  : 92 msecs
+        Compilations : 1
+Parameters
+        Needed Time  : 940 msecs
+        Compilations : 1</code>
+		</section>
+
+		<section title="Scenario 2: When do Parameters Perform Better?">
+			<p>
+				In the second scenario we will set <c>MagicValue</c> to a new value every time we evaluate the expression. Since the value
+				changes frequently parameters are performing much better. Due to the overhead of compilation the expression is only
+				evaluated 10,000 times.
+			</p>
+			<sampleCode lang="cs" title="Scenario 2"
+						source="..\Samples\Overview\ParametersVsConstants\Program.cs" region="Parameter Scenario" />
+
+			<p>
+				The console ouput is as follows:
+			</p>
+			<code xml:space="preserve">Using constants and parameters in scenario where the value frequently changes.
+Executing scenario 10,000 times.
+Constants
+        Needed Time  : 5,564 msecs
+        Compilations : 10,000
+Parameters
+        Needed Time  : 23 msecs
+        Compilations : 1</code>
+		</section>
+
+		<section title="Conclusion">
+			<p>
+				Constants can help to speed up the evaluation if the value never changes. On the other hand, if the value changes frequently
+				you should opt for parameters as this can reduce the execution time dramatically in such scenarios.
+			</p>
+		</section>
+	</body>
+</topic>

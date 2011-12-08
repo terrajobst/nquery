@@ -1,0 +1,332 @@
+<test>
+  <sql>SELECT	TOP 1
+		c.ContactName,
+		SUM(od.Quantity) Quantity,
+		SUM(od.Quantity * UnitPrice) RegularTotal,
+		SUM(od.Quantity * UnitPrice * (1.0 - od.Discount)) Total
+FROM	Customers c,
+		Orders o,
+		[Order Details] od
+WHERE	c.CustomerID = o.CustomerID
+AND 	o.OrderID = od.OrderID
+GROUP	BY c.ContactName
+HAVING	SUM(od.Quantity * UnitPrice) != SUM(od.Quantity * UnitPrice * (1.0 - od.Discount))
+ORDER	BY SUM(od.Quantity * UnitPrice * (1.0 - od.Discount)) DESC</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ContactName" type="xs:string" minOccurs="0" />
+                <xs:element name="Quantity" type="xs:long" minOccurs="0" />
+                <xs:element name="RegularTotal" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Total" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <ContactName>Horst Kloss</ContactName>
+    <Quantity>3961</Quantity>
+    <RegularTotal>117483.39</RegularTotal>
+    <Total>110277.30488350891510140</Total>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="c.ContactName AS ContactName" />
+          <property name="Output List.[0].Table" value="c" />
+          <property name="Output List.[0].Column" value="ContactName" />
+          <property name="Output List.[0].DataType" value="String" />
+          <property name="Output List.[0].Output Name" value="ContactName" />
+          <property name="Output List.[1]" value="Expr1008 AS Quantity" />
+          <property name="Output List.[1].Column" value="Expr1008" />
+          <property name="Output List.[1].DataType" value="Int64" />
+          <property name="Output List.[1].Output Name" value="Quantity" />
+          <property name="Output List.[2]" value="Expr1009 AS RegularTotal" />
+          <property name="Output List.[2].Column" value="Expr1009" />
+          <property name="Output List.[2].DataType" value="Decimal" />
+          <property name="Output List.[2].Output Name" value="RegularTotal" />
+          <property name="Output List.[3]" value="Expr1010 AS Total" />
+          <property name="Output List.[3].Column" value="Expr1010" />
+          <property name="Output List.[3].DataType" value="Decimal" />
+          <property name="Output List.[3].Output Name" value="Total" />
+        </properties>
+        <input>
+          <element operator="Top">
+            <properties>
+              <property name="Output List.[0]" value="c.ContactName" />
+              <property name="Output List.[0].Table" value="c" />
+              <property name="Output List.[0].Column" value="ContactName" />
+              <property name="Output List.[0].DataType" value="String" />
+              <property name="Output List.[1]" value="Expr1008" />
+              <property name="Output List.[1].Column" value="Expr1008" />
+              <property name="Output List.[1].DataType" value="Int64" />
+              <property name="Output List.[2]" value="Expr1009" />
+              <property name="Output List.[2].Column" value="Expr1009" />
+              <property name="Output List.[2].DataType" value="Decimal" />
+              <property name="Output List.[3]" value="Expr1010" />
+              <property name="Output List.[3].Column" value="Expr1010" />
+              <property name="Output List.[3].DataType" value="Decimal" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="1" />
+              <property name="Statistics.Average Row Count" value="1" />
+              <property name="Limit" value="1" />
+              <property name="With Ties" value="False" />
+            </properties>
+            <input>
+              <element operator="Sort">
+                <properties>
+                  <property name="Output List.[0]" value="c.ContactName" />
+                  <property name="Output List.[0].Table" value="c" />
+                  <property name="Output List.[0].Column" value="ContactName" />
+                  <property name="Output List.[0].DataType" value="String" />
+                  <property name="Output List.[1]" value="Expr1008" />
+                  <property name="Output List.[1].Column" value="Expr1008" />
+                  <property name="Output List.[1].DataType" value="Int64" />
+                  <property name="Output List.[2]" value="Expr1009" />
+                  <property name="Output List.[2].Column" value="Expr1009" />
+                  <property name="Output List.[2].DataType" value="Decimal" />
+                  <property name="Output List.[3]" value="Expr1010" />
+                  <property name="Output List.[3].Column" value="Expr1010" />
+                  <property name="Output List.[3].DataType" value="Decimal" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="2" />
+                  <property name="Statistics.Average Row Count" value="2" />
+                  <property name="Logical Operator" value="Sort" />
+                  <property name="Order By.[0]" value="Expr1010 DESC" />
+                  <property name="Order By.[0].Column" value="Expr1010" />
+                  <property name="Order By.[0].DataType" value="Decimal" />
+                  <property name="Order By.[0].Order" value="DESC" />
+                </properties>
+                <input>
+                  <element operator="Filter">
+                    <properties>
+                      <property name="Output List.[0]" value="c.ContactName" />
+                      <property name="Output List.[0].Table" value="c" />
+                      <property name="Output List.[0].Column" value="ContactName" />
+                      <property name="Output List.[0].DataType" value="String" />
+                      <property name="Output List.[1]" value="Expr1008" />
+                      <property name="Output List.[1].Column" value="Expr1008" />
+                      <property name="Output List.[1].DataType" value="Int64" />
+                      <property name="Output List.[2]" value="Expr1009" />
+                      <property name="Output List.[2].Column" value="Expr1009" />
+                      <property name="Output List.[2].DataType" value="Decimal" />
+                      <property name="Output List.[3]" value="Expr1010" />
+                      <property name="Output List.[3].Column" value="Expr1010" />
+                      <property name="Output List.[3].DataType" value="Decimal" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="54" />
+                      <property name="Statistics.Average Row Count" value="54" />
+                      <property name="Predicate" value="Expr1009 &lt;&gt; Expr1010" />
+                    </properties>
+                    <input>
+                      <element operator="StreamAggregate">
+                        <properties>
+                          <property name="Output List.[0]" value="c.ContactName" />
+                          <property name="Output List.[0].Table" value="c" />
+                          <property name="Output List.[0].Column" value="ContactName" />
+                          <property name="Output List.[0].DataType" value="String" />
+                          <property name="Output List.[1]" value="Expr1008" />
+                          <property name="Output List.[1].Column" value="Expr1008" />
+                          <property name="Output List.[1].DataType" value="Int64" />
+                          <property name="Output List.[2]" value="Expr1009" />
+                          <property name="Output List.[2].Column" value="Expr1009" />
+                          <property name="Output List.[2].DataType" value="Decimal" />
+                          <property name="Output List.[3]" value="Expr1010" />
+                          <property name="Output List.[3].Column" value="Expr1010" />
+                          <property name="Output List.[3].DataType" value="Decimal" />
+                          <property name="Statistics.Open Count" value="1" />
+                          <property name="Statistics.Row Count" value="89" />
+                          <property name="Statistics.Average Row Count" value="89" />
+                          <property name="Defined Values.[0]" value="Expr1008 = SUM(od.Quantity)" />
+                          <property name="Defined Values.[0].Target" value="Expr1008" />
+                          <property name="Defined Values.[0].DataType" value="Int64" />
+                          <property name="Defined Values.[0].Source" value="SUM(od.Quantity)" />
+                          <property name="Defined Values.[1]" value="Expr1009 = SUM(CAST(od.Quantity AS DECIMAL) * od.UnitPrice)" />
+                          <property name="Defined Values.[1].Target" value="Expr1009" />
+                          <property name="Defined Values.[1].DataType" value="Decimal" />
+                          <property name="Defined Values.[1].Source" value="SUM(CAST(od.Quantity AS DECIMAL) * od.UnitPrice)" />
+                          <property name="Defined Values.[2]" value="Expr1010 = SUM(CAST(od.Quantity AS DECIMAL) * od.UnitPrice * CAST(1.000000E+000 - CAST(od.Discount AS DOUBLE) AS DECIMAL))" />
+                          <property name="Defined Values.[2].Target" value="Expr1010" />
+                          <property name="Defined Values.[2].DataType" value="Decimal" />
+                          <property name="Defined Values.[2].Source" value="SUM(CAST(od.Quantity AS DECIMAL) * od.UnitPrice * CAST(1.000000E+000 - CAST(od.Discount AS DOUBLE) AS DECIMAL))" />
+                          <property name="Group By.[0]" value="c.ContactName" />
+                          <property name="Group By.[0].Table" value="c" />
+                          <property name="Group By.[0].Column" value="ContactName" />
+                          <property name="Group By.[0].DataType" value="String" />
+                        </properties>
+                        <input>
+                          <element operator="Sort">
+                            <properties>
+                              <property name="Output List.[0]" value="c.ContactName" />
+                              <property name="Output List.[0].Table" value="c" />
+                              <property name="Output List.[0].Column" value="ContactName" />
+                              <property name="Output List.[0].DataType" value="String" />
+                              <property name="Output List.[1]" value="od.UnitPrice" />
+                              <property name="Output List.[1].Table" value="od" />
+                              <property name="Output List.[1].Column" value="UnitPrice" />
+                              <property name="Output List.[1].DataType" value="Decimal" />
+                              <property name="Output List.[2]" value="od.Quantity" />
+                              <property name="Output List.[2].Table" value="od" />
+                              <property name="Output List.[2].Column" value="Quantity" />
+                              <property name="Output List.[2].DataType" value="Int16" />
+                              <property name="Output List.[3]" value="od.Discount" />
+                              <property name="Output List.[3].Table" value="od" />
+                              <property name="Output List.[3].Column" value="Discount" />
+                              <property name="Output List.[3].DataType" value="Single" />
+                              <property name="Statistics.Open Count" value="1" />
+                              <property name="Statistics.Row Count" value="2,155" />
+                              <property name="Statistics.Average Row Count" value="2,155" />
+                              <property name="Logical Operator" value="Sort" />
+                              <property name="Order By.[0]" value="c.ContactName ASC" />
+                              <property name="Order By.[0].Table" value="c" />
+                              <property name="Order By.[0].Column" value="ContactName" />
+                              <property name="Order By.[0].DataType" value="String" />
+                              <property name="Order By.[0].Order" value="ASC" />
+                            </properties>
+                            <input>
+                              <element operator="HashMatch">
+                                <properties>
+                                  <property name="Output List.[0]" value="c.ContactName" />
+                                  <property name="Output List.[0].Table" value="c" />
+                                  <property name="Output List.[0].Column" value="ContactName" />
+                                  <property name="Output List.[0].DataType" value="String" />
+                                  <property name="Output List.[1]" value="od.UnitPrice" />
+                                  <property name="Output List.[1].Table" value="od" />
+                                  <property name="Output List.[1].Column" value="UnitPrice" />
+                                  <property name="Output List.[1].DataType" value="Decimal" />
+                                  <property name="Output List.[2]" value="od.Quantity" />
+                                  <property name="Output List.[2].Table" value="od" />
+                                  <property name="Output List.[2].Column" value="Quantity" />
+                                  <property name="Output List.[2].DataType" value="Int16" />
+                                  <property name="Output List.[3]" value="od.Discount" />
+                                  <property name="Output List.[3].Table" value="od" />
+                                  <property name="Output List.[3].Column" value="Discount" />
+                                  <property name="Output List.[3].DataType" value="Single" />
+                                  <property name="Statistics.Open Count" value="1" />
+                                  <property name="Statistics.Row Count" value="2,155" />
+                                  <property name="Statistics.Average Row Count" value="2,155" />
+                                  <property name="Hash Keys Build" value="o.OrderID" />
+                                  <property name="Hash Keys Build.Table" value="o" />
+                                  <property name="Hash Keys Build.Column" value="OrderID" />
+                                  <property name="Hash Keys Build.DataType" value="Int32" />
+                                  <property name="Hash Keys Probe" value="od.OrderID" />
+                                  <property name="Hash Keys Probe.Table" value="od" />
+                                  <property name="Hash Keys Probe.Column" value="OrderID" />
+                                  <property name="Hash Keys Probe.DataType" value="Int32" />
+                                  <property name="Logical Operator" value="Inner Join" />
+                                </properties>
+                                <input>
+                                  <element operator="HashMatch">
+                                    <properties>
+                                      <property name="Output List.[0]" value="o.OrderID" />
+                                      <property name="Output List.[0].Table" value="o" />
+                                      <property name="Output List.[0].Column" value="OrderID" />
+                                      <property name="Output List.[0].DataType" value="Int32" />
+                                      <property name="Output List.[1]" value="c.ContactName" />
+                                      <property name="Output List.[1].Table" value="c" />
+                                      <property name="Output List.[1].Column" value="ContactName" />
+                                      <property name="Output List.[1].DataType" value="String" />
+                                      <property name="Statistics.Open Count" value="1" />
+                                      <property name="Statistics.Row Count" value="830" />
+                                      <property name="Statistics.Average Row Count" value="830" />
+                                      <property name="Hash Keys Build" value="o.CustomerID" />
+                                      <property name="Hash Keys Build.Table" value="o" />
+                                      <property name="Hash Keys Build.Column" value="CustomerID" />
+                                      <property name="Hash Keys Build.DataType" value="String" />
+                                      <property name="Hash Keys Probe" value="c.CustomerID" />
+                                      <property name="Hash Keys Probe.Table" value="c" />
+                                      <property name="Hash Keys Probe.Column" value="CustomerID" />
+                                      <property name="Hash Keys Probe.DataType" value="String" />
+                                      <property name="Logical Operator" value="Inner Join" />
+                                    </properties>
+                                    <input>
+                                      <element operator="TableScan">
+                                        <properties>
+                                          <property name="Table" value="Orders AS o" />
+                                          <property name="Output List.[0]" value="o.OrderID" />
+                                          <property name="Output List.[0].Table" value="o" />
+                                          <property name="Output List.[0].Column" value="OrderID" />
+                                          <property name="Output List.[0].DataType" value="Int32" />
+                                          <property name="Output List.[1]" value="o.CustomerID" />
+                                          <property name="Output List.[1].Table" value="o" />
+                                          <property name="Output List.[1].Column" value="CustomerID" />
+                                          <property name="Output List.[1].DataType" value="String" />
+                                          <property name="Statistics.Open Count" value="1" />
+                                          <property name="Statistics.Row Count" value="830" />
+                                          <property name="Statistics.Average Row Count" value="830" />
+                                        </properties>
+                                        <input />
+                                      </element>
+                                      <element operator="TableScan">
+                                        <properties>
+                                          <property name="Table" value="Customers AS c" />
+                                          <property name="Output List.[0]" value="c.CustomerID" />
+                                          <property name="Output List.[0].Table" value="c" />
+                                          <property name="Output List.[0].Column" value="CustomerID" />
+                                          <property name="Output List.[0].DataType" value="String" />
+                                          <property name="Output List.[1]" value="c.ContactName" />
+                                          <property name="Output List.[1].Table" value="c" />
+                                          <property name="Output List.[1].Column" value="ContactName" />
+                                          <property name="Output List.[1].DataType" value="String" />
+                                          <property name="Statistics.Open Count" value="1" />
+                                          <property name="Statistics.Row Count" value="91" />
+                                          <property name="Statistics.Average Row Count" value="91" />
+                                        </properties>
+                                        <input />
+                                      </element>
+                                    </input>
+                                  </element>
+                                  <element operator="TableScan">
+                                    <properties>
+                                      <property name="Table" value="Order Details AS od" />
+                                      <property name="Output List.[0]" value="od.OrderID" />
+                                      <property name="Output List.[0].Table" value="od" />
+                                      <property name="Output List.[0].Column" value="OrderID" />
+                                      <property name="Output List.[0].DataType" value="Int32" />
+                                      <property name="Output List.[1]" value="od.UnitPrice" />
+                                      <property name="Output List.[1].Table" value="od" />
+                                      <property name="Output List.[1].Column" value="UnitPrice" />
+                                      <property name="Output List.[1].DataType" value="Decimal" />
+                                      <property name="Output List.[2]" value="od.Quantity" />
+                                      <property name="Output List.[2].Table" value="od" />
+                                      <property name="Output List.[2].Column" value="Quantity" />
+                                      <property name="Output List.[2].DataType" value="Int16" />
+                                      <property name="Output List.[3]" value="od.Discount" />
+                                      <property name="Output List.[3].Table" value="od" />
+                                      <property name="Output List.[3].Column" value="Discount" />
+                                      <property name="Output List.[3].DataType" value="Single" />
+                                      <property name="Statistics.Open Count" value="1" />
+                                      <property name="Statistics.Row Count" value="2,155" />
+                                      <property name="Statistics.Average Row Count" value="2,155" />
+                                    </properties>
+                                    <input />
+                                  </element>
+                                </input>
+                              </element>
+                            </input>
+                          </element>
+                        </input>
+                      </element>
+                    </input>
+                  </element>
+                </input>
+              </element>
+            </input>
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

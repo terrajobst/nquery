@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+	<?include Product.wxi ?>
+
+	<Product Id="*" UpgradeCode="$(var.UpgradeCode)"
+			 Name="$(var.ProductName) !(bind.fileVersion.NQuery.dll)" Version="!(bind.fileVersion.NQuery.dll)"
+			 Language="1033" Manufacturer="$(var.Manufacturer)">
+
+		<!-- Package Definition -->
+
+		<Package Id="*" Compressed="yes" Description="$(var.ProductName) !(bind.fileVersion.NQuery.dll)" InstallerVersion="200"
+				 ShortNames="no" Manufacturer="$(var.Manufacturer)" Languages="1033" SummaryCodepage="1252" />
+
+		<!-- Major Upgrade Support -->
+
+		<Upgrade Id="$(var.UpgradeCode)">
+			<UpgradeVersion Minimum="!(bind.fileVersion.NQuery.dll)" IncludeMinimum="no" OnlyDetect="yes" Property="NEWERVERSIONDETECTED" />
+			<UpgradeVersion Minimum="0.0.0.0" IncludeMinimum="yes" Maximum="!(bind.fileVersion.NQuery.dll)" IncludeMaximum="no" Property="OLDERVERSIONBEINGUPGRADED" />
+		</Upgrade>
+
+		<!-- Properties -->
+
+		<Property Id="ARPPRODUCTICON"   Value="NQueryIcon" />
+		<Property Id="ARPHELPLINK"      Value="$(var.ProductHomePage)" />
+		<Property Id="ARPURLINFOABOUT"  Value="$(var.ProductHomePage)" />
+		<Property Id="ARPURLUPDATEINFO" Value="$(var.ProductHomePage)" />
+
+		<!-- Launch Conditions -->
+
+		<Condition Message="An administrator must approve or install [ProductName].">
+			Privileged
+		</Condition>
+
+		<Condition Message="[ProductName] is already installed in a newer version on your computer.">
+			NOT NEWERVERSIONDETECTED
+		</Condition>
+
+		<!-- Media -->
+
+		<Media Id="1" Cabinet="$(var.ProductName).cab" CompressionLevel="high" EmbedCab="yes" />
+
+		<!-- Icons -->
+
+		<Icon Id="NQueryIcon" SourceFile="Resources\NQuery.ico" />
+
+		<!-- Directory Structure -->
+
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="CommonFilesFolder" />
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="INSTALLDIR" Name="$(var.ProductName)">
+					<Directory Id="NQuery.Bin" Name="Bin" />
+					<Directory Id="NQuery.Help" Name="Help" />
+					<Directory Id="NQuery.Demo" Name="Demo" />
+					<Directory Id="NQuery.Samples" Name="Samples" />
+				</Directory>
+			</Directory>
+		</Directory>
+
+		<!-- Features -->
+
+		<FeatureRef Id="Binaries"/>
+		<FeatureRef Id="Samples"/>
+		<FeatureRef Id="Demo"/>
+		<FeatureRef Id="HelpVS"/>
+		<FeatureRef Id="HelpCHM"/>
+
+		<!-- Install Sequences -->
+
+		<InstallExecuteSequence>
+			<FindRelatedProducts Before="LaunchConditions" />
+			<RemoveExistingProducts After="InstallValidate" />
+			<InstallFinalize Sequence="7800" />
+		</InstallExecuteSequence>
+
+		<InstallUISequence>
+			<FindRelatedProducts Before="LaunchConditions" />
+		</InstallUISequence>
+
+		<!-- WixUI_Advanced scaffolding (to be replaced by extension authoring) -->
+
+		<Property Id="ApplicationFolderName" Value="$(var.ProductName)" />
+		<Property Id="WixAppFolder" Value="WixPerMachineFolder" />
+		<WixVariable Id="WixUILicenseRtf" Value="Resources\License.rtf" />
+		<WixVariable Id="WixUIBannerBmp"  Value="Resources\Banner.jpg" />
+		<WixVariable Id="WixUIDialogBmp"  Value="Resources\Dialog.jpg" />
+
+		<Property Id="ALLUSERS" Value="1" />
+		<WixVariable Id="WixUISupportPerMachine" Value="1" />
+		<WixVariable Id="WixUISupportPerUser"    Value="0" />
+
+		<UI>
+			<UIRef Id="WixUI_FeatureTree" />
+		</UI>
+	</Product>
+</Wix>

@@ -1,0 +1,10 @@
+<test>
+  <sql>SELECT	e.City,
+		COUNT(*)
+FROM	Employees e
+GROUP	BY e.City
+HAVING	COUNT(*)</sql>
+  <expectedErrors>
+    <expectedError id="HavingClauseMustEvaluateToBool" text="HAVING clause must evaluate to BOOLEAN expression." />
+  </expectedErrors>
+</test>

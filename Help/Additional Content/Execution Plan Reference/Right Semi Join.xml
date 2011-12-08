@@ -1,0 +1,23 @@
+﻿<topic>
+	<head>
+		<title>Right Semi Join</title>
+		<keywords>
+			<keyword term="execution plan, right semi join"/>
+			<keyword term="logical operators, right semi join"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Right Semi Join</b> operator returns each row from the second (bottom) input when there is a matching row in
+				the first (top) input. If no join predicate exists in the <c>Predicate</c> property, each row is a matching row.
+			</p>
+			<p>
+				<b>Right Semi Join</b> is a logical operator.
+			</p>
+		</summary>
+	</body>
+</topic>

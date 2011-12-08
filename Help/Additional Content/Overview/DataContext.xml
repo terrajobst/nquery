@@ -1,0 +1,83 @@
+﻿<topic>
+	<head>
+		<title>DataContext Class</title>
+		<toc index="3" />
+		<links>
+			<link href="Overview.html">Overview</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <see cref="T:NQuery.DataContext">DataContext</see> class represents something like a scope in which queries and
+				expressions are evaluated.
+			</p>
+		</summary>
+
+		<section title="Sharing">
+			<p>
+				The <see cref="T:NQuery.DataContext">DataContext</see> can be shared across multiple different queries and expressions.
+			</p>
+		</section>
+
+		<section title="Link to Metadata Context">
+			<p>
+				Each <see cref="T:NQuery.DataContext">DataContext</see> is linked to a <see cref="T:NQuery.MetadataContext">MetadataContext</see>,
+				which provides needed meta information, e.g. how to compare certain types or what properties and methods a type has.
+			</p>
+			<p>
+				See <a href="MetadataContext.html">MetadataContext</a> for details.
+			</p>
+		</section>
+
+		<section title="Elements in a Data Context">
+			<p>
+				A <see cref="T:NQuery.DataContext">DataContext</see> may contain different items. The following table lists all of them.
+			</p>
+
+			<table>
+				<tr>
+					<th>Element</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>Aggregate</td>
+					<td>
+						An aggregate is a function that can be used in a query to perform aggregations. See
+						<a href="/Extensibility/CustomAggregates.html">Custom Aggregates</a> for details how create new functions.
+					</td>
+				</tr>
+				<tr>
+					<td>Constant</td>
+					<td>
+						A constant is named value whose value cannot change. In contrast to <a href="Parameters.html">Parameters</a>
+						this means that you cannot change its value. If want to change a constant you have to remove it from the data context
+						an re-create it with a different value. The upside is that constants can be used to optimize queries and expressions
+						by the compiler.
+					</td>
+				</tr>
+				<tr>
+					<td>Function</td>
+					<td>
+						A function is used to perform calculations inside of queries and expressions. See
+						<a href="/Extensibility/CustomFunctions.html">Custom Functions</a> for details how to create new functions.
+					</td>
+				</tr>
+				<tr>
+					<td>Table</td>
+					<td>
+						A table is data source from which a query can select data. See
+						<a href="/Extensibility/CustomTables.html">Custom Tables</a> for details how to create new tables.
+					</td>
+				</tr>
+				<tr>
+					<td>Table Relation</td>
+					<td>
+						A table relation declares a relationship between two tables. This is useful for features like
+						<a href="CodeAssistance.html">Code Assistance</a>.
+					</td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</topic>

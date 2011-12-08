@@ -1,0 +1,248 @@
+<test>
+  <sql>SELECT	e.EmployeeID,
+		e.FirstName,
+		e.LastName
+FROM	Employees e
+
+UNION
+
+SELECT	e.EmployeeID,
+		e.FirstName,
+		e.LastName
+FROM	Employees e
+
+ORDER	BY 1, 2</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="EmployeeID" type="xs:int" minOccurs="0" />
+                <xs:element name="FirstName" type="xs:string" minOccurs="0" />
+                <xs:element name="LastName" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <EmployeeID>1</EmployeeID>
+    <FirstName>Nancy</FirstName>
+    <LastName>Davolio</LastName>
+  </Table1>
+  <Table1>
+    <EmployeeID>2</EmployeeID>
+    <FirstName>Andrew</FirstName>
+    <LastName>Fuller</LastName>
+  </Table1>
+  <Table1>
+    <EmployeeID>3</EmployeeID>
+    <FirstName>Janet</FirstName>
+    <LastName>Leverling</LastName>
+  </Table1>
+  <Table1>
+    <EmployeeID>4</EmployeeID>
+    <FirstName>Margaret</FirstName>
+    <LastName>Peacock</LastName>
+  </Table1>
+  <Table1>
+    <EmployeeID>5</EmployeeID>
+    <FirstName>Steven</FirstName>
+    <LastName>Buchanan</LastName>
+  </Table1>
+  <Table1>
+    <EmployeeID>6</EmployeeID>
+    <FirstName>Michael</FirstName>
+    <LastName>Suyama</LastName>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <FirstName>Robert</FirstName>
+    <LastName>King</LastName>
+  </Table1>
+  <Table1>
+    <EmployeeID>8</EmployeeID>
+    <FirstName>Laura</FirstName>
+    <LastName>Callahan</LastName>
+  </Table1>
+  <Table1>
+    <EmployeeID>9</EmployeeID>
+    <FirstName>Anne</FirstName>
+    <LastName>Dodsworth</LastName>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="Union1006 AS EmployeeID" />
+          <property name="Output List.[0].Column" value="Union1006" />
+          <property name="Output List.[0].DataType" value="Int32" />
+          <property name="Output List.[0].Output Name" value="EmployeeID" />
+          <property name="Output List.[1]" value="Union1007 AS FirstName" />
+          <property name="Output List.[1].Column" value="Union1007" />
+          <property name="Output List.[1].DataType" value="String" />
+          <property name="Output List.[1].Output Name" value="FirstName" />
+          <property name="Output List.[2]" value="Union1008 AS LastName" />
+          <property name="Output List.[2].Column" value="Union1008" />
+          <property name="Output List.[2].DataType" value="String" />
+          <property name="Output List.[2].Output Name" value="LastName" />
+        </properties>
+        <input>
+          <element operator="Sort">
+            <properties>
+              <property name="Output List.[0]" value="Union1006" />
+              <property name="Output List.[0].Column" value="Union1006" />
+              <property name="Output List.[0].DataType" value="Int32" />
+              <property name="Output List.[1]" value="Union1007" />
+              <property name="Output List.[1].Column" value="Union1007" />
+              <property name="Output List.[1].DataType" value="String" />
+              <property name="Output List.[2]" value="Union1008" />
+              <property name="Output List.[2].Column" value="Union1008" />
+              <property name="Output List.[2].DataType" value="String" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="9" />
+              <property name="Statistics.Average Row Count" value="9" />
+              <property name="Logical Operator" value="Sort" />
+              <property name="Order By.[0]" value="Union1006 ASC" />
+              <property name="Order By.[0].Column" value="Union1006" />
+              <property name="Order By.[0].DataType" value="Int32" />
+              <property name="Order By.[0].Order" value="ASC" />
+              <property name="Order By.[1]" value="Union1007 ASC" />
+              <property name="Order By.[1].Column" value="Union1007" />
+              <property name="Order By.[1].DataType" value="String" />
+              <property name="Order By.[1].Order" value="ASC" />
+            </properties>
+            <input>
+              <element operator="Sort">
+                <properties>
+                  <property name="Output List.[0]" value="Union1006" />
+                  <property name="Output List.[0].Column" value="Union1006" />
+                  <property name="Output List.[0].DataType" value="Int32" />
+                  <property name="Output List.[1]" value="Union1007" />
+                  <property name="Output List.[1].Column" value="Union1007" />
+                  <property name="Output List.[1].DataType" value="String" />
+                  <property name="Output List.[2]" value="Union1008" />
+                  <property name="Output List.[2].Column" value="Union1008" />
+                  <property name="Output List.[2].DataType" value="String" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="9" />
+                  <property name="Statistics.Average Row Count" value="9" />
+                  <property name="Logical Operator" value="Distinct Sort" />
+                  <property name="Order By.[0]" value="Union1006 ASC" />
+                  <property name="Order By.[0].Column" value="Union1006" />
+                  <property name="Order By.[0].DataType" value="Int32" />
+                  <property name="Order By.[0].Order" value="ASC" />
+                  <property name="Order By.[1]" value="Union1007 ASC" />
+                  <property name="Order By.[1].Column" value="Union1007" />
+                  <property name="Order By.[1].DataType" value="String" />
+                  <property name="Order By.[1].Order" value="ASC" />
+                  <property name="Order By.[2]" value="Union1008 ASC" />
+                  <property name="Order By.[2].Column" value="Union1008" />
+                  <property name="Order By.[2].DataType" value="String" />
+                  <property name="Order By.[2].Order" value="ASC" />
+                </properties>
+                <input>
+                  <element operator="Concatenation">
+                    <properties>
+                      <property name="Output List.[0]" value="Union1006" />
+                      <property name="Output List.[0].Column" value="Union1006" />
+                      <property name="Output List.[0].DataType" value="Int32" />
+                      <property name="Output List.[1]" value="Union1007" />
+                      <property name="Output List.[1].Column" value="Union1007" />
+                      <property name="Output List.[1].DataType" value="String" />
+                      <property name="Output List.[2]" value="Union1008" />
+                      <property name="Output List.[2].Column" value="Union1008" />
+                      <property name="Output List.[2].DataType" value="String" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="18" />
+                      <property name="Statistics.Average Row Count" value="18" />
+                      <property name="Defined Values.Union1006" value="e.EmployeeID; e.EmployeeID" />
+                      <property name="Defined Values.Union1006.[0]" value="e.EmployeeID" />
+                      <property name="Defined Values.Union1006.[0].Table" value="e" />
+                      <property name="Defined Values.Union1006.[0].Column" value="EmployeeID" />
+                      <property name="Defined Values.Union1006.[0].DataType" value="Int32" />
+                      <property name="Defined Values.Union1006.[1]" value="e.EmployeeID" />
+                      <property name="Defined Values.Union1006.[1].Table" value="e" />
+                      <property name="Defined Values.Union1006.[1].Column" value="EmployeeID" />
+                      <property name="Defined Values.Union1006.[1].DataType" value="Int32" />
+                      <property name="Defined Values.Union1007" value="e.FirstName; e.FirstName" />
+                      <property name="Defined Values.Union1007.[0]" value="e.FirstName" />
+                      <property name="Defined Values.Union1007.[0].Table" value="e" />
+                      <property name="Defined Values.Union1007.[0].Column" value="FirstName" />
+                      <property name="Defined Values.Union1007.[0].DataType" value="String" />
+                      <property name="Defined Values.Union1007.[1]" value="e.FirstName" />
+                      <property name="Defined Values.Union1007.[1].Table" value="e" />
+                      <property name="Defined Values.Union1007.[1].Column" value="FirstName" />
+                      <property name="Defined Values.Union1007.[1].DataType" value="String" />
+                      <property name="Defined Values.Union1008" value="e.LastName; e.LastName" />
+                      <property name="Defined Values.Union1008.[0]" value="e.LastName" />
+                      <property name="Defined Values.Union1008.[0].Table" value="e" />
+                      <property name="Defined Values.Union1008.[0].Column" value="LastName" />
+                      <property name="Defined Values.Union1008.[0].DataType" value="String" />
+                      <property name="Defined Values.Union1008.[1]" value="e.LastName" />
+                      <property name="Defined Values.Union1008.[1].Table" value="e" />
+                      <property name="Defined Values.Union1008.[1].Column" value="LastName" />
+                      <property name="Defined Values.Union1008.[1].DataType" value="String" />
+                    </properties>
+                    <input>
+                      <element operator="TableScan">
+                        <properties>
+                          <property name="Table" value="Employees AS e" />
+                          <property name="Output List.[0]" value="e.EmployeeID" />
+                          <property name="Output List.[0].Table" value="e" />
+                          <property name="Output List.[0].Column" value="EmployeeID" />
+                          <property name="Output List.[0].DataType" value="Int32" />
+                          <property name="Output List.[1]" value="e.LastName" />
+                          <property name="Output List.[1].Table" value="e" />
+                          <property name="Output List.[1].Column" value="LastName" />
+                          <property name="Output List.[1].DataType" value="String" />
+                          <property name="Output List.[2]" value="e.FirstName" />
+                          <property name="Output List.[2].Table" value="e" />
+                          <property name="Output List.[2].Column" value="FirstName" />
+                          <property name="Output List.[2].DataType" value="String" />
+                          <property name="Statistics.Open Count" value="1" />
+                          <property name="Statistics.Row Count" value="9" />
+                          <property name="Statistics.Average Row Count" value="9" />
+                        </properties>
+                        <input />
+                      </element>
+                      <element operator="TableScan">
+                        <properties>
+                          <property name="Table" value="Employees AS e" />
+                          <property name="Output List.[0]" value="e.EmployeeID" />
+                          <property name="Output List.[0].Table" value="e" />
+                          <property name="Output List.[0].Column" value="EmployeeID" />
+                          <property name="Output List.[0].DataType" value="Int32" />
+                          <property name="Output List.[1]" value="e.LastName" />
+                          <property name="Output List.[1].Table" value="e" />
+                          <property name="Output List.[1].Column" value="LastName" />
+                          <property name="Output List.[1].DataType" value="String" />
+                          <property name="Output List.[2]" value="e.FirstName" />
+                          <property name="Output List.[2].Table" value="e" />
+                          <property name="Output List.[2].Column" value="FirstName" />
+                          <property name="Output List.[2].DataType" value="String" />
+                          <property name="Statistics.Open Count" value="1" />
+                          <property name="Statistics.Row Count" value="9" />
+                          <property name="Statistics.Average Row Count" value="9" />
+                        </properties>
+                        <input />
+                      </element>
+                    </input>
+                  </element>
+                </input>
+              </element>
+            </input>
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

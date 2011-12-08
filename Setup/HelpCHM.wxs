@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<?include Product.wxi ?>
+	<Fragment>
+		<DirectoryRef Id="NQuery.Help">
+			<Component Id="NQuery.chm" Guid="{AB8E724F-C991-472B-B90B-C2DFFEA0BB99}">
+				<File Id="NQuery.chm" Name="NQuery.chm" KeyPath="yes" Source="$(var.HelpFolder)NQuery.chm" />
+			</Component>
+		</DirectoryRef>
+
+		<Feature Id="HelpCHM" Level="1" AllowAdvertise="no"
+				 Title="Help (Local)"
+				 Description="Installs a simple CHM file that can be browsed without Visual Studio.">
+			<ComponentRef Id="NQuery.chm"/>
+		</Feature>
+	</Fragment>
+</Wix>

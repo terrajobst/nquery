@@ -1,0 +1,117 @@
+<test>
+  <sql>SELECT	DISTINCT
+		od.quantity * od.unitprice
+FROM	[order details] od
+WHERE	od.quantity * od.unitprice &gt;= od.OrderID
+ORDER	BY od.quantity * od.unitprice</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Column" msdata:Caption="" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <Column>10540.0</Column>
+  </Table1>
+  <Table1>
+    <Column>15810.0</Column>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="Expr1003 AS " />
+          <property name="Output List.[0].Column" value="Expr1003" />
+          <property name="Output List.[0].DataType" value="Decimal" />
+        </properties>
+        <input>
+          <element operator="Sort">
+            <properties>
+              <property name="Output List.[0]" value="Expr1003" />
+              <property name="Output List.[0].Column" value="Expr1003" />
+              <property name="Output List.[0].DataType" value="Decimal" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="2" />
+              <property name="Statistics.Average Row Count" value="2" />
+              <property name="Logical Operator" value="Distinct Sort" />
+              <property name="Order By.[0]" value="Expr1003 ASC" />
+              <property name="Order By.[0].Column" value="Expr1003" />
+              <property name="Order By.[0].DataType" value="Decimal" />
+              <property name="Order By.[0].Order" value="ASC" />
+            </properties>
+            <input>
+              <element operator="ComputeScalar">
+                <properties>
+                  <property name="Output List.[0]" value="Expr1003" />
+                  <property name="Output List.[0].Column" value="Expr1003" />
+                  <property name="Output List.[0].DataType" value="Decimal" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="4" />
+                  <property name="Statistics.Average Row Count" value="4" />
+                  <property name="Defined Values.[0]" value="Expr1003 = CAST(od.Quantity AS DECIMAL) * od.UnitPrice" />
+                  <property name="Defined Values.[0].Target" value="Expr1003" />
+                  <property name="Defined Values.[0].DataType" value="Decimal" />
+                  <property name="Defined Values.[0].Source" value="CAST(od.Quantity AS DECIMAL) * od.UnitPrice" />
+                </properties>
+                <input>
+                  <element operator="Filter">
+                    <properties>
+                      <property name="Output List.[0]" value="od.UnitPrice" />
+                      <property name="Output List.[0].Table" value="od" />
+                      <property name="Output List.[0].Column" value="UnitPrice" />
+                      <property name="Output List.[0].DataType" value="Decimal" />
+                      <property name="Output List.[1]" value="od.Quantity" />
+                      <property name="Output List.[1].Table" value="od" />
+                      <property name="Output List.[1].Column" value="Quantity" />
+                      <property name="Output List.[1].DataType" value="Int16" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="4" />
+                      <property name="Statistics.Average Row Count" value="4" />
+                      <property name="Predicate" value="CAST(od.Quantity AS DECIMAL) * od.UnitPrice &gt;= CAST(od.OrderID AS DECIMAL)" />
+                    </properties>
+                    <input>
+                      <element operator="TableScan">
+                        <properties>
+                          <property name="Table" value="Order Details AS od" />
+                          <property name="Output List.[0]" value="od.OrderID" />
+                          <property name="Output List.[0].Table" value="od" />
+                          <property name="Output List.[0].Column" value="OrderID" />
+                          <property name="Output List.[0].DataType" value="Int32" />
+                          <property name="Output List.[1]" value="od.UnitPrice" />
+                          <property name="Output List.[1].Table" value="od" />
+                          <property name="Output List.[1].Column" value="UnitPrice" />
+                          <property name="Output List.[1].DataType" value="Decimal" />
+                          <property name="Output List.[2]" value="od.Quantity" />
+                          <property name="Output List.[2].Table" value="od" />
+                          <property name="Output List.[2].Column" value="Quantity" />
+                          <property name="Output List.[2].DataType" value="Int16" />
+                          <property name="Statistics.Open Count" value="1" />
+                          <property name="Statistics.Row Count" value="2,155" />
+                          <property name="Statistics.Average Row Count" value="2,155" />
+                        </properties>
+                        <input />
+                      </element>
+                    </input>
+                  </element>
+                </input>
+              </element>
+            </input>
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

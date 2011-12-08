@@ -1,0 +1,72 @@
+﻿<topic>
+	<head>
+		<title>Features</title>
+		<toc index="2" />
+		<links>
+			<link href="Welcome.html">Welcome</link>
+			<link href="Overview\Overview.html">Overview</link>
+		</links>
+	</head>
+	<body>
+		<section title="Core Features">
+			<ul>
+				<li>
+					Allows to execute <c>SELECT</c> statements against business objects.
+				</li>
+				<li>Allows executing simple expressions using a lightweight expression evaluator.</li>
+				<li>
+					Supports top, top with ties, inner joins, outer joins, full outer joins, filtering, grouping, aggregation, sorting,
+					all types of subqueries (exists, all, any, some), derived tables, and common table expressions (CTE).
+				</li>
+				<li>
+					Supports standard .NET objects as data sources (<see cref="T:System.Data.DataSet">DataSet</see>,
+					<see cref="T:System.Data.DataTable">DataTable</see>, and <see cref="T:System.Collections.IEnumerable">IEnumerable</see>).
+				</li>
+				<li>
+					Provides code assistance services to integrate syntax editors.
+				</li>
+			</ul>
+		</section>
+
+		<section title="UI Features">
+			<ul>
+				<li>
+					Provides integration with Actipro's SyntaxEditor control with full support for syntax highlighting, error highlighting,
+					member completion and parameter info.
+				</li>
+				<li>
+					Provides show plan control to visualize the execution plan similar to Microsoft SQL Server Management Studio.
+				</li>
+				<li>
+					Provides browser control to explore the scope of a query or expression.
+				</li>
+			</ul>
+		</section>
+
+		<section title="Performance Features">
+			<ul>
+				<li>
+					For optimal performance the query engine internally represents the query as an algebra tree and uses an optimizer to
+					choose between different join orders and to perform subquery decorrelation.
+				</li>
+				<li>
+					In order to remove the overhead of reflection calls at runtime all expressions are compiled to Microsoft Intermediate
+					Language (MSIL) using lightweight code generation.
+				</li>
+			</ul>
+		</section>
+
+		<section title="Customization Features">
+			<ul>
+				<li>
+					Provides advanced customization model for functions, aggregates, data sources, property providers, method providers,
+					and comparers.
+				</li>
+				<li>
+					Automatically uses operator overloadings so that custom data types (such as Money) can be used like in the source
+					code.
+				</li>
+			</ul>
+		</section>
+	</body>
+</topic>

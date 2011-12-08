@@ -1,0 +1,20 @@
+<test>
+  <sql>WITH EmployeeHierarchy AS
+(
+	SELECT	e.EmployeeId
+	FROM	Employees e
+				INNER JOIN EmployeeHierarchy eh ON e.ReportsTo = eh.EmployeeID
+
+	UNION ALL
+
+	SELECT	e.EmployeeId
+	FROM	Employees e
+				INNER JOIN EmployeeHierarchy eh ON e.ReportsTo = eh.EmployeeID
+)
+SELECT	*
+FROM	EmployeeHierarchy
+</sql>
+  <expectedErrors>
+    <expectedError id="CteDoesNotHaveAnchorMember" text="No anchor member was specified for recursive query 'EmployeeHierarchy'." />
+  </expectedErrors>
+</test>

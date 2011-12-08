@@ -1,0 +1,21 @@
+<test>
+  <sql>WITH EmployeeHierarchy AS
+(
+	   -- Base case
+	   SELECT	EmployeeID
+	   FROM		Employees
+	   WHERE	ReportsTo IS NULL
+
+	   UNION ALL
+
+	   -- Recursive step
+	   SELECT	(SELECT EmployeeId FROM EmployeeHierarchy)
+	   FROM		Employees e
+)
+SELECT	*
+FROM	EmployeeHierarchy
+</sql>
+  <expectedErrors>
+    <expectedError id="CteContainsRecursiveReferenceInSubquery" text="Recursive references are not allowed in subqueries" />
+  </expectedErrors>
+</test>

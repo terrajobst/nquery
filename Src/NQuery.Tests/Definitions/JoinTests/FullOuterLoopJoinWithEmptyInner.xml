@@ -1,0 +1,704 @@
+<test>
+  <sql>SELECT	*
+FROM	EmployeeTerritories et
+			FULL OUTER JOIN Territories t ON t.TerritoryID = et.TerritoryID AND 1 = 0</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="EmployeeID" type="xs:int" minOccurs="0" />
+                <xs:element name="TerritoryID" type="xs:string" minOccurs="0" />
+                <xs:element name="TerritoryID1" msdata:Caption="TerritoryID" type="xs:string" minOccurs="0" />
+                <xs:element name="TerritoryDescription" type="xs:string" minOccurs="0" />
+                <xs:element name="RegionID" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <EmployeeID>1</EmployeeID>
+    <TerritoryID>06897</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>1</EmployeeID>
+    <TerritoryID>19713</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>2</EmployeeID>
+    <TerritoryID>01581</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>2</EmployeeID>
+    <TerritoryID>01730</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>2</EmployeeID>
+    <TerritoryID>01833</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>2</EmployeeID>
+    <TerritoryID>02116</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>2</EmployeeID>
+    <TerritoryID>02139</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>2</EmployeeID>
+    <TerritoryID>02184</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>2</EmployeeID>
+    <TerritoryID>40222</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>3</EmployeeID>
+    <TerritoryID>30346</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>3</EmployeeID>
+    <TerritoryID>31406</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>3</EmployeeID>
+    <TerritoryID>32859</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>3</EmployeeID>
+    <TerritoryID>33607</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>4</EmployeeID>
+    <TerritoryID>20852</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>4</EmployeeID>
+    <TerritoryID>27403</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>4</EmployeeID>
+    <TerritoryID>27511</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>5</EmployeeID>
+    <TerritoryID>02903</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>5</EmployeeID>
+    <TerritoryID>07960</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>5</EmployeeID>
+    <TerritoryID>08837</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>5</EmployeeID>
+    <TerritoryID>10019</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>5</EmployeeID>
+    <TerritoryID>10038</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>5</EmployeeID>
+    <TerritoryID>11747</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>5</EmployeeID>
+    <TerritoryID>14450</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>6</EmployeeID>
+    <TerritoryID>85014</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>6</EmployeeID>
+    <TerritoryID>85251</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>6</EmployeeID>
+    <TerritoryID>98004</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>6</EmployeeID>
+    <TerritoryID>98052</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>6</EmployeeID>
+    <TerritoryID>98104</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <TerritoryID>60179</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <TerritoryID>60601</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <TerritoryID>80202</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <TerritoryID>80909</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <TerritoryID>90405</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <TerritoryID>94025</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <TerritoryID>94105</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <TerritoryID>95008</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <TerritoryID>95054</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <TerritoryID>95060</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>8</EmployeeID>
+    <TerritoryID>19428</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>8</EmployeeID>
+    <TerritoryID>44122</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>8</EmployeeID>
+    <TerritoryID>45839</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>8</EmployeeID>
+    <TerritoryID>53404</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>9</EmployeeID>
+    <TerritoryID>03049</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>9</EmployeeID>
+    <TerritoryID>03801</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>9</EmployeeID>
+    <TerritoryID>48075</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>9</EmployeeID>
+    <TerritoryID>48084</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>9</EmployeeID>
+    <TerritoryID>48304</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>9</EmployeeID>
+    <TerritoryID>55113</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>9</EmployeeID>
+    <TerritoryID>55439</TerritoryID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>01581</TerritoryID1>
+    <TerritoryDescription>Westboro                                          </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>01730</TerritoryID1>
+    <TerritoryDescription>Bedford                                           </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>01833</TerritoryID1>
+    <TerritoryDescription>Georgetow                                         </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>02116</TerritoryID1>
+    <TerritoryDescription>Boston                                            </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>02139</TerritoryID1>
+    <TerritoryDescription>Cambridge                                         </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>02184</TerritoryID1>
+    <TerritoryDescription>Braintree                                         </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>02903</TerritoryID1>
+    <TerritoryDescription>Providence                                        </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>03049</TerritoryID1>
+    <TerritoryDescription>Hollis                                            </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>03801</TerritoryID1>
+    <TerritoryDescription>Portsmouth                                        </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>06897</TerritoryID1>
+    <TerritoryDescription>Wilton                                            </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>07960</TerritoryID1>
+    <TerritoryDescription>Morristown                                        </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>08837</TerritoryID1>
+    <TerritoryDescription>Edison                                            </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>10019</TerritoryID1>
+    <TerritoryDescription>New York                                          </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>10038</TerritoryID1>
+    <TerritoryDescription>New York                                          </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>11747</TerritoryID1>
+    <TerritoryDescription>Mellvile                                          </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>14450</TerritoryID1>
+    <TerritoryDescription>Fairport                                          </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>19428</TerritoryID1>
+    <TerritoryDescription>Philadelphia                                      </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>19713</TerritoryID1>
+    <TerritoryDescription>Neward                                            </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>20852</TerritoryID1>
+    <TerritoryDescription>Rockville                                         </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>27403</TerritoryID1>
+    <TerritoryDescription>Greensboro                                        </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>27511</TerritoryID1>
+    <TerritoryDescription>Cary                                              </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>29202</TerritoryID1>
+    <TerritoryDescription>Columbia                                          </TerritoryDescription>
+    <RegionID>4</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>30346</TerritoryID1>
+    <TerritoryDescription>Atlanta                                           </TerritoryDescription>
+    <RegionID>4</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>31406</TerritoryID1>
+    <TerritoryDescription>Savannah                                          </TerritoryDescription>
+    <RegionID>4</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>32859</TerritoryID1>
+    <TerritoryDescription>Orlando                                           </TerritoryDescription>
+    <RegionID>4</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>33607</TerritoryID1>
+    <TerritoryDescription>Tampa                                             </TerritoryDescription>
+    <RegionID>4</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>40222</TerritoryID1>
+    <TerritoryDescription>Louisville                                        </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>44122</TerritoryID1>
+    <TerritoryDescription>Beachwood                                         </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>45839</TerritoryID1>
+    <TerritoryDescription>Findlay                                           </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>48075</TerritoryID1>
+    <TerritoryDescription>Southfield                                        </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>48084</TerritoryID1>
+    <TerritoryDescription>Troy                                              </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>48304</TerritoryID1>
+    <TerritoryDescription>Bloomfield Hills                                  </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>53404</TerritoryID1>
+    <TerritoryDescription>Racine                                            </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>55113</TerritoryID1>
+    <TerritoryDescription>Roseville                                         </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>55439</TerritoryID1>
+    <TerritoryDescription>Minneapolis                                       </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>60179</TerritoryID1>
+    <TerritoryDescription>Hoffman Estates                                   </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>60601</TerritoryID1>
+    <TerritoryDescription>Chicago                                           </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>72716</TerritoryID1>
+    <TerritoryDescription>Bentonville                                       </TerritoryDescription>
+    <RegionID>4</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>75234</TerritoryID1>
+    <TerritoryDescription>Dallas                                            </TerritoryDescription>
+    <RegionID>4</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>78759</TerritoryID1>
+    <TerritoryDescription>Austin                                            </TerritoryDescription>
+    <RegionID>4</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>80202</TerritoryID1>
+    <TerritoryDescription>Denver                                            </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>80909</TerritoryID1>
+    <TerritoryDescription>Colorado Springs                                  </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>85014</TerritoryID1>
+    <TerritoryDescription>Phoenix                                           </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>85251</TerritoryID1>
+    <TerritoryDescription>Scottsdale                                        </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>90405</TerritoryID1>
+    <TerritoryDescription>Santa Monica                                      </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>94025</TerritoryID1>
+    <TerritoryDescription>Menlo Park                                        </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>94105</TerritoryID1>
+    <TerritoryDescription>San Francisco                                     </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>95008</TerritoryID1>
+    <TerritoryDescription>Campbell                                          </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>95054</TerritoryID1>
+    <TerritoryDescription>Santa Clara                                       </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>95060</TerritoryID1>
+    <TerritoryDescription>Santa Cruz                                        </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>98004</TerritoryID1>
+    <TerritoryDescription>Bellevue                                          </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>98052</TerritoryID1>
+    <TerritoryDescription>Redmond                                           </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID1>98104</TerritoryID1>
+    <TerritoryDescription>Seattle                                           </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="et.EmployeeID AS EmployeeID" />
+          <property name="Output List.[0].Table" value="et" />
+          <property name="Output List.[0].Column" value="EmployeeID" />
+          <property name="Output List.[0].DataType" value="Int32" />
+          <property name="Output List.[0].Output Name" value="EmployeeID" />
+          <property name="Output List.[1]" value="et.TerritoryID AS TerritoryID" />
+          <property name="Output List.[1].Table" value="et" />
+          <property name="Output List.[1].Column" value="TerritoryID" />
+          <property name="Output List.[1].DataType" value="String" />
+          <property name="Output List.[1].Output Name" value="TerritoryID" />
+          <property name="Output List.[2]" value="t.TerritoryID AS TerritoryID" />
+          <property name="Output List.[2].Table" value="t" />
+          <property name="Output List.[2].Column" value="TerritoryID" />
+          <property name="Output List.[2].DataType" value="String" />
+          <property name="Output List.[2].Output Name" value="TerritoryID" />
+          <property name="Output List.[3]" value="t.TerritoryDescription AS TerritoryDescription" />
+          <property name="Output List.[3].Table" value="t" />
+          <property name="Output List.[3].Column" value="TerritoryDescription" />
+          <property name="Output List.[3].DataType" value="String" />
+          <property name="Output List.[3].Output Name" value="TerritoryDescription" />
+          <property name="Output List.[4]" value="t.RegionID AS RegionID" />
+          <property name="Output List.[4].Table" value="t" />
+          <property name="Output List.[4].Column" value="RegionID" />
+          <property name="Output List.[4].DataType" value="Int32" />
+          <property name="Output List.[4].Output Name" value="RegionID" />
+        </properties>
+        <input>
+          <element operator="Concatenation">
+            <properties>
+              <property name="Output List.[0]" value="et.EmployeeID" />
+              <property name="Output List.[0].Table" value="et" />
+              <property name="Output List.[0].Column" value="EmployeeID" />
+              <property name="Output List.[0].DataType" value="Int32" />
+              <property name="Output List.[1]" value="et.TerritoryID" />
+              <property name="Output List.[1].Table" value="et" />
+              <property name="Output List.[1].Column" value="TerritoryID" />
+              <property name="Output List.[1].DataType" value="String" />
+              <property name="Output List.[2]" value="t.TerritoryID" />
+              <property name="Output List.[2].Table" value="t" />
+              <property name="Output List.[2].Column" value="TerritoryID" />
+              <property name="Output List.[2].DataType" value="String" />
+              <property name="Output List.[3]" value="t.TerritoryDescription" />
+              <property name="Output List.[3].Table" value="t" />
+              <property name="Output List.[3].Column" value="TerritoryDescription" />
+              <property name="Output List.[3].DataType" value="String" />
+              <property name="Output List.[4]" value="t.RegionID" />
+              <property name="Output List.[4].Table" value="t" />
+              <property name="Output List.[4].Column" value="RegionID" />
+              <property name="Output List.[4].DataType" value="Int32" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="102" />
+              <property name="Statistics.Average Row Count" value="102" />
+              <property name="Defined Values.et..EmployeeID" value="et.EmployeeID; Expr1008" />
+              <property name="Defined Values.et..EmployeeID.[0]" value="et.EmployeeID" />
+              <property name="Defined Values.et..EmployeeID.[0].Table" value="et" />
+              <property name="Defined Values.et..EmployeeID.[0].Column" value="EmployeeID" />
+              <property name="Defined Values.et..EmployeeID.[0].DataType" value="Int32" />
+              <property name="Defined Values.et..EmployeeID.[1]" value="Expr1008" />
+              <property name="Defined Values.et..EmployeeID.[1].Column" value="Expr1008" />
+              <property name="Defined Values.et..EmployeeID.[1].DataType" value="Int32" />
+              <property name="Defined Values.et..TerritoryID" value="et.TerritoryID; Expr1009" />
+              <property name="Defined Values.et..TerritoryID.[0]" value="et.TerritoryID" />
+              <property name="Defined Values.et..TerritoryID.[0].Table" value="et" />
+              <property name="Defined Values.et..TerritoryID.[0].Column" value="TerritoryID" />
+              <property name="Defined Values.et..TerritoryID.[0].DataType" value="String" />
+              <property name="Defined Values.et..TerritoryID.[1]" value="Expr1009" />
+              <property name="Defined Values.et..TerritoryID.[1].Column" value="Expr1009" />
+              <property name="Defined Values.et..TerritoryID.[1].DataType" value="String" />
+              <property name="Defined Values.t..TerritoryID" value="Expr1002; t.TerritoryID" />
+              <property name="Defined Values.t..TerritoryID.[0]" value="Expr1002" />
+              <property name="Defined Values.t..TerritoryID.[0].Column" value="Expr1002" />
+              <property name="Defined Values.t..TerritoryID.[0].DataType" value="String" />
+              <property name="Defined Values.t..TerritoryID.[1]" value="t.TerritoryID" />
+              <property name="Defined Values.t..TerritoryID.[1].Table" value="t" />
+              <property name="Defined Values.t..TerritoryID.[1].Column" value="TerritoryID" />
+              <property name="Defined Values.t..TerritoryID.[1].DataType" value="String" />
+              <property name="Defined Values.t..TerritoryDescription" value="Expr1003; t.TerritoryDescription" />
+              <property name="Defined Values.t..TerritoryDescription.[0]" value="Expr1003" />
+              <property name="Defined Values.t..TerritoryDescription.[0].Column" value="Expr1003" />
+              <property name="Defined Values.t..TerritoryDescription.[0].DataType" value="String" />
+              <property name="Defined Values.t..TerritoryDescription.[1]" value="t.TerritoryDescription" />
+              <property name="Defined Values.t..TerritoryDescription.[1].Table" value="t" />
+              <property name="Defined Values.t..TerritoryDescription.[1].Column" value="TerritoryDescription" />
+              <property name="Defined Values.t..TerritoryDescription.[1].DataType" value="String" />
+              <property name="Defined Values.t..RegionID" value="Expr1004; t.RegionID" />
+              <property name="Defined Values.t..RegionID.[0]" value="Expr1004" />
+              <property name="Defined Values.t..RegionID.[0].Column" value="Expr1004" />
+              <property name="Defined Values.t..RegionID.[0].DataType" value="Int32" />
+              <property name="Defined Values.t..RegionID.[1]" value="t.RegionID" />
+              <property name="Defined Values.t..RegionID.[1].Table" value="t" />
+              <property name="Defined Values.t..RegionID.[1].Column" value="RegionID" />
+              <property name="Defined Values.t..RegionID.[1].DataType" value="Int32" />
+            </properties>
+            <input>
+              <element operator="ComputeScalar">
+                <properties>
+                  <property name="Output List.[0]" value="et.EmployeeID" />
+                  <property name="Output List.[0].Table" value="et" />
+                  <property name="Output List.[0].Column" value="EmployeeID" />
+                  <property name="Output List.[0].DataType" value="Int32" />
+                  <property name="Output List.[1]" value="et.TerritoryID" />
+                  <property name="Output List.[1].Table" value="et" />
+                  <property name="Output List.[1].Column" value="TerritoryID" />
+                  <property name="Output List.[1].DataType" value="String" />
+                  <property name="Output List.[2]" value="Expr1002" />
+                  <property name="Output List.[2].Column" value="Expr1002" />
+                  <property name="Output List.[2].DataType" value="String" />
+                  <property name="Output List.[3]" value="Expr1003" />
+                  <property name="Output List.[3].Column" value="Expr1003" />
+                  <property name="Output List.[3].DataType" value="String" />
+                  <property name="Output List.[4]" value="Expr1004" />
+                  <property name="Output List.[4].Column" value="Expr1004" />
+                  <property name="Output List.[4].DataType" value="Int32" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="49" />
+                  <property name="Statistics.Average Row Count" value="49" />
+                  <property name="Defined Values.[0]" value="Expr1002 = NULL" />
+                  <property name="Defined Values.[0].Target" value="Expr1002" />
+                  <property name="Defined Values.[0].DataType" value="String" />
+                  <property name="Defined Values.[0].Source" value="NULL" />
+                  <property name="Defined Values.[1]" value="Expr1003 = NULL" />
+                  <property name="Defined Values.[1].Target" value="Expr1003" />
+                  <property name="Defined Values.[1].DataType" value="String" />
+                  <property name="Defined Values.[1].Source" value="NULL" />
+                  <property name="Defined Values.[2]" value="Expr1004 = NULL" />
+                  <property name="Defined Values.[2].Target" value="Expr1004" />
+                  <property name="Defined Values.[2].DataType" value="Int32" />
+                  <property name="Defined Values.[2].Source" value="NULL" />
+                </properties>
+                <input>
+                  <element operator="TableScan">
+                    <properties>
+                      <property name="Table" value="EmployeeTerritories AS et" />
+                      <property name="Output List.[0]" value="et.EmployeeID" />
+                      <property name="Output List.[0].Table" value="et" />
+                      <property name="Output List.[0].Column" value="EmployeeID" />
+                      <property name="Output List.[0].DataType" value="Int32" />
+                      <property name="Output List.[1]" value="et.TerritoryID" />
+                      <property name="Output List.[1].Table" value="et" />
+                      <property name="Output List.[1].Column" value="TerritoryID" />
+                      <property name="Output List.[1].DataType" value="String" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="49" />
+                      <property name="Statistics.Average Row Count" value="49" />
+                    </properties>
+                    <input />
+                  </element>
+                </input>
+              </element>
+              <element operator="ComputeScalar">
+                <properties>
+                  <property name="Output List.[0]" value="t.TerritoryID" />
+                  <property name="Output List.[0].Table" value="t" />
+                  <property name="Output List.[0].Column" value="TerritoryID" />
+                  <property name="Output List.[0].DataType" value="String" />
+                  <property name="Output List.[1]" value="t.TerritoryDescription" />
+                  <property name="Output List.[1].Table" value="t" />
+                  <property name="Output List.[1].Column" value="TerritoryDescription" />
+                  <property name="Output List.[1].DataType" value="String" />
+                  <property name="Output List.[2]" value="t.RegionID" />
+                  <property name="Output List.[2].Table" value="t" />
+                  <property name="Output List.[2].Column" value="RegionID" />
+                  <property name="Output List.[2].DataType" value="Int32" />
+                  <property name="Output List.[3]" value="Expr1008" />
+                  <property name="Output List.[3].Column" value="Expr1008" />
+                  <property name="Output List.[3].DataType" value="Int32" />
+                  <property name="Output List.[4]" value="Expr1009" />
+                  <property name="Output List.[4].Column" value="Expr1009" />
+                  <property name="Output List.[4].DataType" value="String" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="53" />
+                  <property name="Statistics.Average Row Count" value="53" />
+                  <property name="Defined Values.[0]" value="Expr1008 = NULL" />
+                  <property name="Defined Values.[0].Target" value="Expr1008" />
+                  <property name="Defined Values.[0].DataType" value="Int32" />
+                  <property name="Defined Values.[0].Source" value="NULL" />
+                  <property name="Defined Values.[1]" value="Expr1009 = NULL" />
+                  <property name="Defined Values.[1].Target" value="Expr1009" />
+                  <property name="Defined Values.[1].DataType" value="String" />
+                  <property name="Defined Values.[1].Source" value="NULL" />
+                </properties>
+                <input>
+                  <element operator="TableScan">
+                    <properties>
+                      <property name="Table" value="Territories AS t" />
+                      <property name="Output List.[0]" value="t.TerritoryID" />
+                      <property name="Output List.[0].Table" value="t" />
+                      <property name="Output List.[0].Column" value="TerritoryID" />
+                      <property name="Output List.[0].DataType" value="String" />
+                      <property name="Output List.[1]" value="t.TerritoryDescription" />
+                      <property name="Output List.[1].Table" value="t" />
+                      <property name="Output List.[1].Column" value="TerritoryDescription" />
+                      <property name="Output List.[1].DataType" value="String" />
+                      <property name="Output List.[2]" value="t.RegionID" />
+                      <property name="Output List.[2].Table" value="t" />
+                      <property name="Output List.[2].Column" value="RegionID" />
+                      <property name="Output List.[2].DataType" value="Int32" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="53" />
+                      <property name="Statistics.Average Row Count" value="53" />
+                    </properties>
+                    <input />
+                  </element>
+                </input>
+              </element>
+            </input>
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

@@ -1,0 +1,88 @@
+<topic>
+	<head>
+		<title>String Functions</title>
+		<links>
+			<link href="Functions.html">Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>The following general purpose string functions are available:</p>
+			<ul>
+				<li>
+					<a href="CHARINDEX.html">CHARINDEX</a>
+				</li>
+				<li>
+					<a href="FORMAT.html">FORMAT</a>
+				</li>
+				<li>
+					<a href="LEFT.html">LEFT</a>
+				</li>
+				<li>
+					<a href="LEN.html">LEN</a>
+				</li>
+				<li>
+					<a href="LOWER.html">LOWER</a>
+				</li>
+				<li>
+					<a href="LPAD.html">LPAD</a>
+				</li>
+				<li>
+					<a href="LTRIM.html">LTRIM</a>
+				</li>
+				<li>
+					<a href="REPLACE.html">REPLACE</a>
+				</li>
+				<li>
+					<a href="REPLICATE.html">REPLICATE</a>
+				</li>
+				<li>
+					<a href="REVERSE.html">REVERSE</a>
+				</li>
+				<li>
+					<a href="RIGHT.html">RIGHT</a>
+				</li>
+				<li>
+					<a href="RPAD.html">RPAD</a>
+				</li>
+				<li>
+					<a href="RTRIM.html">RTRIM</a>
+				</li>
+				<li>
+					<a href="SOUNDEX.html">SOUNDEX</a>
+				</li>
+				<li>
+					<a href="SPACE.html">SPACE</a>
+				</li>
+				<li>
+					<a href="SUBSTRING.html">SUBSTRING</a>
+				</li>
+				<li>
+					<a href="TO_STRING.html">TO_STRING</a>
+				</li>
+				<li>
+					<a href="TRIM.html">TRIM</a>
+				</li>
+				<li>
+					<a href="UPPER.html">UPPER</a>
+				</li>
+			</ul>
+
+			<p>The following regular expression functions are availabe:</p>
+			<ul>
+				<li>
+					<a href="REGEX_ESCAPE.html">REGEX_ESCAPE</a>
+				</li>
+				<li>
+					<a href="REGEX_MATCH.html">REGEX_MATCH</a>
+				</li>
+				<li>
+					<a href="REGEX_REPLACE.html">REGEX_REPLACE</a>
+				</li>
+				<li>
+					<a href="REGEX_UNESCAPE.html">REGEX_UNESCAPE</a>
+				</li>
+			</ul>
+		</summary>
+	</body>
+</topic>

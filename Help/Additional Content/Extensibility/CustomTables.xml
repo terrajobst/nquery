@@ -1,0 +1,58 @@
+﻿<topic>
+	<head>
+		<title>Custom Tables</title>
+		<keywords>
+			<keyword term="extending, tables" />
+			<keyword term="customizing, tables" />
+			<keyword term="adding, tables" />
+			<keyword term="TableBinding class, using" />
+			<keyword term="ColumnBinding class, using" />
+			<keyword term="NQuery.Runtime.TableBinding class, using" />
+			<keyword term="NQuery.Runtime.ColumnBinding class, using" />
+		</keywords>
+	</head>
+	<body>
+		<summary>
+			<p>
+				To allow arbitrary data sources you can also create your own table sources. NQuery provides built-in functionality
+				for <see cref="T:System.Data.DataTable">DataTable</see>, <see cref="T:System.Collections.IEnumerable">IEnumerable</see>, and
+				<see cref="T:System.Collections.Generic.IEnumerable{T}">IEnumerable&lt;T&gt;</see>.
+			</p>
+		</summary>
+
+		<section title="Implementing a Custom Table Binding">
+			<p>
+				In this sample we will create a custom table binding for a table-like data object called <c>MyTableData</c>. This class is
+				declared as follows:
+			</p>
+			<sampleCode lang="cs" title="Table Data"
+						source="..\Samples\Extensibility\CustomTable\MyTableBinding.cs" region="MyTableData" />
+			<p>
+				The structure of this object is very simple. It contains a list of <c>object</c> arrays representing the values of all rows
+				and two properties <c>ColumnNames</c> and <c>ColumnTypes</c> that define the columns of this table.
+			</p>
+			<p>
+				To enable NQuery to directly use the data stored in <c>MyTableData</c> we must create two clases, one representing the table
+				definition and one representing a column definition. A table definition is represented by classes derived from
+				<see cref="T:NQuery.Runtime.TableBinding">TableBinding</see> whereby column definitions are represented by
+				<see cref="T:NQuery.Runtime.ColumnBinding">ColumnBinding</see>. The main responsibility of the
+				<see cref="T:NQuery.Runtime.TableBinding">TableBinding</see> is to produce a list of columns and an
+				<see cref="T:System.Collections.IEnumerable">IEnumerable</see> that iterates over the rows. Column definitions are responsible
+				for producing the value for a given row object.
+			</p>
+			<p>
+				The implementation of both is given below:
+			</p>
+			<sampleCode lang="cs" title="Table Binding"
+						source="..\Samples\Extensibility\CustomTable\MyTableBinding.cs" region="MyTableBinding" />
+
+			<sampleCode lang="cs" title="Column Binding"
+						source="..\Samples\Extensibility\CustomTable\MyTableBinding.cs" region="MyColumnBinding" />
+			<p>
+				To use a custom table binding it must registered with the <see cref="T:NQuery.DataContext">DataContext</see>:
+			</p>
+			<sampleCode lang="cs" title="Using a Custom Table Binding"
+						source="..\Samples\Extensibility\CustomTable\Form1.cs" region="Usage" />
+		</section>
+	</body>
+</topic>

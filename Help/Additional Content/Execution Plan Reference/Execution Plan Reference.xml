@@ -1,0 +1,233 @@
+﻿<topic>
+	<head>
+		<title>Execution Plan Reference</title>
+		<toc index="6" />
+		<keywords>
+			<keyword term="execution plan"/>
+			<keyword term="physical operators"/>
+			<keyword term="logical operators"/>
+		</keywords>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Operators describe how NQuery executes a query. The query optimizer uses operators to build an execution plan to
+				create the result specified in the query. The execution plan is a tree consisting of physical operators.
+			</p>
+			<p>
+				Operators are classified as logical and physical operators. Logical operators describe a relational query processing
+				operation on a conceptual level. Physical operators actually implement the operation defined by a logical operator
+				using a concrete method or algorithm. For example, <c>LEFT OUTER JOIN</c> is a logical operation, whereas
+				<c>NESTED LOOPS</c> is a physical operator.
+			</p>
+		</summary>
+
+		<section title="Logical Operators">
+			<p>
+				The following list shows all logical operators that are implemented in NQuery.
+			</p>
+			<ul>
+				<li>
+					<a href="Compute Scalar.html">Compute Scalar</a>
+				</li>
+				<li>
+					<a href="Concatenation.html">Concatenation</a>
+				</li>
+				<li>
+					<a href="Constant Scan.html">Constant Scan</a>
+				</li>
+				<li>
+					<a href="Cross Join.html">Cross Join</a>
+				</li>
+				<li>
+					<a href="Distinct Sort.html">Distinct Sort</a>
+				</li>
+				<li>
+					<a href="Filter.html">Filter</a>
+				</li>
+				<li>
+					<a href="Full Outer Join.html">Full Outer Join</a>
+				</li>
+				<li>
+					<a href="Left Anti Semi Join.html">Left Anti Semi Join</a>
+				</li>
+				<li>
+					<a href="Left Outer Join.html">Left Outer Join</a>
+				</li>
+				<li>
+					<a href="Left Semi Join.html">Left Semi Join</a>
+				</li>
+				<li>
+					<a href="Right Anti Semi Join.html">Right Anti Semi Join</a>
+				</li>
+				<li>
+					<a href="Right Outer Join.html">Right Outer Join</a>
+				</li>
+				<li>
+					<a href="Right Semi Join.html">Right Semi Join</a>
+				</li>
+				<li>
+					<a href="Select.html">Select</a>
+				</li>
+				<li>
+					<a href="Sort.html">Sort</a>
+				</li>
+				<li>
+					<a href="Table Scan.html">Table Scan</a>
+				</li>
+				<li>
+					<a href="Top.html">Top</a>
+				</li>
+				<li>
+					<a href="Union.html">Union</a>
+				</li>
+			</ul>
+		</section>
+
+		<section title="Physical Operators">
+			<p>
+				Physical operators implement the operation described by logical operators. Each of the physical operators is an object
+				that accesses columns or rows from a table or index. The physical operators initialize, open, and read rows.
+				Specifically, the physical operator can answer the following three method calls:
+			</p>
+			<ul>
+				<li>
+					<b>Initialize()</b>:
+					The <b>Initialize()</b> method causes a physical operator to initialize itself and set up any required data structures.
+				</li>
+				<li>
+					<b>Open()</b>:
+					The <b>Open()</b> method is called to start reading from the beginning. For example, a nested loop operator may open the
+					inner side multiple times, though typically a physical operator will be opened only once.
+				</li>
+				<li>
+					<b>Read()</b>:
+					The <b>Read()</b> method is called to fetch the first or subsequent row of data. The physical operator may receive zero
+					or many <b>Read()</b> calls.
+				</li>
+			</ul>
+			<p>
+				Pyhsical operators are visible in the show plan. The following table lists all physical operators and their corresponding
+				icons in the show plan:
+			</p>
+			<table>
+				<tr>
+					<th>Icon</th>
+					<th>Operator</th>
+				</tr>
+				<tr>
+					<td>
+						<img src="Assert.png"/>
+					</td>
+					<td>
+						<a href="Assert.html">Assert</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="Compute Scalar.png"/>
+					</td>
+					<td>
+						<a href="Compute Scalar.html">Compute Scalar</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="Concatenation.png"/>
+					</td>
+					<td>
+						<a href="Concatenation.html">Concatenation</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="Constant Scan.png"/>
+					</td>
+					<td>
+						<a href="Constant Scan.html">Constant Scan</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="Filter.png"/>
+					</td>
+					<td>
+						<a href="Filter.html">Filter</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="Hash Match.png"/>
+					</td>
+					<td>
+						<a href="Hash Match.html">Hash Match</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="Index Spool.png"/>
+					</td>
+					<td>
+						<a href="Index Spool.html">Index Spool</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="Nested Loops.png"/>
+					</td>
+					<td>
+						<a href="Nested Loops.html">Nested Loops</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="Sort.png"/>
+					</td>
+					<td>
+						<a href="Sort.html">Sort</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="Result.png"/>
+					</td>
+					<td>
+						<a href="Select.html">Select</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="Stream Aggregate.png"/>
+					</td>
+					<td>
+						<a href="Stream Aggregate.html">Stream Aggregate</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="Table Scan.png"/>
+					</td>
+					<td>
+						<a href="Table Scan.html">Table Scan</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="Table Spool.png"/>
+					</td>
+					<td>
+						<a href="Table Spool.html">Table Spool</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="Top.png"/>
+					</td>
+					<td>
+						<a href="Top.html">Top</a>
+					</td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</topic>

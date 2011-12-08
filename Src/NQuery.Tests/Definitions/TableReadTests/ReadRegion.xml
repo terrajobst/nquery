@@ -1,0 +1,77 @@
+<test>
+  <sql>SELECT	*
+FROM	Region</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="RegionID" type="xs:int" minOccurs="0" />
+                <xs:element name="RegionDescription" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <RegionID>1</RegionID>
+    <RegionDescription>Eastern                                           </RegionDescription>
+  </Table1>
+  <Table1>
+    <RegionID>2</RegionID>
+    <RegionDescription>Western                                           </RegionDescription>
+  </Table1>
+  <Table1>
+    <RegionID>3</RegionID>
+    <RegionDescription>Northern                                          </RegionDescription>
+  </Table1>
+  <Table1>
+    <RegionID>4</RegionID>
+    <RegionDescription>Southern                                          </RegionDescription>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="Region.RegionID AS RegionID" />
+          <property name="Output List.[0].Table" value="Region" />
+          <property name="Output List.[0].Column" value="RegionID" />
+          <property name="Output List.[0].DataType" value="Int32" />
+          <property name="Output List.[0].Output Name" value="RegionID" />
+          <property name="Output List.[1]" value="Region.RegionDescription AS RegionDescription" />
+          <property name="Output List.[1].Table" value="Region" />
+          <property name="Output List.[1].Column" value="RegionDescription" />
+          <property name="Output List.[1].DataType" value="String" />
+          <property name="Output List.[1].Output Name" value="RegionDescription" />
+        </properties>
+        <input>
+          <element operator="TableScan">
+            <properties>
+              <property name="Table" value="Region AS Region" />
+              <property name="Output List.[0]" value="Region.RegionID" />
+              <property name="Output List.[0].Table" value="Region" />
+              <property name="Output List.[0].Column" value="RegionID" />
+              <property name="Output List.[0].DataType" value="Int32" />
+              <property name="Output List.[1]" value="Region.RegionDescription" />
+              <property name="Output List.[1].Table" value="Region" />
+              <property name="Output List.[1].Column" value="RegionDescription" />
+              <property name="Output List.[1].DataType" value="String" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="4" />
+              <property name="Statistics.Average Row Count" value="4" />
+            </properties>
+            <input />
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

@@ -1,0 +1,23 @@
+﻿<topic>
+	<head>
+		<title>Select</title>
+		<keywords>
+			<keyword term="execution plan, select"/>
+			<keyword term="physical operators, select"/>
+			<keyword term="logical operators, select"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Select</b> operator is the data returned at the end of a query plan. This is the root element of an execution plan.
+			</p>
+			<p>
+				<b>Select</b> is a logical and physical operator.
+			</p>
+		</summary>
+	</body>
+</topic>

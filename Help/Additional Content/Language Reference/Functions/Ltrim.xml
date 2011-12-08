@@ -1,0 +1,41 @@
+<topic>
+	<head>
+		<title>LTRIM</title>
+		<keywords>
+			<keyword term="functions, LTRIM" />
+			<keyword term="string functions, LTRIM" />
+			<keyword term="LTRIM function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="String Functions.html">String Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Removes all occurrences of white space characters from the beginning of a specified string.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">LTRIM(text AS string) RETURNS string</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="text">
+					<p>
+						A string containing leading spaces.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The String that remains after all occurrences of white space characters are removed from the beginning.
+			</p>
+		</returns>
+	</body>
+</topic>

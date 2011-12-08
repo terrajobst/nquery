@@ -1,0 +1,730 @@
+<test>
+  <sql>SELECT	e.EmployeeId,
+		e.FirstName + ' ' + e.LastName AS FullName,
+		CASE
+			WHEN e.EmployeeID % 2 = 0 THEN
+				(SELECT TOP 1 'Mod2' FROM Orders o WHERE o.EmployeeID = e.EmployeeID
+				 UNION ALL
+				 SELECT NULL FROM Orders o WHERE e.EmployeeID % 2 != 0)
+			WHEN e.EmployeeID % 3 = 0 THEN
+				(SELECT TOP 1 'Mod3' FROM Orders o WHERE o.EmployeeID = e.EmployeeID
+				 UNION ALL
+				 SELECT NULL FROM Orders o WHERE e.EmployeeID % 3 != 0)
+			ELSE
+				(SELECT TOP 1 'Else' FROM Orders o WHERE o.EmployeeID = e.EmployeeID
+				 UNION ALL
+				 SELECT NULL FROM Orders o WHERE e.EmployeeID % 2 = 0 OR e.EmployeeID % 3 = 0
+				)
+		END LatestOrOldestOrder
+FROM	Employees e
+ORDER BY 1</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="EmployeeID" type="xs:int" minOccurs="0" />
+                <xs:element name="FullName" type="xs:string" minOccurs="0" />
+                <xs:element name="LatestOrOldestOrder" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <EmployeeID>1</EmployeeID>
+    <FullName>Nancy Davolio</FullName>
+    <LatestOrOldestOrder>Else</LatestOrOldestOrder>
+  </Table1>
+  <Table1>
+    <EmployeeID>2</EmployeeID>
+    <FullName>Andrew Fuller</FullName>
+    <LatestOrOldestOrder>Mod2</LatestOrOldestOrder>
+  </Table1>
+  <Table1>
+    <EmployeeID>3</EmployeeID>
+    <FullName>Janet Leverling</FullName>
+    <LatestOrOldestOrder>Mod3</LatestOrOldestOrder>
+  </Table1>
+  <Table1>
+    <EmployeeID>4</EmployeeID>
+    <FullName>Margaret Peacock</FullName>
+    <LatestOrOldestOrder>Mod2</LatestOrOldestOrder>
+  </Table1>
+  <Table1>
+    <EmployeeID>5</EmployeeID>
+    <FullName>Steven Buchanan</FullName>
+    <LatestOrOldestOrder>Else</LatestOrOldestOrder>
+  </Table1>
+  <Table1>
+    <EmployeeID>6</EmployeeID>
+    <FullName>Michael Suyama</FullName>
+    <LatestOrOldestOrder>Mod2</LatestOrOldestOrder>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <FullName>Robert King</FullName>
+    <LatestOrOldestOrder>Else</LatestOrOldestOrder>
+  </Table1>
+  <Table1>
+    <EmployeeID>8</EmployeeID>
+    <FullName>Laura Callahan</FullName>
+    <LatestOrOldestOrder>Mod2</LatestOrOldestOrder>
+  </Table1>
+  <Table1>
+    <EmployeeID>9</EmployeeID>
+    <FullName>Anne Dodsworth</FullName>
+    <LatestOrOldestOrder>Mod3</LatestOrOldestOrder>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="e.EmployeeID AS EmployeeID" />
+          <property name="Output List.[0].Table" value="e" />
+          <property name="Output List.[0].Column" value="EmployeeID" />
+          <property name="Output List.[0].DataType" value="Int32" />
+          <property name="Output List.[0].Output Name" value="EmployeeID" />
+          <property name="Output List.[1]" value="Expr1003 AS FullName" />
+          <property name="Output List.[1].Column" value="Expr1003" />
+          <property name="Output List.[1].DataType" value="String" />
+          <property name="Output List.[1].Output Name" value="FullName" />
+          <property name="Output List.[2]" value="Expr1022 AS LatestOrOldestOrder" />
+          <property name="Output List.[2].Column" value="Expr1022" />
+          <property name="Output List.[2].DataType" value="String" />
+          <property name="Output List.[2].Output Name" value="LatestOrOldestOrder" />
+        </properties>
+        <input>
+          <element operator="Sort">
+            <properties>
+              <property name="Output List.[0]" value="e.EmployeeID" />
+              <property name="Output List.[0].Table" value="e" />
+              <property name="Output List.[0].Column" value="EmployeeID" />
+              <property name="Output List.[0].DataType" value="Int32" />
+              <property name="Output List.[1]" value="Expr1003" />
+              <property name="Output List.[1].Column" value="Expr1003" />
+              <property name="Output List.[1].DataType" value="String" />
+              <property name="Output List.[2]" value="Expr1022" />
+              <property name="Output List.[2].Column" value="Expr1022" />
+              <property name="Output List.[2].DataType" value="String" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="9" />
+              <property name="Statistics.Average Row Count" value="9" />
+              <property name="Logical Operator" value="Sort" />
+              <property name="Order By.[0]" value="e.EmployeeID ASC" />
+              <property name="Order By.[0].Table" value="e" />
+              <property name="Order By.[0].Column" value="EmployeeID" />
+              <property name="Order By.[0].DataType" value="Int32" />
+              <property name="Order By.[0].Order" value="ASC" />
+            </properties>
+            <input>
+              <element operator="ComputeScalar">
+                <properties>
+                  <property name="Output List.[0]" value="e.EmployeeID" />
+                  <property name="Output List.[0].Table" value="e" />
+                  <property name="Output List.[0].Column" value="EmployeeID" />
+                  <property name="Output List.[0].DataType" value="Int32" />
+                  <property name="Output List.[1]" value="Expr1003" />
+                  <property name="Output List.[1].Column" value="Expr1003" />
+                  <property name="Output List.[1].DataType" value="String" />
+                  <property name="Output List.[2]" value="Expr1022" />
+                  <property name="Output List.[2].Column" value="Expr1022" />
+                  <property name="Output List.[2].DataType" value="String" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="9" />
+                  <property name="Statistics.Average Row Count" value="9" />
+                  <property name="Defined Values.[0]" value="Expr1022 = CASE WHEN e.EmployeeID % 2 = 0 THEN Expr1009 WHEN e.EmployeeID % 3 = 0 THEN Expr1015 ELSE Expr1021 END" />
+                  <property name="Defined Values.[0].Target" value="Expr1022" />
+                  <property name="Defined Values.[0].DataType" value="String" />
+                  <property name="Defined Values.[0].Source" value="CASE WHEN e.EmployeeID % 2 = 0 THEN Expr1009 WHEN e.EmployeeID % 3 = 0 THEN Expr1015 ELSE Expr1021 END" />
+                </properties>
+                <input>
+                  <element operator="NestedLoops">
+                    <properties>
+                      <property name="Output List.[0]" value="e.EmployeeID" />
+                      <property name="Output List.[0].Table" value="e" />
+                      <property name="Output List.[0].Column" value="EmployeeID" />
+                      <property name="Output List.[0].DataType" value="Int32" />
+                      <property name="Output List.[1]" value="Expr1003" />
+                      <property name="Output List.[1].Column" value="Expr1003" />
+                      <property name="Output List.[1].DataType" value="String" />
+                      <property name="Output List.[2]" value="Expr1009" />
+                      <property name="Output List.[2].Column" value="Expr1009" />
+                      <property name="Output List.[2].DataType" value="String" />
+                      <property name="Output List.[3]" value="Expr1015" />
+                      <property name="Output List.[3].Column" value="Expr1015" />
+                      <property name="Output List.[3].DataType" value="String" />
+                      <property name="Output List.[4]" value="Expr1021" />
+                      <property name="Output List.[4].Column" value="Expr1021" />
+                      <property name="Output List.[4].DataType" value="String" />
+                      <property name="Logical Operator" value="Inner Join" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="9" />
+                      <property name="Statistics.Average Row Count" value="9" />
+                      <property name="Outer References.[0]" value="e.EmployeeID" />
+                      <property name="Outer References.[0].Table" value="e" />
+                      <property name="Outer References.[0].Column" value="EmployeeID" />
+                      <property name="Outer References.[0].DataType" value="Int32" />
+                      <property name="Passthru" value="e.EmployeeID % 3 = 0 OR e.EmployeeID % 2 = 0" />
+                    </properties>
+                    <input>
+                      <element operator="NestedLoops">
+                        <properties>
+                          <property name="Output List.[0]" value="e.EmployeeID" />
+                          <property name="Output List.[0].Table" value="e" />
+                          <property name="Output List.[0].Column" value="EmployeeID" />
+                          <property name="Output List.[0].DataType" value="Int32" />
+                          <property name="Output List.[1]" value="Expr1003" />
+                          <property name="Output List.[1].Column" value="Expr1003" />
+                          <property name="Output List.[1].DataType" value="String" />
+                          <property name="Output List.[2]" value="Expr1009" />
+                          <property name="Output List.[2].Column" value="Expr1009" />
+                          <property name="Output List.[2].DataType" value="String" />
+                          <property name="Output List.[3]" value="Expr1015" />
+                          <property name="Output List.[3].Column" value="Expr1015" />
+                          <property name="Output List.[3].DataType" value="String" />
+                          <property name="Logical Operator" value="Inner Join" />
+                          <property name="Statistics.Open Count" value="1" />
+                          <property name="Statistics.Row Count" value="9" />
+                          <property name="Statistics.Average Row Count" value="9" />
+                          <property name="Outer References.[0]" value="e.EmployeeID" />
+                          <property name="Outer References.[0].Table" value="e" />
+                          <property name="Outer References.[0].Column" value="EmployeeID" />
+                          <property name="Outer References.[0].DataType" value="Int32" />
+                          <property name="Passthru" value="e.EmployeeID % 3 &lt;&gt; 0 OR e.EmployeeID % 2 = 0" />
+                        </properties>
+                        <input>
+                          <element operator="NestedLoops">
+                            <properties>
+                              <property name="Output List.[0]" value="e.EmployeeID" />
+                              <property name="Output List.[0].Table" value="e" />
+                              <property name="Output List.[0].Column" value="EmployeeID" />
+                              <property name="Output List.[0].DataType" value="Int32" />
+                              <property name="Output List.[1]" value="Expr1003" />
+                              <property name="Output List.[1].Column" value="Expr1003" />
+                              <property name="Output List.[1].DataType" value="String" />
+                              <property name="Output List.[2]" value="Expr1009" />
+                              <property name="Output List.[2].Column" value="Expr1009" />
+                              <property name="Output List.[2].DataType" value="String" />
+                              <property name="Logical Operator" value="Inner Join" />
+                              <property name="Statistics.Open Count" value="1" />
+                              <property name="Statistics.Row Count" value="9" />
+                              <property name="Statistics.Average Row Count" value="9" />
+                              <property name="Outer References.[0]" value="e.EmployeeID" />
+                              <property name="Outer References.[0].Table" value="e" />
+                              <property name="Outer References.[0].Column" value="EmployeeID" />
+                              <property name="Outer References.[0].DataType" value="Int32" />
+                              <property name="Passthru" value="e.EmployeeID % 2 &lt;&gt; 0" />
+                            </properties>
+                            <input>
+                              <element operator="ComputeScalar">
+                                <properties>
+                                  <property name="Output List.[0]" value="e.EmployeeID" />
+                                  <property name="Output List.[0].Table" value="e" />
+                                  <property name="Output List.[0].Column" value="EmployeeID" />
+                                  <property name="Output List.[0].DataType" value="Int32" />
+                                  <property name="Output List.[1]" value="Expr1003" />
+                                  <property name="Output List.[1].Column" value="Expr1003" />
+                                  <property name="Output List.[1].DataType" value="String" />
+                                  <property name="Statistics.Open Count" value="1" />
+                                  <property name="Statistics.Row Count" value="9" />
+                                  <property name="Statistics.Average Row Count" value="9" />
+                                  <property name="Defined Values.[0]" value="Expr1003 = e.FirstName + ' ' + e.LastName" />
+                                  <property name="Defined Values.[0].Target" value="Expr1003" />
+                                  <property name="Defined Values.[0].DataType" value="String" />
+                                  <property name="Defined Values.[0].Source" value="e.FirstName + ' ' + e.LastName" />
+                                </properties>
+                                <input>
+                                  <element operator="TableScan">
+                                    <properties>
+                                      <property name="Table" value="Employees AS e" />
+                                      <property name="Output List.[0]" value="e.EmployeeID" />
+                                      <property name="Output List.[0].Table" value="e" />
+                                      <property name="Output List.[0].Column" value="EmployeeID" />
+                                      <property name="Output List.[0].DataType" value="Int32" />
+                                      <property name="Output List.[1]" value="e.LastName" />
+                                      <property name="Output List.[1].Table" value="e" />
+                                      <property name="Output List.[1].Column" value="LastName" />
+                                      <property name="Output List.[1].DataType" value="String" />
+                                      <property name="Output List.[2]" value="e.FirstName" />
+                                      <property name="Output List.[2].Table" value="e" />
+                                      <property name="Output List.[2].Column" value="FirstName" />
+                                      <property name="Output List.[2].DataType" value="String" />
+                                      <property name="Statistics.Open Count" value="1" />
+                                      <property name="Statistics.Row Count" value="9" />
+                                      <property name="Statistics.Average Row Count" value="9" />
+                                    </properties>
+                                    <input />
+                                  </element>
+                                </input>
+                              </element>
+                              <element operator="Assert">
+                                <properties>
+                                  <property name="Output List.[0]" value="Expr1009" />
+                                  <property name="Output List.[0].Column" value="Expr1009" />
+                                  <property name="Output List.[0].DataType" value="String" />
+                                  <property name="Statistics.Open Count" value="4" />
+                                  <property name="Statistics.Row Count" value="4" />
+                                  <property name="Statistics.Average Row Count" value="1" />
+                                  <property name="Predicate" value="CASE WHEN Expr1008 &gt; 1 THEN 0 END" />
+                                </properties>
+                                <input>
+                                  <element operator="StreamAggregate">
+                                    <properties>
+                                      <property name="Output List.[0]" value="Expr1008" />
+                                      <property name="Output List.[0].Column" value="Expr1008" />
+                                      <property name="Output List.[0].DataType" value="Int32" />
+                                      <property name="Output List.[1]" value="Expr1009" />
+                                      <property name="Output List.[1].Column" value="Expr1009" />
+                                      <property name="Output List.[1].DataType" value="String" />
+                                      <property name="Statistics.Open Count" value="4" />
+                                      <property name="Statistics.Row Count" value="4" />
+                                      <property name="Statistics.Average Row Count" value="1" />
+                                      <property name="Defined Values.[0]" value="Expr1008 = COUNT(0)" />
+                                      <property name="Defined Values.[0].Target" value="Expr1008" />
+                                      <property name="Defined Values.[0].DataType" value="Int32" />
+                                      <property name="Defined Values.[0].Source" value="COUNT(0)" />
+                                      <property name="Defined Values.[1]" value="Expr1009 = ANY(Union1007)" />
+                                      <property name="Defined Values.[1].Target" value="Expr1009" />
+                                      <property name="Defined Values.[1].DataType" value="String" />
+                                      <property name="Defined Values.[1].Source" value="ANY(Union1007)" />
+                                    </properties>
+                                    <input>
+                                      <element operator="Concatenation">
+                                        <properties>
+                                          <property name="Output List.[0]" value="Union1007" />
+                                          <property name="Output List.[0].Column" value="Union1007" />
+                                          <property name="Output List.[0].DataType" value="String" />
+                                          <property name="Statistics.Open Count" value="4" />
+                                          <property name="Statistics.Row Count" value="4" />
+                                          <property name="Statistics.Average Row Count" value="1" />
+                                          <property name="Defined Values.Union1007" value="Expr1005; Expr1006" />
+                                          <property name="Defined Values.Union1007.[0]" value="Expr1005" />
+                                          <property name="Defined Values.Union1007.[0].Column" value="Expr1005" />
+                                          <property name="Defined Values.Union1007.[0].DataType" value="String" />
+                                          <property name="Defined Values.Union1007.[1]" value="Expr1006" />
+                                          <property name="Defined Values.Union1007.[1].Column" value="Expr1006" />
+                                          <property name="Defined Values.Union1007.[1].DataType" value="String" />
+                                        </properties>
+                                        <input>
+                                          <element operator="Top">
+                                            <properties>
+                                              <property name="Output List.[0]" value="Expr1005" />
+                                              <property name="Output List.[0].Column" value="Expr1005" />
+                                              <property name="Output List.[0].DataType" value="String" />
+                                              <property name="Statistics.Open Count" value="4" />
+                                              <property name="Statistics.Row Count" value="4" />
+                                              <property name="Statistics.Average Row Count" value="1" />
+                                              <property name="Limit" value="1" />
+                                              <property name="With Ties" value="False" />
+                                            </properties>
+                                            <input>
+                                              <element operator="ComputeScalar">
+                                                <properties>
+                                                  <property name="Output List.[0]" value="Expr1005" />
+                                                  <property name="Output List.[0].Column" value="Expr1005" />
+                                                  <property name="Output List.[0].DataType" value="String" />
+                                                  <property name="Statistics.Open Count" value="4" />
+                                                  <property name="Statistics.Row Count" value="8" />
+                                                  <property name="Statistics.Average Row Count" value="2" />
+                                                  <property name="Defined Values.[0]" value="Expr1005 = 'Mod2'" />
+                                                  <property name="Defined Values.[0].Target" value="Expr1005" />
+                                                  <property name="Defined Values.[0].DataType" value="String" />
+                                                  <property name="Defined Values.[0].Source" value="'Mod2'" />
+                                                </properties>
+                                                <input>
+                                                  <element operator="IndexSpool">
+                                                    <properties>
+                                                      <property name="Statistics.Open Count" value="4" />
+                                                      <property name="Statistics.Row Count" value="8" />
+                                                      <property name="Statistics.Average Row Count" value="2" />
+                                                      <property name="Logical Operator" value="Eager Spool" />
+                                                      <property name="With Stack" value="False" />
+                                                      <property name="Index" value="o.EmployeeID" />
+                                                      <property name="Index.Table" value="o" />
+                                                      <property name="Index.Column" value="EmployeeID" />
+                                                      <property name="Index.DataType" value="Int32" />
+                                                      <property name="Probe" value="e.EmployeeID" />
+                                                    </properties>
+                                                    <input>
+                                                      <element operator="TableScan">
+                                                        <properties>
+                                                          <property name="Table" value="Orders AS o" />
+                                                          <property name="Output List.[0]" value="o.EmployeeID" />
+                                                          <property name="Output List.[0].Table" value="o" />
+                                                          <property name="Output List.[0].Column" value="EmployeeID" />
+                                                          <property name="Output List.[0].DataType" value="Int32" />
+                                                          <property name="Statistics.Open Count" value="1" />
+                                                          <property name="Statistics.Row Count" value="830" />
+                                                          <property name="Statistics.Average Row Count" value="830" />
+                                                        </properties>
+                                                        <input />
+                                                      </element>
+                                                    </input>
+                                                  </element>
+                                                </input>
+                                              </element>
+                                            </input>
+                                          </element>
+                                          <element operator="ComputeScalar">
+                                            <properties>
+                                              <property name="Output List.[0]" value="Expr1006" />
+                                              <property name="Output List.[0].Column" value="Expr1006" />
+                                              <property name="Output List.[0].DataType" value="String" />
+                                              <property name="Statistics.Open Count" value="4" />
+                                              <property name="Statistics.Row Count" value="0" />
+                                              <property name="Statistics.Average Row Count" value="0" />
+                                              <property name="Defined Values.[0]" value="Expr1006 = NULL" />
+                                              <property name="Defined Values.[0].Target" value="Expr1006" />
+                                              <property name="Defined Values.[0].DataType" value="String" />
+                                              <property name="Defined Values.[0].Source" value="NULL" />
+                                            </properties>
+                                            <input>
+                                              <element operator="Filter">
+                                                <properties>
+                                                  <property name="Statistics.Open Count" value="4" />
+                                                  <property name="Statistics.Row Count" value="0" />
+                                                  <property name="Statistics.Average Row Count" value="0" />
+                                                  <property name="Predicate" value="e.EmployeeID % 2 &lt;&gt; 0" />
+                                                </properties>
+                                                <input>
+                                                  <element operator="TableScan">
+                                                    <properties>
+                                                      <property name="Table" value="Orders AS o" />
+                                                      <property name="Statistics.Open Count" value="4" />
+                                                      <property name="Statistics.Row Count" value="3,320" />
+                                                      <property name="Statistics.Average Row Count" value="830" />
+                                                    </properties>
+                                                    <input />
+                                                  </element>
+                                                </input>
+                                              </element>
+                                            </input>
+                                          </element>
+                                        </input>
+                                      </element>
+                                    </input>
+                                  </element>
+                                </input>
+                              </element>
+                            </input>
+                          </element>
+                          <element operator="Assert">
+                            <properties>
+                              <property name="Output List.[0]" value="Expr1015" />
+                              <property name="Output List.[0].Column" value="Expr1015" />
+                              <property name="Output List.[0].DataType" value="String" />
+                              <property name="Statistics.Open Count" value="2" />
+                              <property name="Statistics.Row Count" value="2" />
+                              <property name="Statistics.Average Row Count" value="1" />
+                              <property name="Predicate" value="CASE WHEN Expr1014 &gt; 1 THEN 0 END" />
+                            </properties>
+                            <input>
+                              <element operator="StreamAggregate">
+                                <properties>
+                                  <property name="Output List.[0]" value="Expr1014" />
+                                  <property name="Output List.[0].Column" value="Expr1014" />
+                                  <property name="Output List.[0].DataType" value="Int32" />
+                                  <property name="Output List.[1]" value="Expr1015" />
+                                  <property name="Output List.[1].Column" value="Expr1015" />
+                                  <property name="Output List.[1].DataType" value="String" />
+                                  <property name="Statistics.Open Count" value="2" />
+                                  <property name="Statistics.Row Count" value="2" />
+                                  <property name="Statistics.Average Row Count" value="1" />
+                                  <property name="Defined Values.[0]" value="Expr1014 = COUNT(0)" />
+                                  <property name="Defined Values.[0].Target" value="Expr1014" />
+                                  <property name="Defined Values.[0].DataType" value="Int32" />
+                                  <property name="Defined Values.[0].Source" value="COUNT(0)" />
+                                  <property name="Defined Values.[1]" value="Expr1015 = ANY(Union1013)" />
+                                  <property name="Defined Values.[1].Target" value="Expr1015" />
+                                  <property name="Defined Values.[1].DataType" value="String" />
+                                  <property name="Defined Values.[1].Source" value="ANY(Union1013)" />
+                                </properties>
+                                <input>
+                                  <element operator="Concatenation">
+                                    <properties>
+                                      <property name="Output List.[0]" value="Union1013" />
+                                      <property name="Output List.[0].Column" value="Union1013" />
+                                      <property name="Output List.[0].DataType" value="String" />
+                                      <property name="Statistics.Open Count" value="2" />
+                                      <property name="Statistics.Row Count" value="2" />
+                                      <property name="Statistics.Average Row Count" value="1" />
+                                      <property name="Defined Values.Union1013" value="Expr1011; Expr1012" />
+                                      <property name="Defined Values.Union1013.[0]" value="Expr1011" />
+                                      <property name="Defined Values.Union1013.[0].Column" value="Expr1011" />
+                                      <property name="Defined Values.Union1013.[0].DataType" value="String" />
+                                      <property name="Defined Values.Union1013.[1]" value="Expr1012" />
+                                      <property name="Defined Values.Union1013.[1].Column" value="Expr1012" />
+                                      <property name="Defined Values.Union1013.[1].DataType" value="String" />
+                                    </properties>
+                                    <input>
+                                      <element operator="Top">
+                                        <properties>
+                                          <property name="Output List.[0]" value="Expr1011" />
+                                          <property name="Output List.[0].Column" value="Expr1011" />
+                                          <property name="Output List.[0].DataType" value="String" />
+                                          <property name="Statistics.Open Count" value="2" />
+                                          <property name="Statistics.Row Count" value="2" />
+                                          <property name="Statistics.Average Row Count" value="1" />
+                                          <property name="Limit" value="1" />
+                                          <property name="With Ties" value="False" />
+                                        </properties>
+                                        <input>
+                                          <element operator="ComputeScalar">
+                                            <properties>
+                                              <property name="Output List.[0]" value="Expr1011" />
+                                              <property name="Output List.[0].Column" value="Expr1011" />
+                                              <property name="Output List.[0].DataType" value="String" />
+                                              <property name="Statistics.Open Count" value="2" />
+                                              <property name="Statistics.Row Count" value="4" />
+                                              <property name="Statistics.Average Row Count" value="2" />
+                                              <property name="Defined Values.[0]" value="Expr1011 = 'Mod3'" />
+                                              <property name="Defined Values.[0].Target" value="Expr1011" />
+                                              <property name="Defined Values.[0].DataType" value="String" />
+                                              <property name="Defined Values.[0].Source" value="'Mod3'" />
+                                            </properties>
+                                            <input>
+                                              <element operator="IndexSpool">
+                                                <properties>
+                                                  <property name="Statistics.Open Count" value="2" />
+                                                  <property name="Statistics.Row Count" value="4" />
+                                                  <property name="Statistics.Average Row Count" value="2" />
+                                                  <property name="Logical Operator" value="Eager Spool" />
+                                                  <property name="With Stack" value="False" />
+                                                  <property name="Index" value="o.EmployeeID" />
+                                                  <property name="Index.Table" value="o" />
+                                                  <property name="Index.Column" value="EmployeeID" />
+                                                  <property name="Index.DataType" value="Int32" />
+                                                  <property name="Probe" value="e.EmployeeID" />
+                                                </properties>
+                                                <input>
+                                                  <element operator="TableScan">
+                                                    <properties>
+                                                      <property name="Table" value="Orders AS o" />
+                                                      <property name="Output List.[0]" value="o.EmployeeID" />
+                                                      <property name="Output List.[0].Table" value="o" />
+                                                      <property name="Output List.[0].Column" value="EmployeeID" />
+                                                      <property name="Output List.[0].DataType" value="Int32" />
+                                                      <property name="Statistics.Open Count" value="1" />
+                                                      <property name="Statistics.Row Count" value="830" />
+                                                      <property name="Statistics.Average Row Count" value="830" />
+                                                    </properties>
+                                                    <input />
+                                                  </element>
+                                                </input>
+                                              </element>
+                                            </input>
+                                          </element>
+                                        </input>
+                                      </element>
+                                      <element operator="ComputeScalar">
+                                        <properties>
+                                          <property name="Output List.[0]" value="Expr1012" />
+                                          <property name="Output List.[0].Column" value="Expr1012" />
+                                          <property name="Output List.[0].DataType" value="String" />
+                                          <property name="Statistics.Open Count" value="2" />
+                                          <property name="Statistics.Row Count" value="0" />
+                                          <property name="Statistics.Average Row Count" value="0" />
+                                          <property name="Defined Values.[0]" value="Expr1012 = NULL" />
+                                          <property name="Defined Values.[0].Target" value="Expr1012" />
+                                          <property name="Defined Values.[0].DataType" value="String" />
+                                          <property name="Defined Values.[0].Source" value="NULL" />
+                                        </properties>
+                                        <input>
+                                          <element operator="Filter">
+                                            <properties>
+                                              <property name="Statistics.Open Count" value="2" />
+                                              <property name="Statistics.Row Count" value="0" />
+                                              <property name="Statistics.Average Row Count" value="0" />
+                                              <property name="Predicate" value="e.EmployeeID % 3 &lt;&gt; 0" />
+                                            </properties>
+                                            <input>
+                                              <element operator="TableScan">
+                                                <properties>
+                                                  <property name="Table" value="Orders AS o" />
+                                                  <property name="Statistics.Open Count" value="2" />
+                                                  <property name="Statistics.Row Count" value="1,660" />
+                                                  <property name="Statistics.Average Row Count" value="830" />
+                                                </properties>
+                                                <input />
+                                              </element>
+                                            </input>
+                                          </element>
+                                        </input>
+                                      </element>
+                                    </input>
+                                  </element>
+                                </input>
+                              </element>
+                            </input>
+                          </element>
+                        </input>
+                      </element>
+                      <element operator="Assert">
+                        <properties>
+                          <property name="Output List.[0]" value="Expr1021" />
+                          <property name="Output List.[0].Column" value="Expr1021" />
+                          <property name="Output List.[0].DataType" value="String" />
+                          <property name="Statistics.Open Count" value="3" />
+                          <property name="Statistics.Row Count" value="3" />
+                          <property name="Statistics.Average Row Count" value="1" />
+                          <property name="Predicate" value="CASE WHEN Expr1020 &gt; 1 THEN 0 END" />
+                        </properties>
+                        <input>
+                          <element operator="StreamAggregate">
+                            <properties>
+                              <property name="Output List.[0]" value="Expr1020" />
+                              <property name="Output List.[0].Column" value="Expr1020" />
+                              <property name="Output List.[0].DataType" value="Int32" />
+                              <property name="Output List.[1]" value="Expr1021" />
+                              <property name="Output List.[1].Column" value="Expr1021" />
+                              <property name="Output List.[1].DataType" value="String" />
+                              <property name="Statistics.Open Count" value="3" />
+                              <property name="Statistics.Row Count" value="3" />
+                              <property name="Statistics.Average Row Count" value="1" />
+                              <property name="Defined Values.[0]" value="Expr1020 = COUNT(0)" />
+                              <property name="Defined Values.[0].Target" value="Expr1020" />
+                              <property name="Defined Values.[0].DataType" value="Int32" />
+                              <property name="Defined Values.[0].Source" value="COUNT(0)" />
+                              <property name="Defined Values.[1]" value="Expr1021 = ANY(Union1019)" />
+                              <property name="Defined Values.[1].Target" value="Expr1021" />
+                              <property name="Defined Values.[1].DataType" value="String" />
+                              <property name="Defined Values.[1].Source" value="ANY(Union1019)" />
+                            </properties>
+                            <input>
+                              <element operator="Concatenation">
+                                <properties>
+                                  <property name="Output List.[0]" value="Union1019" />
+                                  <property name="Output List.[0].Column" value="Union1019" />
+                                  <property name="Output List.[0].DataType" value="String" />
+                                  <property name="Statistics.Open Count" value="3" />
+                                  <property name="Statistics.Row Count" value="3" />
+                                  <property name="Statistics.Average Row Count" value="1" />
+                                  <property name="Defined Values.Union1019" value="Expr1017; Expr1018" />
+                                  <property name="Defined Values.Union1019.[0]" value="Expr1017" />
+                                  <property name="Defined Values.Union1019.[0].Column" value="Expr1017" />
+                                  <property name="Defined Values.Union1019.[0].DataType" value="String" />
+                                  <property name="Defined Values.Union1019.[1]" value="Expr1018" />
+                                  <property name="Defined Values.Union1019.[1].Column" value="Expr1018" />
+                                  <property name="Defined Values.Union1019.[1].DataType" value="String" />
+                                </properties>
+                                <input>
+                                  <element operator="Top">
+                                    <properties>
+                                      <property name="Output List.[0]" value="Expr1017" />
+                                      <property name="Output List.[0].Column" value="Expr1017" />
+                                      <property name="Output List.[0].DataType" value="String" />
+                                      <property name="Statistics.Open Count" value="3" />
+                                      <property name="Statistics.Row Count" value="3" />
+                                      <property name="Statistics.Average Row Count" value="1" />
+                                      <property name="Limit" value="1" />
+                                      <property name="With Ties" value="False" />
+                                    </properties>
+                                    <input>
+                                      <element operator="ComputeScalar">
+                                        <properties>
+                                          <property name="Output List.[0]" value="Expr1017" />
+                                          <property name="Output List.[0].Column" value="Expr1017" />
+                                          <property name="Output List.[0].DataType" value="String" />
+                                          <property name="Statistics.Open Count" value="3" />
+                                          <property name="Statistics.Row Count" value="6" />
+                                          <property name="Statistics.Average Row Count" value="2" />
+                                          <property name="Defined Values.[0]" value="Expr1017 = 'Else'" />
+                                          <property name="Defined Values.[0].Target" value="Expr1017" />
+                                          <property name="Defined Values.[0].DataType" value="String" />
+                                          <property name="Defined Values.[0].Source" value="'Else'" />
+                                        </properties>
+                                        <input>
+                                          <element operator="IndexSpool">
+                                            <properties>
+                                              <property name="Statistics.Open Count" value="3" />
+                                              <property name="Statistics.Row Count" value="6" />
+                                              <property name="Statistics.Average Row Count" value="2" />
+                                              <property name="Logical Operator" value="Eager Spool" />
+                                              <property name="With Stack" value="False" />
+                                              <property name="Index" value="o.EmployeeID" />
+                                              <property name="Index.Table" value="o" />
+                                              <property name="Index.Column" value="EmployeeID" />
+                                              <property name="Index.DataType" value="Int32" />
+                                              <property name="Probe" value="e.EmployeeID" />
+                                            </properties>
+                                            <input>
+                                              <element operator="TableScan">
+                                                <properties>
+                                                  <property name="Table" value="Orders AS o" />
+                                                  <property name="Output List.[0]" value="o.EmployeeID" />
+                                                  <property name="Output List.[0].Table" value="o" />
+                                                  <property name="Output List.[0].Column" value="EmployeeID" />
+                                                  <property name="Output List.[0].DataType" value="Int32" />
+                                                  <property name="Statistics.Open Count" value="1" />
+                                                  <property name="Statistics.Row Count" value="830" />
+                                                  <property name="Statistics.Average Row Count" value="830" />
+                                                </properties>
+                                                <input />
+                                              </element>
+                                            </input>
+                                          </element>
+                                        </input>
+                                      </element>
+                                    </input>
+                                  </element>
+                                  <element operator="ComputeScalar">
+                                    <properties>
+                                      <property name="Output List.[0]" value="Expr1018" />
+                                      <property name="Output List.[0].Column" value="Expr1018" />
+                                      <property name="Output List.[0].DataType" value="String" />
+                                      <property name="Statistics.Open Count" value="3" />
+                                      <property name="Statistics.Row Count" value="0" />
+                                      <property name="Statistics.Average Row Count" value="0" />
+                                      <property name="Defined Values.[0]" value="Expr1018 = NULL" />
+                                      <property name="Defined Values.[0].Target" value="Expr1018" />
+                                      <property name="Defined Values.[0].DataType" value="String" />
+                                      <property name="Defined Values.[0].Source" value="NULL" />
+                                    </properties>
+                                    <input>
+                                      <element operator="Filter">
+                                        <properties>
+                                          <property name="Statistics.Open Count" value="3" />
+                                          <property name="Statistics.Row Count" value="0" />
+                                          <property name="Statistics.Average Row Count" value="0" />
+                                          <property name="Predicate" value="e.EmployeeID % 2 = 0 OR e.EmployeeID % 3 = 0" />
+                                        </properties>
+                                        <input>
+                                          <element operator="TableScan">
+                                            <properties>
+                                              <property name="Table" value="Orders AS o" />
+                                              <property name="Statistics.Open Count" value="3" />
+                                              <property name="Statistics.Row Count" value="2,490" />
+                                              <property name="Statistics.Average Row Count" value="830" />
+                                            </properties>
+                                            <input />
+                                          </element>
+                                        </input>
+                                      </element>
+                                    </input>
+                                  </element>
+                                </input>
+                              </element>
+                            </input>
+                          </element>
+                        </input>
+                      </element>
+                    </input>
+                  </element>
+                </input>
+              </element>
+            </input>
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

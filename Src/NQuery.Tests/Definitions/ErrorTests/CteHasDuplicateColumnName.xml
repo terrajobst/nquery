@@ -1,0 +1,24 @@
+<test>
+  <sql>WITH EmployeeHierarchy (EmployeeID, EmployeeID) AS
+(				
+   -- Base case
+   SELECT	e.EmployeeID,
+   			0
+   FROM		Employees e
+   WHERE	ReportsTo IS NULL
+
+   UNION ALL
+
+   -- Recursive step
+   SELECT	e.EmployeeID,
+   			eh.Level + 1
+   FROM		Employees e
+				INNER JOIN EmployeeHierarchy eh ON e.ReportsTo = eh.EmployeeID
+)
+SELECT	*
+FROM	EmployeeHierarchy eh
+ORDER	BY Path</sql>
+  <expectedErrors>
+    <expectedError id="CteHasDuplicateColumnName" text="The column 'EmployeeID' was specified multiple times for 'EmployeeHierarchy'." />
+  </expectedErrors>
+</test>

@@ -1,0 +1,11 @@
+<test>
+  <sql>SELECT	EXISTS (
+			SELECT	*
+			FROM	EmployeeTerritories et
+			WHERE	et.EmployeeID &gt; AVG(e.EmployeeID * et.EmployeeID)
+		)
+FROM	Employees e</sql>
+  <expectedErrors>
+    <expectedError id="AggregateContainsColumnsFromDifferentQueries" text="Multiple columns are specified in aggregated expression '&quot;e&quot;.&quot;EmployeeID&quot; * &quot;et&quot;.&quot;EmployeeID&quot;' containing an outer reference. If an expression being aggregated contains an outer reference, then that outer reference must be the only column referenced in the expression." />
+  </expectedErrors>
+</test>

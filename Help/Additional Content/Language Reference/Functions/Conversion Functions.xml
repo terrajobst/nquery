@@ -1,0 +1,60 @@
+﻿<topic>
+	<head>
+		<title>Conversion Functions</title>
+		<links>
+			<link href="Functions.html">Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>The conversion functions are available:</p>
+			<ul>
+				<li>
+					<a href="TO_BOOLEAN.html">TO_BOOLEAN</a>
+				</li>
+				<li>
+					<a href="TO_BYTE.html">TO_BYTE</a>
+				</li>
+				<li>
+					<a href="TO_CHAR.html">TO_CHAR</a>
+				</li>
+				<li>
+					<a href="TO_DATETIME.html">TO_DATETIME</a>
+				</li>
+				<li>
+					<a href="TO_DECIMAL.html">TO_DECIMAL</a>
+				</li>
+				<li>
+					<a href="TO_DOUBLE.html">TO_DOUBLE</a>
+				</li>
+				<li>
+					<a href="TO_INT16.html">TO_INT16</a>
+				</li>
+				<li>
+					<a href="TO_INT32.html">TO_INT32</a>
+				</li>
+				<li>
+					<a href="TO_INT64.html">TO_INT64</a>
+				</li>
+				<li>
+					<a href="TO_SBYTE.html">TO_SBYTE</a>
+				</li>
+				<li>
+					<a href="TO_SINGLE.html">TO_SINGLE</a>
+				</li>
+				<li>
+					<a href="TO_STRING.html">TO_STRING</a>
+				</li>
+				<li>
+					<a href="TO_UINT16.html">TO_UINT16</a>
+				</li>
+				<li>
+					<a href="TO_UINT32.html">TO_UINT32</a>
+				</li>
+				<li>
+					<a href="TO_UINT64.html">TO_UINT64</a>
+				</li>
+			</ul>
+		</summary>
+	</body>
+</topic>

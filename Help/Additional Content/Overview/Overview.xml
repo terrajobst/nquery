@@ -1,0 +1,37 @@
+<topic>
+	<head>
+		<title>Overview</title>
+		<toc index="2"/>
+	</head>
+	<body>
+		<summary>
+			<p>
+				NQuery mainly provides three classes: <see cref="T:NQuery.Query">Query</see>,
+				<see cref="T:NQuery.Expression`1">Expression</see> and <see cref="T:NQuery.DataContext">DataContext</see>.
+			</p>
+			<p>
+				<img src="Overview.png" />
+			</p>
+			<p>
+				The <see cref="T:NQuery.DataContext">DataContext</see>
+				represents something like a scope in which you can place tables, relations, functions,
+				named constants and aggregates.
+			</p>
+			<p>
+				<see cref="T:NQuery.Query">Query</see> can be used to execute a SELECT statement against a data context.
+				<see cref="T:NQuery.Expression`1">Expression</see> can be used in scenarios where you only need an expression
+				instead of a full query. This can be especially useful for features like searching, filtering or field mapping.
+			</p>
+			<p>
+				Both <see cref="T:NQuery.Query">Query</see> and <see cref="T:NQuery.Expression`1">Expression</see>
+				contain a parameter collection that is very similar to the parameter collection used by .NET database classes.
+				Changing parameter values does not require the <see cref="T:NQuery.Query">Query</see> or
+				<see cref="T:NQuery.Expression`1">Expression</see> to be recompiled.
+			</p>
+			<p>
+				See <a href="/Quick Start/QueryQuickStart.html">Query Quick Start</a> or <a href="/Quick Start/ExpressionQuickStart.html">Expression Quick Start</a>
+				to see how these classes are actually used.
+			</p>
+		</summary>
+	</body>
+</topic>

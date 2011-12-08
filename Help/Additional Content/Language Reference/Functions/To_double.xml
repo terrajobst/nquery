@@ -1,0 +1,56 @@
+<topic>
+	<head>
+		<title>TO_DOUBLE</title>
+		<keywords>
+			<keyword term="functions, TO_DOUBLE" />
+			<keyword term="conversion functions, TO_DOUBLE" />
+			<keyword term="TO_DOUBLE function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Conversion Functions.html">Conversion Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Converts a given value to a double-precision floating point number.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">TO_DOUBLE(value AS object) RETURNS double</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						A value to be converted.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<examples>
+			<p>
+				The following shows <c>TO_DOUBLE</c> results for some input data:
+			</p>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">SELECT 'The TO_DOUBLE result of value ''134.333'' is: ' AS Input, TO_DOUBLE('0.333') AS Value
+UNION  ALL
+SELECT 'The TO_DOUBLE result of value 1.0/3.0 is: ' AS Input, TO_DOUBLE(1.0/3.0) AS Value
+UNION  ALL
+SELECT 'The TO_DOUBLE result of value ''-0.333'' is: ' AS Input, TO_DOUBLE('-0.333') AS Value
+UNION  ALL
+SELECT 'The TO_DOUBLE result of value ''0.0'' is: ' AS Input, TO_DOUBLE('0.0') AS Value
+UNION  ALL
+SELECT 'The TO_DOUBLE result of value ''0.000'' is: ' AS Input, TO_DOUBLE('0.000') AS Value
+UNION  ALL
+SELECT 'The TO_DOUBLE result of value ''0.000'' is: ' AS Input, TO_DOUBLE('-1.33e-33') AS Value</sampleCode>
+			<note>
+				Though <c>TO_DOUBLE</c> uses an invariant culture to parse the string as double-precision floating point number the output of this query may
+				vary depending on your regional settings.
+			</note>
+		</examples>
+	</body>
+</topic>

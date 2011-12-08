@@ -1,0 +1,75 @@
+﻿<topic>
+	<head>
+		<title>Custom Methods</title>
+		<keywords>
+			<keyword term="extending, method providers" />
+			<keyword term="customizing, method providers" />
+			<keyword term="adding, method providers" />
+			<keyword term="IMethodProvider interface, using" />
+			<keyword term="NQuery.Runtime.IMethodProvider interface, using" />
+		</keywords>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Unlike regular SQL NQuery also supports methods beeing called on values. Normally, NQuery uses reflection to determine
+				the set of public methods a type exposes. There are situations in which you might want to customize the set of available
+				methods.
+			</p>
+			<p>
+				NQuery provides <see cref="T:NQuery.Runtime.ReflectionProvider">ReflectionProvider</see> and
+				<see cref="F:NQuery.Runtime.NullProviders.MethodProvider">NullProviders.MethodProvider</see>.
+			</p>
+		</summary>
+
+		<section title="Customizing Methods of a Type">
+			<p>
+				To customize the set of exposed methods for a type you must register an <see cref="T:NQuery.Runtime.IMethodProvider">IMethodProvider</see>
+				for it. A method provider only has to implement the method
+				<see cref="M:NQuery.Runtime.IMethodProvider.GetMethods(System.Type)">IMethodProvider.GetMethods(Type)</see> which returns an array of
+				<see cref="T:NQuery.Runtime.MethodBinding">MethodBindings</see>. A <see cref="T:NQuery.Runtime.MethodBinding">MethodBinding</see> can
+				produce a value for an instance of the type it is associated with including a set of arguments.
+			</p>
+			<p>
+				NQuery provides two implementations for <see cref="T:NQuery.Runtime.IMethodProvider">IMethodProvider</see>:
+				<ul>
+					<li>
+						<see cref="T:NQuery.Runtime.ReflectionProvider">ReflectionProvider</see> which uses reflection and returns all public methods.
+						You can derive from this class to use a more advanced logic, e.g. using custom attributes. See example below.
+					</li>
+					<li>
+						The field <see cref="F:NQuery.Runtime.NullProviders.MethodProvider">NullProviders.MethodProvider</see> exposes an implementation that
+						just returns an empty list of methods. You can use this provider to hide all methods from a given type. This is useful if you want
+						certain types not exposing any methods inside your queries or expressions. NQuery automatically register this provider for the types
+						<see cref="T:System.Data.DataTable">DataTable</see>, <see cref="T:System.Data.DataRow">DataRow</see> and
+						<see cref="T:System.Collections.Hashtable">Hashtable</see>.
+					</li>
+				</ul>
+			</p>
+		</section>
+
+		<section title="Implementing a Reflection-Based Method Provider">
+			<p>
+				The following sample creates a new method provider by deriving it from <see cref="T:NQuery.Runtime.ReflectionProvider">ReflectionProvider</see>.
+				The new provider is registered for this data type:
+			</p>
+			<sampleCode lang="cs" title="Data Type" source="..\Samples\Extensibility\CustomMethodProvider\MyReflectionProvider.cs" region="MyDataType" />
+			<p>
+				As you can see the methods are marked with a cutom attribute which is declared as follows:
+			</p>
+			<sampleCode lang="cs" title="Marker Attribute" source="..\Samples\Extensibility\CustomMethodProvider\MyReflectionProvider.cs" region="MyMarkerAttribute" />
+			<p>
+				The method provider uses this attribute to determine the set of exposed methods and their names. Since this algorithm is mainly driven by
+				reflection it can be created very easily by deriving it from <see cref="T:NQuery.Runtime.ReflectionProvider">ReflectionProvider</see> and overriding
+				the method <see cref="M:NQuery.Runtime.ReflectionProvider.CreateMethod(System.Reflection.MethodInfo)">ReflectionProvider.CreateMethod</see>.
+			</p>
+			<sampleCode lang="cs" title="Method Provider"
+						source="..\Samples\Extensibility\CustomMethodProvider\MyReflectionProvider.cs" region="MyReflectionProvider" />
+			<p>
+				Finally you must register the new method provider with the <see cref="T:NQuery.MetadataContext">MetadataContext</see>:
+			</p>
+			<sampleCode lang="cs" title="Using the Method Provider" source="..\Samples\Extensibility\CustomMethodProvider\Form1.cs" region="MyReflectionProvider Usage" />
+		</section>
+
+	</body>
+</topic>

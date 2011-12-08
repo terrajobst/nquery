@@ -1,0 +1,49 @@
+﻿<topic>
+	<head>
+		<title>Query Quick Start</title>
+		<toc index="2"/>
+		<keywords>
+			<keyword term="quick start, query" />
+			<keyword term="Query class, quick start" />
+			<keyword term="NQuery.Query class, quick start" />
+		</keywords>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The following sample will show how the <see cref="T:NQuery.Query">Query</see> class can be used to execute a query against
+				.NET objects.
+			</p>
+		</summary>
+
+		<section title="Prerequisites">
+			<ol>
+				<li>Create a new C# Windows Application</li>
+				<li>Add a reference to the NQuery.dll assembly</li>
+				<li>
+					Add a reference to the NQuery namespace (<c>using NQuery;</c>)
+				</li>
+				<li>
+					Place a <see cref="T:System.Windows.Forms.DataGridView">DataGridView</see> component on the main form
+				</li>
+			</ol>
+			<p>
+				This sample will use two simple classes, <c>Employee</c> and <c>Company</c>, which are declared as follows:
+			</p>
+			<sampleCode lang="cs" title="Employee Class" source="..\Samples\Quick Starts\QueryQuickStart\Form1.cs" region="Employee" />
+			<sampleCode lang="cs" title="Company Class" source="..\Samples\Quick Starts\QueryQuickStart\Form1.cs" region="Company" />
+			<p>
+				Please note that there is an implicit relationship between employees and companies via the <c>Employee.CompanyId</c>
+				and <c>Company.Id</c> properties.
+			</p>
+		</section>
+
+		<section title="Using the Query Class">
+			<p>
+				We will use the <c>Employee</c> and <c>Customer</c> classes to create two collections with some sample data
+				and use a query to join every employee with its company:
+			</p>
+			<sampleCode lang="cs" title="Using a Query" source="..\Samples\Quick Starts\QueryQuickStart\Form1.cs" region="Usage" />
+		</section>
+	</body>
+</topic>

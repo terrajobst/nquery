@@ -1,0 +1,12 @@
+<test>
+  <sql>SELECT #33/33/1981#,
+	   #31/2/2000#,
+	   #0/0/0#,
+	   #1/1/0#
+</sql>
+  <expectedErrors>
+    <expectedError id="InvalidDate" text="'33/33/1981' is not a valid date." />
+    <expectedError id="InvalidDate" text="'31/2/2000' is not a valid date." />
+    <expectedError id="InvalidDate" text="'0/0/0' is not a valid date." />
+  </expectedErrors>
+</test>

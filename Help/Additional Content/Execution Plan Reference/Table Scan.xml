@@ -1,0 +1,38 @@
+﻿<topic>
+	<head>
+		<title>Table Scan</title>
+		<keywords>
+			<keyword term="execution plan, table scan"/>
+			<keyword term="physical operators, table scan"/>
+			<keyword term="logical operators, table scan"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Table Scan</b> operator retrieves all rows from the table specified in the <c>Table</c> property.
+			</p>
+			<p>
+				<b>Table Scan</b> is a logical and physical operator.
+			</p>
+		</summary>
+
+		<section title="Properties">
+			<table>
+				<tr>
+					<th>Property Name</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>Table</td>
+					<td>
+						Specifies the name and optional alias of the table being read by the <b>Table Scan</b> operator.
+					</td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</topic>

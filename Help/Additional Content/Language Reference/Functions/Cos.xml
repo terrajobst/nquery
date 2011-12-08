@@ -1,0 +1,41 @@
+<topic>
+	<head>
+		<title>COS</title>
+		<keywords>
+			<keyword term="functions, COS" />
+			<keyword term="mathematical functions, COS" />
+			<keyword term="COS function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Mathematical Functions.html">Mathematical Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				A mathematical function that returns the trigonometric cosine of the specified angle, in radians, in the specified expression.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">COS(value AS double) RETURNS double</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						An angle, measured in radians.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The cosine of <c>value</c>.
+			</p>
+		</returns>
+	</body>
+</topic>

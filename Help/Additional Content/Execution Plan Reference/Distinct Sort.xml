@@ -1,0 +1,23 @@
+﻿<topic>
+	<head>
+		<title>Distinct Sort</title>
+		<keywords>
+			<keyword term="execution plan, distinct sort"/>
+			<keyword term="logical operators, distinct sort"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Distinct Sort</b> logical operator scans the input, removing duplicates and sorting by the columns specified
+				in the <c>Order By</c> property.
+			</p>
+			<p>
+				<b>Distinct Sort</b> is a logical operator.
+			</p>
+		</summary>
+	</body>
+</topic>

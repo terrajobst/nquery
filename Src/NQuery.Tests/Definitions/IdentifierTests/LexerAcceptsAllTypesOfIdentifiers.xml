@@ -1,0 +1,33 @@
+<test>
+  <sql>SELECT	"Test",
+		[Test],
+		[Test]]],
+		"Test""",
+		[Test]]123],
+		"Test""123",
+		[Test   ]]   123],
+		"Test   ""   123",
+		[   Test   ]]   123  ],
+		"   Test   ""   123  ",
+		[]]   Test   ]]   123  ],
+		"""   Test   ""   123  ",
+		["   Test   "   123  "],
+		"]   Test   ]   123  ]",
+		</sql>
+  <expectedErrors>
+    <expectedError id="UndeclaredEntity" text="The identifier '&quot;Test&quot;' does not refer to a column, table or property." />
+    <expectedError id="UndeclaredEntity" text="The identifier '[Test]' does not refer to a column, table or property." />
+    <expectedError id="UndeclaredEntity" text="The identifier '[Test]]]' does not refer to a column, table or property." />
+    <expectedError id="UndeclaredEntity" text="The identifier '&quot;Test&quot;&quot;&quot;' does not refer to a column, table or property." />
+    <expectedError id="UndeclaredEntity" text="The identifier '[Test]]123]' does not refer to a column, table or property." />
+    <expectedError id="UndeclaredEntity" text="The identifier '&quot;Test&quot;&quot;123&quot;' does not refer to a column, table or property." />
+    <expectedError id="UndeclaredEntity" text="The identifier '[Test   ]]   123]' does not refer to a column, table or property." />
+    <expectedError id="UndeclaredEntity" text="The identifier '&quot;Test   &quot;&quot;   123&quot;' does not refer to a column, table or property." />
+    <expectedError id="UndeclaredEntity" text="The identifier '[   Test   ]]   123  ]' does not refer to a column, table or property." />
+    <expectedError id="UndeclaredEntity" text="The identifier '&quot;   Test   &quot;&quot;   123  &quot;' does not refer to a column, table or property." />
+    <expectedError id="UndeclaredEntity" text="The identifier '[]]   Test   ]]   123  ]' does not refer to a column, table or property." />
+    <expectedError id="UndeclaredEntity" text="The identifier '&quot;&quot;&quot;   Test   &quot;&quot;   123  &quot;' does not refer to a column, table or property." />
+    <expectedError id="UndeclaredEntity" text="The identifier '[&quot;   Test   &quot;   123  &quot;]' does not refer to a column, table or property." />
+    <expectedError id="UndeclaredEntity" text="The identifier '&quot;]   Test   ]   123  ]&quot;' does not refer to a column, table or property." />
+  </expectedErrors>
+</test>

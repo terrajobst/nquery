@@ -1,0 +1,112 @@
+<topic>
+	<head>
+		<title>Custom Functions</title>
+		<keywords>
+			<keyword term="extending, functions" />
+			<keyword term="customizing, functions" />
+			<keyword term="adding, functions" />
+			<keyword term="MethodBinding class, using" />
+			<keyword term="NQuery.Runtime.MethodBinding class, using" />
+			<keyword term="InvokeParameter class, using" />
+			<keyword term="NQuery.Runtime.InvokeParameter class, using" />
+		</keywords>
+	</head>
+	<body>
+		<summary>
+			<p>
+				NQuery provides many <a href="Language Reference/Functions/Functions.html">built-in functions</a> but you can also create custom functions.
+				Custom functions are derived from <see cref="T:NQuery.Runtime.FunctionBinding">FunctionBinding</see>.
+			</p>
+			<p>
+				For your convenience NQuery provides different ways of creating and adding functions.
+			</p>
+		</summary>
+
+		<section title="Function Signature Restrictions">
+			<p>
+				Basically you can use any data type you whish. However, there are some data types that you cannot use as parameters or return values. Also,
+				there are some restrictions on the function signature itself.
+			</p>
+			<ul>
+				<li>
+					<c>void</c> return type. Since functions must return a value you cannot use functions that have the <c>void</c> return type.
+				</li>
+				<li>
+					<c>ref</c>, <c>out</c>, or <c>params</c> modifier. Parameters having a <c>ref</c>, <c>out</c> or <c>params</c> modifier are not supported.
+				</li>
+				<li>
+					Pointer types. You cannot use pointer types as parameter or return types.
+				</li>
+			</ul>
+		</section>
+
+		<section title="Using Function Containers">
+			<p>
+				The easiest way of adding a set of functions to the <see cref="T:NQuery.DataContext">DataContext</see> is to create a new class
+				that holds all these functions. All these functions must be marked with
+				<see cref="T:NQuery.Runtime.FunctionBindingAttribute">FunctionBindingAttribute</see>. This allows you to differentiate between functions
+				you want to add and functions that only provide supporting functionality but are not meant to be invocable from a
+				<see cref="T:NQuery.Query">Query</see> or <see cref="T:NQuery.Expression`1">Expression</see>. This attribute also allows to specify a name
+				under which the function should be exposed and whether the function is deterministic.
+			</p>
+			<p>
+				The function container can be a static class or an object instance. The latter enables you to associate some state with the function container.
+			</p>
+			<p>
+				The following example shows how a static and an instance container can be declared:
+			</p>
+			<sampleCode lang="cs" title="Creating a Static Function Container"
+						source="..\Samples\Extensibility\CustomFunctions\StaticFunctionContainer.cs" region="Declaration"  />
+			<sampleCode lang="cs" title="Creating an Instance Function Container"
+						source="..\Samples\Extensibility\CustomFunctions\InstanceFunctionContainer.cs" region="Declaration"  />
+			<p>
+				To use the functions you must register them with the <see cref="T:NQuery.DataContext">DataContext</see>:
+			</p>
+			<sampleCode lang="cs" title="Registering a Static Function Container"
+						source="..\Samples\Extensibility\CustomFunctions\Form1.cs" region="Static Function Container Usage"  />
+			<sampleCode lang="cs" title="Registering an Instance Function Container"
+						source="..\Samples\Extensibility\CustomFunctions\Form1.cs" region="Instance Function Container Usage"  />
+		</section>
+
+		<section title="Using Delegates">
+			<p>
+				Sometimes you have a delegate right at hand. In this case it might be easier to just add the delegate as a function.
+			</p>
+			<p>
+				The sample below assumes you have the following delegate and delegate implementation:
+			</p>
+			<sampleCode lang="cs" title="A Delegate Declaration" source="..\Samples\Extensibility\CustomFunctions\Form1.cs" region="Delegate Declaration" />
+			<p>
+				As it is with function containers you must register the delegate with the <see cref="T:NQuery.DataContext">DataContext</see>:
+			</p>
+			<sampleCode lang="cs" title="Registering a Delegate as Function"
+						source="..\Samples\Extensibility\CustomFunctions\Form1.cs" region="Delegate Function Usage"  />
+		</section>
+
+		<section title="Dynamically Creating Functions">
+			<p>
+				Sometimes you might not know the list of available functions at compile-time. In this case you can also create custom functions by creating
+				a new class derived from <see cref="T:NQuery.Runtime.FunctionBinding">FunctionBinding</see>.
+			</p>
+			<p>
+				In the following we will create a custom function binding that uses <see cref="T:NQuery.Expression`1">Expression</see> objects as function
+				bodies.
+			</p>
+			<sampleCode lang="cs" title="Creating a Custom Function Binding"
+						source="..\Samples\Extensibility\CustomFunctions\MyFunctionBinding.cs" region="MyFunctionBinding"  />
+			<p>
+				The class <c>MyFunctionParameter</c> is derived from <see cref="T:NQuery.Runtime.InvokeParameter">InvokeParameter</see> and is declared as
+				follows:
+			</p>
+			<sampleCode lang="cs" title="Creating an Invoke Parameter"
+						source="..\Samples\Extensibility\CustomFunctions\MyFunctionBinding.cs" region="MyFunctionParameter"  />
+
+			<p>
+				To use our custom function binding we must instantiate an <see cref="T:NQuery.Expression`1">Expression</see> and pass it to our newly
+				created <c>MyFunctionBinding</c>. This instance can be directly added to the <see cref="T:NQuery.DataContext">DataContext</see>.
+			</p>
+			<sampleCode lang="cs" title="Registering a Dynamic Function"
+						source="..\Samples\Extensibility\CustomFunctions\Form1.cs" region="Dynamic Function Usage"  />
+		</section>
+	</body>
+</topic>

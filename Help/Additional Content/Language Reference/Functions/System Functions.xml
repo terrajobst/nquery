@@ -1,0 +1,24 @@
+<topic>
+	<head>
+		<title>System Functions </title>
+		<links>
+			<link href="Functions.html">Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>The following system functions are available:</p>
+			<ul>
+				<li>
+					<a href="CASE.html">CASE</a>
+				</li>
+				<li>
+					<a href="COALESCE.html">COALESCE</a>
+				</li>
+				<li>
+					<a href="NULLIF.html">NULLIF</a>
+				</li>
+			</ul>
+		</summary>
+	</body>
+</topic>

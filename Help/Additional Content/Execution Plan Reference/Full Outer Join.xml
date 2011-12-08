@@ -1,0 +1,30 @@
+﻿<topic>
+	<head>
+		<title>Full Outer Join</title>
+		<keywords>
+			<keyword term="execution plan, full outer join"/>
+			<keyword term="logical operators, full outer join"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Full Outer Join</b> logical operator returns each row satisfying the join predicate from the first (top) input
+				joined with each row from the second (bottom) input. It also returns rows from:
+			</p>
+			<ul>
+				<li>The first input that had no matches in the second input.</li>
+				<li>The second input that had no matches in the first input.</li>
+				<li>
+					The input that does not contain the matching values is returned as <c>NULL</c>.
+				</li>
+			</ul>
+			<p>
+				<b>Full Outer Join</b> is a logical operator.
+			</p>
+		</summary>
+	</body>
+</topic>

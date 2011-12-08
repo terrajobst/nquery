@@ -1,0 +1,31 @@
+<test>
+  <sql>SELECT	CASE e.EmployeeID &gt; 5
+			WHEN TRUE THEN 'Yes'
+			WHEN FALSE THEN 'No'
+			ELSE 'Unknown'
+		END AS Valid1,
+		CASE e.EmployeeID
+			WHEN 1 THEN 'One'
+			WHEN 2 THEN 'Two'
+			WHEN 3 THEN 'Three'
+			ELSE 'Something else'
+		END AS Valid2,
+		CASE 
+			WHEN e.EmployeeID = 1 THEN 'One'
+			WHEN e.EmployeeID = 2 THEN 'Two'
+			WHEN e.EmployeeID = 3 THEN 'Three'
+			ELSE 'Something else'
+		END AS Valid3,		
+		CASE 
+			WHEN e.EmployeeID + 1 THEN 'One'
+			WHEN e.EmployeeID + 2 THEN 'Two'
+			WHEN e.EmployeeID + 3 THEN 'Three'
+			ELSE 'Something else'
+		END AS Invalid
+FROM	Employees e</sql>
+  <expectedErrors>
+    <expectedError id="WhenMustEvaluateToBoolIfCaseInputIsOmitted" text="WHEN expression '&quot;e&quot;.&quot;EmployeeID&quot; + 1' must evaluate to 'Boolean' if CASE input expression is omitted." />
+    <expectedError id="WhenMustEvaluateToBoolIfCaseInputIsOmitted" text="WHEN expression '&quot;e&quot;.&quot;EmployeeID&quot; + 2' must evaluate to 'Boolean' if CASE input expression is omitted." />
+    <expectedError id="WhenMustEvaluateToBoolIfCaseInputIsOmitted" text="WHEN expression '&quot;e&quot;.&quot;EmployeeID&quot; + 3' must evaluate to 'Boolean' if CASE input expression is omitted." />
+  </expectedErrors>
+</test>

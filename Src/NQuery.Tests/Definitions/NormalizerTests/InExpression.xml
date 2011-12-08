@@ -1,0 +1,109 @@
+<test>
+  <sql>SELECT	e.EmployeeID, e.LastName, e.FirstName
+FROM	Employees e
+WHERE	e.EmployeeID IN (1, 2, 3)</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="EmployeeID" type="xs:int" minOccurs="0" />
+                <xs:element name="LastName" type="xs:string" minOccurs="0" />
+                <xs:element name="FirstName" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <EmployeeID>1</EmployeeID>
+    <LastName>Davolio</LastName>
+    <FirstName>Nancy</FirstName>
+  </Table1>
+  <Table1>
+    <EmployeeID>2</EmployeeID>
+    <LastName>Fuller</LastName>
+    <FirstName>Andrew</FirstName>
+  </Table1>
+  <Table1>
+    <EmployeeID>3</EmployeeID>
+    <LastName>Leverling</LastName>
+    <FirstName>Janet</FirstName>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="e.EmployeeID AS EmployeeID" />
+          <property name="Output List.[0].Table" value="e" />
+          <property name="Output List.[0].Column" value="EmployeeID" />
+          <property name="Output List.[0].DataType" value="Int32" />
+          <property name="Output List.[0].Output Name" value="EmployeeID" />
+          <property name="Output List.[1]" value="e.LastName AS LastName" />
+          <property name="Output List.[1].Table" value="e" />
+          <property name="Output List.[1].Column" value="LastName" />
+          <property name="Output List.[1].DataType" value="String" />
+          <property name="Output List.[1].Output Name" value="LastName" />
+          <property name="Output List.[2]" value="e.FirstName AS FirstName" />
+          <property name="Output List.[2].Table" value="e" />
+          <property name="Output List.[2].Column" value="FirstName" />
+          <property name="Output List.[2].DataType" value="String" />
+          <property name="Output List.[2].Output Name" value="FirstName" />
+        </properties>
+        <input>
+          <element operator="Filter">
+            <properties>
+              <property name="Output List.[0]" value="e.EmployeeID" />
+              <property name="Output List.[0].Table" value="e" />
+              <property name="Output List.[0].Column" value="EmployeeID" />
+              <property name="Output List.[0].DataType" value="Int32" />
+              <property name="Output List.[1]" value="e.LastName" />
+              <property name="Output List.[1].Table" value="e" />
+              <property name="Output List.[1].Column" value="LastName" />
+              <property name="Output List.[1].DataType" value="String" />
+              <property name="Output List.[2]" value="e.FirstName" />
+              <property name="Output List.[2].Table" value="e" />
+              <property name="Output List.[2].Column" value="FirstName" />
+              <property name="Output List.[2].DataType" value="String" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="3" />
+              <property name="Statistics.Average Row Count" value="3" />
+              <property name="Predicate" value="e.EmployeeID = 1 OR e.EmployeeID = 2 OR e.EmployeeID = 3" />
+            </properties>
+            <input>
+              <element operator="TableScan">
+                <properties>
+                  <property name="Table" value="Employees AS e" />
+                  <property name="Output List.[0]" value="e.EmployeeID" />
+                  <property name="Output List.[0].Table" value="e" />
+                  <property name="Output List.[0].Column" value="EmployeeID" />
+                  <property name="Output List.[0].DataType" value="Int32" />
+                  <property name="Output List.[1]" value="e.LastName" />
+                  <property name="Output List.[1].Table" value="e" />
+                  <property name="Output List.[1].Column" value="LastName" />
+                  <property name="Output List.[1].DataType" value="String" />
+                  <property name="Output List.[2]" value="e.FirstName" />
+                  <property name="Output List.[2].Table" value="e" />
+                  <property name="Output List.[2].Column" value="FirstName" />
+                  <property name="Output List.[2].DataType" value="String" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="9" />
+                  <property name="Statistics.Average Row Count" value="9" />
+                </properties>
+                <input />
+              </element>
+            </input>
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

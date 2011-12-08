@@ -1,0 +1,9 @@
+<test>
+  <sql>SELECT	*
+FROM	Employees e
+			INNER JOIN EmployeeTerritories et ON et.TerritoryID = t.TerritoryID,
+		Territories t</sql>
+  <expectedErrors>
+    <expectedError id="TableRefInaccessible" text="Table 't: Territories' is introduced in a different branch within the join hierarchy and is therefore inaccessible." />
+  </expectedErrors>
+</test>

@@ -1,0 +1,84 @@
+<topic>
+	<head>
+		<title>SELECT Clause</title>
+		<toc index="1"/>
+		<keywords>
+			<keyword term="SELECT statement, SELECT clause" />
+		</keywords>
+		<links>
+			<link href="Queries.html">SELECT Syntax</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>Specifies the columns to be returned by the query.</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve"><b>SELECT</b> [ <b>ALL</b> | <b>DISTINCT</b> ]
+       [ <b>TOP</b> <i>integer_literal</i> [ <b>WITH TIES</b> ] ] 
+       &lt;select_list&gt; 
+
+<b>&lt;select_list&gt; ::= </b>
+    { <b>*</b> 
+    | { <i>table_name</i> | <i>table_alias</i> } <b>.*</b>
+    | <i>expression</i>
+    [ [ <b>AS</b> ] <i>column_alias</i> ] 
+    } [ <b>,...</b><i>n</i> ]</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="ALL">
+					<p>
+						Specifies that duplicate rows can appear in the result set. <c>ALL</c> is the default.
+					</p>
+				</param>
+				<param name="DISTINCT">
+					<p>
+						Specifies that only unique rows can appear in the result set. <c>NULL</c> values are considered equal for the purposes
+						of the <c>DISTINCT</c> keyword.
+					</p>
+				</param>
+				<param name="TOP integer_literal [ WITH TIES ]">
+					<p>
+						Indicates that only a specified first set of rows will be returned from the query result set. integer_literal specifies the number rows.
+					</p>
+				</param>
+				<param name="&lt;select_list&gt;">
+					<p>The columns to be selected for the result set. The select list is a series of expressions separated by commas.</p>
+				</param>
+				<param name="*">
+					<p>
+						Specifies that all columns from all tables in the <c>FROM</c> clause should be returned. The columns are returned by table, as specified
+						in the <c>FROM</c> clause, and in the order in which they exist in the table.
+					</p>
+				</param>
+				<param name="table_ name.*">
+					<p>
+						Limits the scope of the <c>*</c> to the specified table.
+					</p>
+				</param>
+				<param name="expression">
+					<p>
+						Is a column name, constant, function, any combination of column names, constants, and functions connected by an operator or operators,
+						or a subquery.
+					</p>
+				</param>
+				<param name="column_ alias">
+					<p>
+						Is an alternative name to replace the column name in the query result set. For example, an alias such as <c>Quantity</c>, or <c>[Quantity to Date]</c>,
+						or <c>Qty</c> can be specified for a column named quantity.
+					</p>
+					<p>Aliases are used also to specify names for the results of expressions, for example:</p>
+					<code xml:space="preserve">SELECT AVG(UnitPrice) AS [Average Price]
+FROM [Order Details];
+          </code>
+					<p>
+						<c>column_alias</c> can be used in an <c>ORDER BY</c> clause. However, it cannot be used in a <c>WHERE</c>, <c>GROUP BY</c>, or <c>HAVING</c> clause.
+					</p>
+				</param>
+			</params>
+		</parameters>
+	</body>
+</topic>

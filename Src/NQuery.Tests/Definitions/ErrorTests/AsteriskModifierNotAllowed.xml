@@ -1,0 +1,24 @@
+<test>
+  <sql>SELECT	COUNT(*),
+		MIN(*),
+		MAX(*),
+		SUM(*),
+		FIRST(*),
+		LAST(*),
+		CONCAT(*),
+		VAR(*),
+		STDEV(*),
+		TO_INT32(*)
+FROM	Employees</sql>
+  <expectedErrors>
+    <expectedError id="AsteriskModifierNotAllowed" text="Aggregation modifier '*' not allowed in function call 'MIN(*)'." />
+    <expectedError id="AsteriskModifierNotAllowed" text="Aggregation modifier '*' not allowed in function call 'MAX(*)'." />
+    <expectedError id="AsteriskModifierNotAllowed" text="Aggregation modifier '*' not allowed in function call 'SUM(*)'." />
+    <expectedError id="AsteriskModifierNotAllowed" text="Aggregation modifier '*' not allowed in function call 'FIRST(*)'." />
+    <expectedError id="AsteriskModifierNotAllowed" text="Aggregation modifier '*' not allowed in function call 'LAST(*)'." />
+    <expectedError id="AsteriskModifierNotAllowed" text="Aggregation modifier '*' not allowed in function call 'CONCAT(*)'." />
+    <expectedError id="AsteriskModifierNotAllowed" text="Aggregation modifier '*' not allowed in function call 'VAR(*)'." />
+    <expectedError id="AsteriskModifierNotAllowed" text="Aggregation modifier '*' not allowed in function call 'STDEV(*)'." />
+    <expectedError id="AsteriskModifierNotAllowed" text="Aggregation modifier '*' not allowed in function call 'TO_INT32(*)'." />
+  </expectedErrors>
+</test>

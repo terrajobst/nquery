@@ -1,0 +1,82 @@
+﻿<topic>
+	<head>
+		<title>Query Class</title>
+		<toc index="1" />
+		<links>
+			<link href="Overview.html">Overview</link>
+			<link href="..\Language Reference\Queries\Queries.html">SELECT Syntax</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <see cref="T:NQuery.Query">Query</see> class is the most important class in NQuery. This class allows you to execute a
+				<a href="Language Reference/Queries/Queries.html">SELECT query</a> against a <a href="DataContext.html">DataContext</a>.
+			</p>
+		</summary>
+
+		<section title="Syntax">
+			<p>
+				The syntax is based on SQL-92 (with some extensions from SQL-99) For details see <a href="..\Language Reference\Queries\Queries.html">SELECT Syntax</a>.
+			</p>
+		</section>
+
+		<section title="Execution Methods">
+			<p>
+				For your convenience the <see cref="T:NQuery.Query">Query</see> class provides different methods for query execution
+				which are summarized in the table below.
+			</p>
+			<table>
+				<tr>
+					<th>Method</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>
+						<see cref="M:NQuery.Query.ExecuteDataTable">ExecuteDataTable</see>
+					</td>
+					<td>
+						Executes the query and returns the result as <see cref="T:System.Data.DataTable">DataTable</see>.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<see cref="M:NQuery.Query.ExecuteScalar">ExecuteScalar</see>
+					</td>
+					<td>
+						Executes the query and returns the first column of the first row.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<see cref="M:NQuery.Query.ExecuteSchemaDataTable">ExecuteSchemaDataTable</see>
+					</td>
+					<td>
+						Compiles the query but does not actually execute it. This method retuns an empty  <see cref="T:System.Data.DataTable">DataTable</see>
+						in which all column definitions are set as if the query would have been executed.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<see cref="M:NQuery.Query.ExecuteDataReader">ExecuteDataReader</see>
+					</td>
+					<td>
+						Executes the query and returns the result as <see cref="T:NQuery.QueryDataReader">QueryDataReader</see>. For query results with large
+						amounts of data this method is faster than <see cref="M:NQuery.Query.ExecuteDataTable">ExecuteDataTable</see> because the data is
+						not fully loaded in-memory but returned through a light weight, forward-only cursor.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<see cref="M:NQuery.Query.ExecuteSchemaReader">ExecuteSchemaReader</see>
+					</td>
+					<td>
+						Compiles the query but does not actually execute it. This method retuns an  <see cref="T:NQuery.QueryDataReader">QueryDataReader</see>
+						that will not return any data but has all column definitions set as if the query would have been executed. This method is equivalent to
+						<see cref="M:NQuery.Query.ExecuteSchemaDataTable">ExecuteSchemaDataTable</see>.
+					</td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</topic>

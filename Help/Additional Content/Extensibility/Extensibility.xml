@@ -1,0 +1,107 @@
+﻿<topic>
+	<head>
+		<title>Extensibility</title>
+		<toc index="4"/>
+		<keywords>
+			<keyword term="extending, about" />
+			<keyword term="customizing, about" />
+		</keywords>
+	</head>
+	<body>
+		<summary>
+			<p>
+				NQuery was designed with extensibility in mind. That means that NQuery does not just support a limited set of
+				functions, aggregates, or data types. Instead it is designed to be open and extensible so that customers can
+				add additional features as needed.
+			</p>
+		</summary>
+
+		<section title="Data Types">
+			<p>
+				There is no limited set of data types that are supported by NQuery. You can use any data type you wish. If
+				you want to use certain operators on these data types then all you need is overloading these operators.
+			</p>
+			<p>
+				In fact, NQuery will use all custom operator overloadings out of the box. There is no special API that you need
+				to call.
+			</p>
+		</section>
+
+		<section title="Functions and Aggregates">
+			<p>
+				These are the most customized parts of NQuery. It has been made sure that customzing these two is as easy as
+				possible.
+			</p>
+			<p>
+				See <a href="CustomFunctions.html">Custom Functions</a> and <a href="CustomAggregates.html">Custom Aggregates</a>
+				for details.
+			</p>
+		</section>
+
+		<section title="Tables">
+			<p>
+				To allow arbitrary data sources you can also create your own table sources. NQuery provides built-in functionality
+				for <see cref="T:System.Data.DataTable">DataTable</see>, <see cref="T:System.Collections.IEnumerable">IEnumerable</see>, and
+				<see cref="T:System.Collections.Generic.IEnumerable{T}">IEnumerable&lt;T&gt;</see>.
+			</p>
+			<p>
+				See <a href="CustomTables.html">Custom Tables</a> for details.
+			</p>
+		</section>
+
+		<section title="Property Providers">
+			<p>
+				Sometimes you might not be happy by just exposing all public properties and fields of your data types. In this case
+				you can register a <see cref="T:NQuery.Runtime.IPropertyProvider">Property Provider</see>. This allows you to customize
+				the list of properties exposed by certain data types.
+			</p>
+			<p>
+				In addition to type-specific property providers (those implementing <see cref="T:NQuery.Runtime.IPropertyProvider">IPropertyProvider</see>)
+				NQuery also provides properties related to designated instances. This is useful in scenarios where the type
+				itself cannot produce the list of properties e.g. <see cref="T:System.Data.DataRow">DataRow</see> or
+				<see cref="T:System.Data.IDictionary">IDictionary</see>.
+				In this case you cannot register a property provider. Instead the list of properties is directly associated with a
+				<see cref="T:NQuery.Runtime.ConstantBinding">Constant</see> or <see cref="T:NQuery.Runtime.ParameterBinding">Parameter</see> as
+				so called custom properties.
+			</p>
+			<p>
+				NQuery provides <see cref="T:NQuery.Runtime.ReflectionProvider">ReflectionProvider</see>,
+				<see cref="F:NQuery.Runtime.NullProviders.PropertyProvider">NullProviders.PropertyProvider</see>,
+				<see cref="T:NQuery.Runtime.DataRowPropertyProvider">DataRowPropertyProvider</see>, and
+				<see cref="T:NQuery.Runtime.DictionaryPropertyProvider">DictionaryPropertyProvider</see>.
+			</p>
+			<p>
+				See <a href="CustomProperties.html">Custom Properties</a> for details.
+			</p>
+		</section>
+
+		<section title="Method Providers">
+			<p>
+				Unlike regular SQL NQuery also supports methods beeing called on values. As it is with property providers you might want
+				to customize the list of exposed methods.
+			</p>
+			<p>
+				NQuery provides <see cref="T:NQuery.Runtime.ReflectionProvider">ReflectionProvider</see> and
+				<see cref="F:NQuery.Runtime.NullProviders.MethodProvider">NullProviders.MethodProvider</see>.
+			</p>
+			<p>
+				See <a href="CustomMethods.html">Custom Methods</a> for details.
+			</p>
+		</section>
+
+		<section title="Comparers">
+			<p>
+				One of the most useful operations in SQL is sorting. Sorting is used to implement some types of joining, duplicate removal,
+				grouping and many other operations. Therefore is is crucial to be able to compare two values.
+			</p>
+			<p>
+				Sometimes the data types you are using do not support comparing (i.e. do not implement
+				<see cref="T:System.IComparable">IComparable</see>). In this case you can register a custom
+				<see cref="T:System.Collections.IComparer">IComparer</see> for those data types.
+			</p>
+			<p>
+				See <a href="CustomComparers.html">Custom Comparers</a> for details.
+			</p>
+		</section>
+	</body>
+</topic>

@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+
+	<!-- External Tools -->
+
+	<PropertyGroup>
+		<SandcastleHFBPath>C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder 1.7\</SandcastleHFBPath>
+	</PropertyGroup>
+
+	<!-- Build Settings -->
+
+	<PropertyGroup>
+		<BuildDir>$(MSBuildProjectDirectory)\</BuildDir>
+		<CustomTasksDir>$(BuildDir)Custom Tasks\</CustomTasksDir>
+		<ProjectDir>$(BuildDir)..\</ProjectDir>
+		<SourceDir>$(ProjectDir)Src\</SourceDir>
+		<SetupDir>$(ProjectDir)Setup\</SetupDir>
+		<EtcDir>$(ProjectDir)Etc\</EtcDir>
+		<HelpDir>$(ProjectDir)Help\</HelpDir>
+		<SamplesDir>$(ProjectDir)Samples\</SamplesDir>
+		<OutputDir>$(ProjectDir)Output\</OutputDir>
+		<TestResultsDir>$(SourceDir)TestResults</TestResultsDir>
+		<GeneratedBinaries>$(OutputDir)Bin\</GeneratedBinaries>
+		<GeneratedSetup>$(OutputDir)Setup\</GeneratedSetup>
+		<GeneratedDemo>$(OutputDir)Demo\</GeneratedDemo>
+		<GeneratedSourceCode>$(OutputDir)Src\</GeneratedSourceCode>
+		<GeneratedHelpTopics>$(OutputDir)Additional Content\</GeneratedHelpTopics>
+		<GeneratedHelp>$(OutputDir)Help\</GeneratedHelp>
+		<Configuration>Release</Configuration>
+		<TopicTransformationFile>$(HelpDir)TopicTransform.xslt</TopicTransformationFile>
+	</PropertyGroup>
+
+	<!-- External Tasks -->
+
+	<UsingTask AssemblyFile="$(CustomTasksDir)NQuery.Build.dll" TaskName="NQuery.Build.ApplyXslTransform" />
+	<UsingTask AssemblyFile="$(CustomTasksDir)NQuery.Build.dll" TaskName="NQuery.Build.RegexReplaceInFiles" />
+	<UsingTask AssemblyFile="$(CustomTasksDir)NQuery.Build.dll" TaskName="NQuery.Build.RemoveTfsBindings" />
+	<UsingTask AssemblyFile="$(CustomTasksDir)NQuery.Build.dll" TaskName="NQuery.Build.RunSampleCode" />
+
+	<!-- Project Files -->
+
+	<ItemGroup>
+		<AllSolutionFiles Include="$(SourceDir)**\*.sln" />
+		<AllSolutionFiles Include="$(SetupDir)**\*.sln" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<RuntimeProjects Include="$(SourceDir)NQuery\NQuery.csproj" />
+		<RuntimeProjects Include="$(SourceDir)NQuery.UI\NQuery.UI.csproj" />
+		<RuntimeProjects Include="$(SourceDir)NQuery.UI.Actipro40\NQuery.UI.Actipro40.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<SetupProjects Include="$(SetupDir)\NQuery.Setup.sln" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<CustomBuildProjects Include="$(SourceDir)NQuery.Build\NQuery.Build.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<DemoProjects Include="$(SourceDir)NQuery.Demo\NQuery.Demo.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<AddInProjects Include="$(SourceDir)NQuery.Demo.DefaultAddIns\NQuery.Demo.DefaultAddIns.csproj"/>
+	</ItemGroup>
+
+	<ItemGroup>
+		<SampleProjects Include="$(SamplesDir)**\*.*proj" />
+	</ItemGroup>
+
+	<!-- Temporary XML files which will be cleaned -->
+
+	<ItemGroup>
+		<TemporaryXmlFiles Include="$(SourceDir)NQuery\NQuery.xml" />
+		<TemporaryXmlFiles Include="$(SourceDir)NQuery.UI\NQuery.UI.xml" />
+		<TemporaryXmlFiles Include="$(SourceDir)NQuery.UI.Actipro40\NQuery.UI.Actipro40.xml" />
+	</ItemGroup>
+
+	<!-- Compilation output folders which will be cleaned -->
+
+	<ItemGroup>
+		<CompilationOutputFolders Include="$(SourceDir)NQuery\bin" />
+		<CompilationOutputFolders Include="$(SourceDir)NQuery\obj" />
+		<CompilationOutputFolders Include="$(SourceDir)NQuery.Build\bin" />
+		<CompilationOutputFolders Include="$(SourceDir)NQuery.Build\obj" />
+		<CompilationOutputFolders Include="$(SourceDir)NQuery.Demo\bin" />
+		<CompilationOutputFolders Include="$(SourceDir)NQuery.Demo\obj" />
+		<CompilationOutputFolders Include="$(SourceDir)NQuery.Demo.AddIns\bin" />
+		<CompilationOutputFolders Include="$(SourceDir)NQuery.Demo.AddIns\obj" />
+		<CompilationOutputFolders Include="$(SourceDir)NQuery.Demo.DefaultAddIns\bin" />
+		<CompilationOutputFolders Include="$(SourceDir)NQuery.Demo.DefaultAddIns\obj" />
+		<CompilationOutputFolders Include="$(SourceDir)NQuery.Tests\bin" />
+		<CompilationOutputFolders Include="$(SourceDir)NQuery.Tests\obj" />
+		<CompilationOutputFolders Include="$(SourceDir)NQuery.UI\bin" />
+		<CompilationOutputFolders Include="$(SourceDir)NQuery.UI\obj" />
+		<CompilationOutputFolders Include="$(SourceDir)NQuery.UI.Actipro40\bin" />
+		<CompilationOutputFolders Include="$(SourceDir)NQuery.UI.Actipro40\obj" />
+
+		<CompilationOutputFolders Include="$(SamplesDir)Extensibility\CustomAggregate\bin" />
+		<CompilationOutputFolders Include="$(SamplesDir)Extensibility\CustomAggregate\obj" />
+		<CompilationOutputFolders Include="$(SamplesDir)Extensibility\CustomComparer\bin" />
+		<CompilationOutputFolders Include="$(SamplesDir)Extensibility\CustomComparer\obj" />
+		<CompilationOutputFolders Include="$(SamplesDir)Extensibility\CustomFunctions\bin" />
+		<CompilationOutputFolders Include="$(SamplesDir)Extensibility\CustomFunctions\obj" />
+		<CompilationOutputFolders Include="$(SamplesDir)Extensibility\CustomMethodProvider\bin" />
+		<CompilationOutputFolders Include="$(SamplesDir)Extensibility\CustomMethodProvider\obj" />
+		<CompilationOutputFolders Include="$(SamplesDir)Extensibility\CustomPropertyProvider\bin" />
+		<CompilationOutputFolders Include="$(SamplesDir)Extensibility\CustomPropertyProvider\obj" />
+		<CompilationOutputFolders Include="$(SamplesDir)Extensibility\CustomTable\bin" />
+		<CompilationOutputFolders Include="$(SamplesDir)Extensibility\CustomTable\obj" />
+		<CompilationOutputFolders Include="$(SamplesDir)Overview\ParametersVsConstants\bin" />
+		<CompilationOutputFolders Include="$(SamplesDir)Overview\ParametersVsConstants\obj" />
+		<CompilationOutputFolders Include="$(SamplesDir)Quick Starts\ExpressionQuickStart\bin" />
+		<CompilationOutputFolders Include="$(SamplesDir)Quick Starts\ExpressionQuickStart\obj" />
+		<CompilationOutputFolders Include="$(SamplesDir)Quick Starts\QueryQuickStart\bin" />
+		<CompilationOutputFolders Include="$(SamplesDir)Quick Starts\QueryQuickStart\obj" />
+
+		<CompilationOutputFolders Include="$(SetupDir)bin" />
+		<CompilationOutputFolders Include="$(SetupDir)obj" />
+	</ItemGroup>
+
+	<!-- Additional content files -->
+
+	<ItemGroup>
+		<HelpTopicFiles Include="$(HelpDir)Additional Content\**\*.xml" />
+		<HelpContentFiles Include="$(HelpDir)Additional Content\**\*.*" Exclude="$(HelpDir)Additional Content\**\*.xml"/>
+		<HelpExecutionPlanImages Include="$(EtcDir)Icons\Execution Plan\*.png" />
+	</ItemGroup>
+
+	<!-- DataSet files, needed for help generation -->
+
+	<ItemGroup>
+		<DataSetFiles Include="$(EtcDir)Sample Data\*.xml" />
+	</ItemGroup>
+
+	<!-- Build -->
+
+	<Target Name="Build">
+		<CallTarget Targets="Clean" />
+		<CallTarget Targets="Compile" />
+		<CallTarget Targets="GenerateHelp" />
+		<CallTarget Targets="GenerateSourceCode" />
+		<CallTarget Targets="GenerateSetup" />
+	</Target>
+
+	<!-- Clean -->
+
+	<Target Name="Clean">
+		<MSBuild Projects="@(AllSolutionFiles)" Targets ="Clean" />
+
+		<RemoveDir Directories="$(CustomTasksDir)" />
+		<Delete Files="$(OutputDir)**\*.*" />
+		<RemoveDir Directories="$(OutputDir)" Condition="Exists('$(OutputDir)')" />
+		<Delete Files="@(TemporaryXmlFiles)" />
+		<RemoveDir Directories="@(CompilationOutputFolders)" />
+	</Target>
+
+	<!-- Build MSBuild tasks needed by the build process itself -->
+
+	<Target Name="BuildCustomBuildTasks">
+		<MSBuild Projects="@(CustomBuildProjects)" Targets="Build" Properties="Configuration=$(Configuration);OutDir=$(CustomTasksDir)" />
+	</Target>
+
+	<!-- Compile -->
+
+	<Target Name="Compile" DependsOnTargets="BuildCustomBuildTasks">
+		<RemoveDir Directories="$(OutputDir)" Condition="Exists('$(OutputDir)')" />
+		<MakeDir Directories="$(OutputDir)" Condition="!Exists('$(OutputDir)')" />
+
+		<MSBuild Projects="@(RuntimeProjects)" Targets ="Build" Properties="Configuration=$(Configuration);OutDir=$(GeneratedBinaries)" />
+		<MSBuild Projects="@(CustomBuildProjects)" Targets="Build" Properties="Configuration=$(Configuration);OutDir=$(CustomTasksDir)" />
+		<MSBuild Projects="@(AddInProjects)" Targets ="Build" Properties="Configuration=$(Configuration)" />
+		<MSBuild Projects="@(DemoProjects)" Targets ="Build" Properties="SolutionDir=$(SourceDir);Configuration=$(Configuration);OutDir=$(GeneratedDemo)" />
+		<!-- Build samples to ensure they compile -->
+		<MSBuild Projects="@(SampleProjects)" Targets="Build" Properties="Configuration=$(Configuration)" />
+
+		<CreateItem Include="$(GeneratedDemo)*.xml">
+			<Output TaskParameter="Include" ItemName="FilesInDemoDirToBeDeleted" />
+		</CreateItem>
+		<Delete Files="@(FilesInDemoDirToBeDeleted)" />
+
+	</Target>
+
+	<!-- Generate Help -->
+
+	<Target Name="GenerateAdditionalContent" DependsOnTargets="BuildCustomBuildTasks">
+
+		<CreateItem
+			Include="$(GeneratedHelpTopics)%(HelpTopicFiles.RecursiveDir)%(HelpTopicFiles.Filename)%(HelpTopicFiles.Extension)">
+			<Output
+				TaskParameter="Include"
+				ItemName="IntermediateHelpTopicFiles"/>
+		</CreateItem>
+
+		<CreateItem
+			Include="%(IntermediateHelpTopicFiles.RootDir)%(IntermediateHelpTopicFiles.Directory)%(IntermediateHelpTopicFiles.Filename).html">
+			<Output
+				TaskParameter="Include"
+				ItemName="GeneratedHelpTopicFiles"/>
+		</CreateItem>
+
+		<Copy SourceFiles="@(HelpTopicFiles)" DestinationFiles="@(IntermediateHelpTopicFiles)" />
+		<RunSampleCode DataSetFiles="@(DataSetFiles)" SourceFiles="@(IntermediateHelpTopicFiles)" />
+
+		<Copy SourceFiles="@(HelpContentFiles)" DestinationFolder="$(GeneratedHelpTopics)\%(RecursiveDir)"></Copy>
+		<ApplyXslTransform XslFile="$(TopicTransformationFile)"
+						   SourceFiles="@(IntermediateHelpTopicFiles)"
+						   DestinationFiles="@(GeneratedHelpTopicFiles)" />
+
+		<RegexReplaceInFiles SourceFiles="@(GeneratedHelpTopicFiles)"
+							 DestinationFiles="@(GeneratedHelpTopicFiles)"
+							 Pattern="\&lt;code(?&lt;attr&gt;( *[a-zA-Z]+=&quot;[^&quot;]+&quot;)*)\&gt;\&lt;/code\&gt;"
+							 Replacement="&lt;code${attr}/&gt;" />
+
+		<Copy SourceFiles="@(HelpExecutionPlanImages)" DestinationFolder="$(GeneratedHelpTopics)\Execution Plan Reference\" />
+
+		<Delete Files="@(IntermediateHelpTopicFiles)" />
+	</Target>
+
+	<Target Name="GenerateHelp" DependsOnTargets="Compile;GenerateAdditionalContent">
+		<Error Text="Documentation can only be generated for release builds." Condition="'$(Configuration)' != 'Release'" />
+
+		<ItemGroup>
+			<HtmlHelp2TemplateFiles Include="$(HelpDir)HtmlHelp2 Templates\*.*" />
+		</ItemGroup>
+
+		<!-- Build Help files -->
+		<MakeDir Directories="$(GeneratedHelp)" Condition="!Exists('$(GeneratedHelp)')" />
+		<Exec Command="&quot;$(SandcastleHFBPath)SandcastleBuilderConsole.exe&quot; &quot;$(HelpDir)NQuery.shfb&quot;" />
+		<Copy SourceFiles="@(HtmlHelp2TemplateFiles)" DestinationFolder="$(GeneratedHelp)" />
+
+		<!-- Remove temporary additional content files -->
+		<RemoveDir Directories="$(GeneratedHelpTopics)\" />
+	</Target>
+
+	<!-- Generate Source Code -->
+
+	<Target Name="GenerateSourceCode" DependsOnTargets="BuildCustomBuildTasks">
+
+		<ItemGroup>
+			<SourceCodeFiles Include="$(ProjectDir)**\*.*"
+							 Exclude="$(OutputDir)**\*.*;$(TestResultsDir)**\*.*;$(CustomTasksDir)**\*.*;$(ProjectDir)**\bin\**\*.*;$(ProjectDir)**\obj\**\*.*;$(ProjectDir)**\*.scc;$(ProjectDir)**\*.vssscc;$(ProjectDir)**\*.vspscc;$(ProjectDir)**\*.suo;$(ProjectDir)**\*.user;$(ProjectDir)**\*.resharper" />
+		</ItemGroup>
+
+		<Copy SourceFiles="@(SourceCodeFiles)" DestinationFolder="$(GeneratedSourceCode)%(RecursiveDir)" />
+		<Exec Command="attrib -r -h /s" WorkingDirectory="$(GeneratedSourceCode)" />
+		<RemoveTfsBindings SolutionFiles="$(GeneratedSourceCode)Src\NQuery.sln;$(GeneratedSourceCode)Samples\NQuery.Samples.sln" />
+	</Target>
+
+	<!-- Generate Setup -->
+
+	<Target Name="GenerateSetup">
+		<MSBuild Projects="@(SetupProjects)" Properties="Configuration=$(Configuration);OutDir=$(GeneratedSetup)" />
+	</Target>
+
+</Project>

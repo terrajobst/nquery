@@ -1,0 +1,15 @@
+<test>
+  <sql>SELECT	*
+FROM	(
+			SELECT	e.FirstName + ' ' + e.LastName
+			FROM	Employees e
+		) AS [My Derived Table],
+		(
+			SELECT	e.FirstName + ' ' + e.LastName
+			FROM	Employees e
+		) AS D</sql>
+  <expectedErrors>
+    <expectedError id="NoColumnAliasSpecified" text="No column name was specified for column 1 of '[My Derived Table]'." />
+    <expectedError id="NoColumnAliasSpecified" text="No column name was specified for column 1 of 'D'." />
+  </expectedErrors>
+</test>

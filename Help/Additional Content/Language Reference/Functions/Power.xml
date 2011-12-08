@@ -1,0 +1,46 @@
+<topic>
+	<head>
+		<title>POWER</title>
+		<keywords>
+			<keyword term="functions, POWER" />
+			<keyword term="mathematical functions, POWER" />
+			<keyword term="POWER function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Mathematical Functions.html">Mathematical Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns a specified number raised to the specified power.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">POWER(basis AS double, exponent AS double) RETURNS double</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="basis">
+					<p>
+						A double-precision floating-point number to be raised to a power.
+					</p>
+				</param>
+				<param name="exponent">
+					<p>
+						A double-precision floating-point number that specifies a power.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The number <c>basis</c> raised to the power <c>exponent</c>.
+			</p>
+		</returns>
+	</body>
+</topic>

@@ -1,0 +1,52 @@
+﻿<topic>
+	<head>
+		<title>Top</title>
+		<keywords>
+			<keyword term="execution plan, top"/>
+			<keyword term="physical operators, top"/>
+			<keyword term="logical operators, top"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Top</b> operator scans the input, returning only the first specified number of rows, possibly based on a sort order.
+				The <c>Tie Columns</c> property can contain a list of the columns that are being checked for ties.
+			</p>
+			<p>
+				<b>Top</b> is a logical and physical operator.
+			</p>
+		</summary>
+
+		<section title="Properties">
+			<table>
+				<tr>
+					<th>Property Name</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>Limit</td>
+					<td>
+						Specifies the limit of rows being returned by the <b>Top</b> operator.
+					</td>
+				</tr>
+				<tr>
+					<td>With Ties</td>
+					<td>
+						Specifies whether the <b>Top</b> operator checks for ties. See
+						<a href="/Language Reference/Queries/TopClause.html">TOP Clause</a> for details.
+					</td>
+				</tr>
+				<tr>
+					<td>Tie Columns</td>
+					<td>
+						Specifies which columns are checked for ties by the <b>Top</b> operator.
+					</td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</topic>

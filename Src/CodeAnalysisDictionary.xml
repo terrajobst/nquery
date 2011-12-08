@@ -1,0 +1,60 @@
+<Dictionary>
+	<Words>
+		<!-- Add words that should cause a violation under the Dictionary/Words/Unrecognized path. -->
+		<Unrecognized>
+			<!-- <Word>cb</Word> -->
+		</Unrecognized>
+		
+		<!-- Add words that should not cause a violation under the Dictionary/Words/Recognized path. -->
+		<Recognized>
+			<Word>Acos</Word>
+			<Word>Asin</Word>
+			<Word>Atan</Word>
+			<Word>Avg</Word>
+			<Word>Cos</Word>
+			<Word>Cosh</Word>
+			<Word>Exp</Word>
+			<Word>Sin</Word>
+			<Word>Sinh</Word>
+			<Word>Sqrt</Word>
+			<Word>Tan</Word>
+			<Word>Tanh</Word>
+			<Word>Pow</Word>
+			<Word>Trim</Word>
+			<Word>Subquery</Word>
+			<Word>Subqueries</Word>
+			<Word>Evaluatable</Word>
+			<Word>Invocable</Word>
+			<Word>Concat</Word>
+			<Word>Actipro</Word>
+			<Word>Cte</Word>
+			<Word>Goto</Word>
+			<Word>Intelli</Word>
+			<Word>Overloadable</Word>
+			<Word>Eof</Word>
+			<Word>Unequals</Word>
+			<Word>Soundex</Word>
+			<Word>Reindent</Word>
+			<Word>Unescape</Word>
+			<Word>Passthru</Word>
+		</Recognized>
+		
+		<!-- Add words that should be flagged as obsolete under the Dictionary/Words/Deprecated path. 
+		     See the related rule topic "Use preferred terms" for more information. -->
+		<Deprecated>
+			<!--	Example:
+					<Term PreferredAlternate="EnterpriseServices">ComPlus</Term>
+					<Term PreferredAlternate="ResourcePool">ResourceGlobal</Term>
+					<Term PreferredAlternate="Resource Pool">Resource Global</Term> -->
+		</Deprecated>
+	</Words>
+	
+	<Acronyms>
+		<!-- Add exceptions to the acronym casing rules to the Dictionary/Acronyms/CasingExceptions path. -->
+		<CasingExceptions>
+			<Acronym>NQuery</Acronym>
+			<Acronym>RTrim</Acronym>
+			<Acronym>LTrim</Acronym>
+		</CasingExceptions>
+	</Acronyms>
+</Dictionary>

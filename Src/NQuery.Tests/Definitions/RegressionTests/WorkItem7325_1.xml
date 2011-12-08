@@ -1,0 +1,258 @@
+<test>
+  <sql>SELECT	L.ID AS LID,
+		L.VALUE AS LVALUE,
+		R.ID AS RID,
+		R.VALUE AS RVALUE
+FROM	(
+			SELECT 1 AS ID, 'One' AS VALUE
+			UNION ALL
+			SELECT 2 AS ID, 'Two' AS VALUE
+		) AS L
+		FULL OUTER JOIN 
+		(
+			SELECT 2 AS ID, 'Two' AS VALUE
+			UNION ALL
+			SELECT 3 AS ID, 'Three' AS VALUE
+		) AS R
+		ON L.ID = R.ID</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="LID" type="xs:int" minOccurs="0" />
+                <xs:element name="LVALUE" type="xs:string" minOccurs="0" />
+                <xs:element name="RID" type="xs:int" minOccurs="0" />
+                <xs:element name="RVALUE" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <LID>2</LID>
+    <LVALUE>Two</LVALUE>
+    <RID>2</RID>
+    <RVALUE>Two</RVALUE>
+  </Table1>
+  <Table1>
+    <RID>3</RID>
+    <RVALUE>Three</RVALUE>
+  </Table1>
+  <Table1>
+    <LID>1</LID>
+    <LVALUE>One</LVALUE>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="Union1004 AS LID" />
+          <property name="Output List.[0].Column" value="Union1004" />
+          <property name="Output List.[0].DataType" value="Int32" />
+          <property name="Output List.[0].Output Name" value="LID" />
+          <property name="Output List.[1]" value="Union1005 AS LVALUE" />
+          <property name="Output List.[1].Column" value="Union1005" />
+          <property name="Output List.[1].DataType" value="String" />
+          <property name="Output List.[1].Output Name" value="LVALUE" />
+          <property name="Output List.[2]" value="Union1010 AS RID" />
+          <property name="Output List.[2].Column" value="Union1010" />
+          <property name="Output List.[2].DataType" value="Int32" />
+          <property name="Output List.[2].Output Name" value="RID" />
+          <property name="Output List.[3]" value="Union1011 AS RVALUE" />
+          <property name="Output List.[3].Column" value="Union1011" />
+          <property name="Output List.[3].DataType" value="String" />
+          <property name="Output List.[3].Output Name" value="RVALUE" />
+        </properties>
+        <input>
+          <element operator="HashMatch">
+            <properties>
+              <property name="Output List.[0]" value="Union1004" />
+              <property name="Output List.[0].Column" value="Union1004" />
+              <property name="Output List.[0].DataType" value="Int32" />
+              <property name="Output List.[1]" value="Union1005" />
+              <property name="Output List.[1].Column" value="Union1005" />
+              <property name="Output List.[1].DataType" value="String" />
+              <property name="Output List.[2]" value="Union1010" />
+              <property name="Output List.[2].Column" value="Union1010" />
+              <property name="Output List.[2].DataType" value="Int32" />
+              <property name="Output List.[3]" value="Union1011" />
+              <property name="Output List.[3].Column" value="Union1011" />
+              <property name="Output List.[3].DataType" value="String" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="3" />
+              <property name="Statistics.Average Row Count" value="3" />
+              <property name="Hash Keys Build" value="Union1004" />
+              <property name="Hash Keys Build.Column" value="Union1004" />
+              <property name="Hash Keys Build.DataType" value="Int32" />
+              <property name="Hash Keys Probe" value="Union1010" />
+              <property name="Hash Keys Probe.Column" value="Union1010" />
+              <property name="Hash Keys Probe.DataType" value="Int32" />
+              <property name="Logical Operator" value="Full Outer Join" />
+            </properties>
+            <input>
+              <element operator="Concatenation">
+                <properties>
+                  <property name="Output List.[0]" value="Union1004" />
+                  <property name="Output List.[0].Column" value="Union1004" />
+                  <property name="Output List.[0].DataType" value="Int32" />
+                  <property name="Output List.[1]" value="Union1005" />
+                  <property name="Output List.[1].Column" value="Union1005" />
+                  <property name="Output List.[1].DataType" value="String" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="2" />
+                  <property name="Statistics.Average Row Count" value="2" />
+                  <property name="Defined Values.Union1004" value="Expr1000; Expr1002" />
+                  <property name="Defined Values.Union1004.[0]" value="Expr1000" />
+                  <property name="Defined Values.Union1004.[0].Column" value="Expr1000" />
+                  <property name="Defined Values.Union1004.[0].DataType" value="Int32" />
+                  <property name="Defined Values.Union1004.[1]" value="Expr1002" />
+                  <property name="Defined Values.Union1004.[1].Column" value="Expr1002" />
+                  <property name="Defined Values.Union1004.[1].DataType" value="Int32" />
+                  <property name="Defined Values.Union1005" value="Expr1001; Expr1003" />
+                  <property name="Defined Values.Union1005.[0]" value="Expr1001" />
+                  <property name="Defined Values.Union1005.[0].Column" value="Expr1001" />
+                  <property name="Defined Values.Union1005.[0].DataType" value="String" />
+                  <property name="Defined Values.Union1005.[1]" value="Expr1003" />
+                  <property name="Defined Values.Union1005.[1].Column" value="Expr1003" />
+                  <property name="Defined Values.Union1005.[1].DataType" value="String" />
+                </properties>
+                <input>
+                  <element operator="ConstantScan">
+                    <properties>
+                      <property name="Empty" value="False" />
+                      <property name="Output List.[0]" value="Expr1000" />
+                      <property name="Output List.[0].Column" value="Expr1000" />
+                      <property name="Output List.[0].DataType" value="Int32" />
+                      <property name="Output List.[1]" value="Expr1001" />
+                      <property name="Output List.[1].Column" value="Expr1001" />
+                      <property name="Output List.[1].DataType" value="String" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="1" />
+                      <property name="Statistics.Average Row Count" value="1" />
+                      <property name="Defined Values.[0]" value="Expr1000 = 1" />
+                      <property name="Defined Values.[0].Target" value="Expr1000" />
+                      <property name="Defined Values.[0].DataType" value="Int32" />
+                      <property name="Defined Values.[0].Source" value="1" />
+                      <property name="Defined Values.[1]" value="Expr1001 = 'One'" />
+                      <property name="Defined Values.[1].Target" value="Expr1001" />
+                      <property name="Defined Values.[1].DataType" value="String" />
+                      <property name="Defined Values.[1].Source" value="'One'" />
+                    </properties>
+                    <input />
+                  </element>
+                  <element operator="ConstantScan">
+                    <properties>
+                      <property name="Empty" value="False" />
+                      <property name="Output List.[0]" value="Expr1002" />
+                      <property name="Output List.[0].Column" value="Expr1002" />
+                      <property name="Output List.[0].DataType" value="Int32" />
+                      <property name="Output List.[1]" value="Expr1003" />
+                      <property name="Output List.[1].Column" value="Expr1003" />
+                      <property name="Output List.[1].DataType" value="String" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="1" />
+                      <property name="Statistics.Average Row Count" value="1" />
+                      <property name="Defined Values.[0]" value="Expr1002 = 2" />
+                      <property name="Defined Values.[0].Target" value="Expr1002" />
+                      <property name="Defined Values.[0].DataType" value="Int32" />
+                      <property name="Defined Values.[0].Source" value="2" />
+                      <property name="Defined Values.[1]" value="Expr1003 = 'Two'" />
+                      <property name="Defined Values.[1].Target" value="Expr1003" />
+                      <property name="Defined Values.[1].DataType" value="String" />
+                      <property name="Defined Values.[1].Source" value="'Two'" />
+                    </properties>
+                    <input />
+                  </element>
+                </input>
+              </element>
+              <element operator="Concatenation">
+                <properties>
+                  <property name="Output List.[0]" value="Union1010" />
+                  <property name="Output List.[0].Column" value="Union1010" />
+                  <property name="Output List.[0].DataType" value="Int32" />
+                  <property name="Output List.[1]" value="Union1011" />
+                  <property name="Output List.[1].Column" value="Union1011" />
+                  <property name="Output List.[1].DataType" value="String" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="2" />
+                  <property name="Statistics.Average Row Count" value="2" />
+                  <property name="Defined Values.Union1010" value="Expr1006; Expr1008" />
+                  <property name="Defined Values.Union1010.[0]" value="Expr1006" />
+                  <property name="Defined Values.Union1010.[0].Column" value="Expr1006" />
+                  <property name="Defined Values.Union1010.[0].DataType" value="Int32" />
+                  <property name="Defined Values.Union1010.[1]" value="Expr1008" />
+                  <property name="Defined Values.Union1010.[1].Column" value="Expr1008" />
+                  <property name="Defined Values.Union1010.[1].DataType" value="Int32" />
+                  <property name="Defined Values.Union1011" value="Expr1007; Expr1009" />
+                  <property name="Defined Values.Union1011.[0]" value="Expr1007" />
+                  <property name="Defined Values.Union1011.[0].Column" value="Expr1007" />
+                  <property name="Defined Values.Union1011.[0].DataType" value="String" />
+                  <property name="Defined Values.Union1011.[1]" value="Expr1009" />
+                  <property name="Defined Values.Union1011.[1].Column" value="Expr1009" />
+                  <property name="Defined Values.Union1011.[1].DataType" value="String" />
+                </properties>
+                <input>
+                  <element operator="ConstantScan">
+                    <properties>
+                      <property name="Empty" value="False" />
+                      <property name="Output List.[0]" value="Expr1006" />
+                      <property name="Output List.[0].Column" value="Expr1006" />
+                      <property name="Output List.[0].DataType" value="Int32" />
+                      <property name="Output List.[1]" value="Expr1007" />
+                      <property name="Output List.[1].Column" value="Expr1007" />
+                      <property name="Output List.[1].DataType" value="String" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="1" />
+                      <property name="Statistics.Average Row Count" value="1" />
+                      <property name="Defined Values.[0]" value="Expr1006 = 2" />
+                      <property name="Defined Values.[0].Target" value="Expr1006" />
+                      <property name="Defined Values.[0].DataType" value="Int32" />
+                      <property name="Defined Values.[0].Source" value="2" />
+                      <property name="Defined Values.[1]" value="Expr1007 = 'Two'" />
+                      <property name="Defined Values.[1].Target" value="Expr1007" />
+                      <property name="Defined Values.[1].DataType" value="String" />
+                      <property name="Defined Values.[1].Source" value="'Two'" />
+                    </properties>
+                    <input />
+                  </element>
+                  <element operator="ConstantScan">
+                    <properties>
+                      <property name="Empty" value="False" />
+                      <property name="Output List.[0]" value="Expr1008" />
+                      <property name="Output List.[0].Column" value="Expr1008" />
+                      <property name="Output List.[0].DataType" value="Int32" />
+                      <property name="Output List.[1]" value="Expr1009" />
+                      <property name="Output List.[1].Column" value="Expr1009" />
+                      <property name="Output List.[1].DataType" value="String" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="1" />
+                      <property name="Statistics.Average Row Count" value="1" />
+                      <property name="Defined Values.[0]" value="Expr1008 = 3" />
+                      <property name="Defined Values.[0].Target" value="Expr1008" />
+                      <property name="Defined Values.[0].DataType" value="Int32" />
+                      <property name="Defined Values.[0].Source" value="3" />
+                      <property name="Defined Values.[1]" value="Expr1009 = 'Three'" />
+                      <property name="Defined Values.[1].Target" value="Expr1009" />
+                      <property name="Defined Values.[1].DataType" value="String" />
+                      <property name="Defined Values.[1].Source" value="'Three'" />
+                    </properties>
+                    <input />
+                  </element>
+                </input>
+              </element>
+            </input>
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

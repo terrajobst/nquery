@@ -1,0 +1,137 @@
+<topic>
+	<head>
+		<title>REGEX_ESCAPE</title>
+		<keywords>
+			<keyword term="functions, REGEX_ESCAPE" />
+			<keyword term="string functions, REGEX_ESCAPE" />
+			<keyword term="REGEX_ESCAPE function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="String Functions.html">String Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Escapes a minimal set of metacharacters by replacing them with their escape codes.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">REGEX_ESCAPE(text AS string) RETURNS string</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="text">
+					<p>
+						The input string containing the text to convert.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				A string of characters with any metacharacters converted to their escaped form.
+			</p>
+			<table>
+				<tr>
+					<th>Metacharacter</th>
+					<th>Escape Code</th>
+				</tr>
+				<tr>
+					<td>
+						<c>\</c>
+					</td>
+					<td>\\</td>
+				</tr>
+				<tr>
+					<td>
+						<c>*</c>
+					</td>
+					<td>\*</td>
+				</tr>
+				<tr>
+					<td>
+						<c>+</c>
+					</td>
+					<td>\+</td>
+				</tr>
+				<tr>
+					<td>
+						<c>?</c>
+					</td>
+					<td>\?</td>
+				</tr>
+				<tr>
+					<td>
+						<c>|</c>
+					</td>
+					<td>\|</td>
+				</tr>
+				<tr>
+					<td>
+						<c>{</c>
+					</td>
+					<td>\}</td>
+				</tr>
+				<tr>
+					<td>
+						<c>[</c>
+					</td>
+					<td>\[</td>
+				</tr>
+				<tr>
+					<td>
+						<c>(</c>
+					</td>
+					<td>\(</td>
+				</tr>
+				<tr>
+					<td>
+						<c>)</c>
+					</td>
+					<td>\)</td>
+				</tr>
+				<tr>
+					<td>
+						<c>^</c>
+					</td>
+					<td>\^</td>
+				</tr>
+				<tr>
+					<td>
+						<c>$</c>
+					</td>
+					<td>\$</td>
+				</tr>
+				<tr>
+					<td>
+						<c>.</c>
+					</td>
+					<td>\.</td>
+				</tr>
+				<tr>
+					<td>
+						<c>#</c>
+					</td>
+					<td>\#</td>
+				</tr>
+				<tr>
+					<td>
+						white space character (<c>c</c>)
+					</td>
+					<td>
+						\<c>c</c>
+					</td>
+				</tr>
+			</table>
+		</returns>
+
+		<remarks>
+			<p>Escape converts a string so it can be used as a constant within a regular expression.</p>
+		</remarks>
+	</body>
+</topic>

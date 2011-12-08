@@ -1,0 +1,30 @@
+<topic>
+	<head>
+		<title>Expression Syntax</title>
+		<toc index="1"/>
+		<keywords>
+			<keyword term="expressions, about"/>
+		</keywords>
+	</head>
+	<body>
+		<syntax>
+			<code xml:space="preserve"><b>&lt;expression&gt; ::= </b>
+    { <i>literal</i>
+    | <i>constant_name</i>
+    | [ <i>alias</i> <b>.</b> ] <i>column_name</i>
+    | <i>function_name</i> <b>(</b> <i>expression</i> [ <b>,...</b><i>n</i> ] <b>)</b>
+    | <i>expression</i> <b>.</b> <i>property_name</i>
+    | <i>expression</i> <b>.</b> <i>method_name</i> <b>(</b> <i>expression</i> [<b>,...</b><i>n</i>] <b>)</b> } 
+    | <b>(</b> <i>expression</i> <b>)</b>
+    | <b>(</b> <i>scalar_subquery</i> <b>)</b> 
+    | { <i>unary_operator</i> } <i>expression</i> 
+    | <i>expression</i> { <i>binary_operator</i> } <i>expression</i>
+    | <i>expression</i> [ <b>NOT</b> ] <b>BETWEEN</b> <i>expression</i> <b>AND</b> <i>expression</i> 
+    | <i>expression</i> <b>IS</b> [ <b>NOT</b> ] <b>NULL</b>
+    | <i>expression</i> [ <b>NOT</b> ] <b>IN</b> <b>(</b> <i>subquery</i> | <i>expression </i>[ <b>,</b>...<i>n</i> ] <b>)</b> 
+    | <i>expression</i> { <b>=</b> | <b>&lt;&gt;</b> | <b>!=</b> | <b>&gt;</b> | <b>&gt;=</b> | <b>!&gt;</b> | <b>&lt;</b> | <b>&lt;=</b> | <b>!&lt;</b> } { <b>ALL</b> | <b>SOME</b> | <b>ANY</b>} <b>(</b> <i>subquery</i> <b>)</b> 
+    | <b>EXISTS</b> <b>(</b> <i>subquery</i> <b>)</b>
+    }</code>
+		</syntax>
+	</body>
+</topic>

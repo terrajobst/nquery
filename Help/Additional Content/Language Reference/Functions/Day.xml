@@ -1,0 +1,41 @@
+<topic>
+	<head>
+		<title>DAY</title>
+		<keywords>
+			<keyword term="functions, DAY" />
+			<keyword term="date and time functions, DAY" />
+			<keyword term="DAY function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Date and Time Functions.html">Date and Time Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns an integer that represents the day part of a specified date.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">DAY(dateTime AS DateTime) RETURNS int</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="dateTime">
+					<p>
+						An expression of type <c>DateTime</c>.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The day component, expressed as a value between 1 and 31.
+			</p>
+		</returns>
+	</body>
+</topic>

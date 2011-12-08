@@ -1,0 +1,19 @@
+<DataSet>
+	<JoinTable1>
+		<ID>2</ID>
+		<Value>Two</Value>
+	</JoinTable1>
+	<JoinTable1>
+		<ID>3</ID>
+		<Value>Three</Value>
+	</JoinTable1>
+	
+	<JoinTable2>
+		<ID>1</ID>
+		<Value>One</Value>
+	</JoinTable2>
+	<JoinTable2>
+		<ID>2</ID>
+		<Value>Two</Value>
+	</JoinTable2>
+</DataSet>

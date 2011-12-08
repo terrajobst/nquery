@@ -1,0 +1,383 @@
+<test>
+  <sql>SELECT	e1.EmployeeID,
+		e1.FirstName + ' ' + e1.LastName AS FullName,
+		MONTH(e1.BirthDate) AS BirthDateMonth,
+		e2.EmployeeID,
+		e2.FirstName + ' ' + e2.LastName AS FullName,
+		MONTH(e2.BirthDate) AS BirthDateMonth
+FROM	Employees e1
+			LEFT JOIN Employees e2
+				ON	MONTH(e2.BirthDate) = MONTH(e1.BirthDate)
+				AND	e1.EmployeeId != e2.EmployeeId
+ORDER	BY 1, 4</sql>
+  <expectedResults>
+    <NewDataSet>
+      <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="Table1" msdata:UseCurrentLocale="true">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="Table1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="EmployeeID" type="xs:int" minOccurs="0" />
+                    <xs:element name="FullName" type="xs:string" minOccurs="0" />
+                    <xs:element name="BirthDateMonth" type="xs:int" minOccurs="0" />
+                    <xs:element name="EmployeeID1" type="xs:int" minOccurs="0" />
+                    <xs:element name="FullName1" type="xs:string" minOccurs="0" />
+                    <xs:element name="BirthDateMonth1" type="xs:int" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+      </xs:schema>
+      <Table1>
+        <EmployeeID>1</EmployeeID>
+        <FullName>Nancy Davolio</FullName>
+        <BirthDateMonth>12</BirthDateMonth>
+      </Table1>
+      <Table1>
+        <EmployeeID>2</EmployeeID>
+        <FullName>Andrew Fuller</FullName>
+        <BirthDateMonth>2</BirthDateMonth>
+      </Table1>
+      <Table1>
+        <EmployeeID>3</EmployeeID>
+        <FullName>Janet Leverling</FullName>
+        <BirthDateMonth>8</BirthDateMonth>
+      </Table1>
+      <Table1>
+        <EmployeeID>4</EmployeeID>
+        <FullName>Margaret Peacock</FullName>
+        <BirthDateMonth>9</BirthDateMonth>
+      </Table1>
+      <Table1>
+        <EmployeeID>5</EmployeeID>
+        <FullName>Steven Buchanan</FullName>
+        <BirthDateMonth>3</BirthDateMonth>
+      </Table1>
+      <Table1>
+        <EmployeeID>6</EmployeeID>
+        <FullName>Michael Suyama</FullName>
+        <BirthDateMonth>7</BirthDateMonth>
+      </Table1>
+      <Table1>
+        <EmployeeID>7</EmployeeID>
+        <FullName>Robert King</FullName>
+        <BirthDateMonth>5</BirthDateMonth>
+      </Table1>
+      <Table1>
+        <EmployeeID>8</EmployeeID>
+        <FullName>Laura Callahan</FullName>
+        <BirthDateMonth>1</BirthDateMonth>
+        <EmployeeID1>9</EmployeeID1>
+        <FullName1>Anne Dodsworth</FullName1>
+        <BirthDateMonth1>1</BirthDateMonth1>
+      </Table1>
+      <Table1>
+        <EmployeeID>9</EmployeeID>
+        <FullName>Anne Dodsworth</FullName>
+        <BirthDateMonth>1</BirthDateMonth>
+        <EmployeeID1>8</EmployeeID1>
+        <FullName1>Laura Callahan</FullName1>
+        <BirthDateMonth1>1</BirthDateMonth1>
+      </Table1>
+    </NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="e1.EmployeeID AS EmployeeID" />
+          <property name="Output List.[0].Table" value="e1" />
+          <property name="Output List.[0].Column" value="EmployeeID" />
+          <property name="Output List.[0].DataType" value="Int32" />
+          <property name="Output List.[0].Output Name" value="EmployeeID" />
+          <property name="Output List.[1]" value="Expr1009 AS FullName" />
+          <property name="Output List.[1].Column" value="Expr1009" />
+          <property name="Output List.[1].DataType" value="String" />
+          <property name="Output List.[1].Output Name" value="FullName" />
+          <property name="Output List.[2]" value="Expr1010 AS BirthDateMonth" />
+          <property name="Output List.[2].Column" value="Expr1010" />
+          <property name="Output List.[2].DataType" value="Int32" />
+          <property name="Output List.[2].Output Name" value="BirthDateMonth" />
+          <property name="Output List.[3]" value="e2.EmployeeID AS EmployeeID" />
+          <property name="Output List.[3].Table" value="e2" />
+          <property name="Output List.[3].Column" value="EmployeeID" />
+          <property name="Output List.[3].DataType" value="Int32" />
+          <property name="Output List.[3].Output Name" value="EmployeeID" />
+          <property name="Output List.[4]" value="Expr1012 AS FullName" />
+          <property name="Output List.[4].Column" value="Expr1012" />
+          <property name="Output List.[4].DataType" value="String" />
+          <property name="Output List.[4].Output Name" value="FullName" />
+          <property name="Output List.[5]" value="Expr1013 AS BirthDateMonth" />
+          <property name="Output List.[5].Column" value="Expr1013" />
+          <property name="Output List.[5].DataType" value="Int32" />
+          <property name="Output List.[5].Output Name" value="BirthDateMonth" />
+        </properties>
+        <input>
+          <element operator="Sort">
+            <properties>
+              <property name="Output List.[0]" value="e2.EmployeeID" />
+              <property name="Output List.[0].Table" value="e2" />
+              <property name="Output List.[0].Column" value="EmployeeID" />
+              <property name="Output List.[0].DataType" value="Int32" />
+              <property name="Output List.[1]" value="e1.EmployeeID" />
+              <property name="Output List.[1].Table" value="e1" />
+              <property name="Output List.[1].Column" value="EmployeeID" />
+              <property name="Output List.[1].DataType" value="Int32" />
+              <property name="Output List.[2]" value="Expr1009" />
+              <property name="Output List.[2].Column" value="Expr1009" />
+              <property name="Output List.[2].DataType" value="String" />
+              <property name="Output List.[3]" value="Expr1010" />
+              <property name="Output List.[3].Column" value="Expr1010" />
+              <property name="Output List.[3].DataType" value="Int32" />
+              <property name="Output List.[4]" value="Expr1012" />
+              <property name="Output List.[4].Column" value="Expr1012" />
+              <property name="Output List.[4].DataType" value="String" />
+              <property name="Output List.[5]" value="Expr1013" />
+              <property name="Output List.[5].Column" value="Expr1013" />
+              <property name="Output List.[5].DataType" value="Int32" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="9" />
+              <property name="Statistics.Average Row Count" value="9" />
+              <property name="Logical Operator" value="Sort" />
+              <property name="Order By.[0]" value="e1.EmployeeID ASC" />
+              <property name="Order By.[0].Table" value="e1" />
+              <property name="Order By.[0].Column" value="EmployeeID" />
+              <property name="Order By.[0].DataType" value="Int32" />
+              <property name="Order By.[0].Order" value="ASC" />
+              <property name="Order By.[1]" value="e2.EmployeeID ASC" />
+              <property name="Order By.[1].Table" value="e2" />
+              <property name="Order By.[1].Column" value="EmployeeID" />
+              <property name="Order By.[1].DataType" value="Int32" />
+              <property name="Order By.[1].Order" value="ASC" />
+            </properties>
+            <input>
+              <element operator="ComputeScalar">
+                <properties>
+                  <property name="Output List.[0]" value="e2.EmployeeID" />
+                  <property name="Output List.[0].Table" value="e2" />
+                  <property name="Output List.[0].Column" value="EmployeeID" />
+                  <property name="Output List.[0].DataType" value="Int32" />
+                  <property name="Output List.[1]" value="e1.EmployeeID" />
+                  <property name="Output List.[1].Table" value="e1" />
+                  <property name="Output List.[1].Column" value="EmployeeID" />
+                  <property name="Output List.[1].DataType" value="Int32" />
+                  <property name="Output List.[2]" value="Expr1009" />
+                  <property name="Output List.[2].Column" value="Expr1009" />
+                  <property name="Output List.[2].DataType" value="String" />
+                  <property name="Output List.[3]" value="Expr1010" />
+                  <property name="Output List.[3].Column" value="Expr1010" />
+                  <property name="Output List.[3].DataType" value="Int32" />
+                  <property name="Output List.[4]" value="Expr1012" />
+                  <property name="Output List.[4].Column" value="Expr1012" />
+                  <property name="Output List.[4].DataType" value="String" />
+                  <property name="Output List.[5]" value="Expr1013" />
+                  <property name="Output List.[5].Column" value="Expr1013" />
+                  <property name="Output List.[5].DataType" value="Int32" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="9" />
+                  <property name="Statistics.Average Row Count" value="9" />
+                  <property name="Defined Values.[0]" value="Expr1012 = e2.FirstName + ' ' + e2.LastName" />
+                  <property name="Defined Values.[0].Target" value="Expr1012" />
+                  <property name="Defined Values.[0].DataType" value="String" />
+                  <property name="Defined Values.[0].Source" value="e2.FirstName + ' ' + e2.LastName" />
+                  <property name="Defined Values.[1]" value="Expr1013 = MONTH(e2.BirthDate)" />
+                  <property name="Defined Values.[1].Target" value="Expr1013" />
+                  <property name="Defined Values.[1].DataType" value="Int32" />
+                  <property name="Defined Values.[1].Source" value="MONTH(e2.BirthDate)" />
+                </properties>
+                <input>
+                  <element operator="HashMatch">
+                    <properties>
+                      <property name="Output List.[0]" value="e2.EmployeeID" />
+                      <property name="Output List.[0].Table" value="e2" />
+                      <property name="Output List.[0].Column" value="EmployeeID" />
+                      <property name="Output List.[0].DataType" value="Int32" />
+                      <property name="Output List.[1]" value="e2.LastName" />
+                      <property name="Output List.[1].Table" value="e2" />
+                      <property name="Output List.[1].Column" value="LastName" />
+                      <property name="Output List.[1].DataType" value="String" />
+                      <property name="Output List.[2]" value="e2.FirstName" />
+                      <property name="Output List.[2].Table" value="e2" />
+                      <property name="Output List.[2].Column" value="FirstName" />
+                      <property name="Output List.[2].DataType" value="String" />
+                      <property name="Output List.[3]" value="e2.BirthDate" />
+                      <property name="Output List.[3].Table" value="e2" />
+                      <property name="Output List.[3].Column" value="BirthDate" />
+                      <property name="Output List.[3].DataType" value="DateTime" />
+                      <property name="Output List.[4]" value="e1.EmployeeID" />
+                      <property name="Output List.[4].Table" value="e1" />
+                      <property name="Output List.[4].Column" value="EmployeeID" />
+                      <property name="Output List.[4].DataType" value="Int32" />
+                      <property name="Output List.[5]" value="Expr1009" />
+                      <property name="Output List.[5].Column" value="Expr1009" />
+                      <property name="Output List.[5].DataType" value="String" />
+                      <property name="Output List.[6]" value="Expr1010" />
+                      <property name="Output List.[6].Column" value="Expr1010" />
+                      <property name="Output List.[6].DataType" value="Int32" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="9" />
+                      <property name="Statistics.Average Row Count" value="9" />
+                      <property name="Hash Keys Build" value="Expr1004" />
+                      <property name="Hash Keys Build.Column" value="Expr1004" />
+                      <property name="Hash Keys Build.DataType" value="Int32" />
+                      <property name="Hash Keys Probe" value="Expr1011" />
+                      <property name="Hash Keys Probe.Column" value="Expr1011" />
+                      <property name="Hash Keys Probe.DataType" value="Int32" />
+                      <property name="Logical Operator" value="Right Outer Join" />
+                      <property name="Probe Residual" value="e1.EmployeeID &lt;&gt; e2.EmployeeID" />
+                    </properties>
+                    <input>
+                      <element operator="ComputeScalar">
+                        <properties>
+                          <property name="Output List.[0]" value="e2.EmployeeID" />
+                          <property name="Output List.[0].Table" value="e2" />
+                          <property name="Output List.[0].Column" value="EmployeeID" />
+                          <property name="Output List.[0].DataType" value="Int32" />
+                          <property name="Output List.[1]" value="e2.LastName" />
+                          <property name="Output List.[1].Table" value="e2" />
+                          <property name="Output List.[1].Column" value="LastName" />
+                          <property name="Output List.[1].DataType" value="String" />
+                          <property name="Output List.[2]" value="e2.FirstName" />
+                          <property name="Output List.[2].Table" value="e2" />
+                          <property name="Output List.[2].Column" value="FirstName" />
+                          <property name="Output List.[2].DataType" value="String" />
+                          <property name="Output List.[3]" value="e2.BirthDate" />
+                          <property name="Output List.[3].Table" value="e2" />
+                          <property name="Output List.[3].Column" value="BirthDate" />
+                          <property name="Output List.[3].DataType" value="DateTime" />
+                          <property name="Output List.[4]" value="Expr1004" />
+                          <property name="Output List.[4].Column" value="Expr1004" />
+                          <property name="Output List.[4].DataType" value="Int32" />
+                          <property name="Statistics.Open Count" value="1" />
+                          <property name="Statistics.Row Count" value="9" />
+                          <property name="Statistics.Average Row Count" value="9" />
+                          <property name="Defined Values.[0]" value="Expr1004 = MONTH(e2.BirthDate)" />
+                          <property name="Defined Values.[0].Target" value="Expr1004" />
+                          <property name="Defined Values.[0].DataType" value="Int32" />
+                          <property name="Defined Values.[0].Source" value="MONTH(e2.BirthDate)" />
+                        </properties>
+                        <input>
+                          <element operator="TableScan">
+                            <properties>
+                              <property name="Table" value="Employees AS e2" />
+                              <property name="Output List.[0]" value="e2.EmployeeID" />
+                              <property name="Output List.[0].Table" value="e2" />
+                              <property name="Output List.[0].Column" value="EmployeeID" />
+                              <property name="Output List.[0].DataType" value="Int32" />
+                              <property name="Output List.[1]" value="e2.LastName" />
+                              <property name="Output List.[1].Table" value="e2" />
+                              <property name="Output List.[1].Column" value="LastName" />
+                              <property name="Output List.[1].DataType" value="String" />
+                              <property name="Output List.[2]" value="e2.FirstName" />
+                              <property name="Output List.[2].Table" value="e2" />
+                              <property name="Output List.[2].Column" value="FirstName" />
+                              <property name="Output List.[2].DataType" value="String" />
+                              <property name="Output List.[3]" value="e2.BirthDate" />
+                              <property name="Output List.[3].Table" value="e2" />
+                              <property name="Output List.[3].Column" value="BirthDate" />
+                              <property name="Output List.[3].DataType" value="DateTime" />
+                              <property name="Statistics.Open Count" value="1" />
+                              <property name="Statistics.Row Count" value="9" />
+                              <property name="Statistics.Average Row Count" value="9" />
+                            </properties>
+                            <input />
+                          </element>
+                        </input>
+                      </element>
+                      <element operator="ComputeScalar">
+                        <properties>
+                          <property name="Output List.[0]" value="e1.EmployeeID" />
+                          <property name="Output List.[0].Table" value="e1" />
+                          <property name="Output List.[0].Column" value="EmployeeID" />
+                          <property name="Output List.[0].DataType" value="Int32" />
+                          <property name="Output List.[1]" value="Expr1009" />
+                          <property name="Output List.[1].Column" value="Expr1009" />
+                          <property name="Output List.[1].DataType" value="String" />
+                          <property name="Output List.[2]" value="Expr1010" />
+                          <property name="Output List.[2].Column" value="Expr1010" />
+                          <property name="Output List.[2].DataType" value="Int32" />
+                          <property name="Output List.[3]" value="Expr1011" />
+                          <property name="Output List.[3].Column" value="Expr1011" />
+                          <property name="Output List.[3].DataType" value="Int32" />
+                          <property name="Statistics.Open Count" value="1" />
+                          <property name="Statistics.Row Count" value="9" />
+                          <property name="Statistics.Average Row Count" value="9" />
+                          <property name="Defined Values.[0]" value="Expr1011 = MONTH(e1.BirthDate)" />
+                          <property name="Defined Values.[0].Target" value="Expr1011" />
+                          <property name="Defined Values.[0].DataType" value="Int32" />
+                          <property name="Defined Values.[0].Source" value="MONTH(e1.BirthDate)" />
+                        </properties>
+                        <input>
+                          <element operator="ComputeScalar">
+                            <properties>
+                              <property name="Output List.[0]" value="e1.EmployeeID" />
+                              <property name="Output List.[0].Table" value="e1" />
+                              <property name="Output List.[0].Column" value="EmployeeID" />
+                              <property name="Output List.[0].DataType" value="Int32" />
+                              <property name="Output List.[1]" value="e1.BirthDate" />
+                              <property name="Output List.[1].Table" value="e1" />
+                              <property name="Output List.[1].Column" value="BirthDate" />
+                              <property name="Output List.[1].DataType" value="DateTime" />
+                              <property name="Output List.[2]" value="Expr1009" />
+                              <property name="Output List.[2].Column" value="Expr1009" />
+                              <property name="Output List.[2].DataType" value="String" />
+                              <property name="Output List.[3]" value="Expr1010" />
+                              <property name="Output List.[3].Column" value="Expr1010" />
+                              <property name="Output List.[3].DataType" value="Int32" />
+                              <property name="Statistics.Open Count" value="1" />
+                              <property name="Statistics.Row Count" value="9" />
+                              <property name="Statistics.Average Row Count" value="9" />
+                              <property name="Defined Values.[0]" value="Expr1009 = e1.FirstName + ' ' + e1.LastName" />
+                              <property name="Defined Values.[0].Target" value="Expr1009" />
+                              <property name="Defined Values.[0].DataType" value="String" />
+                              <property name="Defined Values.[0].Source" value="e1.FirstName + ' ' + e1.LastName" />
+                              <property name="Defined Values.[1]" value="Expr1010 = MONTH(e1.BirthDate)" />
+                              <property name="Defined Values.[1].Target" value="Expr1010" />
+                              <property name="Defined Values.[1].DataType" value="Int32" />
+                              <property name="Defined Values.[1].Source" value="MONTH(e1.BirthDate)" />
+                            </properties>
+                            <input>
+                              <element operator="TableScan">
+                                <properties>
+                                  <property name="Table" value="Employees AS e1" />
+                                  <property name="Output List.[0]" value="e1.EmployeeID" />
+                                  <property name="Output List.[0].Table" value="e1" />
+                                  <property name="Output List.[0].Column" value="EmployeeID" />
+                                  <property name="Output List.[0].DataType" value="Int32" />
+                                  <property name="Output List.[1]" value="e1.LastName" />
+                                  <property name="Output List.[1].Table" value="e1" />
+                                  <property name="Output List.[1].Column" value="LastName" />
+                                  <property name="Output List.[1].DataType" value="String" />
+                                  <property name="Output List.[2]" value="e1.FirstName" />
+                                  <property name="Output List.[2].Table" value="e1" />
+                                  <property name="Output List.[2].Column" value="FirstName" />
+                                  <property name="Output List.[2].DataType" value="String" />
+                                  <property name="Output List.[3]" value="e1.BirthDate" />
+                                  <property name="Output List.[3].Table" value="e1" />
+                                  <property name="Output List.[3].Column" value="BirthDate" />
+                                  <property name="Output List.[3].DataType" value="DateTime" />
+                                  <property name="Statistics.Open Count" value="1" />
+                                  <property name="Statistics.Row Count" value="9" />
+                                  <property name="Statistics.Average Row Count" value="9" />
+                                </properties>
+                                <input />
+                              </element>
+                            </input>
+                          </element>
+                        </input>
+                      </element>
+                    </input>
+                  </element>
+                </input>
+              </element>
+            </input>
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

@@ -1,0 +1,3396 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="stores">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="stor_id" type="xs:string" minOccurs="0" />
+                <xs:element name="stor_name" type="xs:string" minOccurs="0" />
+                <xs:element name="stor_address" type="xs:string" minOccurs="0" />
+                <xs:element name="city" type="xs:string" minOccurs="0" />
+                <xs:element name="state" type="xs:string" minOccurs="0" />
+                <xs:element name="zip" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="sales">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="stor_id" type="xs:string" minOccurs="0" />
+                <xs:element name="ord_num" type="xs:string" minOccurs="0" />
+                <xs:element name="ord_date" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="qty" type="xs:short" minOccurs="0" />
+                <xs:element name="payterms" type="xs:string" minOccurs="0" />
+                <xs:element name="title_id" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="discounts">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="discounttype" type="xs:string" minOccurs="0" />
+                <xs:element name="stor_id" type="xs:string" minOccurs="0" />
+                <xs:element name="lowqty" type="xs:short" minOccurs="0" />
+                <xs:element name="highqty" type="xs:short" minOccurs="0" />
+                <xs:element name="discount" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="jobs">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="job_id" type="xs:short" minOccurs="0" />
+                <xs:element name="job_desc" type="xs:string" minOccurs="0" />
+                <xs:element name="min_lvl" type="xs:unsignedByte" minOccurs="0" />
+                <xs:element name="max_lvl" type="xs:unsignedByte" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="employee">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="emp_id" type="xs:string" minOccurs="0" />
+                <xs:element name="fname" type="xs:string" minOccurs="0" />
+                <xs:element name="minit" type="xs:string" minOccurs="0" />
+                <xs:element name="lname" type="xs:string" minOccurs="0" />
+                <xs:element name="job_id" type="xs:short" minOccurs="0" />
+                <xs:element name="job_lvl" type="xs:unsignedByte" minOccurs="0" />
+                <xs:element name="pub_id" type="xs:string" minOccurs="0" />
+                <xs:element name="hire_date" type="xs:dateTime" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="titles">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="title_id" type="xs:string" minOccurs="0" />
+                <xs:element name="title" type="xs:string" minOccurs="0" />
+                <xs:element name="type" type="xs:string" minOccurs="0" />
+                <xs:element name="pub_id" type="xs:string" minOccurs="0" />
+                <xs:element name="price" type="xs:decimal" minOccurs="0" />
+                <xs:element name="advance" type="xs:decimal" minOccurs="0" />
+                <xs:element name="royalty" type="xs:int" minOccurs="0" />
+                <xs:element name="ytd_sales" type="xs:int" minOccurs="0" />
+                <xs:element name="notes" type="xs:string" minOccurs="0" />
+                <xs:element name="pubdate" type="xs:dateTime" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="titleauthor">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="au_id" type="xs:string" minOccurs="0" />
+                <xs:element name="title_id" type="xs:string" minOccurs="0" />
+                <xs:element name="au_ord" type="xs:unsignedByte" minOccurs="0" />
+                <xs:element name="royaltyper" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="publishers">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="pub_id" type="xs:string" minOccurs="0" />
+                <xs:element name="pub_name" type="xs:string" minOccurs="0" />
+                <xs:element name="city" type="xs:string" minOccurs="0" />
+                <xs:element name="state" type="xs:string" minOccurs="0" />
+                <xs:element name="country" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="authors">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="au_id" type="xs:string" minOccurs="0" />
+                <xs:element name="au_lname" type="xs:string" minOccurs="0" />
+                <xs:element name="au_fname" type="xs:string" minOccurs="0" />
+                <xs:element name="phone" type="xs:string" minOccurs="0" />
+                <xs:element name="address" type="xs:string" minOccurs="0" />
+                <xs:element name="city" type="xs:string" minOccurs="0" />
+                <xs:element name="state" type="xs:string" minOccurs="0" />
+                <xs:element name="zip" type="xs:string" minOccurs="0" />
+                <xs:element name="contract" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="pub_info">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="pub_id" type="xs:string" minOccurs="0" />
+                <xs:element name="logo" type="xs:base64Binary" minOccurs="0" />
+                <xs:element name="pr_info" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="roysched">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="title_id" type="xs:string" minOccurs="0" />
+                <xs:element name="lorange" type="xs:int" minOccurs="0" />
+                <xs:element name="hirange" type="xs:int" minOccurs="0" />
+                <xs:element name="royalty" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1">
+        <xs:selector xpath=".//stores" />
+        <xs:field xpath="stor_id" />
+      </xs:unique>
+      <xs:unique name="jobs_Constraint1" msdata:ConstraintName="Constraint1">
+        <xs:selector xpath=".//jobs" />
+        <xs:field xpath="job_id" />
+      </xs:unique>
+      <xs:unique name="titles_Constraint1" msdata:ConstraintName="Constraint1">
+        <xs:selector xpath=".//titles" />
+        <xs:field xpath="title_id" />
+      </xs:unique>
+      <xs:unique name="publishers_Constraint1" msdata:ConstraintName="Constraint1">
+        <xs:selector xpath=".//publishers" />
+        <xs:field xpath="pub_id" />
+      </xs:unique>
+      <xs:unique name="authors_Constraint1" msdata:ConstraintName="Constraint1">
+        <xs:selector xpath=".//authors" />
+        <xs:field xpath="au_id" />
+      </xs:unique>
+      <xs:keyref name="titles_roysched" refer="titles_Constraint1">
+        <xs:selector xpath=".//roysched" />
+        <xs:field xpath="title_id" />
+      </xs:keyref>
+      <xs:keyref name="publishers_pub_info" refer="publishers_Constraint1">
+        <xs:selector xpath=".//pub_info" />
+        <xs:field xpath="pub_id" />
+      </xs:keyref>
+      <xs:keyref name="authors_titleauthor" refer="authors_Constraint1">
+        <xs:selector xpath=".//titleauthor" />
+        <xs:field xpath="au_id" />
+      </xs:keyref>
+      <xs:keyref name="titles_titleauthor" refer="titles_Constraint1">
+        <xs:selector xpath=".//titleauthor" />
+        <xs:field xpath="title_id" />
+      </xs:keyref>
+      <xs:keyref name="publishers_titles" refer="publishers_Constraint1">
+        <xs:selector xpath=".//titles" />
+        <xs:field xpath="pub_id" />
+      </xs:keyref>
+      <xs:keyref name="publishers_employee" refer="publishers_Constraint1">
+        <xs:selector xpath=".//employee" />
+        <xs:field xpath="pub_id" />
+      </xs:keyref>
+      <xs:keyref name="jobs_employee" refer="jobs_Constraint1">
+        <xs:selector xpath=".//employee" />
+        <xs:field xpath="job_id" />
+      </xs:keyref>
+      <xs:keyref name="stores_discounts" refer="Constraint1">
+        <xs:selector xpath=".//discounts" />
+        <xs:field xpath="stor_id" />
+      </xs:keyref>
+      <xs:keyref name="titles_sales" refer="titles_Constraint1">
+        <xs:selector xpath=".//sales" />
+        <xs:field xpath="title_id" />
+      </xs:keyref>
+      <xs:keyref name="stores_sales" refer="Constraint1">
+        <xs:selector xpath=".//sales" />
+        <xs:field xpath="stor_id" />
+      </xs:keyref>
+    </xs:element>
+  </xs:schema>
+  <stores>
+    <stor_id>6380</stor_id>
+    <stor_name>Eric the Read Books</stor_name>
+    <stor_address>788 Catamaugus Ave.</stor_address>
+    <city>Seattle</city>
+    <state>WA</state>
+    <zip>98056</zip>
+  </stores>
+  <stores>
+    <stor_id>7066</stor_id>
+    <stor_name>Barnum's</stor_name>
+    <stor_address>567 Pasadena Ave.</stor_address>
+    <city>Tustin</city>
+    <state>CA</state>
+    <zip>92789</zip>
+  </stores>
+  <stores>
+    <stor_id>7067</stor_id>
+    <stor_name>News &amp; Brews</stor_name>
+    <stor_address>577 First St.</stor_address>
+    <city>Los Gatos</city>
+    <state>CA</state>
+    <zip>96745</zip>
+  </stores>
+  <stores>
+    <stor_id>7131</stor_id>
+    <stor_name>Doc-U-Mat: Quality Laundry and Books</stor_name>
+    <stor_address>24-A Avogadro Way</stor_address>
+    <city>Remulade</city>
+    <state>WA</state>
+    <zip>98014</zip>
+  </stores>
+  <stores>
+    <stor_id>7896</stor_id>
+    <stor_name>Fricative Bookshop</stor_name>
+    <stor_address>89 Madison St.</stor_address>
+    <city>Fremont</city>
+    <state>CA</state>
+    <zip>90019</zip>
+  </stores>
+  <stores>
+    <stor_id>8042</stor_id>
+    <stor_name>Bookbeat</stor_name>
+    <stor_address>679 Carson St.</stor_address>
+    <city>Portland</city>
+    <state>OR</state>
+    <zip>89076</zip>
+  </stores>
+  <sales>
+    <stor_id>6380</stor_id>
+    <ord_num>6871</ord_num>
+    <ord_date>1994-09-14T00:00:00+02:00</ord_date>
+    <qty>5</qty>
+    <payterms>Net 60</payterms>
+    <title_id>BU1032</title_id>
+  </sales>
+  <sales>
+    <stor_id>6380</stor_id>
+    <ord_num>722a</ord_num>
+    <ord_date>1994-09-13T00:00:00+02:00</ord_date>
+    <qty>3</qty>
+    <payterms>Net 60</payterms>
+    <title_id>PS2091</title_id>
+  </sales>
+  <sales>
+    <stor_id>7066</stor_id>
+    <ord_num>A2976</ord_num>
+    <ord_date>1993-05-24T00:00:00+02:00</ord_date>
+    <qty>50</qty>
+    <payterms>Net 30</payterms>
+    <title_id>PC8888</title_id>
+  </sales>
+  <sales>
+    <stor_id>7066</stor_id>
+    <ord_num>QA7442.3</ord_num>
+    <ord_date>1994-09-13T00:00:00+02:00</ord_date>
+    <qty>75</qty>
+    <payterms>ON invoice</payterms>
+    <title_id>PS2091</title_id>
+  </sales>
+  <sales>
+    <stor_id>7067</stor_id>
+    <ord_num>D4482</ord_num>
+    <ord_date>1994-09-14T00:00:00+02:00</ord_date>
+    <qty>10</qty>
+    <payterms>Net 60</payterms>
+    <title_id>PS2091</title_id>
+  </sales>
+  <sales>
+    <stor_id>7067</stor_id>
+    <ord_num>P2121</ord_num>
+    <ord_date>1992-06-15T00:00:00+02:00</ord_date>
+    <qty>40</qty>
+    <payterms>Net 30</payterms>
+    <title_id>TC3218</title_id>
+  </sales>
+  <sales>
+    <stor_id>7067</stor_id>
+    <ord_num>P2121</ord_num>
+    <ord_date>1992-06-15T00:00:00+02:00</ord_date>
+    <qty>20</qty>
+    <payterms>Net 30</payterms>
+    <title_id>TC4203</title_id>
+  </sales>
+  <sales>
+    <stor_id>7067</stor_id>
+    <ord_num>P2121</ord_num>
+    <ord_date>1992-06-15T00:00:00+02:00</ord_date>
+    <qty>20</qty>
+    <payterms>Net 30</payterms>
+    <title_id>TC7777</title_id>
+  </sales>
+  <sales>
+    <stor_id>7131</stor_id>
+    <ord_num>N914008</ord_num>
+    <ord_date>1994-09-14T00:00:00+02:00</ord_date>
+    <qty>20</qty>
+    <payterms>Net 30</payterms>
+    <title_id>PS2091</title_id>
+  </sales>
+  <sales>
+    <stor_id>7131</stor_id>
+    <ord_num>N914014</ord_num>
+    <ord_date>1994-09-14T00:00:00+02:00</ord_date>
+    <qty>25</qty>
+    <payterms>Net 30</payterms>
+    <title_id>MC3021</title_id>
+  </sales>
+  <sales>
+    <stor_id>7131</stor_id>
+    <ord_num>P3087a</ord_num>
+    <ord_date>1993-05-29T00:00:00+02:00</ord_date>
+    <qty>20</qty>
+    <payterms>Net 60</payterms>
+    <title_id>PS1372</title_id>
+  </sales>
+  <sales>
+    <stor_id>7131</stor_id>
+    <ord_num>P3087a</ord_num>
+    <ord_date>1993-05-29T00:00:00+02:00</ord_date>
+    <qty>25</qty>
+    <payterms>Net 60</payterms>
+    <title_id>PS2106</title_id>
+  </sales>
+  <sales>
+    <stor_id>7131</stor_id>
+    <ord_num>P3087a</ord_num>
+    <ord_date>1993-05-29T00:00:00+02:00</ord_date>
+    <qty>15</qty>
+    <payterms>Net 60</payterms>
+    <title_id>PS3333</title_id>
+  </sales>
+  <sales>
+    <stor_id>7131</stor_id>
+    <ord_num>P3087a</ord_num>
+    <ord_date>1993-05-29T00:00:00+02:00</ord_date>
+    <qty>25</qty>
+    <payterms>Net 60</payterms>
+    <title_id>PS7777</title_id>
+  </sales>
+  <sales>
+    <stor_id>7896</stor_id>
+    <ord_num>QQ2299</ord_num>
+    <ord_date>1993-10-28T00:00:00+02:00</ord_date>
+    <qty>15</qty>
+    <payterms>Net 60</payterms>
+    <title_id>BU7832</title_id>
+  </sales>
+  <sales>
+    <stor_id>7896</stor_id>
+    <ord_num>TQ456</ord_num>
+    <ord_date>1993-12-12T00:00:00+01:00</ord_date>
+    <qty>10</qty>
+    <payterms>Net 60</payterms>
+    <title_id>MC2222</title_id>
+  </sales>
+  <sales>
+    <stor_id>7896</stor_id>
+    <ord_num>X999</ord_num>
+    <ord_date>1993-02-21T00:00:00+01:00</ord_date>
+    <qty>35</qty>
+    <payterms>ON invoice</payterms>
+    <title_id>BU2075</title_id>
+  </sales>
+  <sales>
+    <stor_id>8042</stor_id>
+    <ord_num>423LL922</ord_num>
+    <ord_date>1994-09-14T00:00:00+02:00</ord_date>
+    <qty>15</qty>
+    <payterms>ON invoice</payterms>
+    <title_id>MC3021</title_id>
+  </sales>
+  <sales>
+    <stor_id>8042</stor_id>
+    <ord_num>423LL930</ord_num>
+    <ord_date>1994-09-14T00:00:00+02:00</ord_date>
+    <qty>10</qty>
+    <payterms>ON invoice</payterms>
+    <title_id>BU1032</title_id>
+  </sales>
+  <sales>
+    <stor_id>8042</stor_id>
+    <ord_num>P723</ord_num>
+    <ord_date>1993-03-11T00:00:00+01:00</ord_date>
+    <qty>25</qty>
+    <payterms>Net 30</payterms>
+    <title_id>BU1111</title_id>
+  </sales>
+  <sales>
+    <stor_id>8042</stor_id>
+    <ord_num>QA879.1</ord_num>
+    <ord_date>1993-05-22T00:00:00+02:00</ord_date>
+    <qty>30</qty>
+    <payterms>Net 30</payterms>
+    <title_id>PC1035</title_id>
+  </sales>
+  <discounts>
+    <discounttype>Initial Customer</discounttype>
+    <discount>10.50</discount>
+  </discounts>
+  <discounts>
+    <discounttype>Volume Discount</discounttype>
+    <lowqty>100</lowqty>
+    <highqty>1000</highqty>
+    <discount>6.70</discount>
+  </discounts>
+  <discounts>
+    <discounttype>Customer Discount</discounttype>
+    <stor_id>8042</stor_id>
+    <discount>5.00</discount>
+  </discounts>
+  <jobs>
+    <job_id>1</job_id>
+    <job_desc>New Hire - Job not specified</job_desc>
+    <min_lvl>10</min_lvl>
+    <max_lvl>10</max_lvl>
+  </jobs>
+  <jobs>
+    <job_id>2</job_id>
+    <job_desc>Chief Executive Officer</job_desc>
+    <min_lvl>200</min_lvl>
+    <max_lvl>250</max_lvl>
+  </jobs>
+  <jobs>
+    <job_id>3</job_id>
+    <job_desc>Business Operations Manager</job_desc>
+    <min_lvl>175</min_lvl>
+    <max_lvl>225</max_lvl>
+  </jobs>
+  <jobs>
+    <job_id>4</job_id>
+    <job_desc>Chief Financial Officier</job_desc>
+    <min_lvl>175</min_lvl>
+    <max_lvl>250</max_lvl>
+  </jobs>
+  <jobs>
+    <job_id>5</job_id>
+    <job_desc>Publisher</job_desc>
+    <min_lvl>150</min_lvl>
+    <max_lvl>250</max_lvl>
+  </jobs>
+  <jobs>
+    <job_id>6</job_id>
+    <job_desc>Managing Editor</job_desc>
+    <min_lvl>140</min_lvl>
+    <max_lvl>225</max_lvl>
+  </jobs>
+  <jobs>
+    <job_id>7</job_id>
+    <job_desc>Marketing Manager</job_desc>
+    <min_lvl>120</min_lvl>
+    <max_lvl>200</max_lvl>
+  </jobs>
+  <jobs>
+    <job_id>8</job_id>
+    <job_desc>Public Relations Manager</job_desc>
+    <min_lvl>100</min_lvl>
+    <max_lvl>175</max_lvl>
+  </jobs>
+  <jobs>
+    <job_id>9</job_id>
+    <job_desc>Acquisitions Manager</job_desc>
+    <min_lvl>75</min_lvl>
+    <max_lvl>175</max_lvl>
+  </jobs>
+  <jobs>
+    <job_id>10</job_id>
+    <job_desc>Productions Manager</job_desc>
+    <min_lvl>75</min_lvl>
+    <max_lvl>165</max_lvl>
+  </jobs>
+  <jobs>
+    <job_id>11</job_id>
+    <job_desc>Operations Manager</job_desc>
+    <min_lvl>75</min_lvl>
+    <max_lvl>150</max_lvl>
+  </jobs>
+  <jobs>
+    <job_id>12</job_id>
+    <job_desc>Editor</job_desc>
+    <min_lvl>25</min_lvl>
+    <max_lvl>100</max_lvl>
+  </jobs>
+  <jobs>
+    <job_id>13</job_id>
+    <job_desc>Sales Representative</job_desc>
+    <min_lvl>25</min_lvl>
+    <max_lvl>100</max_lvl>
+  </jobs>
+  <jobs>
+    <job_id>14</job_id>
+    <job_desc>Designer</job_desc>
+    <min_lvl>25</min_lvl>
+    <max_lvl>100</max_lvl>
+  </jobs>
+  <employee>
+    <emp_id>PMA42628M</emp_id>
+    <fname>Paolo</fname>
+    <minit>M</minit>
+    <lname>Accorti</lname>
+    <job_id>13</job_id>
+    <job_lvl>35</job_lvl>
+    <pub_id>0877</pub_id>
+    <hire_date>1992-08-27T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>PSA89086M</emp_id>
+    <fname>Pedro</fname>
+    <minit>S</minit>
+    <lname>Afonso</lname>
+    <job_id>14</job_id>
+    <job_lvl>89</job_lvl>
+    <pub_id>1389</pub_id>
+    <hire_date>1990-12-24T00:00:00+01:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>VPA30890F</emp_id>
+    <fname>Victoria</fname>
+    <minit>P</minit>
+    <lname>Ashworth</lname>
+    <job_id>6</job_id>
+    <job_lvl>140</job_lvl>
+    <pub_id>0877</pub_id>
+    <hire_date>1990-09-13T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>H-B39728F</emp_id>
+    <fname>Helen</fname>
+    <minit xml:space="preserve"> </minit>
+    <lname>Bennett</lname>
+    <job_id>12</job_id>
+    <job_lvl>35</job_lvl>
+    <pub_id>0877</pub_id>
+    <hire_date>1989-09-21T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>L-B31947F</emp_id>
+    <fname>Lesley</fname>
+    <minit xml:space="preserve"> </minit>
+    <lname>Brown</lname>
+    <job_id>7</job_id>
+    <job_lvl>120</job_lvl>
+    <pub_id>0877</pub_id>
+    <hire_date>1991-02-13T00:00:00+01:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>F-C16315M</emp_id>
+    <fname>Francisco</fname>
+    <minit xml:space="preserve"> </minit>
+    <lname>Chang</lname>
+    <job_id>4</job_id>
+    <job_lvl>227</job_lvl>
+    <pub_id>9952</pub_id>
+    <hire_date>1990-11-03T00:00:00+01:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>PTC11962M</emp_id>
+    <fname>Philip</fname>
+    <minit>T</minit>
+    <lname>Cramer</lname>
+    <job_id>2</job_id>
+    <job_lvl>215</job_lvl>
+    <pub_id>9952</pub_id>
+    <hire_date>1989-11-11T00:00:00+01:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>A-C71970F</emp_id>
+    <fname>Aria</fname>
+    <minit xml:space="preserve"> </minit>
+    <lname>Cruz</lname>
+    <job_id>10</job_id>
+    <job_lvl>87</job_lvl>
+    <pub_id>1389</pub_id>
+    <hire_date>1991-10-26T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>AMD15433F</emp_id>
+    <fname>Ann</fname>
+    <minit>M</minit>
+    <lname>Devon</lname>
+    <job_id>3</job_id>
+    <job_lvl>200</job_lvl>
+    <pub_id>9952</pub_id>
+    <hire_date>1991-07-16T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>ARD36773F</emp_id>
+    <fname>Anabela</fname>
+    <minit>R</minit>
+    <lname>Domingues</lname>
+    <job_id>8</job_id>
+    <job_lvl>100</job_lvl>
+    <pub_id>0877</pub_id>
+    <hire_date>1993-01-27T00:00:00+01:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>PHF38899M</emp_id>
+    <fname>Peter</fname>
+    <minit>H</minit>
+    <lname>Franken</lname>
+    <job_id>10</job_id>
+    <job_lvl>75</job_lvl>
+    <pub_id>0877</pub_id>
+    <hire_date>1992-05-17T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>PXH22250M</emp_id>
+    <fname>Paul</fname>
+    <minit>X</minit>
+    <lname>Henriot</lname>
+    <job_id>5</job_id>
+    <job_lvl>159</job_lvl>
+    <pub_id>0877</pub_id>
+    <hire_date>1993-08-19T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>CFH28514M</emp_id>
+    <fname>Carlos</fname>
+    <minit>F</minit>
+    <lname>Hernadez</lname>
+    <job_id>5</job_id>
+    <job_lvl>211</job_lvl>
+    <pub_id>9999</pub_id>
+    <hire_date>1989-04-21T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>PDI47470M</emp_id>
+    <fname>Palle</fname>
+    <minit>D</minit>
+    <lname>Ibsen</lname>
+    <job_id>7</job_id>
+    <job_lvl>195</job_lvl>
+    <pub_id>0736</pub_id>
+    <hire_date>1993-05-09T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>KJJ92907F</emp_id>
+    <fname>Karla</fname>
+    <minit>J</minit>
+    <lname>Jablonski</lname>
+    <job_id>9</job_id>
+    <job_lvl>170</job_lvl>
+    <pub_id>9999</pub_id>
+    <hire_date>1994-03-11T00:00:00+01:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>KFJ64308F</emp_id>
+    <fname>Karin</fname>
+    <minit>F</minit>
+    <lname>Josephs</lname>
+    <job_id>14</job_id>
+    <job_lvl>100</job_lvl>
+    <pub_id>0736</pub_id>
+    <hire_date>1992-10-17T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>MGK44605M</emp_id>
+    <fname>Matti</fname>
+    <minit>G</minit>
+    <lname>Karttunen</lname>
+    <job_id>6</job_id>
+    <job_lvl>220</job_lvl>
+    <pub_id>0736</pub_id>
+    <hire_date>1994-05-01T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>POK93028M</emp_id>
+    <fname>Pirkko</fname>
+    <minit>O</minit>
+    <lname>Koskitalo</lname>
+    <job_id>10</job_id>
+    <job_lvl>80</job_lvl>
+    <pub_id>9999</pub_id>
+    <hire_date>1993-11-29T00:00:00+01:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>JYL26161F</emp_id>
+    <fname>Janine</fname>
+    <minit>Y</minit>
+    <lname>Labrune</lname>
+    <job_id>5</job_id>
+    <job_lvl>172</job_lvl>
+    <pub_id>9901</pub_id>
+    <hire_date>1991-05-26T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>M-L67958F</emp_id>
+    <fname>Maria</fname>
+    <minit xml:space="preserve"> </minit>
+    <lname>Larsson</lname>
+    <job_id>7</job_id>
+    <job_lvl>135</job_lvl>
+    <pub_id>1389</pub_id>
+    <hire_date>1992-03-27T00:00:00+01:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>Y-L77953M</emp_id>
+    <fname>Yoshi</fname>
+    <minit xml:space="preserve"> </minit>
+    <lname>Latimer</lname>
+    <job_id>12</job_id>
+    <job_lvl>32</job_lvl>
+    <pub_id>1389</pub_id>
+    <hire_date>1989-06-11T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>LAL21447M</emp_id>
+    <fname>Laurence</fname>
+    <minit>A</minit>
+    <lname>Lebihan</lname>
+    <job_id>5</job_id>
+    <job_lvl>175</job_lvl>
+    <pub_id>0736</pub_id>
+    <hire_date>1990-06-03T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>ENL44273F</emp_id>
+    <fname>Elizabeth</fname>
+    <minit>N</minit>
+    <lname>Lincoln</lname>
+    <job_id>14</job_id>
+    <job_lvl>35</job_lvl>
+    <pub_id>0877</pub_id>
+    <hire_date>1990-07-24T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>PCM98509F</emp_id>
+    <fname>Patricia</fname>
+    <minit>C</minit>
+    <lname>McKenna</lname>
+    <job_id>11</job_id>
+    <job_lvl>150</job_lvl>
+    <pub_id>9999</pub_id>
+    <hire_date>1989-08-01T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>R-M53550M</emp_id>
+    <fname>Roland</fname>
+    <minit xml:space="preserve"> </minit>
+    <lname>Mendel</lname>
+    <job_id>11</job_id>
+    <job_lvl>150</job_lvl>
+    <pub_id>0736</pub_id>
+    <hire_date>1991-09-05T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>RBM23061F</emp_id>
+    <fname>Rita</fname>
+    <minit>B</minit>
+    <lname>Muller</lname>
+    <job_id>5</job_id>
+    <job_lvl>198</job_lvl>
+    <pub_id>1622</pub_id>
+    <hire_date>1993-10-09T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>HAN90777M</emp_id>
+    <fname>Helvetius</fname>
+    <minit>A</minit>
+    <lname>Nagy</lname>
+    <job_id>7</job_id>
+    <job_lvl>120</job_lvl>
+    <pub_id>9999</pub_id>
+    <hire_date>1993-03-19T00:00:00+01:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>TPO55093M</emp_id>
+    <fname>Timothy</fname>
+    <minit>P</minit>
+    <lname>O'Rourke</lname>
+    <job_id>13</job_id>
+    <job_lvl>100</job_lvl>
+    <pub_id>0736</pub_id>
+    <hire_date>1988-06-19T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>SKO22412M</emp_id>
+    <fname>Sven</fname>
+    <minit>K</minit>
+    <lname>Ottlieb</lname>
+    <job_id>5</job_id>
+    <job_lvl>150</job_lvl>
+    <pub_id>1389</pub_id>
+    <hire_date>1991-04-05T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>MAP77183M</emp_id>
+    <fname>Miguel</fname>
+    <minit>A</minit>
+    <lname>Paolino</lname>
+    <job_id>11</job_id>
+    <job_lvl>112</job_lvl>
+    <pub_id>1389</pub_id>
+    <hire_date>1992-12-07T00:00:00+01:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>PSP68661F</emp_id>
+    <fname>Paula</fname>
+    <minit>S</minit>
+    <lname>Parente</lname>
+    <job_id>8</job_id>
+    <job_lvl>125</job_lvl>
+    <pub_id>1389</pub_id>
+    <hire_date>1994-01-19T00:00:00+01:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>M-P91209M</emp_id>
+    <fname>Manuel</fname>
+    <minit xml:space="preserve"> </minit>
+    <lname>Pereira</lname>
+    <job_id>8</job_id>
+    <job_lvl>101</job_lvl>
+    <pub_id>9999</pub_id>
+    <hire_date>1989-01-09T00:00:00+01:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>MJP25939M</emp_id>
+    <fname>Maria</fname>
+    <minit>J</minit>
+    <lname>Pontes</lname>
+    <job_id>5</job_id>
+    <job_lvl>246</job_lvl>
+    <pub_id>1756</pub_id>
+    <hire_date>1989-03-01T00:00:00+01:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>M-R38834F</emp_id>
+    <fname>Martine</fname>
+    <minit xml:space="preserve"> </minit>
+    <lname>Rance</lname>
+    <job_id>9</job_id>
+    <job_lvl>75</job_lvl>
+    <pub_id>0877</pub_id>
+    <hire_date>1992-02-05T00:00:00+01:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>DWR65030M</emp_id>
+    <fname>Diego</fname>
+    <minit>W</minit>
+    <lname>Roel</lname>
+    <job_id>6</job_id>
+    <job_lvl>192</job_lvl>
+    <pub_id>1389</pub_id>
+    <hire_date>1991-12-16T00:00:00+01:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>A-R89858F</emp_id>
+    <fname>Annette</fname>
+    <minit xml:space="preserve"> </minit>
+    <lname>Roulet</lname>
+    <job_id>6</job_id>
+    <job_lvl>152</job_lvl>
+    <pub_id>9999</pub_id>
+    <hire_date>1990-02-21T00:00:00+01:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>MMS49649F</emp_id>
+    <fname>Mary</fname>
+    <minit>M</minit>
+    <lname>Saveley</lname>
+    <job_id>8</job_id>
+    <job_lvl>175</job_lvl>
+    <pub_id>0736</pub_id>
+    <hire_date>1993-06-29T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>CGS88322F</emp_id>
+    <fname>Carine</fname>
+    <minit>G</minit>
+    <lname>Schmitt</lname>
+    <job_id>13</job_id>
+    <job_lvl>64</job_lvl>
+    <pub_id>1389</pub_id>
+    <hire_date>1992-07-07T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>MAS70474F</emp_id>
+    <fname>Margaret</fname>
+    <minit>A</minit>
+    <lname>Smith</lname>
+    <job_id>9</job_id>
+    <job_lvl>78</job_lvl>
+    <pub_id>1389</pub_id>
+    <hire_date>1988-09-29T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>HAS54740M</emp_id>
+    <fname>Howard</fname>
+    <minit>A</minit>
+    <lname>Snyder</lname>
+    <job_id>12</job_id>
+    <job_lvl>100</job_lvl>
+    <pub_id>0736</pub_id>
+    <hire_date>1988-11-19T00:00:00+01:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>MFS52347M</emp_id>
+    <fname>Martin</fname>
+    <minit>F</minit>
+    <lname>Sommer</lname>
+    <job_id>10</job_id>
+    <job_lvl>165</job_lvl>
+    <pub_id>0736</pub_id>
+    <hire_date>1990-04-13T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>GHT50241M</emp_id>
+    <fname>Gary</fname>
+    <minit>H</minit>
+    <lname>Thomas</lname>
+    <job_id>9</job_id>
+    <job_lvl>170</job_lvl>
+    <pub_id>0736</pub_id>
+    <hire_date>1988-08-09T00:00:00+02:00</hire_date>
+  </employee>
+  <employee>
+    <emp_id>DBT39435M</emp_id>
+    <fname>Daniel</fname>
+    <minit>B</minit>
+    <lname>Tonini</lname>
+    <job_id>11</job_id>
+    <job_lvl>75</job_lvl>
+    <pub_id>0877</pub_id>
+    <hire_date>1990-01-01T00:00:00+01:00</hire_date>
+  </employee>
+  <titles>
+    <title_id>BU1032</title_id>
+    <title>The Busy Executive's Database Guide</title>
+    <type>business    </type>
+    <pub_id>1389</pub_id>
+    <price>19.9900</price>
+    <advance>5000.0000</advance>
+    <royalty>10</royalty>
+    <ytd_sales>4095</ytd_sales>
+    <notes>An overview of available database systems with emphasis on common business applications. Illustrated.</notes>
+    <pubdate>1991-06-12T00:00:00+02:00</pubdate>
+  </titles>
+  <titles>
+    <title_id>BU1111</title_id>
+    <title>Cooking with Computers: Surreptitious Balance Sheets</title>
+    <type>business    </type>
+    <pub_id>1389</pub_id>
+    <price>11.9500</price>
+    <advance>5000.0000</advance>
+    <royalty>10</royalty>
+    <ytd_sales>3876</ytd_sales>
+    <notes>Helpful hints on how to use your electronic resources to the best advantage.</notes>
+    <pubdate>1991-06-09T00:00:00+02:00</pubdate>
+  </titles>
+  <titles>
+    <title_id>BU2075</title_id>
+    <title>You Can Combat Computer Stress!</title>
+    <type>business    </type>
+    <pub_id>0736</pub_id>
+    <price>2.9900</price>
+    <advance>10125.0000</advance>
+    <royalty>24</royalty>
+    <ytd_sales>18722</ytd_sales>
+    <notes>The latest medical and psychological techniques for living with the electronic office. Easy-to-understand explanations.</notes>
+    <pubdate>1991-06-30T00:00:00+02:00</pubdate>
+  </titles>
+  <titles>
+    <title_id>BU7832</title_id>
+    <title>Straight Talk About Computers</title>
+    <type>business    </type>
+    <pub_id>1389</pub_id>
+    <price>19.9900</price>
+    <advance>5000.0000</advance>
+    <royalty>10</royalty>
+    <ytd_sales>4095</ytd_sales>
+    <notes>Annotated analysis of what computers can do for you: a no-hype guide for the critical user.</notes>
+    <pubdate>1991-06-22T00:00:00+02:00</pubdate>
+  </titles>
+  <titles>
+    <title_id>MC2222</title_id>
+    <title>Silicon Valley Gastronomic Treats</title>
+    <type>mod_cook    </type>
+    <pub_id>0877</pub_id>
+    <price>19.9900</price>
+    <advance>0.0000</advance>
+    <royalty>12</royalty>
+    <ytd_sales>2032</ytd_sales>
+    <notes>Favorite recipes for quick, easy, and elegant meals.</notes>
+    <pubdate>1991-06-09T00:00:00+02:00</pubdate>
+  </titles>
+  <titles>
+    <title_id>MC3021</title_id>
+    <title>The Gourmet Microwave</title>
+    <type>mod_cook    </type>
+    <pub_id>0877</pub_id>
+    <price>2.9900</price>
+    <advance>15000.0000</advance>
+    <royalty>24</royalty>
+    <ytd_sales>22246</ytd_sales>
+    <notes>Traditional French gourmet recipes adapted for modern microwave cooking.</notes>
+    <pubdate>1991-06-18T00:00:00+02:00</pubdate>
+  </titles>
+  <titles>
+    <title_id>MC3026</title_id>
+    <title>The Psychology of Computer Cooking</title>
+    <type>UNDECIDED   </type>
+    <pub_id>0877</pub_id>
+    <pubdate>2007-04-14T22:49:25.39+02:00</pubdate>
+  </titles>
+  <titles>
+    <title_id>PC1035</title_id>
+    <title>But Is It User Friendly?</title>
+    <type>popular_comp</type>
+    <pub_id>1389</pub_id>
+    <price>22.9500</price>
+    <advance>7000.0000</advance>
+    <royalty>16</royalty>
+    <ytd_sales>8780</ytd_sales>
+    <notes>A survey of software for the naive user, focusing on the 'friendliness' of each.</notes>
+    <pubdate>1991-06-30T00:00:00+02:00</pubdate>
+  </titles>
+  <titles>
+    <title_id>PC8888</title_id>
+    <title>Secrets of Silicon Valley</title>
+    <type>popular_comp</type>
+    <pub_id>1389</pub_id>
+    <price>20.0000</price>
+    <advance>8000.0000</advance>
+    <royalty>10</royalty>
+    <ytd_sales>4095</ytd_sales>
+    <notes>Muckraking reporting on the world's largest computer hardware and software manufacturers.</notes>
+    <pubdate>1994-06-12T00:00:00+02:00</pubdate>
+  </titles>
+  <titles>
+    <title_id>PC9999</title_id>
+    <title>Net Etiquette</title>
+    <type>popular_comp</type>
+    <pub_id>1389</pub_id>
+    <notes>A must-read for computer conferencing.</notes>
+    <pubdate>2007-04-14T22:49:25.39+02:00</pubdate>
+  </titles>
+  <titles>
+    <title_id>PS1372</title_id>
+    <title>Computer Phobic AND Non-Phobic Individuals: Behavior Variations</title>
+    <type>psychology  </type>
+    <pub_id>0877</pub_id>
+    <price>21.5900</price>
+    <advance>7000.0000</advance>
+    <royalty>10</royalty>
+    <ytd_sales>375</ytd_sales>
+    <notes>A must for the specialist, this book examines the difference between those who hate and fear computers and those who don't.</notes>
+    <pubdate>1991-10-21T00:00:00+02:00</pubdate>
+  </titles>
+  <titles>
+    <title_id>PS2091</title_id>
+    <title>Is Anger the Enemy?</title>
+    <type>psychology  </type>
+    <pub_id>0736</pub_id>
+    <price>10.9500</price>
+    <advance>2275.0000</advance>
+    <royalty>12</royalty>
+    <ytd_sales>2045</ytd_sales>
+    <notes>Carefully researched study of the effects of strong emotions on the body. Metabolic charts included.</notes>
+    <pubdate>1991-06-15T00:00:00+02:00</pubdate>
+  </titles>
+  <titles>
+    <title_id>PS2106</title_id>
+    <title>Life Without Fear</title>
+    <type>psychology  </type>
+    <pub_id>0736</pub_id>
+    <price>7.0000</price>
+    <advance>6000.0000</advance>
+    <royalty>10</royalty>
+    <ytd_sales>111</ytd_sales>
+    <notes>New exercise, meditation, and nutritional techniques that can reduce the shock of daily interactions. Popular audience. Sample menus included, exercise video available separately.</notes>
+    <pubdate>1991-10-05T00:00:00+02:00</pubdate>
+  </titles>
+  <titles>
+    <title_id>PS3333</title_id>
+    <title>Prolonged Data Deprivation: Four Case Studies</title>
+    <type>psychology  </type>
+    <pub_id>0736</pub_id>
+    <price>19.9900</price>
+    <advance>2000.0000</advance>
+    <royalty>10</royalty>
+    <ytd_sales>4072</ytd_sales>
+    <notes>What happens when the data runs dry?  Searching evaluations of information-shortage effects.</notes>
+    <pubdate>1991-06-12T00:00:00+02:00</pubdate>
+  </titles>
+  <titles>
+    <title_id>PS7777</title_id>
+    <title>Emotional Security: A New Algorithm</title>
+    <type>psychology  </type>
+    <pub_id>0736</pub_id>
+    <price>7.9900</price>
+    <advance>4000.0000</advance>
+    <royalty>10</royalty>
+    <ytd_sales>3336</ytd_sales>
+    <notes>Protecting yourself and your loved ones from undue emotional stress in the modern world. Use of computer and nutritional aids emphasized.</notes>
+    <pubdate>1991-06-12T00:00:00+02:00</pubdate>
+  </titles>
+  <titles>
+    <title_id>TC3218</title_id>
+    <title>Onions, Leeks, and Garlic: Cooking Secrets of the Mediterranean</title>
+    <type>trad_cook   </type>
+    <pub_id>0877</pub_id>
+    <price>20.9500</price>
+    <advance>7000.0000</advance>
+    <royalty>10</royalty>
+    <ytd_sales>375</ytd_sales>
+    <notes>Profusely illustrated in color, this makes a wonderful gift book for a cuisine-oriented friend.</notes>
+    <pubdate>1991-10-21T00:00:00+02:00</pubdate>
+  </titles>
+  <titles>
+    <title_id>TC4203</title_id>
+    <title>Fifty Years in Buckingham Palace Kitchens</title>
+    <type>trad_cook   </type>
+    <pub_id>0877</pub_id>
+    <price>11.9500</price>
+    <advance>4000.0000</advance>
+    <royalty>14</royalty>
+    <ytd_sales>15096</ytd_sales>
+    <notes>More anecdotes from the Queen's favorite cook describing life among English royalty. Recipes, techniques, tender vignettes.</notes>
+    <pubdate>1991-06-12T00:00:00+02:00</pubdate>
+  </titles>
+  <titles>
+    <title_id>TC7777</title_id>
+    <title>Sushi, Anyone?</title>
+    <type>trad_cook   </type>
+    <pub_id>0877</pub_id>
+    <price>14.9900</price>
+    <advance>8000.0000</advance>
+    <royalty>10</royalty>
+    <ytd_sales>4095</ytd_sales>
+    <notes>Detailed instructions on how to make authentic Japanese sushi in your spare time.</notes>
+    <pubdate>1991-06-12T00:00:00+02:00</pubdate>
+  </titles>
+  <titleauthor>
+    <au_id>172-32-1176</au_id>
+    <title_id>PS3333</title_id>
+    <au_ord>1</au_ord>
+    <royaltyper>100</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>213-46-8915</au_id>
+    <title_id>BU1032</title_id>
+    <au_ord>2</au_ord>
+    <royaltyper>40</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>213-46-8915</au_id>
+    <title_id>BU2075</title_id>
+    <au_ord>1</au_ord>
+    <royaltyper>100</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>238-95-7766</au_id>
+    <title_id>PC1035</title_id>
+    <au_ord>1</au_ord>
+    <royaltyper>100</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>267-41-2394</au_id>
+    <title_id>BU1111</title_id>
+    <au_ord>2</au_ord>
+    <royaltyper>40</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>267-41-2394</au_id>
+    <title_id>TC7777</title_id>
+    <au_ord>2</au_ord>
+    <royaltyper>30</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>274-80-9391</au_id>
+    <title_id>BU7832</title_id>
+    <au_ord>1</au_ord>
+    <royaltyper>100</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>409-56-7008</au_id>
+    <title_id>BU1032</title_id>
+    <au_ord>1</au_ord>
+    <royaltyper>60</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>427-17-2319</au_id>
+    <title_id>PC8888</title_id>
+    <au_ord>1</au_ord>
+    <royaltyper>50</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>472-27-2349</au_id>
+    <title_id>TC7777</title_id>
+    <au_ord>3</au_ord>
+    <royaltyper>30</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>486-29-1786</au_id>
+    <title_id>PC9999</title_id>
+    <au_ord>1</au_ord>
+    <royaltyper>100</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>486-29-1786</au_id>
+    <title_id>PS7777</title_id>
+    <au_ord>1</au_ord>
+    <royaltyper>100</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>648-92-1872</au_id>
+    <title_id>TC4203</title_id>
+    <au_ord>1</au_ord>
+    <royaltyper>100</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>672-71-3249</au_id>
+    <title_id>TC7777</title_id>
+    <au_ord>1</au_ord>
+    <royaltyper>40</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>712-45-1867</au_id>
+    <title_id>MC2222</title_id>
+    <au_ord>1</au_ord>
+    <royaltyper>100</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>722-51-5454</au_id>
+    <title_id>MC3021</title_id>
+    <au_ord>1</au_ord>
+    <royaltyper>75</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>724-80-9391</au_id>
+    <title_id>BU1111</title_id>
+    <au_ord>1</au_ord>
+    <royaltyper>60</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>724-80-9391</au_id>
+    <title_id>PS1372</title_id>
+    <au_ord>2</au_ord>
+    <royaltyper>25</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>756-30-7391</au_id>
+    <title_id>PS1372</title_id>
+    <au_ord>1</au_ord>
+    <royaltyper>75</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>807-91-6654</au_id>
+    <title_id>TC3218</title_id>
+    <au_ord>1</au_ord>
+    <royaltyper>100</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>846-92-7186</au_id>
+    <title_id>PC8888</title_id>
+    <au_ord>2</au_ord>
+    <royaltyper>50</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>899-46-2035</au_id>
+    <title_id>MC3021</title_id>
+    <au_ord>2</au_ord>
+    <royaltyper>25</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>899-46-2035</au_id>
+    <title_id>PS2091</title_id>
+    <au_ord>2</au_ord>
+    <royaltyper>50</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>998-72-3567</au_id>
+    <title_id>PS2091</title_id>
+    <au_ord>1</au_ord>
+    <royaltyper>50</royaltyper>
+  </titleauthor>
+  <titleauthor>
+    <au_id>998-72-3567</au_id>
+    <title_id>PS2106</title_id>
+    <au_ord>1</au_ord>
+    <royaltyper>100</royaltyper>
+  </titleauthor>
+  <publishers>
+    <pub_id>0736</pub_id>
+    <pub_name>New Moon Books</pub_name>
+    <city>Boston</city>
+    <state>MA</state>
+    <country>USA</country>
+  </publishers>
+  <publishers>
+    <pub_id>0877</pub_id>
+    <pub_name>Binnet &amp; Hardley</pub_name>
+    <city>Washington</city>
+    <state>DC</state>
+    <country>USA</country>
+  </publishers>
+  <publishers>
+    <pub_id>1389</pub_id>
+    <pub_name>Algodata Infosystems</pub_name>
+    <city>Berkeley</city>
+    <state>CA</state>
+    <country>USA</country>
+  </publishers>
+  <publishers>
+    <pub_id>1622</pub_id>
+    <pub_name>Five Lakes Publishing</pub_name>
+    <city>Chicago</city>
+    <state>IL</state>
+    <country>USA</country>
+  </publishers>
+  <publishers>
+    <pub_id>1756</pub_id>
+    <pub_name>Ramona Publishers</pub_name>
+    <city>Dallas</city>
+    <state>TX</state>
+    <country>USA</country>
+  </publishers>
+  <publishers>
+    <pub_id>9901</pub_id>
+    <pub_name>GGG&amp;G</pub_name>
+    <city>Mnchen</city>
+    <country>Germany</country>
+  </publishers>
+  <publishers>
+    <pub_id>9952</pub_id>
+    <pub_name>Scootney Books</pub_name>
+    <city>New York</city>
+    <state>NY</state>
+    <country>USA</country>
+  </publishers>
+  <publishers>
+    <pub_id>9999</pub_id>
+    <pub_name>Lucerne Publishing</pub_name>
+    <city>Paris</city>
+    <country>France</country>
+  </publishers>
+  <authors>
+    <au_id>172-32-1176</au_id>
+    <au_lname>White</au_lname>
+    <au_fname>Johnson</au_fname>
+    <phone>408 496-7223</phone>
+    <address>10932 Bigge Rd.</address>
+    <city>Menlo Park</city>
+    <state>CA</state>
+    <zip>94025</zip>
+    <contract>true</contract>
+  </authors>
+  <authors>
+    <au_id>213-46-8915</au_id>
+    <au_lname>Green</au_lname>
+    <au_fname>Marjorie</au_fname>
+    <phone>415 986-7020</phone>
+    <address>309 63rd St. #411</address>
+    <city>Oakland</city>
+    <state>CA</state>
+    <zip>94618</zip>
+    <contract>true</contract>
+  </authors>
+  <authors>
+    <au_id>238-95-7766</au_id>
+    <au_lname>Carson</au_lname>
+    <au_fname>Cheryl</au_fname>
+    <phone>415 548-7723</phone>
+    <address>589 Darwin Ln.</address>
+    <city>Berkeley</city>
+    <state>CA</state>
+    <zip>94705</zip>
+    <contract>true</contract>
+  </authors>
+  <authors>
+    <au_id>267-41-2394</au_id>
+    <au_lname>O'Leary</au_lname>
+    <au_fname>Michael</au_fname>
+    <phone>408 286-2428</phone>
+    <address>22 Cleveland Av. #14</address>
+    <city>San Jose</city>
+    <state>CA</state>
+    <zip>95128</zip>
+    <contract>true</contract>
+  </authors>
+  <authors>
+    <au_id>274-80-9391</au_id>
+    <au_lname>Straight</au_lname>
+    <au_fname>Dean</au_fname>
+    <phone>415 834-2919</phone>
+    <address>5420 College Av.</address>
+    <city>Oakland</city>
+    <state>CA</state>
+    <zip>94609</zip>
+    <contract>true</contract>
+  </authors>
+  <authors>
+    <au_id>341-22-1782</au_id>
+    <au_lname>Smith</au_lname>
+    <au_fname>Meander</au_fname>
+    <phone>913 843-0462</phone>
+    <address>10 Mississippi Dr.</address>
+    <city>Lawrence</city>
+    <state>KS</state>
+    <zip>66044</zip>
+    <contract>false</contract>
+  </authors>
+  <authors>
+    <au_id>409-56-7008</au_id>
+    <au_lname>Bennet</au_lname>
+    <au_fname>Abraham</au_fname>
+    <phone>415 658-9932</phone>
+    <address>6223 Bateman St.</address>
+    <city>Berkeley</city>
+    <state>CA</state>
+    <zip>94705</zip>
+    <contract>true</contract>
+  </authors>
+  <authors>
+    <au_id>427-17-2319</au_id>
+    <au_lname>Dull</au_lname>
+    <au_fname>Ann</au_fname>
+    <phone>415 836-7128</phone>
+    <address>3410 Blonde St.</address>
+    <city>Palo Alto</city>
+    <state>CA</state>
+    <zip>94301</zip>
+    <contract>true</contract>
+  </authors>
+  <authors>
+    <au_id>472-27-2349</au_id>
+    <au_lname>Gringlesby</au_lname>
+    <au_fname>Burt</au_fname>
+    <phone>707 938-6445</phone>
+    <address>PO Box 792</address>
+    <city>Covelo</city>
+    <state>CA</state>
+    <zip>95428</zip>
+    <contract>true</contract>
+  </authors>
+  <authors>
+    <au_id>486-29-1786</au_id>
+    <au_lname>Locksley</au_lname>
+    <au_fname>Charlene</au_fname>
+    <phone>415 585-4620</phone>
+    <address>18 Broadway Av.</address>
+    <city>San Francisco</city>
+    <state>CA</state>
+    <zip>94130</zip>
+    <contract>true</contract>
+  </authors>
+  <authors>
+    <au_id>527-72-3246</au_id>
+    <au_lname>Greene</au_lname>
+    <au_fname>Morningstar</au_fname>
+    <phone>615 297-2723</phone>
+    <address>22 Graybar House Rd.</address>
+    <city>Nashville</city>
+    <state>TN</state>
+    <zip>37215</zip>
+    <contract>false</contract>
+  </authors>
+  <authors>
+    <au_id>648-92-1872</au_id>
+    <au_lname>Blotchet-Halls</au_lname>
+    <au_fname>Reginald</au_fname>
+    <phone>503 745-6402</phone>
+    <address>55 Hillsdale Bl.</address>
+    <city>Corvallis</city>
+    <state>OR</state>
+    <zip>97330</zip>
+    <contract>true</contract>
+  </authors>
+  <authors>
+    <au_id>672-71-3249</au_id>
+    <au_lname>Yokomoto</au_lname>
+    <au_fname>Akiko</au_fname>
+    <phone>415 935-4228</phone>
+    <address>3 Silver Ct.</address>
+    <city>Walnut Creek</city>
+    <state>CA</state>
+    <zip>94595</zip>
+    <contract>true</contract>
+  </authors>
+  <authors>
+    <au_id>712-45-1867</au_id>
+    <au_lname>del Castillo</au_lname>
+    <au_fname>Innes</au_fname>
+    <phone>615 996-8275</phone>
+    <address>2286 Cram Pl. #86</address>
+    <city>Ann Arbor</city>
+    <state>MI</state>
+    <zip>48105</zip>
+    <contract>true</contract>
+  </authors>
+  <authors>
+    <au_id>722-51-5454</au_id>
+    <au_lname>DeFrance</au_lname>
+    <au_fname>Michel</au_fname>
+    <phone>219 547-9982</phone>
+    <address>3 Balding Pl.</address>
+    <city>Gary</city>
+    <state>IN</state>
+    <zip>46403</zip>
+    <contract>true</contract>
+  </authors>
+  <authors>
+    <au_id>724-08-9931</au_id>
+    <au_lname>Stringer</au_lname>
+    <au_fname>Dirk</au_fname>
+    <phone>415 843-2991</phone>
+    <address>5420 Telegraph Av.</address>
+    <city>Oakland</city>
+    <state>CA</state>
+    <zip>94609</zip>
+    <contract>false</contract>
+  </authors>
+  <authors>
+    <au_id>724-80-9391</au_id>
+    <au_lname>MacFeather</au_lname>
+    <au_fname>Stearns</au_fname>
+    <phone>415 354-7128</phone>
+    <address>44 Upland Hts.</address>
+    <city>Oakland</city>
+    <state>CA</state>
+    <zip>94612</zip>
+    <contract>true</contract>
+  </authors>
+  <authors>
+    <au_id>756-30-7391</au_id>
+    <au_lname>Karsen</au_lname>
+    <au_fname>Livia</au_fname>
+    <phone>415 534-9219</phone>
+    <address>5720 McAuley St.</address>
+    <city>Oakland</city>
+    <state>CA</state>
+    <zip>94609</zip>
+    <contract>true</contract>
+  </authors>
+  <authors>
+    <au_id>807-91-6654</au_id>
+    <au_lname>Panteley</au_lname>
+    <au_fname>Sylvia</au_fname>
+    <phone>301 946-8853</phone>
+    <address>1956 Arlington Pl.</address>
+    <city>Rockville</city>
+    <state>MD</state>
+    <zip>20853</zip>
+    <contract>true</contract>
+  </authors>
+  <authors>
+    <au_id>846-92-7186</au_id>
+    <au_lname>Hunter</au_lname>
+    <au_fname>Sheryl</au_fname>
+    <phone>415 836-7128</phone>
+    <address>3410 Blonde St.</address>
+    <city>Palo Alto</city>
+    <state>CA</state>
+    <zip>94301</zip>
+    <contract>true</contract>
+  </authors>
+  <authors>
+    <au_id>893-72-1158</au_id>
+    <au_lname>McBadden</au_lname>
+    <au_fname>Heather</au_fname>
+    <phone>707 448-4982</phone>
+    <address>301 Putnam</address>
+    <city>Vacaville</city>
+    <state>CA</state>
+    <zip>95688</zip>
+    <contract>false</contract>
+  </authors>
+  <authors>
+    <au_id>899-46-2035</au_id>
+    <au_lname>Ringer</au_lname>
+    <au_fname>Anne</au_fname>
+    <phone>801 826-0752</phone>
+    <address>67 Seventh Av.</address>
+    <city>Salt Lake City</city>
+    <state>UT</state>
+    <zip>84152</zip>
+    <contract>true</contract>
+  </authors>
+  <authors>
+    <au_id>998-72-3567</au_id>
+    <au_lname>Ringer</au_lname>
+    <au_fname>Albert</au_fname>
+    <phone>801 826-0752</phone>
+    <address>67 Seventh Av.</address>
+    <city>Salt Lake City</city>
+    <state>UT</state>
+    <zip>84152</zip>
+    <contract>true</contract>
+  </authors>
+  <pub_info>
+    <pub_id>0736</pub_id>
+    <logo>R0lGODlh0wAfALMPAAAAAIAAAACAAICAAAAAgIAAgACAgICAgMDAwP8AAAD/AP//AAAA//8A/wD//////yH5BAEAAA8ALAAAAADTAB8AQAT/8MlJq7046827/2AojiRQAWhnkiNqurA7xbBVs/hD07md4qtTKjb7FSU7GeWmIxqTTKGMt1wRkdab9iqtRn9c8DbYJDeRNp9Rat75MEr48wo1Y9flTPwEvyQ3e11pfmRRMz2IIXV/iY2Ojx92ZXh3kHJZdV5Uk5YggXmNn4qEbZtKkpOFp6VFjKB3c2Ksr1hebGqErUKVVbqppHGonY6LosPHyC3JyK7Lzs8ewtCRQ6ZugNPZvCxB12rSj7LNUJraqarGJZSj34HGX+C9tbDN9OJ23vbdeO9rhvpsgsWiZIpUq2qq5MECeGTeOS469Fgr9YLfwH2SRK2iSAvUxnZ7/zKuC/PvYDs5B0kKRCfOIaczCm0FhLgQZk1/OD+iWTJIj7ltDze9+UkUSNGjSJN6Usq0qdN4TvXli0pVRdVLxWj6vJpo3VJu0Ka4qhczG9keWtnR05DO0j2I9Uo6ywqVWt2tmlC1DYcpbj65x2p82qvIayRgBA3zTTmVUVq5/xJfGvoNqyCglyOCzLn55a68Nosh7ttm7aFfE0e+Lf3rtEp7fGiJJA2Uc+tzMi9OjY274U2WC2UZvOVyS7lXiTUOl+pL83GM3WQGjXUaJh2LFTnW3N48N/aOH7WOXc7YpER3U3BJhS79JTzuOMlzt+nZekiMKXn7k2+6/yz1y3njWDBADDGGD0qb6SXUQ5+BtqBzvvFXX1k8AaJbJhJyVdRdSkW2W4UaNsVhVGeFaKIOEQAAOw==</logo>
+    <pr_info>This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.
+
+This is sample text data for New Moon Books, publisher 0736 in the pubs database. New Moon Books is located in Boston, Massachusetts.</pr_info>
+  </pub_info>
+  <pub_info>
+    <pub_id>0877</pub_id>
+    <logo>R0lGODlhiwAvALMPAAAAAIAAAACAAICAAAAAgIAAgACAgICAgMDAwP8AAAD/AP//AAAA//8A/wD//////yH5BAEAAA8ALAAAAACLAC8AQAT/8MlJq7046827/6AEhGQInOOEpivVljCcxvT1iih+unntc7PSakgsGo/IpHJJ/M12vB8wWNlBNVeck0UFPYNXaFYM/mpVXTQ6G20/xtwqN35m26X42+v27uH/KoBbRjpHgoJphx96PXx8ij6JkJOUf2ZqdWVnmW5sUZ4WdpJkbn2cmKQilausJKCSrTZMc36xXrYbjo21j7gdsL6MZHCgvljGGLrDZcXINs6hvLvEwNCq1tFMhc3Yb93fq19DpYDctRmiW5uumJvD7qmn69m/VGGaffi7qHR17adw1sWLloxZonQC+5niN4/HGHAQ1VWJSLFcxYtOIM6adi5itVjKuGg5/AiNJKuQhUZivNYNZT6DK715JPSSJkaTJ/3skcatJTiXLm/+5ClyDU5jRykBJRozqdKNtHpacxpzJdVtULNq3aokY9WvHq6C9fhPqpRmVqohrDHQxL+Fy6h5EtbRlNS1NcXd26kyIcsibQIulDfYnFlDBf0yHAy336XFgiMDbgiPMTm5AyVj3QvmbSrNiyvLkoPO3uPGpT7jm6dXmmLBKUkX3EcwNeC54xg/mju296veYIsBiAAAOw==</logo>
+    <pr_info>This is sample text data for Binnet &amp; Hardley, publisher 0877 in the pubs database. Binnet &amp; Hardley is located in Washington, D.C.
+
+This is sample text data for Binnet &amp; Hardley, publisher 0877 in the pubs database. Binnet &amp; Hardley is located in Washington, D.C.
+
+This is sample text data for Binnet &amp; Hardley, publisher 0877 in the pubs database. Binnet &amp; Hardley is located in Washington, D.C.
+
+This is sample text data for Binnet &amp; Hardley, publisher 0877 in the pubs database. Binnet &amp; Hardley is located in Washington, D.C.
+
+This is sample text data for Binnet &amp; Hardley, publisher 0877 in the pubs database. Binnet &amp; Hardley is located in Washington, D.C.</pr_info>
+  </pub_info>
+  <pub_info>
+    <pub_id>1389</pub_id>
+    <logo>R0lGODlhwgAdALMPAAAAAIAAAACAAICAAAAAgIAAgACAgICAgMDAwP8AAAD/AP//AAAA//8A/wD//////yH5BAEAAA8ALAAAAADCAB0AQAT/8MlJq7046827/2AojhxgnihAriyWnm0sz7M52Q8s4fiu5ryf7ybsAUE6o/LXa6qWx6FU6nzCnESax6jtei/cL+0lFJsp5NR5/VWny9kx3DXPpJFhcb79qrxRVGVBaEyChYRxUVN/iYpYjYmAYEWUdJF1e2yam5ydnp+goaKjpKWmp6ipWmo+ZBaZI7CQGndbdWayXX+MiIpRUL57j5OEfY3DwHmDvr3Bh4vPr29Eu9CtccnL1lO/1c7H0cPf24GX2JWcuaq4t+vu7/C6kvG2tfSg9vd20/qevP10jAHctKtdv3wDzxRUBw9hQj1JHDJroY4hEIElDHqxKGdhmCXzfy7OEWisJCtqJ0VW0SHSj6RsEeeFZMWylTCPIbv1ytbM5SxwGIE5MsTtXFFzRrfBwmgzaDSdSaGdBDnTFTikUqkWE1oLGaWaq55qg1oOq9AOXNEdHUeMHFlxQFOqTElVq0uZVoeatJf2Lhy6I3PaJbdSI5+HhxGTkKtYBsdOEQAAOw==</logo>
+    <pr_info>This is sample text data for Algodata Infosystems, publisher 1389 in the pubs database. Algodata Infosystems is located in Berkeley, California.
+
+This is sample text data for Algodata Infosystems, publisher 1389 in the pubs database. Algodata Infosystems is located in Berkeley, California.
+
+This is sample text data for Algodata Infosystems, publisher 1389 in the pubs database. Algodata Infosystems is located in Berkeley, California.
+
+This is sample text data for Algodata Infosystems, publisher 1389 in the pubs database. Algodata Infosystems is located in Berkeley, California.
+
+This is sample text data for Algodata Infosystems, publisher 1389 in the pubs database. Algodata Infosystems is located in Berkeley, California.
+
+This is sample text data for Algodata Infosystems, publisher 1389 in the pubs database. Algodata Infosystems is located in Berkeley, California.
+
+This is sample text data for Algodata Infosystems, publisher 1389 in the pubs database. Algodata Infosystems is located in Berkeley, California.
+
+This is sample text data for Algodata Infosystems, publisher 1389 in the pubs database. Algodata Infosystems is located in Berkeley, California.
+
+This is sample text data for Algodata Infosystems, publisher 1389 in the pubs database. Algodata Infosystems is located in Berkeley, California.
+
+This is sample text data for Algodata Infosystems, publisher 1389 in the pubs database. Algodata Infosystems is located in Berkeley, California.</pr_info>
+  </pub_info>
+  <pub_info>
+    <pub_id>1622</pub_id>
+    <logo>R0lGODlh9QA0ALMPAAAAAIAAAACAAICAAAAAgIAAgACAgICAgMDAwP8AAAD/AP//AAAA//8A/wD//////yH5BAEAAA8ALAAAAAD1ADQAQAT/8MlJq7046827/2AojmTZAWaqAWzrvrAqz3RtZ+gtwqzu/8CgKZezECfFIe8laY2OQiMOBJ0+ithTc4W8QXnba1dMJmN75Yvzih6zk98s5VylJzH3eRi+n6/NYYCBf2l/X25seoNtYodqgXp5iYp+MVJNcI5ymRWclFaSn5BEd3xldaVjpo6CfZ1MjTNLs7BRtre4OoSQuR60s73BwlGhwkvDyMnIxcS/zMrQ0TWsw2suO7y2Va0c249pId641IqpraRgRtfg3IKbnZjpmIh42arlrvh1vG3v9+ejXJlD8YzKMXXApClcSGJfO4YQI0oMF9FZwokYlRXMdTGjx4kb/5tZ+kgSY0gg8kqqlIgupQ2Luz6IE1mLij18DW8Sy4cQ5bp1NtntPEWPi1Cc8XzpTOpljyVNlEiJUoMG6DwkUIlindpPi9ZYhQSay7etqypTZK/a80SQJ1JAmmCF+jkQXrs8LasuUvqGEbes+gYJVssTcFmBdts+dPuVbMyncge7a4yqqt6j/74BpIzYcdZVacN+JaRYxclXLleq3ln39AqYtFbLNlYPcwlns3N7dK27t+/av4ML5wsR9sjhyC8xNF4zufOlxpj7fU6dd5CD1LMT15hau3fgybB/Hw8++nHy6O1W65i+vXVZMG/HLGmV6nSZ87XdpAP/F1OKtv0gyf99Rj1TFoGXGIjgEE5FBp18dC1Y23sptFRUgRs4FCBjUTW12DjW5IdhL4dtmNmEtz0oIId9/YcVI/XhYdl91/y0yC4xvsgXaFbZ2Eh9leHl1xFAGuJEjvEQdOR+nWk1k4LoqIcTkYgMKOWGFjY5mVD+/KVeMV2CeSVcLGqomJm2hYiWHFuCw2ZpM1nxyomsrLlZlx129uZge25BDp1XsakZalK91WY2zAi6UZxeHtqHQ2iJBtqdU/LjZ5mWVqlikuJ4E5emJk5ioE4l/kmlk1RpaVhAmxH1J2Od6shOd5VVOpqsqFxo6Jd9KnkZpaf4Mymkbw15aYv2DZhojMwRimw/jzjm2JyMEvY15JFF9hMtadzOaEcl/AVGw7QIddeecKWGeoJ05p6Lrqwf7sAuku46p62gFTZb776D8utvNREAADs=</logo>
+    <pr_info>This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.
+
+This is sample text data for Five Lakes Publishing, publisher 1622 in the pubs database. Five Lakes Publishing is located in Chicago, Illinois.</pr_info>
+  </pub_info>
+  <pub_info>
+    <pub_id>1756</pub_id>
+    <logo>R0lGODlh4wAlALMPAAAAAIAAAACAAICAAAAAgIAAgACAgICAgMDAwP8AAAD/AP//AAAA//8A/wD//////yH5BAEAAA8ALAAAAADjACUAQAT/8MlJq7046827/2AojiQIWOcFpNLqTm4MxzJN0euc27r84ayHjeervYRHZFLJYzafLyiOkzpZW0BNsng05npf7Des7FF9TrJOXI0GmWY2Gl6O08PcpapUubKuLUIwgoF/hIKGiYOGhYdUiHuKjZOQlJR+kYt9h4CVnp2BfBiYb6Kmp1p7IqWbN44drK6xjxlAtqi4qFNyerW9TnZnaje/ua8qVk1rwHduY1vObc/Sw8hzcWh51HRsYFPaduDas6Ez1tWykJKfnOrt62+gxDXvnpf1mJbsKO76nf9pohwbtMoePmMITbQrlw/WQH0FyeWSmLCixYsYM3qg6I2jRo3D/9BpIYenmC9fInGxUhYt5UeVzrDw2vjr2iqTLx/yA7OMSEtu0HZ0GUrNY5Z5QktO2zYnm004Uv4QlSZnQ5VROMUgmtptXLJtzfxkTdNR6s+AS80yQhpWLbaWXyWq3RGwVr17pDbJA+gqHUo9Akdpuud3sLt4h/UaDgIulYm8/ODdZSdZciPEkXUCrLz41ebEnwtvpgdRp8J0ij7n3WtwtWKPmlhzxttZNuV+uEPHJgQ7leveOU81hOxwlu2Npg2GAB68ufPnL5lDnw597HKXuoTZkk79sRplVmuO+1EMfMJY27d3n3g0qXVubJfRFPleVCnxPOX3+ar1HJlpKGBHEP9USv3HlxfBDNhRV8bt119+tJyB1FxeqWdOW7ugZZQb+0Xz1i1emeEUiFFlaKFdEpIlX2NegEXgUg8+FaB5jbXFoIEF7lLjiEwFJVd45vXEoofMtNhNHUHOCM2RPFZlZILq7ejjjXG5dFU8GZ7DJFc8NmkjfFhViOUtGs4En4VSFkhllVbNg0RdJ8n01oUBzlgOMXSO1JSMDj6IlZslfIfjnQqOxdgSVZI0mWqe5bboZP4xulJilx3kD6W3XZpIepp5l1xqtd0G6mzKnblPpqFWitikwz26almV7lRQrAqiSpxtuun2iDy0iXbQq6jZCqmojWJGwquj/oobQ8oim5xYr8EeBxqx0b42bbXJroXcpIWVRmuDrJXGHaYNEUbus7uBetpAoIz727LrmXLrbttm0m1xdo1bKx/vxlsRr6X6lsk69Qqmr77+JjwdwPyiq4rCEEcsMQoRAAA7</logo>
+    <pr_info>This is sample text data for Ramona Publishers, publisher 1756 in the pubs database. Ramona Publishers is located in Dallas, Texas.</pr_info>
+  </pub_info>
+  <pub_info>
+    <pub_id>9901</pub_id>
+    <logo>R0lGODlhXQAiALMPAAAAAIAAAACAAICAAAAAgIAAgACAgICAgMDAwP8AAAD/AP//AAAA//8A/wD//////yH5BAEAAA8ALAAAAABdACIAQAT/8MlJq7046837A98HjCSYlaOGqmi7nm4KzmI6vRvJ6Zhd/7iejjZr7XgsUzJWOrpCRaZ0Sq1ar00idsvtXqHQJsUosjDNOLLJJyHXjMR3JSZ0j59hHrKN56/iXoGCg2BKHoeIiYpzhYOOj1WFb2wsHYY5L2uXMHCNbFR3ZzdYo4ZekmJ+lHVOFzaXpql1gJNolJuyrnuaaGWqc0+AoqF9pXaqW7ZnwpDNzkN5z9LOntPWp8zX2qTZx5NByLnfX8BSqN66m7aWdnucf9W4u/I+q7lwa8rl8Fq35sTHSI3a9yUbwGJTDv6TY4xbNYDs1JUTEsIXxCXnPonThwnXnYENOTvSClKM4KpwSqLU0wguWDyJvSwtcgdT4ciSJpfUTPauU79tQEF1C0rUZ8VFSJMqHXN0qdOniQBEAAA7</logo>
+    <pr_info>This is sample text data for GGG&amp;G, publisher 9901 in the pubs database. GGG&amp;G is located in München, Germany.</pr_info>
+  </pub_info>
+  <pub_info>
+    <pub_id>9952</pub_id>
+    <logo>R0lGODlhBwEoALMPAAAAAIAAAACAAICAAAAAgIAAgACAgICAgMDAwP8AAAD/AP//AAAA//8A/wD//////yH5BAEAAA8ALAAAAAAHASgAQAT/8MlJq7046827/2AojmRpZgAFrCx7tW0Fp9JMTzOeP3ZfxxaYDDgk8oQY5NGlUtqKzKVRentSbydZEmkNKpvRHRSri4JX5+l3a97kUsInnEely+3vKzw/v5/IWYGCHX12hoWIh4qJjIuDjxyNko5zOJCCk5mUm5ednp+gdKGjpKWmp0WPWD5pgD9Tr0xirV5tsTtrPa6sbrpks2Wya7ervrXAf7QovMTIwczHu7BlY3x6m3u+jNrb2ot8Mdnh2I4vqJ6a6eSa5+2kjaLu8vP09Zeu9vn6+/yAXWzSjAFkxk0YvjqtiNh6pcHbwH/VnOVCk/DgiCrDntnKKIbjMI+z/yYuvHJtWRgjIE8uDAmko7Ms/qy8JBmNhsSP0+II1Dgy48BnGi2Jc3FnKBqjMyGawEjQYUmaPIO+yAkL2E5amd6Ai3MN6VFrcnzoWufBIr9z6tKSVct2rdu27FSchQT3rV2zc0OpjZdXbt2/fPsK7oRX711OgxMrrrG4sePHSSBLnqy4MOXLmE3h8zmk4cyIyTy32YnXIjTR06Zy/vhQVcSDyAoGdCrbZk81YxGeQX1aj1LfsVEq7F2C6chmKkd/sZpytvLnFEE/jQZUqnWoxMZI/bw0as3NVIevxDm+i8joqn9r130rffTmxYguV9+94vVq7m2H37i/4Gvn6PHGy85NLcFXUYA8WVZWfvodR6BB5fEXYYPMHVcdIcKFA5ZWXPWx1VcdisIdCOCZoV6FJp6HIHsXNrMeb+YgMk5YIRb1IVF4yGdjUYqQaN9/6MnGIH3NAQSke2txc4iQHvonI440gkVOQ7th6NOI9/1E3TJHPnnUOlJ2MyMlYeb4ZTZmAlaJFpnRdZiabxoCCpx1ydXmgnTGGdedkbXFGJ95BspnKXEp2I+eiBo6qD6KtiPoXosO2uiciSIW6aWEuAMYppx+MmmnoEb6aaiktglABAA7</logo>
+    <pr_info>This is sample text data for Scootney Books, publisher 9952 in the pubs database. Scootney Books is located in New York City, New York.</pr_info>
+  </pub_info>
+  <pub_info>
+    <pub_id>9999</pub_id>
+    <logo>R0lGODlhqQAkALMPAAAAAIAAAACAAICAAAAAgIAAgACAgICAgMDAwP8AAAD/AP//AAAA//8A/wD//////yH5BAEAAA8ALAAAAACpACQAQAT/8MlJq7046827/2D4ARpgnmdlPqjUinAsz/RFZmie1nzv/yPVjnUTtoZESm6iaxJvyOdKyCQhp6vl9FlNYbe78Nb1YnGaaKB6zcY4mSV0mvxu2++8ok0+luL/gD16FnJGgTFzbklKi1yEjYYzg0uRblmLZX5Kg5BffZt7VphgZKCboqaNY2A6LnF8lIeysyCcp61SWUdRtL2Atl11t5m+xb+vfMbKy2Y4hSrMQJ+QG9M+trzNwdHOqZZ7I8CCw3CWYqafpKWR566E2HpfoKtQL0OsXXTrk2ewYkWT+lyxAe0UQXPl9DFa6EhbQof8vjnkRrFiQXP+rFncKAlZRiPZwziKVOSs1ZxkI1Pi8JjpGTGVMN1hxAXHy8uYMcXlohksJE6YOj/+HNohKCyiSKuxjCUzaVKjidaJ5Imw0kSDJDtmzYd1oxWAGqWmCmstrAdON0HWu6iQK6aH6abRo7bW0Vx0YMd6o+PlVteeuvSqqrLPz1eGcd/eZXWYMF1R975eWiU2HtM4ju0KhLK3U11gcsHWLbVYi+XMpbG9o3e5njy+ntoxlEqVGt99sVJjoUKbN7t+Qp2OxNdUuHFkB48rhwEgAgA7</logo>
+    <pr_info>This is sample text data for Lucerne Publishing, publisher 9999 in the pubs database. Lucerne publishing is located in Paris, France.
+
+This is sample text data for Lucerne Publishing, publisher 9999 in the pubs database. Lucerne publishing is located in Paris, France.
+
+This is sample text data for Lucerne Publishing, publisher 9999 in the pubs database. Lucerne publishing is located in Paris, France.
+
+This is sample text data for Lucerne Publishing, publisher 9999 in the pubs database. Lucerne publishing is located in Paris, France.</pr_info>
+  </pub_info>
+  <roysched>
+    <title_id>BU1032</title_id>
+    <lorange>0</lorange>
+    <hirange>5000</hirange>
+    <royalty>10</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU1032</title_id>
+    <lorange>5001</lorange>
+    <hirange>50000</hirange>
+    <royalty>12</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PC1035</title_id>
+    <lorange>0</lorange>
+    <hirange>2000</hirange>
+    <royalty>10</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PC1035</title_id>
+    <lorange>2001</lorange>
+    <hirange>3000</hirange>
+    <royalty>12</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PC1035</title_id>
+    <lorange>3001</lorange>
+    <hirange>4000</hirange>
+    <royalty>14</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PC1035</title_id>
+    <lorange>4001</lorange>
+    <hirange>10000</hirange>
+    <royalty>16</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PC1035</title_id>
+    <lorange>10001</lorange>
+    <hirange>50000</hirange>
+    <royalty>18</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU2075</title_id>
+    <lorange>0</lorange>
+    <hirange>1000</hirange>
+    <royalty>10</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU2075</title_id>
+    <lorange>1001</lorange>
+    <hirange>3000</hirange>
+    <royalty>12</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU2075</title_id>
+    <lorange>3001</lorange>
+    <hirange>5000</hirange>
+    <royalty>14</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU2075</title_id>
+    <lorange>5001</lorange>
+    <hirange>7000</hirange>
+    <royalty>16</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU2075</title_id>
+    <lorange>7001</lorange>
+    <hirange>10000</hirange>
+    <royalty>18</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU2075</title_id>
+    <lorange>10001</lorange>
+    <hirange>12000</hirange>
+    <royalty>20</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU2075</title_id>
+    <lorange>12001</lorange>
+    <hirange>14000</hirange>
+    <royalty>22</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU2075</title_id>
+    <lorange>14001</lorange>
+    <hirange>50000</hirange>
+    <royalty>24</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PS2091</title_id>
+    <lorange>0</lorange>
+    <hirange>1000</hirange>
+    <royalty>10</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PS2091</title_id>
+    <lorange>1001</lorange>
+    <hirange>5000</hirange>
+    <royalty>12</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PS2091</title_id>
+    <lorange>5001</lorange>
+    <hirange>10000</hirange>
+    <royalty>14</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PS2091</title_id>
+    <lorange>10001</lorange>
+    <hirange>50000</hirange>
+    <royalty>16</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PS2106</title_id>
+    <lorange>0</lorange>
+    <hirange>2000</hirange>
+    <royalty>10</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PS2106</title_id>
+    <lorange>2001</lorange>
+    <hirange>5000</hirange>
+    <royalty>12</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PS2106</title_id>
+    <lorange>5001</lorange>
+    <hirange>10000</hirange>
+    <royalty>14</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PS2106</title_id>
+    <lorange>10001</lorange>
+    <hirange>50000</hirange>
+    <royalty>16</royalty>
+  </roysched>
+  <roysched>
+    <title_id>MC3021</title_id>
+    <lorange>0</lorange>
+    <hirange>1000</hirange>
+    <royalty>10</royalty>
+  </roysched>
+  <roysched>
+    <title_id>MC3021</title_id>
+    <lorange>1001</lorange>
+    <hirange>2000</hirange>
+    <royalty>12</royalty>
+  </roysched>
+  <roysched>
+    <title_id>MC3021</title_id>
+    <lorange>2001</lorange>
+    <hirange>4000</hirange>
+    <royalty>14</royalty>
+  </roysched>
+  <roysched>
+    <title_id>MC3021</title_id>
+    <lorange>4001</lorange>
+    <hirange>6000</hirange>
+    <royalty>16</royalty>
+  </roysched>
+  <roysched>
+    <title_id>MC3021</title_id>
+    <lorange>6001</lorange>
+    <hirange>8000</hirange>
+    <royalty>18</royalty>
+  </roysched>
+  <roysched>
+    <title_id>MC3021</title_id>
+    <lorange>8001</lorange>
+    <hirange>10000</hirange>
+    <royalty>20</royalty>
+  </roysched>
+  <roysched>
+    <title_id>MC3021</title_id>
+    <lorange>10001</lorange>
+    <hirange>12000</hirange>
+    <royalty>22</royalty>
+  </roysched>
+  <roysched>
+    <title_id>MC3021</title_id>
+    <lorange>12001</lorange>
+    <hirange>50000</hirange>
+    <royalty>24</royalty>
+  </roysched>
+  <roysched>
+    <title_id>TC3218</title_id>
+    <lorange>0</lorange>
+    <hirange>2000</hirange>
+    <royalty>10</royalty>
+  </roysched>
+  <roysched>
+    <title_id>TC3218</title_id>
+    <lorange>2001</lorange>
+    <hirange>4000</hirange>
+    <royalty>12</royalty>
+  </roysched>
+  <roysched>
+    <title_id>TC3218</title_id>
+    <lorange>4001</lorange>
+    <hirange>6000</hirange>
+    <royalty>14</royalty>
+  </roysched>
+  <roysched>
+    <title_id>TC3218</title_id>
+    <lorange>6001</lorange>
+    <hirange>8000</hirange>
+    <royalty>16</royalty>
+  </roysched>
+  <roysched>
+    <title_id>TC3218</title_id>
+    <lorange>8001</lorange>
+    <hirange>10000</hirange>
+    <royalty>18</royalty>
+  </roysched>
+  <roysched>
+    <title_id>TC3218</title_id>
+    <lorange>10001</lorange>
+    <hirange>12000</hirange>
+    <royalty>20</royalty>
+  </roysched>
+  <roysched>
+    <title_id>TC3218</title_id>
+    <lorange>12001</lorange>
+    <hirange>14000</hirange>
+    <royalty>22</royalty>
+  </roysched>
+  <roysched>
+    <title_id>TC3218</title_id>
+    <lorange>14001</lorange>
+    <hirange>50000</hirange>
+    <royalty>24</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PC8888</title_id>
+    <lorange>0</lorange>
+    <hirange>5000</hirange>
+    <royalty>10</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PC8888</title_id>
+    <lorange>5001</lorange>
+    <hirange>10000</hirange>
+    <royalty>12</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PC8888</title_id>
+    <lorange>10001</lorange>
+    <hirange>15000</hirange>
+    <royalty>14</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PC8888</title_id>
+    <lorange>15001</lorange>
+    <hirange>50000</hirange>
+    <royalty>16</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PS7777</title_id>
+    <lorange>0</lorange>
+    <hirange>5000</hirange>
+    <royalty>10</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PS7777</title_id>
+    <lorange>5001</lorange>
+    <hirange>50000</hirange>
+    <royalty>12</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PS3333</title_id>
+    <lorange>0</lorange>
+    <hirange>5000</hirange>
+    <royalty>10</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PS3333</title_id>
+    <lorange>5001</lorange>
+    <hirange>10000</hirange>
+    <royalty>12</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PS3333</title_id>
+    <lorange>10001</lorange>
+    <hirange>15000</hirange>
+    <royalty>14</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PS3333</title_id>
+    <lorange>15001</lorange>
+    <hirange>50000</hirange>
+    <royalty>16</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU1111</title_id>
+    <lorange>0</lorange>
+    <hirange>4000</hirange>
+    <royalty>10</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU1111</title_id>
+    <lorange>4001</lorange>
+    <hirange>8000</hirange>
+    <royalty>12</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU1111</title_id>
+    <lorange>8001</lorange>
+    <hirange>10000</hirange>
+    <royalty>14</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU1111</title_id>
+    <lorange>12001</lorange>
+    <hirange>16000</hirange>
+    <royalty>16</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU1111</title_id>
+    <lorange>16001</lorange>
+    <hirange>20000</hirange>
+    <royalty>18</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU1111</title_id>
+    <lorange>20001</lorange>
+    <hirange>24000</hirange>
+    <royalty>20</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU1111</title_id>
+    <lorange>24001</lorange>
+    <hirange>28000</hirange>
+    <royalty>22</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU1111</title_id>
+    <lorange>28001</lorange>
+    <hirange>50000</hirange>
+    <royalty>24</royalty>
+  </roysched>
+  <roysched>
+    <title_id>MC2222</title_id>
+    <lorange>0</lorange>
+    <hirange>2000</hirange>
+    <royalty>10</royalty>
+  </roysched>
+  <roysched>
+    <title_id>MC2222</title_id>
+    <lorange>2001</lorange>
+    <hirange>4000</hirange>
+    <royalty>12</royalty>
+  </roysched>
+  <roysched>
+    <title_id>MC2222</title_id>
+    <lorange>4001</lorange>
+    <hirange>8000</hirange>
+    <royalty>14</royalty>
+  </roysched>
+  <roysched>
+    <title_id>MC2222</title_id>
+    <lorange>8001</lorange>
+    <hirange>12000</hirange>
+    <royalty>16</royalty>
+  </roysched>
+  <roysched>
+    <title_id>MC2222</title_id>
+    <lorange>12001</lorange>
+    <hirange>20000</hirange>
+    <royalty>18</royalty>
+  </roysched>
+  <roysched>
+    <title_id>MC2222</title_id>
+    <lorange>20001</lorange>
+    <hirange>50000</hirange>
+    <royalty>20</royalty>
+  </roysched>
+  <roysched>
+    <title_id>TC7777</title_id>
+    <lorange>0</lorange>
+    <hirange>5000</hirange>
+    <royalty>10</royalty>
+  </roysched>
+  <roysched>
+    <title_id>TC7777</title_id>
+    <lorange>5001</lorange>
+    <hirange>15000</hirange>
+    <royalty>12</royalty>
+  </roysched>
+  <roysched>
+    <title_id>TC7777</title_id>
+    <lorange>15001</lorange>
+    <hirange>50000</hirange>
+    <royalty>14</royalty>
+  </roysched>
+  <roysched>
+    <title_id>TC4203</title_id>
+    <lorange>0</lorange>
+    <hirange>2000</hirange>
+    <royalty>10</royalty>
+  </roysched>
+  <roysched>
+    <title_id>TC4203</title_id>
+    <lorange>2001</lorange>
+    <hirange>8000</hirange>
+    <royalty>12</royalty>
+  </roysched>
+  <roysched>
+    <title_id>TC4203</title_id>
+    <lorange>8001</lorange>
+    <hirange>16000</hirange>
+    <royalty>14</royalty>
+  </roysched>
+  <roysched>
+    <title_id>TC4203</title_id>
+    <lorange>16001</lorange>
+    <hirange>24000</hirange>
+    <royalty>16</royalty>
+  </roysched>
+  <roysched>
+    <title_id>TC4203</title_id>
+    <lorange>24001</lorange>
+    <hirange>32000</hirange>
+    <royalty>18</royalty>
+  </roysched>
+  <roysched>
+    <title_id>TC4203</title_id>
+    <lorange>32001</lorange>
+    <hirange>40000</hirange>
+    <royalty>20</royalty>
+  </roysched>
+  <roysched>
+    <title_id>TC4203</title_id>
+    <lorange>40001</lorange>
+    <hirange>50000</hirange>
+    <royalty>22</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU7832</title_id>
+    <lorange>0</lorange>
+    <hirange>5000</hirange>
+    <royalty>10</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU7832</title_id>
+    <lorange>5001</lorange>
+    <hirange>10000</hirange>
+    <royalty>12</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU7832</title_id>
+    <lorange>10001</lorange>
+    <hirange>15000</hirange>
+    <royalty>14</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU7832</title_id>
+    <lorange>15001</lorange>
+    <hirange>20000</hirange>
+    <royalty>16</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU7832</title_id>
+    <lorange>20001</lorange>
+    <hirange>25000</hirange>
+    <royalty>18</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU7832</title_id>
+    <lorange>25001</lorange>
+    <hirange>30000</hirange>
+    <royalty>20</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU7832</title_id>
+    <lorange>30001</lorange>
+    <hirange>35000</hirange>
+    <royalty>22</royalty>
+  </roysched>
+  <roysched>
+    <title_id>BU7832</title_id>
+    <lorange>35001</lorange>
+    <hirange>50000</hirange>
+    <royalty>24</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PS1372</title_id>
+    <lorange>0</lorange>
+    <hirange>10000</hirange>
+    <royalty>10</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PS1372</title_id>
+    <lorange>10001</lorange>
+    <hirange>20000</hirange>
+    <royalty>12</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PS1372</title_id>
+    <lorange>20001</lorange>
+    <hirange>30000</hirange>
+    <royalty>14</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PS1372</title_id>
+    <lorange>30001</lorange>
+    <hirange>40000</hirange>
+    <royalty>16</royalty>
+  </roysched>
+  <roysched>
+    <title_id>PS1372</title_id>
+    <lorange>40001</lorange>
+    <hirange>50000</hirange>
+    <royalty>18</royalty>
+  </roysched>
+</NewDataSet>

@@ -1,0 +1,42 @@
+<topic>
+	<head>
+		<title>FIRST</title>
+		<keywords>
+			<keyword term="functions, FIRST" />
+			<keyword term="aggregates, FIRST" />
+			<keyword term="aggregate functions, FIRST" />
+			<keyword term="FIRST aggregate" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Aggregate Functions.html">Aggregate Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns the first value of the values in a group.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">FIRST ( expression )</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						An expression to determine the first value of. <c>expression</c> can be of any type.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The first of all evaluated values of <c>expression</c> in a group.
+			</p>
+		</returns>
+	</body>
+</topic>

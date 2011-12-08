@@ -1,0 +1,41 @@
+﻿<topic>
+	<head>
+		<title>Assert</title>
+		<keywords>
+			<keyword term="execution plan, assert"/>
+			<keyword term="physical operators, assert"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Assert</b> operator verifies a condition. For example, it validates that a scalar subquery returns one row. For each input row,
+				the <b>Assert</b> operator evaluates the expression in the <c>Predicate</c> property. If this expression evaluates to <c>NULL</c>, the
+				row is passed through the <b>Assert</b> operator. If this expression evaluates to a non-<c>NULL</c> value, the appropriate error will
+				be raised.
+			</p>
+
+			<p>
+				The <b>Assert</b> operator is a physical operator.
+			</p>
+		</summary>
+
+		<section title="Properties">
+			<table>
+				<tr>
+					<th>Property Name</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>Predicate</td>
+					<td>
+						Specifies the condition that must evaluate to <c>NULL</c>.
+					</td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</topic>

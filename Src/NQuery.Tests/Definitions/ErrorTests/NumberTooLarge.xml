@@ -1,0 +1,42 @@
+<test>
+  <sql>SELECT	-- INT --
+		0,
+		0o,
+		0h,
+		0b,
+
+		2147483647,
+		07fffffffh,
+		17777777777o,
+		1111111111111111111111111111111b,
+	 	
+		4294967295,
+       	0ffffffffh,
+		37777777777o,
+		11111111111111111111111111111111b,
+		
+		9223372036854775807,
+		07fffffffffffffffh,
+		777777777777777777777o,
+		111111111111111111111111111111111111111111111111111111111111111b,
+		
+		-- These four will overflow:
+		0fffffffffffffffffh,
+		18446744073709551615,
+		1777777777777777777777o,
+		1111111111111111111111111111111111111111111111111111111111111111b,
+		
+		-- DOUBLE --
+		
+		1.7976931348623157E+308,
+		
+		-- This will overflow:
+		1.7976931348623157E+309</sql>
+  <expectedErrors>
+    <expectedError id="NumberTooLarge" text="The number '0fffffffffffffffff' is too large." />
+    <expectedError id="NumberTooLarge" text="The number '18446744073709551615' is too large." />
+    <expectedError id="NumberTooLarge" text="The number '1777777777777777777777' is too large." />
+    <expectedError id="NumberTooLarge" text="The number '1111111111111111111111111111111111111111111111111111111111111111' is too large." />
+    <expectedError id="NumberTooLarge" text="The number '1.7976931348623157E+309' is too large." />
+  </expectedErrors>
+</test>

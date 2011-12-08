@@ -1,0 +1,46 @@
+<topic>
+	<head>
+		<title>REPLICATE</title>
+		<keywords>
+			<keyword term="functions, REPLICATE" />
+			<keyword term="string functions, REPLICATE" />
+			<keyword term="REPLICATE function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="String Functions.html">String Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Repeats a string for a specified number of times.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">REPLICATE(str AS string, count AS int) RETURNS string</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="str">
+					<p>
+						Specifies the string to be repeated.
+					</p>
+				</param>
+				<param name="count">
+					<p>
+						Is a positive number that specifies how many times <c>str</c> should be repeated.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				If <c>count</c> is negative, <c>NULL</c> is returned. Otherwise <c>str</c> concatenated <c>count</c> times is returned.
+			</p>
+		</returns>
+	</body>
+</topic>

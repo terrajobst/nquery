@@ -1,0 +1,62 @@
+<topic>
+	<head>
+		<title>Custom Aggregates</title>
+		<keywords>
+			<keyword term="extending, aggregates" />
+			<keyword term="customizing, aggregates" />
+			<keyword term="adding, aggregates" />
+			<keyword term="AggregateBinding class, using" />
+			<keyword term="NQuery.Runtime.AggregateBinding class, using" />
+			<keyword term="IAggregator interface, using" />
+			<keyword term="NQuery.Runtime.IAggregator interface, using" />
+		</keywords>
+	</head>
+	<body>
+		<summary>
+			<p>
+				NQuery provides some <a href="/Language Reference/Functions/Aggregate Functions.html">built-in aggregates</a> but you can also create
+				custom aggregates.
+			</p>
+			<p>
+				To create a custom aggregate you have to create an aggregate binding. Aggregate bindings are defined by creating a new class
+				derived from <see cref="T:NQuery.Runtime.AggregateBinding">AggregateBinding</see>. The main reponsibility of this class
+				is to create an <see cref="T:NQuery.Runtime.IAggregator">IAggregator</see> for a given input type to perform the actual aggregation.
+			</p>
+			<p>
+				Splitting the aggregation into these two parts is similar to the <see cref="T:System.Collections.IEnumerable">IEnumerable</see>-<see cref="T:System.Collections.IEnumerator">IEnumerator</see>
+				pattern. This allows multiple concurrent aggregations.
+			</p>
+		</summary>
+
+		<section title="Creating a Custom Aggregate">
+			<p>
+				In this sample we want to create a new aggregate that simply concatenates string values to produce a comma separated list of values.
+				This aggregate is similar to the built-in aggregate <a href="/Language Reference/Functions/Concat.html">CONCAT</a> but for the sake
+				of simplicity somes features are missing (i.e. our aggregate performs no duplicate removal, no sorting and will only work for strings).
+			</p>
+			<p>
+				The aggregate binding is declared as follows:
+			</p>
+			<sampleCode lang="cs" title="Creating an Aggregate Binding" source="..\Samples\Extensibility\CustomAggregate\CustomAggregate.cs" region="AggregateBinding" />
+			<p>
+				The aggregator for our sample aggregate function is declared as follows:
+			</p>
+			<sampleCode lang="cs" title="Implementing IAggregate" source="..\Samples\Extensibility\CustomAggregate\CustomAggregate.cs" region="Aggregator" />
+		</section>
+
+		<section title="Using a Custom Aggregate">
+			<p>
+				In the following sample we will use a query to create a list of employees grouped by their cities. Each row will represent
+				a city. The employees that live in that city will be contained as a comma separated list in the <c>Employee</c> column.
+			</p>
+			<p>
+				The sample uses the following data type:
+			</p>
+			<sampleCode lang="cs" title="Data Type" source="..\Samples\Extensibility\CustomAggregate\Form1.cs" region="Employee" />
+			<p>
+				The following example shows how to use a custom aggregate.
+			</p>
+			<sampleCode lang="cs" title="Using a Custom Aggregate" source="..\Samples\Extensibility\CustomAggregate\Form1.cs" region="Usage" />
+		</section>
+	</body>
+</topic>

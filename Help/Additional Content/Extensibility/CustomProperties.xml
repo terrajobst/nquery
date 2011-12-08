@@ -1,0 +1,156 @@
+﻿<topic>
+	<head>
+		<title>Custom Properties</title>
+		<keywords>
+			<keyword term="extending, property providers" />
+			<keyword term="customizing, property providers" />
+			<keyword term="adding, property providers" />
+			<keyword term="IPropertyProvider interface, using" />
+			<keyword term="NQuery.Runtime.IPropertyProvider interface, using" />
+		</keywords>
+	</head>
+	<body>
+		<summary>
+			<p>
+				NQuery allows you to access the properties of a value inside a query or expression. Normally, NQuery uses reflection to determine
+				the set of public properties a type exposes. There are situations in which you might want to customize the set of available
+				properties.
+			</p>
+			<p>
+				In addition to type-specific property providers NQuery also provides properties related to designated instances. This is useful in
+				scenarios where the type itself cannot produce the list of properties e.g.
+			</p>
+			<ul>
+				<li>
+					<see cref="T:System.Data.DataRow">DataRow</see>. In this case the properties could be the columns of the data table the row
+					is contained in.
+				</li>
+				<li>
+					<see cref="T:System.Data.IDictionary">IDictionary</see>. In this case the properties could be the names of the keys.
+				</li>
+			</ul>
+			<p>
+				To allow deterministic compilation you cannot generate property sets for arbitrary instances. Infact, this feature is restricted to
+				<see cref="T:NQuery.Runtime.ConstantBinding">Constants</see> and <see cref="T:NQuery.Runtime.ParameterBinding">Parameters</see>.
+			</p>
+		</summary>
+
+		<section title="Customizing Properties of a Type">
+			<p>
+				To customize the set of exposed properties for a type you must register an <see cref="T:NQuery.Runtime.IPropertyProvider">IPropertyProvider</see>
+				for it. A property provider only has to implement the method
+				<see cref="M:NQuery.Runtime.IPropertyProvider.GetProperties(System.Type)">IPropertyProvider.GetProperties(Type)</see> which returns an array of
+				<see cref="T:NQuery.Runtime.PropertyBinding">PropertyBindings</see>. A <see cref="T:NQuery.Runtime.PropertyBinding">PropertyBinding</see> can
+				produce a value for an instance of the type it is associated with.
+			</p>
+			<p>
+				NQuery provides two implementations for <see cref="T:NQuery.Runtime.IPropertyProvider">IPropertyProvider</see>:
+				<ul>
+					<li>
+						<see cref="T:NQuery.Runtime.ReflectionProvider">ReflectionProvider</see> which uses reflection and returns all public properties and fields.
+						You can derive from this class to use a more advanced logic, e.g. using custom attributes. See example below.
+					</li>
+					<li>
+						The field <see cref="F:NQuery.Runtime.NullProviders.PropertyProvider">NullProviders.PropertyProvider</see> exposes an implementation that
+						just returns an empty list of properties. You can use this provider to hide all properties from a given type. This is useful if you want
+						certain types only beeing used as black boxes inside your queries or expressions.
+					</li>
+				</ul>
+			</p>
+		</section>
+
+		<section title="Implementing a Reflection-Based Property Provider">
+			<p>
+				The following sample creates a new property provider by deriving it from <see cref="T:NQuery.Runtime.ReflectionProvider">ReflectionProvider</see>.
+				The new provider is registered for this data type:
+			</p>
+			<sampleCode lang="cs" title="Data Type" source="..\Samples\Extensibility\CustomPropertyProvider\MyReflectionProvider.cs" region="MyDataType1" />
+			<p>
+				As you can see the properties are marked with a cutom attribute which is declared as follows:
+			</p>
+			<sampleCode lang="cs" title="Marker Attribute" source="..\Samples\Extensibility\CustomPropertyProvider\MyReflectionProvider.cs" region="MyMarkerAttribute" />
+			<p>
+				The property provider uses this attribute to determine the set of exposed properties and their names. Since this algorithm is mainly driven by
+				reflection it can be created very easily by deriving it from <see cref="T:NQuery.Runtime.ReflectionProvider">ReflectionProvider</see> and overriding
+				the method <see cref="M:NQuery.Runtime.ReflectionProvider.CreateProperty(System.Reflection.PropertyInfo)">ReflectionProvider.CreateProperty</see>.
+			</p>
+			<sampleCode lang="cs" title="Property Provider"
+						source="..\Samples\Extensibility\CustomPropertyProvider\MyReflectionProvider.cs" region="MyReflectionProvider" />
+			<p>
+				Finally you must register the new property provider in the <see cref="T:NQuery.MetadataContext">MetadataContext</see>:
+			</p>
+			<sampleCode lang="cs" title="Using the Property Provider" source="..\Samples\Extensibility\CustomPropertyProvider\Form1.cs" region="MyReflectionProvider Usage" />
+		</section>
+
+		<section title="Implementing a Custom Property Provider">
+			<p>
+				Instead of just deriving from <see cref="T:NQuery.Runtime.ReflectionProvider">ReflectionProvider</see> you can also create a provider by
+				directly implementing <see cref="T:NQuery.Runtime.IPropertyProvider">IPropertyProvider</see>. This allows implementing approaches that cannot
+				rely on reflection to determine the set of properties.
+			</p>
+			<p>
+				In the following we want to create a property provider creates a set of properties where each of them is bound to a certain index of the
+				Values field of the data type below. That means each property is expected to return the value of a certain array element.
+			</p>
+			<sampleCode lang="cs" title="Data Type" source="..\Samples\Extensibility\CustomPropertyProvider\MyPropertyProvider.cs" region="MyDataType2" />
+			<p>
+				In the sample above we could use the <see cref="T:NQuery.Runtime.ReflectionPropertyBinding">ReflectionPropertyBinding</see> for our
+				properties. In this case we need a custom implementation of <see cref="T:NQuery.Runtime.PropertyBinding">PropertyBinding</see> that
+				returns the element at a given index and has a given type:
+			</p>
+			<sampleCode lang="cs" title="Property Binding" source="..\Samples\Extensibility\CustomPropertyProvider\MyPropertyProvider.cs" region="MyPropertyBinding" />
+			<p>
+				As mentioned above the property provider uses a hard-coded approach to determine the set of properties but you could easily imagine
+				an algorithm that uses some dynamic criteria, e.g. data stored in an XML file or a database. To keep things simple our property provider
+				just returns three properties, an <see cref="T:System.Int32">int</see> property, a <see cref="T:System.String">string</see> property and a
+				<see cref="T:System.DateTime">DateTime</see> property.
+			</p>
+			<sampleCode lang="cs" title="Property Provider" source="..\Samples\Extensibility\CustomPropertyProvider\MyPropertyProvider.cs" region="MyPropertyProvider" />
+			<p>
+				The custom property provider is registered the same way as the reflection-based property provider described above:
+			</p>
+			<sampleCode lang="cs" title="Using the Property Provider" source="..\Samples\Extensibility\CustomPropertyProvider\Form1.cs" region="MyPropertyProvider Usage" />
+		</section>
+
+		<section title="Customizing Properties of Parameters and Constants">
+			<p>
+				Type-specific property providers are provided by implementing <see cref="T:NQuery.Runtime.IPropertyProvider">IPropertyProvider</see>.
+				Property lookup rules that depend on the actual object instance cannot be associated with a given type. That is why there is no
+				instance-specific property provider interface in NQuery. Instead the list of properties is directly associated with a
+				<see cref="T:NQuery.Runtime.ConstantBinding">Constant</see> or <see cref="T:NQuery.Runtime.ParameterBinding">Parameter</see> by passing
+				a list of properties simply as an array of <see cref="T:NQuery.Runtime.PropertyBinding">PropertyBindings</see> to the constructors.
+			</p>
+			<note>
+				<p>
+					Passing the list of the properties to the constructor implies that the property definitions are immutable. If you want to change
+					the list of properties you must re-create the constant or parameter which in turn will invalidate the compiled state of the query
+					or expression.
+				</p>
+				<p>
+					This ensures that the compile state cannot get inconsistent due to fluctuating property definitions.
+				</p>
+			</note>
+			<p>
+				Instead of implementing certain interfaces instance-based property providers are implemented using a simple convention. Just create
+				a static class that has a public method <c>GetProperties(MyType myTypeInstance)</c> where <c>MyType</c> is the type you want to create
+				the list of properties for.
+			</p>
+			<p>
+				NQuery provides the following providers that are built on this convention:
+			</p>
+			<ul>
+				<li>
+					<see cref="T:NQuery.Runtime.DataRowPropertyProvider">DataRowPropertyProvider</see>
+				</li>
+				<li>
+					<see cref="T:NQuery.Runtime.DictionaryPropertyProvider">DictionaryPropertyProvider</see>
+				</li>
+			</ul>
+			<p>
+				The following sample shows how to add a parameter that has custom properties. For constants the solution is analogous.
+			</p>
+			<sampleCode lang="cs" title="Using a Parameter with Custom Properties"
+						source="..\Samples\Extensibility\CustomPropertyProvider\Form1.cs" region="Parameter with Custom Properties" />
+		</section>
+	</body>
+</topic>

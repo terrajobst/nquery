@@ -1,0 +1,76 @@
+<test>
+  <sql>SELECT	NULLIF(null, null),
+		NULLIF(2, null),
+		NULLIF(null, 2),
+		NULLIF(2, 2)</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Column" msdata:DataType="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:Caption="" type="xs:anyType" minOccurs="0" />
+                <xs:element name="Column1" msdata:Caption="" type="xs:int" minOccurs="0" />
+                <xs:element name="Column2" msdata:DataType="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:Caption="" type="xs:anyType" minOccurs="0" />
+                <xs:element name="Column3" msdata:DataType="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:Caption="" type="xs:anyType" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <Column1>2</Column1>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="Expr1000 AS " />
+          <property name="Output List.[0].Column" value="Expr1000" />
+          <property name="Output List.[0].DataType" value="DBNull" />
+          <property name="Output List.[1]" value="Expr1001 AS " />
+          <property name="Output List.[1].Column" value="Expr1001" />
+          <property name="Output List.[1].DataType" value="Int32" />
+          <property name="Output List.[2]" value="Expr1000 AS " />
+          <property name="Output List.[2].Column" value="Expr1000" />
+          <property name="Output List.[2].DataType" value="DBNull" />
+          <property name="Output List.[3]" value="Expr1000 AS " />
+          <property name="Output List.[3].Column" value="Expr1000" />
+          <property name="Output List.[3].DataType" value="DBNull" />
+        </properties>
+        <input>
+          <element operator="ConstantScan">
+            <properties>
+              <property name="Empty" value="False" />
+              <property name="Output List.[0]" value="Expr1000" />
+              <property name="Output List.[0].Column" value="Expr1000" />
+              <property name="Output List.[0].DataType" value="DBNull" />
+              <property name="Output List.[1]" value="Expr1001" />
+              <property name="Output List.[1].Column" value="Expr1001" />
+              <property name="Output List.[1].DataType" value="Int32" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="1" />
+              <property name="Statistics.Average Row Count" value="1" />
+              <property name="Defined Values.[0]" value="Expr1000 = NULL" />
+              <property name="Defined Values.[0].Target" value="Expr1000" />
+              <property name="Defined Values.[0].DataType" value="DBNull" />
+              <property name="Defined Values.[0].Source" value="NULL" />
+              <property name="Defined Values.[1]" value="Expr1001 = 2" />
+              <property name="Defined Values.[1].Target" value="Expr1001" />
+              <property name="Defined Values.[1].DataType" value="Int32" />
+              <property name="Defined Values.[1].Source" value="2" />
+            </properties>
+            <input />
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

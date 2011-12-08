@@ -1,0 +1,8 @@
+<test>
+  <sql>SELECT	*
+FROM	Employees e
+WHERE	AVG(e.EmployeeID) &gt; 5</sql>
+  <expectedErrors>
+    <expectedError id="AggregateInWhere" text="An aggregate may not appear in the WHERE clause unless it is in a subquery contained in a HAVING clause or a select list, and the column being aggregated is an outer reference." />
+  </expectedErrors>
+</test>

@@ -1,0 +1,44 @@
+<topic>
+	<head>
+		<title>TO_BYTE</title>
+		<keywords>
+			<keyword term="functions, TO_BYTE" />
+			<keyword term="conversion functions, TO_BYTE" />
+			<keyword term="TO_BYTE function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Conversion Functions.html">Conversion Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>Converts a given value to an 8-bit unsigned integer. </p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">TO_BYTE(value AS object) RETURNS byte</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						A value to be converted.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<examples>
+			<p>
+				The following shows <c>TO_BYTE</c> results for some input data:
+			</p>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">SELECT 'The TO_BYTE result of value ''0'' is: ' AS Input, TO_BYTE('0') AS Value
+UNION  ALL
+SELECT 'The TO_BYTE result of value ''1'' is: ', TO_BYTE('1')
+UNION  ALL
+SELECT 'The TO_BYTE result of value ''255'' is: ', TO_BYTE('255')</sampleCode>
+		</examples>
+	</body>
+</topic>

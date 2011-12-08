@@ -1,0 +1,15 @@
+<test>
+  <sql>SELECT	*
+FROM	Orders o	
+
+UNION	ALL
+
+SELECT	*
+FROM	Orders o	
+
+ORDER	BY COUNT(*) DESC
+</sql>
+  <expectedErrors>
+    <expectedError id="OrderByItemsMustBeInSelectListIfUnionSpecified" text="ORDER BY items must appear in the select list if the statement contains a UNION, INTERSECT or EXCEPT operator." />
+  </expectedErrors>
+</test>

@@ -1,0 +1,41 @@
+<topic>
+	<head>
+		<title>LOG10</title>
+		<keywords>
+			<keyword term="functions, LOG10" />
+			<keyword term="mathematical functions, LOG10" />
+			<keyword term="LOG10 function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Mathematical Functions.html">Mathematical Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns the base-10 logarithm of a specified number.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">LOG10(value AS double) RETURNS double</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						A number whose logarithm is to be found.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The base-10 logarithm of the specified number.
+			</p>
+		</returns>
+	</body>
+</topic>

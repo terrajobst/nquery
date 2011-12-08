@@ -1,0 +1,12 @@
+<test>
+  <sql>SELECT  *
+FROM    Territories t
+WHERE   NOT EXISTS (
+            SELECT *
+            FROM EmployeeTerritories et
+            WHERE et.TerritoryID = t
+        )</sql>
+  <expectedErrors>
+    <expectedError id="CannotApplyBinaryOperator" text="Cannot apply binary operator '=' on types 'String' and 'DataRow'." />
+  </expectedErrors>
+</test>

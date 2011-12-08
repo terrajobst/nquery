@@ -1,0 +1,8 @@
+<test>
+  <sql>SELECT	TOP 2 WITH TIES
+		e.BirthDate
+FROM	Employees e</sql>
+  <expectedErrors>
+    <expectedError id="TopWithTiesRequiresOrderBy" text="The TOP N WITH TIES clause is not allowed without a corresponding ORDER BY clause." />
+  </expectedErrors>
+</test>

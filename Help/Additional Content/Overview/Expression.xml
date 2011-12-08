@@ -1,0 +1,109 @@
+﻿<topic>
+	<head>
+		<title>Expression Class</title>
+		<toc index="2" />
+		<links>
+			<link href="Overview.html">Overview</link>
+			<link href="..\Language Reference\Expressions\Expressions.html">Expression Syntax</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <see cref="T:NQuery.Expression`1">Expression</see> generic class allows you to evaluate single expressions against a
+				<a href="DataContext.html">DataContext</a>. This class is useful in scenarios where no fully-featured query is needed, e.g.
+				<ul>
+					<li>Mapping data from one object to another using customizable expressions.</li>
+					<li>Filtering data based on an expression the customer can specify at runtime.</li>
+				</ul>
+			</p>
+		</summary>
+
+		<section title="Syntax">
+			<p>
+				The syntax is based on expressions valid in SQL-92. For details see <a href="..\Language Reference\Expressions\Expressions.html">Expression Syntax</a>.
+			</p>
+		</section>
+
+		<section title="Restricting the Result Type">
+			<p>
+				Since <see cref="T:NQuery.Expression`1">Expression</see> is a generic class it is very easy to restrict the result type.
+				For example, an expression that is declared as <c>Expression&lt;bool&gt;</c> will only allow Boolean expressions. Trying
+				to use an expression text that would evaluate to an incompatible result type will cause a
+				<see cref="T:NQuery.CompilationException">CompilationException</see>.
+			</p>
+			<p>
+				Sometimes the result type is not predictable at compile-time e.g. if the expression is used to map fields from one object to
+				another dynamically. In this case the expression can be declared as <c>Expression&lt;object&gt;</c> (or a more  specific
+				type) and the property <see cref="P:NQuery.Expression`1.TargetType">TargetType</see> can be set to the appropiate result type.
+			</p>
+		</section>
+
+		<section title="Resolving the Result Type">
+			<p>
+				Regardless which type was used to restrict the possible return values the expression is always allowed to return a
+				more specific type. Therefore it might be useful to resolve the type the expression will actually evaluate to.
+				You can do this by using the <see cref="M:NQuery.Expression`1.Resolve">Resolve</see> method. This method returns
+				the <see cref="T:System.Type">Type</see> the expression will always evaluate to.
+			</p>
+		</section>
+
+		<section title="Handling NULL Values">
+			<p>
+				To better support value types (which have no notion of <c>NULL</c> values) the <see cref="T:NQuery.Expression`1">Expression</see>
+				has a property <see cref="P:NQuery.Expression`1.NullValue">NullValue</see> which determines the value that is returned
+				if the expression evaluates to <c>NULL</c>. Initially this property is set to the default value of the data type the
+				<see cref="T:NQuery.Expression`1">Expression</see> is instantiated with. The following table lists some data types and their
+				corresponding initial values for <see cref="P:NQuery.Expression`1.NullValue">NullValue</see>.
+			</p>
+			<table>
+				<tr>
+					<th>Expression Declaration</th>
+					<th>
+						Initial Setting for <c>NullValue</c>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<c>Expression&lt;object&gt;</c>
+					</td>
+					<td>
+						<c>null</c>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<c>Expression&lt;bool&gt;</c>
+					</td>
+					<td>
+						<c>false</c>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<c>Expression&lt;int&gt;</c>
+					</td>
+					<td>
+						<c>0</c>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<c>Expression&lt;string&gt;</c>
+					</td>
+					<td>
+						<c>null</c>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<c>Expression&lt;bool?&gt;</c>
+					</td>
+					<td>
+						<c>null</c>
+					</td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</topic>

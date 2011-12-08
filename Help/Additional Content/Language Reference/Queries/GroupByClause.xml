@@ -1,0 +1,50 @@
+<topic>
+	<head>
+		<title>GROUP BY Clause</title>
+		<toc index="5" />
+		<keywords>
+			<keyword term="SELECT statement, GROUP BY clause" />
+			<keyword term="GROUP BY clause, about" />
+		</keywords>
+		<links>
+			<link href="Queries.html">SELECT Syntax</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Specifies the groups into which output rows are to be placed. If aggregate functions are included in the <c>SELECT</c> clause,
+				<c>GROUP BY</c> calculates a summary value for each group. When <c>GROUP BY</c> is specified, either each column in any
+				nonaggregate expression in the select list should be included in the <c>GROUP BY</c> list, or the <c>GROUP BY</c> expression must
+				exactly match the select list expression.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">[ <b>GROUP BY</b> <i>group_by_expression</i> [ <b>,...</b><i>n</i> ] ]</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="group_by_expression">
+					<p>
+						Is an expression on which grouping is performed. <i>group_by_expression</i> is also known as a grouping column. <i>group_by expression</i>
+						can be a column or a nonaggregate expression that references a column returned by the <c>FROM</c> clause. A column alias that is defined
+						in the select list cannot be used to specify a grouping column.
+					</p>
+					<p>
+						<i>group_by expression</i> must be sortable, i.e. the type of the expression must either implement <c>IComparable</c> or the data context
+						must provide a custom <c>IComparer</c> for it.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<remarks>
+			<p>
+				<c>GROUP BY ALL</c>, <c>WITH CUBE</c>, and <c>WITH ROLLUP</c> are not supported. Distinct aggregates, for example, <c>AVG(DISTINCT column_name)</c>,
+				<c>COUNT(DISTINCT column_name)</c>, and <c>SUM(DISTINCT column_name)</c>, are not supported.
+			</p>
+		</remarks>
+	</body>
+</topic>

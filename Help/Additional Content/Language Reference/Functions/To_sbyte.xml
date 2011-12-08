@@ -1,0 +1,50 @@
+<topic>
+	<head>
+		<title>TO_SBYTE</title>
+		<keywords>
+			<keyword term="functions, TO_SBYTE" />
+			<keyword term="conversion functions, TO_SBYTE" />
+			<keyword term="TO_SBYTE function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Conversion Functions.html">Conversion Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Converts a given value to an 8-bit signed integer.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">TO_SBYTE(value AS object) RETURNS sbyte</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						A value to be converted.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<examples>
+			<p>
+				The following shows <c>TO_SBYTE</c> results for some input data:
+			</p>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">SELECT 'The TO_SBYTE result of value ''0'' is: ' AS Input, TO_SBYTE('0') AS Value
+UNION  ALL
+SELECT 'The TO_SBYTE result of value ''1'' is: ', TO_SBYTE('1')
+UNION  ALL
+SELECT 'The TO_SBYTE result of value ''127'' is: ', TO_SBYTE('127')
+UNION  ALL
+SELECT 'The TO_SBYTE result of value ''-1'' is: ', TO_SBYTE('-1')
+UNION  ALL
+SELECT 'The TO_SBYTE result of value ''-128'' is: ', TO_SBYTE('-128')</sampleCode>
+		</examples>
+	</body>
+</topic>

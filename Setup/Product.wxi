@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Include xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	
+	<?define Manufacturer        = "Immo Landwerth" ?>
+	<?define ProductName         = "NQuery" ?>
+	<?define ProductHomePage     = "http://www.codeplex.com/NQuery" ?>
+	<?define UpgradeCode         = "7A85E0F3-8392-40CB-B40A-BCDE0F8FD93E" ?>
+	
+	<?define LibFolder           = "..\Lib\" ?>
+	<?define BinFolder           = "$(var.OutDir)..\Bin\" ?>
+	<?define DemoFolder          = "$(var.OutDir)..\Demo\" ?>
+	<?define HelpFolder          = "$(var.OutDir)..\Help\" ?>
+	<?define SamplesFolder       = "$(var.OutDir)..\Src\Samples\" ?>
+
+</Include>

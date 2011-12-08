@@ -1,0 +1,975 @@
+<test>
+  <sql>SELECT	*,
+		CASE
+			WHEN
+				CASE
+					WHEN NOT EXISTS (SELECT * FROM EmployeeTerritories et1 WHERE et1.TerritoryID = t.TerritoryID)
+						AND EXISTS (SELECT * FROM EmployeeTerritories et2 WHERE et2.TerritoryID = t.TerritoryID)
+					THEN (SELECT TO_STRING(od1.OrderID) FROM [Order Details] od1)
+					
+					WHEN NOT EXISTS (SELECT * FROM Region r1 WHERE r1.RegionID = t.RegionId)
+					THEN (SELECT TO_STRING(od2.OrderID) FROM [Order Details] od2)
+					
+					ELSE 'No'
+				END = 'No' THEN
+					'not (et1 or et2 or r)'
+					
+			WHEN NOT EXISTS (SELECT * FROM Region r2 WHERE r2.RegionID = t.RegionId)
+			THEN (SELECT TO_STRING(od3.OrderID) FROM [Order Details] od3)
+		END Flag
+FROM	Territories t
+ORDER	BY Flag</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="TerritoryID" type="xs:string" minOccurs="0" />
+                <xs:element name="TerritoryDescription" type="xs:string" minOccurs="0" />
+                <xs:element name="RegionID" type="xs:int" minOccurs="0" />
+                <xs:element name="Flag" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <TerritoryID>60601</TerritoryID>
+    <TerritoryDescription>Chicago                                           </TerritoryDescription>
+    <RegionID>2</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>60179</TerritoryID>
+    <TerritoryDescription>Hoffman Estates                                   </TerritoryDescription>
+    <RegionID>2</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>55439</TerritoryID>
+    <TerritoryDescription>Minneapolis                                       </TerritoryDescription>
+    <RegionID>3</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>78759</TerritoryID>
+    <TerritoryDescription>Austin                                            </TerritoryDescription>
+    <RegionID>4</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>75234</TerritoryID>
+    <TerritoryDescription>Dallas                                            </TerritoryDescription>
+    <RegionID>4</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>72716</TerritoryID>
+    <TerritoryDescription>Bentonville                                       </TerritoryDescription>
+    <RegionID>4</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>55113</TerritoryID>
+    <TerritoryDescription>Roseville                                         </TerritoryDescription>
+    <RegionID>3</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>48075</TerritoryID>
+    <TerritoryDescription>Southfield                                        </TerritoryDescription>
+    <RegionID>3</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>45839</TerritoryID>
+    <TerritoryDescription>Findlay                                           </TerritoryDescription>
+    <RegionID>3</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>44122</TerritoryID>
+    <TerritoryDescription>Beachwood                                         </TerritoryDescription>
+    <RegionID>3</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>53404</TerritoryID>
+    <TerritoryDescription>Racine                                            </TerritoryDescription>
+    <RegionID>3</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>48304</TerritoryID>
+    <TerritoryDescription>Bloomfield Hills                                  </TerritoryDescription>
+    <RegionID>3</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>48084</TerritoryID>
+    <TerritoryDescription>Troy                                              </TerritoryDescription>
+    <RegionID>3</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>95060</TerritoryID>
+    <TerritoryDescription>Santa Cruz                                        </TerritoryDescription>
+    <RegionID>2</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>95054</TerritoryID>
+    <TerritoryDescription>Santa Clara                                       </TerritoryDescription>
+    <RegionID>2</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>95008</TerritoryID>
+    <TerritoryDescription>Campbell                                          </TerritoryDescription>
+    <RegionID>2</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>98104</TerritoryID>
+    <TerritoryDescription>Seattle                                           </TerritoryDescription>
+    <RegionID>2</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>98052</TerritoryID>
+    <TerritoryDescription>Redmond                                           </TerritoryDescription>
+    <RegionID>2</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>98004</TerritoryID>
+    <TerritoryDescription>Bellevue                                          </TerritoryDescription>
+    <RegionID>2</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>94105</TerritoryID>
+    <TerritoryDescription>San Francisco                                     </TerritoryDescription>
+    <RegionID>2</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>85014</TerritoryID>
+    <TerritoryDescription>Phoenix                                           </TerritoryDescription>
+    <RegionID>2</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>80909</TerritoryID>
+    <TerritoryDescription>Colorado Springs                                  </TerritoryDescription>
+    <RegionID>2</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>80202</TerritoryID>
+    <TerritoryDescription>Denver                                            </TerritoryDescription>
+    <RegionID>2</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>94025</TerritoryID>
+    <TerritoryDescription>Menlo Park                                        </TerritoryDescription>
+    <RegionID>2</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>90405</TerritoryID>
+    <TerritoryDescription>Santa Monica                                      </TerritoryDescription>
+    <RegionID>2</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>85251</TerritoryID>
+    <TerritoryDescription>Scottsdale                                        </TerritoryDescription>
+    <RegionID>2</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>40222</TerritoryID>
+    <TerritoryDescription>Louisville                                        </TerritoryDescription>
+    <RegionID>1</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>06897</TerritoryID>
+    <TerritoryDescription>Wilton                                            </TerritoryDescription>
+    <RegionID>1</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>03801</TerritoryID>
+    <TerritoryDescription>Portsmouth                                        </TerritoryDescription>
+    <RegionID>3</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>03049</TerritoryID>
+    <TerritoryDescription>Hollis                                            </TerritoryDescription>
+    <RegionID>3</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>10019</TerritoryID>
+    <TerritoryDescription>New York                                          </TerritoryDescription>
+    <RegionID>1</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>08837</TerritoryID>
+    <TerritoryDescription>Edison                                            </TerritoryDescription>
+    <RegionID>1</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>07960</TerritoryID>
+    <TerritoryDescription>Morristown                                        </TerritoryDescription>
+    <RegionID>1</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>02903</TerritoryID>
+    <TerritoryDescription>Providence                                        </TerritoryDescription>
+    <RegionID>1</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>01833</TerritoryID>
+    <TerritoryDescription>Georgetow                                         </TerritoryDescription>
+    <RegionID>1</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>01730</TerritoryID>
+    <TerritoryDescription>Bedford                                           </TerritoryDescription>
+    <RegionID>1</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>01581</TerritoryID>
+    <TerritoryDescription>Westboro                                          </TerritoryDescription>
+    <RegionID>1</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>02184</TerritoryID>
+    <TerritoryDescription>Braintree                                         </TerritoryDescription>
+    <RegionID>1</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>02139</TerritoryID>
+    <TerritoryDescription>Cambridge                                         </TerritoryDescription>
+    <RegionID>1</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>02116</TerritoryID>
+    <TerritoryDescription>Boston                                            </TerritoryDescription>
+    <RegionID>1</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>30346</TerritoryID>
+    <TerritoryDescription>Atlanta                                           </TerritoryDescription>
+    <RegionID>4</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>29202</TerritoryID>
+    <TerritoryDescription>Columbia                                          </TerritoryDescription>
+    <RegionID>4</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>27511</TerritoryID>
+    <TerritoryDescription>Cary                                              </TerritoryDescription>
+    <RegionID>1</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>33607</TerritoryID>
+    <TerritoryDescription>Tampa                                             </TerritoryDescription>
+    <RegionID>4</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>32859</TerritoryID>
+    <TerritoryDescription>Orlando                                           </TerritoryDescription>
+    <RegionID>4</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>31406</TerritoryID>
+    <TerritoryDescription>Savannah                                          </TerritoryDescription>
+    <RegionID>4</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>27403</TerritoryID>
+    <TerritoryDescription>Greensboro                                        </TerritoryDescription>
+    <RegionID>1</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>14450</TerritoryID>
+    <TerritoryDescription>Fairport                                          </TerritoryDescription>
+    <RegionID>1</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>11747</TerritoryID>
+    <TerritoryDescription>Mellvile                                          </TerritoryDescription>
+    <RegionID>1</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>10038</TerritoryID>
+    <TerritoryDescription>New York                                          </TerritoryDescription>
+    <RegionID>1</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>20852</TerritoryID>
+    <TerritoryDescription>Rockville                                         </TerritoryDescription>
+    <RegionID>1</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>19713</TerritoryID>
+    <TerritoryDescription>Neward                                            </TerritoryDescription>
+    <RegionID>1</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+  <Table1>
+    <TerritoryID>19428</TerritoryID>
+    <TerritoryDescription>Philadelphia                                      </TerritoryDescription>
+    <RegionID>3</RegionID>
+    <Flag>not (et1 or et2 or r)</Flag>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="t.TerritoryID AS TerritoryID" />
+          <property name="Output List.[0].Table" value="t" />
+          <property name="Output List.[0].Column" value="TerritoryID" />
+          <property name="Output List.[0].DataType" value="String" />
+          <property name="Output List.[0].Output Name" value="TerritoryID" />
+          <property name="Output List.[1]" value="t.TerritoryDescription AS TerritoryDescription" />
+          <property name="Output List.[1].Table" value="t" />
+          <property name="Output List.[1].Column" value="TerritoryDescription" />
+          <property name="Output List.[1].DataType" value="String" />
+          <property name="Output List.[1].Output Name" value="TerritoryDescription" />
+          <property name="Output List.[2]" value="t.RegionID AS RegionID" />
+          <property name="Output List.[2].Table" value="t" />
+          <property name="Output List.[2].Column" value="RegionID" />
+          <property name="Output List.[2].DataType" value="Int32" />
+          <property name="Output List.[2].Output Name" value="RegionID" />
+          <property name="Output List.[3]" value="Expr1023 AS Flag" />
+          <property name="Output List.[3].Column" value="Expr1023" />
+          <property name="Output List.[3].DataType" value="String" />
+          <property name="Output List.[3].Output Name" value="Flag" />
+        </properties>
+        <input>
+          <element operator="Sort">
+            <properties>
+              <property name="Output List.[0]" value="t.TerritoryID" />
+              <property name="Output List.[0].Table" value="t" />
+              <property name="Output List.[0].Column" value="TerritoryID" />
+              <property name="Output List.[0].DataType" value="String" />
+              <property name="Output List.[1]" value="t.TerritoryDescription" />
+              <property name="Output List.[1].Table" value="t" />
+              <property name="Output List.[1].Column" value="TerritoryDescription" />
+              <property name="Output List.[1].DataType" value="String" />
+              <property name="Output List.[2]" value="t.RegionID" />
+              <property name="Output List.[2].Table" value="t" />
+              <property name="Output List.[2].Column" value="RegionID" />
+              <property name="Output List.[2].DataType" value="Int32" />
+              <property name="Output List.[3]" value="Expr1023" />
+              <property name="Output List.[3].Column" value="Expr1023" />
+              <property name="Output List.[3].DataType" value="String" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="53" />
+              <property name="Statistics.Average Row Count" value="53" />
+              <property name="Logical Operator" value="Sort" />
+              <property name="Order By.[0]" value="Expr1023 ASC" />
+              <property name="Order By.[0].Column" value="Expr1023" />
+              <property name="Order By.[0].DataType" value="String" />
+              <property name="Order By.[0].Order" value="ASC" />
+            </properties>
+            <input>
+              <element operator="ComputeScalar">
+                <properties>
+                  <property name="Output List.[0]" value="t.TerritoryID" />
+                  <property name="Output List.[0].Table" value="t" />
+                  <property name="Output List.[0].Column" value="TerritoryID" />
+                  <property name="Output List.[0].DataType" value="String" />
+                  <property name="Output List.[1]" value="t.TerritoryDescription" />
+                  <property name="Output List.[1].Table" value="t" />
+                  <property name="Output List.[1].Column" value="TerritoryDescription" />
+                  <property name="Output List.[1].DataType" value="String" />
+                  <property name="Output List.[2]" value="t.RegionID" />
+                  <property name="Output List.[2].Table" value="t" />
+                  <property name="Output List.[2].Column" value="RegionID" />
+                  <property name="Output List.[2].DataType" value="Int32" />
+                  <property name="Output List.[3]" value="Expr1023" />
+                  <property name="Output List.[3].Column" value="Expr1023" />
+                  <property name="Output List.[3].DataType" value="String" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="53" />
+                  <property name="Statistics.Average Row Count" value="53" />
+                  <property name="Defined Values.[0]" value="Expr1023 = CASE WHEN CASE WHEN Expr1004 AND Expr1006 THEN Expr1010 WHEN Expr1012 THEN Expr1016 ELSE 'No' END = 'No' THEN 'not (et1 or et2 or r)' WHEN Expr1018 THEN Expr1022 END" />
+                  <property name="Defined Values.[0].Target" value="Expr1023" />
+                  <property name="Defined Values.[0].DataType" value="String" />
+                  <property name="Defined Values.[0].Source" value="CASE WHEN CASE WHEN Expr1004 AND Expr1006 THEN Expr1010 WHEN Expr1012 THEN Expr1016 ELSE 'No' END = 'No' THEN 'not (et1 or et2 or r)' WHEN Expr1018 THEN Expr1022 END" />
+                </properties>
+                <input>
+                  <element operator="NestedLoops">
+                    <properties>
+                      <property name="Output List.[00]" value="t.TerritoryID" />
+                      <property name="Output List.[00].Table" value="t" />
+                      <property name="Output List.[00].Column" value="TerritoryID" />
+                      <property name="Output List.[00].DataType" value="String" />
+                      <property name="Output List.[01]" value="t.TerritoryDescription" />
+                      <property name="Output List.[01].Table" value="t" />
+                      <property name="Output List.[01].Column" value="TerritoryDescription" />
+                      <property name="Output List.[01].DataType" value="String" />
+                      <property name="Output List.[02]" value="t.RegionID" />
+                      <property name="Output List.[02].Table" value="t" />
+                      <property name="Output List.[02].Column" value="RegionID" />
+                      <property name="Output List.[02].DataType" value="Int32" />
+                      <property name="Output List.[03]" value="Expr1004" />
+                      <property name="Output List.[03].Column" value="Expr1004" />
+                      <property name="Output List.[03].DataType" value="Boolean" />
+                      <property name="Output List.[04]" value="Expr1006" />
+                      <property name="Output List.[04].Column" value="Expr1006" />
+                      <property name="Output List.[04].DataType" value="Boolean" />
+                      <property name="Output List.[05]" value="Expr1010" />
+                      <property name="Output List.[05].Column" value="Expr1010" />
+                      <property name="Output List.[05].DataType" value="String" />
+                      <property name="Output List.[06]" value="Expr1012" />
+                      <property name="Output List.[06].Column" value="Expr1012" />
+                      <property name="Output List.[06].DataType" value="Boolean" />
+                      <property name="Output List.[07]" value="Expr1016" />
+                      <property name="Output List.[07].Column" value="Expr1016" />
+                      <property name="Output List.[07].DataType" value="String" />
+                      <property name="Output List.[08]" value="Expr1018" />
+                      <property name="Output List.[08].Column" value="Expr1018" />
+                      <property name="Output List.[08].DataType" value="Boolean" />
+                      <property name="Output List.[09]" value="Expr1022" />
+                      <property name="Output List.[09].Column" value="Expr1022" />
+                      <property name="Output List.[09].DataType" value="String" />
+                      <property name="Logical Operator" value="Left Outer Join" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="53" />
+                      <property name="Statistics.Average Row Count" value="53" />
+                      <property name="Passthru" value="NOT Expr1018 OR CASE WHEN Expr1004 AND Expr1006 THEN Expr1010 WHEN Expr1012 THEN Expr1016 ELSE 'No' END = 'No'" />
+                    </properties>
+                    <input>
+                      <element operator="NestedLoops">
+                        <properties>
+                          <property name="Output List.[0]" value="t.TerritoryID" />
+                          <property name="Output List.[0].Table" value="t" />
+                          <property name="Output List.[0].Column" value="TerritoryID" />
+                          <property name="Output List.[0].DataType" value="String" />
+                          <property name="Output List.[1]" value="t.TerritoryDescription" />
+                          <property name="Output List.[1].Table" value="t" />
+                          <property name="Output List.[1].Column" value="TerritoryDescription" />
+                          <property name="Output List.[1].DataType" value="String" />
+                          <property name="Output List.[2]" value="t.RegionID" />
+                          <property name="Output List.[2].Table" value="t" />
+                          <property name="Output List.[2].Column" value="RegionID" />
+                          <property name="Output List.[2].DataType" value="Int32" />
+                          <property name="Output List.[3]" value="Expr1004" />
+                          <property name="Output List.[3].Column" value="Expr1004" />
+                          <property name="Output List.[3].DataType" value="Boolean" />
+                          <property name="Output List.[4]" value="Expr1006" />
+                          <property name="Output List.[4].Column" value="Expr1006" />
+                          <property name="Output List.[4].DataType" value="Boolean" />
+                          <property name="Output List.[5]" value="Expr1010" />
+                          <property name="Output List.[5].Column" value="Expr1010" />
+                          <property name="Output List.[5].DataType" value="String" />
+                          <property name="Output List.[6]" value="Expr1012" />
+                          <property name="Output List.[6].Column" value="Expr1012" />
+                          <property name="Output List.[6].DataType" value="Boolean" />
+                          <property name="Output List.[7]" value="Expr1016" />
+                          <property name="Output List.[7].Column" value="Expr1016" />
+                          <property name="Output List.[7].DataType" value="String" />
+                          <property name="Output List.[8]" value="Expr1018" />
+                          <property name="Output List.[8].Column" value="Expr1018" />
+                          <property name="Output List.[8].DataType" value="Boolean" />
+                          <property name="Logical Operator" value="Left Anti Semi Join" />
+                          <property name="Statistics.Open Count" value="1" />
+                          <property name="Statistics.Row Count" value="53" />
+                          <property name="Statistics.Average Row Count" value="53" />
+                          <property name="Predicate" value="r2.RegionID = t.RegionID" />
+                          <property name="Probe Column" value="Expr1018" />
+                          <property name="Probe Column.Column" value="Expr1018" />
+                          <property name="Probe Column.DataType" value="Boolean" />
+                          <property name="Passthru" value="CASE WHEN Expr1004 AND Expr1006 THEN Expr1010 WHEN Expr1012 THEN Expr1016 ELSE 'No' END = 'No'" />
+                        </properties>
+                        <input>
+                          <element operator="NestedLoops">
+                            <properties>
+                              <property name="Output List.[0]" value="t.TerritoryID" />
+                              <property name="Output List.[0].Table" value="t" />
+                              <property name="Output List.[0].Column" value="TerritoryID" />
+                              <property name="Output List.[0].DataType" value="String" />
+                              <property name="Output List.[1]" value="t.TerritoryDescription" />
+                              <property name="Output List.[1].Table" value="t" />
+                              <property name="Output List.[1].Column" value="TerritoryDescription" />
+                              <property name="Output List.[1].DataType" value="String" />
+                              <property name="Output List.[2]" value="t.RegionID" />
+                              <property name="Output List.[2].Table" value="t" />
+                              <property name="Output List.[2].Column" value="RegionID" />
+                              <property name="Output List.[2].DataType" value="Int32" />
+                              <property name="Output List.[3]" value="Expr1004" />
+                              <property name="Output List.[3].Column" value="Expr1004" />
+                              <property name="Output List.[3].DataType" value="Boolean" />
+                              <property name="Output List.[4]" value="Expr1006" />
+                              <property name="Output List.[4].Column" value="Expr1006" />
+                              <property name="Output List.[4].DataType" value="Boolean" />
+                              <property name="Output List.[5]" value="Expr1010" />
+                              <property name="Output List.[5].Column" value="Expr1010" />
+                              <property name="Output List.[5].DataType" value="String" />
+                              <property name="Output List.[6]" value="Expr1012" />
+                              <property name="Output List.[6].Column" value="Expr1012" />
+                              <property name="Output List.[6].DataType" value="Boolean" />
+                              <property name="Output List.[7]" value="Expr1016" />
+                              <property name="Output List.[7].Column" value="Expr1016" />
+                              <property name="Output List.[7].DataType" value="String" />
+                              <property name="Logical Operator" value="Left Outer Join" />
+                              <property name="Statistics.Open Count" value="1" />
+                              <property name="Statistics.Row Count" value="53" />
+                              <property name="Statistics.Average Row Count" value="53" />
+                              <property name="Passthru" value="NOT Expr1012 OR Expr1004 AND Expr1006" />
+                            </properties>
+                            <input>
+                              <element operator="NestedLoops">
+                                <properties>
+                                  <property name="Output List.[0]" value="t.TerritoryID" />
+                                  <property name="Output List.[0].Table" value="t" />
+                                  <property name="Output List.[0].Column" value="TerritoryID" />
+                                  <property name="Output List.[0].DataType" value="String" />
+                                  <property name="Output List.[1]" value="t.TerritoryDescription" />
+                                  <property name="Output List.[1].Table" value="t" />
+                                  <property name="Output List.[1].Column" value="TerritoryDescription" />
+                                  <property name="Output List.[1].DataType" value="String" />
+                                  <property name="Output List.[2]" value="t.RegionID" />
+                                  <property name="Output List.[2].Table" value="t" />
+                                  <property name="Output List.[2].Column" value="RegionID" />
+                                  <property name="Output List.[2].DataType" value="Int32" />
+                                  <property name="Output List.[3]" value="Expr1004" />
+                                  <property name="Output List.[3].Column" value="Expr1004" />
+                                  <property name="Output List.[3].DataType" value="Boolean" />
+                                  <property name="Output List.[4]" value="Expr1006" />
+                                  <property name="Output List.[4].Column" value="Expr1006" />
+                                  <property name="Output List.[4].DataType" value="Boolean" />
+                                  <property name="Output List.[5]" value="Expr1010" />
+                                  <property name="Output List.[5].Column" value="Expr1010" />
+                                  <property name="Output List.[5].DataType" value="String" />
+                                  <property name="Output List.[6]" value="Expr1012" />
+                                  <property name="Output List.[6].Column" value="Expr1012" />
+                                  <property name="Output List.[6].DataType" value="Boolean" />
+                                  <property name="Logical Operator" value="Left Anti Semi Join" />
+                                  <property name="Statistics.Open Count" value="1" />
+                                  <property name="Statistics.Row Count" value="53" />
+                                  <property name="Statistics.Average Row Count" value="53" />
+                                  <property name="Predicate" value="r1.RegionID = t.RegionID" />
+                                  <property name="Probe Column" value="Expr1012" />
+                                  <property name="Probe Column.Column" value="Expr1012" />
+                                  <property name="Probe Column.DataType" value="Boolean" />
+                                  <property name="Passthru" value="Expr1004 AND Expr1006" />
+                                </properties>
+                                <input>
+                                  <element operator="NestedLoops">
+                                    <properties>
+                                      <property name="Output List.[0]" value="t.TerritoryID" />
+                                      <property name="Output List.[0].Table" value="t" />
+                                      <property name="Output List.[0].Column" value="TerritoryID" />
+                                      <property name="Output List.[0].DataType" value="String" />
+                                      <property name="Output List.[1]" value="t.TerritoryDescription" />
+                                      <property name="Output List.[1].Table" value="t" />
+                                      <property name="Output List.[1].Column" value="TerritoryDescription" />
+                                      <property name="Output List.[1].DataType" value="String" />
+                                      <property name="Output List.[2]" value="t.RegionID" />
+                                      <property name="Output List.[2].Table" value="t" />
+                                      <property name="Output List.[2].Column" value="RegionID" />
+                                      <property name="Output List.[2].DataType" value="Int32" />
+                                      <property name="Output List.[3]" value="Expr1004" />
+                                      <property name="Output List.[3].Column" value="Expr1004" />
+                                      <property name="Output List.[3].DataType" value="Boolean" />
+                                      <property name="Output List.[4]" value="Expr1006" />
+                                      <property name="Output List.[4].Column" value="Expr1006" />
+                                      <property name="Output List.[4].DataType" value="Boolean" />
+                                      <property name="Output List.[5]" value="Expr1010" />
+                                      <property name="Output List.[5].Column" value="Expr1010" />
+                                      <property name="Output List.[5].DataType" value="String" />
+                                      <property name="Logical Operator" value="Left Outer Join" />
+                                      <property name="Statistics.Open Count" value="1" />
+                                      <property name="Statistics.Row Count" value="53" />
+                                      <property name="Statistics.Average Row Count" value="53" />
+                                      <property name="Passthru" value="NOT Expr1004 OR NOT Expr1006" />
+                                    </properties>
+                                    <input>
+                                      <element operator="NestedLoops">
+                                        <properties>
+                                          <property name="Output List.[0]" value="t.TerritoryID" />
+                                          <property name="Output List.[0].Table" value="t" />
+                                          <property name="Output List.[0].Column" value="TerritoryID" />
+                                          <property name="Output List.[0].DataType" value="String" />
+                                          <property name="Output List.[1]" value="t.TerritoryDescription" />
+                                          <property name="Output List.[1].Table" value="t" />
+                                          <property name="Output List.[1].Column" value="TerritoryDescription" />
+                                          <property name="Output List.[1].DataType" value="String" />
+                                          <property name="Output List.[2]" value="t.RegionID" />
+                                          <property name="Output List.[2].Table" value="t" />
+                                          <property name="Output List.[2].Column" value="RegionID" />
+                                          <property name="Output List.[2].DataType" value="Int32" />
+                                          <property name="Output List.[3]" value="Expr1004" />
+                                          <property name="Output List.[3].Column" value="Expr1004" />
+                                          <property name="Output List.[3].DataType" value="Boolean" />
+                                          <property name="Output List.[4]" value="Expr1006" />
+                                          <property name="Output List.[4].Column" value="Expr1006" />
+                                          <property name="Output List.[4].DataType" value="Boolean" />
+                                          <property name="Logical Operator" value="Left Semi Join" />
+                                          <property name="Statistics.Open Count" value="1" />
+                                          <property name="Statistics.Row Count" value="53" />
+                                          <property name="Statistics.Average Row Count" value="53" />
+                                          <property name="Predicate" value="et2.TerritoryID = t.TerritoryID" />
+                                          <property name="Probe Column" value="Expr1006" />
+                                          <property name="Probe Column.Column" value="Expr1006" />
+                                          <property name="Probe Column.DataType" value="Boolean" />
+                                        </properties>
+                                        <input>
+                                          <element operator="NestedLoops">
+                                            <properties>
+                                              <property name="Output List.[0]" value="t.TerritoryID" />
+                                              <property name="Output List.[0].Table" value="t" />
+                                              <property name="Output List.[0].Column" value="TerritoryID" />
+                                              <property name="Output List.[0].DataType" value="String" />
+                                              <property name="Output List.[1]" value="t.TerritoryDescription" />
+                                              <property name="Output List.[1].Table" value="t" />
+                                              <property name="Output List.[1].Column" value="TerritoryDescription" />
+                                              <property name="Output List.[1].DataType" value="String" />
+                                              <property name="Output List.[2]" value="t.RegionID" />
+                                              <property name="Output List.[2].Table" value="t" />
+                                              <property name="Output List.[2].Column" value="RegionID" />
+                                              <property name="Output List.[2].DataType" value="Int32" />
+                                              <property name="Output List.[3]" value="Expr1004" />
+                                              <property name="Output List.[3].Column" value="Expr1004" />
+                                              <property name="Output List.[3].DataType" value="Boolean" />
+                                              <property name="Logical Operator" value="Left Anti Semi Join" />
+                                              <property name="Statistics.Open Count" value="1" />
+                                              <property name="Statistics.Row Count" value="53" />
+                                              <property name="Statistics.Average Row Count" value="53" />
+                                              <property name="Predicate" value="et1.TerritoryID = t.TerritoryID" />
+                                              <property name="Probe Column" value="Expr1004" />
+                                              <property name="Probe Column.Column" value="Expr1004" />
+                                              <property name="Probe Column.DataType" value="Boolean" />
+                                            </properties>
+                                            <input>
+                                              <element operator="TableScan">
+                                                <properties>
+                                                  <property name="Table" value="Territories AS t" />
+                                                  <property name="Output List.[0]" value="t.TerritoryID" />
+                                                  <property name="Output List.[0].Table" value="t" />
+                                                  <property name="Output List.[0].Column" value="TerritoryID" />
+                                                  <property name="Output List.[0].DataType" value="String" />
+                                                  <property name="Output List.[1]" value="t.TerritoryDescription" />
+                                                  <property name="Output List.[1].Table" value="t" />
+                                                  <property name="Output List.[1].Column" value="TerritoryDescription" />
+                                                  <property name="Output List.[1].DataType" value="String" />
+                                                  <property name="Output List.[2]" value="t.RegionID" />
+                                                  <property name="Output List.[2].Table" value="t" />
+                                                  <property name="Output List.[2].Column" value="RegionID" />
+                                                  <property name="Output List.[2].DataType" value="Int32" />
+                                                  <property name="Statistics.Open Count" value="1" />
+                                                  <property name="Statistics.Row Count" value="53" />
+                                                  <property name="Statistics.Average Row Count" value="53" />
+                                                </properties>
+                                                <input />
+                                              </element>
+                                              <element operator="TableScan">
+                                                <properties>
+                                                  <property name="Table" value="EmployeeTerritories AS et1" />
+                                                  <property name="Output List.[0]" value="et1.TerritoryID" />
+                                                  <property name="Output List.[0].Table" value="et1" />
+                                                  <property name="Output List.[0].Column" value="TerritoryID" />
+                                                  <property name="Output List.[0].DataType" value="String" />
+                                                  <property name="Statistics.Open Count" value="53" />
+                                                  <property name="Statistics.Row Count" value="1,421" />
+                                                  <property name="Statistics.Average Row Count" value="27" />
+                                                </properties>
+                                                <input />
+                                              </element>
+                                            </input>
+                                          </element>
+                                          <element operator="TableScan">
+                                            <properties>
+                                              <property name="Table" value="EmployeeTerritories AS et2" />
+                                              <property name="Output List.[0]" value="et2.TerritoryID" />
+                                              <property name="Output List.[0].Table" value="et2" />
+                                              <property name="Output List.[0].Column" value="TerritoryID" />
+                                              <property name="Output List.[0].DataType" value="String" />
+                                              <property name="Statistics.Open Count" value="53" />
+                                              <property name="Statistics.Row Count" value="1,421" />
+                                              <property name="Statistics.Average Row Count" value="27" />
+                                            </properties>
+                                            <input />
+                                          </element>
+                                        </input>
+                                      </element>
+                                      <element operator="Assert">
+                                        <properties>
+                                          <property name="Output List.[0]" value="Expr1010" />
+                                          <property name="Output List.[0].Column" value="Expr1010" />
+                                          <property name="Output List.[0].DataType" value="String" />
+                                          <property name="Statistics.Open Count" value="0" />
+                                          <property name="Statistics.Row Count" value="0" />
+                                          <property name="Statistics.Average Row Count" value="0" />
+                                          <property name="Predicate" value="CASE WHEN Expr1009 &gt; 1 THEN 0 END" />
+                                        </properties>
+                                        <input>
+                                          <element operator="StreamAggregate">
+                                            <properties>
+                                              <property name="Output List.[0]" value="Expr1009" />
+                                              <property name="Output List.[0].Column" value="Expr1009" />
+                                              <property name="Output List.[0].DataType" value="Int32" />
+                                              <property name="Output List.[1]" value="Expr1010" />
+                                              <property name="Output List.[1].Column" value="Expr1010" />
+                                              <property name="Output List.[1].DataType" value="String" />
+                                              <property name="Statistics.Open Count" value="0" />
+                                              <property name="Statistics.Row Count" value="0" />
+                                              <property name="Statistics.Average Row Count" value="0" />
+                                              <property name="Defined Values.[0]" value="Expr1009 = COUNT(0)" />
+                                              <property name="Defined Values.[0].Target" value="Expr1009" />
+                                              <property name="Defined Values.[0].DataType" value="Int32" />
+                                              <property name="Defined Values.[0].Source" value="COUNT(0)" />
+                                              <property name="Defined Values.[1]" value="Expr1010 = ANY(Expr1008)" />
+                                              <property name="Defined Values.[1].Target" value="Expr1010" />
+                                              <property name="Defined Values.[1].DataType" value="String" />
+                                              <property name="Defined Values.[1].Source" value="ANY(Expr1008)" />
+                                            </properties>
+                                            <input>
+                                              <element operator="ComputeScalar">
+                                                <properties>
+                                                  <property name="Output List.[0]" value="Expr1008" />
+                                                  <property name="Output List.[0].Column" value="Expr1008" />
+                                                  <property name="Output List.[0].DataType" value="String" />
+                                                  <property name="Statistics.Open Count" value="0" />
+                                                  <property name="Statistics.Row Count" value="0" />
+                                                  <property name="Statistics.Average Row Count" value="0" />
+                                                  <property name="Defined Values.[0]" value="Expr1008 = TO_STRING(od1.OrderID)" />
+                                                  <property name="Defined Values.[0].Target" value="Expr1008" />
+                                                  <property name="Defined Values.[0].DataType" value="String" />
+                                                  <property name="Defined Values.[0].Source" value="TO_STRING(od1.OrderID)" />
+                                                </properties>
+                                                <input>
+                                                  <element operator="TableScan">
+                                                    <properties>
+                                                      <property name="Table" value="Order Details AS od1" />
+                                                      <property name="Output List.[0]" value="od1.OrderID" />
+                                                      <property name="Output List.[0].Table" value="od1" />
+                                                      <property name="Output List.[0].Column" value="OrderID" />
+                                                      <property name="Output List.[0].DataType" value="Int32" />
+                                                      <property name="Statistics.Open Count" value="0" />
+                                                      <property name="Statistics.Row Count" value="0" />
+                                                      <property name="Statistics.Average Row Count" value="0" />
+                                                    </properties>
+                                                    <input />
+                                                  </element>
+                                                </input>
+                                              </element>
+                                            </input>
+                                          </element>
+                                        </input>
+                                      </element>
+                                    </input>
+                                  </element>
+                                  <element operator="TableScan">
+                                    <properties>
+                                      <property name="Table" value="Region AS r1" />
+                                      <property name="Output List.[0]" value="r1.RegionID" />
+                                      <property name="Output List.[0].Table" value="r1" />
+                                      <property name="Output List.[0].Column" value="RegionID" />
+                                      <property name="Output List.[0].DataType" value="Int32" />
+                                      <property name="Statistics.Open Count" value="53" />
+                                      <property name="Statistics.Row Count" value="114" />
+                                      <property name="Statistics.Average Row Count" value="2" />
+                                    </properties>
+                                    <input />
+                                  </element>
+                                </input>
+                              </element>
+                              <element operator="Assert">
+                                <properties>
+                                  <property name="Output List.[0]" value="Expr1016" />
+                                  <property name="Output List.[0].Column" value="Expr1016" />
+                                  <property name="Output List.[0].DataType" value="String" />
+                                  <property name="Statistics.Open Count" value="0" />
+                                  <property name="Statistics.Row Count" value="0" />
+                                  <property name="Statistics.Average Row Count" value="0" />
+                                  <property name="Predicate" value="CASE WHEN Expr1015 &gt; 1 THEN 0 END" />
+                                </properties>
+                                <input>
+                                  <element operator="StreamAggregate">
+                                    <properties>
+                                      <property name="Output List.[0]" value="Expr1015" />
+                                      <property name="Output List.[0].Column" value="Expr1015" />
+                                      <property name="Output List.[0].DataType" value="Int32" />
+                                      <property name="Output List.[1]" value="Expr1016" />
+                                      <property name="Output List.[1].Column" value="Expr1016" />
+                                      <property name="Output List.[1].DataType" value="String" />
+                                      <property name="Statistics.Open Count" value="0" />
+                                      <property name="Statistics.Row Count" value="0" />
+                                      <property name="Statistics.Average Row Count" value="0" />
+                                      <property name="Defined Values.[0]" value="Expr1015 = COUNT(0)" />
+                                      <property name="Defined Values.[0].Target" value="Expr1015" />
+                                      <property name="Defined Values.[0].DataType" value="Int32" />
+                                      <property name="Defined Values.[0].Source" value="COUNT(0)" />
+                                      <property name="Defined Values.[1]" value="Expr1016 = ANY(Expr1014)" />
+                                      <property name="Defined Values.[1].Target" value="Expr1016" />
+                                      <property name="Defined Values.[1].DataType" value="String" />
+                                      <property name="Defined Values.[1].Source" value="ANY(Expr1014)" />
+                                    </properties>
+                                    <input>
+                                      <element operator="ComputeScalar">
+                                        <properties>
+                                          <property name="Output List.[0]" value="Expr1014" />
+                                          <property name="Output List.[0].Column" value="Expr1014" />
+                                          <property name="Output List.[0].DataType" value="String" />
+                                          <property name="Statistics.Open Count" value="0" />
+                                          <property name="Statistics.Row Count" value="0" />
+                                          <property name="Statistics.Average Row Count" value="0" />
+                                          <property name="Defined Values.[0]" value="Expr1014 = TO_STRING(od2.OrderID)" />
+                                          <property name="Defined Values.[0].Target" value="Expr1014" />
+                                          <property name="Defined Values.[0].DataType" value="String" />
+                                          <property name="Defined Values.[0].Source" value="TO_STRING(od2.OrderID)" />
+                                        </properties>
+                                        <input>
+                                          <element operator="TableScan">
+                                            <properties>
+                                              <property name="Table" value="Order Details AS od2" />
+                                              <property name="Output List.[0]" value="od2.OrderID" />
+                                              <property name="Output List.[0].Table" value="od2" />
+                                              <property name="Output List.[0].Column" value="OrderID" />
+                                              <property name="Output List.[0].DataType" value="Int32" />
+                                              <property name="Statistics.Open Count" value="0" />
+                                              <property name="Statistics.Row Count" value="0" />
+                                              <property name="Statistics.Average Row Count" value="0" />
+                                            </properties>
+                                            <input />
+                                          </element>
+                                        </input>
+                                      </element>
+                                    </input>
+                                  </element>
+                                </input>
+                              </element>
+                            </input>
+                          </element>
+                          <element operator="TableScan">
+                            <properties>
+                              <property name="Table" value="Region AS r2" />
+                              <property name="Output List.[0]" value="r2.RegionID" />
+                              <property name="Output List.[0].Table" value="r2" />
+                              <property name="Output List.[0].Column" value="RegionID" />
+                              <property name="Output List.[0].DataType" value="Int32" />
+                              <property name="Statistics.Open Count" value="0" />
+                              <property name="Statistics.Row Count" value="0" />
+                              <property name="Statistics.Average Row Count" value="0" />
+                            </properties>
+                            <input />
+                          </element>
+                        </input>
+                      </element>
+                      <element operator="Assert">
+                        <properties>
+                          <property name="Output List.[0]" value="Expr1022" />
+                          <property name="Output List.[0].Column" value="Expr1022" />
+                          <property name="Output List.[0].DataType" value="String" />
+                          <property name="Statistics.Open Count" value="0" />
+                          <property name="Statistics.Row Count" value="0" />
+                          <property name="Statistics.Average Row Count" value="0" />
+                          <property name="Predicate" value="CASE WHEN Expr1021 &gt; 1 THEN 0 END" />
+                        </properties>
+                        <input>
+                          <element operator="StreamAggregate">
+                            <properties>
+                              <property name="Output List.[0]" value="Expr1021" />
+                              <property name="Output List.[0].Column" value="Expr1021" />
+                              <property name="Output List.[0].DataType" value="Int32" />
+                              <property name="Output List.[1]" value="Expr1022" />
+                              <property name="Output List.[1].Column" value="Expr1022" />
+                              <property name="Output List.[1].DataType" value="String" />
+                              <property name="Statistics.Open Count" value="0" />
+                              <property name="Statistics.Row Count" value="0" />
+                              <property name="Statistics.Average Row Count" value="0" />
+                              <property name="Defined Values.[0]" value="Expr1021 = COUNT(0)" />
+                              <property name="Defined Values.[0].Target" value="Expr1021" />
+                              <property name="Defined Values.[0].DataType" value="Int32" />
+                              <property name="Defined Values.[0].Source" value="COUNT(0)" />
+                              <property name="Defined Values.[1]" value="Expr1022 = ANY(Expr1020)" />
+                              <property name="Defined Values.[1].Target" value="Expr1022" />
+                              <property name="Defined Values.[1].DataType" value="String" />
+                              <property name="Defined Values.[1].Source" value="ANY(Expr1020)" />
+                            </properties>
+                            <input>
+                              <element operator="ComputeScalar">
+                                <properties>
+                                  <property name="Output List.[0]" value="Expr1020" />
+                                  <property name="Output List.[0].Column" value="Expr1020" />
+                                  <property name="Output List.[0].DataType" value="String" />
+                                  <property name="Statistics.Open Count" value="0" />
+                                  <property name="Statistics.Row Count" value="0" />
+                                  <property name="Statistics.Average Row Count" value="0" />
+                                  <property name="Defined Values.[0]" value="Expr1020 = TO_STRING(od3.OrderID)" />
+                                  <property name="Defined Values.[0].Target" value="Expr1020" />
+                                  <property name="Defined Values.[0].DataType" value="String" />
+                                  <property name="Defined Values.[0].Source" value="TO_STRING(od3.OrderID)" />
+                                </properties>
+                                <input>
+                                  <element operator="TableScan">
+                                    <properties>
+                                      <property name="Table" value="Order Details AS od3" />
+                                      <property name="Output List.[0]" value="od3.OrderID" />
+                                      <property name="Output List.[0].Table" value="od3" />
+                                      <property name="Output List.[0].Column" value="OrderID" />
+                                      <property name="Output List.[0].DataType" value="Int32" />
+                                      <property name="Statistics.Open Count" value="0" />
+                                      <property name="Statistics.Row Count" value="0" />
+                                      <property name="Statistics.Average Row Count" value="0" />
+                                    </properties>
+                                    <input />
+                                  </element>
+                                </input>
+                              </element>
+                            </input>
+                          </element>
+                        </input>
+                      </element>
+                    </input>
+                  </element>
+                </input>
+              </element>
+            </input>
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

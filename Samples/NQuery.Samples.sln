@@ -1,0 +1,127 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensibility", "Extensibility", "{CD226777-DBE5-46EE-A88F-1D330AC89DCD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Quick Starts", "Quick Starts", "{D8308D52-FAE1-4D6E-9994-8AB49CC646CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Overview", "Overview", "{CE32F81A-2E53-4074-990A-15066D0733D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomAggregate", "Extensibility\CustomAggregate\CustomAggregate.csproj", "{8A69CCB6-3115-4226-B988-F1B568837BEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomComparer", "Extensibility\CustomComparer\CustomComparer.csproj", "{F56B506E-D357-4EDE-B843-E9EB28971CDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFunctions", "Extensibility\CustomFunctions\CustomFunctions.csproj", "{4FC7C803-0DB9-4675-8AD0-554F149CB7F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomMethodProvider", "Extensibility\CustomMethodProvider\CustomMethodProvider.csproj", "{900EA7BB-0469-4DD5-8648-5B071996462C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomPropertyProvider", "Extensibility\CustomPropertyProvider\CustomPropertyProvider.csproj", "{B637B49B-7BEB-4415-B3E5-AE7FEBB534F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomTable", "Extensibility\CustomTable\CustomTable.csproj", "{9B689794-3DA2-4F56-AEB5-960B3D5C3A23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressionQuickStart", "Quick Starts\ExpressionQuickStart\ExpressionQuickStart.csproj", "{64973361-FECB-431C-838E-78A06A8A7046}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryQuickStart", "Quick Starts\QueryQuickStart\QueryQuickStart.csproj", "{A0F93930-BF8D-4449-AFEE-EA3A9E76EBD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParametersVsConstants", "Overview\ParametersVsConstants\ParametersVsConstants.csproj", "{3349E326-FB31-453B-8FEB-6EDC39C5B510}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 10
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs01.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Extensibility\\CustomAggregate\\CustomAggregate.csproj
+		SccProjectTopLevelParentUniqueName1 = NQuery.Samples.sln
+		SccProjectName1 = Extensibility/CustomAggregate
+		SccLocalPath1 = Extensibility\\CustomAggregate
+		SccProjectUniqueName2 = Extensibility\\CustomComparer\\CustomComparer.csproj
+		SccProjectTopLevelParentUniqueName2 = NQuery.Samples.sln
+		SccProjectName2 = Extensibility/CustomComparer
+		SccLocalPath2 = Extensibility\\CustomComparer
+		SccProjectUniqueName3 = Extensibility\\CustomFunctions\\CustomFunctions.csproj
+		SccProjectTopLevelParentUniqueName3 = NQuery.Samples.sln
+		SccProjectName3 = Extensibility/CustomFunctions
+		SccLocalPath3 = Extensibility\\CustomFunctions
+		SccProjectUniqueName4 = Extensibility\\CustomMethodProvider\\CustomMethodProvider.csproj
+		SccProjectTopLevelParentUniqueName4 = NQuery.Samples.sln
+		SccProjectName4 = Extensibility/CustomMethodProvider
+		SccLocalPath4 = Extensibility\\CustomMethodProvider
+		SccProjectUniqueName5 = Extensibility\\CustomPropertyProvider\\CustomPropertyProvider.csproj
+		SccProjectTopLevelParentUniqueName5 = NQuery.Samples.sln
+		SccProjectName5 = Extensibility/CustomPropertyProvider
+		SccLocalPath5 = Extensibility\\CustomPropertyProvider
+		SccProjectUniqueName6 = Extensibility\\CustomTable\\CustomTable.csproj
+		SccProjectTopLevelParentUniqueName6 = NQuery.Samples.sln
+		SccProjectName6 = Extensibility/CustomTable
+		SccLocalPath6 = Extensibility\\CustomTable
+		SccProjectUniqueName7 = Quick\u0020Starts\\ExpressionQuickStart\\ExpressionQuickStart.csproj
+		SccProjectTopLevelParentUniqueName7 = NQuery.Samples.sln
+		SccProjectName7 = Quick\u0020Starts/ExpressionQuickStart
+		SccLocalPath7 = Quick\u0020Starts\\ExpressionQuickStart
+		SccProjectUniqueName8 = Quick\u0020Starts\\QueryQuickStart\\QueryQuickStart.csproj
+		SccProjectTopLevelParentUniqueName8 = NQuery.Samples.sln
+		SccProjectName8 = Quick\u0020Starts/QueryQuickStart
+		SccLocalPath8 = Quick\u0020Starts\\QueryQuickStart
+		SccProjectUniqueName9 = Overview\\ParametersVsConstants\\ParametersVsConstants.csproj
+		SccProjectTopLevelParentUniqueName9 = NQuery.Samples.sln
+		SccProjectName9 = Overview/ParametersVsConstants
+		SccLocalPath9 = Overview\\ParametersVsConstants
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A69CCB6-3115-4226-B988-F1B568837BEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A69CCB6-3115-4226-B988-F1B568837BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A69CCB6-3115-4226-B988-F1B568837BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A69CCB6-3115-4226-B988-F1B568837BEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F56B506E-D357-4EDE-B843-E9EB28971CDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F56B506E-D357-4EDE-B843-E9EB28971CDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F56B506E-D357-4EDE-B843-E9EB28971CDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F56B506E-D357-4EDE-B843-E9EB28971CDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FC7C803-0DB9-4675-8AD0-554F149CB7F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FC7C803-0DB9-4675-8AD0-554F149CB7F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FC7C803-0DB9-4675-8AD0-554F149CB7F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FC7C803-0DB9-4675-8AD0-554F149CB7F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{900EA7BB-0469-4DD5-8648-5B071996462C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{900EA7BB-0469-4DD5-8648-5B071996462C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{900EA7BB-0469-4DD5-8648-5B071996462C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{900EA7BB-0469-4DD5-8648-5B071996462C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B637B49B-7BEB-4415-B3E5-AE7FEBB534F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B637B49B-7BEB-4415-B3E5-AE7FEBB534F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B637B49B-7BEB-4415-B3E5-AE7FEBB534F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B637B49B-7BEB-4415-B3E5-AE7FEBB534F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B689794-3DA2-4F56-AEB5-960B3D5C3A23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B689794-3DA2-4F56-AEB5-960B3D5C3A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B689794-3DA2-4F56-AEB5-960B3D5C3A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B689794-3DA2-4F56-AEB5-960B3D5C3A23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64973361-FECB-431C-838E-78A06A8A7046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64973361-FECB-431C-838E-78A06A8A7046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64973361-FECB-431C-838E-78A06A8A7046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64973361-FECB-431C-838E-78A06A8A7046}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0F93930-BF8D-4449-AFEE-EA3A9E76EBD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0F93930-BF8D-4449-AFEE-EA3A9E76EBD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0F93930-BF8D-4449-AFEE-EA3A9E76EBD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0F93930-BF8D-4449-AFEE-EA3A9E76EBD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3349E326-FB31-453B-8FEB-6EDC39C5B510}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3349E326-FB31-453B-8FEB-6EDC39C5B510}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3349E326-FB31-453B-8FEB-6EDC39C5B510}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3349E326-FB31-453B-8FEB-6EDC39C5B510}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8A69CCB6-3115-4226-B988-F1B568837BEC} = {CD226777-DBE5-46EE-A88F-1D330AC89DCD}
+		{F56B506E-D357-4EDE-B843-E9EB28971CDE} = {CD226777-DBE5-46EE-A88F-1D330AC89DCD}
+		{4FC7C803-0DB9-4675-8AD0-554F149CB7F9} = {CD226777-DBE5-46EE-A88F-1D330AC89DCD}
+		{900EA7BB-0469-4DD5-8648-5B071996462C} = {CD226777-DBE5-46EE-A88F-1D330AC89DCD}
+		{B637B49B-7BEB-4415-B3E5-AE7FEBB534F2} = {CD226777-DBE5-46EE-A88F-1D330AC89DCD}
+		{9B689794-3DA2-4F56-AEB5-960B3D5C3A23} = {CD226777-DBE5-46EE-A88F-1D330AC89DCD}
+		{64973361-FECB-431C-838E-78A06A8A7046} = {D8308D52-FAE1-4D6E-9994-8AB49CC646CF}
+		{A0F93930-BF8D-4449-AFEE-EA3A9E76EBD0} = {D8308D52-FAE1-4D6E-9994-8AB49CC646CF}
+		{3349E326-FB31-453B-8FEB-6EDC39C5B510} = {CE32F81A-2E53-4074-990A-15066D0733D9}
+	EndGlobalSection
+EndGlobal

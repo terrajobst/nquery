@@ -1,0 +1,8 @@
+<test>
+  <sql>SELECT	*
+FROM	Employees e,
+		Employees e</sql>
+  <expectedErrors>
+    <expectedError id="DuplicateTableRefInFrom" text="The correlation name 'e' is specified multiple times in a FROM clause." />
+  </expectedErrors>
+</test>

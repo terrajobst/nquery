@@ -1,0 +1,47 @@
+<topic>
+	<head>
+		<title>RIGHT</title>
+		<keywords>
+			<keyword term="functions, RIGHT" />
+			<keyword term="string functions, RIGHT" />
+			<keyword term="RIGHT function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="String Functions.html">String Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns the right part of a string with the specified number of characters.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">RIGHT(str AS string, numberOfChars AS int) RETURNS string</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="str">
+					<p>
+						The string to get the right part from.
+					</p>
+				</param>
+				<param name="numberOfChars">
+					<p>
+						Is a positive integer that specifies how many characters of <c>str</c> will be returned.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				If <c>numberOfChars</c> is negative, an error is returned. Otherwise the right part of <c>str</c>
+				with <c>numberOfChars</c> number of characters is returned.
+			</p>
+		</returns>
+	</body>
+</topic>

@@ -1,0 +1,121 @@
+<test>
+  <sql>SELECT	EmployeeId
+FROM	(
+			SELECT	TOP 100
+					*
+			FROM	Employees 
+			ORDER	BY BirthDate DESC
+		) AS D</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="EmployeeID" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <EmployeeID>9</EmployeeID>
+  </Table1>
+  <Table1>
+    <EmployeeID>3</EmployeeID>
+  </Table1>
+  <Table1>
+    <EmployeeID>6</EmployeeID>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+  </Table1>
+  <Table1>
+    <EmployeeID>8</EmployeeID>
+  </Table1>
+  <Table1>
+    <EmployeeID>5</EmployeeID>
+  </Table1>
+  <Table1>
+    <EmployeeID>2</EmployeeID>
+  </Table1>
+  <Table1>
+    <EmployeeID>1</EmployeeID>
+  </Table1>
+  <Table1>
+    <EmployeeID>4</EmployeeID>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="Employees.EmployeeID AS EmployeeID" />
+          <property name="Output List.[0].Table" value="Employees" />
+          <property name="Output List.[0].Column" value="EmployeeID" />
+          <property name="Output List.[0].DataType" value="Int32" />
+          <property name="Output List.[0].Output Name" value="EmployeeID" />
+        </properties>
+        <input>
+          <element operator="Top">
+            <properties>
+              <property name="Output List.[0]" value="Employees.EmployeeID" />
+              <property name="Output List.[0].Table" value="Employees" />
+              <property name="Output List.[0].Column" value="EmployeeID" />
+              <property name="Output List.[0].DataType" value="Int32" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="9" />
+              <property name="Statistics.Average Row Count" value="9" />
+              <property name="Limit" value="100" />
+              <property name="With Ties" value="False" />
+            </properties>
+            <input>
+              <element operator="Sort">
+                <properties>
+                  <property name="Output List.[0]" value="Employees.EmployeeID" />
+                  <property name="Output List.[0].Table" value="Employees" />
+                  <property name="Output List.[0].Column" value="EmployeeID" />
+                  <property name="Output List.[0].DataType" value="Int32" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="9" />
+                  <property name="Statistics.Average Row Count" value="9" />
+                  <property name="Logical Operator" value="Sort" />
+                  <property name="Order By.[0]" value="Employees.BirthDate DESC" />
+                  <property name="Order By.[0].Table" value="Employees" />
+                  <property name="Order By.[0].Column" value="BirthDate" />
+                  <property name="Order By.[0].DataType" value="DateTime" />
+                  <property name="Order By.[0].Order" value="DESC" />
+                </properties>
+                <input>
+                  <element operator="TableScan">
+                    <properties>
+                      <property name="Table" value="Employees AS Employees" />
+                      <property name="Output List.[0]" value="Employees.EmployeeID" />
+                      <property name="Output List.[0].Table" value="Employees" />
+                      <property name="Output List.[0].Column" value="EmployeeID" />
+                      <property name="Output List.[0].DataType" value="Int32" />
+                      <property name="Output List.[1]" value="Employees.BirthDate" />
+                      <property name="Output List.[1].Table" value="Employees" />
+                      <property name="Output List.[1].Column" value="BirthDate" />
+                      <property name="Output List.[1].DataType" value="DateTime" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="9" />
+                      <property name="Statistics.Average Row Count" value="9" />
+                    </properties>
+                    <input />
+                  </element>
+                </input>
+              </element>
+            </input>
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

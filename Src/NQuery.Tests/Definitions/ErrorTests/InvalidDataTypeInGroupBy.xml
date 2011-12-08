@@ -1,0 +1,9 @@
+<test>
+  <sql>SELECT	e.Photo,
+		COUNT(*)
+FROM	Employees e
+GROUP	BY e.Photo</sql>
+  <expectedErrors>
+    <expectedError id="InvalidDataTypeInGroupBy" text="The data type 'Byte[]' cannot be used in GROUP BY since it cannot be compared or sorted." />
+  </expectedErrors>
+</test>

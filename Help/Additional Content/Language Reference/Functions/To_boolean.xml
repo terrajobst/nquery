@@ -1,0 +1,54 @@
+<topic>
+	<head>
+		<title>TO_BOOLEAN</title>
+		<keywords>
+			<keyword term="functions, TO_BOOLEAN" />
+			<keyword term="conversion functions, TO_BOOLEAN" />
+			<keyword term="TO_BOOLEAN function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Conversion Functions.html">Conversion Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Converts a given value to an equivalent <see cref="T:System.Boolean" /> value.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">TO_BOOLEAN(value AS object) RETURNS bool</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						A value to be converted.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<examples>
+			<p>
+				The following shows <c>TO_BOOLEAN</c> results for some input data:
+			</p>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">SELECT 'The TO_BOOLEAN result of value ''true'' is: ' AS Input, TO_BOOLEAN('true') AS Value
+UNION  ALL
+SELECT 'The TO_BOOLEAN result of value ''false'' is: ', TO_BOOLEAN('false')
+UNION  ALL
+SELECT 'The TO_BOOLEAN result of value 0 is: ', TO_BOOLEAN(0)
+UNION  ALL
+SELECT 'The TO_BOOLEAN result of value 1 is: ', TO_BOOLEAN(1)
+UNION  ALL
+SELECT 'The TO_BOOLEAN result of value -1 is: ', TO_BOOLEAN(-1)
+UNION  ALL
+SELECT 'The TO_BOOLEAN result of value 4711 is: ', TO_BOOLEAN(4711)
+UNION  ALL
+SELECT 'The TO_BOOLEAN result of value -4711 is: ', TO_BOOLEAN(-4711)</sampleCode>
+		</examples>
+	</body>
+</topic>

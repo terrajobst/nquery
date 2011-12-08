@@ -1,0 +1,36 @@
+<topic>
+	<head>
+		<title>Welcome to NQuery!</title>
+		<toc index="1" default="true"/>
+		<links>
+			<link href="Features.html">Features</link>
+			<link href="Overview\Overview.html">Overview</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				NQuery is a relational query engine written in C#. It allows you to execute a
+				<a href="Language Reference/Queries/Queries.html">SELECT query</a> against .NET
+				objects. It can use arrays, data sets, data tables or any other custom table
+				binding. NQuery is completely extensible so that you can add custom functions,
+				aggregates, constants and parameters.
+			</p>
+			<p>
+				In addition to the query engine itself this project also contains an integration
+				assembly with <a href="http://www.actiprosoftware.com/Products/DotNet/WindowsForms/SyntaxEditor/default.aspx">Actipro's SyntaxEditor</a>
+				so that you can author queries very easily. This includes code completion, parameter
+				info and syntax highlighting.
+			</p>
+			<p>
+				For details how to use NQuery see the <a href="Overview\Overview.html">Overview</a>.
+			</p>
+			<p>
+				For a feature list see <a href="Features.html">Features</a>.
+			</p>
+			<p>
+				<img src="Welcome.png" />
+			</p>
+		</summary>
+	</body>
+</topic>

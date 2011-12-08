@@ -1,0 +1,50 @@
+<topic>
+	<head>
+		<title>TO_DATETIME</title>
+		<keywords>
+			<keyword term="functions, TO_DATETIME" />
+			<keyword term="conversion functions, TO_DATETIME" />
+			<keyword term="date and time functions, TO_DATETIME" />
+			<keyword term="TO_DATETIME function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Conversion Functions.html">Conversion Functions</link>
+			<link href="Date and Time Functions.html">Date and Time Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Converts a given value to a <see cref="T:System.DateTime" />.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">TO_DATETIME(value AS object) RETURNS DateTime</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						A value to be converted.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<examples>
+			<p>
+				The following shows <c>TO_DATETIME</c> results for some input data:
+			</p>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">SELECT 'The TO_DATETIME result of value ''1967-12-31'' is: ' AS Input, TO_DATETIME('1967-12-31') AS Value
+UNION  ALL
+SELECT 'The TO_DATETIME result of value ''12/31/1967'' is: ' AS Input, TO_DATETIME('12/31/1967') AS Value</sampleCode>
+			<note>
+				Though <c>TO_DATETIME</c> uses an invariant culture to parse the string as date and time the output of this query may
+				vary depending on your regional settings.
+			</note>
+		</examples>
+	</body>
+</topic>

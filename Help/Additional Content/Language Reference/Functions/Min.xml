@@ -1,0 +1,49 @@
+<topic>
+	<head>
+		<title>MIN</title>
+		<keywords>
+			<keyword term="functions, MIN" />
+			<keyword term="aggregates, MIN" />
+			<keyword term="aggregate functions, MIN" />
+			<keyword term="MIN aggregate" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Aggregate Functions.html">Aggregate Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns the minimum value of the expression in a group. <c>NULL</c> values are ignored.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">MIN ( expression )</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						An expression to determine the minimum for.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The minimum of all evaluated values of <c>expression</c> in a group. <c>NULL</c> values are ignored.
+			</p>
+		</returns>
+
+		<remarks>
+			<p>
+				The <c>MIN</c> aggregate function is not limited to certain data types. However, the data type <c>T</c> must be
+				comparable, i.e. implement the .NET interface <c>System.IComparable</c>.
+			</p>
+		</remarks>
+	</body>
+</topic>

@@ -1,0 +1,36 @@
+<topic>
+	<head>
+		<title>HAVING Clause</title>
+		<toc index="6" />
+		<keywords>
+			<keyword term="SELECT statement, HAVING clause" />
+			<keyword term="HAVING clause, about" />
+		</keywords>
+		<links>
+			<link href="Queries.html">SELECT Syntax</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Specifies a search condition for a group or an aggregate. <c>HAVING</c> can be used only with the <c>SELECT</c> statement.
+				<c>HAVING</c> is typically used in a <c>GROUP BY</c> clause. When <c>GROUP BY</c> is not used, <c>HAVING</c> behaves like
+				a <c>WHERE</c> clause.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">[ <b>HAVING</b> <i>search_condition</i> ]</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="search_condition">
+					<p>
+						Specifies the search condition for the group or the aggregate to meet.
+					</p>
+				</param>
+			</params>
+		</parameters>
+	</body>
+</topic>

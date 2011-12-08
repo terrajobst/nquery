@@ -1,0 +1,41 @@
+<topic>
+	<head>
+		<title>REVERSE</title>
+		<keywords>
+			<keyword term="functions, REVERSE" />
+			<keyword term="string functions, REVERSE" />
+			<keyword term="REVERSE function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="String Functions.html">String Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns the reverse of a string.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">REVERSE(str AS string) RETURNS string</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="str">
+					<p>
+						Specifies the string to be reversed.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				<c>str</c> with all characters in reverse order.
+			</p>
+		</returns>
+	</body>
+</topic>

@@ -1,0 +1,47 @@
+﻿<topic>
+	<head>
+		<title>Constant Scan</title>
+		<keywords>
+			<keyword term="execution plan, constant scan"/>
+			<keyword term="physical operators, constant scan"/>
+			<keyword term="logical operators, constant scan"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Constant Scan</b> operator introduces zero or one row into a query. A <a href="Compute Scalar.html">Compute Scalar</a>
+				operator is often used to add columns to a row produced by a Constant Scan operator.
+			</p>
+			<p>
+				The <c>Empty</c> property indicates whether this operator will introduce a row. For example, an empty
+				<b>Constant Scan</b> is produced for a query for which the <c>WHERE</c> clause is always <c>FALSE</c>.
+			</p>
+			<p>
+				<b>Constant Scan</b> is a logical and physical operator.
+			</p>
+		</summary>
+
+		<section title="Properties">
+			<table>
+				<tr>
+					<th>Property Name</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>Empty</td>
+					<td>
+						Indicates whether this <b>Constant Scan</b> actually represents an empty table.
+					</td>
+				</tr>
+				<tr>
+					<td>Defined Values</td>
+					<td>Specifies the set of values stored in the table.</td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</topic>

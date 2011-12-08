@@ -1,0 +1,16 @@
+<test>
+  <sql>SELECT	*
+FROM	Employees e
+WHERE	e.EmployeeID = ALL (SELECT EmployeeID FROM Employees)
+AND		e.EmployeeID &lt; ALL (SELECT EmployeeID FROM Employees)
+AND		e.EmployeeID &gt; ALL (SELECT EmployeeID FROM Employees)
+AND		e.EmployeeID &lt;&gt; ALL (SELECT EmployeeID FROM Employees)
+AND		e.EmployeeID &lt;= ALL (SELECT EmployeeID FROM Employees)
+AND		e.EmployeeID &gt;= ALL (SELECT EmployeeID FROM Employees)
+AND		e.EmployeeID + ALL (SELECT EmployeeID FROM Employees)
+AND		e.EmployeeID - ALL (SELECT EmployeeID FROM Employees)</sql>
+  <expectedErrors>
+    <expectedError id="InvalidOperatorForAllAny" text="SOME, ANY and ALL can only be applied on =, &lt;&gt;, &lt;, &lt;=, &gt;, or &gt;=" />
+    <expectedError id="InvalidOperatorForAllAny" text="SOME, ANY and ALL can only be applied on =, &lt;&gt;, &lt;, &lt;=, &gt;, or &gt;=" />
+  </expectedErrors>
+</test>

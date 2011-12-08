@@ -1,0 +1,47 @@
+﻿<topic>
+	<head>
+		<title>Sort</title>
+		<keywords>
+			<keyword term="execution plan, sort"/>
+			<keyword term="physical operators, sort"/>
+			<keyword term="logical operators, sort"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Sort</b> operator sorts all incoming rows. The <c>Logical Operator</c> column contains <c>Distinct Sort</c> if duplicates are
+				removed by this operation, or <c>Sort</c> if duplicates are kept. A comma-separated list of the columns being sorted is contained
+				in the <c>Order By</c> column. The columns are suffixed with the value <c>ASC</c> if the columns are sorted in ascending order,
+				or the value <c>DESC</c> if the columns are sorted in descending order.
+			</p>
+			<p>
+				<b>Sort</b> is a logical and physical operator.
+			</p>
+		</summary>
+
+		<section title="Properties">
+			<table>
+				<tr>
+					<th>Property Name</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>Logical Operator</td>
+					<td>
+						Specfies wheter the <b>Sort</b> operators performs a regular sort or a <a href="Distinct Sort.html">Distinct Sort</a>.
+					</td>
+				</tr>
+				<tr>
+					<td>Order By</td>
+					<td>
+						Specifies the set of columns being sorted.
+					</td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</topic>

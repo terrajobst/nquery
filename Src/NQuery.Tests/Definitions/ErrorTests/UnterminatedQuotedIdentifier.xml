@@ -1,0 +1,7 @@
+<test>
+  <sql>SELECT "Test</sql>
+  <expectedErrors>
+    <expectedError id="UnterminatedQuotedIdentifier" text="Quoted identifier 'Test' is not properly terminated." />
+    <expectedError id="UnterminatedQuotedIdentifier" text="Quoted identifier 'Test' is not properly terminated." />
+  </expectedErrors>
+</test>

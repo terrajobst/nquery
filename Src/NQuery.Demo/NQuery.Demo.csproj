@@ -1,0 +1,319 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C272C01-FCF0-411C-8908-350C89131840}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>NQueryDemo</AssemblyName>
+    <AssemblyOriginatorKeyFile>..\NQuery.snk</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NQuery.Demo</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <SccAuxPath>SAK</SccAuxPath>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Code Analysis|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Code Analysis\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiproSoftware.Shared.Net20, Version=1.0.101.0, Culture=neutral, PublicKeyToken=36ff2196ab5654b9, processorArchitecture=MSIL" />
+    <Reference Include="ActiproSoftware.SyntaxEditor.Net20, Version=4.0.281.0, Culture=neutral, PublicKeyToken=21a821480e210563, processorArchitecture=MSIL" />
+    <Reference Include="ActiproSoftware.WinUICore.Net20, Version=1.0.101.0, Culture=neutral, PublicKeyToken=1eba893a2bc55de5, processorArchitecture=MSIL" />
+    <Reference Include="SandDock, Version=3.0.3.1, Culture=neutral, PublicKeyToken=75b7ec17dd7c14c3, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\NQuery.Demo.AddIns\NQuery.Demo.AddIns.csproj">
+      <Project>{5AF62545-F377-44C1-927F-251CB8F031E3}</Project>
+      <Name>NQuery.Demo.AddIns</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NQuery.Tests\NQuery.Tests.csproj">
+      <Project>{965FF445-36E6-41B6-9192-91D2AEB6169E}</Project>
+      <Name>NQuery.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NQuery.UI.Actipro40\NQuery.UI.Actipro40.csproj">
+      <Project>{097DF737-7EE9-4B5D-88BF-D3D67DC84219}</Project>
+      <Name>NQuery.UI.Actipro40</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NQuery.UI\NQuery.UI.csproj">
+      <Project>{50AB85FB-C09C-45E1-9407-B4B0F41598BC}</Project>
+      <Name>NQuery.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NQuery\NQuery.csproj">
+      <Name>NQuery</Name>
+      <Project>{4B5ABD2A-DE15-4F4F-8417-CE4450F7004E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddInForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditParameterForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EditParameterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="QueryBrowser.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QueryBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryDocument.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QueryDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewQueryForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewQueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeDocument.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WelcomeDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="App.ico" />
+    <None Include="Resources\WelcomeDocument.png" />
+    <None Include="Resources\Browser.png" />
+    <None Include="Resources\NewParameter.png" />
+    <None Include="Resources\Paste.png" />
+    <None Include="Resources\Copy.png" />
+    <None Include="Resources\Cut.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\Redo.png" />
+    <None Include="Resources\Undo.png" />
+    <None Include="Resources\New.png" />
+    <None Include="Resources\Properties.png" />
+    <None Include="Resources\ListMembers.png" />
+    <None Include="Resources\CompleteWord.png" />
+    <None Include="Resources\ParameterInfo.png" />
+    <None Include="..\NQuery.snk">
+      <Link>NQuery.snk</Link>
+    </None>
+    <None Include="Resources\StatusBarSuccess.png" />
+    <None Include="Resources\StatusBarError.png" />
+    <None Include="Resources\SaveGrid.png" />
+    <None Include="Resources\EstimatePlan.png" />
+    <None Include="Resources\Execute.png" />
+    <None Include="Resources\Welcome.rtf" />
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VisualStudioPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VisualStudioPropertyGrid.Designer.cs">
+      <DependentUpon>VisualStudioPropertyGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualStudioToolBarRenderer.cs" />
+    <Compile Include="AddInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddInForm.Designer.cs">
+      <DependentUpon>AddInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddInManager.cs" />
+    <Compile Include="DataSetManager.cs" />
+    <Compile Include="EditParameterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditParameterForm.Designer.cs">
+      <DependentUpon>EditParameterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces.cs" />
+    <Compile Include="NewQueryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewQueryForm.Designer.cs">
+      <DependentUpon>NewQueryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryBrowser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QueryBrowser.Designer.cs">
+      <DependentUpon>QueryBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QueryDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QueryDocument.Designer.cs">
+      <DependentUpon>QueryDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TanColorTable.cs" />
+    <Compile Include="WelcomeDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WelcomeDocument.Designer.cs">
+      <DependentUpon>WelcomeDocument.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>MD "$(TargetDir)Data\"
+COPY "$(SolutionDir)..\Etc\Sample Data\" "$(TargetDir)Data\"
+
+IF NOT EXIST "$(TargetDir)AddIns\" MD "$(TargetDir)AddIns\"
+COPY "$(SolutionDir)NQuery.Demo.DefaultAddIns\obj\$(ConfigurationName)\*.dll" "$(TargetDir)AddIns\*.*"
+IF EXIST "$(TargetDir)AddIns\NQuery.Demo.DefaultAddIns.addin" DEL "$(TargetDir)AddIns\NQuery.Demo.DefaultAddIns.addin"
+REN "$(TargetDir)AddIns\NQuery.Demo.DefaultAddIns.dll" "NQuery.Demo.DefaultAddIns.addin"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

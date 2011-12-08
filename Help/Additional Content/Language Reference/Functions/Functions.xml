@@ -1,0 +1,30 @@
+﻿<topic>
+	<head>
+		<title>Functions </title>
+	</head>
+	<body>
+		<summary>
+			<p>Functions grouped by purpose:</p>
+			<ul>
+				<li>
+					<a href="Aggregate Functions.html">Aggregate Functions</a>
+				</li>
+				<li>
+					<a href="Conversion Functions.html">Conversion Functions</a>
+				</li>
+				<li>
+					<a href="Date and Time Functions.html">Date and Time Functions</a>
+				</li>
+				<li>
+					<a href="Mathematical Functions.html">Mathematical Functions</a>
+				</li>
+				<li>
+					<a href="String Functions.html">String Functions</a>
+				</li>
+				<li>
+					<a href="System Functions.html">System Functions</a>
+				</li>
+			</ul>
+		</summary>
+	</body>
+</topic>

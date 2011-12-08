@@ -1,0 +1,79 @@
+<topic>
+	<head>
+		<title>ROUND</title>
+		<keywords>
+			<keyword term="functions, ROUND" />
+			<keyword term="mathematical functions, ROUND" />
+			<keyword term="ROUND function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Mathematical Functions.html">Mathematical Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Rounds a value to the nearest integer or specified number of decimal places.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">ROUND(value AS decimal) RETURNS decimal
+ROUND(value AS double) RETURNS double
+ROUND(value AS decimal, digits AS int) RETURNS decimal
+ROUND(value AS double, digits AS int) RETURNS double</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						The value to be rounded.
+					</p>
+				</param>
+				<param name="digits">
+					<p>
+						The number of significant digits (precision) in the return value.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The number nearest <c>value</c> with a precision equal to <c>digits</c>. If <c>value</c> is halfway between
+				two numbers, one of which is even and the other odd, then the even number is returned. If the precision of
+				<c>value</c> is less than <c>digits</c>, then <c>value</c> is returned unchanged.
+			</p>
+		</returns>
+
+		<remarks>
+			<p>
+				The behavior of this method follows IEEE Standard 754, section 4. This kind of rounding is sometimes called
+				rounding to nearest, or banker's rounding.
+			</p>
+			<p>
+				The <c>digits</c> parameter specifies the number of significant digits in the return value. The ranges are given
+				in the following table:
+			</p>
+			<table>
+				<tr>
+					<th>Value's data type</th>
+					<th>Range</th>
+				</tr>
+				<tr>
+					<td>DOUBLE</td>
+					<td>0 to 15</td>
+				</tr>
+				<tr>
+					<td>DECIMAL</td>
+					<td>0 to 28</td>
+				</tr>
+			</table>
+			<p>
+				If <c>digits</c> is zero, then an integer is returned.
+			</p>
+		</remarks>
+	</body>
+</topic>

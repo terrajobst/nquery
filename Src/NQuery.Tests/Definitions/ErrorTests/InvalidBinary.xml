@@ -1,0 +1,12 @@
+<test>
+  <sql>SELECT	111111111111b,
+		000000000000b,
+		101010101010b,
+		1ABCDEFb,
+		1234567890b
+	   </sql>
+  <expectedErrors>
+    <expectedError id="InvalidReal" text="'1ABCDEFb' is not a valid decimal number." />
+    <expectedError id="InvalidBinary" text="'1234567890' is not a valid binary number." />
+  </expectedErrors>
+</test>

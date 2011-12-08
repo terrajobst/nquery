@@ -1,0 +1,8 @@
+<test>
+  <sql>SELECT	o.OrderID,
+		o.OrdaID
+FROM	Orders o</sql>
+  <expectedErrors>
+    <expectedError id="UndeclaredColumn" text="Column 'OrdaID' not declared in table 'o'." />
+  </expectedErrors>
+</test>

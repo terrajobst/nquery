@@ -1,0 +1,23 @@
+<topic>
+	<head>
+		<title>Unary Operators</title>
+		<toc index="1"/>
+		<keywords>
+			<keyword term="expressions, unary operators"/>
+			<keyword term="unary operators"/>
+		</keywords>
+		<links>
+			<link href="Expressions.html">Expression Syntax</link>
+		</links>
+	</head>
+	<body>
+		<syntax>
+			<code xml:space="preserve"><b>&lt;unary_operator&gt; ::= </b>
+    { <b>+</b>
+    | <b>-</b>
+    | <b>~</b>
+    | <b>NOT</b>
+    }</code>
+		</syntax>
+	</body>
+</topic>

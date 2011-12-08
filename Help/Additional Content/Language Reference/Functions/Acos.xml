@@ -1,0 +1,51 @@
+<topic>
+	<head>
+		<title>ACOS</title>
+		<keywords>
+			<keyword term="functions, ACOS" />
+			<keyword term="mathematical functions, ACOS" />
+			<keyword term="ACOS function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Mathematical Functions.html">Mathematical Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				A mathematical function that returns the angle, in radians, whose cosine is the specified double expression; also called arccosine.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">ACOS(value AS double) RETURNS double</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						A number representing a cosine, where <c>-1 ≤ value ≤ 1</c>.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				An angle, θ, measured in radians, such that <c>0 ≤ θ ≤ π</c>
+			</p>
+			<p>
+				-or-
+			</p>
+			<p>
+				<c>NaN</c> if <c>value &lt; -1</c> or <c>value &gt; 1</c>.
+			</p>
+		</returns>
+
+		<examples>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">SELECT 'The ACOS of the angle -1 is: ' + TO_STRING(ACOS(-1)) AS Result</sampleCode>
+		</examples>
+	</body>
+</topic>

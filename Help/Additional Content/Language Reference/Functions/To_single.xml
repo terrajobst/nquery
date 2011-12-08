@@ -1,0 +1,56 @@
+<topic>
+	<head>
+		<title>TO_SINGLE</title>
+		<keywords>
+			<keyword term="functions, TO_SINGLE" />
+			<keyword term="conversion functions, TO_SINGLE" />
+			<keyword term="TO_SINGLE function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Conversion Functions.html">Conversion Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Converts a given value to a single-precision floating point number.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">TO_SINGLE(value AS object) RETURNS float</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						A value to be converted.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<examples>
+			<p>
+				The following shows <c>TO_SINGLE</c> results for some input data:
+			</p>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">SELECT 'The TO_SINGLE result of value ''134.333'' is: ' AS Input, TO_SINGLE('0.333') AS Value
+UNION  ALL
+SELECT 'The TO_SINGLE result of value 1.0/3.0 is: ' AS Input, TO_SINGLE(1.0/3.0) AS Value
+UNION  ALL
+SELECT 'The TO_SINGLE result of value ''-0.333'' is: ' AS Input, TO_SINGLE('-0.333') AS Value
+UNION  ALL
+SELECT 'The TO_SINGLE result of value ''0.0'' is: ' AS Input, TO_SINGLE('0.0') AS Value
+UNION  ALL
+SELECT 'The TO_SINGLE result of value ''0.000'' is: ' AS Input, TO_SINGLE('0.000') AS Value
+UNION  ALL
+SELECT 'The TO_SINGLE result of value ''-1.33e-33'' is: ' AS Input, TO_SINGLE('-1.33e-33') AS Value</sampleCode>
+			<note>
+				Though <c>TO_SINGLE</c> uses an invariant culture to parse the string as single-precision floating point number the output of this query may
+				vary depending on your regional settings.
+			</note>
+		</examples>
+	</body>
+</topic>

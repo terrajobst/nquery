@@ -1,0 +1,51 @@
+<topic>
+	<head>
+		<title>SUBSTRING</title>
+		<keywords>
+			<keyword term="functions, SUBSTRING" />
+			<keyword term="string functions, SUBSTRING" />
+			<keyword term="SUBSTRING function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="String Functions.html">String Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>Gets a substring from a specified string.</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">SUBSTRING(text AS string, start AS int) RETURNS string
+SUBSTRING(text AS string, start AS int, length AS int) RETURNS string</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="text">
+					<p>
+						A string from which to retreive a substring.
+					</p>
+				</param>
+				<param name="start">
+					<p>
+						The position of the start of the substring.
+					</p>
+				</param>
+				<param name="length">
+					<p>
+						The number of characters in the substring.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				A string equivalent to the substring of length <c>length</c> that begins at <c>start</c> in
+				<c>text</c>, or <c>''</c> if <c>start</c> is greater than the length of <c>text</c>.
+			</p>
+		</returns>
+	</body>
+</topic>

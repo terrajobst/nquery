@@ -1,0 +1,41 @@
+<topic>
+	<head>
+		<title>Binary Operators</title>
+		<toc index="2"/>
+		<keywords>
+			<keyword term="expressions, binary operators"/>
+			<keyword term="binary operators"/>
+		</keywords>
+		<links>
+			<link href="Expressions.html">Expression Syntax</link>
+		</links>
+	</head>
+	<body>
+		<syntax>
+			<code xml:space="preserve"><b>&lt;binary_operator&gt; ::= </b>
+    { <b>**</b>
+    | <b>*</b>
+    | <b>/</b>
+    | <b>%</b>
+    | <b>+</b>
+    | <b>-</b>
+    | <b>=</b>
+    | { <b>&lt;&gt;</b> | <b>!=</b> }
+    | <b>&lt;</b>
+    | { <b>&lt;=</b> | <b>!&gt;</b> }
+    | <b>&gt;</b>
+    | { <b>&gt;=</b> | <b>!&lt;</b> }
+    | <b>^</b>
+    | <b>&amp;</b>
+    | <b>|</b>
+    | <b>&lt;&lt;</b>
+    | <b>&gt;&gt;</b>
+    | [ <b>NOT</b> ] <b>LIKE</b>
+    | [ <b>NOT</b> ] <b>SIMILAR TO</b>
+    | [ <b>NOT</b> ] <b>SOUNDSLIKE</b>
+    | <b>AND</b>
+    | <b>OR</b>
+    }</code>
+		</syntax>
+	</body>
+</topic>

@@ -1,0 +1,6 @@
+<test>
+  <sql>SELECT</sql>
+  <expectedErrors>
+    <expectedError id="SimpleExpressionExpected" text="Found '&lt;End-of-File&gt;' but '&lt;Expression&gt;' expected." />
+  </expectedErrors>
+</test>

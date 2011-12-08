@@ -1,0 +1,41 @@
+<topic>
+	<head>
+		<title>MONTH</title>
+		<keywords>
+			<keyword term="functions, MONTH" />
+			<keyword term="date and time functions, MONTH" />
+			<keyword term="MONTH function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Date and Time Functions.html">Date and Time Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns an integer that represents the month part of a specified date.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">MONTH(dateTime AS DateTime) RETURNS int</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="dateTime">
+					<p>
+						An expression of type <c>DateTime</c>.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The month, expressed as a value between 1 and 12.
+			</p>
+		</returns>
+	</body>
+</topic>

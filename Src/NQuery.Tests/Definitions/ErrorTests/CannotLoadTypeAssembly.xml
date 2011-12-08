@@ -1,0 +1,7 @@
+<test>
+  <sql>SELECT	CAST(4711 AS 'XYZ, notexisting')</sql>
+  <expectedErrors>
+    <expectedError id="CannotLoadTypeAssembly" text="Could not load assembly 'notexisting': Could not load file or assembly 'notexisting' or one of its dependencies. The system cannot find the file specified." />
+    <expectedError id="UndeclaredType" text="Cannot resolve type: XYZ, notexisting" />
+  </expectedErrors>
+</test>

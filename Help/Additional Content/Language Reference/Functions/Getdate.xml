@@ -1,0 +1,51 @@
+<topic>
+	<head>
+		<title>GETDATE</title>
+		<keywords>
+			<keyword term="functions, GETDATE" />
+			<keyword term="date and time functions, GETDATE" />
+			<keyword term="GETDATE function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Date and Time Functions.html">Date and Time Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Gets the current date and time on this computer, expressed as the local time.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">GETDATE() RETURNS DateTime</code>
+		</syntax>
+
+		<returns>
+			<p>
+				A DateTime whose value is the current local date and time.
+			</p>
+		</returns>
+
+		<remarks>
+			<p>
+				The resolution of this function depends on the system timer.
+			</p>
+			<table>
+				<tr>
+					<th>System</th>
+					<th>Approximate Resolution</th>
+				</tr>
+				<tr>
+					<td>Windows NT 3.5 and later</td>
+					<td>10 milliseconds</td>
+				</tr>
+				<tr>
+					<td>Windows 98</td>
+					<td>55 milliseconds</td>
+				</tr>
+			</table>
+		</remarks>
+	</body>
+</topic>

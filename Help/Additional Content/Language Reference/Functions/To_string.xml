@@ -1,0 +1,56 @@
+<topic>
+	<head>
+		<title>TO_STRING</title>
+		<keywords>
+			<keyword term="functions, TO_STRING" />
+			<keyword term="conversion functions, TO_STRING" />
+			<keyword term="string functions, TO_STRING" />
+			<keyword term="TO_STRING function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Conversion Functions.html">Conversion Functions</link>
+			<link href="String Functions.html">String Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Converts a given value to its equivalent string representation.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">TO_STRING(value AS object) RETURNS string</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						A value to be converted.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<examples>
+			<p>
+				The following shows <c>TO_STRING</c> results for some input data:
+			</p>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">SELECT 'The TO_STRING result of value NULL is: ' AS Input, TO_STRING(NULL) AS Value
+UNION ALL
+SELECT 'The TO_STRING result of value true is: ' AS Input, TO_STRING(true) AS Value      
+UNION  ALL
+SELECT 'The TO_STRING result of value 4711 is: ' AS Input, TO_STRING(4711) AS Value
+UNION  ALL
+SELECT 'The TO_STRING result of value 4711.007 is: ' AS Input, TO_STRING(4711.007) AS Value
+UNION  ALL
+SELECT 'The TO_STRING result of value 4711.007e65 is: ' AS Input, TO_STRING(4711.007e65) AS Value
+UNION  ALL
+SELECT 'The TO_STRING result of value ''String'' is: ' AS Input, TO_STRING('String') AS Value
+UNION  ALL
+SELECT 'The TO_STRING result of value GETDATE() is: ' AS Input, TO_STRING(GETDATE()) AS Value</sampleCode>
+		</examples>
+	</body>
+</topic>

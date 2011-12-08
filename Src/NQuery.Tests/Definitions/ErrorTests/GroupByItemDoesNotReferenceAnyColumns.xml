@@ -1,0 +1,10 @@
+<test>
+  <sql>SELECT	'Test'
+FROM	Employees e
+GROUP	BY 1, 2, 3</sql>
+  <expectedErrors>
+    <expectedError id="GroupByItemDoesNotReferenceAnyColumns" text="Each GROUP BY expression must contain at least one column that is not an outer reference." />
+    <expectedError id="GroupByItemDoesNotReferenceAnyColumns" text="Each GROUP BY expression must contain at least one column that is not an outer reference." />
+    <expectedError id="GroupByItemDoesNotReferenceAnyColumns" text="Each GROUP BY expression must contain at least one column that is not an outer reference." />
+  </expectedErrors>
+</test>

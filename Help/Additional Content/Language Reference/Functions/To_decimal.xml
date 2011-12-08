@@ -1,0 +1,54 @@
+<topic>
+	<head>
+		<title>TO_DECIMAL</title>
+		<keywords>
+			<keyword term="functions, TO_DECIMAL" />
+			<keyword term="conversion functions, TO_DECIMAL" />
+			<keyword term="TO_DECIMAL function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Conversion Functions.html">Conversion Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Converts a given value to a decimal number.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">TO_DECIMAL(value AS object) RETURNS decimal</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						A value to be converted.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<examples>
+			<p>
+				The following shows <c>TO_DECIMAL</c> results for some input data:
+			</p>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">SELECT 'The TO_DECIMAL result of value ''134.333'' is: ' AS Input, TO_DECIMAL('0.333') AS Value
+UNION  ALL
+SELECT 'The TO_DECIMAL result of value 1.0/3.0 is: ' AS Input, TO_DECIMAL(1.0/3.0) AS Value
+UNION  ALL
+SELECT 'The TO_DECIMAL result of value ''-0.333'' is: ' AS Input, TO_DECIMAL('-0.333') AS Value
+UNION  ALL
+SELECT 'The TO_DECIMAL result of value ''0.0'' is: ' AS Input, TO_DECIMAL('0.0') AS Value
+UNION  ALL
+SELECT 'The TO_DECIMAL result of value ''0.000'' is: ' AS Input, TO_DECIMAL('0.000') AS Value</sampleCode>
+			<note>
+				Though <c>TO_DECIMAL</c> uses an invariant culture to parse the string as decimal number the output of this query may
+				vary depending on your regional settings.
+			</note>
+		</examples>
+	</body>
+</topic>

@@ -1,0 +1,57 @@
+﻿<topic>
+	<head>
+		<title>Index Spool</title>
+		<keywords>
+			<keyword term="execution plan, index spool"/>
+			<keyword term="physical operators, index spool"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Index Spool</b> physical operator builds a temporary index for its input indexing the expression contained in the
+				<c>Index</c> property. It then probes this index using the expression contained in the <c>Probe</c> property.
+			</p>
+			<p>
+				This operator is inserted if the probing expression is dependent on an outer reference. In most cases this happens
+				because a subquery could not be fully decorrelated.
+			</p>
+			<p>
+				<b>Index Spool</b> is a physical operator.
+			</p>
+		</summary>
+
+		<section title="Properties">
+			<table>
+				<tr>
+					<th>Property Name</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>Index</td>
+					<td>
+						Specifies the expression used to produce the index value for a row of the input.
+					</td>
+				</tr>
+				<tr>
+					<td>Probe</td>
+					<td>
+						Specifies the outer reference used to probe the index.
+					</td>
+				</tr>
+				<tr>
+					<td>With Stack</td>
+					<td>
+						Specifies whether this index spool uses a stack-like fashion to read the data. If true, the execution plan will
+						also contain a <a href="Table Spool.html">Table Spool</a> operator that reads from the same spool. These two
+						operators appear in recursive queries whereby the index spool operator acts as the spool producer (i.e. pushes
+						values) and the table spool operator acts as the consumer (i.e. pops off values).
+					</td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</topic>

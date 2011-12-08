@@ -1,0 +1,46 @@
+<topic>
+	<head>
+		<title>ASIN</title>
+		<keywords>
+			<keyword term="functions, ASIN" />
+			<keyword term="mathematical functions, ASIN" />
+			<keyword term="ASIN function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Mathematical Functions.html">Mathematical Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				A mathematical function that returns the angle, in radians, whose sine is the specified double expression; also called arcsine.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">ASIN(value AS double) RETURNS double</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						An angle, measured in radians.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The sine of <c>value</c>. If <c>value</c> is equal to <c>NaN</c>, <c>NegativeInfinity</c>, or <c>PositiveInfinity</c>, this functions
+				returns <c>NaN</c>.
+			</p>
+		</returns>
+
+		<examples>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">SELECT 'The ASIN of the angle -1 is: ' + TO_STRING(ASIN(-1))</sampleCode>
+		</examples>
+	</body>
+</topic>

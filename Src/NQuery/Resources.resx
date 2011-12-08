@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AggregateCannotContainAggregate" xml:space="preserve">
+    <value>Cannot perform aggregate function '{1}' on an expression containing an aggregate ('{2}'): {0}.</value>
+  </data>
+  <data name="AggregateCannotContainSubquery" xml:space="preserve">
+    <value>Cannot perform aggregate function on an expression containing a subquery: {0}.</value>
+  </data>
+  <data name="AggregateContainsColumnsFromDifferentQueries" xml:space="preserve">
+    <value>Multiple columns are specified in aggregated expression '{0}' containing an outer reference. If an expression being aggregated contains an outer reference, then that outer reference must be the only column referenced in the expression.</value>
+  </data>
+  <data name="AggregateDoesNotSupportType" xml:space="preserve">
+    <value>The aggregate operation '{0}' cannot take a '{1}' data type as an argument.</value>
+  </data>
+  <data name="AggregateInGroupBy" xml:space="preserve">
+    <value>Cannot use an aggregate or a subquery in an expression used for the group by list of a GROUP BY clause.</value>
+  </data>
+  <data name="AggregateInOn" xml:space="preserve">
+    <value>An aggregate cannot appear in an ON clause unless it is in a subquery contained in a HAVING clause or select list, and the column being aggregated is an outer reference.</value>
+  </data>
+  <data name="AggregateInvalidInCurrentContext" xml:space="preserve">
+    <value>Aggregation expression '{0}' not valid in this context.</value>
+  </data>
+  <data name="AggregateInWhere" xml:space="preserve">
+    <value>An aggregate may not appear in the WHERE clause unless it is in a subquery contained in a HAVING clause or a select list, and the column being aggregated is an outer reference.</value>
+  </data>
+  <data name="AllColumnsMustBelongToSameTable" xml:space="preserve">
+    <value>All columns in '{0}' must belong to the same table.</value>
+  </data>
+  <data name="AmbiguousAggregate" xml:space="preserve">
+    <value>Aggregate name {0} is ambiguous between {1}.</value>
+  </data>
+  <data name="AmbiguousBinaryOperator" xml:space="preserve">
+    <value>Binary operator '{0}' invocation on types '{1}' and '{2}' is ambiguous between method '{3}' and '{4}'.</value>
+  </data>
+  <data name="AmbiguousCastingOperator" xml:space="preserve">
+    <value>{0} operator is ambiguous between '{1}' and '{2}'.</value>
+  </data>
+  <data name="AmbiguousColumnRef" xml:space="preserve">
+    <value>Column ref name {0} is ambiguous between {1}.</value>
+  </data>
+  <data name="AmbiguousConstant" xml:space="preserve">
+    <value>Constant name {0} is ambiguous between {1}.</value>
+  </data>
+  <data name="AmbiguousInvocation" xml:space="preserve">
+    <value>Invocation with argument types '{2}' is ambiguous between '{0}' and '{1}'.</value>
+  </data>
+  <data name="AmbiguousInvocationNoArgs" xml:space="preserve">
+    <value>Invocation is ambiguous between '{0}' and '{1}'.</value>
+  </data>
+  <data name="AmbiguousOperatorOverloading" xml:space="preserve">
+    <value>The call to user defined operator '{0}' on types '{1}' and '{2}' is ambiguous.</value>
+  </data>
+  <data name="AmbiguousParameter" xml:space="preserve">
+    <value>Parameter name {0} is ambiguous between {1}.</value>
+  </data>
+  <data name="AmbiguousProperty" xml:space="preserve">
+    <value>Property name {0} is ambiguous between {1}.</value>
+  </data>
+  <data name="AmbiguousReference" xml:space="preserve">
+    <value>Identifier '{0}' is ambiguous between '{1}'.</value>
+  </data>
+  <data name="AmbiguousTable" xml:space="preserve">
+    <value>Table name {0} is ambiguous between {1}.</value>
+  </data>
+  <data name="AmbiguousTableRef" xml:space="preserve">
+    <value>Table ref name {0} is ambiguous between {1}.</value>
+  </data>
+  <data name="AmbiguousType" xml:space="preserve">
+    <value>Type reference '{0}' is ambiguous between 1}.</value>
+  </data>
+  <data name="AmbiguousUnaryOp" xml:space="preserve">
+    <value>Unary operator '{0}' invocation on type '{1}' is ambiguous between method '{2}' and '{3}'.</value>
+  </data>
+  <data name="ArgMustBeOfType" xml:space="preserve">
+    <value>Argument must be of type '{0}'.</value>
+  </data>
+  <data name="ArgumentArrayMustHaveSameSize" xml:space="preserve">
+    <value>Array argument '{0}' must have same size as '{1}'.</value>
+  </data>
+  <data name="ArgumentArrayMustNotBeEmpty" xml:space="preserve">
+    <value>Array must not be empty.</value>
+  </data>
+  <data name="ArgumentOutOfRange" xml:space="preserve">
+    <value>Argument '{0}' is out-of-range ({2}-{3}), actual value was {1}.</value>
+  </data>
+  <data name="AsteriskModifierNotAllowed" xml:space="preserve">
+    <value>Aggregation modifier '*' not allowed in function call '{0}'.</value>
+  </data>
+  <data name="BinaryOperatorFailed" xml:space="preserve">
+    <value>Binary operator '{0} {1} {2}' threw an exception: {6}{7}Operator method: '{3}'. Arguments: '{4}', '{5}'.</value>
+  </data>
+  <data name="BindingWithSameNameAlreadyInCollection" xml:space="preserve">
+    <value>A binding with the same name '{0}' already exists in this collection.</value>
+  </data>
+  <data name="CannotApplyBinaryOp" xml:space="preserve">
+    <value>Cannot apply binary operator '{0}' on types '{1}' and '{2}'.</value>
+  </data>
+  <data name="CannotApplyUnaryOp" xml:space="preserve">
+    <value>Cannot apply unary operator '{0}' on type '{1}'.</value>
+  </data>
+  <data name="CannotCast" xml:space="preserve">
+    <value>Cannot cast '{0}' from '{1}' to '{2}'.</value>
+  </data>
+  <data name="CannotFoldConstants" xml:space="preserve">
+    <value>Cannot evaluate constant expression: {0}</value>
+  </data>
+  <data name="CannotLoadTypeAssembly" xml:space="preserve">
+    <value>Could not load assembly '{0}': {1}</value>
+  </data>
+  <data name="CastingOperatorFailed" xml:space="preserve">
+    <value>Casting operator threw an exception.</value>
+  </data>
+  <data name="ChildColumnNotFound" xml:space="preserve">
+    <value>Child column '{0}' in table '{1}' not found.</value>
+  </data>
+  <data name="ChildColumnsMustNotContainColumnsOfOtherTables" xml:space="preserve">
+    <value>childColumns must not contain columns of different tables.</value>
+  </data>
+  <data name="ChildTableMustExistInDataContext" xml:space="preserve">
+    <value>Child table must exist in data context.</value>
+  </data>
+  <data name="CodeAssistanceFailed" xml:space="preserve">
+    <value>Cannot provide code assistance: {0}</value>
+  </data>
+  <data name="ColumnBindingGetValueFailed" xml:space="preserve">
+    <value>ColumnBinding.GetValue() threw an exception.</value>
+  </data>
+  <data name="ConstantBindingGetValueFailed" xml:space="preserve">
+    <value>ConstantBinding.GetValue() threw an exception.</value>
+  </data>
+  <data name="ConstantExpressionInOrderBy" xml:space="preserve">
+    <value>A constant expression was encountered in the ORDER BY list.</value>
+  </data>
+  <data name="ConversionFailed" xml:space="preserve">
+    <value>Conversion of {0} to {1} failed: {2}</value>
+  </data>
+  <data name="DifferentExpressionCountInBinaryQuery" xml:space="preserve">
+    <value>All queries combined using a UNION, INTERSECT or EXCEPT operator must have an equal number of expressions in their target lists.</value>
+  </data>
+  <data name="DuplicateAggregate" xml:space="preserve">
+    <value>Aggregate function named '{0}' already in list.</value>
+  </data>
+  <data name="DuplicateFunction" xml:space="preserve">
+    <value>Function {0} already declared.</value>
+  </data>
+  <data name="DuplicatePropertyReference" xml:space="preserve">
+    <value>The property collection already contains a property named '{0}'.</value>
+  </data>
+  <data name="DuplicateRelationDataGatherer" xml:space="preserve">
+    <value>For the relation {0} is already a data gatherer registered.</value>
+  </data>
+  <data name="DuplicateTableRefInFrom" xml:space="preserve">
+    <value>The correlation name '{0}' is specified multiple times in a FROM clause.</value>
+  </data>
+  <data name="ExpressionCompilationFailed" xml:space="preserve">
+    <value>Expression could not be compiled.{0}</value>
+  </data>
+  <data name="FunctionBindingInvokeFailed" xml:space="preserve">
+    <value>FunctionBinding.Invoke() threw an exception.</value>
+  </data>
+  <data name="FunctionMustNotBeVoid" xml:space="preserve">
+    <value>Function must return a value.</value>
+  </data>
+  <data name="FunctionMustNotHaveArrayParams" xml:space="preserve">
+    <value>Functions with array parameters are not supported.</value>
+  </data>
+  <data name="FunctionMustNotHaveOptionalParams" xml:space="preserve">
+    <value>Functions with optional parameters are not supported.</value>
+  </data>
+  <data name="FunctionMustNotHaveRefOrOutParams" xml:space="preserve">
+    <value>Functions with out or ref parameters are not supported.</value>
+  </data>
+  <data name="FunctionWithSameNameAndSignatureAlreadyInCollection" xml:space="preserve">
+    <value>A function with the same name and signature already exists: {0}</value>
+  </data>
+  <data name="GroupByItemDoesNotReferenceAnyColumns" xml:space="preserve">
+    <value>Each GROUP BY expression must contain at least one column that is not an outer reference.</value>
+  </data>
+  <data name="HavingClauseMustEvaluateToBool" xml:space="preserve">
+    <value>HAVING clause must evaluate to BOOLEAN expression.</value>
+  </data>
+  <data name="HavingExpressionNotAggregatedOrGrouped" xml:space="preserve">
+    <value>Column '{0}' is invalid in the HAVING clause because it is not contained in either an aggregate function or the GROUP BY clause.</value>
+  </data>
+  <data name="IAggregatorAccumulateFailed" xml:space="preserve">
+    <value>IAggregator.Accumulate() threw an exception.</value>
+  </data>
+  <data name="IAggregatorInitFailed" xml:space="preserve">
+    <value>IAggregator.Init() threw an exception.</value>
+  </data>
+  <data name="IAggregatorTerminateFailed" xml:space="preserve">
+    <value>IAggregator.Terminate() threw an exception.</value>
+  </data>
+  <data name="IllegalInputCharacter" xml:space="preserve">
+    <value>Invalid character in input '{0}'.</value>
+  </data>
+  <data name="IMethodProviderGetMethodsFailed" xml:space="preserve">
+    <value>IMethodProvider.GetMethods() threw an exception.</value>
+  </data>
+  <data name="InternalError" xml:space="preserve">
+    <value>Internal Error: {0}</value>
+  </data>
+  <data name="InternalErrorGetValueNotSupported" xml:space="preserve">
+    <value>{0}.GetValue() not supported.</value>
+  </data>
+  <data name="InvalidAttemptToRead" xml:space="preserve">
+    <value>Invalid attempt to read when no data is present.</value>
+  </data>
+  <data name="InvalidBinary" xml:space="preserve">
+    <value>'{0}' is not a valid binary number.</value>
+  </data>
+  <data name="InvalidBinaryOperator" xml:space="preserve">
+    <value>Invalid binary operator: '{0}'.</value>
+  </data>
+  <data name="InvalidDataTypeInGroupBy" xml:space="preserve">
+    <value>The data type '{0}' cannot be used in GROUP BY since it cannot be compared or sorted.</value>
+  </data>
+  <data name="InvalidDataTypeInOrderBy" xml:space="preserve">
+    <value>The data type '{0}' cannot be used in ORDER BY since it cannot be compared or sorted.</value>
+  </data>
+  <data name="InvalidDataTypeInSelectDistinct" xml:space="preserve">
+    <value>The data type '{0}' cannot be used in SELECT DISTINCT since it cannot be compared or sorted.</value>
+  </data>
+  <data name="InvalidDataTypeInUnion" xml:space="preserve">
+    <value>The data type '{0}' cannot be used in {1} since it cannot be compared or sorted.</value>
+  </data>
+  <data name="InvalidDate" xml:space="preserve">
+    <value>'{0}' is not a valid date.</value>
+  </data>
+  <data name="InvalidDecimal" xml:space="preserve">
+    <value>'{0}' is not a valid decimal number.</value>
+  </data>
+  <data name="InvalidHex" xml:space="preserve">
+    <value>'{0}' is not a valid hex number.</value>
+  </data>
+  <data name="InvalidInteger" xml:space="preserve">
+    <value>'{0}' is not a valid integer.</value>
+  </data>
+  <data name="InvalidOctal" xml:space="preserve">
+    <value>'{0}' is not a valid octal number.</value>
+  </data>
+  <data name="InvalidOperatorForAllAny" xml:space="preserve">
+    <value>SOME, ANY and ALL can only be applied on =, &lt;&gt;, &lt;, &lt;=, &gt;, or &gt;=</value>
+  </data>
+  <data name="InvalidTypeReference" xml:space="preserve">
+    <value>Type reference {0} is malformed. Neither quoted nor parenthesized identifiers can be used in type references. Use string literals to express case sensitivity.</value>
+  </data>
+  <data name="InvalidUnaryOperator" xml:space="preserve">
+    <value>operator: '{0}'.</value>
+  </data>
+  <data name="InvocationRequiresParentheses" xml:space="preserve">
+    <value>Invocation of '{0}' requires parentheses.</value>
+  </data>
+  <data name="IPropertyProviderGetPropertiesFailed" xml:space="preserve">
+    <value>IPropertyProvider.GetProperties() threw an exception.</value>
+  </data>
+  <data name="MethodBindingInvokeFailed" xml:space="preserve">
+    <value>MethodBinding.Invoke() threw an exception.</value>
+  </data>
+  <data name="MissingPropertyProvider" xml:space="preserve">
+    <value>Cannot add properties -- no property provider is registered for type '{0}'.</value>
+  </data>
+  <data name="MissingTableProvider" xml:space="preserve">
+    <value>Cannot add table -- no table provider is registered for type '{0}'.</value>
+  </data>
+  <data name="MustSpecifyTableToSelectFrom" xml:space="preserve">
+    <value>Must specify table to select from.</value>
+  </data>
+  <data name="NoColumnAliasSpecified" xml:space="preserve">
+    <value>No column name was specified for column {0} of '{1}'.</value>
+  </data>
+  <data name="NoPropertyProviderRegisteredAndDefaultProviderIsMissing" xml:space="preserve">
+    <value>No property provider is registered for type '{0}' and there is no default property provider.</value>
+  </data>
+  <data name="NumberTooLarge" xml:space="preserve">
+    <value>The number '{0}' is too large.</value>
+  </data>
+  <data name="OrderByColumnPositionIsOutOfRange" xml:space="preserve">
+    <value>The ORDER BY position number {0} is out of range of the number of items in the select list.</value>
+  </data>
+  <data name="OrderByExpressionNotAggregatedAndNoGroupBy" xml:space="preserve">
+    <value>Column '{0}' is invalid in the ORDER BY clause because it is not contained in an aggregate function and there is no GROUP BY clause.</value>
+  </data>
+  <data name="OrderByExpressionNotAggregatedOrGrouped" xml:space="preserve">
+    <value>Column '{0}' is invalid in the ORDER BY clause because it is not contained in either an aggregate function or the GROUP BY clause.</value>
+  </data>
+  <data name="OrderByInvalidInSubqueryUnlessTopIsAlsoSpecified" xml:space="preserve">
+    <value>The ORDER BY clause is invalid in derived tables, subqueries, and common table expressions, unless TOP is also specified.</value>
+  </data>
+  <data name="OrderByItemsMustBeInSelectListIfDistinctSpecified" xml:space="preserve">
+    <value>ORDER BY items must appear in the select list if SELECT DISTINCT is specified.</value>
+  </data>
+  <data name="OrderByItemsMustBeInSelectListIfUnionSpecified" xml:space="preserve">
+    <value>ORDER BY items must appear in the select list if the statement contains a UNION, INTERSECT or EXCEPT operator.</value>
+  </data>
+  <data name="ParameterBindingGetValueFailed" xml:space="preserve">
+    <value>ParameterBinding.Value threw an exception.</value>
+  </data>
+  <data name="ParameterValueTypeMismatch" xml:space="preserve">
+    <value>The parameter type is not assignable from the given value.</value>
+  </data>
+  <data name="ParentColumnNotFound" xml:space="preserve">
+    <value>Parent column '{0}' in table '{1}' not found.</value>
+  </data>
+  <data name="ParentColumnsMustContainAtLeastOneColumn" xml:space="preserve">
+    <value>parentColumns must contain at least one column.</value>
+  </data>
+  <data name="ParentColumnsMustHaveSameSizeAsChildColumns" xml:space="preserve">
+    <value>childColumns.Length must match parentColumns.Length.</value>
+  </data>
+  <data name="ParentColumnsMustNotContainColumnsOfOtherTables" xml:space="preserve">
+    <value>parentColumns must not contain columns of different tables.</value>
+  </data>
+  <data name="ParentTableMustExistInDataContext" xml:space="preserve">
+    <value>Parent table must exist in data context.</value>
+  </data>
+  <data name="PropertyBindingGetValueFailed" xml:space="preserve">
+    <value>PropertyBinding.GetValue() threw an exception.</value>
+  </data>
+  <data name="PropertyNotInitialized" xml:space="preserve">
+    <value>The {0} property has not been initialized.</value>
+  </data>
+  <data name="QueryCompilationFailed" xml:space="preserve">
+    <value>Query could not be compiled.{0}</value>
+  </data>
+  <data name="InvalidRowReference" xml:space="preserve">
+    <value>Row reference '{0}' is not valid since the table it is referring to is either a derived table or a common table expression (CTE).</value>
+  </data>
+  <data name="SelectExpressionNotAggregatedAndNoGroupBy" xml:space="preserve">
+    <value>Column '{0}' is invalid in the select list because it is not contained in an aggregate function and there is no GROUP BY clause.</value>
+  </data>
+  <data name="SelectExpressionNotAggregatedOrGrouped" xml:space="preserve">
+    <value>Column '{0}' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause.</value>
+  </data>
+  <data name="ShowPlanElemenClassName" xml:space="preserve">
+    <value>Show Plan Element</value>
+  </data>
+  <data name="SimpleExpressionExpected" xml:space="preserve">
+    <value>Found '{0}' but '&lt;Expression&gt;' expected.</value>
+  </data>
+  <data name="SubqueryReturnedMoreThanRow" xml:space="preserve">
+    <value>Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, &lt;, &lt;= , &gt;, &gt;= or when the subquery is used as an expression.</value>
+  </data>
+  <data name="TableMustHaveAtLeastOneColumn" xml:space="preserve">
+    <value>A table must have at least one column.</value>
+  </data>
+  <data name="TableProviderAlreadyRegistered" xml:space="preserve">
+    <value>A table provider for type '{0}' has already been assigned.</value>
+  </data>
+  <data name="TableReferenceExpected" xml:space="preserve">
+    <value>Found '{0}' but '&lt;Table Reference&gt;' expected</value>
+  </data>
+  <data name="TableRefInaccessible" xml:space="preserve">
+    <value>Table '{0}: {1}' is introduced in a different branch within the join hierarchy and is therefore inaccessible.</value>
+  </data>
+  <data name="TargetTypeMismatch" xml:space="preserve">
+    <value>Cannot narrow down the target type to '{1}' since the static expression type '{0}' would not be assignable from the new target type '{1}' anymore.</value>
+  </data>
+  <data name="TokenDateLiteral" xml:space="preserve">
+    <value>&lt;Date Literal&gt;</value>
+  </data>
+  <data name="TokenEndOfFile" xml:space="preserve">
+    <value>&lt;End-of-File&gt;</value>
+  </data>
+  <data name="TokenExpected" xml:space="preserve">
+    <value>Found '{0}' but expected '{1}'.</value>
+  </data>
+  <data name="TokenIdentifier" xml:space="preserve">
+    <value>&lt;Identifier&gt;</value>
+  </data>
+  <data name="TokenNumberLiteral" xml:space="preserve">
+    <value>&lt;Number Literal&gt;</value>
+  </data>
+  <data name="TokenStringLiteral" xml:space="preserve">
+    <value>&lt;String Literal&gt;</value>
+  </data>
+  <data name="TokenUnknown" xml:space="preserve">
+    <value>&lt;Unknown&gt;</value>
+  </data>
+  <data name="TooManyExpressionsInSelectListOfSubquery" xml:space="preserve">
+    <value>Only one expression can be specified in the select list when the subquery is not introduced with EXISTS.</value>
+  </data>
+  <data name="TopWithTiesRequiresOrderBy" xml:space="preserve">
+    <value>The TOP N WITH TIES clause is not allowed without a corresponding ORDER BY clause.</value>
+  </data>
+  <data name="TypeAlreadyRegistered" xml:space="preserve">
+    <value>The type '{0}' is already registered.</value>
+  </data>
+  <data name="UnaryOperatorFailed" xml:space="preserve">
+    <value>Unary operator '{0} {1}' threw an exception: {3}{5}Operator method: '{2}'. Argument: '{4}'.</value>
+  </data>
+  <data name="UndeclaredColumn" xml:space="preserve">
+    <value>Column '{1}' not declared in table '{0}'.</value>
+  </data>
+  <data name="UndeclaredEntity" xml:space="preserve">
+    <value>The identifier '{0}' does not refer to a column, table or property.</value>
+  </data>
+  <data name="UndeclaredFunction" xml:space="preserve">
+    <value>Function '{0}({1})' is not declared.</value>
+  </data>
+  <data name="UndeclaredMethod" xml:space="preserve">
+    <value>Type '{0}' does not have a method '{1}({2})'.</value>
+  </data>
+  <data name="UndeclaredParameter" xml:space="preserve">
+    <value>Parameter '{0}' is not declared.</value>
+  </data>
+  <data name="UndeclaredProperty" xml:space="preserve">
+    <value>Type '{0}' does not have a property '{1}'.</value>
+  </data>
+  <data name="UndeclaredTable" xml:space="preserve">
+    <value>Table '{0}' is not declared.</value>
+  </data>
+  <data name="UndeclaredType" xml:space="preserve">
+    <value>Cannot resolve type: {0}</value>
+  </data>
+  <data name="UnhandledCaseLabel" xml:space="preserve">
+    <value>Unhandled case label: {0}</value>
+  </data>
+  <data name="UnknownError" xml:space="preserve">
+    <value>Unknown error {0}.</value>
+  </data>
+  <data name="UnterminatedComment" xml:space="preserve">
+    <value>Comment '{0}' is not properly terminated.</value>
+  </data>
+  <data name="UnterminatedDate" xml:space="preserve">
+    <value>Date '{0}' is not properly terminated.</value>
+  </data>
+  <data name="UnterminatedParenthesizedIdentifier" xml:space="preserve">
+    <value>Parenthesized identifier '{0}' is not properly terminated.</value>
+  </data>
+  <data name="UnterminatedQuotedIdentifier" xml:space="preserve">
+    <value>Quoted identifier '{0}' is not properly terminated.</value>
+  </data>
+  <data name="UnterminatedString" xml:space="preserve">
+    <value>String '{0}' is not properly terminated.</value>
+  </data>
+  <data name="WhenMustEvaluateToBoolIfCaseInputIsOmitted" xml:space="preserve">
+    <value>WHEN expression '{0}' must evaluate to '{1}' if CASE input expression is omitted.</value>
+  </data>
+  <data name="WhereClauseMustEvaluateToBool" xml:space="preserve">
+    <value>WHERE clause must evaluate to BOOLEAN expression.</value>
+  </data>
+  <data name="InvalidIdentifier" xml:space="preserve">
+    <value>The text '{0}' is not a valid identifier</value>
+  </data>
+  <data name="MaximumRecursionLevelExceeded" xml:space="preserve">
+    <value>The maximum recursion 100 has been exhausted before statement completion.</value>
+  </data>
+  <data name="CteContainsDistinct" xml:space="preserve">
+    <value>DISTINCT operator is not allowed in the recursive part of a recursive common table expression '{0}'.</value>
+  </data>
+  <data name="CteContainsGroupByHavingOrAggregate" xml:space="preserve">
+    <value>GROUP BY, HAVING, or aggregate functions are not allowed in the recursive part of a recursive common table expression '{0}'.</value>
+  </data>
+  <data name="CteContainsMultipleRecursiveReferences" xml:space="preserve">
+    <value>Recursive member of a common table expression '{0}' has multiple recursive references.</value>
+  </data>
+  <data name="CteContainsOuterJoin" xml:space="preserve">
+    <value>Outer join is not allowed in the recursive part of a recursive common table expression '{0}'.</value>
+  </data>
+  <data name="CteContainsRecursiveReferenceInSubquery" xml:space="preserve">
+    <value>Recursive references are not allowed in subqueries</value>
+  </data>
+  <data name="CteContainsTop" xml:space="preserve">
+    <value>TOP operator is not allowed in the recursive part of a recursive common table expression '{0}'.</value>
+  </data>
+  <data name="CteContainsUnexpectedAnchorMember" xml:space="preserve">
+    <value>An anchor member was found in the recursive part of recursive query '{0}'.</value>
+  </data>
+  <data name="CteContainsUnion" xml:space="preserve">
+    <value>UNION operator is not allowed in the recursive part of a recursive common table expression '{0}'.</value>
+  </data>
+  <data name="CteDoesNotHaveAnchorMember" xml:space="preserve">
+    <value>No anchor member was specified for recursive query '{0}'.</value>
+  </data>
+  <data name="CteDoesNotHaveUnionAll" xml:space="preserve">
+    <value>Recursive common table expression '{0}' does not contain a top-level UNION ALL operator.</value>
+  </data>
+  <data name="CteHasDuplicateColumnName" xml:space="preserve">
+    <value>The column '{0}' was specified multiple times for '{1}'.</value>
+  </data>
+  <data name="CteHasDuplicateTableName" xml:space="preserve">
+    <value>Duplicate common table expression name '{0}' was specified.</value>
+  </data>
+  <data name="CteHasFewerColumnsThanSpecified" xml:space="preserve">
+    <value>'{0}' has fewer columns than were specified in the column list.</value>
+  </data>
+  <data name="CteHasMoreColumnsThanSpecified" xml:space="preserve">
+    <value>'{0}' has more columns than were specified in the column list.</value>
+  </data>
+  <data name="CteHasTypeMismatchBetweenAnchorAndRecursivePart" xml:space="preserve">
+    <value>Types don't match between the anchor and the recursive part in column '{0}' of recursive query '{1}'.</value>
+  </data>
+    <data name="ShowPlanLogicalOperatorInnerJoin" xml:space="preserve">
+    <value>Inner Join</value>
+  </data>
+  <data name="ShowPlanLogicalOperatorLeftOuterJoin" xml:space="preserve">
+    <value>Left Outer Join</value>
+  </data>
+  <data name="ShowPlanLogicalOperatorLeftSemiJoin" xml:space="preserve">
+    <value>Left Semi Join</value>
+  </data>
+  <data name="ShowPlanLogicalOperatorLeftAntiSemiJoin" xml:space="preserve">
+    <value>Left Anti Semi Join</value>
+  </data>
+  <data name="ShowPlanLogicalOperatorRightOuterJoin" xml:space="preserve">
+    <value>Right Outer Join</value>
+  </data>
+  <data name="ShowPlanLogicalOperatorRightSemiJoin" xml:space="preserve">
+    <value>Right Semi Join</value>
+  </data>
+  <data name="ShowPlanLogicalOperatorRightAntiSemiJoin" xml:space="preserve">
+    <value>Right Anti Semi Join</value>
+  </data>
+  <data name="ShowPlanLogicalOperatorFullOuterJoin" xml:space="preserve">
+    <value>Full Outer Join</value>
+  </data>
+  <data name="ShowPlanLogicalOperatorSort" xml:space="preserve">
+    <value>Sort</value>
+  </data>
+  <data name="ShowPlanLogicalOperatorDistinctSort" xml:space="preserve">
+    <value>Distinct Sort</value>
+  </data>
+  <data name="ShowPlanLogicalOperatorLazySpool" xml:space="preserve">
+    <value>Lazy Spool</value>
+  </data>
+  <data name="ShowPlanLogicalOperatorEagerSpool" xml:space="preserve">
+    <value>Eager Spool</value>
+  </data>
+  <data name="ShowPlanGroupOutputList" xml:space="preserve">
+    <value>Output List</value>
+  </data>
+  <data name="ShowPlanGroupDefinedValues" xml:space="preserve">
+    <value>Defined Values</value>
+  </data>
+  <data name="ShowPlanGroupStatistics" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="ShowPlanGroupOuterReferences" xml:space="preserve">
+    <value>Outer References</value>
+  </data>
+  <data name="ShowPlanGroupTieColumns" xml:space="preserve">
+    <value>Tie Columns</value>
+  </data>
+  <data name="ShowPlanGroupOrderBy" xml:space="preserve">
+    <value>Order By</value>
+  </data>
+  <data name="ShowPlanGroupGroupBy" xml:space="preserve">
+    <value>Group By</value>
+  </data>
+  <data name="ShowPlanKeyLogicalOperator" xml:space="preserve">
+    <value>Logical Operator</value>
+  </data>
+  <data name="ShowPlanKeyPredicate" xml:space="preserve">
+    <value>Predicate</value>
+  </data>
+  <data name="ShowPlanKeyLimit" xml:space="preserve">
+    <value>Limit</value>
+  </data>
+  <data name="ShowPlanKeyTable" xml:space="preserve">
+    <value>Table</value>
+  </data>
+  <data name="ShowPlanKeyWarning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="ShowPlanKeyStatisticsOpenCount" xml:space="preserve">
+    <value>Open Count</value>
+  </data>
+  <data name="ShowPlanKeyStatisticsRowCount" xml:space="preserve">
+    <value>Row Count</value>
+  </data>
+  <data name="ShowPlanKeyStatisticsAverageRowCount" xml:space="preserve">
+    <value>Average Row Count</value>
+  </data>
+  <data name="ShowPlanKeyColumn" xml:space="preserve">
+    <value>Column</value>
+  </data>
+  <data name="ShowPlanKeyDataType" xml:space="preserve">
+    <value>DataType</value>
+  </data>
+  <data name="ShowPlanKeySource" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="ShowPlanKeyTarget" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="ShowPlanKeyOutputName" xml:space="preserve">
+    <value>Output Name</value>
+  </data>
+  <data name="ShowPlanKeyProbeColumn" xml:space="preserve">
+    <value>Probe Column</value>
+  </data>
+  <data name="ShowPlanKeyPassthru" xml:space="preserve">
+    <value>Passthru</value>
+  </data>
+  <data name="ShowPlanKeyEmpty" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="ShowPlanKeyOrder" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="ShowPlanKeyWithTies" xml:space="preserve">
+    <value>With Ties</value>
+  </data>
+  <data name="ShowPlanKeyIndex" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="ShowPlanKeyProbe" xml:space="preserve">
+    <value>Probe</value>
+  </data>
+  <data name="ShowPlanKeyWithStack" xml:space="preserve">
+    <value>With Stack</value>
+  </data>
+  <data name="ShowPlanKeyHashKeysBuild" xml:space="preserve">
+    <value>Hash Keys Build</value>
+  </data>
+  <data name="ShowPlanKeyHashKeysProbe" xml:space="preserve">
+    <value>Hash Keys Probe</value>
+  </data>
+  <data name="ShowPlanKeyProbeResidual" xml:space="preserve">
+    <value>Probe Residual</value>
+  </data>
+  <data name="ShowPlanSortOrderAscending" xml:space="preserve">
+    <value>ASC</value>
+  </data>
+  <data name="ShowPlanSortOrderDescending" xml:space="preserve">
+    <value>DESC</value>
+  </data>
+  <data name="ShowPlanWarningNoJoinPredicate" xml:space="preserve">
+    <value>No join predicate</value>
+  </data>
+</root>

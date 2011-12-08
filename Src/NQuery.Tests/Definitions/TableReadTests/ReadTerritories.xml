@@ -1,0 +1,336 @@
+<test>
+  <sql>SELECT	*
+FROM	Territories</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="TerritoryID" type="xs:string" minOccurs="0" />
+                <xs:element name="TerritoryDescription" type="xs:string" minOccurs="0" />
+                <xs:element name="RegionID" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <TerritoryID>01581</TerritoryID>
+    <TerritoryDescription>Westboro                                          </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>01730</TerritoryID>
+    <TerritoryDescription>Bedford                                           </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>01833</TerritoryID>
+    <TerritoryDescription>Georgetow                                         </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>02116</TerritoryID>
+    <TerritoryDescription>Boston                                            </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>02139</TerritoryID>
+    <TerritoryDescription>Cambridge                                         </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>02184</TerritoryID>
+    <TerritoryDescription>Braintree                                         </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>02903</TerritoryID>
+    <TerritoryDescription>Providence                                        </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>03049</TerritoryID>
+    <TerritoryDescription>Hollis                                            </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>03801</TerritoryID>
+    <TerritoryDescription>Portsmouth                                        </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>06897</TerritoryID>
+    <TerritoryDescription>Wilton                                            </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>07960</TerritoryID>
+    <TerritoryDescription>Morristown                                        </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>08837</TerritoryID>
+    <TerritoryDescription>Edison                                            </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>10019</TerritoryID>
+    <TerritoryDescription>New York                                          </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>10038</TerritoryID>
+    <TerritoryDescription>New York                                          </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>11747</TerritoryID>
+    <TerritoryDescription>Mellvile                                          </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>14450</TerritoryID>
+    <TerritoryDescription>Fairport                                          </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>19428</TerritoryID>
+    <TerritoryDescription>Philadelphia                                      </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>19713</TerritoryID>
+    <TerritoryDescription>Neward                                            </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>20852</TerritoryID>
+    <TerritoryDescription>Rockville                                         </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>27403</TerritoryID>
+    <TerritoryDescription>Greensboro                                        </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>27511</TerritoryID>
+    <TerritoryDescription>Cary                                              </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>29202</TerritoryID>
+    <TerritoryDescription>Columbia                                          </TerritoryDescription>
+    <RegionID>4</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>30346</TerritoryID>
+    <TerritoryDescription>Atlanta                                           </TerritoryDescription>
+    <RegionID>4</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>31406</TerritoryID>
+    <TerritoryDescription>Savannah                                          </TerritoryDescription>
+    <RegionID>4</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>32859</TerritoryID>
+    <TerritoryDescription>Orlando                                           </TerritoryDescription>
+    <RegionID>4</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>33607</TerritoryID>
+    <TerritoryDescription>Tampa                                             </TerritoryDescription>
+    <RegionID>4</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>40222</TerritoryID>
+    <TerritoryDescription>Louisville                                        </TerritoryDescription>
+    <RegionID>1</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>44122</TerritoryID>
+    <TerritoryDescription>Beachwood                                         </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>45839</TerritoryID>
+    <TerritoryDescription>Findlay                                           </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>48075</TerritoryID>
+    <TerritoryDescription>Southfield                                        </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>48084</TerritoryID>
+    <TerritoryDescription>Troy                                              </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>48304</TerritoryID>
+    <TerritoryDescription>Bloomfield Hills                                  </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>53404</TerritoryID>
+    <TerritoryDescription>Racine                                            </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>55113</TerritoryID>
+    <TerritoryDescription>Roseville                                         </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>55439</TerritoryID>
+    <TerritoryDescription>Minneapolis                                       </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>60179</TerritoryID>
+    <TerritoryDescription>Hoffman Estates                                   </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>60601</TerritoryID>
+    <TerritoryDescription>Chicago                                           </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>72716</TerritoryID>
+    <TerritoryDescription>Bentonville                                       </TerritoryDescription>
+    <RegionID>4</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>75234</TerritoryID>
+    <TerritoryDescription>Dallas                                            </TerritoryDescription>
+    <RegionID>4</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>78759</TerritoryID>
+    <TerritoryDescription>Austin                                            </TerritoryDescription>
+    <RegionID>4</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>80202</TerritoryID>
+    <TerritoryDescription>Denver                                            </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>80909</TerritoryID>
+    <TerritoryDescription>Colorado Springs                                  </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>85014</TerritoryID>
+    <TerritoryDescription>Phoenix                                           </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>85251</TerritoryID>
+    <TerritoryDescription>Scottsdale                                        </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>90405</TerritoryID>
+    <TerritoryDescription>Santa Monica                                      </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>94025</TerritoryID>
+    <TerritoryDescription>Menlo Park                                        </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>94105</TerritoryID>
+    <TerritoryDescription>San Francisco                                     </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>95008</TerritoryID>
+    <TerritoryDescription>Campbell                                          </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>95054</TerritoryID>
+    <TerritoryDescription>Santa Clara                                       </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>95060</TerritoryID>
+    <TerritoryDescription>Santa Cruz                                        </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>98004</TerritoryID>
+    <TerritoryDescription>Bellevue                                          </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>98052</TerritoryID>
+    <TerritoryDescription>Redmond                                           </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>98104</TerritoryID>
+    <TerritoryDescription>Seattle                                           </TerritoryDescription>
+    <RegionID>2</RegionID>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="Territories.TerritoryID AS TerritoryID" />
+          <property name="Output List.[0].Table" value="Territories" />
+          <property name="Output List.[0].Column" value="TerritoryID" />
+          <property name="Output List.[0].DataType" value="String" />
+          <property name="Output List.[0].Output Name" value="TerritoryID" />
+          <property name="Output List.[1]" value="Territories.TerritoryDescription AS TerritoryDescription" />
+          <property name="Output List.[1].Table" value="Territories" />
+          <property name="Output List.[1].Column" value="TerritoryDescription" />
+          <property name="Output List.[1].DataType" value="String" />
+          <property name="Output List.[1].Output Name" value="TerritoryDescription" />
+          <property name="Output List.[2]" value="Territories.RegionID AS RegionID" />
+          <property name="Output List.[2].Table" value="Territories" />
+          <property name="Output List.[2].Column" value="RegionID" />
+          <property name="Output List.[2].DataType" value="Int32" />
+          <property name="Output List.[2].Output Name" value="RegionID" />
+        </properties>
+        <input>
+          <element operator="TableScan">
+            <properties>
+              <property name="Table" value="Territories AS Territories" />
+              <property name="Output List.[0]" value="Territories.TerritoryID" />
+              <property name="Output List.[0].Table" value="Territories" />
+              <property name="Output List.[0].Column" value="TerritoryID" />
+              <property name="Output List.[0].DataType" value="String" />
+              <property name="Output List.[1]" value="Territories.TerritoryDescription" />
+              <property name="Output List.[1].Table" value="Territories" />
+              <property name="Output List.[1].Column" value="TerritoryDescription" />
+              <property name="Output List.[1].DataType" value="String" />
+              <property name="Output List.[2]" value="Territories.RegionID" />
+              <property name="Output List.[2].Table" value="Territories" />
+              <property name="Output List.[2].Column" value="RegionID" />
+              <property name="Output List.[2].DataType" value="Int32" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="53" />
+              <property name="Statistics.Average Row Count" value="53" />
+            </properties>
+            <input />
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

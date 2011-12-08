@@ -1,0 +1,8 @@
+<test>
+  <sql>SELECT	*
+FROM	Employees e
+WHERE	e.EmployeeID</sql>
+  <expectedErrors>
+    <expectedError id="WhereClauseMustEvaluateToBool" text="WHERE clause must evaluate to BOOLEAN expression." />
+  </expectedErrors>
+</test>

@@ -1,0 +1,8 @@
+<test>
+  <sql>SELECT	*
+FROM	Employees e
+ORDER	BY e.Photo</sql>
+  <expectedErrors>
+    <expectedError id="InvalidDataTypeInOrderBy" text="The data type 'Byte[]' cannot be used in ORDER BY since it cannot be compared or sorted." />
+  </expectedErrors>
+</test>

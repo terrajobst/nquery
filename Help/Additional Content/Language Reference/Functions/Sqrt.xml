@@ -1,0 +1,68 @@
+<topic>
+	<head>
+		<title>SQRT</title>
+		<keywords>
+			<keyword term="functions, SQRT" />
+			<keyword term="mathematical functions, SQRT" />
+			<keyword term="SQRT function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Mathematical Functions.html">Mathematical Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns the square root of a specified number.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">SQRT(value AS double) RETURNS double</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						A number.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<table>
+				<tr>
+					<th>
+						Value of <c>value</c>
+					</th>
+					<th>Returns</th>
+				</tr>
+				<tr>
+					<td>Zero, or positive</td>
+					<td>
+						The positive square root of <c>value</c>.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<c>NaN</c>, or Negative
+					</td>
+					<td>
+						<c>NaN</c>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<c>PositiveInfinity</c>
+					</td>
+					<td>
+						<c>PositiveInfinity</c>
+					</td>
+				</tr>
+			</table>
+		</returns>
+	</body>
+</topic>

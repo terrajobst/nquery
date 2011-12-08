@@ -1,0 +1,22 @@
+﻿<topic>
+	<head>
+		<title>Union</title>
+		<keywords>
+			<keyword term="execution plan, union"/>
+			<keyword term="logical operators, union"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Union</b> operator scans multiple inputs, outputting each row scanned and removing duplicates.
+			</p>
+			<p>
+				<b>Union</b> is a logical operator.
+			</p>
+		</summary>
+	</body>
+</topic>

@@ -1,0 +1,220 @@
+﻿<topic>
+	<head>
+		<title>WITH common_table_expression</title>
+		<toc index="2"/>
+		<keywords>
+			<keyword term="SELECT statement, WITH common_table_expression" />
+			<keyword term="WITH common_table_expression, about" />
+		</keywords>
+		<links>
+			<link href="Queries.html">SELECT Syntax</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Specifies a temporary named result set, known as a common table expression (CTE). This is derived from a simple query and defined
+				within the execution scope of a SELECT statement. A common table expression can include references to itself. This is referred to
+				as a recursive common table expression.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">[ <b>WITH</b> &lt;common_table_expression&gt; [ <b>,...</b><i>n</i> ] ]
+
+&lt;common_table_expression&gt;::=
+        <i>expression_name</i> [ <b>(</b> <i>column_name</i> [ <b>,...</b><i>n</i> ] <b>)</b> ]
+    <b>AS</b>
+        <b>(</b> <i>CTE_query_definition</i> <b>)</b></code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="expression_name">
+					<p>
+						Is a valid identifier for the common table expression. <i>expression_name</i> must be different from the name of any other
+						common table expression defined in the same <i>common_table_expression</i> clause, but <i>expression_name</i> can be the same
+						as the name of a table. Any reference to <i>expression_name</i> in the query uses the common table expression and not the
+						table.
+					</p>
+				</param>
+				<param name="column_name">
+					<p>
+						Specifies a column name in the common table expression. Duplicate names within a single CTE definition are not allowed. The
+						number of column names specified must match the number of columns in the result set of the <i>CTE_query_definition</i>. The
+						list of column names is optional only if distinct names for all resulting columns are supplied in the query definition.
+					</p>
+				</param>
+				<param name="CTE_query_definition">
+					<p>
+						Specifies a <c>SELECT</c> statement whose result set populates the common table expression. The <c>SELECT</c> statement for
+						<i>CTE_query_definition</i> must meet the same requirements as for a subquery (i.e. <c>ORDER BY</c> is only allowed if 
+						<c>TOP</c> is also specified).
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<remarks>
+
+			<p>The following guidelines apply for using CTEs: </p>
+			<ul>
+				<li>
+					A CTE must be followed by a <c>SELECT</c> statement that references some or all the CTE columns.
+				</li>
+				<li>
+					A CTE can reference itself and previously defined CTEs in the same <c>WITH</c> clause. Forward referencing is not allowed.
+				</li>
+				<li>
+					Specifying more than one <c>WITH</c> clause in a CTE is not allowed. For example, if a <i>CTE_query_definition</i> contains
+					a subquery, that subquery cannot contain a nested <c>WITH</c> clause that defines another CTE.
+				</li>
+				<li>
+					The <c>ORDER BY</c> clause cannot be used in the <i>CTE_query_definition</i> (except when a <c>TOP</c> clause is specified)
+				</li>
+			</ul>
+			
+			<p>The following guidelines apply to defining a recursive CTE:</p>
+			<ul>
+				<li>
+					The recursive CTE definition must contain at least two members, an anchor member and a recursive member. Multiple anchor members
+					and recursive members can be defined; however, all anchor member query definitions must be put before the first recursive member
+					definition. All CTE query definitions are anchor members unless they reference the CTE itself.
+				</li>
+				<li>
+					Anchor members must be combined by one of these set operators: <c>UNION ALL</c>, <c>UNION</c>, <c>INTERSECT</c>, or <c>EXCEPT</c>.
+					<c>UNION ALL</c> is the only set operator allowed between the last anchor member and first recursive member, and when combining
+					multiple recursive members.
+				</li>
+				<li>
+					The number of columns in the anchor and recursive members must be the same.
+				</li>
+				<li>
+					The data type of a column in the recursive member must be the same as the data type of the corresponding column in the anchor
+					member.
+				</li>
+				<li>
+					The <c>FROM</c> clause of a recursive member can refer to the CTE itself only once.
+				</li>
+			</ul>
+
+			<p>The following items are not allowed in the <i>CTE_query_definition</i> of a recursive member:</p>
+			<ul>
+				<li>
+					<c>SELECT DISTINCT</c>
+				</li>
+				<li>
+					<c>TOP</c>
+				</li>
+				<li>
+					<c>LEFT</c>, <c>RIGHT</c>, <c>FULL OUTER JOIN</c> (<c>INNER JOIN</c> is allowed)
+				</li>
+				<li>
+					<c>GROUP BY</c>
+				</li>
+				<li>
+					<c>HAVING</c>
+				</li>
+				<li>Aggregation</li>
+				<li>Subqueries</li>
+			</ul>
+
+			<note>
+				An incorrectly composed recursive CTE may cause an infinite loop. For example, if the recursive member query definition returns
+				the same values for both the parent and child columns, an infinite loop is created. To prevent an infinite loop, the recursion
+				level is limited to 100. If this limit is exceeded a runtime error occurs and the query returns no rows.
+			</note>
+		</remarks>
+
+		<examples>
+			<p>
+				This following query shows how a CTE can be used to factor out some parts of a query. In this example the part "all employees from
+				London" are extracted into a CTE. The select statement uses this definition to get all employees from London whose ID is greater than
+				six.
+			</p>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">WITH LondonEmployees AS (
+    SELECT  *
+      FROM  Employees e
+     WHERE  e.City = 'London'
+)
+  SELECT  le.FirstName,
+          le.LastName
+    FROM  LondonEmployees le
+   WHERE  le.EmployeeId &gt; 6
+ORDER BY  1, 2</sampleCode>
+			<p>
+				You can define multiple CTEs and even use CTEs inside of CTEs. For example, the following query extracts the two parts "all employees
+				from London" and "all employees born after 1963" into two CTEs. Since the second CTE references the first CTE the two parts are
+				acutally combined.
+			</p>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">WITH LondonEmployees AS (
+    SELECT  *
+      FROM  Employees e
+     WHERE  e.City = 'London'
+), LondonEmployees2 AS (
+    SELECT  *
+      FROM  Employees e
+     WHERE  e.BirthDate.Year &gt; 1963
+)
+  SELECT  le.FirstName,
+          le.LastName
+    FROM  LondonEmployees le
+   WHERE  le.EmployeeId &gt; 7
+ORDER BY  1, 2</sampleCode>
+
+			<p>
+				The following query shows a recursive CTE that is used to get a list of all employees that directly or
+				indirectly report to employee with the the ID 2.
+			</p>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">WITH EmployeeHierarchy (EmployeeID, LastName, FirstName, ReportsTo) AS
+(
+    -- Base case
+    SELECT  e.EmployeeID,
+            e.LastName,
+            e.FirstName,
+            e.ReportsTo
+      FROM  Employees e
+     WHERE  e.EmployeeID = 2
+
+    UNION ALL
+
+    -- Recursive step
+    SELECT  e.EmployeeID,
+            e.LastName,
+            e.FirstName,
+            e.ReportsTo
+      FROM  Employees e
+                INNER JOIN EmployeeHierarchy eh ON e.ReportsTo = eh.EmployeeID
+)
+SELECT  *
+  FROM  EmployeeHierarchy</sampleCode>
+
+			<p>
+				The following query goes a step further and uses recursive calculations to show the employee hierarchy a bit more "graphically":
+			</p>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">WITH EmployeeHierarchy (EmployeeID, FullName, Level, Path) AS
+(
+    -- Base case
+    SELECT  e.EmployeeID,
+            e.LastName + ' ' + e.FirstName,
+            0,
+            e.EmployeeID.ToString()
+      FROM  Employees e
+     WHERE  e.EmployeeID = 2
+
+    UNION ALL
+
+    -- Recursive step
+    SELECT  e.EmployeeID,
+            e.LastName + ' ' + e.FirstName,
+            eh.Level + 1,
+            eh.Path + '.' + e.EmployeeID.ToString()
+      FROM  Employees e
+                INNER JOIN EmployeeHierarchy eh ON e.ReportsTo = eh.EmployeeID
+)
+  SELECT  REPLICATE('_', eh.Level * 4)  + eh.FullName AS Employee
+    FROM  EmployeeHierarchy eh
+ORDER BY  eh.Path</sampleCode>
+		</examples>
+	</body>
+</topic>

@@ -1,0 +1,47 @@
+<topic>
+	<head>
+		<title>LEFT</title>
+		<keywords>
+			<keyword term="functions, LEFT" />
+			<keyword term="string functions, LEFT" />
+			<keyword term="LEFT function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="String Functions.html">String Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns the left part of a string with the specified number of characters.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">LEFT(str AS string, numberOfChars AS int) RETURNS string</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="str">
+					<p>
+						The string to get the left part from.
+					</p>
+				</param>
+				<param name="numberOfChars">
+					<p>
+						Is a positive integer that specifies how many characters of <c>str</c> will be returned.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				If <c>numberOfChars</c> is negative, an error is returned. Otherwise the left part of <c>str</c>
+				with <c>numberOfChars</c> number of characters is returned.
+			</p>
+		</returns>
+	</body>
+</topic>

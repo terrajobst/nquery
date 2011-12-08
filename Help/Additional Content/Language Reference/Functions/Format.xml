@@ -1,0 +1,45 @@
+<topic>
+	<head>
+		<title>FORMAT</title>
+		<keywords>
+			<keyword term="functions, FORMAT" />
+			<keyword term="string functions, FORMAT" />
+			<keyword term="FORMAT function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="String Functions.html">String Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>Formats a given value with a specified .NET format string.</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">FORMAT(value AS object, format AS string) RETURNS string</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						The value of be formatted.
+					</p>
+				</param>
+				<param name="format">
+					<p>
+						A .NET format string.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				If <c>value</c> or <c>format</c> are <c>NULL</c> the return value is <c>NULL</c>. Otherwise the return value
+				is <c>value</c> formatted a specified in <c>format</c>.
+			</p>
+		</returns>
+	</body>
+</topic>

@@ -1,0 +1,6 @@
+<test>
+  <sql>SELECT	*</sql>
+  <expectedErrors>
+    <expectedError id="MustSpecifyTableToSelectFrom" text="Must specify table to select from." />
+  </expectedErrors>
+</test>

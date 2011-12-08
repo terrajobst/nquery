@@ -1,0 +1,257 @@
+<test>
+  <sql>SELECT	*
+FROM	EmployeeTerritories</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="EmployeeID" type="xs:int" minOccurs="0" />
+                <xs:element name="TerritoryID" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <EmployeeID>1</EmployeeID>
+    <TerritoryID>06897</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>1</EmployeeID>
+    <TerritoryID>19713</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>2</EmployeeID>
+    <TerritoryID>01581</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>2</EmployeeID>
+    <TerritoryID>01730</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>2</EmployeeID>
+    <TerritoryID>01833</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>2</EmployeeID>
+    <TerritoryID>02116</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>2</EmployeeID>
+    <TerritoryID>02139</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>2</EmployeeID>
+    <TerritoryID>02184</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>2</EmployeeID>
+    <TerritoryID>40222</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>3</EmployeeID>
+    <TerritoryID>30346</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>3</EmployeeID>
+    <TerritoryID>31406</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>3</EmployeeID>
+    <TerritoryID>32859</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>3</EmployeeID>
+    <TerritoryID>33607</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>4</EmployeeID>
+    <TerritoryID>20852</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>4</EmployeeID>
+    <TerritoryID>27403</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>4</EmployeeID>
+    <TerritoryID>27511</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>5</EmployeeID>
+    <TerritoryID>02903</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>5</EmployeeID>
+    <TerritoryID>07960</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>5</EmployeeID>
+    <TerritoryID>08837</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>5</EmployeeID>
+    <TerritoryID>10019</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>5</EmployeeID>
+    <TerritoryID>10038</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>5</EmployeeID>
+    <TerritoryID>11747</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>5</EmployeeID>
+    <TerritoryID>14450</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>6</EmployeeID>
+    <TerritoryID>85014</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>6</EmployeeID>
+    <TerritoryID>85251</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>6</EmployeeID>
+    <TerritoryID>98004</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>6</EmployeeID>
+    <TerritoryID>98052</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>6</EmployeeID>
+    <TerritoryID>98104</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <TerritoryID>60179</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <TerritoryID>60601</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <TerritoryID>80202</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <TerritoryID>80909</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <TerritoryID>90405</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <TerritoryID>94025</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <TerritoryID>94105</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <TerritoryID>95008</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <TerritoryID>95054</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>7</EmployeeID>
+    <TerritoryID>95060</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>8</EmployeeID>
+    <TerritoryID>19428</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>8</EmployeeID>
+    <TerritoryID>44122</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>8</EmployeeID>
+    <TerritoryID>45839</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>8</EmployeeID>
+    <TerritoryID>53404</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>9</EmployeeID>
+    <TerritoryID>03049</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>9</EmployeeID>
+    <TerritoryID>03801</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>9</EmployeeID>
+    <TerritoryID>48075</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>9</EmployeeID>
+    <TerritoryID>48084</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>9</EmployeeID>
+    <TerritoryID>48304</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>9</EmployeeID>
+    <TerritoryID>55113</TerritoryID>
+  </Table1>
+  <Table1>
+    <EmployeeID>9</EmployeeID>
+    <TerritoryID>55439</TerritoryID>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="EmployeeTerritories.EmployeeID AS EmployeeID" />
+          <property name="Output List.[0].Table" value="EmployeeTerritories" />
+          <property name="Output List.[0].Column" value="EmployeeID" />
+          <property name="Output List.[0].DataType" value="Int32" />
+          <property name="Output List.[0].Output Name" value="EmployeeID" />
+          <property name="Output List.[1]" value="EmployeeTerritories.TerritoryID AS TerritoryID" />
+          <property name="Output List.[1].Table" value="EmployeeTerritories" />
+          <property name="Output List.[1].Column" value="TerritoryID" />
+          <property name="Output List.[1].DataType" value="String" />
+          <property name="Output List.[1].Output Name" value="TerritoryID" />
+        </properties>
+        <input>
+          <element operator="TableScan">
+            <properties>
+              <property name="Table" value="EmployeeTerritories AS EmployeeTerritories" />
+              <property name="Output List.[0]" value="EmployeeTerritories.EmployeeID" />
+              <property name="Output List.[0].Table" value="EmployeeTerritories" />
+              <property name="Output List.[0].Column" value="EmployeeID" />
+              <property name="Output List.[0].DataType" value="Int32" />
+              <property name="Output List.[1]" value="EmployeeTerritories.TerritoryID" />
+              <property name="Output List.[1].Table" value="EmployeeTerritories" />
+              <property name="Output List.[1].Column" value="TerritoryID" />
+              <property name="Output List.[1].DataType" value="String" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="49" />
+              <property name="Statistics.Average Row Count" value="49" />
+            </properties>
+            <input />
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

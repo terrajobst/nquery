@@ -1,0 +1,22 @@
+<test>
+  <sql>WITH EmployeeHierarchy AS
+(				
+   -- Base case
+   SELECT	999999999999 AS EmployeeId
+   FROM		Employees e
+   WHERE	ReportsTo IS NULL
+
+   UNION ALL
+
+   -- Recursive step
+   SELECT	e.EmployeeID
+   FROM		Employees e
+				INNER JOIN EmployeeHierarchy eh ON e.ReportsTo = eh.EmployeeID
+)
+SELECT	*
+FROM	EmployeeHierarchy eh
+ORDER	BY Path</sql>
+  <expectedErrors>
+    <expectedError id="CteHasTypeMismatchBetweenAnchorAndRecursivePart" text="Types don't match between the anchor and the recursive part in column 'EmployeeId' of recursive query 'EmployeeHierarchy'." />
+  </expectedErrors>
+</test>

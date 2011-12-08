@@ -1,0 +1,127 @@
+<test>
+  <sql>SELECT	e.FirstName,
+		e.LastName
+FROM	Employees e
+ORDER	BY 1 ASC, 2 DESC</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="FirstName" type="xs:string" minOccurs="0" />
+                <xs:element name="LastName" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <FirstName>Andrew</FirstName>
+    <LastName>Fuller</LastName>
+  </Table1>
+  <Table1>
+    <FirstName>Anne</FirstName>
+    <LastName>Dodsworth</LastName>
+  </Table1>
+  <Table1>
+    <FirstName>Janet</FirstName>
+    <LastName>Leverling</LastName>
+  </Table1>
+  <Table1>
+    <FirstName>Laura</FirstName>
+    <LastName>Callahan</LastName>
+  </Table1>
+  <Table1>
+    <FirstName>Margaret</FirstName>
+    <LastName>Peacock</LastName>
+  </Table1>
+  <Table1>
+    <FirstName>Michael</FirstName>
+    <LastName>Suyama</LastName>
+  </Table1>
+  <Table1>
+    <FirstName>Nancy</FirstName>
+    <LastName>Davolio</LastName>
+  </Table1>
+  <Table1>
+    <FirstName>Robert</FirstName>
+    <LastName>King</LastName>
+  </Table1>
+  <Table1>
+    <FirstName>Steven</FirstName>
+    <LastName>Buchanan</LastName>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="e.FirstName AS FirstName" />
+          <property name="Output List.[0].Table" value="e" />
+          <property name="Output List.[0].Column" value="FirstName" />
+          <property name="Output List.[0].DataType" value="String" />
+          <property name="Output List.[0].Output Name" value="FirstName" />
+          <property name="Output List.[1]" value="e.LastName AS LastName" />
+          <property name="Output List.[1].Table" value="e" />
+          <property name="Output List.[1].Column" value="LastName" />
+          <property name="Output List.[1].DataType" value="String" />
+          <property name="Output List.[1].Output Name" value="LastName" />
+        </properties>
+        <input>
+          <element operator="Sort">
+            <properties>
+              <property name="Output List.[0]" value="e.LastName" />
+              <property name="Output List.[0].Table" value="e" />
+              <property name="Output List.[0].Column" value="LastName" />
+              <property name="Output List.[0].DataType" value="String" />
+              <property name="Output List.[1]" value="e.FirstName" />
+              <property name="Output List.[1].Table" value="e" />
+              <property name="Output List.[1].Column" value="FirstName" />
+              <property name="Output List.[1].DataType" value="String" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="9" />
+              <property name="Statistics.Average Row Count" value="9" />
+              <property name="Logical Operator" value="Sort" />
+              <property name="Order By.[0]" value="e.FirstName ASC" />
+              <property name="Order By.[0].Table" value="e" />
+              <property name="Order By.[0].Column" value="FirstName" />
+              <property name="Order By.[0].DataType" value="String" />
+              <property name="Order By.[0].Order" value="ASC" />
+              <property name="Order By.[1]" value="e.LastName DESC" />
+              <property name="Order By.[1].Table" value="e" />
+              <property name="Order By.[1].Column" value="LastName" />
+              <property name="Order By.[1].DataType" value="String" />
+              <property name="Order By.[1].Order" value="DESC" />
+            </properties>
+            <input>
+              <element operator="TableScan">
+                <properties>
+                  <property name="Table" value="Employees AS e" />
+                  <property name="Output List.[0]" value="e.LastName" />
+                  <property name="Output List.[0].Table" value="e" />
+                  <property name="Output List.[0].Column" value="LastName" />
+                  <property name="Output List.[0].DataType" value="String" />
+                  <property name="Output List.[1]" value="e.FirstName" />
+                  <property name="Output List.[1].Table" value="e" />
+                  <property name="Output List.[1].Column" value="FirstName" />
+                  <property name="Output List.[1].DataType" value="String" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="9" />
+                  <property name="Statistics.Average Row Count" value="9" />
+                </properties>
+                <input />
+              </element>
+            </input>
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

@@ -1,0 +1,49 @@
+<topic>
+	<head>
+		<title>FLOOR</title>
+		<keywords>
+			<keyword term="functions, FLOOR" />
+			<keyword term="mathematical functions, FLOOR" />
+			<keyword term="FLOOR function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Mathematical Functions.html">Mathematical Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns the largest integer less than or equal to the specified number.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">FLOOR(value AS double) RETURNS double</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						A double-precision floating-point number.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The largest integer less than or equal to <c>value</c>. If <c>value</c> is equal to <c>NaN</c>,
+				<c>NegativeInfinity</c>, or <c>PositiveInfinity</c>, that value is returned.
+			</p>
+		</returns>
+
+		<remarks>
+			<p>
+				The behavior of this function follows IEEE Standard 754, section 4. This kind of rounding is sometimes
+				called rounding toward negative infinity.
+			</p>
+		</remarks>
+	</body>
+</topic>

@@ -1,0 +1,52 @@
+﻿<topic>
+	<head>
+		<title>Custom Code Assistance</title>
+		<keywords>
+			<keyword term="extending, code assistance" />
+			<keyword term="customizing, code assistance" />
+			<keyword term="adding, code assistance" />
+			<keyword term="ICodeAssistanceContextProvider interface, using" />
+			<keyword term="NQuery.ICodeAssistanceContextProvider interface, using" />
+			<keyword term="IMemberCompletionContext interface, using" />
+			<keyword term="NQuery.IMemberCompletionContext interface, using" />
+			<keyword term="IMemberCompletionAcceptor interface, using" />
+			<keyword term="NQuery.IMemberCompletionAcceptor interface, using" />
+			<keyword term="IParameterInfoContext interface, using" />
+			<keyword term="NQuery.IParameterInfoContext interface, using" />
+			<keyword term="IParameterInfoAcceptor interface, using" />
+			<keyword term="NQuery.IParameterInfoAcceptor interface, using" />
+		</keywords>
+	</head>
+	<body>
+		<summary>
+			<p>
+				NQuery provides an integration with <a href="http://www.actiprosoftware.com/Products/DotNet/WindowsForms/SyntaxEditor/default.aspx">Actipro's SyntaxEditor</a> via
+				the <see cref="T:NQuery.UI.ActiproLink">ActiproLink</see> component.
+			</p>
+			<p>
+				However, if you want to use a different syntax editor control you do not have to start from scratch. NQuery already provides the necessary
+				infrastructure to generate all information needed for code assistance features. In this section we will give you an overview of the provided
+				services.
+			</p>
+		</summary>
+
+		<section title="Overview">
+			<img src="CodeAssistanceOverview.png" />
+			<p>
+				Both <see cref="T:NQuery.Query">Query</see> and <see cref="T:NQuery.Expression`1">Expression</see> provide an
+				<see cref="T:NQuery.ICodeAssistanceContextProvider">ICodeAssistanceContextProvider</see>. This provider is responsible for creating context
+				objects related to a certain location in the source code. The context objects can be used to query code assistance information.
+			</p>
+			<p>
+				The list of accessible elements is provided using the visitor pattern. You can call the <c>Enumerate</c> method passing an acceptor
+				that you have to implement. The acceptor is called for every available element. In the language of the visitor pattern one could say
+				that the acceptor <i>visits</i> all elements available from the source code location. The acceptor interfaces look like this:
+			</p>
+			<img src="CodeAssistanceAcceptors.png" />
+			<p>
+				Implementing the acceptor interfaces allows you to handle different elements differently. For example, you might not be interested in certain
+				elements (e.g. keywords) or just visualize them in different ways.
+			</p>
+		</section>
+	</body>
+</topic>

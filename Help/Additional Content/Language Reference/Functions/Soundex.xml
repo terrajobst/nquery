@@ -1,0 +1,50 @@
+<topic>
+	<head>
+		<title>SOUNDEX</title>
+		<keywords>
+			<keyword term="functions, SOUNDEX" />
+			<keyword term="string functions, SOUNDEX" />
+			<keyword term="SOUNDEX function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="String Functions.html">String Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns a four-character (SOUNDEX) code to evaluate the similarity of two strings.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">SOUNDEX(text AS string) RETURNS string</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="text">
+					<p>
+						A string for which to generate a SOUNEX code for.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				A four-character (SOUNDEX) code.
+			</p>
+		</returns>
+
+		<remarks>
+			<p>
+				<c>SOUNDEX</c> converts a string to a four-character code to find similar-sounding words or names.
+				The first character of the code is the first character of <c>text</c> and the second through fourth
+				characters of the code are numbers. Vowels in <c>text</c> are ignored unless they are the first letter
+				of the string.
+			</p>
+		</remarks>
+	</body>
+</topic>

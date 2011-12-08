@@ -1,0 +1,23 @@
+﻿<topic>
+	<head>
+		<title>Cross Join</title>
+		<keywords>
+			<keyword term="execution plan, cross join"/>
+			<keyword term="logical operators, cross join"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Cross Join</b> operator joins each row from the first (top) input with each row from the second (bottom) input.
+				This operation is often referred to as the <i>Cartesian Product</i>.
+			</p>
+			<p>
+				<b>Cross Join</b> is a logical operator.
+			</p>
+		</summary>
+	</body>
+</topic>

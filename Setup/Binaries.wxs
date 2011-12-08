@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<?include Product.wxi ?>
+	<Fragment>
+		<DirectoryRef Id="NQuery.Bin">
+			<Component Id="NQuery.dll" Guid="{A63486DD-946A-4D9F-AC21-A6585EA84B86}">
+				<File Id="NQuery.dll" Name="NQuery.dll" KeyPath="yes" Source="$(var.BinFolder)NQuery.dll" />
+			</Component>
+			<Component Id="NQuery.xml" Guid="{823A473B-4632-4ECA-8FCC-DB8504096379}">
+				<File Id="NQuery.xml" Name="NQuery.xml" KeyPath="yes" Source="$(var.BinFolder)NQuery.xml" />
+			</Component>
+			<Component Id="NQuery.UI.dll" Guid="{296C83BA-9FB1-430E-B32B-F984435B196A}">
+				<File Id="NQuery.UI.dll" Name="NQuery.UI.dll" KeyPath="yes" Source="$(var.BinFolder)NQuery.UI.dll" />
+			</Component>
+			<Component Id="NQuery.UI.xml" Guid="{2B29F965-B08C-4633-8629-8D9B7298A3BD}">
+				<File Id="NQuery.UI.xml" Name="NQuery.UI.xml" KeyPath="yes" Source="$(var.BinFolder)NQuery.UI.xml" />
+			</Component>
+			<Component Id="NQuery.UI.Actipro40.dll" Guid="{7F4E8B24-C5ED-424F-A293-D338443E6803}">
+				<File Id="NQuery.UI.Actipro40.dll" Name="NQuery.UI.Actipro40.dll" KeyPath="yes" Source="$(var.BinFolder)NQuery.UI.Actipro40.dll" />
+			</Component>
+			<Component Id="NQuery.UI.Actipro40.xml" Guid="{FF0A06CC-8AE1-4BF1-93AB-131B2CF52A05}">
+				<File Id="NQuery.UI.Actipro40.xml" Name="NQuery.UI.Actipro40.xml" KeyPath="yes" Source="$(var.BinFolder)NQuery.UI.Actipro40.xml" />
+			</Component>
+			<Component Id="VSAssemblyRegistration" Guid="{4AC48AAD-B09F-494B-8381-65F75FC3C6E1}">
+				<RegistryValue Root="HKLM" Key="SOFTWARE\Microsoft\.NETFramework\AssemblyFolders\NQuery" Value="[NQuery.Bin]" Type="string"/>
+			</Component>
+		</DirectoryRef>
+
+		<Feature Id="Binaries" Level="1" AllowAdvertise="no"
+				 Title="Binaries"
+				 Description="Installs the binaries and registers them in Visual Studio's Add Reference dialog box.">
+			<ComponentRef Id="NQuery.dll"/>
+			<ComponentRef Id="NQuery.xml"/>
+			<ComponentRef Id="NQuery.UI.dll"/>
+			<ComponentRef Id="NQuery.UI.xml"/>
+			<ComponentRef Id="NQuery.UI.Actipro40.dll"/>
+			<ComponentRef Id="NQuery.UI.Actipro40.xml"/>
+			<ComponentRef Id="VSAssemblyRegistration"/>
+		</Feature>
+	</Fragment>
+</Wix>

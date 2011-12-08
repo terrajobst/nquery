@@ -1,0 +1,41 @@
+<topic>
+	<head>
+		<title>UPPER</title>
+		<keywords>
+			<keyword term="functions, UPPER" />
+			<keyword term="string functions, UPPER" />
+			<keyword term="UPPER function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="String Functions.html">String Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns a string with lowercase characters converted to uppercase.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">UPPER(text AS string) RETURNS string</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="text">
+					<p>
+						A string containing lowercase characters.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				A string in uppercase.
+			</p>
+		</returns>
+	</body>
+</topic>

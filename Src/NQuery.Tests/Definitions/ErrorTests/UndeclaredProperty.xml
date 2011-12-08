@@ -1,0 +1,8 @@
+<test>
+  <sql>SELECT	e.FirstName.Length,
+		e.FirstName.Längth
+FROM	Employees e</sql>
+  <expectedErrors>
+    <expectedError id="UndeclaredProperty" text="Type 'String' does not have a property 'Längth'." />
+  </expectedErrors>
+</test>

@@ -1,0 +1,49 @@
+<topic>
+	<head>
+		<title>CEILING</title>
+		<keywords>
+			<keyword term="functions, CEILING" />
+			<keyword term="mathematical functions, CEILING" />
+			<keyword term="CEILING function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Mathematical Functions.html">Mathematical Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns the smallest integer greater than or equal to the specified number.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">CEILING(value AS double) RETURNS double</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						Is a value of the type double or of a type that can be implicitly converted to double.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The smallest integer greater than or equal to <c>value</c>. If <c>value</c> is equal to <c>NaN</c>, <c>NegativeInfinity</c>,
+				or <c>PositiveInfinity</c>, that <c>value</c> is returned.
+			</p>
+		</returns>
+
+		<examples>
+			<p>
+				The following example shows positive numeric, negative, and zero values with the CEILING function.
+			</p>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">SELECT CEILING(123.45), CEILING(-123.45), CEILING(0.0)</sampleCode>
+		</examples>
+	</body>
+</topic>

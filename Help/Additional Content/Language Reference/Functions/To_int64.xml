@@ -1,0 +1,48 @@
+<topic>
+	<head>
+		<title>TO_INT64</title>
+		<keywords>
+			<keyword term="functions, TO_INT64" />
+			<keyword term="conversion functions, TO_INT64" />
+			<keyword term="TO_INT64 function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Conversion Functions.html">Conversion Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Converts a given value to a 64-bit signed integer.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">TO_INT64(value AS object) RETURNS long</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						A value to be converted.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<examples>
+			<p>
+				The following shows <c>TO_INT64</c> results for some input data:
+			</p>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">SELECT 'The TO_INT64 result of value ''1'' is: ' AS Input, TO_INT64('1') AS Value
+UNION  ALL
+SELECT 'The TO_INT64 result of value ''-1'' is: ' AS Input, TO_INT64('-1') AS Value
+UNION  ALL
+SELECT 'The TO_INT64 result of value 800000000000.999 is: ' AS Input, TO_INT64(800000000000.999) AS Value
+UNION  ALL
+SELECT 'The TO_INT64 result of value 800000000001.999 is: ' AS Input, TO_INT64(800000000001.999) AS Value</sampleCode>
+		</examples>
+	</body>
+</topic>

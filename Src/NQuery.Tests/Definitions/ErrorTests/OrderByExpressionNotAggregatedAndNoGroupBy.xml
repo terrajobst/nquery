@@ -1,0 +1,8 @@
+<test>
+  <sql>SELECT	COUNT(*)
+FROM	Employees e
+ORDER	BY e.FirstName</sql>
+  <expectedErrors>
+    <expectedError id="OrderByExpressionNotAggregatedAndNoGroupBy" text="Column 'e.FirstName' is invalid in the ORDER BY clause because it is not contained in an aggregate function and there is no GROUP BY clause." />
+  </expectedErrors>
+</test>

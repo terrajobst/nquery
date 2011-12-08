@@ -1,0 +1,13 @@
+<test>
+  <sql>SELECT	SUM((
+				SELECT	COUNT(*)
+				FROM	Orders o
+				WHERE	o.EmployeeID = e.EmployeeID
+			))
+FROM	Employees e
+</sql>
+  <expectedErrors>
+    <expectedError id="AggregateCannotContainAggregate" text="Cannot perform aggregate function on an expression containing a subquery: &quot;SUM&quot;((   SELECT &quot;COUNT&quot;(*)&#xD;&#xA;     FROM Orders AS o&#xD;&#xA;    WHERE &quot;o&quot;.&quot;EmployeeID&quot; = &quot;e&quot;.&quot;EmployeeID&quot;))." />
+    <expectedError id="AggregateCannotContainAggregate" text="Cannot perform aggregate function 'SUM' on an expression containing an aggregate ('COUNT'): &quot;SUM&quot;((   SELECT &quot;COUNT&quot;(*)&#xD;&#xA;     FROM Orders AS o&#xD;&#xA;    WHERE &quot;o&quot;.&quot;EmployeeID&quot; = &quot;e&quot;.&quot;EmployeeID&quot;))." />
+  </expectedErrors>
+</test>

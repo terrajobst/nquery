@@ -1,0 +1,51 @@
+<topic>
+	<head>
+		<title>NULLIF</title>
+		<keywords>
+			<keyword term="functions, NULLIF" />
+			<keyword term="system functions, NULLIF" />
+			<keyword term="NULLIF system function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="System Functions.html">System Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns <c>NULL</c> if the two specified expressions are equivalent.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve"><b>NULLIF</b> <b>(</b> <i>expression</i> <b>,</b> <i>expression</i> <b>)</b></code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="expression">
+					<p>Is an expression of any type.</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>Returns the same type as the first expression.</p>
+			<p>
+				<c>NULLIF</c> returns the first expression if the two expressions are not equivalent. If the expressions are
+				equivalent, <c>NULLIF</c> returns <c>NULL</c> of the type of the first expression.
+			</p>
+		</returns>
+
+		<remarks>
+			<p>
+				<c>NULLIF(expression1, expression2)</c> is equivalent to this <c>CASE</c> function:
+			</p>
+			<code xml:space="preserve"><b>CASE</b>
+   <b>WHEN (</b><i>expression1</i> <b>=</b> <i>expression2</i><b>) THEN NULL</b>
+   <b>ELSE</b> <i>expression1</i>
+<b>END</b></code>
+		</remarks>
+	</body>
+</topic>

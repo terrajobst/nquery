@@ -1,0 +1,47 @@
+<topic>
+	<head>
+		<title>CHARINDEX</title>
+		<keywords>
+			<keyword term="functions, CHARINDEX" />
+			<keyword term="string functions, CHARINDEX" />
+			<keyword term="CHARINDEX function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="String Functions.html">String Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns the starting position of the specified expression in a character string.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">CHARINDEX(chars AS string, text AS string) RETURNS int</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="chars">
+					<p>
+						Is an expression that contains the sequence of characters to be found.
+					</p>
+				</param>
+				<param name="text">
+					<p>
+						Is an expression, typically a column searched for the specified sequence.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<examples>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">SELECT  CHARINDEX('NQuery', '---NQuery----'),
+        CHARINDEX('NQuery', 'NQuery----'),
+        CHARINDEX('NQuery', 'NQuery'),
+        CHARINDEX('NQuery', 'Quer')</sampleCode>
+		</examples>
+	</body>
+</topic>

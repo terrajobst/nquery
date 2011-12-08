@@ -1,0 +1,43 @@
+﻿<topic>
+	<head>
+		<title>Table Spool</title>
+		<keywords>
+			<keyword term="execution plan, table spool"/>
+			<keyword term="physical operators, table spool"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Table Spool</b> physical operator reads data from a temporarily created table data cache.
+			</p>
+			<p>
+				This operator is inserted if the query uses a recursive common table expression (CTE).
+			</p>
+			<p>
+				<b>Table Spool</b> is a physical operator.
+			</p>
+		</summary>
+
+		<section title="Properties">
+			<table>
+				<tr>
+					<th>Property Name</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>With Stack</td>
+					<td>
+						Specifies whether this table spool uses a stack-like fashion to read the data. If true, the execution plan will
+						also contain an <a href="Index Spool.html">Index Spool</a> operator that reads from the same spool. These two
+						operators appear in recursive queries whereby the index spool operator acts as the spool producer (i.e. pushes
+						values) and the table spool operator acts as the consumer (i.e. pops off values).
+					</td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</topic>

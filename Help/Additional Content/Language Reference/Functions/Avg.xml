@@ -1,0 +1,52 @@
+<topic>
+	<head>
+		<title>AVG</title>
+		<keywords>
+			<keyword term="functions, AVG" />
+			<keyword term="aggregates, AVG" />
+			<keyword term="aggregate functions, AVG" />
+			<keyword term="AVG aggregate" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Aggregate Functions.html">Aggregate Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns the average of the values in a group. <c>NULL</c> values are ignored.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">AVG ( expression )</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						An expression to determine the average for.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The average of all evaluated values of <c>expression</c> in a group. <c>NULL</c> values are ignored.
+			</p>
+		</returns>
+
+		<remarks>
+			<p>
+				The <c>AVG</c> aggregate function is not limited to certain data types. However, the data type <c>T</c> must provide
+				the following operators:
+
+				<code xml:space="preserve">OPERATOR +(left AS T, right AS T) RETURNS T
+OPERATOR /(left AS T, right AS int) RETURNS T</code>
+			</p>
+		</remarks>
+	</body>
+</topic>

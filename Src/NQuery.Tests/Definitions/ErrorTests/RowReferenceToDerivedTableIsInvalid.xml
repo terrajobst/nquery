@@ -1,0 +1,16 @@
+<test>
+  <sql>SELECT	[My Derived Table],
+		D
+FROM	(
+			SELECT	e.FirstName + ' ' + e.LastName MyEmp
+			FROM	Employees e
+		) AS [My Derived Table],
+		(
+			SELECT	e.FirstName + ' ' + e.LastName MyEmp
+			FROM	Employees e
+		) AS D</sql>
+  <expectedErrors>
+    <expectedError id="InvalidRowReference" text="Row reference 'My Derived Table' is not valid since the table it is referring to is either a derived table or a common table expression (CTE)." />
+    <expectedError id="InvalidRowReference" text="Row reference 'D' is not valid since the table it is referring to is either a derived table or a common table expression (CTE)." />
+  </expectedErrors>
+</test>

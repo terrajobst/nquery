@@ -1,0 +1,9 @@
+<test>
+  <sql>SELECT	1234567o,
+		1234567890o,
+		1ABCDEFo</sql>
+  <expectedErrors>
+    <expectedError id="InvalidOctal" text="'1234567890' is not a valid octal number." />
+    <expectedError id="InvalidReal" text="'1ABCDEFo' is not a valid decimal number." />
+  </expectedErrors>
+</test>

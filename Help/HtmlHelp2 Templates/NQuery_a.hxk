@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HelpIndex>
+<HelpIndex DTDVersion="1.0"
+		   Name="A"
+		   Id="NQuery_AIndex"
+		   AutoInclude="Yes"
+		   Merge="Yes"
+		   Sort="Yes"
+		   Title="Associative Index"
+		   Visible="No"
+		   LangId="1033" />

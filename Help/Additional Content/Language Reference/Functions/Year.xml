@@ -1,0 +1,41 @@
+<topic>
+	<head>
+		<title>YEAR</title>
+		<keywords>
+			<keyword term="functions, YEAR" />
+			<keyword term="date and time functions, YEAR" />
+			<keyword term="YEAR function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Date and Time Functions.html">Date and Time Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns an integer that represents the year part of a specified date.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">YEAR(dateTime AS DateTime) RETURNS int</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="dateTime">
+					<p>
+						An expression of type <c>DateTime</c>.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The year, between 1 and 9999.
+			</p>
+		</returns>
+	</body>
+</topic>

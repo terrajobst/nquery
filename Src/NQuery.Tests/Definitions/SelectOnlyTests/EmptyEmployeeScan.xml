@@ -1,0 +1,222 @@
+<test>
+  <sql>SELECT	*
+FROM	Employees
+WHERE	FALSE</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="EmployeeID" type="xs:int" minOccurs="0" />
+                <xs:element name="LastName" type="xs:string" minOccurs="0" />
+                <xs:element name="FirstName" type="xs:string" minOccurs="0" />
+                <xs:element name="Title" type="xs:string" minOccurs="0" />
+                <xs:element name="TitleOfCourtesy" type="xs:string" minOccurs="0" />
+                <xs:element name="BirthDate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="HireDate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="Address" type="xs:string" minOccurs="0" />
+                <xs:element name="City" type="xs:string" minOccurs="0" />
+                <xs:element name="Region" type="xs:string" minOccurs="0" />
+                <xs:element name="PostalCode" type="xs:string" minOccurs="0" />
+                <xs:element name="Country" type="xs:string" minOccurs="0" />
+                <xs:element name="HomePhone" type="xs:string" minOccurs="0" />
+                <xs:element name="Extension" type="xs:string" minOccurs="0" />
+                <xs:element name="Photo" type="xs:base64Binary" minOccurs="0" />
+                <xs:element name="Notes" type="xs:string" minOccurs="0" />
+                <xs:element name="ReportsTo" type="xs:int" minOccurs="0" />
+                <xs:element name="PhotoPath" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[00]" value="Employees.EmployeeID AS EmployeeID" />
+          <property name="Output List.[00].Table" value="Employees" />
+          <property name="Output List.[00].Column" value="EmployeeID" />
+          <property name="Output List.[00].DataType" value="Int32" />
+          <property name="Output List.[00].Output Name" value="EmployeeID" />
+          <property name="Output List.[01]" value="Employees.LastName AS LastName" />
+          <property name="Output List.[01].Table" value="Employees" />
+          <property name="Output List.[01].Column" value="LastName" />
+          <property name="Output List.[01].DataType" value="String" />
+          <property name="Output List.[01].Output Name" value="LastName" />
+          <property name="Output List.[02]" value="Employees.FirstName AS FirstName" />
+          <property name="Output List.[02].Table" value="Employees" />
+          <property name="Output List.[02].Column" value="FirstName" />
+          <property name="Output List.[02].DataType" value="String" />
+          <property name="Output List.[02].Output Name" value="FirstName" />
+          <property name="Output List.[03]" value="Employees.Title AS Title" />
+          <property name="Output List.[03].Table" value="Employees" />
+          <property name="Output List.[03].Column" value="Title" />
+          <property name="Output List.[03].DataType" value="String" />
+          <property name="Output List.[03].Output Name" value="Title" />
+          <property name="Output List.[04]" value="Employees.TitleOfCourtesy AS TitleOfCourtesy" />
+          <property name="Output List.[04].Table" value="Employees" />
+          <property name="Output List.[04].Column" value="TitleOfCourtesy" />
+          <property name="Output List.[04].DataType" value="String" />
+          <property name="Output List.[04].Output Name" value="TitleOfCourtesy" />
+          <property name="Output List.[05]" value="Employees.BirthDate AS BirthDate" />
+          <property name="Output List.[05].Table" value="Employees" />
+          <property name="Output List.[05].Column" value="BirthDate" />
+          <property name="Output List.[05].DataType" value="DateTime" />
+          <property name="Output List.[05].Output Name" value="BirthDate" />
+          <property name="Output List.[06]" value="Employees.HireDate AS HireDate" />
+          <property name="Output List.[06].Table" value="Employees" />
+          <property name="Output List.[06].Column" value="HireDate" />
+          <property name="Output List.[06].DataType" value="DateTime" />
+          <property name="Output List.[06].Output Name" value="HireDate" />
+          <property name="Output List.[07]" value="Employees.Address AS Address" />
+          <property name="Output List.[07].Table" value="Employees" />
+          <property name="Output List.[07].Column" value="Address" />
+          <property name="Output List.[07].DataType" value="String" />
+          <property name="Output List.[07].Output Name" value="Address" />
+          <property name="Output List.[08]" value="Employees.City AS City" />
+          <property name="Output List.[08].Table" value="Employees" />
+          <property name="Output List.[08].Column" value="City" />
+          <property name="Output List.[08].DataType" value="String" />
+          <property name="Output List.[08].Output Name" value="City" />
+          <property name="Output List.[09]" value="Employees.Region AS Region" />
+          <property name="Output List.[09].Table" value="Employees" />
+          <property name="Output List.[09].Column" value="Region" />
+          <property name="Output List.[09].DataType" value="String" />
+          <property name="Output List.[09].Output Name" value="Region" />
+          <property name="Output List.[10]" value="Employees.PostalCode AS PostalCode" />
+          <property name="Output List.[10].Table" value="Employees" />
+          <property name="Output List.[10].Column" value="PostalCode" />
+          <property name="Output List.[10].DataType" value="String" />
+          <property name="Output List.[10].Output Name" value="PostalCode" />
+          <property name="Output List.[11]" value="Employees.Country AS Country" />
+          <property name="Output List.[11].Table" value="Employees" />
+          <property name="Output List.[11].Column" value="Country" />
+          <property name="Output List.[11].DataType" value="String" />
+          <property name="Output List.[11].Output Name" value="Country" />
+          <property name="Output List.[12]" value="Employees.HomePhone AS HomePhone" />
+          <property name="Output List.[12].Table" value="Employees" />
+          <property name="Output List.[12].Column" value="HomePhone" />
+          <property name="Output List.[12].DataType" value="String" />
+          <property name="Output List.[12].Output Name" value="HomePhone" />
+          <property name="Output List.[13]" value="Employees.Extension AS Extension" />
+          <property name="Output List.[13].Table" value="Employees" />
+          <property name="Output List.[13].Column" value="Extension" />
+          <property name="Output List.[13].DataType" value="String" />
+          <property name="Output List.[13].Output Name" value="Extension" />
+          <property name="Output List.[14]" value="Employees.Photo AS Photo" />
+          <property name="Output List.[14].Table" value="Employees" />
+          <property name="Output List.[14].Column" value="Photo" />
+          <property name="Output List.[14].DataType" value="Byte[]" />
+          <property name="Output List.[14].Output Name" value="Photo" />
+          <property name="Output List.[15]" value="Employees.Notes AS Notes" />
+          <property name="Output List.[15].Table" value="Employees" />
+          <property name="Output List.[15].Column" value="Notes" />
+          <property name="Output List.[15].DataType" value="String" />
+          <property name="Output List.[15].Output Name" value="Notes" />
+          <property name="Output List.[16]" value="Employees.ReportsTo AS ReportsTo" />
+          <property name="Output List.[16].Table" value="Employees" />
+          <property name="Output List.[16].Column" value="ReportsTo" />
+          <property name="Output List.[16].DataType" value="Int32" />
+          <property name="Output List.[16].Output Name" value="ReportsTo" />
+          <property name="Output List.[17]" value="Employees.PhotoPath AS PhotoPath" />
+          <property name="Output List.[17].Table" value="Employees" />
+          <property name="Output List.[17].Column" value="PhotoPath" />
+          <property name="Output List.[17].DataType" value="String" />
+          <property name="Output List.[17].Output Name" value="PhotoPath" />
+        </properties>
+        <input>
+          <element operator="ConstantScan">
+            <properties>
+              <property name="Empty" value="True" />
+              <property name="Output List.[00]" value="Employees.EmployeeID" />
+              <property name="Output List.[00].Table" value="Employees" />
+              <property name="Output List.[00].Column" value="EmployeeID" />
+              <property name="Output List.[00].DataType" value="Int32" />
+              <property name="Output List.[01]" value="Employees.LastName" />
+              <property name="Output List.[01].Table" value="Employees" />
+              <property name="Output List.[01].Column" value="LastName" />
+              <property name="Output List.[01].DataType" value="String" />
+              <property name="Output List.[02]" value="Employees.FirstName" />
+              <property name="Output List.[02].Table" value="Employees" />
+              <property name="Output List.[02].Column" value="FirstName" />
+              <property name="Output List.[02].DataType" value="String" />
+              <property name="Output List.[03]" value="Employees.Title" />
+              <property name="Output List.[03].Table" value="Employees" />
+              <property name="Output List.[03].Column" value="Title" />
+              <property name="Output List.[03].DataType" value="String" />
+              <property name="Output List.[04]" value="Employees.TitleOfCourtesy" />
+              <property name="Output List.[04].Table" value="Employees" />
+              <property name="Output List.[04].Column" value="TitleOfCourtesy" />
+              <property name="Output List.[04].DataType" value="String" />
+              <property name="Output List.[05]" value="Employees.BirthDate" />
+              <property name="Output List.[05].Table" value="Employees" />
+              <property name="Output List.[05].Column" value="BirthDate" />
+              <property name="Output List.[05].DataType" value="DateTime" />
+              <property name="Output List.[06]" value="Employees.HireDate" />
+              <property name="Output List.[06].Table" value="Employees" />
+              <property name="Output List.[06].Column" value="HireDate" />
+              <property name="Output List.[06].DataType" value="DateTime" />
+              <property name="Output List.[07]" value="Employees.Address" />
+              <property name="Output List.[07].Table" value="Employees" />
+              <property name="Output List.[07].Column" value="Address" />
+              <property name="Output List.[07].DataType" value="String" />
+              <property name="Output List.[08]" value="Employees.City" />
+              <property name="Output List.[08].Table" value="Employees" />
+              <property name="Output List.[08].Column" value="City" />
+              <property name="Output List.[08].DataType" value="String" />
+              <property name="Output List.[09]" value="Employees.Region" />
+              <property name="Output List.[09].Table" value="Employees" />
+              <property name="Output List.[09].Column" value="Region" />
+              <property name="Output List.[09].DataType" value="String" />
+              <property name="Output List.[10]" value="Employees.PostalCode" />
+              <property name="Output List.[10].Table" value="Employees" />
+              <property name="Output List.[10].Column" value="PostalCode" />
+              <property name="Output List.[10].DataType" value="String" />
+              <property name="Output List.[11]" value="Employees.Country" />
+              <property name="Output List.[11].Table" value="Employees" />
+              <property name="Output List.[11].Column" value="Country" />
+              <property name="Output List.[11].DataType" value="String" />
+              <property name="Output List.[12]" value="Employees.HomePhone" />
+              <property name="Output List.[12].Table" value="Employees" />
+              <property name="Output List.[12].Column" value="HomePhone" />
+              <property name="Output List.[12].DataType" value="String" />
+              <property name="Output List.[13]" value="Employees.Extension" />
+              <property name="Output List.[13].Table" value="Employees" />
+              <property name="Output List.[13].Column" value="Extension" />
+              <property name="Output List.[13].DataType" value="String" />
+              <property name="Output List.[14]" value="Employees.Photo" />
+              <property name="Output List.[14].Table" value="Employees" />
+              <property name="Output List.[14].Column" value="Photo" />
+              <property name="Output List.[14].DataType" value="Byte[]" />
+              <property name="Output List.[15]" value="Employees.Notes" />
+              <property name="Output List.[15].Table" value="Employees" />
+              <property name="Output List.[15].Column" value="Notes" />
+              <property name="Output List.[15].DataType" value="String" />
+              <property name="Output List.[16]" value="Employees.ReportsTo" />
+              <property name="Output List.[16].Table" value="Employees" />
+              <property name="Output List.[16].Column" value="ReportsTo" />
+              <property name="Output List.[16].DataType" value="Int32" />
+              <property name="Output List.[17]" value="Employees.PhotoPath" />
+              <property name="Output List.[17].Table" value="Employees" />
+              <property name="Output List.[17].Column" value="PhotoPath" />
+              <property name="Output List.[17].DataType" value="String" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="0" />
+              <property name="Statistics.Average Row Count" value="0" />
+            </properties>
+            <input />
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

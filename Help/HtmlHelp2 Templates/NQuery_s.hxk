@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HelpIndex>
+<HelpIndex DTDVersion="1.0"
+		   Name="S"
+		   Id = "NQuery_SIndex"
+		   Merge="Yes"
+		   Sort="Yes"
+		   Title="Search Enhancement Index"
+		   Visible="No"
+		   LangId="1033"
+		   Font="Tahoma"
+		   FontSize="10"
+		   Charset="1" />

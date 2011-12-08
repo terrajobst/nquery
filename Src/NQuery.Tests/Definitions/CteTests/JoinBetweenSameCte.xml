@@ -1,0 +1,233 @@
+<executionTest>
+  <sql xml:space="preserve">WITH MyEmps AS (
+	SELECT	e.EmployeeID * 2.0 AS EmployeeId,
+			e.FirstName + ' ' + e.LastName AS FullName
+	FROM	Employees e
+)
+SELECT	D1.EmployeeID AS [D1.EmployeeID],
+		D1.FullName AS [D1.FullName],
+		D2.EmployeeID AS [D2.EmployeeID],
+		D2.FullName [D2.FullName]
+FROM	MyEmps D1
+
+   INNER JOIN MyEmps D2 ON D1.EmployeeID = D2.EmployeeID
+</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="D1.EmployeeID" type="xs:int" minOccurs="0" />
+                <xs:element name="D1.FullName" type="xs:string" minOccurs="0" />
+                <xs:element name="D2.EmployeeID" type="xs:int" minOccurs="0" />
+                <xs:element name="D2.FullName" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <D1.EmployeeID>1</D1.EmployeeID>
+    <D1.FullName>Nancy Davolio</D1.FullName>
+    <D2.EmployeeID>1</D2.EmployeeID>
+    <D2.FullName>Nancy Davolio</D2.FullName>
+  </Table1>
+  <Table1>
+    <D1.EmployeeID>2</D1.EmployeeID>
+    <D1.FullName>Andrew Fuller</D1.FullName>
+    <D2.EmployeeID>2</D2.EmployeeID>
+    <D2.FullName>Andrew Fuller</D2.FullName>
+  </Table1>
+  <Table1>
+    <D1.EmployeeID>3</D1.EmployeeID>
+    <D1.FullName>Janet Leverling</D1.FullName>
+    <D2.EmployeeID>3</D2.EmployeeID>
+    <D2.FullName>Janet Leverling</D2.FullName>
+  </Table1>
+  <Table1>
+    <D1.EmployeeID>4</D1.EmployeeID>
+    <D1.FullName>Margaret Peacock</D1.FullName>
+    <D2.EmployeeID>4</D2.EmployeeID>
+    <D2.FullName>Margaret Peacock</D2.FullName>
+  </Table1>
+  <Table1>
+    <D1.EmployeeID>5</D1.EmployeeID>
+    <D1.FullName>Steven Buchanan</D1.FullName>
+    <D2.EmployeeID>5</D2.EmployeeID>
+    <D2.FullName>Steven Buchanan</D2.FullName>
+  </Table1>
+  <Table1>
+    <D1.EmployeeID>6</D1.EmployeeID>
+    <D1.FullName>Michael Suyama</D1.FullName>
+    <D2.EmployeeID>6</D2.EmployeeID>
+    <D2.FullName>Michael Suyama</D2.FullName>
+  </Table1>
+  <Table1>
+    <D1.EmployeeID>7</D1.EmployeeID>
+    <D1.FullName>Robert King</D1.FullName>
+    <D2.EmployeeID>7</D2.EmployeeID>
+    <D2.FullName>Robert King</D2.FullName>
+  </Table1>
+  <Table1>
+    <D1.EmployeeID>8</D1.EmployeeID>
+    <D1.FullName>Laura Callahan</D1.FullName>
+    <D2.EmployeeID>8</D2.EmployeeID>
+    <D2.FullName>Laura Callahan</D2.FullName>
+  </Table1>
+  <Table1>
+    <D1.EmployeeID>9</D1.EmployeeID>
+    <D1.FullName>Anne Dodsworth</D1.FullName>
+    <D2.EmployeeID>9</D2.EmployeeID>
+    <D2.FullName>Anne Dodsworth</D2.FullName>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="e.EmployeeID AS D1.EmployeeID" />
+          <property name="Output List.[0].Table" value="e" />
+          <property name="Output List.[0].Column" value="EmployeeID" />
+          <property name="Output List.[0].DataType" value="Int32" />
+          <property name="Output List.[0].Output Name" value="D1.EmployeeID" />
+          <property name="Output List.[1]" value="Expr1003 AS D1.FullName" />
+          <property name="Output List.[1].Column" value="Expr1003" />
+          <property name="Output List.[1].DataType" value="String" />
+          <property name="Output List.[1].Output Name" value="D1.FullName" />
+          <property name="Output List.[2]" value="e.EmployeeID AS D2.EmployeeID" />
+          <property name="Output List.[2].Table" value="e" />
+          <property name="Output List.[2].Column" value="EmployeeID" />
+          <property name="Output List.[2].DataType" value="Int32" />
+          <property name="Output List.[2].Output Name" value="D2.EmployeeID" />
+          <property name="Output List.[3]" value="Expr1003 AS D2.FullName" />
+          <property name="Output List.[3].Column" value="Expr1003" />
+          <property name="Output List.[3].DataType" value="String" />
+          <property name="Output List.[3].Output Name" value="D2.FullName" />
+        </properties>
+        <input>
+          <element operator="HashMatch">
+            <properties>
+              <property name="Output List.[0]" value="e.EmployeeID" />
+              <property name="Output List.[0].Table" value="e" />
+              <property name="Output List.[0].Column" value="EmployeeID" />
+              <property name="Output List.[0].DataType" value="Int32" />
+              <property name="Output List.[1]" value="Expr1003" />
+              <property name="Output List.[1].Column" value="Expr1003" />
+              <property name="Output List.[1].DataType" value="String" />
+              <property name="Output List.[2]" value="e.EmployeeID" />
+              <property name="Output List.[2].Table" value="e" />
+              <property name="Output List.[2].Column" value="EmployeeID" />
+              <property name="Output List.[2].DataType" value="Int32" />
+              <property name="Output List.[3]" value="Expr1003" />
+              <property name="Output List.[3].Column" value="Expr1003" />
+              <property name="Output List.[3].DataType" value="String" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="9" />
+              <property name="Statistics.Average Row Count" value="9" />
+              <property name="Hash Keys Build" value="e.EmployeeID" />
+              <property name="Hash Keys Build.Table" value="e" />
+              <property name="Hash Keys Build.Column" value="EmployeeID" />
+              <property name="Hash Keys Build.DataType" value="Int32" />
+              <property name="Hash Keys Probe" value="e.EmployeeID" />
+              <property name="Hash Keys Probe.Table" value="e" />
+              <property name="Hash Keys Probe.Column" value="EmployeeID" />
+              <property name="Hash Keys Probe.DataType" value="Int32" />
+              <property name="Logical Operator" value="Inner Join" />
+            </properties>
+            <input>
+              <element operator="ComputeScalar">
+                <properties>
+                  <property name="Output List.[0]" value="e.EmployeeID" />
+                  <property name="Output List.[0].Table" value="e" />
+                  <property name="Output List.[0].Column" value="EmployeeID" />
+                  <property name="Output List.[0].DataType" value="Int32" />
+                  <property name="Output List.[1]" value="Expr1003" />
+                  <property name="Output List.[1].Column" value="Expr1003" />
+                  <property name="Output List.[1].DataType" value="String" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="9" />
+                  <property name="Statistics.Average Row Count" value="9" />
+                  <property name="Defined Values.[0]" value="Expr1003 = e.FirstName + ' ' + e.LastName" />
+                  <property name="Defined Values.[0].Target" value="Expr1003" />
+                  <property name="Defined Values.[0].DataType" value="String" />
+                  <property name="Defined Values.[0].Source" value="e.FirstName + ' ' + e.LastName" />
+                </properties>
+                <input>
+                  <element operator="TableScan">
+                    <properties>
+                      <property name="Table" value="Employees AS e" />
+                      <property name="Output List.[0]" value="e.EmployeeID" />
+                      <property name="Output List.[0].Table" value="e" />
+                      <property name="Output List.[0].Column" value="EmployeeID" />
+                      <property name="Output List.[0].DataType" value="Int32" />
+                      <property name="Output List.[1]" value="e.LastName" />
+                      <property name="Output List.[1].Table" value="e" />
+                      <property name="Output List.[1].Column" value="LastName" />
+                      <property name="Output List.[1].DataType" value="String" />
+                      <property name="Output List.[2]" value="e.FirstName" />
+                      <property name="Output List.[2].Table" value="e" />
+                      <property name="Output List.[2].Column" value="FirstName" />
+                      <property name="Output List.[2].DataType" value="String" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="9" />
+                      <property name="Statistics.Average Row Count" value="9" />
+                    </properties>
+                    <input />
+                  </element>
+                </input>
+              </element>
+              <element operator="ComputeScalar">
+                <properties>
+                  <property name="Output List.[0]" value="e.EmployeeID" />
+                  <property name="Output List.[0].Table" value="e" />
+                  <property name="Output List.[0].Column" value="EmployeeID" />
+                  <property name="Output List.[0].DataType" value="Int32" />
+                  <property name="Output List.[1]" value="Expr1003" />
+                  <property name="Output List.[1].Column" value="Expr1003" />
+                  <property name="Output List.[1].DataType" value="String" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="9" />
+                  <property name="Statistics.Average Row Count" value="9" />
+                  <property name="Defined Values.[0]" value="Expr1003 = e.FirstName + ' ' + e.LastName" />
+                  <property name="Defined Values.[0].Target" value="Expr1003" />
+                  <property name="Defined Values.[0].DataType" value="String" />
+                  <property name="Defined Values.[0].Source" value="e.FirstName + ' ' + e.LastName" />
+                </properties>
+                <input>
+                  <element operator="TableScan">
+                    <properties>
+                      <property name="Table" value="Employees AS e" />
+                      <property name="Output List.[0]" value="e.EmployeeID" />
+                      <property name="Output List.[0].Table" value="e" />
+                      <property name="Output List.[0].Column" value="EmployeeID" />
+                      <property name="Output List.[0].DataType" value="Int32" />
+                      <property name="Output List.[1]" value="e.LastName" />
+                      <property name="Output List.[1].Table" value="e" />
+                      <property name="Output List.[1].Column" value="LastName" />
+                      <property name="Output List.[1].DataType" value="String" />
+                      <property name="Output List.[2]" value="e.FirstName" />
+                      <property name="Output List.[2].Table" value="e" />
+                      <property name="Output List.[2].Column" value="FirstName" />
+                      <property name="Output List.[2].DataType" value="String" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="9" />
+                      <property name="Statistics.Average Row Count" value="9" />
+                    </properties>
+                    <input />
+                  </element>
+                </input>
+              </element>
+            </input>
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</executionTest>

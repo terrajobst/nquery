@@ -1,0 +1,65 @@
+<topic>
+	<head>
+		<title>SIGN</title>
+		<keywords>
+			<keyword term="functions, SIGN" />
+			<keyword term="mathematical functions, SIGN" />
+			<keyword term="SIGN function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Mathematical Functions.html">Mathematical Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns a value indicating the sign of a number.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">SIGN(value AS decimal) RETURNS int
+SIGN(value AS double) RETURNS int
+SIGN(value AS short) RETURNS int
+SIGN(value AS int) RETURNS int
+SIGN(value AS long) RETURNS int
+SIGN(value AS sbyte) RETURNS int
+SIGN(value AS float) RETURNS int</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						A signed number.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				A number indicating the sign of value.
+			</p>
+			<table>
+				<tr>
+					<th>Number</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>-1</td>
+					<td>value is less than zero.</td>
+				</tr>
+				<tr>
+					<td>0</td>
+					<td>value is equal to zero.</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>value is greater than zero.</td>
+				</tr>
+			</table>
+		</returns>
+	</body>
+</topic>

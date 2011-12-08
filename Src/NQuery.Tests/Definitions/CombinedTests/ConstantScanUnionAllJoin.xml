@@ -1,0 +1,623 @@
+<test>
+  <sql>SELECT	'Immo' FirstName, 'Landwerth' LastName, 'Bayern' Region, 'Munich' Territory
+
+UNION ALL
+
+SELECT	e.LastName,
+		e.FirstName,
+		r.RegionDescription,
+		t.TerritoryDescription
+
+FROM	EmployeeTerritories et
+			INNER JOIN Employees e ON e.EmployeeID = et.EmployeeID
+			INNER JOIN Territories t ON t.TerritoryID = et.TerritoryID
+			INNER JOIN Region r ON r.RegionID = t.RegionID</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="FirstName" type="xs:string" minOccurs="0" />
+                <xs:element name="LastName" type="xs:string" minOccurs="0" />
+                <xs:element name="Region" type="xs:string" minOccurs="0" />
+                <xs:element name="Territory" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <FirstName>Immo</FirstName>
+    <LastName>Landwerth</LastName>
+    <Region>Bayern</Region>
+    <Territory>Munich</Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Davolio</FirstName>
+    <LastName>Nancy</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Wilton                                            </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Davolio</FirstName>
+    <LastName>Nancy</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Neward                                            </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Fuller</FirstName>
+    <LastName>Andrew</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Westboro                                          </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Fuller</FirstName>
+    <LastName>Andrew</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Bedford                                           </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Fuller</FirstName>
+    <LastName>Andrew</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Georgetow                                         </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Fuller</FirstName>
+    <LastName>Andrew</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Boston                                            </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Fuller</FirstName>
+    <LastName>Andrew</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Cambridge                                         </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Fuller</FirstName>
+    <LastName>Andrew</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Braintree                                         </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Fuller</FirstName>
+    <LastName>Andrew</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Louisville                                        </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Leverling</FirstName>
+    <LastName>Janet</LastName>
+    <Region>Southern                                          </Region>
+    <Territory>Atlanta                                           </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Leverling</FirstName>
+    <LastName>Janet</LastName>
+    <Region>Southern                                          </Region>
+    <Territory>Savannah                                          </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Leverling</FirstName>
+    <LastName>Janet</LastName>
+    <Region>Southern                                          </Region>
+    <Territory>Orlando                                           </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Leverling</FirstName>
+    <LastName>Janet</LastName>
+    <Region>Southern                                          </Region>
+    <Territory>Tampa                                             </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Peacock</FirstName>
+    <LastName>Margaret</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Rockville                                         </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Peacock</FirstName>
+    <LastName>Margaret</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Greensboro                                        </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Peacock</FirstName>
+    <LastName>Margaret</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Cary                                              </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Buchanan</FirstName>
+    <LastName>Steven</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Providence                                        </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Buchanan</FirstName>
+    <LastName>Steven</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Morristown                                        </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Buchanan</FirstName>
+    <LastName>Steven</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Edison                                            </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Buchanan</FirstName>
+    <LastName>Steven</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>New York                                          </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Buchanan</FirstName>
+    <LastName>Steven</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>New York                                          </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Buchanan</FirstName>
+    <LastName>Steven</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Mellvile                                          </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Buchanan</FirstName>
+    <LastName>Steven</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Fairport                                          </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Suyama</FirstName>
+    <LastName>Michael</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Phoenix                                           </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Suyama</FirstName>
+    <LastName>Michael</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Scottsdale                                        </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Suyama</FirstName>
+    <LastName>Michael</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Bellevue                                          </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Suyama</FirstName>
+    <LastName>Michael</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Redmond                                           </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Suyama</FirstName>
+    <LastName>Michael</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Seattle                                           </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>King</FirstName>
+    <LastName>Robert</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Hoffman Estates                                   </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>King</FirstName>
+    <LastName>Robert</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Chicago                                           </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>King</FirstName>
+    <LastName>Robert</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Denver                                            </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>King</FirstName>
+    <LastName>Robert</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Colorado Springs                                  </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>King</FirstName>
+    <LastName>Robert</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Santa Monica                                      </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>King</FirstName>
+    <LastName>Robert</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Menlo Park                                        </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>King</FirstName>
+    <LastName>Robert</LastName>
+    <Region>Western                                           </Region>
+    <Territory>San Francisco                                     </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>King</FirstName>
+    <LastName>Robert</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Campbell                                          </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>King</FirstName>
+    <LastName>Robert</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Santa Clara                                       </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>King</FirstName>
+    <LastName>Robert</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Santa Cruz                                        </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Callahan</FirstName>
+    <LastName>Laura</LastName>
+    <Region>Northern                                          </Region>
+    <Territory>Philadelphia                                      </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Callahan</FirstName>
+    <LastName>Laura</LastName>
+    <Region>Northern                                          </Region>
+    <Territory>Beachwood                                         </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Callahan</FirstName>
+    <LastName>Laura</LastName>
+    <Region>Northern                                          </Region>
+    <Territory>Findlay                                           </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Callahan</FirstName>
+    <LastName>Laura</LastName>
+    <Region>Northern                                          </Region>
+    <Territory>Racine                                            </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Dodsworth</FirstName>
+    <LastName>Anne</LastName>
+    <Region>Northern                                          </Region>
+    <Territory>Hollis                                            </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Dodsworth</FirstName>
+    <LastName>Anne</LastName>
+    <Region>Northern                                          </Region>
+    <Territory>Portsmouth                                        </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Dodsworth</FirstName>
+    <LastName>Anne</LastName>
+    <Region>Northern                                          </Region>
+    <Territory>Southfield                                        </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Dodsworth</FirstName>
+    <LastName>Anne</LastName>
+    <Region>Northern                                          </Region>
+    <Territory>Troy                                              </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Dodsworth</FirstName>
+    <LastName>Anne</LastName>
+    <Region>Northern                                          </Region>
+    <Territory>Bloomfield Hills                                  </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Dodsworth</FirstName>
+    <LastName>Anne</LastName>
+    <Region>Northern                                          </Region>
+    <Territory>Roseville                                         </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Dodsworth</FirstName>
+    <LastName>Anne</LastName>
+    <Region>Northern                                          </Region>
+    <Territory>Minneapolis                                       </Territory>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="Union1014 AS FirstName" />
+          <property name="Output List.[0].Column" value="Union1014" />
+          <property name="Output List.[0].DataType" value="String" />
+          <property name="Output List.[0].Output Name" value="FirstName" />
+          <property name="Output List.[1]" value="Union1015 AS LastName" />
+          <property name="Output List.[1].Column" value="Union1015" />
+          <property name="Output List.[1].DataType" value="String" />
+          <property name="Output List.[1].Output Name" value="LastName" />
+          <property name="Output List.[2]" value="Union1016 AS Region" />
+          <property name="Output List.[2].Column" value="Union1016" />
+          <property name="Output List.[2].DataType" value="String" />
+          <property name="Output List.[2].Output Name" value="Region" />
+          <property name="Output List.[3]" value="Union1017 AS Territory" />
+          <property name="Output List.[3].Column" value="Union1017" />
+          <property name="Output List.[3].DataType" value="String" />
+          <property name="Output List.[3].Output Name" value="Territory" />
+        </properties>
+        <input>
+          <element operator="Concatenation">
+            <properties>
+              <property name="Output List.[0]" value="Union1014" />
+              <property name="Output List.[0].Column" value="Union1014" />
+              <property name="Output List.[0].DataType" value="String" />
+              <property name="Output List.[1]" value="Union1015" />
+              <property name="Output List.[1].Column" value="Union1015" />
+              <property name="Output List.[1].DataType" value="String" />
+              <property name="Output List.[2]" value="Union1016" />
+              <property name="Output List.[2].Column" value="Union1016" />
+              <property name="Output List.[2].DataType" value="String" />
+              <property name="Output List.[3]" value="Union1017" />
+              <property name="Output List.[3].Column" value="Union1017" />
+              <property name="Output List.[3].DataType" value="String" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="50" />
+              <property name="Statistics.Average Row Count" value="50" />
+              <property name="Defined Values.Union1014" value="Expr1000; e.LastName" />
+              <property name="Defined Values.Union1014.[0]" value="Expr1000" />
+              <property name="Defined Values.Union1014.[0].Column" value="Expr1000" />
+              <property name="Defined Values.Union1014.[0].DataType" value="String" />
+              <property name="Defined Values.Union1014.[1]" value="e.LastName" />
+              <property name="Defined Values.Union1014.[1].Table" value="e" />
+              <property name="Defined Values.Union1014.[1].Column" value="LastName" />
+              <property name="Defined Values.Union1014.[1].DataType" value="String" />
+              <property name="Defined Values.Union1015" value="Expr1001; e.FirstName" />
+              <property name="Defined Values.Union1015.[0]" value="Expr1001" />
+              <property name="Defined Values.Union1015.[0].Column" value="Expr1001" />
+              <property name="Defined Values.Union1015.[0].DataType" value="String" />
+              <property name="Defined Values.Union1015.[1]" value="e.FirstName" />
+              <property name="Defined Values.Union1015.[1].Table" value="e" />
+              <property name="Defined Values.Union1015.[1].Column" value="FirstName" />
+              <property name="Defined Values.Union1015.[1].DataType" value="String" />
+              <property name="Defined Values.Union1016" value="Expr1002; r.RegionDescription" />
+              <property name="Defined Values.Union1016.[0]" value="Expr1002" />
+              <property name="Defined Values.Union1016.[0].Column" value="Expr1002" />
+              <property name="Defined Values.Union1016.[0].DataType" value="String" />
+              <property name="Defined Values.Union1016.[1]" value="r.RegionDescription" />
+              <property name="Defined Values.Union1016.[1].Table" value="r" />
+              <property name="Defined Values.Union1016.[1].Column" value="RegionDescription" />
+              <property name="Defined Values.Union1016.[1].DataType" value="String" />
+              <property name="Defined Values.Union1017" value="Expr1003; t.TerritoryDescription" />
+              <property name="Defined Values.Union1017.[0]" value="Expr1003" />
+              <property name="Defined Values.Union1017.[0].Column" value="Expr1003" />
+              <property name="Defined Values.Union1017.[0].DataType" value="String" />
+              <property name="Defined Values.Union1017.[1]" value="t.TerritoryDescription" />
+              <property name="Defined Values.Union1017.[1].Table" value="t" />
+              <property name="Defined Values.Union1017.[1].Column" value="TerritoryDescription" />
+              <property name="Defined Values.Union1017.[1].DataType" value="String" />
+            </properties>
+            <input>
+              <element operator="ConstantScan">
+                <properties>
+                  <property name="Empty" value="False" />
+                  <property name="Output List.[0]" value="Expr1000" />
+                  <property name="Output List.[0].Column" value="Expr1000" />
+                  <property name="Output List.[0].DataType" value="String" />
+                  <property name="Output List.[1]" value="Expr1001" />
+                  <property name="Output List.[1].Column" value="Expr1001" />
+                  <property name="Output List.[1].DataType" value="String" />
+                  <property name="Output List.[2]" value="Expr1002" />
+                  <property name="Output List.[2].Column" value="Expr1002" />
+                  <property name="Output List.[2].DataType" value="String" />
+                  <property name="Output List.[3]" value="Expr1003" />
+                  <property name="Output List.[3].Column" value="Expr1003" />
+                  <property name="Output List.[3].DataType" value="String" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="1" />
+                  <property name="Statistics.Average Row Count" value="1" />
+                  <property name="Defined Values.[0]" value="Expr1000 = 'Immo'" />
+                  <property name="Defined Values.[0].Target" value="Expr1000" />
+                  <property name="Defined Values.[0].DataType" value="String" />
+                  <property name="Defined Values.[0].Source" value="'Immo'" />
+                  <property name="Defined Values.[1]" value="Expr1001 = 'Landwerth'" />
+                  <property name="Defined Values.[1].Target" value="Expr1001" />
+                  <property name="Defined Values.[1].DataType" value="String" />
+                  <property name="Defined Values.[1].Source" value="'Landwerth'" />
+                  <property name="Defined Values.[2]" value="Expr1002 = 'Bayern'" />
+                  <property name="Defined Values.[2].Target" value="Expr1002" />
+                  <property name="Defined Values.[2].DataType" value="String" />
+                  <property name="Defined Values.[2].Source" value="'Bayern'" />
+                  <property name="Defined Values.[3]" value="Expr1003 = 'Munich'" />
+                  <property name="Defined Values.[3].Target" value="Expr1003" />
+                  <property name="Defined Values.[3].DataType" value="String" />
+                  <property name="Defined Values.[3].Source" value="'Munich'" />
+                </properties>
+                <input />
+              </element>
+              <element operator="HashMatch">
+                <properties>
+                  <property name="Output List.[0]" value="t.TerritoryDescription" />
+                  <property name="Output List.[0].Table" value="t" />
+                  <property name="Output List.[0].Column" value="TerritoryDescription" />
+                  <property name="Output List.[0].DataType" value="String" />
+                  <property name="Output List.[1]" value="r.RegionDescription" />
+                  <property name="Output List.[1].Table" value="r" />
+                  <property name="Output List.[1].Column" value="RegionDescription" />
+                  <property name="Output List.[1].DataType" value="String" />
+                  <property name="Output List.[2]" value="e.LastName" />
+                  <property name="Output List.[2].Table" value="e" />
+                  <property name="Output List.[2].Column" value="LastName" />
+                  <property name="Output List.[2].DataType" value="String" />
+                  <property name="Output List.[3]" value="e.FirstName" />
+                  <property name="Output List.[3].Table" value="e" />
+                  <property name="Output List.[3].Column" value="FirstName" />
+                  <property name="Output List.[3].DataType" value="String" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="49" />
+                  <property name="Statistics.Average Row Count" value="49" />
+                  <property name="Hash Keys Build" value="et.EmployeeID" />
+                  <property name="Hash Keys Build.Table" value="et" />
+                  <property name="Hash Keys Build.Column" value="EmployeeID" />
+                  <property name="Hash Keys Build.DataType" value="Int32" />
+                  <property name="Hash Keys Probe" value="e.EmployeeID" />
+                  <property name="Hash Keys Probe.Table" value="e" />
+                  <property name="Hash Keys Probe.Column" value="EmployeeID" />
+                  <property name="Hash Keys Probe.DataType" value="Int32" />
+                  <property name="Logical Operator" value="Inner Join" />
+                </properties>
+                <input>
+                  <element operator="HashMatch">
+                    <properties>
+                      <property name="Output List.[0]" value="et.EmployeeID" />
+                      <property name="Output List.[0].Table" value="et" />
+                      <property name="Output List.[0].Column" value="EmployeeID" />
+                      <property name="Output List.[0].DataType" value="Int32" />
+                      <property name="Output List.[1]" value="t.TerritoryDescription" />
+                      <property name="Output List.[1].Table" value="t" />
+                      <property name="Output List.[1].Column" value="TerritoryDescription" />
+                      <property name="Output List.[1].DataType" value="String" />
+                      <property name="Output List.[2]" value="r.RegionDescription" />
+                      <property name="Output List.[2].Table" value="r" />
+                      <property name="Output List.[2].Column" value="RegionDescription" />
+                      <property name="Output List.[2].DataType" value="String" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="49" />
+                      <property name="Statistics.Average Row Count" value="49" />
+                      <property name="Hash Keys Build" value="t.RegionID" />
+                      <property name="Hash Keys Build.Table" value="t" />
+                      <property name="Hash Keys Build.Column" value="RegionID" />
+                      <property name="Hash Keys Build.DataType" value="Int32" />
+                      <property name="Hash Keys Probe" value="r.RegionID" />
+                      <property name="Hash Keys Probe.Table" value="r" />
+                      <property name="Hash Keys Probe.Column" value="RegionID" />
+                      <property name="Hash Keys Probe.DataType" value="Int32" />
+                      <property name="Logical Operator" value="Inner Join" />
+                    </properties>
+                    <input>
+                      <element operator="HashMatch">
+                        <properties>
+                          <property name="Output List.[0]" value="et.EmployeeID" />
+                          <property name="Output List.[0].Table" value="et" />
+                          <property name="Output List.[0].Column" value="EmployeeID" />
+                          <property name="Output List.[0].DataType" value="Int32" />
+                          <property name="Output List.[1]" value="t.TerritoryDescription" />
+                          <property name="Output List.[1].Table" value="t" />
+                          <property name="Output List.[1].Column" value="TerritoryDescription" />
+                          <property name="Output List.[1].DataType" value="String" />
+                          <property name="Output List.[2]" value="t.RegionID" />
+                          <property name="Output List.[2].Table" value="t" />
+                          <property name="Output List.[2].Column" value="RegionID" />
+                          <property name="Output List.[2].DataType" value="Int32" />
+                          <property name="Statistics.Open Count" value="1" />
+                          <property name="Statistics.Row Count" value="49" />
+                          <property name="Statistics.Average Row Count" value="49" />
+                          <property name="Hash Keys Build" value="et.TerritoryID" />
+                          <property name="Hash Keys Build.Table" value="et" />
+                          <property name="Hash Keys Build.Column" value="TerritoryID" />
+                          <property name="Hash Keys Build.DataType" value="String" />
+                          <property name="Hash Keys Probe" value="t.TerritoryID" />
+                          <property name="Hash Keys Probe.Table" value="t" />
+                          <property name="Hash Keys Probe.Column" value="TerritoryID" />
+                          <property name="Hash Keys Probe.DataType" value="String" />
+                          <property name="Logical Operator" value="Inner Join" />
+                        </properties>
+                        <input>
+                          <element operator="TableScan">
+                            <properties>
+                              <property name="Table" value="EmployeeTerritories AS et" />
+                              <property name="Output List.[0]" value="et.EmployeeID" />
+                              <property name="Output List.[0].Table" value="et" />
+                              <property name="Output List.[0].Column" value="EmployeeID" />
+                              <property name="Output List.[0].DataType" value="Int32" />
+                              <property name="Output List.[1]" value="et.TerritoryID" />
+                              <property name="Output List.[1].Table" value="et" />
+                              <property name="Output List.[1].Column" value="TerritoryID" />
+                              <property name="Output List.[1].DataType" value="String" />
+                              <property name="Statistics.Open Count" value="1" />
+                              <property name="Statistics.Row Count" value="49" />
+                              <property name="Statistics.Average Row Count" value="49" />
+                            </properties>
+                            <input />
+                          </element>
+                          <element operator="TableScan">
+                            <properties>
+                              <property name="Table" value="Territories AS t" />
+                              <property name="Output List.[0]" value="t.TerritoryID" />
+                              <property name="Output List.[0].Table" value="t" />
+                              <property name="Output List.[0].Column" value="TerritoryID" />
+                              <property name="Output List.[0].DataType" value="String" />
+                              <property name="Output List.[1]" value="t.TerritoryDescription" />
+                              <property name="Output List.[1].Table" value="t" />
+                              <property name="Output List.[1].Column" value="TerritoryDescription" />
+                              <property name="Output List.[1].DataType" value="String" />
+                              <property name="Output List.[2]" value="t.RegionID" />
+                              <property name="Output List.[2].Table" value="t" />
+                              <property name="Output List.[2].Column" value="RegionID" />
+                              <property name="Output List.[2].DataType" value="Int32" />
+                              <property name="Statistics.Open Count" value="1" />
+                              <property name="Statistics.Row Count" value="53" />
+                              <property name="Statistics.Average Row Count" value="53" />
+                            </properties>
+                            <input />
+                          </element>
+                        </input>
+                      </element>
+                      <element operator="TableScan">
+                        <properties>
+                          <property name="Table" value="Region AS r" />
+                          <property name="Output List.[0]" value="r.RegionID" />
+                          <property name="Output List.[0].Table" value="r" />
+                          <property name="Output List.[0].Column" value="RegionID" />
+                          <property name="Output List.[0].DataType" value="Int32" />
+                          <property name="Output List.[1]" value="r.RegionDescription" />
+                          <property name="Output List.[1].Table" value="r" />
+                          <property name="Output List.[1].Column" value="RegionDescription" />
+                          <property name="Output List.[1].DataType" value="String" />
+                          <property name="Statistics.Open Count" value="1" />
+                          <property name="Statistics.Row Count" value="4" />
+                          <property name="Statistics.Average Row Count" value="4" />
+                        </properties>
+                        <input />
+                      </element>
+                    </input>
+                  </element>
+                  <element operator="TableScan">
+                    <properties>
+                      <property name="Table" value="Employees AS e" />
+                      <property name="Output List.[0]" value="e.EmployeeID" />
+                      <property name="Output List.[0].Table" value="e" />
+                      <property name="Output List.[0].Column" value="EmployeeID" />
+                      <property name="Output List.[0].DataType" value="Int32" />
+                      <property name="Output List.[1]" value="e.LastName" />
+                      <property name="Output List.[1].Table" value="e" />
+                      <property name="Output List.[1].Column" value="LastName" />
+                      <property name="Output List.[1].DataType" value="String" />
+                      <property name="Output List.[2]" value="e.FirstName" />
+                      <property name="Output List.[2].Table" value="e" />
+                      <property name="Output List.[2].Column" value="FirstName" />
+                      <property name="Output List.[2].DataType" value="String" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="9" />
+                      <property name="Statistics.Average Row Count" value="9" />
+                    </properties>
+                    <input />
+                  </element>
+                </input>
+              </element>
+            </input>
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

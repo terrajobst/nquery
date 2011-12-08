@@ -1,0 +1,8 @@
+<test>
+  <sql>SELECT	COUNT(*)
+FROM	Employees e
+HAVING	e.FirstName.Length &gt; 10</sql>
+  <expectedErrors>
+    <expectedError id="HavingExpressionNotAggregatedOrGrouped" text="Column 'e.FirstName' is invalid in the HAVING clause because it is not contained in either an aggregate function or the GROUP BY clause." />
+  </expectedErrors>
+</test>

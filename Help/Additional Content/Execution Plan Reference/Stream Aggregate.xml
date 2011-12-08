@@ -1,0 +1,50 @@
+﻿<topic>
+	<head>
+		<title>Stream Aggregate</title>
+		<keywords>
+			<keyword term="execution plan, stream aggregate"/>
+			<keyword term="physical operators, stream aggregate"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Stream Aggregate</b> operator groups by a set of columns and calculates one or more aggregate expressions returned by
+				the query, referenced elsewhere within the query, or both. This operator requires input ordered by the columns within
+				its groups.
+			</p>
+			<p>
+				If the <b>Stream Aggregate</b> operator groups by columns, the <c>Group By</c> property containing this list of columns appear.
+				If the <b>Stream Aggregate</b> operator computes any aggregate expressions, a list of them appears in the <c>Defined Values</c>
+				property.
+			</p>
+			<p>
+				<b>Stream Aggregate</b> is a physical operator.
+			</p>
+		</summary>
+
+		<section title="Properties">
+			<table>
+				<tr>
+					<th>Property Name</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>Defined Values</td>
+					<td>
+						Specfies the computed aggregates.
+					</td>
+				</tr>
+				<tr>
+					<td>Group By</td>
+					<td>
+						Specifies the set of grouping columns.
+					</td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</topic>

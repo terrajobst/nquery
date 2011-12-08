@@ -1,0 +1,7 @@
+<test>
+  <sql>SELECT	'Test'.ToString(),
+		'Test'.ToStrng()</sql>
+  <expectedErrors>
+    <expectedError id="UndeclaredMethod" text="Type 'String' does not have a method 'ToStrng()'." />
+  </expectedErrors>
+</test>

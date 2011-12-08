@@ -1,0 +1,13 @@
+<test>
+  <sql>SELECT	DISTINCT
+		CustomerID
+FROM	Orders
+UNION	ALL
+SELECT	CustomerTypeID
+FROM	customerdemographics
+
+ORDER	BY CustomerID, OrderDate</sql>
+  <expectedErrors>
+    <expectedError id="OrderByItemsMustBeInSelectListIfUnionSpecified" text="ORDER BY items must appear in the select list if the statement contains a UNION, INTERSECT or EXCEPT operator." />
+  </expectedErrors>
+</test>

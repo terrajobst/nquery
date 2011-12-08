@@ -1,0 +1,7 @@
+<test>
+  <sql>SELECT	17abcdefgh
+FROM	Employees</sql>
+  <expectedErrors>
+    <expectedError id="InvalidHex" text="'17abcdefg' is not a valid hex number." />
+  </expectedErrors>
+</test>

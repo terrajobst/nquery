@@ -1,0 +1,8 @@
+<test>
+  <sql>SELECT	*
+FROM	[Order Details] od
+GROUP	BY AVG(od.OrderID)</sql>
+  <expectedErrors>
+    <expectedError id="AggregateInGroupBy" text="Cannot use an aggregate or a subquery in an expression used for the group by list of a GROUP BY clause." />
+  </expectedErrors>
+</test>

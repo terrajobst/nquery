@@ -1,0 +1,7 @@
+<test>
+  <sql>SELECT	AVG(e.FirstName)
+FROM	Employees e</sql>
+  <expectedErrors>
+    <expectedError id="AggregateDoesNotSupportType" text="The aggregate operation 'AVG' cannot take a 'String' data type as an argument." />
+  </expectedErrors>
+</test>

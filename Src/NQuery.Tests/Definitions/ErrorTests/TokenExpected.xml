@@ -1,0 +1,8 @@
+<test>
+  <sql>SELECT	*
+FROM	Orders
+ORDER	1</sql>
+  <expectedErrors>
+    <expectedError id="TokenExpected" text="Found '1' but expected 'BY'." />
+  </expectedErrors>
+</test>

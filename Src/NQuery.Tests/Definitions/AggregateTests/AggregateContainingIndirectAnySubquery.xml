@@ -1,0 +1,13 @@
+<test>
+  <sql>SELECT	SUM(
+			CASE
+				WHEN e.EmployeeID &gt;= ANY (SELECT o.CustomerID FROM Orders o WHERE o.EmployeeID = e.EmployeeId)
+				THEN 1
+				ELSE 0
+			END
+		)
+FROM	Employees e</sql>
+  <expectedErrors>
+    <expectedError id="AggregateCannotContainAggregate" text="Cannot perform aggregate function on an expression containing a subquery: &quot;SUM&quot;(CASE WHEN &quot;e&quot;.&quot;EmployeeID&quot; &gt;= ANY (   SELECT &quot;o&quot;.&quot;CustomerID&quot; AS &quot;CustomerID&quot;&#xD;&#xA;     FROM Orders AS o&#xD;&#xA;    WHERE &quot;o&quot;.&quot;EmployeeID&quot; = &quot;e&quot;.&quot;EmployeeID&quot;) THEN 1 ELSE 0 END)." />
+  </expectedErrors>
+</test>

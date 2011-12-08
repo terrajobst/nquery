@@ -1,0 +1,152 @@
+<topic>
+	<head>
+		<title>CASE</title>
+		<keywords>
+			<keyword term="functions, CASE" />
+			<keyword term="system functions, CASE" />
+			<keyword term="CASE system function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="System Functions.html">System Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>Evaluates a list of conditions and returns one of multiple possible result expressions.</p>
+			<p>
+				<c>CASE</c> has two formats:
+			</p>
+			<ul>
+				<li>
+					The simple <c>CASE</c> function compares an expression to a set of simple expressions to determine the result.
+				</li>
+				<li>
+					The searched <c>CASE</c> function evaluates a set of Boolean expressions to determine the result.
+				</li>
+				<li>
+					Both formats support an optional <c>ELSE</c> argument.
+				</li>
+			</ul>
+		</summary>
+
+		<syntax>
+			<p>
+				Simple <c>CASE</c> function:
+			</p>
+
+			<code xml:space="preserve"><b>CASE</b> <i>input_expression</i>
+   <b>WHEN</b> <i>when_expression</i> THEN <i>result_expression</i>
+   [ <b>...n</b> ]
+   [ <b>ELSE</b> <i>else_result_expression</i> ]
+<b>END</b></code>
+
+			<p>
+				Searched <c>CASE</c> function:
+			</p>
+
+			<code xml:space="preserve"><b>CASE</b>
+  <b>WHEN</b> <i>boolean_expression</i> <b>THEN</b> <i>result_expression</i>
+  [ <b>...n</b> ]
+  [ <b>ELSE</b> <i>else_result_expression</i> ]
+<b>END</b></code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="input_expression">
+					<p>
+						Is the expression evaluated when using the simple <c>CASE</c> format. <i>input_expression</i> is any valid expression.
+					</p>
+				</param>
+				<param name="WHEN when_expression">
+					<p>
+						Is a simple expression to which <i>input_expression</i> is compared when using the simple <c>CASE</c> format.
+						<i>when_expression</i> is any valid expression. The data types of <i>input_expression</i> and each <i>when_expression</i>
+						must be the same or must be implicitly converted.
+					</p>
+				</param>
+				<param name="WHEN boolean_expression">
+					<p>
+						Is the Boolean expression evaluated when using the searched <c>CASE</c> format. <i>boolean_expression</i> is any valid
+						Boolean expression.
+					</p>
+				</param>
+				<param name="THEN result_expression">
+					<p>
+						Is the expression returned when <c xml:space="preserve"><i>input_expression</i> <b>=</b> <i>when_expression</i></c> evaluates to <c>TRUE</c>, or
+						<i>boolean_expression</i> evaluates to <c>TRUE</c>. <i>result_expression</i> is any valid expression.
+					</p>
+				</param>
+				<param name="n">
+					<p>
+						Is a placeholder indicating that multiple <c xml:space="preserve"><b>WHEN</b> <i>when_expression</i> <b>THEN</b> <i>result_expression</i></c>
+						clauses, or multiple <c xml:space="preserve"><b>WHEN</b> <i>boolean_expression</i> <b>THEN</b> <i>result_expression</i></c> clauses can be used.
+					</p>
+				</param>
+				<param name="ELSE else_result_expression">
+					<p>
+						Is the expression returned if no comparison operation evaluates to <c>TRUE</c>. If this argument is omitted and no
+						comparison operation evaluates to <c>TRUE</c>, <c>CASE</c> returns <c>NULL</c>. <i>else_result_expression</i> is any
+						valid expression. The data types of <i>else_result_expression</i> and any <i>result_expression</i> must be the same or
+						must be an implicit conversion.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				Returns the highest precedence type from the set of types in <i>result_expressions</i> and the optional
+				<i>else_result_expression</i>.
+			</p>
+
+			<p>
+				Simple <c>CASE</c> function:
+			</p>
+			<ul>
+				<li>
+					Evaluates <i>input_expression</i>, and then, in the order specified, evaluates
+					<c xml:space="preserve"><i>input_expression</i> <b>=</b> <i>when_expression</i></c> for each <c>WHEN</c> clause.
+				</li>
+				<li>
+					Returns the <i>result_expression</i> of the first <c xml:space="preserve"><i>input_expression</i> <b>=</b> <i>when_expression</i></c>
+					that evaluates to <c>TRUE</c>.
+				</li>
+				<li>
+					If no <c xml:space="preserve"><i>input_expression</i> <b>=</b> <i>when_expression</i></c> evaluates to <c>TRUE</c>,
+					<i>else_result_expression</i> is returned if an <c>ELSE</c> clause is specified, or <c>NULL</c> if no <c>ELSE</c>
+					clause is specified.
+				</li>
+			</ul>
+
+			<p>
+				Searched <c>CASE</c> function:
+			</p>
+			<ul>
+				<li>
+					Evaluates, in the order specified, <i>boolean_expression</i> for each <c>WHEN</c> clause.
+				</li>
+				<li>
+					Returns <i>result_expression</i> of the first <i>boolean_expression</i> that evaluates to <c>TRUE</c>.
+				</li>
+				<li>
+					If no <i>boolean_expression</i> evaluates to <c>TRUE</c>, <i>else_result_expression</i> is returned if an <c>ELSE</c>
+					clause is specified, or <c>NULL</c> if no <c>ELSE</c> clause is specified.
+				</li>
+			</ul>
+		</returns>
+
+		<examples>
+			<p>The following example returns the mode of shipping used for orders placed in the Northwind database.</p>
+			<code xml:space="preserve">SELECT ShipVia,
+       CASE ShipVia
+           WHEN 1 THEN 'Speedy Express'
+           WHEN 2 THEN 'United Package'
+           WHEN 3 THEN 'Federal Shipping'
+           ELSE 'Unknown'
+       END AS ShipViaDisplayLabel
+  FROM Orders</code>
+		</examples>
+	</body>
+</topic>

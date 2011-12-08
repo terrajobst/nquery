@@ -1,0 +1,8 @@
+<test>
+  <sql>SELECT	*
+FROM	Employees e
+ORDER	BY 1 + 2</sql>
+  <expectedErrors>
+    <expectedError id="ConstantExpressionInOrderBy" text="A constant expression was encountered in the ORDER BY list." />
+  </expectedErrors>
+</test>

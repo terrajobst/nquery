@@ -1,0 +1,494 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{965FF445-36E6-41B6-9192-91D2AEB6169E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NQuery.Tests</RootNamespace>
+    <AssemblyName>NQuery.Tests</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\NQuery.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Code Analysis|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Code Analysis\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\NQuery\NQuery.csproj">
+      <Name>NQuery</Name>
+      <Project>{4B5ABD2A-DE15-4F4F-8417-CE4450F7004E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helpers\AssertHelpers.cs" />
+    <Compile Include="Helpers\Databases.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helpers\QueryFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helpers\TestDefinition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\AggregateTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\ArgumentChecks.cs" />
+    <Compile Include="Tests\AutomatedTestFixtureBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\BinderTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\CalculateScalarTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\CombinedTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\ComparerTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\ConstantFoldingTests.cs" />
+    <Compile Include="Tests\CteTests.cs" />
+    <Compile Include="Tests\CustomPropertiesTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\ErrorTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\ExpressionTests.cs" />
+    <Compile Include="Tests\FunctionCollectionTests.cs" />
+    <Compile Include="Tests\IdentifierTests.cs" />
+    <Compile Include="Tests\ILTranslationTests.cs" />
+    <Compile Include="Tests\JoinTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\NormalizerTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\OrderByTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\ParameterTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\RegressionTests.cs" />
+    <Compile Include="Tests\SelectOnlyTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\SourceLocationTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\SubqueryTests.cs" />
+    <Compile Include="Tests\TableReadTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\TopTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\UnionTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\ValidatorTests.cs" />
+    <EmbeddedResource Include="Definitions\AggregateTests\All.xml" />
+    <EmbeddedResource Include="Definitions\CombinedTests\BetweenLikeSoundslikeSimilarToNegations.xml" />
+    <EmbeddedResource Include="Definitions\CombinedTests\ConstantScanUnionAllJoin.xml" />
+    <EmbeddedResource Include="Definitions\CombinedTests\ConstantScanUnionJoin.xml" />
+    <EmbeddedResource Include="Definitions\CombinedTests\Distinct.xml" />
+    <EmbeddedResource Include="Definitions\CombinedTests\GroupyByUnionAllMultipleConstantScans.xml" />
+    <EmbeddedResource Include="Definitions\CombinedTests\JoinUnionAllConstantScan.xml" />
+    <EmbeddedResource Include="Definitions\CombinedTests\JoinUnionConstantScan.xml" />
+    <EmbeddedResource Include="Definitions\CombinedTests\Test1.xml" />
+    <EmbeddedResource Include="Definitions\CombinedTests\Test2.xml" />
+    <EmbeddedResource Include="Definitions\CombinedTests\UnionAllNull.xml" />
+    <EmbeddedResource Include="Definitions\CombinedTests\UnionNull.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\FullOuterHashJoin1.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\FullOuterHashJoin2.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\FullOuterLoopJoin1.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\FullOuterLoopJoin2.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\LeftHashJoin.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\LeftLoopJoin.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\LeftOuterHashJoin1.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\LeftOuterHashJoin2.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\LeftOuterLoopJoin1.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\LeftOuterLoopJoin2.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\NoJoinCondition.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\RightHashJoin.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\RightLoopJoin.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\RightOuterHashJoin1.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\RightOuterHashJoin2.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\RightOuterLoopJoin1.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\RightOuterLoopJoin2.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\SimpleExplicitInnerJoin.xml" />
+    <EmbeddedResource Include="Definitions\NormalizerTests\InExpression.xml" />
+    <EmbeddedResource Include="Definitions\NormalizerTests\NegatedInExpression1.xml" />
+    <EmbeddedResource Include="Definitions\NormalizerTests\NegatedInExpression2.xml" />
+    <EmbeddedResource Include="Definitions\NormalizerTests\NegatedOredInExpression.xml" />
+    <EmbeddedResource Include="Definitions\NormalizerTests\OredInExpression.xml" />
+    <EmbeddedResource Include="Definitions\OrderByTests\DistinctSort.xml" />
+    <EmbeddedResource Include="Definitions\OrderByTests\DistinctSortEmpty.xml" />
+    <EmbeddedResource Include="Definitions\OrderByTests\DistinctSortIsAfterComputeScalar1.xml" />
+    <EmbeddedResource Include="Definitions\OrderByTests\DistinctSortIsAfterComputeScalar2.xml" />
+    <EmbeddedResource Include="Definitions\OrderByTests\DistinctSortIsAfterComputeScalarWithOrderBy.xml" />
+    <EmbeddedResource Include="Definitions\OrderByTests\OrderByFieldAlias.xml" />
+    <EmbeddedResource Include="Definitions\OrderByTests\OrderByFieldAliasEmpty.xml" />
+    <EmbeddedResource Include="Definitions\OrderByTests\OrderByFieldRef.xml" />
+    <EmbeddedResource Include="Definitions\OrderByTests\OrderByFieldRefEmpty.xml" />
+    <EmbeddedResource Include="Definitions\OrderByTests\OrderByPos.xml" />
+    <EmbeddedResource Include="Definitions\OrderByTests\OrderByPosAsc.xml" />
+    <EmbeddedResource Include="Definitions\OrderByTests\OrderByPosAscDesc.xml" />
+    <EmbeddedResource Include="Definitions\OrderByTests\OrderByPosDesc.xml" />
+    <EmbeddedResource Include="Definitions\OrderByTests\OrderByPosDescAsc.xml" />
+    <EmbeddedResource Include="Definitions\OrderByTests\OrderByPosEmpty.xml" />
+    <EmbeddedResource Include="Definitions\SelectOnlyTests\ConstantExpression.xml" />
+    <EmbeddedResource Include="Definitions\SelectOnlyTests\EmptyConstantScan.xml" />
+    <EmbeddedResource Include="Definitions\SelectOnlyTests\EmptyEmployeeScan.xml" />
+    <EmbeddedResource Include="Definitions\SelectOnlyTests\NullExpression.xml" />
+    <EmbeddedResource Include="Definitions\SelectOnlyTests\NullIfExpression.xml" />
+    <EmbeddedResource Include="Definitions\SelectOnlyTests\NullQuery.xml" />
+    <EmbeddedResource Include="Definitions\TableReadTests\ReadCategories.xml" />
+    <EmbeddedResource Include="Definitions\TableReadTests\ReadCustomerCustomerDemo.xml" />
+    <EmbeddedResource Include="Definitions\TableReadTests\ReadCustomerDemographics.xml" />
+    <EmbeddedResource Include="Definitions\TableReadTests\ReadCustomers.xml" />
+    <EmbeddedResource Include="Definitions\TableReadTests\ReadEmployees.xml" />
+    <EmbeddedResource Include="Definitions\TableReadTests\ReadEmployeeTerritories.xml" />
+    <EmbeddedResource Include="Definitions\TableReadTests\ReadOrderDetails.xml" />
+    <EmbeddedResource Include="Definitions\TableReadTests\ReadOrders.xml" />
+    <EmbeddedResource Include="Definitions\TableReadTests\ReadProducts.xml" />
+    <EmbeddedResource Include="Definitions\TableReadTests\ReadRegion.xml" />
+    <EmbeddedResource Include="Definitions\TableReadTests\ReadShippers.xml" />
+    <EmbeddedResource Include="Definitions\TableReadTests\ReadSuppliers.xml" />
+    <EmbeddedResource Include="Definitions\TableReadTests\ReadTerritories.xml" />
+    <EmbeddedResource Include="Definitions\TopTests\LimitAboveTableCount.xml" />
+    <EmbeddedResource Include="Definitions\TopTests\LimitBelowTableCount.xml" />
+    <EmbeddedResource Include="Definitions\TopTests\LimitEqualsTableCount.xml" />
+    <EmbeddedResource Include="Definitions\TopTests\LimitEqualsZero.xml" />
+    <EmbeddedResource Include="Definitions\UnionTests\ExceptWithJoin.xml" />
+    <EmbeddedResource Include="Definitions\UnionTests\ExceptWithSelf.xml" />
+    <EmbeddedResource Include="Definitions\UnionTests\IntersectWithJoin.xml" />
+    <EmbeddedResource Include="Definitions\UnionTests\IntersectWithSelf.xml" />
+    <EmbeddedResource Include="Definitions\UnionTests\UnionAllWithJoin.xml" />
+    <EmbeddedResource Include="Definitions\UnionTests\UnionAllWithSelf.xml" />
+    <EmbeddedResource Include="Definitions\UnionTests\UnionWithJoin.xml" />
+    <EmbeddedResource Include="Definitions\UnionTests\UnionWithSelf.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\JoinTests\LeftOuterLoopJoinWithEmptyInner.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\AggregateTests\UngroupedQueryReturnsRowOnEmptyConstantScan.xml" />
+    <EmbeddedResource Include="Definitions\AggregateTests\UngroupedQueryReturnsRowOnEmptyInput.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\AggregateTests\GroupedQueryReturnsManyRowsOnNonEmptyInput.xml" />
+    <EmbeddedResource Include="Definitions\AggregateTests\GroupedQueryReturnsZeroRowsOnConstantScan.xml" />
+    <EmbeddedResource Include="Definitions\AggregateTests\GroupedQueryReturnsZeroRowsOnEmptyInput.xml" />
+    <EmbeddedResource Include="Definitions\AggregateTests\UngroupedQueryReturnsRowOnNonEmptyInput.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\NQuery.snk">
+      <Link>NQuery.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\Etc\Sample Data\JoinTables.xml">
+      <Link>JoinTables.xml</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\Etc\Sample Data\Northwind.xml">
+      <Link>Northwind.xml</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\JoinTests\FullOuterLoopJoinWithEmptyInner.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\LeftOuterLoopJoinWithEmptyInnerAndCalculation.xml" />
+    <EmbeddedResource Include="Definitions\SubqueryTests\NotExistsWithOr.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\SubqueryTests\SingleRowSubselectInSelect.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\SubqueryTests\SingleRowSubselectInOrderBy.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\JoinTests\FullOuterLoopJoin3.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\FullOuterLoopJoin4.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\SubqueryTests\SingleRowSubselectInSelectWithOtherExpressions.xml" />
+    <EmbeddedResource Include="Definitions\SubqueryTests\SingleRowSubselectInWhere.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\SubqueryTests\SingleRowSubselectInDerivedTableInWhere.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\OrderByTests\OrderByWithTop3.xml" />
+    <EmbeddedResource Include="Definitions\OrderByTests\OrderByWithTop3WithTies.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\JoinTests\LeftOuterJoinWithExists.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\JoinTests\InnerJoinWithExists.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\RightOuterJoinWithExists.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem7293.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem7294.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem7297.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem7301.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem7305.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\ValidatorTests\EnsureOuterReferencesExcludedFromRuleSelectExpressionNotAggregatedAndNoGroupBy.xml" />
+    <EmbeddedResource Include="Definitions\ValidatorTests\EnsureOuterReferencesExcludedFromRuleSelectExpressionNotAggregatedOrGrouped.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem7296.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\SubqueryTests\ExistsInWhen.xml" />
+    <EmbeddedResource Include="Definitions\SubqueryTests\NotExistsInWhen.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\SubqueryTests\ExistsInSelectFromDerivedTable.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\SubqueryTests\ExistsInCasePartiallyExecutedScalarSubqueries.xml" />
+    <EmbeddedResource Include="Definitions\SubqueryTests\ExistsInNestedCaseWithNeverExecutedScalarSubqueries.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem8982.xml" />
+    <EmbeddedResource Include="Definitions\SubqueryTests\SingleRowSubselectInCaseInput.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem7303_1.xml" />
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem7303_2.xml" />
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem7303_3.xml" />
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem7303_4.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\OrderByTests\DistinctSortIsAfterComputeScalarWithOrderByDesc.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\JoinTests\FilterNotMergedWithJoinHavingPassthruPredicate.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem7288.xml" />
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem7302.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem8980.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem7293_1.xml" />
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem7293_2.xml" />
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem7293_3.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem7290.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem7325_1.xml" />
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem7325_2.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem9293.xml" />
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem9294.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\AggregateTests\AggregateContainingDirectSingleRowSubselect.xml" />
+    <EmbeddedResource Include="Definitions\AggregateTests\AggregateContainingDirectSingleRowSubselectWithAggregate.xml" />
+    <EmbeddedResource Include="Definitions\AggregateTests\AggregateContainingIndirectAllSubquery.xml" />
+    <EmbeddedResource Include="Definitions\AggregateTests\AggregateContainingIndirectAnySubquery.xml" />
+    <EmbeddedResource Include="Definitions\AggregateTests\AggregateContainingIndirectExistsSubquery.xml" />
+    <EmbeddedResource Include="Definitions\AggregateTests\AggregateContainingIndirectSingleRowSubselect.xml" />
+    <EmbeddedResource Include="Definitions\AggregateTests\AggregateContainingIndirectSingleRowSubselectWithAggregate.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem9417.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\Etc\Sample Data\AdventureWorks Cinema.xml">
+      <Link>AdventureWorks Cinema.xml</Link>
+    </Content>
+    <EmbeddedResource Include="Definitions\CteTests\JoinBetweenSameCte.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\OrderByInvalidInSubqueryUnlessTopIsAlsoSpecified5.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\OrderByInvalidInSubqueryUnlessTopIsAlsoSpecified6.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\AggregateContainsColumnsFromDifferentQueries.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\AggregateDoesNotSupportType.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\AggregateInGroupBy.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\AggregateInOn.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\AggregateInWhere.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\AsteriskModifierNotAllowed.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\CannotLoadTypeAssembly.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\ConstantExpressionInOrderBy.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\DuplicateTableRefInFrom1.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\DuplicateTableRefInFrom2.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\DuplicateTableRefInFrom3.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\DuplicateTableRefInFrom4.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\GroupByItemDoesNotReferenceAnyColumns.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\HavingClauseMustEvaluateToBool.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\HavingExpressionNotAggregatedOrGrouped1.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\HavingExpressionNotAggregatedOrGrouped2.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\InvalidDataTypeInGroupBy.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\InvalidDataTypeInOrderBy.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\InvalidDataTypeInSelectDistinct.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\InvalidDataTypeInUnion.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\InvalidHex.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\InvalidOperatorForAllAny1.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\InvalidOperatorForAllAny2.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\InvalidOperatorForAllAny3.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\MustSpecifyTableToSelectFrom.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\OrderByColumnPositionIsOutOfRange.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\OrderByExpressionNotAggregatedAndNoGroupBy.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\OrderByExpressionNotAggregatedOrGrouped.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\SelectExpressionNotAggregatedAndNoGroupBy.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\SelectExpressionNotAggregatedOrGrouped.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\TableReferenceExpected1.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\TableReferenceExpected2.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\TableRefInaccessible1.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\TableRefInaccessible2.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\TooManyExpressionsInSelectListOfSubquery1.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\TooManyExpressionsInSelectListOfSubquery2.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\TooManyExpressionsInSelectListOfSubquery3.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\TopWithTiesRequiresOrderBy.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\UndeclaredType.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\WhenMustEvaluateToBoolIfCaseInputIsOmitted.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\WhereClauseMustEvaluateToBool.xml" />
+    <EmbeddedResource Include="Definitions\SubqueryTests\SingleRowSubselectReturnsMoreThanOneRow.xml" />
+    <EmbeddedResource Include="Definitions\CteTests\SimpleRecursiveExceedingMaxRecursion.xml" />
+    <EmbeddedResource Include="Definitions\CteTests\AdvancedRecursive.xml" />
+    <EmbeddedResource Include="Definitions\CteTests\ComplexRecursiveWithMultipleAnchors.xml" />
+    <EmbeddedResource Include="Definitions\CteTests\ComplexRecursiveWithMultipleAnchorsAndRecursiveMembers.xml" />
+    <EmbeddedResource Include="Definitions\CteTests\ComplexRecursiveWithMultipleRecursiveMembers.xml" />
+    <EmbeddedResource Include="Definitions\CteTests\ComplexRecursiveWithUnionAnchor.xml" />
+    <EmbeddedResource Include="Definitions\CteTests\NonRecursive.xml" />
+    <EmbeddedResource Include="Definitions\CteTests\NonRecursiveMultipleRefs.xml" />
+    <EmbeddedResource Include="Definitions\CteTests\NonRecursiveNested.xml" />
+    <EmbeddedResource Include="Definitions\CteTests\SimpleRecursive.xml" />
+    <EmbeddedResource Include="Definitions\CteTests\SimpleRecursiveImplicitJoin.xml" />
+    <EmbeddedResource Include="Definitions\CteTests\SimpleRecursiveMultipleRecursiveMembers.xml" />
+    <EmbeddedResource Include="Definitions\CteTests\SimpleRecursiveSingleRowSubselect.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\CteContainsGroupByHavingOrAggregate.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\CteHasDuplicateTableName.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\CteHasDuplicateColumnName.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\CteHasFewerColumnsThanSpecified.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\CteHasMoreColumnsThanSpecified.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\CteHasTypeMismatchBetweenAnchorAndRecursivePart.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\CteMissingColumnName.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\CteUnionAllColumnCountMismatch.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\CteContainsDistinct.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\CteContainsMultipleRecursiveReferences.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\CteContainsOuterJoin.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\CteContainsRecursiveRefenceInSubquery.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\CteContainsTop.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\CteContainsUnexpectedAnchorMember.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\CteContainsUnion.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\CteDoesNotHaveAnchorMember.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\CteDoesNotHaveUnionAll.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\IllegalInputCharacter.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\InvalidBinary.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\InvalidDate.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\InvalidInteger.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\InvalidOctal.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\InvalidTypeReference.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\NoColumnAliasSpecifiedForDerivedTable.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\NumberTooLarge.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\OrderByInvalidInSubqueryUnlessTopIsAlsoSpecified1.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\OrderByInvalidInSubqueryUnlessTopIsAlsoSpecified2.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\OrderByInvalidInSubqueryUnlessTopIsAlsoSpecified3.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\OrderByInvalidInSubqueryUnlessTopIsAlsoSpecified4.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\OrderByItemsMustBeInSelectListIfDistinctSpecified.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\OrderByItemsMustBeInSelectListIfUnionSpecified.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\RowReferenceToDerivedTableIsInvalid.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\SimpleExpressionExpected.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\TokenExpected.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\UndeclaredColumn.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\UndeclaredFunction.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\UndeclaredMethod.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\UndeclaredParameter.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\UndeclaredProperty.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\UndeclaredTable.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\UnterminatedComment.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\UnterminatedDate.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\UnterminatedParenthesizedIdentifier.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\UnterminatedQuotedIdentifier.xml" />
+    <EmbeddedResource Include="Definitions\ErrorTests\UnterminatedString.xml" />
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem13555.xml" />
+    <EmbeddedResource Include="Definitions\IdentifierTests\LexerAcceptsAllTypesOfIdentifiers.xml" />
+    <EmbeddedResource Include="Definitions\OrderByTests\OrderByWithUnionAllAndInvalidAggregate.xml" />
+    <EmbeddedResource Include="Definitions\OrderByTests\OrderByWithUnionAllAndValidAggregate.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\FullOuterHashJoin4.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\LeftOuterHashJoin3.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\RightOuterHashJoin4.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\RightOuterHashJoin3.xml" />
+    <EmbeddedResource Include="Definitions\RegressionTests\WorkItem11721.xml" />
+    <EmbeddedResource Include="Definitions\JoinTests\FullOuterHashJoin3.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

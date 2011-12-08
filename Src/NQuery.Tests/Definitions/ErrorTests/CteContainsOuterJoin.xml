@@ -1,0 +1,21 @@
+<test>
+  <sql>WITH EmployeeHierarchy AS
+(
+	   -- Base case
+	   SELECT	EmployeeID
+	   FROM		Employees
+	   WHERE	ReportsTo IS NULL
+
+	   UNION ALL
+
+	   -- Recursive step
+	   SELECT	e1.EmployeeID
+	   FROM		Employees e1
+					FULL JOIN EmployeeHierarchy eh ON e1.ReportsTo = eh.EmployeeID
+)
+SELECT	*
+FROM	EmployeeHierarchy</sql>
+  <expectedErrors>
+    <expectedError id="CteContainsOuterJoin" text="Outer join is not allowed in the recursive part of a recursive common table expression 'EmployeeHierarchy'." />
+  </expectedErrors>
+</test>

@@ -1,0 +1,25 @@
+<test>
+  <sql>WITH EmployeeHierarchy AS
+(
+	   -- Base case
+	   SELECT	EmployeeID
+	   FROM		Employees
+	   WHERE	ReportsTo IS NULL
+
+		-- Recursive step
+	   UNION ALL
+	   (
+			SELECT	e.EmployeeId
+			FROM	Employees e
+			UNION
+			SELECT	e.EmployeeId
+			FROM		EmployeeHierarchy eh 
+							INNER JOIN Employees e ON e.ReportsTo = eh.EmployeeID
+	   )
+)
+SELECT	*
+FROM	EmployeeHierarchy</sql>
+  <expectedErrors>
+    <expectedError id="CteContainsUnion" text="UNION operator is not allowed in the recursive part of a recursive common table expression 'EmployeeHierarchy'." />
+  </expectedErrors>
+</test>

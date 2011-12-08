@@ -1,0 +1,724 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4B5ABD2A-DE15-4F4F-8417-CE4450F7004E}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>NQuery</AssemblyName>
+    <AssemblyOriginatorKeyFile>..\NQuery.snk</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NQuery</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <SccAuxPath>SAK</SccAuxPath>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;ALLOW_DEBUG_ERROR</DefineConstants>
+    <DocumentationFile>bin\Release\NQuery.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>1591</NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Code Analysis|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Code Analysis\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="API\CompilationFailedEventArgs.cs" />
+    <Compile Include="API\Show Plan\ShowPlanOperator.cs" />
+    <Compile Include="API\Show Plan\ShowPlanProperty.cs" />
+    <Compile Include="API\Show Plan\ShowPlanPropertyCollection.cs" />
+    <Compile Include="AST\Algebra\StackedTableSpoolAlgebraNode.cs" />
+    <Compile Include="AST\Algebra\StackedTableSpoolRefAlgebraNode.cs" />
+    <Compile Include="AST\Query\CommonTableExpression.cs" />
+    <Compile Include="AST\Query\CommonTableExpressionQuery.cs" />
+    <Compile Include="Binding\Property\PropertyBindingCollection.cs" />
+    <Compile Include="Binding\Table\CommonTableBinding.cs" />
+    <Compile Include="Binding\Table\ColumnBindingCollection.cs" />
+    <Compile Include="Compilation\CommonTableExpressionRecursiveMemberChecker.cs" />
+    <Compile Include="Execution Plan\TableSpoolIterator.cs" />
+    <Compile Include="Execution Plan\TableSpoolRefIterator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Algebra\AggregateAlgebraNode.cs" />
+    <Compile Include="AST\Algebra\HashMatchAlgebraNode.cs" />
+    <Compile Include="AST\Expression\AggregateExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Algebra\AlgebraNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\AllAnySubselect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Algebra\AssertAlgebraNode.cs" />
+    <Compile Include="AST\AstElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\AstNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\AstNodeType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\BetweenExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\BinaryExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\JoinType.cs" />
+    <Compile Include="AST\Query\BinaryQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Query\BinaryQueryOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\CaseExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\CastExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\CoalesceExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\ColumnExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Algebra\IndexSpoolAlgebraNode.cs" />
+    <Compile Include="AST\Query\SelectColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Algebra\ComputeScalarAlgebraNode.cs" />
+    <Compile Include="AST\Algebra\ConcatAlgebraNode.cs" />
+    <Compile Include="AST\Expression\ConstantExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Algebra\ConstantScanAlgebraNode.cs" />
+    <Compile Include="AST\Query\DerivedTableReference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\ExistsSubselect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Algebra\FilterAlgebraNode.cs" />
+    <Compile Include="AST\Algebra\JoinAlgebraNode.cs" />
+    <Compile Include="AST\Algebra\NullScanAlgebraNode.cs" />
+    <Compile Include="AST\Algebra\ResultAlgebraNode.cs" />
+    <Compile Include="AST\Algebra\SortAlgebraNode.cs" />
+    <Compile Include="AST\Algebra\TableAlgebraNode.cs" />
+    <Compile Include="AST\Algebra\TopAlgebraNode.cs" />
+    <Compile Include="AST\Algebra\UnaryAlgebraNode.cs" />
+    <Compile Include="AST\SortOrder.cs" />
+    <Compile Include="Binding\Aggregate\AggregateBinding.cs" />
+    <Compile Include="Binding\Aggregate\AverageAggregateBinding.cs" />
+    <Compile Include="Binding\Aggregate\ConcatAggregation.cs" />
+    <Compile Include="Binding\Aggregate\CountAggregateBinding.cs" />
+    <Compile Include="Binding\Aggregate\FirstAggregateBinding.cs" />
+    <Compile Include="Binding\Aggregate\LastAggregateBinding.cs" />
+    <Compile Include="Binding\Aggregate\MaxAggregateBinding.cs" />
+    <Compile Include="Binding\Aggregate\MinAggregateBinding.cs" />
+    <Compile Include="Binding\Aggregate\StdDevAggregateBinding.cs" />
+    <Compile Include="Binding\Aggregate\SumAggregateBinding.cs" />
+    <Compile Include="Binding\Aggregate\VarAggregateBinding.cs" />
+    <Compile Include="Binding\Binding.cs" />
+    <Compile Include="Binding\BindingCategory.cs" />
+    <Compile Include="Binding\DataRowPropertyProvider.cs" />
+    <Compile Include="Binding\DictionaryPropertyProvider.cs" />
+    <Compile Include="Binding\IMethodProvider.cs" />
+    <Compile Include="Binding\Invocable\FunctionBinding.cs" />
+    <Compile Include="Binding\Invocable\InvocableBinding.cs" />
+    <Compile Include="Binding\Invocable\InvokeParameter.cs" />
+    <Compile Include="Binding\Invocable\MethodBinding.cs" />
+    <Compile Include="Binding\Invocable\ReflectionFunctionBinding.cs" />
+    <Compile Include="Binding\Invocable\ReflectionMethodBinding.cs" />
+    <Compile Include="Binding\Invocable\ReflectionParameter.cs" />
+    <Compile Include="Binding\IPropertyProvider.cs" />
+    <Compile Include="Binding\NullProviders.cs" />
+    <Compile Include="Binding\Property\ConstantBinding.cs" />
+    <Compile Include="Binding\Property\DataColumnPropertyBinding.cs" />
+    <Compile Include="Binding\Property\KeyPropertyBinding.cs" />
+    <Compile Include="Binding\Property\ParameterBinding.cs" />
+    <Compile Include="Binding\Property\PropertyBinding.cs" />
+    <Compile Include="Binding\Property\PropertyColumnBinding.cs" />
+    <Compile Include="Binding\Property\ReflectionFieldBinding.cs" />
+    <Compile Include="Binding\Property\ReflectionPropertyBinding.cs" />
+    <Compile Include="Binding\ReflectionProvider.cs" />
+    <Compile Include="Binding\Table\ColumnBinding.cs" />
+    <Compile Include="Binding\Table\ColumnRefBinding.cs" />
+    <Compile Include="Binding\Table\DataColumnBinding.cs" />
+    <Compile Include="Binding\Table\DataTableBinding.cs" />
+    <Compile Include="Binding\Table\EnumerableTableBinding.cs" />
+    <Compile Include="Binding\Table\RowColumnBinding.cs" />
+    <Compile Include="Binding\Table\TableBinding.cs" />
+    <Compile Include="Binding\Table\TableRefBinding.cs" />
+    <Compile Include="Binding\Table\TableRelation.cs" />
+    <Compile Include="AST\Algebra\AggregatedValueDefinition.cs" />
+    <Compile Include="AST\Algebra\ColumnValueDefinition.cs" />
+    <Compile Include="AST\Algebra\ComputedValueDefinition.cs" />
+    <Compile Include="Binding\Table\DerivedColumnBinding.cs" />
+    <Compile Include="Binding\Table\DerivedTableBinding.cs" />
+    <Compile Include="Compilation\ExpressionBuilder.cs" />
+    <Compile Include="AST\Expression\ExpressionNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compilation\AstUtil.cs" />
+    <Compile Include="AST\Expression\FunctionInvocationExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Identifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\InExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\IsNullExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Query\JoinedTableReference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\LiteralExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\MethodInvocationExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\NamedConstantExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Query\NamedTableReference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\NameExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\NullIfExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\OperatorExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Query\OrderByColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\ParameterExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\PropertyAccessExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Query\QueryNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Query\SelectQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\SingleRowSubselect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Query\SortedQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\SubselectExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Query\TableReference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Query\TopClause.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\TypeReference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Expression\UnaryExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Visitor\Comparer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Visitor\SourceGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Visitor\SqlTextWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Visitor\StandardVisitor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AST\Visitor\XmlProducer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code Assistance\CodeAssistanceContextProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code Assistance\CompletionParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code Assistance\FunctionOrAggregateParameterInfoContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code Assistance\GlobalScopeMemberContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code Assistance\ICodeAssistanceContextProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code Assistance\IMemberCompletionAcceptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code Assistance\IMemberCompletionContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code Assistance\IParameterInfoAcceptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code Assistance\IParameterInfoContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code Assistance\JoinTableMemberContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code Assistance\MemberCompletionContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code Assistance\MemberContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code Assistance\MethodParameterInfoContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code Assistance\NullMemberCompletionContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code Assistance\NullParameterInfoContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code Assistance\ParameterInfoContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code Assistance\TableContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code Assistance\TableRelationMemberContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code Assistance\TokenStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="API\CompilationException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compilation\AggregateBinder.cs" />
+    <Compile Include="Compilation\ColumnAndAggregateExpressionReplacer.cs" />
+    <Compile Include="Compilation\CompiledExpressionDelegate.cs" />
+    <Compile Include="Compilation\ComputationPusher.cs" />
+    <Compile Include="Compilation\ExpressionCompiler.cs" />
+    <Compile Include="Compilation\FullOuterJoinExpander.cs" />
+    <Compile Include="Compilation\ILEmitContext.cs" />
+    <Compile Include="Compilation\ILParameterDeclaration.cs" />
+    <Compile Include="Compilation\ILParameterRegisterer.cs" />
+    <Compile Include="Compilation\ILTranslator.cs" />
+    <Compile Include="Compilation\JoinOrderOptimizer.cs" />
+    <Compile Include="Compilation\OuterJoinRemover.cs" />
+    <Compile Include="Compilation\PhysicalJoinOperationChooser.cs" />
+    <Compile Include="Compilation\RowBufferCalculator.cs" />
+    <Compile Include="Compilation\RowBufferEntryInliner.cs" />
+    <Compile Include="Compilation\RowBufferEntryNamer.cs" />
+    <Compile Include="AST\Algebra\UnitedValueDefinition.cs" />
+    <Compile Include="AST\Algebra\ValueDefinition.cs" />
+    <Compile Include="Compilation\SubqueryExpander.cs" />
+    <Compile Include="Execution Plan\ProbedAntiSemiJoinNestedLoopsIterator.cs" />
+    <Compile Include="Execution Plan\ProbedSemiJoinNestedLoopsIterator.cs" />
+    <Compile Include="Execution Plan\RuntimeAggregateValueOutput.cs" />
+    <Compile Include="Execution Plan\RuntimeColumnValueOutput.cs" />
+    <Compile Include="Execution Plan\RuntimeComputedValueOutput.cs" />
+    <Compile Include="Execution Plan\RuntimeExpression.cs" />
+    <Compile Include="Compilation\SelectionPusher.cs" />
+    <Compile Include="Compilation\Algebrizer.cs" />
+    <Compile Include="Compilation\AtLeastOneRowChecker.cs" />
+    <Compile Include="Compilation\AtMostOneRowChecker.cs" />
+    <Compile Include="Compilation\AtMostOneRowReorderer.cs" />
+    <Compile Include="Compilation\Decorrelator.cs" />
+    <Compile Include="Compilation\DefinedValuesFinder.cs" />
+    <Compile Include="Compilation\JoinLinearizer.cs" />
+    <Compile Include="Compilation\LogicalOperator.cs" />
+    <Compile Include="Compilation\MetaInfo.cs" />
+    <Compile Include="Compilation\NullScanOptimizer.cs" />
+    <Compile Include="Compilation\OuterJoinReorderer.cs" />
+    <Compile Include="Compilation\OuterReferenceLabeler.cs" />
+    <Compile Include="Compilation\OutputListGenerator.cs" />
+    <Compile Include="Compilation\OutputListOptimizer.cs" />
+    <Compile Include="Compilation\RowBufferEntry.cs" />
+    <Compile Include="Compilation\RowBufferEntryExpression.cs" />
+    <Compile Include="Compilation\SemiJoinSimplifier.cs" />
+    <Compile Include="Compilation\ShowPlanBuilder.cs" />
+    <Compile Include="Compilation\SpoolInserter.cs" />
+    <Compile Include="Compilation\OperatorTypeResolver.cs" />
+    <Compile Include="Compilation\PartExtractor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compilation\Binder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compilation\CastingOperatorType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compilation\Compiler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compilation\ConstantFolder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compilation\MetaInfoFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compilation\Join.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compilation\JoinCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compilation\JoinOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compilation\JoinOrder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compilation\JoinOrderGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compilation\Normalizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compilation\NullRejectionChecker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compilation\OperatorMethodCache.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compilation\PrimitiveType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compilation\QueryScope.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compilation\Resolver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compilation\TableDeclarationFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compilation\UngroupedAndUnaggregatedColumnFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Compilation\Validator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="API\Context\AggregateCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="API\Context\BindingCollection.cs" />
+    <Compile Include="API\Context\ConstantCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="API\Context\DataContext.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="API\Context\FunctionCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="API\Context\MetadataContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="API\Context\ParameterCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="API\Context\TableRelationCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="API\Context\Scope.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="API\Context\TableCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Error\CompilationError.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Error\CompilationErrorCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Error\ErrorCollector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Error\ErrorId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Error\ErrorProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Error\ExceptionErrorProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Error\FormattingHelpers.cs" />
+    <Compile Include="Error\IErrorReporter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="API\Evaluatable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\ExceptionBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Execution Plan\AssertIterator.cs" />
+    <Compile Include="Execution Plan\BinaryIterator.cs" />
+    <Compile Include="Execution Plan\ComputeScalarIterator.cs" />
+    <Compile Include="Execution Plan\ConcatenationIterator.cs" />
+    <Compile Include="Execution Plan\ConstantIterator.cs" />
+    <Compile Include="Execution Plan\DistinctSortIterator.cs" />
+    <Compile Include="Execution Plan\FilterIterator.cs" />
+    <Compile Include="Execution Plan\HashMatchIterator.cs" />
+    <Compile Include="Execution Plan\IndexSpoolIterator.cs" />
+    <Compile Include="Execution Plan\InnerNestedLoopsIterator.cs" />
+    <Compile Include="Execution Plan\Iterator.cs" />
+    <Compile Include="Execution Plan\IteratorCreator.cs" />
+    <Compile Include="Execution Plan\IteratorInput.cs" />
+    <Compile Include="Execution Plan\IteratorOutput.cs" />
+    <Compile Include="Execution Plan\LeftAntiSemiNestedLoopsIterator.cs" />
+    <Compile Include="Execution Plan\LeftOuterNestedLoopsIterator.cs" />
+    <Compile Include="Execution Plan\LeftSemiNestedLoopsIterator.cs" />
+    <Compile Include="Execution Plan\NestedLoopsIterator.cs" />
+    <Compile Include="Execution Plan\NullIterator.cs" />
+    <Compile Include="Execution Plan\ResultIterator.cs" />
+    <Compile Include="Execution Plan\RuntimeValueOutput.cs" />
+    <Compile Include="Execution Plan\SortIterator.cs" />
+    <Compile Include="Execution Plan\StatisticsIterator.cs" />
+    <Compile Include="Execution Plan\StreamAggregateIterator.cs" />
+    <Compile Include="Execution Plan\TableIterator.cs" />
+    <Compile Include="Execution Plan\TopIterator.cs" />
+    <Compile Include="Execution Plan\TopWithTiesIterator.cs" />
+    <Compile Include="Execution Plan\UnaryIterator.cs" />
+    <Compile Include="API\Show Plan\ShowPlan.cs" />
+    <Compile Include="API\Show Plan\ShowPlanElement.cs" />
+    <Compile Include="API\Show Plan\ShowPlanElementCollection.cs" />
+    <Compile Include="API\Expression.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helpers\ArrayHelpers.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="API\NQueryException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Parsing\BinaryOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Parsing\CharReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Parsing\Lexer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Parsing\Operator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Parsing\Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Parsing\SourceLocation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Parsing\SourceRange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Parsing\SourceRangeRecorder.cs" />
+    <Compile Include="Parsing\Token.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Parsing\TokenId.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Parsing\TokenInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Parsing\UnaryOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="API\Query.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="API\QueryDataReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="API\RuntimeException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Runtime\AverageAggregator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Runtime\BuiltInConversions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Runtime\BuiltInFunctions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Runtime\BuiltInOperators.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Runtime\ConcatAggregator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Runtime\CountAggregator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Runtime\FirstAggregator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Runtime\FunctionBindingAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Runtime\IAggregator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Runtime\LastAggregator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Runtime\MinMaxAggregator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Runtime\NullHelper.cs" />
+    <Compile Include="Runtime\Soundex.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Runtime\SumAggregator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="API\Context\TypeRegistry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Runtime\VarAndStdDevAggregator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="%28Diagrams%29\AST\Algebra.cd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="%28Diagrams%29\Code Assistance\Acceptors.cd" />
+    <None Include="%28Diagrams%29\Code Assistance\Overview.cd" />
+    <None Include="%28Diagrams%29\Custom Properties\Properties.cd" />
+    <None Include="%28Diagrams%29\Overview.cd" />
+    <None Include="%28Diagrams%29\Row Buffering\Overview.cd" />
+    <None Include="..\NQuery.snk">
+      <Link>NQuery.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\CodeAnalysisDictionary.xml">
+      <Link>CodeAnalysisDictionary.xml</Link>
+    </CodeAnalysisDictionary>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

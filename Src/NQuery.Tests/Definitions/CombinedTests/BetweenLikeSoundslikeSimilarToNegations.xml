@@ -1,0 +1,171 @@
+<test>
+  <sql>SELECT	2 BETWEEN 1 AND 3 Between1,
+		2 NOT BETWEEN 1 AND 3 Between2,
+		NOT(2 BETWEEN 1 AND 3) Between3,
+		NOT(2 NOT BETWEEN 1 AND 3) Between4,
+
+		'Test' LIKE '%' Like1,
+		'Test' NOT LIKE '%' Like2,
+		NOT('Test' LIKE '%') Like3,
+		NOT('Test' NOT LIKE '%') Like4,
+		
+		'Meyer' SOUNDSLIKE 'Maier' Soundslike1,
+		'Meyer' NOT SOUNDSLIKE 'Maier' Soundslike2,
+		NOT('Meyer' SOUNDSLIKE 'Maier') Soundslike3,
+		NOT('Meyer' NOT SOUNDSLIKE 'Maier') Soundslike4,
+		
+		'a = b' SIMILAR TO '[a-z] = [a-z]' SimilarTo1,
+		'a = b' NOT SIMILAR TO '[a-z] = [a-z]' SimilarTo2,
+		NOT('a = b' SIMILAR TO '[a-z] = [a-z]') SimilarTo3,
+		NOT('a = b' NOT SIMILAR TO '[a-z] = [a-z]') SimilarTo4
+</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Between1" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Between2" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Between3" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Between4" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Like1" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Like2" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Like3" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Like4" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Soundslike1" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Soundslike2" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Soundslike3" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Soundslike4" type="xs:boolean" minOccurs="0" />
+                <xs:element name="SimilarTo1" type="xs:boolean" minOccurs="0" />
+                <xs:element name="SimilarTo2" type="xs:boolean" minOccurs="0" />
+                <xs:element name="SimilarTo3" type="xs:boolean" minOccurs="0" />
+                <xs:element name="SimilarTo4" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <Between1>true</Between1>
+    <Between2>false</Between2>
+    <Between3>false</Between3>
+    <Between4>true</Between4>
+    <Like1>true</Like1>
+    <Like2>false</Like2>
+    <Like3>false</Like3>
+    <Like4>true</Like4>
+    <Soundslike1>true</Soundslike1>
+    <Soundslike2>false</Soundslike2>
+    <Soundslike3>false</Soundslike3>
+    <Soundslike4>true</Soundslike4>
+    <SimilarTo1>true</SimilarTo1>
+    <SimilarTo2>false</SimilarTo2>
+    <SimilarTo3>false</SimilarTo3>
+    <SimilarTo4>true</SimilarTo4>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[00]" value="Expr1000 AS Between1" />
+          <property name="Output List.[00].Column" value="Expr1000" />
+          <property name="Output List.[00].DataType" value="Boolean" />
+          <property name="Output List.[00].Output Name" value="Between1" />
+          <property name="Output List.[01]" value="Expr1001 AS Between2" />
+          <property name="Output List.[01].Column" value="Expr1001" />
+          <property name="Output List.[01].DataType" value="Boolean" />
+          <property name="Output List.[01].Output Name" value="Between2" />
+          <property name="Output List.[02]" value="Expr1001 AS Between3" />
+          <property name="Output List.[02].Column" value="Expr1001" />
+          <property name="Output List.[02].DataType" value="Boolean" />
+          <property name="Output List.[02].Output Name" value="Between3" />
+          <property name="Output List.[03]" value="Expr1000 AS Between4" />
+          <property name="Output List.[03].Column" value="Expr1000" />
+          <property name="Output List.[03].DataType" value="Boolean" />
+          <property name="Output List.[03].Output Name" value="Between4" />
+          <property name="Output List.[04]" value="Expr1000 AS Like1" />
+          <property name="Output List.[04].Column" value="Expr1000" />
+          <property name="Output List.[04].DataType" value="Boolean" />
+          <property name="Output List.[04].Output Name" value="Like1" />
+          <property name="Output List.[05]" value="Expr1001 AS Like2" />
+          <property name="Output List.[05].Column" value="Expr1001" />
+          <property name="Output List.[05].DataType" value="Boolean" />
+          <property name="Output List.[05].Output Name" value="Like2" />
+          <property name="Output List.[06]" value="Expr1001 AS Like3" />
+          <property name="Output List.[06].Column" value="Expr1001" />
+          <property name="Output List.[06].DataType" value="Boolean" />
+          <property name="Output List.[06].Output Name" value="Like3" />
+          <property name="Output List.[07]" value="Expr1000 AS Like4" />
+          <property name="Output List.[07].Column" value="Expr1000" />
+          <property name="Output List.[07].DataType" value="Boolean" />
+          <property name="Output List.[07].Output Name" value="Like4" />
+          <property name="Output List.[08]" value="Expr1000 AS Soundslike1" />
+          <property name="Output List.[08].Column" value="Expr1000" />
+          <property name="Output List.[08].DataType" value="Boolean" />
+          <property name="Output List.[08].Output Name" value="Soundslike1" />
+          <property name="Output List.[09]" value="Expr1001 AS Soundslike2" />
+          <property name="Output List.[09].Column" value="Expr1001" />
+          <property name="Output List.[09].DataType" value="Boolean" />
+          <property name="Output List.[09].Output Name" value="Soundslike2" />
+          <property name="Output List.[10]" value="Expr1001 AS Soundslike3" />
+          <property name="Output List.[10].Column" value="Expr1001" />
+          <property name="Output List.[10].DataType" value="Boolean" />
+          <property name="Output List.[10].Output Name" value="Soundslike3" />
+          <property name="Output List.[11]" value="Expr1000 AS Soundslike4" />
+          <property name="Output List.[11].Column" value="Expr1000" />
+          <property name="Output List.[11].DataType" value="Boolean" />
+          <property name="Output List.[11].Output Name" value="Soundslike4" />
+          <property name="Output List.[12]" value="Expr1000 AS SimilarTo1" />
+          <property name="Output List.[12].Column" value="Expr1000" />
+          <property name="Output List.[12].DataType" value="Boolean" />
+          <property name="Output List.[12].Output Name" value="SimilarTo1" />
+          <property name="Output List.[13]" value="Expr1001 AS SimilarTo2" />
+          <property name="Output List.[13].Column" value="Expr1001" />
+          <property name="Output List.[13].DataType" value="Boolean" />
+          <property name="Output List.[13].Output Name" value="SimilarTo2" />
+          <property name="Output List.[14]" value="Expr1001 AS SimilarTo3" />
+          <property name="Output List.[14].Column" value="Expr1001" />
+          <property name="Output List.[14].DataType" value="Boolean" />
+          <property name="Output List.[14].Output Name" value="SimilarTo3" />
+          <property name="Output List.[15]" value="Expr1000 AS SimilarTo4" />
+          <property name="Output List.[15].Column" value="Expr1000" />
+          <property name="Output List.[15].DataType" value="Boolean" />
+          <property name="Output List.[15].Output Name" value="SimilarTo4" />
+        </properties>
+        <input>
+          <element operator="ConstantScan">
+            <properties>
+              <property name="Empty" value="False" />
+              <property name="Output List.[0]" value="Expr1000" />
+              <property name="Output List.[0].Column" value="Expr1000" />
+              <property name="Output List.[0].DataType" value="Boolean" />
+              <property name="Output List.[1]" value="Expr1001" />
+              <property name="Output List.[1].Column" value="Expr1001" />
+              <property name="Output List.[1].DataType" value="Boolean" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="1" />
+              <property name="Statistics.Average Row Count" value="1" />
+              <property name="Defined Values.[0]" value="Expr1000 = TRUE" />
+              <property name="Defined Values.[0].Target" value="Expr1000" />
+              <property name="Defined Values.[0].DataType" value="Boolean" />
+              <property name="Defined Values.[0].Source" value="TRUE" />
+              <property name="Defined Values.[1]" value="Expr1001 = FALSE" />
+              <property name="Defined Values.[1].Target" value="Expr1001" />
+              <property name="Defined Values.[1].DataType" value="Boolean" />
+              <property name="Defined Values.[1].Source" value="FALSE" />
+            </properties>
+            <input />
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

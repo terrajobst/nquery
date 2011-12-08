@@ -1,0 +1,149 @@
+<test>
+  <sql>SELECT *
+FROM [Order Details] od
+WHERE EXISTS (SELECT COUNT(o.OrderID) FROM Orders o HAVING COUNT(*) &gt;= od.OrderID)
+</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="OrderID" type="xs:int" minOccurs="0" />
+                <xs:element name="ProductID" type="xs:int" minOccurs="0" />
+                <xs:element name="UnitPrice" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Quantity" type="xs:short" minOccurs="0" />
+                <xs:element name="Discount" type="xs:float" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="od.OrderID AS OrderID" />
+          <property name="Output List.[0].Table" value="od" />
+          <property name="Output List.[0].Column" value="OrderID" />
+          <property name="Output List.[0].DataType" value="Int32" />
+          <property name="Output List.[0].Output Name" value="OrderID" />
+          <property name="Output List.[1]" value="od.ProductID AS ProductID" />
+          <property name="Output List.[1].Table" value="od" />
+          <property name="Output List.[1].Column" value="ProductID" />
+          <property name="Output List.[1].DataType" value="Int32" />
+          <property name="Output List.[1].Output Name" value="ProductID" />
+          <property name="Output List.[2]" value="od.UnitPrice AS UnitPrice" />
+          <property name="Output List.[2].Table" value="od" />
+          <property name="Output List.[2].Column" value="UnitPrice" />
+          <property name="Output List.[2].DataType" value="Decimal" />
+          <property name="Output List.[2].Output Name" value="UnitPrice" />
+          <property name="Output List.[3]" value="od.Quantity AS Quantity" />
+          <property name="Output List.[3].Table" value="od" />
+          <property name="Output List.[3].Column" value="Quantity" />
+          <property name="Output List.[3].DataType" value="Int16" />
+          <property name="Output List.[3].Output Name" value="Quantity" />
+          <property name="Output List.[4]" value="od.Discount AS Discount" />
+          <property name="Output List.[4].Table" value="od" />
+          <property name="Output List.[4].Column" value="Discount" />
+          <property name="Output List.[4].DataType" value="Single" />
+          <property name="Output List.[4].Output Name" value="Discount" />
+        </properties>
+        <input>
+          <element operator="NestedLoops">
+            <properties>
+              <property name="Output List.[0]" value="od.OrderID" />
+              <property name="Output List.[0].Table" value="od" />
+              <property name="Output List.[0].Column" value="OrderID" />
+              <property name="Output List.[0].DataType" value="Int32" />
+              <property name="Output List.[1]" value="od.ProductID" />
+              <property name="Output List.[1].Table" value="od" />
+              <property name="Output List.[1].Column" value="ProductID" />
+              <property name="Output List.[1].DataType" value="Int32" />
+              <property name="Output List.[2]" value="od.UnitPrice" />
+              <property name="Output List.[2].Table" value="od" />
+              <property name="Output List.[2].Column" value="UnitPrice" />
+              <property name="Output List.[2].DataType" value="Decimal" />
+              <property name="Output List.[3]" value="od.Quantity" />
+              <property name="Output List.[3].Table" value="od" />
+              <property name="Output List.[3].Column" value="Quantity" />
+              <property name="Output List.[3].DataType" value="Int16" />
+              <property name="Output List.[4]" value="od.Discount" />
+              <property name="Output List.[4].Table" value="od" />
+              <property name="Output List.[4].Column" value="Discount" />
+              <property name="Output List.[4].DataType" value="Single" />
+              <property name="Logical Operator" value="Left Semi Join" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="0" />
+              <property name="Statistics.Average Row Count" value="0" />
+              <property name="Predicate" value="Expr1005 &gt;= od.OrderID" />
+            </properties>
+            <input>
+              <element operator="TableScan">
+                <properties>
+                  <property name="Table" value="Order Details AS od" />
+                  <property name="Output List.[0]" value="od.OrderID" />
+                  <property name="Output List.[0].Table" value="od" />
+                  <property name="Output List.[0].Column" value="OrderID" />
+                  <property name="Output List.[0].DataType" value="Int32" />
+                  <property name="Output List.[1]" value="od.ProductID" />
+                  <property name="Output List.[1].Table" value="od" />
+                  <property name="Output List.[1].Column" value="ProductID" />
+                  <property name="Output List.[1].DataType" value="Int32" />
+                  <property name="Output List.[2]" value="od.UnitPrice" />
+                  <property name="Output List.[2].Table" value="od" />
+                  <property name="Output List.[2].Column" value="UnitPrice" />
+                  <property name="Output List.[2].DataType" value="Decimal" />
+                  <property name="Output List.[3]" value="od.Quantity" />
+                  <property name="Output List.[3].Table" value="od" />
+                  <property name="Output List.[3].Column" value="Quantity" />
+                  <property name="Output List.[3].DataType" value="Int16" />
+                  <property name="Output List.[4]" value="od.Discount" />
+                  <property name="Output List.[4].Table" value="od" />
+                  <property name="Output List.[4].Column" value="Discount" />
+                  <property name="Output List.[4].DataType" value="Single" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="2,155" />
+                  <property name="Statistics.Average Row Count" value="2,155" />
+                </properties>
+                <input />
+              </element>
+              <element operator="StreamAggregate">
+                <properties>
+                  <property name="Output List.[0]" value="Expr1005" />
+                  <property name="Output List.[0].Column" value="Expr1005" />
+                  <property name="Output List.[0].DataType" value="Int32" />
+                  <property name="Statistics.Open Count" value="2,155" />
+                  <property name="Statistics.Row Count" value="2,155" />
+                  <property name="Statistics.Average Row Count" value="1" />
+                  <property name="Defined Values.[0]" value="Expr1005 = COUNT(0)" />
+                  <property name="Defined Values.[0].Target" value="Expr1005" />
+                  <property name="Defined Values.[0].DataType" value="Int32" />
+                  <property name="Defined Values.[0].Source" value="COUNT(0)" />
+                </properties>
+                <input>
+                  <element operator="TableScan">
+                    <properties>
+                      <property name="Table" value="Orders AS o" />
+                      <property name="Statistics.Open Count" value="2,155" />
+                      <property name="Statistics.Row Count" value="1,788,650" />
+                      <property name="Statistics.Average Row Count" value="830" />
+                    </properties>
+                    <input />
+                  </element>
+                </input>
+              </element>
+            </input>
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

@@ -1,0 +1,20 @@
+<test>
+  <sql>WITH EmployeeHierarchy AS
+(
+   -- Base case
+   SELECT	EmployeeID
+   FROM		Employees
+   WHERE	ReportsTo IS NULL
+
+   UNION ALL
+
+   -- Recursive step
+   SELECT	e.EmployeeID
+   FROM		Employees e
+				INNER JOIN EmployeeHierarchy eh ON e.EmployeeID = eh.EmployeeID
+)
+SELECT	*
+FROM	EmployeeHierarchy
+ORDER	BY 1</sql>
+  <expectedRuntimeError>The maximum recursion 100 has been exhausted before statement completion.</expectedRuntimeError>
+</test>

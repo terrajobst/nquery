@@ -1,0 +1,509 @@
+<test>
+  <sql>SELECT  *
+FROM    [Order Details] od
+            INNER JOIN Orders o1 ON o1.OrderId = od.OrderId
+WHERE   (
+            SELECT  OrderID
+            FROM    Orders o2
+            WHERE   o2.OrderID = od.OrderID
+        ) &lt; 10</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="OrderID" type="xs:int" minOccurs="0" />
+                <xs:element name="ProductID" type="xs:int" minOccurs="0" />
+                <xs:element name="UnitPrice" type="xs:decimal" minOccurs="0" />
+                <xs:element name="Quantity" type="xs:short" minOccurs="0" />
+                <xs:element name="Discount" type="xs:float" minOccurs="0" />
+                <xs:element name="OrderID1" msdata:Caption="OrderID" type="xs:int" minOccurs="0" />
+                <xs:element name="CustomerID" type="xs:string" minOccurs="0" />
+                <xs:element name="EmployeeID" type="xs:int" minOccurs="0" />
+                <xs:element name="OrderDate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="RequiredDate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="ShippedDate" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="ShipVia" type="xs:int" minOccurs="0" />
+                <xs:element name="Freight" type="xs:decimal" minOccurs="0" />
+                <xs:element name="ShipName" type="xs:string" minOccurs="0" />
+                <xs:element name="ShipAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="ShipCity" type="xs:string" minOccurs="0" />
+                <xs:element name="ShipRegion" type="xs:string" minOccurs="0" />
+                <xs:element name="ShipPostalCode" type="xs:string" minOccurs="0" />
+                <xs:element name="ShipCountry" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[00]" value="od.OrderID AS OrderID" />
+          <property name="Output List.[00].Table" value="od" />
+          <property name="Output List.[00].Column" value="OrderID" />
+          <property name="Output List.[00].DataType" value="Int32" />
+          <property name="Output List.[00].Output Name" value="OrderID" />
+          <property name="Output List.[01]" value="od.ProductID AS ProductID" />
+          <property name="Output List.[01].Table" value="od" />
+          <property name="Output List.[01].Column" value="ProductID" />
+          <property name="Output List.[01].DataType" value="Int32" />
+          <property name="Output List.[01].Output Name" value="ProductID" />
+          <property name="Output List.[02]" value="od.UnitPrice AS UnitPrice" />
+          <property name="Output List.[02].Table" value="od" />
+          <property name="Output List.[02].Column" value="UnitPrice" />
+          <property name="Output List.[02].DataType" value="Decimal" />
+          <property name="Output List.[02].Output Name" value="UnitPrice" />
+          <property name="Output List.[03]" value="od.Quantity AS Quantity" />
+          <property name="Output List.[03].Table" value="od" />
+          <property name="Output List.[03].Column" value="Quantity" />
+          <property name="Output List.[03].DataType" value="Int16" />
+          <property name="Output List.[03].Output Name" value="Quantity" />
+          <property name="Output List.[04]" value="od.Discount AS Discount" />
+          <property name="Output List.[04].Table" value="od" />
+          <property name="Output List.[04].Column" value="Discount" />
+          <property name="Output List.[04].DataType" value="Single" />
+          <property name="Output List.[04].Output Name" value="Discount" />
+          <property name="Output List.[05]" value="o1.OrderID AS OrderID" />
+          <property name="Output List.[05].Table" value="o1" />
+          <property name="Output List.[05].Column" value="OrderID" />
+          <property name="Output List.[05].DataType" value="Int32" />
+          <property name="Output List.[05].Output Name" value="OrderID" />
+          <property name="Output List.[06]" value="o1.CustomerID AS CustomerID" />
+          <property name="Output List.[06].Table" value="o1" />
+          <property name="Output List.[06].Column" value="CustomerID" />
+          <property name="Output List.[06].DataType" value="String" />
+          <property name="Output List.[06].Output Name" value="CustomerID" />
+          <property name="Output List.[07]" value="o1.EmployeeID AS EmployeeID" />
+          <property name="Output List.[07].Table" value="o1" />
+          <property name="Output List.[07].Column" value="EmployeeID" />
+          <property name="Output List.[07].DataType" value="Int32" />
+          <property name="Output List.[07].Output Name" value="EmployeeID" />
+          <property name="Output List.[08]" value="o1.OrderDate AS OrderDate" />
+          <property name="Output List.[08].Table" value="o1" />
+          <property name="Output List.[08].Column" value="OrderDate" />
+          <property name="Output List.[08].DataType" value="DateTime" />
+          <property name="Output List.[08].Output Name" value="OrderDate" />
+          <property name="Output List.[09]" value="o1.RequiredDate AS RequiredDate" />
+          <property name="Output List.[09].Table" value="o1" />
+          <property name="Output List.[09].Column" value="RequiredDate" />
+          <property name="Output List.[09].DataType" value="DateTime" />
+          <property name="Output List.[09].Output Name" value="RequiredDate" />
+          <property name="Output List.[10]" value="o1.ShippedDate AS ShippedDate" />
+          <property name="Output List.[10].Table" value="o1" />
+          <property name="Output List.[10].Column" value="ShippedDate" />
+          <property name="Output List.[10].DataType" value="DateTime" />
+          <property name="Output List.[10].Output Name" value="ShippedDate" />
+          <property name="Output List.[11]" value="o1.ShipVia AS ShipVia" />
+          <property name="Output List.[11].Table" value="o1" />
+          <property name="Output List.[11].Column" value="ShipVia" />
+          <property name="Output List.[11].DataType" value="Int32" />
+          <property name="Output List.[11].Output Name" value="ShipVia" />
+          <property name="Output List.[12]" value="o1.Freight AS Freight" />
+          <property name="Output List.[12].Table" value="o1" />
+          <property name="Output List.[12].Column" value="Freight" />
+          <property name="Output List.[12].DataType" value="Decimal" />
+          <property name="Output List.[12].Output Name" value="Freight" />
+          <property name="Output List.[13]" value="o1.ShipName AS ShipName" />
+          <property name="Output List.[13].Table" value="o1" />
+          <property name="Output List.[13].Column" value="ShipName" />
+          <property name="Output List.[13].DataType" value="String" />
+          <property name="Output List.[13].Output Name" value="ShipName" />
+          <property name="Output List.[14]" value="o1.ShipAddress AS ShipAddress" />
+          <property name="Output List.[14].Table" value="o1" />
+          <property name="Output List.[14].Column" value="ShipAddress" />
+          <property name="Output List.[14].DataType" value="String" />
+          <property name="Output List.[14].Output Name" value="ShipAddress" />
+          <property name="Output List.[15]" value="o1.ShipCity AS ShipCity" />
+          <property name="Output List.[15].Table" value="o1" />
+          <property name="Output List.[15].Column" value="ShipCity" />
+          <property name="Output List.[15].DataType" value="String" />
+          <property name="Output List.[15].Output Name" value="ShipCity" />
+          <property name="Output List.[16]" value="o1.ShipRegion AS ShipRegion" />
+          <property name="Output List.[16].Table" value="o1" />
+          <property name="Output List.[16].Column" value="ShipRegion" />
+          <property name="Output List.[16].DataType" value="String" />
+          <property name="Output List.[16].Output Name" value="ShipRegion" />
+          <property name="Output List.[17]" value="o1.ShipPostalCode AS ShipPostalCode" />
+          <property name="Output List.[17].Table" value="o1" />
+          <property name="Output List.[17].Column" value="ShipPostalCode" />
+          <property name="Output List.[17].DataType" value="String" />
+          <property name="Output List.[17].Output Name" value="ShipPostalCode" />
+          <property name="Output List.[18]" value="o1.ShipCountry AS ShipCountry" />
+          <property name="Output List.[18].Table" value="o1" />
+          <property name="Output List.[18].Column" value="ShipCountry" />
+          <property name="Output List.[18].DataType" value="String" />
+          <property name="Output List.[18].Output Name" value="ShipCountry" />
+        </properties>
+        <input>
+          <element operator="NestedLoops">
+            <properties>
+              <property name="Output List.[00]" value="od.OrderID" />
+              <property name="Output List.[00].Table" value="od" />
+              <property name="Output List.[00].Column" value="OrderID" />
+              <property name="Output List.[00].DataType" value="Int32" />
+              <property name="Output List.[01]" value="od.ProductID" />
+              <property name="Output List.[01].Table" value="od" />
+              <property name="Output List.[01].Column" value="ProductID" />
+              <property name="Output List.[01].DataType" value="Int32" />
+              <property name="Output List.[02]" value="od.UnitPrice" />
+              <property name="Output List.[02].Table" value="od" />
+              <property name="Output List.[02].Column" value="UnitPrice" />
+              <property name="Output List.[02].DataType" value="Decimal" />
+              <property name="Output List.[03]" value="od.Quantity" />
+              <property name="Output List.[03].Table" value="od" />
+              <property name="Output List.[03].Column" value="Quantity" />
+              <property name="Output List.[03].DataType" value="Int16" />
+              <property name="Output List.[04]" value="od.Discount" />
+              <property name="Output List.[04].Table" value="od" />
+              <property name="Output List.[04].Column" value="Discount" />
+              <property name="Output List.[04].DataType" value="Single" />
+              <property name="Output List.[05]" value="o1.OrderID" />
+              <property name="Output List.[05].Table" value="o1" />
+              <property name="Output List.[05].Column" value="OrderID" />
+              <property name="Output List.[05].DataType" value="Int32" />
+              <property name="Output List.[06]" value="o1.CustomerID" />
+              <property name="Output List.[06].Table" value="o1" />
+              <property name="Output List.[06].Column" value="CustomerID" />
+              <property name="Output List.[06].DataType" value="String" />
+              <property name="Output List.[07]" value="o1.EmployeeID" />
+              <property name="Output List.[07].Table" value="o1" />
+              <property name="Output List.[07].Column" value="EmployeeID" />
+              <property name="Output List.[07].DataType" value="Int32" />
+              <property name="Output List.[08]" value="o1.OrderDate" />
+              <property name="Output List.[08].Table" value="o1" />
+              <property name="Output List.[08].Column" value="OrderDate" />
+              <property name="Output List.[08].DataType" value="DateTime" />
+              <property name="Output List.[09]" value="o1.RequiredDate" />
+              <property name="Output List.[09].Table" value="o1" />
+              <property name="Output List.[09].Column" value="RequiredDate" />
+              <property name="Output List.[09].DataType" value="DateTime" />
+              <property name="Output List.[10]" value="o1.ShippedDate" />
+              <property name="Output List.[10].Table" value="o1" />
+              <property name="Output List.[10].Column" value="ShippedDate" />
+              <property name="Output List.[10].DataType" value="DateTime" />
+              <property name="Output List.[11]" value="o1.ShipVia" />
+              <property name="Output List.[11].Table" value="o1" />
+              <property name="Output List.[11].Column" value="ShipVia" />
+              <property name="Output List.[11].DataType" value="Int32" />
+              <property name="Output List.[12]" value="o1.Freight" />
+              <property name="Output List.[12].Table" value="o1" />
+              <property name="Output List.[12].Column" value="Freight" />
+              <property name="Output List.[12].DataType" value="Decimal" />
+              <property name="Output List.[13]" value="o1.ShipName" />
+              <property name="Output List.[13].Table" value="o1" />
+              <property name="Output List.[13].Column" value="ShipName" />
+              <property name="Output List.[13].DataType" value="String" />
+              <property name="Output List.[14]" value="o1.ShipAddress" />
+              <property name="Output List.[14].Table" value="o1" />
+              <property name="Output List.[14].Column" value="ShipAddress" />
+              <property name="Output List.[14].DataType" value="String" />
+              <property name="Output List.[15]" value="o1.ShipCity" />
+              <property name="Output List.[15].Table" value="o1" />
+              <property name="Output List.[15].Column" value="ShipCity" />
+              <property name="Output List.[15].DataType" value="String" />
+              <property name="Output List.[16]" value="o1.ShipRegion" />
+              <property name="Output List.[16].Table" value="o1" />
+              <property name="Output List.[16].Column" value="ShipRegion" />
+              <property name="Output List.[16].DataType" value="String" />
+              <property name="Output List.[17]" value="o1.ShipPostalCode" />
+              <property name="Output List.[17].Table" value="o1" />
+              <property name="Output List.[17].Column" value="ShipPostalCode" />
+              <property name="Output List.[17].DataType" value="String" />
+              <property name="Output List.[18]" value="o1.ShipCountry" />
+              <property name="Output List.[18].Table" value="o1" />
+              <property name="Output List.[18].Column" value="ShipCountry" />
+              <property name="Output List.[18].DataType" value="String" />
+              <property name="Logical Operator" value="Inner Join" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="0" />
+              <property name="Statistics.Average Row Count" value="0" />
+              <property name="Outer References.[0]" value="od.OrderID" />
+              <property name="Outer References.[0].Table" value="od" />
+              <property name="Outer References.[0].Column" value="OrderID" />
+              <property name="Outer References.[0].DataType" value="Int32" />
+            </properties>
+            <input>
+              <element operator="HashMatch">
+                <properties>
+                  <property name="Output List.[00]" value="od.OrderID" />
+                  <property name="Output List.[00].Table" value="od" />
+                  <property name="Output List.[00].Column" value="OrderID" />
+                  <property name="Output List.[00].DataType" value="Int32" />
+                  <property name="Output List.[01]" value="od.ProductID" />
+                  <property name="Output List.[01].Table" value="od" />
+                  <property name="Output List.[01].Column" value="ProductID" />
+                  <property name="Output List.[01].DataType" value="Int32" />
+                  <property name="Output List.[02]" value="od.UnitPrice" />
+                  <property name="Output List.[02].Table" value="od" />
+                  <property name="Output List.[02].Column" value="UnitPrice" />
+                  <property name="Output List.[02].DataType" value="Decimal" />
+                  <property name="Output List.[03]" value="od.Quantity" />
+                  <property name="Output List.[03].Table" value="od" />
+                  <property name="Output List.[03].Column" value="Quantity" />
+                  <property name="Output List.[03].DataType" value="Int16" />
+                  <property name="Output List.[04]" value="od.Discount" />
+                  <property name="Output List.[04].Table" value="od" />
+                  <property name="Output List.[04].Column" value="Discount" />
+                  <property name="Output List.[04].DataType" value="Single" />
+                  <property name="Output List.[05]" value="o1.OrderID" />
+                  <property name="Output List.[05].Table" value="o1" />
+                  <property name="Output List.[05].Column" value="OrderID" />
+                  <property name="Output List.[05].DataType" value="Int32" />
+                  <property name="Output List.[06]" value="o1.CustomerID" />
+                  <property name="Output List.[06].Table" value="o1" />
+                  <property name="Output List.[06].Column" value="CustomerID" />
+                  <property name="Output List.[06].DataType" value="String" />
+                  <property name="Output List.[07]" value="o1.EmployeeID" />
+                  <property name="Output List.[07].Table" value="o1" />
+                  <property name="Output List.[07].Column" value="EmployeeID" />
+                  <property name="Output List.[07].DataType" value="Int32" />
+                  <property name="Output List.[08]" value="o1.OrderDate" />
+                  <property name="Output List.[08].Table" value="o1" />
+                  <property name="Output List.[08].Column" value="OrderDate" />
+                  <property name="Output List.[08].DataType" value="DateTime" />
+                  <property name="Output List.[09]" value="o1.RequiredDate" />
+                  <property name="Output List.[09].Table" value="o1" />
+                  <property name="Output List.[09].Column" value="RequiredDate" />
+                  <property name="Output List.[09].DataType" value="DateTime" />
+                  <property name="Output List.[10]" value="o1.ShippedDate" />
+                  <property name="Output List.[10].Table" value="o1" />
+                  <property name="Output List.[10].Column" value="ShippedDate" />
+                  <property name="Output List.[10].DataType" value="DateTime" />
+                  <property name="Output List.[11]" value="o1.ShipVia" />
+                  <property name="Output List.[11].Table" value="o1" />
+                  <property name="Output List.[11].Column" value="ShipVia" />
+                  <property name="Output List.[11].DataType" value="Int32" />
+                  <property name="Output List.[12]" value="o1.Freight" />
+                  <property name="Output List.[12].Table" value="o1" />
+                  <property name="Output List.[12].Column" value="Freight" />
+                  <property name="Output List.[12].DataType" value="Decimal" />
+                  <property name="Output List.[13]" value="o1.ShipName" />
+                  <property name="Output List.[13].Table" value="o1" />
+                  <property name="Output List.[13].Column" value="ShipName" />
+                  <property name="Output List.[13].DataType" value="String" />
+                  <property name="Output List.[14]" value="o1.ShipAddress" />
+                  <property name="Output List.[14].Table" value="o1" />
+                  <property name="Output List.[14].Column" value="ShipAddress" />
+                  <property name="Output List.[14].DataType" value="String" />
+                  <property name="Output List.[15]" value="o1.ShipCity" />
+                  <property name="Output List.[15].Table" value="o1" />
+                  <property name="Output List.[15].Column" value="ShipCity" />
+                  <property name="Output List.[15].DataType" value="String" />
+                  <property name="Output List.[16]" value="o1.ShipRegion" />
+                  <property name="Output List.[16].Table" value="o1" />
+                  <property name="Output List.[16].Column" value="ShipRegion" />
+                  <property name="Output List.[16].DataType" value="String" />
+                  <property name="Output List.[17]" value="o1.ShipPostalCode" />
+                  <property name="Output List.[17].Table" value="o1" />
+                  <property name="Output List.[17].Column" value="ShipPostalCode" />
+                  <property name="Output List.[17].DataType" value="String" />
+                  <property name="Output List.[18]" value="o1.ShipCountry" />
+                  <property name="Output List.[18].Table" value="o1" />
+                  <property name="Output List.[18].Column" value="ShipCountry" />
+                  <property name="Output List.[18].DataType" value="String" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="2,155" />
+                  <property name="Statistics.Average Row Count" value="2,155" />
+                  <property name="Hash Keys Build" value="od.OrderID" />
+                  <property name="Hash Keys Build.Table" value="od" />
+                  <property name="Hash Keys Build.Column" value="OrderID" />
+                  <property name="Hash Keys Build.DataType" value="Int32" />
+                  <property name="Hash Keys Probe" value="o1.OrderID" />
+                  <property name="Hash Keys Probe.Table" value="o1" />
+                  <property name="Hash Keys Probe.Column" value="OrderID" />
+                  <property name="Hash Keys Probe.DataType" value="Int32" />
+                  <property name="Logical Operator" value="Inner Join" />
+                </properties>
+                <input>
+                  <element operator="TableScan">
+                    <properties>
+                      <property name="Table" value="Order Details AS od" />
+                      <property name="Output List.[0]" value="od.OrderID" />
+                      <property name="Output List.[0].Table" value="od" />
+                      <property name="Output List.[0].Column" value="OrderID" />
+                      <property name="Output List.[0].DataType" value="Int32" />
+                      <property name="Output List.[1]" value="od.ProductID" />
+                      <property name="Output List.[1].Table" value="od" />
+                      <property name="Output List.[1].Column" value="ProductID" />
+                      <property name="Output List.[1].DataType" value="Int32" />
+                      <property name="Output List.[2]" value="od.UnitPrice" />
+                      <property name="Output List.[2].Table" value="od" />
+                      <property name="Output List.[2].Column" value="UnitPrice" />
+                      <property name="Output List.[2].DataType" value="Decimal" />
+                      <property name="Output List.[3]" value="od.Quantity" />
+                      <property name="Output List.[3].Table" value="od" />
+                      <property name="Output List.[3].Column" value="Quantity" />
+                      <property name="Output List.[3].DataType" value="Int16" />
+                      <property name="Output List.[4]" value="od.Discount" />
+                      <property name="Output List.[4].Table" value="od" />
+                      <property name="Output List.[4].Column" value="Discount" />
+                      <property name="Output List.[4].DataType" value="Single" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="2,155" />
+                      <property name="Statistics.Average Row Count" value="2,155" />
+                    </properties>
+                    <input />
+                  </element>
+                  <element operator="TableScan">
+                    <properties>
+                      <property name="Table" value="Orders AS o1" />
+                      <property name="Output List.[00]" value="o1.OrderID" />
+                      <property name="Output List.[00].Table" value="o1" />
+                      <property name="Output List.[00].Column" value="OrderID" />
+                      <property name="Output List.[00].DataType" value="Int32" />
+                      <property name="Output List.[01]" value="o1.CustomerID" />
+                      <property name="Output List.[01].Table" value="o1" />
+                      <property name="Output List.[01].Column" value="CustomerID" />
+                      <property name="Output List.[01].DataType" value="String" />
+                      <property name="Output List.[02]" value="o1.EmployeeID" />
+                      <property name="Output List.[02].Table" value="o1" />
+                      <property name="Output List.[02].Column" value="EmployeeID" />
+                      <property name="Output List.[02].DataType" value="Int32" />
+                      <property name="Output List.[03]" value="o1.OrderDate" />
+                      <property name="Output List.[03].Table" value="o1" />
+                      <property name="Output List.[03].Column" value="OrderDate" />
+                      <property name="Output List.[03].DataType" value="DateTime" />
+                      <property name="Output List.[04]" value="o1.RequiredDate" />
+                      <property name="Output List.[04].Table" value="o1" />
+                      <property name="Output List.[04].Column" value="RequiredDate" />
+                      <property name="Output List.[04].DataType" value="DateTime" />
+                      <property name="Output List.[05]" value="o1.ShippedDate" />
+                      <property name="Output List.[05].Table" value="o1" />
+                      <property name="Output List.[05].Column" value="ShippedDate" />
+                      <property name="Output List.[05].DataType" value="DateTime" />
+                      <property name="Output List.[06]" value="o1.ShipVia" />
+                      <property name="Output List.[06].Table" value="o1" />
+                      <property name="Output List.[06].Column" value="ShipVia" />
+                      <property name="Output List.[06].DataType" value="Int32" />
+                      <property name="Output List.[07]" value="o1.Freight" />
+                      <property name="Output List.[07].Table" value="o1" />
+                      <property name="Output List.[07].Column" value="Freight" />
+                      <property name="Output List.[07].DataType" value="Decimal" />
+                      <property name="Output List.[08]" value="o1.ShipName" />
+                      <property name="Output List.[08].Table" value="o1" />
+                      <property name="Output List.[08].Column" value="ShipName" />
+                      <property name="Output List.[08].DataType" value="String" />
+                      <property name="Output List.[09]" value="o1.ShipAddress" />
+                      <property name="Output List.[09].Table" value="o1" />
+                      <property name="Output List.[09].Column" value="ShipAddress" />
+                      <property name="Output List.[09].DataType" value="String" />
+                      <property name="Output List.[10]" value="o1.ShipCity" />
+                      <property name="Output List.[10].Table" value="o1" />
+                      <property name="Output List.[10].Column" value="ShipCity" />
+                      <property name="Output List.[10].DataType" value="String" />
+                      <property name="Output List.[11]" value="o1.ShipRegion" />
+                      <property name="Output List.[11].Table" value="o1" />
+                      <property name="Output List.[11].Column" value="ShipRegion" />
+                      <property name="Output List.[11].DataType" value="String" />
+                      <property name="Output List.[12]" value="o1.ShipPostalCode" />
+                      <property name="Output List.[12].Table" value="o1" />
+                      <property name="Output List.[12].Column" value="ShipPostalCode" />
+                      <property name="Output List.[12].DataType" value="String" />
+                      <property name="Output List.[13]" value="o1.ShipCountry" />
+                      <property name="Output List.[13].Table" value="o1" />
+                      <property name="Output List.[13].Column" value="ShipCountry" />
+                      <property name="Output List.[13].DataType" value="String" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="830" />
+                      <property name="Statistics.Average Row Count" value="830" />
+                    </properties>
+                    <input />
+                  </element>
+                </input>
+              </element>
+              <element operator="Filter">
+                <properties>
+                  <property name="Statistics.Open Count" value="2,155" />
+                  <property name="Statistics.Row Count" value="0" />
+                  <property name="Statistics.Average Row Count" value="0" />
+                  <property name="Predicate" value="Expr1021 &lt; 10" />
+                </properties>
+                <input>
+                  <element operator="Assert">
+                    <properties>
+                      <property name="Output List.[0]" value="Expr1021" />
+                      <property name="Output List.[0].Column" value="Expr1021" />
+                      <property name="Output List.[0].DataType" value="Int32" />
+                      <property name="Statistics.Open Count" value="2,155" />
+                      <property name="Statistics.Row Count" value="2,155" />
+                      <property name="Statistics.Average Row Count" value="1" />
+                      <property name="Predicate" value="CASE WHEN Expr1020 &gt; 1 THEN 0 END" />
+                    </properties>
+                    <input>
+                      <element operator="StreamAggregate">
+                        <properties>
+                          <property name="Output List.[0]" value="Expr1020" />
+                          <property name="Output List.[0].Column" value="Expr1020" />
+                          <property name="Output List.[0].DataType" value="Int32" />
+                          <property name="Output List.[1]" value="Expr1021" />
+                          <property name="Output List.[1].Column" value="Expr1021" />
+                          <property name="Output List.[1].DataType" value="Int32" />
+                          <property name="Statistics.Open Count" value="2,155" />
+                          <property name="Statistics.Row Count" value="2,155" />
+                          <property name="Statistics.Average Row Count" value="1" />
+                          <property name="Defined Values.[0]" value="Expr1020 = COUNT(0)" />
+                          <property name="Defined Values.[0].Target" value="Expr1020" />
+                          <property name="Defined Values.[0].DataType" value="Int32" />
+                          <property name="Defined Values.[0].Source" value="COUNT(0)" />
+                          <property name="Defined Values.[1]" value="Expr1021 = ANY(o2.OrderID)" />
+                          <property name="Defined Values.[1].Target" value="Expr1021" />
+                          <property name="Defined Values.[1].DataType" value="Int32" />
+                          <property name="Defined Values.[1].Source" value="ANY(o2.OrderID)" />
+                        </properties>
+                        <input>
+                          <element operator="IndexSpool">
+                            <properties>
+                              <property name="Output List.[0]" value="o2.OrderID" />
+                              <property name="Output List.[0].Table" value="o2" />
+                              <property name="Output List.[0].Column" value="OrderID" />
+                              <property name="Output List.[0].DataType" value="Int32" />
+                              <property name="Statistics.Open Count" value="2,155" />
+                              <property name="Statistics.Row Count" value="2,155" />
+                              <property name="Statistics.Average Row Count" value="1" />
+                              <property name="Logical Operator" value="Eager Spool" />
+                              <property name="With Stack" value="False" />
+                              <property name="Index" value="o2.OrderID" />
+                              <property name="Index.Table" value="o2" />
+                              <property name="Index.Column" value="OrderID" />
+                              <property name="Index.DataType" value="Int32" />
+                              <property name="Probe" value="od.OrderID" />
+                            </properties>
+                            <input>
+                              <element operator="TableScan">
+                                <properties>
+                                  <property name="Table" value="Orders AS o2" />
+                                  <property name="Output List.[0]" value="o2.OrderID" />
+                                  <property name="Output List.[0].Table" value="o2" />
+                                  <property name="Output List.[0].Column" value="OrderID" />
+                                  <property name="Output List.[0].DataType" value="Int32" />
+                                  <property name="Statistics.Open Count" value="1" />
+                                  <property name="Statistics.Row Count" value="830" />
+                                  <property name="Statistics.Average Row Count" value="830" />
+                                </properties>
+                                <input />
+                              </element>
+                            </input>
+                          </element>
+                        </input>
+                      </element>
+                    </input>
+                  </element>
+                </input>
+              </element>
+            </input>
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

@@ -1,0 +1,43 @@
+﻿<topic>
+	<head>
+		<title>Concatenation</title>
+		<keywords>
+			<keyword term="execution plan, concatenation"/>
+			<keyword term="physical operators, concatenation"/>
+			<keyword term="logical operators, concatenation"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Concatenation</b> operator scans multiple inputs, returning each row scanned. Concatenation is typically used to
+				implement <c>UNION ALL</c>.
+			</p>
+			<p>
+				The <c>Concatenation</c> physical operator has two or more inputs and one output. Concatenation copies tuples from the
+				first input stream to the output stream, then repeats this operation for each additional input stream.
+			</p>
+			<p>
+				<b>Concatenation</b> is a logical and physical operator.
+			</p>
+		</summary>
+
+		<section title="Properties">
+			<table>
+				<tr>
+					<th>Property Name</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>Defined Values</td>
+					<td>
+						Specifies set of columns united by the <b>Concatenation</b> operator.
+					</td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</topic>

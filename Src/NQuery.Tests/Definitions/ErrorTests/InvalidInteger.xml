@@ -1,0 +1,12 @@
+<test>
+  <sql>SELECT	0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+		1A, 1B, 1C, 1D, 1E, 1F
+		</sql>
+  <expectedErrors>
+    <expectedError id="InvalidInteger" text="'1A' is not a valid integer." />
+    <expectedError id="InvalidInteger" text="'1C' is not a valid integer." />
+    <expectedError id="InvalidInteger" text="'1D' is not a valid integer." />
+    <expectedError id="InvalidReal" text="'1E' is not a valid decimal number." />
+    <expectedError id="InvalidInteger" text="'1F' is not a valid integer." />
+  </expectedErrors>
+</test>

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="NQuery.Evaluatable">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>API\Evaluatable.cs</FileName>
+      <HashCode>gAAoAAAABAAAQCIAggOAAAEAAAEAAAAIAJgUCAAABgE=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DataContext" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Parameters" />
+    </ShowAsCollectionAssociation>
+    <Members>
+      <Field Name="_metadataContext" Hidden="true" />
+      <Field Name="_scope" Hidden="true" />
+      <Field Name="_text" Hidden="true" />
+      <Method Name="ClearCompiledState" Hidden="true" />
+      <Event Name="CompilationFailed" Hidden="true" />
+      <Event Name="CompilationSucceeded" Hidden="true" />
+      <Event Name="CompiledStateInvalidated" Hidden="true" />
+      <Method Name="dataContext_metadataContext_Changed" Hidden="true" />
+      <Method Name="dataContext_OnChanged" Hidden="true" />
+      <Event Name="DataContextChanged" Hidden="true" />
+      <Method Name="Evaluatable" Hidden="true" />
+      <Method Name="GetCodeAssistanceContextProvider" Hidden="true" />
+      <Method Name="InvalidateCompiledState" Hidden="true" />
+      <Method Name="metadataContext_Changed" Hidden="true" />
+      <Method Name="OnCompilationFailed" Hidden="true" />
+      <Method Name="OnCompilationSucceeded" Hidden="true" />
+      <Method Name="OnCompiledStateInvalidated" Hidden="true" />
+      <Method Name="OnDataContextChanged" Hidden="true" />
+      <Method Name="OnTextChanged" Hidden="true" />
+      <Method Name="parameters_Changed" Hidden="true" />
+      <Property Name="Scope" Hidden="true" />
+      <Event Name="TextChanged" Hidden="true" />
+    </Members>
+    <AssociationLine Name="DataContext" Type="NQuery.DataContext">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.683" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Parameters" Type="NQuery.Runtime.ParameterBinding">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.318" Y="0.115" Height="0.16" Width="0.98" />
+      </MemberNameLabel>
+    </AssociationLine>
+  </Class>
+  <Class Name="NQuery.DataContext">
+    <Position X="7.25" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <FileName>API\Context\DataContext.cs</FileName>
+      <HashCode>CAAAEAAkYQAAIAgABgAASAIABAAAAAgCAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MetadataContext" />
+    </ShowAsAssociation>
+    <Members>
+      <Field Name="_aggregates" Hidden="true" />
+      <Field Name="_constants" Hidden="true" />
+      <Field Name="_functions" Hidden="true" />
+      <Field Name="_metadataContext" Hidden="true" />
+      <Field Name="_tableRelations" Hidden="true" />
+      <Field Name="_tables" Hidden="true" />
+      <Method Name="AddTablesAndRelations" Hidden="true" />
+      <Event Name="Changed" Hidden="true" />
+      <Method Name="DataContext" Hidden="true" />
+      <Method Name="member_Changed" Hidden="true" />
+      <Event Name="MetadataContextChanged" Hidden="true" />
+      <Method Name="OnChange" Hidden="true" />
+      <Method Name="OnMetadataContextChanged" Hidden="true" />
+    </Members>
+    <AssociationLine Name="MetadataContext" Type="NQuery.MetadataContext">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.153" Y="0.485" Height="0.16" Width="1.201" />
+      </MemberNameLabel>
+    </AssociationLine>
+  </Class>
+  <Class Name="NQuery.Runtime.ParameterBinding">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Binding\Property\ParameterBinding.cs</FileName>
+      <HashCode>ABAAMAAAAAsAAAAEAAAAAAQAAAAAAAAIAAAgAAAACAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_customProperties" Hidden="true" />
+      <Field Name="_name" Hidden="true" />
+      <Field Name="_parameterType" Hidden="true" />
+      <Field Name="_value" Hidden="true" />
+      <Property Name="Category" Hidden="true" />
+      <Property Name="CustomProperties" Hidden="true" />
+      <Method Name="ExtractParameterName" Hidden="true" />
+      <Method Name="GetFullName" Hidden="true" />
+      <Method Name="ParameterBinding" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="NQuery.Query">
+    <Position X="0.5" Y="3" Width="3" />
+    <TypeIdentifier>
+      <FileName>API\Query.cs</FileName>
+      <HashCode>AAggAAABABgAAACAAAQAABAAAAAABAABAAgABAAAAEA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_errorCollector" Hidden="true" />
+      <Field Name="_resultAlgebraNode" Hidden="true" />
+      <Field Name="_resultIterator" Hidden="true" />
+      <Method Name="ClearCompiledState" Hidden="true" />
+      <Method Name="Compile" Hidden="true" />
+      <Method Name="EnsureCompiled" Hidden="true" />
+      <Method Name="GetCodeAssistanceContextProvider" Hidden="true" />
+      <Method Name="Query" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="NQuery.Expression&lt;T&gt;">
+    <Position X="4.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>API\Expression.cs</FileName>
+      <HashCode>AAAgAACAAAiAAAAAAARAAgAAAAAAAACAAAoAgAAAAEA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_errorCollector" Hidden="true" />
+      <Field Name="_nullValue" Hidden="true" />
+      <Field Name="_runtimeExpression" Hidden="true" />
+      <Field Name="_targetType" Hidden="true" />
+      <Method Name="ClearCompiledState" Hidden="true" />
+      <Method Name="Compile" Hidden="true" />
+      <Method Name="EnsureCompiled" Hidden="true" />
+      <Method Name="Expression" Hidden="true" />
+      <Method Name="GetCodeAssistanceContextProvider" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="NQuery.MetadataContext">
+    <Position X="7" Y="3.25" Width="3.5" />
+    <TypeIdentifier>
+      <FileName>API\Context\MetadataContext.cs</FileName>
+      <HashCode>AAAAAAAIAQAAAAAABEAAEBAAAIAAAIAAAAAAgAAAAQA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_comparers" Hidden="true" />
+      <Field Name="_methodProviders" Hidden="true" />
+      <Field Name="_propertyProviders" Hidden="true" />
+      <Event Name="Changed" Hidden="true" />
+      <Method Name="FindMethod" Hidden="true" />
+      <Method Name="FindProperty" Hidden="true" />
+      <Method Name="MetadataContext" Hidden="true" />
+      <Method Name="OnChanged" Hidden="true" />
+      <Method Name="TypeRegistryChanged" Hidden="true" />
+    </Members>
+  </Class>
+</ClassDiagram>

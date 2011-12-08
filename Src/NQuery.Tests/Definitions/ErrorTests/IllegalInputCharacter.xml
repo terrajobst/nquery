@@ -1,0 +1,8 @@
+<test>
+  <sql>!§|</sql>
+  <expectedErrors>
+    <expectedError id="IllegalInputCharacter" text="Invalid character in input '!'." />
+    <expectedError id="IllegalInputCharacter" text="Invalid character in input '§'." />
+    <expectedError id="TokenExpected" text="Found '|' but expected 'SELECT'." />
+  </expectedErrors>
+</test>

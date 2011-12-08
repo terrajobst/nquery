@@ -1,0 +1,41 @@
+<topic>
+	<head>
+		<title>SPACE</title>
+		<keywords>
+			<keyword term="functions, SPACE" />
+			<keyword term="string functions, SPACE" />
+			<keyword term="SPACE function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="String Functions.html">String Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns a string of repeated spaces.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">SPACE(numberOfSpaces AS int) RETURNS string</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="numberOfSpaces">
+					<p>
+						Is a positive integer that indicates the number of spaces.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				A string of repeated spaces. If <c>numberOfSpaces</c> is negative, the return value is <c>NULL</c>.
+			</p>
+		</returns>
+	</body>
+</topic>

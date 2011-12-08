@@ -1,0 +1,33 @@
+<topic>
+	<head>
+		<title>Date and Time Functions </title>
+		<links>
+			<link href="Functions.html">Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>The following date and time functions are available:</p>
+			<ul>
+				<li>
+					<a href="DAY.html">DAY</a>
+				</li>
+				<li>
+					<a href="GETDATE.html">GETDATE</a>
+				</li>
+				<li>
+					<a href="GETUTCDATE.html">GETUTCDATE</a>
+				</li>
+				<li>
+					<a href="MONTH.html">MONTH</a>
+				</li>
+				<li>
+					<a href="TO_DATETIME.html">TO_DATETIME</a>
+				</li>
+				<li>
+					<a href="YEAR.html">YEAR</a>
+				</li>
+			</ul>
+		</summary>
+	</body>
+</topic>

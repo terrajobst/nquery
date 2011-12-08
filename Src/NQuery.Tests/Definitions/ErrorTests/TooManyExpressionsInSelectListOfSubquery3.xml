@@ -1,0 +1,8 @@
+<test>
+  <sql>SELECT	*
+FROM	Orders o
+WHERE	o.EmployeeID &gt;= ALL (SELECT * FROM Employees)</sql>
+  <expectedErrors>
+    <expectedError id="TooManyExpressionsInSelectListOfSubquery" text="Only one expression can be specified in the select list when the subquery is not introduced with EXISTS." />
+  </expectedErrors>
+</test>

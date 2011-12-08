@@ -1,0 +1,41 @@
+<topic>
+	<head>
+		<title>RTRIM</title>
+		<keywords>
+			<keyword term="functions, RTRIM" />
+			<keyword term="string functions, RTRIM" />
+			<keyword term="RTRIM function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="String Functions.html">String Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Removes all occurrences of white space characters from the end of a specified string.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">RTRIM(text AS string) RETURNS string</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="text">
+					<p>
+						A string containing trailing spaces.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The String that remains after all occurrences of white space characters are removed from the end.
+			</p>
+		</returns>
+	</body>
+</topic>

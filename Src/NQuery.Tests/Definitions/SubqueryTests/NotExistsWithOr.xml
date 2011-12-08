@@ -1,0 +1,258 @@
+<test>
+  <sql>SELECT	*
+FROM	Territories t
+WHERE	NOT EXISTS (
+			SELECT	*
+			FROM	EmployeeTerritories et
+			WHERE	et.TerritoryID = t.TerritoryID
+		)
+OR		t.RegionID = 3</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="TerritoryID" type="xs:string" minOccurs="0" />
+                <xs:element name="TerritoryDescription" type="xs:string" minOccurs="0" />
+                <xs:element name="RegionID" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <TerritoryID>03049</TerritoryID>
+    <TerritoryDescription>Hollis                                            </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>03801</TerritoryID>
+    <TerritoryDescription>Portsmouth                                        </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>19428</TerritoryID>
+    <TerritoryDescription>Philadelphia                                      </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>29202</TerritoryID>
+    <TerritoryDescription>Columbia                                          </TerritoryDescription>
+    <RegionID>4</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>44122</TerritoryID>
+    <TerritoryDescription>Beachwood                                         </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>45839</TerritoryID>
+    <TerritoryDescription>Findlay                                           </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>48075</TerritoryID>
+    <TerritoryDescription>Southfield                                        </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>48084</TerritoryID>
+    <TerritoryDescription>Troy                                              </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>48304</TerritoryID>
+    <TerritoryDescription>Bloomfield Hills                                  </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>53404</TerritoryID>
+    <TerritoryDescription>Racine                                            </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>55113</TerritoryID>
+    <TerritoryDescription>Roseville                                         </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>55439</TerritoryID>
+    <TerritoryDescription>Minneapolis                                       </TerritoryDescription>
+    <RegionID>3</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>72716</TerritoryID>
+    <TerritoryDescription>Bentonville                                       </TerritoryDescription>
+    <RegionID>4</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>75234</TerritoryID>
+    <TerritoryDescription>Dallas                                            </TerritoryDescription>
+    <RegionID>4</RegionID>
+  </Table1>
+  <Table1>
+    <TerritoryID>78759</TerritoryID>
+    <TerritoryDescription>Austin                                            </TerritoryDescription>
+    <RegionID>4</RegionID>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="t.TerritoryID AS TerritoryID" />
+          <property name="Output List.[0].Table" value="t" />
+          <property name="Output List.[0].Column" value="TerritoryID" />
+          <property name="Output List.[0].DataType" value="String" />
+          <property name="Output List.[0].Output Name" value="TerritoryID" />
+          <property name="Output List.[1]" value="t.TerritoryDescription AS TerritoryDescription" />
+          <property name="Output List.[1].Table" value="t" />
+          <property name="Output List.[1].Column" value="TerritoryDescription" />
+          <property name="Output List.[1].DataType" value="String" />
+          <property name="Output List.[1].Output Name" value="TerritoryDescription" />
+          <property name="Output List.[2]" value="t.RegionID AS RegionID" />
+          <property name="Output List.[2].Table" value="t" />
+          <property name="Output List.[2].Column" value="RegionID" />
+          <property name="Output List.[2].DataType" value="Int32" />
+          <property name="Output List.[2].Output Name" value="RegionID" />
+        </properties>
+        <input>
+          <element operator="NestedLoops">
+            <properties>
+              <property name="Output List.[0]" value="t.TerritoryID" />
+              <property name="Output List.[0].Table" value="t" />
+              <property name="Output List.[0].Column" value="TerritoryID" />
+              <property name="Output List.[0].DataType" value="String" />
+              <property name="Output List.[1]" value="t.TerritoryDescription" />
+              <property name="Output List.[1].Table" value="t" />
+              <property name="Output List.[1].Column" value="TerritoryDescription" />
+              <property name="Output List.[1].DataType" value="String" />
+              <property name="Output List.[2]" value="t.RegionID" />
+              <property name="Output List.[2].Table" value="t" />
+              <property name="Output List.[2].Column" value="RegionID" />
+              <property name="Output List.[2].DataType" value="Int32" />
+              <property name="Logical Operator" value="Left Semi Join" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="15" />
+              <property name="Statistics.Average Row Count" value="15" />
+              <property name="Outer References.[0]" value="t.RegionID" />
+              <property name="Outer References.[0].Table" value="t" />
+              <property name="Outer References.[0].Column" value="RegionID" />
+              <property name="Outer References.[0].DataType" value="Int32" />
+              <property name="Outer References.[1]" value="t.TerritoryID" />
+              <property name="Outer References.[1].Table" value="t" />
+              <property name="Outer References.[1].Column" value="TerritoryID" />
+              <property name="Outer References.[1].DataType" value="String" />
+            </properties>
+            <input>
+              <element operator="TableScan">
+                <properties>
+                  <property name="Table" value="Territories AS t" />
+                  <property name="Output List.[0]" value="t.TerritoryID" />
+                  <property name="Output List.[0].Table" value="t" />
+                  <property name="Output List.[0].Column" value="TerritoryID" />
+                  <property name="Output List.[0].DataType" value="String" />
+                  <property name="Output List.[1]" value="t.TerritoryDescription" />
+                  <property name="Output List.[1].Table" value="t" />
+                  <property name="Output List.[1].Column" value="TerritoryDescription" />
+                  <property name="Output List.[1].DataType" value="String" />
+                  <property name="Output List.[2]" value="t.RegionID" />
+                  <property name="Output List.[2].Table" value="t" />
+                  <property name="Output List.[2].Column" value="RegionID" />
+                  <property name="Output List.[2].DataType" value="Int32" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="53" />
+                  <property name="Statistics.Average Row Count" value="53" />
+                </properties>
+                <input />
+              </element>
+              <element operator="Concatenation">
+                <properties>
+                  <property name="Statistics.Open Count" value="53" />
+                  <property name="Statistics.Row Count" value="15" />
+                  <property name="Statistics.Average Row Count" value="0" />
+                </properties>
+                <input>
+                  <element operator="Filter">
+                    <properties>
+                      <property name="Statistics.Open Count" value="53" />
+                      <property name="Statistics.Row Count" value="11" />
+                      <property name="Statistics.Average Row Count" value="0" />
+                      <property name="Predicate" value="t.RegionID = 3" />
+                    </properties>
+                    <input>
+                      <element operator="ConstantScan">
+                        <properties>
+                          <property name="Empty" value="False" />
+                          <property name="Statistics.Open Count" value="53" />
+                          <property name="Statistics.Row Count" value="53" />
+                          <property name="Statistics.Average Row Count" value="1" />
+                        </properties>
+                        <input />
+                      </element>
+                    </input>
+                  </element>
+                  <element operator="NestedLoops">
+                    <properties>
+                      <property name="Logical Operator" value="Left Anti Semi Join" />
+                      <property name="Statistics.Open Count" value="42" />
+                      <property name="Statistics.Row Count" value="4" />
+                      <property name="Statistics.Average Row Count" value="0" />
+                    </properties>
+                    <input>
+                      <element operator="ConstantScan">
+                        <properties>
+                          <property name="Empty" value="False" />
+                          <property name="Statistics.Open Count" value="42" />
+                          <property name="Statistics.Row Count" value="42" />
+                          <property name="Statistics.Average Row Count" value="1" />
+                        </properties>
+                        <input />
+                      </element>
+                      <element operator="IndexSpool">
+                        <properties>
+                          <property name="Statistics.Open Count" value="42" />
+                          <property name="Statistics.Row Count" value="38" />
+                          <property name="Statistics.Average Row Count" value="1" />
+                          <property name="Logical Operator" value="Eager Spool" />
+                          <property name="With Stack" value="False" />
+                          <property name="Index" value="et.TerritoryID" />
+                          <property name="Index.Table" value="et" />
+                          <property name="Index.Column" value="TerritoryID" />
+                          <property name="Index.DataType" value="String" />
+                          <property name="Probe" value="t.TerritoryID" />
+                        </properties>
+                        <input>
+                          <element operator="TableScan">
+                            <properties>
+                              <property name="Table" value="EmployeeTerritories AS et" />
+                              <property name="Output List.[0]" value="et.TerritoryID" />
+                              <property name="Output List.[0].Table" value="et" />
+                              <property name="Output List.[0].Column" value="TerritoryID" />
+                              <property name="Output List.[0].DataType" value="String" />
+                              <property name="Statistics.Open Count" value="1" />
+                              <property name="Statistics.Row Count" value="49" />
+                              <property name="Statistics.Average Row Count" value="49" />
+                            </properties>
+                            <input />
+                          </element>
+                        </input>
+                      </element>
+                    </input>
+                  </element>
+                </input>
+              </element>
+            </input>
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

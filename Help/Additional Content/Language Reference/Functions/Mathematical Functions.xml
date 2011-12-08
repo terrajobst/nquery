@@ -1,0 +1,72 @@
+<topic>
+	<head>
+		<title>Mathematical Functions</title>
+		<links>
+			<link href="Functions.html">Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>The following mathematical functions are available:</p>
+			<ul>
+				<li>
+					<a href="ABS.html">ABS</a>
+				</li>
+				<li>
+					<a href="ACOS.html">ACOS</a>
+				</li>
+				<li>
+					<a href="ASIN.html">ASIN</a>
+				</li>
+				<li>
+					<a href="ATAN.html">ATAN</a>
+				</li>
+				<li>
+					<a href="CEILING.html">CEILING</a>
+				</li>
+				<li>
+					<a href="COS.html">COS</a>
+				</li>
+				<li>
+					<a href="COSH.html">COSH</a>
+				</li>
+				<li>
+					<a href="EXP.html">EXP</a>
+				</li>
+				<li>
+					<a href="FLOOR.html">FLOOR</a>
+				</li>
+				<li>
+					<a href="LOG.html">LOG</a>
+				</li>
+				<li>
+					<a href="LOG10.html">LOG10</a>
+				</li>
+				<li>
+					<a href="POWER.html">POWER</a>
+				</li>
+				<li>
+					<a href="ROUND.html">ROUND</a>
+				</li>
+				<li>
+					<a href="SIGN.html">SIGN</a>
+				</li>
+				<li>
+					<a href="SIN.html">SIN</a>
+				</li>
+				<li>
+					<a href="SINH.html">SINH</a>
+				</li>
+				<li>
+					<a href="SQRT.html">SQRT</a>
+				</li>
+				<li>
+					<a href="TAN.html">TAN</a>
+				</li>
+				<li>
+					<a href="TANH.html">TANH</a>
+				</li>
+			</ul>
+		</summary>
+	</body>
+</topic>

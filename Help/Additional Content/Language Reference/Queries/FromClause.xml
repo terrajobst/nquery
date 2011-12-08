@@ -1,0 +1,160 @@
+<topic>
+	<head>
+		<title>FROM Clause</title>
+		<toc index="3" />
+		<keywords>
+			<keyword term="SELECT statement, FROM clause" />
+			<keyword term="FROM clause, about" />
+		</keywords>
+		<links>
+			<link href="Queries.html">SELECT Syntax</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Specifies the tables, derived tables, and joined tables used in <c>SELECT</c> statements. In the <c>SELECT</c> statement, the
+				<c>FROM</c> clause is required except when the select list contains only constants, variables, and arithmetic expressions (no column names).
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">[ <b>FROM</b> { &lt;table_source&gt; } [ <b>,...</b><i>n</i> ] ] 
+
+<b>&lt;table_source&gt; ::= </b>
+    { <i>table_name</i> [ [ <b>AS</b> ] <i>table_alias</i> ] 
+    | <i>derived_table</i> [ <b>AS</b> ] <i>table_alias</i> [ <b>(</b> <i>column_alias</i> [ <b>,...</b><i>n</i> ] <b>)</b> ] 
+    | &lt;joined_table&gt; 
+    }
+
+<b>&lt;joined_table&gt; ::= </b>
+    { &lt;table_source&gt; &lt;join_type&gt; &lt;table_source&gt; <b>ON</b> &lt;search_condition&gt; 
+    | &lt;table_source&gt; <b>CROSS JOIN</b> &lt;table_source&gt; 
+    | [ <b>(</b> ] &lt;joined_table&gt; [ <b>)</b> ] 
+    }
+
+<b>&lt;join_type&gt; ::= </b>
+    [ { <b>INNER</b> | { { <b>LEFT</b> | <b>RIGHT</b> | <b>FULL</b> } [ <b>OUTER</b> ] } } ] <b>JOIN</b></code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="&lt;table_source&gt;">
+					<p>
+						Specifies a table or derived table source, with or without an alias, to use in the <c>SELECT</c> statement.
+					</p>
+					<p>
+						Though there is no explicit limit how many table sources can be used in a statement the actual limit varies depending on
+						available memory and the complexity of other expressions in the query.
+					</p>
+					<p>
+						The order of table sources after the <c>FROM</c> keyword does not affect the result set that is returned.
+					</p>
+					<p>
+						NQuery returns errors when duplicate names appear in the <c>FROM</c> clause.
+					</p>
+				</param>
+				<param name="table_name">
+					<p>Is the name of a table.</p>
+				</param>
+				<param name="[AS] table_alias">
+					<p>
+						Is an alias for <i>table_source</i> that can be used either for convenience or to distinguish a table in a self-join or
+						subquery. An alias is frequently a shortened table name used to refer to specific columns of the tables in a join. If the
+						same column name exists in more than one table in the join, it is required that the column name be qualified by a table
+						name or alias. The table name cannot be used if an alias is defined.
+					</p>
+					<p>
+						When a derived table is used, the required <i>table_alias</i> at the end of the clause is the associated table name for all
+						columns, including grouping columns, returned.
+					</p>
+				</param>
+				<param name="derived_table">
+					<p>
+						Is a subquery that retrieves rows. <i>derived_table</i> is used as input to the outer query.
+					</p>
+				</param>
+				<param name="&lt;joined_table&gt;">
+					<p>
+						Is a result set that is the product of two or more tables. For multiple joins, use parentheses to change the natural order of the joins.
+					</p>
+				</param>
+				<param name="&lt;join_type&gt;">
+					<p>
+						Specifies the type of join operation.
+					</p>
+				</param>
+				<param name="INNER">
+					<p>
+						Specifies all matching pairs of rows are returned. Discards unmatched rows from both tables. When no join type is specified, this is
+						the default.
+					</p>
+				</param>
+				<param name="FULL [ OUTER ]">
+					<p>
+						Specifies that a row from either the left or right table that does not meet the join condition is included in the result set, and
+						output columns that correspond to the other table are set to <c>NULL</c>. This is in addition to all rows typically returned by the
+						<c>INNER JOIN</c>.
+					</p>
+				</param>
+				<param name="LEFT [ OUTER ]">
+					<p>
+						Specifies that all rows from the left table not meeting the join condition are included in the result set, and output columns
+						from the other table are set to <c>NULL</c> in addition to all rows returned by the inner join.
+					</p>
+				</param>
+				<param name="RIGHT [OUTER]">
+					<p>
+						Specifies all rows from the right table not meeting the join condition are included in the result set, and output columns that
+						correspond to the other table are set to <c>NULL</c>, in addition to all rows returned by the inner join.
+					</p>
+				</param>
+				<param name="JOIN">
+					<p>
+						Indicates that the specified join operation should occur between the specified table sources.
+					</p>
+				</param>
+				<param name="ON &lt;search_condition&gt;">
+					<p>
+						Specifies the condition on which the join is based. The condition can specify any predicate, although columns and comparison
+						operators are frequently used, for example:
+					</p>
+					<code xml:space="preserve">SELECT  p.ProductID, v.VendorID
+  FROM  Production.Product p
+            JOIN Purchasing.ProductVendor v ON (p.ProductID = v.ProductID)</code>
+					<p>
+						There can be predicates that involve only one of the joined tables in the <c>ON</c> clause. Such predicates also can be in the
+						<c>WHERE</c> clause in the query. Although the placement of such predicates does not make a difference for <c>INNER</c> joins,
+						they might cause a different result when <c>OUTER</c> joins are involved. This is because the predicates in the <c>ON</c> clause
+						are applied to the table before the join, whereas the <c>WHERE</c> clause is semantically applied to the result of the join.
+					</p>
+				</param>
+				<param name="CROSS JOIN">
+					<p>
+						Specifies the cross-product of two tables. Returns the same rows as if no <c>WHERE</c> clause was specified in an old-style,
+						non-SQL-92-style join.
+					</p>
+				</param>
+				<param name="left_table_source">
+					<p>
+						Is a table source as defined in the previous argument.
+					</p>
+				</param>
+				<param name="right_table_source">
+					<p>
+						Is a table source as defined in the previous argument.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<remarks>
+			<p>
+				The FROM clause supports the SQL-92-SQL syntax for joined tables and derived tables. SQL-92 syntax provides the
+				<c>INNER</c>, <c>LEFT OUTER</c>, <c>RIGHT OUTER</c>, <c>FULL OUTER</c>, and <c>CROSS</c> join operators.
+				The outer join operators <c>*=</c> and <c>=*</c> are not supported. For outer joins you must use the SQL-92 syntax.
+				<c>UNION</c> and <c>JOIN</c> within a <c>FROM</c> clause are supported within derived tables and subqueries.
+			</p>
+		</remarks>
+	</body>
+</topic>

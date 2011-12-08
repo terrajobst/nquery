@@ -1,0 +1,10 @@
+<test>
+  <sql>SELECT	e.FirstName,
+		e.LastName
+FROM	Employees e
+ORDER	BY 0, 1, 2, 3</sql>
+  <expectedErrors>
+    <expectedError id="OrderByColumnPositionIsOutOfRange" text="The ORDER BY position number 0 is out of range of the number of items in the select list." />
+    <expectedError id="OrderByColumnPositionIsOutOfRange" text="The ORDER BY position number 3 is out of range of the number of items in the select list." />
+  </expectedErrors>
+</test>

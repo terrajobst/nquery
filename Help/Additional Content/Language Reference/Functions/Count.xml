@@ -1,0 +1,45 @@
+<topic>
+	<head>
+		<title>COUNT</title>
+		<keywords>
+			<keyword term="functions, COUNT" />
+			<keyword term="aggregates, COUNT" />
+			<keyword term="aggregate functions, COUNT" />
+			<keyword term="COUNT aggregate" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Aggregate Functions.html">Aggregate Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns the number of items in a group.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">COUNT ( { expression | * } ) RETURNS int</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						Can be an expression of any type.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				<c>COUNT(*)</c> returns the number of items in a group. This includes <c>NULL</c> values and duplicates.
+			</p>
+			<p>
+				<c>COUNT(expression)</c> evaluates <c>expression</c> for each row in a group and returns the number of non-<c>NULL</c> values.
+			</p>
+		</returns>
+	</body>
+</topic>

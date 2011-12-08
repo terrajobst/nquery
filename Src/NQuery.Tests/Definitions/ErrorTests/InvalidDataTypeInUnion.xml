@@ -1,0 +1,11 @@
+<test>
+  <sql>SELECT	*
+FROM	Employees
+UNION
+SELECT	*
+FROM	Employees
+</sql>
+  <expectedErrors>
+    <expectedError id="InvalidDataTypeInUnion" text="The data type 'Byte[]' cannot be used in UNION since it cannot be compared or sorted." />
+  </expectedErrors>
+</test>

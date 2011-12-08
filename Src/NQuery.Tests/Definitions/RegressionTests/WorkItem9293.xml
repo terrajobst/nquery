@@ -1,0 +1,117 @@
+<test>
+  <sql>SELECT  e.FirstName + ' ' + e.LastName AS FullName
+FROM    Employees e
+UNION   all
+SELECT  null
+WHERE   false
+</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="FullName" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <FullName>Nancy Davolio</FullName>
+  </Table1>
+  <Table1>
+    <FullName>Andrew Fuller</FullName>
+  </Table1>
+  <Table1>
+    <FullName>Janet Leverling</FullName>
+  </Table1>
+  <Table1>
+    <FullName>Margaret Peacock</FullName>
+  </Table1>
+  <Table1>
+    <FullName>Steven Buchanan</FullName>
+  </Table1>
+  <Table1>
+    <FullName>Michael Suyama</FullName>
+  </Table1>
+  <Table1>
+    <FullName>Robert King</FullName>
+  </Table1>
+  <Table1>
+    <FullName>Laura Callahan</FullName>
+  </Table1>
+  <Table1>
+    <FullName>Anne Dodsworth</FullName>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="Expr1003 AS FullName" />
+          <property name="Output List.[0].Column" value="Expr1003" />
+          <property name="Output List.[0].DataType" value="String" />
+          <property name="Output List.[0].Output Name" value="FullName" />
+        </properties>
+        <input>
+          <element operator="ComputeScalar">
+            <properties>
+              <property name="Output List.[0]" value="Expr1003" />
+              <property name="Output List.[0].Column" value="Expr1003" />
+              <property name="Output List.[0].DataType" value="String" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="9" />
+              <property name="Statistics.Average Row Count" value="9" />
+              <property name="Defined Values.[0]" value="Expr1003 = Expr1002" />
+              <property name="Defined Values.[0].Target" value="Expr1003" />
+              <property name="Defined Values.[0].DataType" value="String" />
+              <property name="Defined Values.[0].Source" value="Expr1002" />
+            </properties>
+            <input>
+              <element operator="ComputeScalar">
+                <properties>
+                  <property name="Output List.[0]" value="Expr1002" />
+                  <property name="Output List.[0].Column" value="Expr1002" />
+                  <property name="Output List.[0].DataType" value="String" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="9" />
+                  <property name="Statistics.Average Row Count" value="9" />
+                  <property name="Defined Values.[0]" value="Expr1002 = e.FirstName + ' ' + e.LastName" />
+                  <property name="Defined Values.[0].Target" value="Expr1002" />
+                  <property name="Defined Values.[0].DataType" value="String" />
+                  <property name="Defined Values.[0].Source" value="e.FirstName + ' ' + e.LastName" />
+                </properties>
+                <input>
+                  <element operator="TableScan">
+                    <properties>
+                      <property name="Table" value="Employees AS e" />
+                      <property name="Output List.[0]" value="e.LastName" />
+                      <property name="Output List.[0].Table" value="e" />
+                      <property name="Output List.[0].Column" value="LastName" />
+                      <property name="Output List.[0].DataType" value="String" />
+                      <property name="Output List.[1]" value="e.FirstName" />
+                      <property name="Output List.[1].Table" value="e" />
+                      <property name="Output List.[1].Column" value="FirstName" />
+                      <property name="Output List.[1].DataType" value="String" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="9" />
+                      <property name="Statistics.Average Row Count" value="9" />
+                    </properties>
+                    <input />
+                  </element>
+                </input>
+              </element>
+            </input>
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

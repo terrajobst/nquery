@@ -1,0 +1,7 @@
+<test>
+  <sql>SELECT	*
+FROM	Ordars</sql>
+  <expectedErrors>
+    <expectedError id="UndeclaredTable" text="Table 'Ordars' is not declared." />
+  </expectedErrors>
+</test>

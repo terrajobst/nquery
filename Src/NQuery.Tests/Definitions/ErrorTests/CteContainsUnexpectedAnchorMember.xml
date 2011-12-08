@@ -1,0 +1,24 @@
+<test>
+  <sql>WITH EmployeeHierarchy AS
+(
+	SELECT	e.EmployeeId
+	FROM	Employees e
+
+	UNION ALL
+
+	SELECT	e.EmployeeId
+	FROM	Employees e
+				INNER JOIN EmployeeHierarchy eh ON e.ReportsTo = eh.EmployeeID
+
+	UNION ALL
+
+	SELECT	e.EmployeeId
+	FROM	Employees e
+)
+SELECT	*
+FROM	EmployeeHierarchy
+</sql>
+  <expectedErrors>
+    <expectedError id="CteContainsUnexpectedAnchorMember" text="An anchor member was found in the recursive part of recursive query 'EmployeeHierarchy'." />
+  </expectedErrors>
+</test>

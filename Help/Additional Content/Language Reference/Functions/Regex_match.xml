@@ -1,0 +1,47 @@
+<topic>
+	<head>
+		<title>REGEX_MATCH</title>
+		<keywords>
+			<keyword term="functions, REGEX_MATCH" />
+			<keyword term="string functions, REGEX_MATCH" />
+			<keyword term="REGEX_MATCH function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="String Functions.html">String Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Searches an input string for an occurrence of a regular expression and returns whether
+				it produces at least one match.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">REGEX_MATCH(text AS string, pattern AS string) RETURNS bool</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="text">
+					<p>
+						The string to search for a match.
+					</p>
+				</param>
+				<param name="pattern">
+					<p>
+						The regular expression used to produce a match.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				If <c>pattern</c> produces at least one match in <c>text</c> the return value is <c>TRUE</c>. Otherwise it is <c>FALSE</c>.
+			</p>
+		</returns>
+	</body>
+</topic>

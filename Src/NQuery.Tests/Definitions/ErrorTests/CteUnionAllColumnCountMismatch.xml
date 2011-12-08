@@ -1,0 +1,23 @@
+<test>
+  <sql>WITH EmployeeHierarchy AS
+(				
+   -- Base case
+   SELECT	999999999999 AS EmployeeId
+   FROM		Employees e
+   WHERE	ReportsTo IS NULL
+
+   UNION ALL
+
+   -- Recursive step
+   SELECT	e.EmployeeID,
+   			1
+   FROM		Employees e
+				INNER JOIN EmployeeHierarchy eh ON e.ReportsTo = eh.EmployeeID
+)
+SELECT	*
+FROM	EmployeeHierarchy eh
+ORDER	BY Path</sql>
+  <expectedErrors>
+    <expectedError id="DifferentExpressionCountInBinaryQuery" text="All queries combined using a UNION, INTERSECT or EXCEPT operator must have an equal number of expressions in their target lists." />
+  </expectedErrors>
+</test>

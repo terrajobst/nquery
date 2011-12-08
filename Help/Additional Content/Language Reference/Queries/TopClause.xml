@@ -1,0 +1,71 @@
+<topic>
+	<head>
+		<title>TOP Clause</title>
+		<toc index="2"/>
+		<keywords>
+			<keyword term="SELECT statement, TOP clause" />
+			<keyword term="TOP clause, about" />
+		</keywords>
+		<links>
+			<link href="Queries.html">SELECT Syntax</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Specifies that only the first set of rows will be returned from the query result.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">[ 
+     <b>TOP</b> <i>integer_literal</i>
+     [ <b>WITH TIES</b> ]
+]</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="integer_literal">
+					<p>
+						Is the constant numeric expression that specifies the number of rows to be returned.
+					</p>
+					<p>
+						If the query includes an <c>ORDER BY</c> clause, the first expression rows ordered by the <c>ORDER BY</c> clause are returned.
+						If the query has no <c>ORDER BY</c> clause, the order of the rows is arbitrary.
+					</p>
+				</param>
+				<param name="WITH TIES">
+					<p>
+						Specifies that additional rows be returned from the base result set with the same value in the <c>ORDER BY</c> columns appearing
+						as the last of the <c>TOP n</c> rows. <c>TOP ... WITH TIES</c> can be specified only if an <c>ORDER BY</c> clause is specified.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<examples>
+			<p>
+				This query will return the top 3 rows only. Although the fourth row has the same value in <c>Territory Count</c> as the third one this
+				row is discarded.
+			</p>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">  SELECT TOP 3
+         e.LastName + ', ' + e.FirstName Employee,
+         COUNT(*) [Territory Count]
+    FROM Employees e
+            INNER JOIN EmployeeTerritories et ON et.EmployeeID = e.EmployeeID
+GROUP BY e.LastName + ', ' + e.FirstName
+ORDER BY count(*) DESC</sampleCode>
+			<p>
+				The <c>TOP ... WITH TIES</c> query on the other hand will include this row:
+			</p>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">  SELECT TOP 3 WITH TIES
+         e.LastName + ', ' + e.FirstName Employee,
+         COUNT(*) [Territory Count]
+    FROM Employees e
+            INNER JOIN EmployeeTerritories et ON et.EmployeeID = e.EmployeeID
+GROUP BY e.LastName + ', ' + e.FirstName
+ORDER BY count(*) DESC</sampleCode>
+		</examples>
+	</body>
+</topic>

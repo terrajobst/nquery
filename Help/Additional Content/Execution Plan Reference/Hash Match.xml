@@ -1,0 +1,61 @@
+﻿<topic>
+	<head>
+		<title>Hash Match</title>
+		<keywords>
+			<keyword term="execution plan, hash match"/>
+			<keyword term="physical operators, hash match"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Hash Match</b> operator builds a hash table by computing a hash value for each row from its build input. The
+				<c>Hash Keys Build</c> property contains a list of columns used to create a hash value. Then, for each probe row
+				(as applicable), it computes a hash value (using the same hash function) and looks in the hash table for matches. If
+				a residual predicate is present (<c>Residual</c> property), that predicate must also be satisfied for rows to be
+				considered a match. The first (top) input is used to build the hash table and the second (bottom) input to probe the
+				hash table. Output matches (or nonmatches) as dictated by the join type.
+			</p>
+			<p>
+				<b>Hash Match</b> is a physical operator.
+			</p>
+		</summary>
+
+		<section title="Properties">
+			<table>
+				<tr>
+					<th>Property Name</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>Logical Operator</td>
+					<td>
+						Specfies whether the <b>Hash Match</b> operator performs an inner join, left outer join, right outer join,
+						or full outer join.
+					</td>
+				</tr>
+				<tr>
+					<td>Hash Keys Build</td>
+					<td>
+						Specifies the set of columns used to produce a hash value for the temporary hash table.
+					</td>
+				</tr>
+				<tr>
+					<td>Hash Keys Probe</td>
+					<td>
+						Specifies the set of columns used to probe the temporary hash table.
+					</td>
+				</tr>
+				<tr>
+					<td>Probe Residual</td>
+					<td>
+						Specifies predicate that must also be satisified to produce a match by the given join type.
+					</td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</topic>

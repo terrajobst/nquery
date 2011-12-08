@@ -1,0 +1,7 @@
+<test>
+  <sql>SELECT	*
+FROM</sql>
+  <expectedErrors>
+    <expectedError id="TableReferenceExpected" text="Found '&lt;End-of-File&gt;' but '&lt;Table Reference&gt;' expected" />
+  </expectedErrors>
+</test>

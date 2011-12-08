@@ -1,0 +1,42 @@
+<topic>
+	<head>
+		<title>SIN</title>
+		<keywords>
+			<keyword term="functions, SIN" />
+			<keyword term="mathematical functions, SIN" />
+			<keyword term="SIN function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Mathematical Functions.html">Mathematical Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				A mathematical function that returns the trigonometric sine of the specified angle, in radians, in the specified expression.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">SIN(value AS double) RETURNS double</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						An angle, measured in radians.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The sine of <c>value</c>. If <c>value</c> is equal to <c>NaN</c>, <c>NegativeInfinity</c>, or <c>PositiveInfinity</c>,
+				this function returns <c>NaN</c>.
+			</p>
+		</returns>
+	</body>
+</topic>

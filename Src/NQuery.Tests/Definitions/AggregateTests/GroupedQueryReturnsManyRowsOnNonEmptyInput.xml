@@ -1,0 +1,1281 @@
+<test>
+  <sql>SELECT	COUNT(o.OrderID) AS [COUNT],
+		AVG(o.OrderID) AS [AVG],
+		FIRST(o.OrderID) AS [FIRST],
+		LAST(o.OrderID) AS [LAST],
+		CONCAT(o.OrderID) AS [CONCAT],
+		MAX(o.OrderID) AS [MAX],
+		MIN(o.OrderID) AS [MIN],
+		SUM(o.OrderID) AS [SUM],
+		STDEV(o.OrderID) AS [STDEV],
+		VAR(o.OrderID) AS [VAR]
+FROM	Orders o
+GROUP	BY o.CustomerID</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="COUNT" type="xs:int" minOccurs="0" />
+                <xs:element name="AVG" type="xs:int" minOccurs="0" />
+                <xs:element name="FIRST" type="xs:int" minOccurs="0" />
+                <xs:element name="LAST" type="xs:int" minOccurs="0" />
+                <xs:element name="CONCAT" type="xs:string" minOccurs="0" />
+                <xs:element name="MAX" type="xs:int" minOccurs="0" />
+                <xs:element name="MIN" type="xs:int" minOccurs="0" />
+                <xs:element name="SUM" type="xs:int" minOccurs="0" />
+                <xs:element name="STDEV" type="xs:double" minOccurs="0" />
+                <xs:element name="VAR" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <COUNT>6</COUNT>
+    <AVG>10805</AVG>
+    <FIRST>10643</FIRST>
+    <LAST>10835</LAST>
+    <CONCAT>10643, 10692, 10702, 10835, 10952, 11011</CONCAT>
+    <MAX>11011</MAX>
+    <MIN>10643</MIN>
+    <SUM>64835</SUM>
+    <STDEV>151.36897524481913</STDEV>
+    <VAR>22912.566666666666666666666</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>4</COUNT>
+    <AVG>10654</AVG>
+    <FIRST>10759</FIRST>
+    <LAST>10625</LAST>
+    <CONCAT>10308, 10625, 10759, 10926</CONCAT>
+    <MAX>10926</MAX>
+    <MIN>10308</MIN>
+    <SUM>42618</SUM>
+    <STDEV>261.7664353324671</STDEV>
+    <VAR>68521.666666666666666666666667</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>7</COUNT>
+    <AVG>10599</AVG>
+    <FIRST>10507</FIRST>
+    <LAST>10856</LAST>
+    <CONCAT>10365, 10507, 10535, 10573, 10677, 10682, 10856</CONCAT>
+    <MAX>10856</MAX>
+    <MIN>10365</MIN>
+    <SUM>74195</SUM>
+    <STDEV>156.53190759470766</STDEV>
+    <VAR>24502.238095238095238095238333</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>13</COUNT>
+    <AVG>10711</AVG>
+    <FIRST>10864</FIRST>
+    <LAST>10355</LAST>
+    <CONCAT>10355, 10383, 10453, 10558, 10707, 10741, 10743, 10768, 10793, 10864, 10920, 10953, 11016</CONCAT>
+    <MAX>11016</MAX>
+    <MIN>10355</MIN>
+    <SUM>139254</SUM>
+    <STDEV>215.03404620115632</STDEV>
+    <VAR>46239.641025641025641025641667</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>18</COUNT>
+    <AVG>10635</AVG>
+    <FIRST>10654</FIRST>
+    <LAST>10278</LAST>
+    <CONCAT>10278, 10280, 10384, 10444, 10445, 10524, 10572, 10626, 10654, 10672, 10689, 10733, 10778, 10837, 10857, 10866, 10875, 10924</CONCAT>
+    <MAX>10924</MAX>
+    <MIN>10278</MIN>
+    <SUM>191438</SUM>
+    <STDEV>206.46783604295715</STDEV>
+    <VAR>42628.967320261437908496729412</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>7</COUNT>
+    <AVG>10724</AVG>
+    <FIRST>10501</FIRST>
+    <LAST>10582</LAST>
+    <CONCAT>10501, 10509, 10582, 10614, 10853, 10956, 11058</CONCAT>
+    <MAX>11058</MAX>
+    <MIN>10501</MIN>
+    <SUM>75073</SUM>
+    <STDEV>227.38932420389654</STDEV>
+    <VAR>51705.9047619047619047619</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>11</COUNT>
+    <AVG>10513</AVG>
+    <FIRST>10449</FIRST>
+    <LAST>10360</LAST>
+    <CONCAT>10265, 10297, 10360, 10436, 10449, 10559, 10566, 10584, 10628, 10679, 10826</CONCAT>
+    <MAX>10826</MAX>
+    <MIN>10265</MIN>
+    <SUM>115649</SUM>
+    <STDEV>170.38389808685776</STDEV>
+    <VAR>29030.67272727272727272727</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>3</COUNT>
+    <AVG>10699</AVG>
+    <FIRST>10326</FIRST>
+    <LAST>10801</LAST>
+    <CONCAT>10326, 10801, 10970</CONCAT>
+    <MAX>10970</MAX>
+    <MIN>10326</MIN>
+    <SUM>32097</SUM>
+    <STDEV>333.89669060953571</STDEV>
+    <VAR>111487</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>17</COUNT>
+    <AVG>10685</AVG>
+    <FIRST>10871</FIRST>
+    <LAST>11076</LAST>
+    <CONCAT>10331, 10340, 10362, 10470, 10511, 10525, 10663, 10715, 10730, 10732, 10755, 10827, 10871, 10876, 10932, 10940, 11076</CONCAT>
+    <MAX>11076</MAX>
+    <MIN>10331</MIN>
+    <SUM>181656</SUM>
+    <STDEV>227.95803922445643</STDEV>
+    <VAR>51964.8676470588235294117625</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>14</COUNT>
+    <AVG>10768</AVG>
+    <FIRST>10975</FIRST>
+    <LAST>10410</LAST>
+    <CONCAT>10389, 10410, 10411, 10431, 10492, 10742, 10918, 10944, 10949, 10975, 10982, 11027, 11045, 11048</CONCAT>
+    <MAX>11048</MAX>
+    <MIN>10389</MIN>
+    <SUM>150763</SUM>
+    <STDEV>275.50769319746593</STDEV>
+    <VAR>75904.489010989010989010992308</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>10</COUNT>
+    <AVG>10641</AVG>
+    <FIRST>10539</FIRST>
+    <LAST>10943</LAST>
+    <CONCAT>10289, 10471, 10484, 10538, 10539, 10578, 10599, 10943, 10947, 11023</CONCAT>
+    <MAX>11023</MAX>
+    <MIN>10289</MIN>
+    <SUM>106411</SUM>
+    <STDEV>243.8038601462705</STDEV>
+    <VAR>59440.322222222222222222222222</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>6</COUNT>
+    <AVG>10832</AVG>
+    <FIRST>11054</FIRST>
+    <LAST>10782</LAST>
+    <CONCAT>10521, 10782, 10819, 10881, 10937, 11054</CONCAT>
+    <MAX>11054</MAX>
+    <MIN>10521</MIN>
+    <SUM>64994</SUM>
+    <STDEV>180.05517672832033</STDEV>
+    <VAR>32419.866666666666666666666</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>1</COUNT>
+    <AVG>10259</AVG>
+    <FIRST>10259</FIRST>
+    <LAST>10259</LAST>
+    <CONCAT>10259</CONCAT>
+    <MAX>10259</MAX>
+    <MIN>10259</MIN>
+    <SUM>10259</SUM>
+  </Table1>
+  <Table1>
+    <COUNT>8</COUNT>
+    <AVG>10707</AVG>
+    <FIRST>10966</FIRST>
+    <LAST>10746</LAST>
+    <CONCAT>10254, 10370, 10519, 10731, 10746, 10966, 11029, 11041</CONCAT>
+    <MAX>11041</MAX>
+    <MIN>10254</MIN>
+    <SUM>85656</SUM>
+    <STDEV>302.026488904533</STDEV>
+    <VAR>91220</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>5</COUNT>
+    <AVG>10652</AVG>
+    <FIRST>10290</FIRST>
+    <LAST>10494</LAST>
+    <CONCAT>10290, 10466, 10494, 10969, 11042</CONCAT>
+    <MAX>11042</MAX>
+    <MIN>10290</MIN>
+    <SUM>53261</SUM>
+    <STDEV>332.863635742927</STDEV>
+    <VAR>110798.20</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>3</COUNT>
+    <AVG>10581</AVG>
+    <FIRST>10848</FIRST>
+    <LAST>10462</LAST>
+    <CONCAT>10435, 10462, 10848</CONCAT>
+    <MAX>10848</MAX>
+    <MIN>10435</MIN>
+    <SUM>31745</SUM>
+    <STDEV>231.0461714318879</STDEV>
+    <VAR>53382.333333333333333333335</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>6</COUNT>
+    <AVG>10746</AVG>
+    <FIRST>10825</FIRST>
+    <LAST>11067</LAST>
+    <CONCAT>10363, 10391, 10797, 10825, 11036, 11067</CONCAT>
+    <MAX>11067</MAX>
+    <MIN>10363</MIN>
+    <SUM>64479</SUM>
+    <STDEV>306.1684177050272</STDEV>
+    <VAR>93739.10</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>4</COUNT>
+    <AVG>10623</AVG>
+    <FIRST>10683</FIRST>
+    <LAST>10890</LAST>
+    <CONCAT>10311, 10609, 10683, 10890</CONCAT>
+    <MAX>10890</MAX>
+    <MIN>10311</MIN>
+    <SUM>42493</SUM>
+    <STDEV>239.74204887753837</STDEV>
+    <VAR>57476.2500</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>8</COUNT>
+    <AVG>10767</AVG>
+    <FIRST>10532</FIRST>
+    <LAST>10364</LAST>
+    <CONCAT>10364, 10400, 10532, 10726, 10987, 11024, 11047, 11056</CONCAT>
+    <MAX>11056</MAX>
+    <MIN>10364</MIN>
+    <SUM>86136</SUM>
+    <STDEV>300.08903440717154</STDEV>
+    <VAR>90053.42857142857142857142857</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>30</COUNT>
+    <AVG>10662</AVG>
+    <FIRST>10258</FIRST>
+    <LAST>10351</LAST>
+    <CONCAT>10258, 10263, 10351, 10368, 10382, 10390, 10402, 10403, 10430, 10442, 10514, 10571, 10595, 10633, 10667, 10698, 10764, 10771, 10773, 10776, 10795, 10836, 10854, 10895, 10968, 10979, 10990, 11008, 11017, 11072</CONCAT>
+    <MAX>11072</MAX>
+    <MIN>10258</MIN>
+    <SUM>319865</SUM>
+    <STDEV>251.47620485683214</STDEV>
+    <VAR>63240.281609195402298850575862</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>7</COUNT>
+    <AVG>10516</AVG>
+    <FIRST>10725</FIRST>
+    <LAST>10414</LAST>
+    <CONCAT>10347, 10386, 10414, 10512, 10581, 10650, 10725</CONCAT>
+    <MAX>10725</MAX>
+    <MIN>10347</MIN>
+    <SUM>73615</SUM>
+    <STDEV>142.44397394865715</STDEV>
+    <VAR>20290.285714285714285714285</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>5</COUNT>
+    <AVG>10614</AVG>
+    <FIRST>10763</FIRST>
+    <LAST>10789</LAST>
+    <CONCAT>10408, 10480, 10634, 10763, 10789</CONCAT>
+    <MAX>10789</MAX>
+    <MIN>10408</MIN>
+    <SUM>53074</SUM>
+    <STDEV>168.53397283633944</STDEV>
+    <VAR>28403.70</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>19</COUNT>
+    <AVG>10724</AVG>
+    <FIRST>10460</FIRST>
+    <LAST>10774</LAST>
+    <CONCAT>10264, 10327, 10378, 10434, 10460, 10533, 10561, 10703, 10762, 10774, 10824, 10880, 10902, 10955, 10977, 10980, 10993, 11001, 11050</CONCAT>
+    <MAX>11050</MAX>
+    <MIN>10264</MIN>
+    <SUM>203758</SUM>
+    <STDEV>259.7485738891109</STDEV>
+    <VAR>67469.321637426900584795322222</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>15</COUNT>
+    <AVG>10621</AVG>
+    <FIRST>10267</FIRST>
+    <LAST>10653</LAST>
+    <CONCAT>10267, 10337, 10342, 10396, 10488, 10560, 10623, 10653, 10670, 10675, 10717, 10791, 10859, 10929, 11012</CONCAT>
+    <MAX>11012</MAX>
+    <MIN>10267</MIN>
+    <SUM>159319</SUM>
+    <STDEV>224.35573368669506</STDEV>
+    <VAR>50335.495238095238095238092857</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>3</COUNT>
+    <AVG>10834</AVG>
+    <FIRST>10671</FIRST>
+    <LAST>10860</LAST>
+    <CONCAT>10671, 10860, 10971</CONCAT>
+    <MAX>10971</MAX>
+    <MIN>10671</MIN>
+    <SUM>32502</SUM>
+    <STDEV>151.68058544190816</STDEV>
+    <VAR>23007</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>6</COUNT>
+    <AVG>10796</AVG>
+    <FIRST>10753</FIRST>
+    <LAST>11060</LAST>
+    <CONCAT>10422, 10710, 10753, 10807, 11026, 11060</CONCAT>
+    <MAX>11060</MAX>
+    <MIN>10422</MIN>
+    <SUM>64778</SUM>
+    <STDEV>233.16832260550888</STDEV>
+    <VAR>54367.466666666666666666666</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>8</COUNT>
+    <AVG>10552</AVG>
+    <FIRST>10491</FIRST>
+    <LAST>10664</LAST>
+    <CONCAT>10328, 10352, 10464, 10491, 10551, 10604, 10664, 10963</CONCAT>
+    <MAX>10963</MAX>
+    <MIN>10328</MIN>
+    <SUM>84417</SUM>
+    <STDEV>202.06465549422541</STDEV>
+    <VAR>40830.125000</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>5</COUNT>
+    <AVG>10635</AVG>
+    <FIRST>10568</FIRST>
+    <LAST>10366</LAST>
+    <CONCAT>10366, 10426, 10568, 10887, 10928</CONCAT>
+    <MAX>10928</MAX>
+    <MIN>10366</MIN>
+    <SUM>53175</SUM>
+    <STDEV>259.75180461355797</STDEV>
+    <VAR>67471</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>10</COUNT>
+    <AVG>10802</AVG>
+    <FIRST>11009</FIRST>
+    <LAST>10874</LAST>
+    <CONCAT>10303, 10550, 10629, 10872, 10874, 10888, 10911, 10948, 11009, 11037</CONCAT>
+    <MAX>11037</MAX>
+    <MIN>10303</MIN>
+    <SUM>108021</SUM>
+    <STDEV>233.61528203437376</STDEV>
+    <VAR>54576.10</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>9</COUNT>
+    <AVG>10753</AVG>
+    <FIRST>10959</FIRST>
+    <LAST>10777</LAST>
+    <CONCAT>10423, 10652, 10685, 10709, 10734, 10777, 10790, 10959, 11049</CONCAT>
+    <MAX>11049</MAX>
+    <MIN>10423</MIN>
+    <SUM>96778</SUM>
+    <STDEV>179.58942371729776</STDEV>
+    <VAR>32252.3611111111111111111125</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>11</COUNT>
+    <AVG>10776</AVG>
+    <FIRST>11040</FIRST>
+    <LAST>10816</LAST>
+    <CONCAT>10528, 10589, 10616, 10617, 10656, 10681, 10816, 10936, 11006, 11040, 11061</CONCAT>
+    <MAX>11061</MAX>
+    <MIN>10528</MIN>
+    <SUM>118546</SUM>
+    <STDEV>200.44722724221185</STDEV>
+    <VAR>40179.09090909090909090909</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>2</COUNT>
+    <AVG>10526</AVG>
+    <FIRST>10268</FIRST>
+    <LAST>10785</LAST>
+    <CONCAT>10268, 10785</CONCAT>
+    <MAX>10785</MAX>
+    <MIN>10268</MIN>
+    <SUM>21053</SUM>
+    <STDEV>365.57420587344507</STDEV>
+    <VAR>133644.50</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>14</COUNT>
+    <AVG>10758</AVG>
+    <FIRST>11022</FIRST>
+    <LAST>10690</LAST>
+    <CONCAT>10250, 10253, 10541, 10645, 10690, 10770, 10783, 10886, 10903, 10922, 10925, 10981, 11022, 11052</CONCAT>
+    <MAX>11052</MAX>
+    <MIN>10250</MIN>
+    <SUM>150623</SUM>
+    <STDEV>259.64270674300707</STDEV>
+    <VAR>67414.335164835164835164838462</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>18</COUNT>
+    <AVG>10679</AVG>
+    <FIRST>10796</FIRST>
+    <LAST>10901</LAST>
+    <CONCAT>10257, 10395, 10476, 10486, 10490, 10498, 10552, 10601, 10613, 10641, 10705, 10796, 10863, 10901, 10957, 10960, 10976, 11055</CONCAT>
+    <MAX>11055</MAX>
+    <MIN>10257</MIN>
+    <SUM>192222</SUM>
+    <STDEV>232.25594401309036</STDEV>
+    <VAR>53942.823529411764705882352941</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>5</COUNT>
+    <AVG>10488</AVG>
+    <FIRST>10660</FIRST>
+    <LAST>10415</LAST>
+    <CONCAT>10375, 10394, 10415, 10600, 10660</CONCAT>
+    <MAX>10660</MAX>
+    <MIN>10375</MIN>
+    <SUM>52444</SUM>
+    <STDEV>131.39520539197767</STDEV>
+    <VAR>17264.70</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>19</COUNT>
+    <AVG>10616</AVG>
+    <FIRST>11063</FIRST>
+    <LAST>10736</LAST>
+    <CONCAT>10298, 10309, 10335, 10373, 10380, 10429, 10503, 10516, 10567, 10646, 10661, 10687, 10701, 10712, 10736, 10897, 10912, 10985, 11063</CONCAT>
+    <MAX>11063</MAX>
+    <MIN>10298</MIN>
+    <SUM>201710</SUM>
+    <STDEV>234.58830430057651</STDEV>
+    <VAR>55031.672514619883040935672222</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>10</COUNT>
+    <AVG>10603</AVG>
+    <FIRST>10473</FIRST>
+    <LAST>10798</LAST>
+    <CONCAT>10315, 10318, 10321, 10473, 10621, 10674, 10749, 10798, 10829, 10933</CONCAT>
+    <MAX>10933</MAX>
+    <MIN>10315</MIN>
+    <SUM>106031</SUM>
+    <STDEV>232.20558419928952</STDEV>
+    <VAR>53919.433333333333333333333333</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>14</COUNT>
+    <AVG>10629</AVG>
+    <FIRST>10799</FIRST>
+    <LAST>10893</LAST>
+    <CONCAT>10323, 10325, 10456, 10457, 10468, 10506, 10542, 10630, 10718, 10799, 10817, 10849, 10893, 11028</CONCAT>
+    <MAX>11028</MAX>
+    <MIN>10323</MIN>
+    <SUM>148811</SUM>
+    <STDEV>222.51105664588968</STDEV>
+    <VAR>49511.170329670329670329669231</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>4</COUNT>
+    <AVG>10932</AVG>
+    <FIRST>10972</FIRST>
+    <LAST>10858</LAST>
+    <CONCAT>10858, 10927, 10972, 10973</CONCAT>
+    <MAX>10973</MAX>
+    <MIN>10858</MIN>
+    <SUM>43730</SUM>
+    <STDEV>54.101755978895916</STDEV>
+    <VAR>2927.00</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>14</COUNT>
+    <AVG>10585</AVG>
+    <FIRST>10832</FIRST>
+    <LAST>10493</LAST>
+    <CONCAT>10350, 10358, 10371, 10413, 10425, 10454, 10493, 10500, 10610, 10631, 10787, 10832, 10923, 11051</CONCAT>
+    <MAX>11051</MAX>
+    <MIN>10350</MIN>
+    <SUM>148198</SUM>
+    <STDEV>228.1250380099321</STDEV>
+    <VAR>52041.032967032967032967038462</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>3</COUNT>
+    <AVG>10641</AVG>
+    <FIRST>10495</FIRST>
+    <LAST>10810</LAST>
+    <CONCAT>10495, 10620, 10810</CONCAT>
+    <MAX>10810</MAX>
+    <MIN>10495</MIN>
+    <SUM>31925</SUM>
+    <STDEV>158.61378670636842</STDEV>
+    <VAR>25158.333333333333333333335</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>2</COUNT>
+    <AVG>10513</AVG>
+    <FIRST>10545</FIRST>
+    <LAST>10482</LAST>
+    <CONCAT>10482, 10545</CONCAT>
+    <MAX>10545</MAX>
+    <MIN>10482</MIN>
+    <SUM>21027</SUM>
+    <STDEV>44.547727214752491</STDEV>
+    <VAR>1984.50</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>15</COUNT>
+    <AVG>10617</AVG>
+    <FIRST>10279</FIRST>
+    <LAST>10497</LAST>
+    <CONCAT>10279, 10284, 10343, 10497, 10522, 10534, 10536, 10557, 10592, 10593, 10772, 10862, 10891, 10934, 11070</CONCAT>
+    <MAX>11070</MAX>
+    <MIN>10279</MIN>
+    <SUM>159266</SUM>
+    <STDEV>240.04477756888451</STDEV>
+    <VAR>57621.4952380952380952381</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>4</COUNT>
+    <AVG>10729</AVG>
+    <FIRST>10579</FIRST>
+    <LAST>10884</LAST>
+    <CONCAT>10579, 10719, 10735, 10884</CONCAT>
+    <MAX>10884</MAX>
+    <MIN>10579</MIN>
+    <SUM>42917</SUM>
+    <STDEV>124.71400616343513</STDEV>
+    <VAR>15553.583333333333333333333333</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>14</COUNT>
+    <AVG>10627</AVG>
+    <FIRST>10997</FIRST>
+    <LAST>10357</LAST>
+    <CONCAT>10283, 10296, 10330, 10357, 10381, 10461, 10499, 10543, 10780, 10823, 10899, 10997, 11065, 11071</CONCAT>
+    <MAX>11071</MAX>
+    <MIN>10283</MIN>
+    <SUM>148785</SUM>
+    <STDEV>298.99877797537772</STDEV>
+    <VAR>89400.26923076923076923076923</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>12</COUNT>
+    <AVG>10780</AVG>
+    <FIRST>10405</FIRST>
+    <LAST>10485</LAST>
+    <CONCAT>10405, 10485, 10638, 10697, 10729, 10811, 10838, 10840, 10919, 10954, 11014, 11039</CONCAT>
+    <MAX>11039</MAX>
+    <MIN>10405</MIN>
+    <SUM>129369</SUM>
+    <STDEV>199.23860752191763</STDEV>
+    <VAR>39696.022727272727272727272727</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>8</COUNT>
+    <AVG>10657</AVG>
+    <FIRST>10883</FIRST>
+    <LAST>10665</LAST>
+    <CONCAT>10307, 10317, 10544, 10662, 10665, 10867, 10883, 11018</CONCAT>
+    <MAX>11018</MAX>
+    <MIN>10307</MIN>
+    <SUM>85263</SUM>
+    <STDEV>260.89102130966484</STDEV>
+    <VAR>68064.125000</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>10</COUNT>
+    <AVG>10632</AVG>
+    <FIRST>10784</FIRST>
+    <LAST>10950</LAST>
+    <CONCAT>10275, 10300, 10404, 10467, 10635, 10754, 10784, 10818, 10939, 10950</CONCAT>
+    <MAX>10950</MAX>
+    <MIN>10275</MIN>
+    <SUM>106326</SUM>
+    <STDEV>254.91706712401805</STDEV>
+    <VAR>64982.711111111111111111111111</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>7</COUNT>
+    <AVG>10815</AVG>
+    <FIRST>10529</FIRST>
+    <LAST>10760</LAST>
+    <CONCAT>10529, 10649, 10760, 10892, 10896, 10978, 11004</CONCAT>
+    <MAX>11004</MAX>
+    <MIN>10529</MIN>
+    <SUM>75708</SUM>
+    <STDEV>176.61432288356187</STDEV>
+    <VAR>31192.619047619047619047616667</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>13</COUNT>
+    <AVG>10515</AVG>
+    <FIRST>10570</FIRST>
+    <LAST>10619</LAST>
+    <CONCAT>10332, 10339, 10376, 10424, 10439, 10505, 10565, 10570, 10590, 10605, 10618, 10619, 10724</CONCAT>
+    <MAX>10724</MAX>
+    <MIN>10332</MIN>
+    <SUM>136706</SUM>
+    <STDEV>123.25099469094637</STDEV>
+    <VAR>15190.807692307692307692308333</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>5</COUNT>
+    <AVG>10655</AVG>
+    <FIRST>10945</FIRST>
+    <LAST>10779</LAST>
+    <CONCAT>10277, 10575, 10699, 10779, 10945</CONCAT>
+    <MAX>10945</MAX>
+    <MIN>10277</MIN>
+    <SUM>53275</SUM>
+    <STDEV>250.34775812856802</STDEV>
+    <VAR>62674</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>3</COUNT>
+    <AVG>10775</AVG>
+    <FIRST>11057</FIRST>
+    <LAST>10517</LAST>
+    <CONCAT>10517, 10752, 11057</CONCAT>
+    <MAX>11057</MAX>
+    <MIN>10517</MIN>
+    <SUM>32326</SUM>
+    <STDEV>270.755116910712</STDEV>
+    <VAR>73308.333333333333333333335</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>5</COUNT>
+    <AVG>10756</AVG>
+    <FIRST>10531</FIRST>
+    <LAST>10986</LAST>
+    <CONCAT>10409, 10531, 10898, 10958, 10986</CONCAT>
+    <MAX>10986</MAX>
+    <MIN>10409</MIN>
+    <SUM>53782</SUM>
+    <STDEV>266.88068495115942</STDEV>
+    <VAR>71225.30</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>10</COUNT>
+    <AVG>10672</AVG>
+    <FIRST>10305</FIRST>
+    <LAST>10855</LAST>
+    <CONCAT>10305, 10338, 10441, 10594, 10680, 10706, 10808, 10855, 10965, 11034</CONCAT>
+    <MAX>11034</MAX>
+    <MIN>10305</MIN>
+    <SUM>106726</SUM>
+    <STDEV>252.93486205828654</STDEV>
+    <VAR>63976.044444444444444444444444</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>10</COUNT>
+    <AVG>10661</AVG>
+    <FIRST>10260</FIRST>
+    <LAST>10684</LAST>
+    <CONCAT>10260, 10407, 10508, 10554, 10580, 10684, 10766, 10833, 10999, 11020</CONCAT>
+    <MAX>11020</MAX>
+    <MIN>10260</MIN>
+    <SUM>106611</SUM>
+    <STDEV>247.43100048296293</STDEV>
+    <VAR>61222.10</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>6</COUNT>
+    <AVG>10620</AVG>
+    <FIRST>10474</FIRST>
+    <LAST>10995</LAST>
+    <CONCAT>10322, 10354, 10474, 10502, 10995, 11073</CONCAT>
+    <MAX>11073</MAX>
+    <MIN>10322</MIN>
+    <SUM>63720</SUM>
+    <STDEV>328.82639796707321</STDEV>
+    <VAR>108126.8</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>10</COUNT>
+    <AVG>10611</AVG>
+    <FIRST>10489</FIRST>
+    <LAST>10530</LAST>
+    <CONCAT>10353, 10392, 10427, 10489, 10530, 10597, 10686, 10747, 10844, 11053</CONCAT>
+    <MAX>11053</MAX>
+    <MIN>10353</MIN>
+    <SUM>106118</SUM>
+    <STDEV>222.05845076365716</STDEV>
+    <VAR>49309.955555555555555555555556</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>5</COUNT>
+    <AVG>10530</AVG>
+    <FIRST>10477</FIRST>
+    <LAST>10397</LAST>
+    <CONCAT>10336, 10397, 10433, 10477, 11007</CONCAT>
+    <MAX>11007</MAX>
+    <MIN>10336</MIN>
+    <SUM>52650</SUM>
+    <STDEV>271.60265094435289</STDEV>
+    <VAR>73768</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>9</COUNT>
+    <AVG>10565</AVG>
+    <FIRST>10291</FIRST>
+    <LAST>10261</LAST>
+    <CONCAT>10261, 10291, 10379, 10421, 10587, 10647, 10720, 10794, 10989</CONCAT>
+    <MAX>10989</MAX>
+    <MIN>10261</MIN>
+    <SUM>95089</SUM>
+    <STDEV>246.54417003404842</STDEV>
+    <VAR>60784.0277777777777777777875</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>13</COUNT>
+    <AVG>10731</AVG>
+    <FIRST>10406</FIRST>
+    <LAST>10868</LAST>
+    <CONCAT>10372, 10406, 10487, 10637, 10659, 10704, 10728, 10786, 10868, 10913, 10914, 10961, 11068</CONCAT>
+    <MAX>11068</MAX>
+    <MIN>10372</MIN>
+    <SUM>139503</SUM>
+    <STDEV>216.73255408452141</STDEV>
+    <VAR>46973</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>28</COUNT>
+    <AVG>10643</AVG>
+    <FIRST>10540</FIRST>
+    <LAST>10286</LAST>
+    <CONCAT>10273, 10285, 10286, 10313, 10345, 10361, 10418, 10451, 10515, 10527, 10540, 10549, 10588, 10658, 10691, 10694, 10721, 10745, 10765, 10788, 10845, 10865, 10878, 10938, 10962, 10991, 10996, 11021</CONCAT>
+    <MAX>11021</MAX>
+    <MIN>10273</MIN>
+    <SUM>298009</SUM>
+    <STDEV>242.65217502080637</STDEV>
+    <VAR>58880.07804232804232804232963</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>5</COUNT>
+    <AVG>10785</AVG>
+    <FIRST>10828</FIRST>
+    <LAST>10448</LAST>
+    <CONCAT>10448, 10716, 10828, 10916, 11019</CONCAT>
+    <MAX>11019</MAX>
+    <MIN>10448</MIN>
+    <SUM>53927</SUM>
+    <STDEV>219.14333209112252</STDEV>
+    <VAR>48023.80</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>18</COUNT>
+    <AVG>10600</AVG>
+    <FIRST>10988</FIRST>
+    <LAST>10820</LAST>
+    <CONCAT>10262, 10272, 10294, 10314, 10316, 10346, 10401, 10479, 10564, 10569, 10598, 10761, 10820, 10852, 10889, 10988, 11000, 11077</CONCAT>
+    <MAX>11077</MAX>
+    <MIN>10262</MIN>
+    <SUM>190802</SUM>
+    <STDEV>282.67147609670985</STDEV>
+    <VAR>79903.16339869281045751634118</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>12</COUNT>
+    <AVG>10701</AVG>
+    <FIRST>10586</FIRST>
+    <LAST>10655</LAST>
+    <CONCAT>10288, 10428, 10443, 10562, 10586, 10655, 10727, 10812, 10908, 10942, 11010, 11062</CONCAT>
+    <MAX>11062</MAX>
+    <MIN>10288</MIN>
+    <SUM>128423</SUM>
+    <STDEV>249.73493523892063</STDEV>
+    <VAR>62367.537878787878787878781818</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>11</COUNT>
+    <AVG>10631</AVG>
+    <FIRST>10287</FIRST>
+    <LAST>10813</LAST>
+    <CONCAT>10287, 10299, 10447, 10481, 10563, 10622, 10648, 10813, 10851, 10877, 11059</CONCAT>
+    <MAX>11059</MAX>
+    <MIN>10287</MIN>
+    <SUM>116947</SUM>
+    <STDEV>248.01829111433037</STDEV>
+    <VAR>61513.07272727272727272727</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>10</COUNT>
+    <AVG>10737</AVG>
+    <FIRST>10666</FIRST>
+    <LAST>11075</LAST>
+    <CONCAT>10255, 10419, 10537, 10666, 10751, 10758, 10931, 10951, 11033, 11075</CONCAT>
+    <MAX>11075</MAX>
+    <MIN>10255</MIN>
+    <SUM>107376</SUM>
+    <STDEV>271.70539601233946</STDEV>
+    <VAR>73823.822222222222222222222222</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>5</COUNT>
+    <AVG>10559</AVG>
+    <FIRST>10281</FIRST>
+    <LAST>10282</LAST>
+    <CONCAT>10281, 10282, 10306, 10917, 11013</CONCAT>
+    <MAX>11013</MAX>
+    <MIN>10281</MIN>
+    <SUM>52799</SUM>
+    <STDEV>371.58404163795842</STDEV>
+    <VAR>138074.70</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>6</COUNT>
+    <AVG>10716</AVG>
+    <FIRST>10831</FIRST>
+    <LAST>11015</LAST>
+    <CONCAT>10387, 10520, 10639, 10831, 10909, 11015</CONCAT>
+    <MAX>11015</MAX>
+    <MIN>10387</MIN>
+    <SUM>64301</SUM>
+    <STDEV>241.8498845702984</STDEV>
+    <VAR>58491.366666666666666666666</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>31</COUNT>
+    <AVG>10722</AVG>
+    <FIRST>10607</FIRST>
+    <LAST>10748</LAST>
+    <CONCAT>10324, 10393, 10398, 10440, 10452, 10510, 10555, 10603, 10607, 10612, 10627, 10657, 10678, 10700, 10711, 10713, 10714, 10722, 10748, 10757, 10815, 10847, 10882, 10894, 10941, 10983, 10984, 11002, 11030, 11031, 11064</CONCAT>
+    <MAX>11064</MAX>
+    <MIN>10324</MIN>
+    <SUM>332394</SUM>
+    <STDEV>208.49375329081281</STDEV>
+    <VAR>43469.64516129032258064516</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>9</COUNT>
+    <AVG>10571</AVG>
+    <FIRST>10869</FIRST>
+    <LAST>10547</LAST>
+    <CONCAT>10359, 10377, 10388, 10472, 10523, 10547, 10800, 10804, 10869</CONCAT>
+    <MAX>10869</MAX>
+    <MIN>10359</MIN>
+    <SUM>95139</SUM>
+    <STDEV>201.33429911468141</STDEV>
+    <VAR>40535.5</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>7</COUNT>
+    <AVG>10643</AVG>
+    <FIRST>10669</FIRST>
+    <LAST>10642</LAST>
+    <CONCAT>10341, 10417, 10556, 10642, 10669, 10802, 11074</CONCAT>
+    <MAX>11074</MAX>
+    <MIN>10341</MIN>
+    <SUM>74501</SUM>
+    <STDEV>245.48183911102942</STDEV>
+    <VAR>60261.333333333333333333333333</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>4</COUNT>
+    <AVG>10913</AVG>
+    <FIRST>10964</FIRST>
+    <LAST>10907</LAST>
+    <CONCAT>10738, 10907, 10964, 11043</CONCAT>
+    <MAX>11043</MAX>
+    <MIN>10738</MIN>
+    <SUM>43652</SUM>
+    <STDEV>129.30841684386468</STDEV>
+    <VAR>16720.666666666666666666666667</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>9</COUNT>
+    <AVG>10520</AVG>
+    <FIRST>10821</FIRST>
+    <LAST>10369</LAST>
+    <CONCAT>10271, 10329, 10349, 10369, 10385, 10432, 10756, 10821, 10974</CONCAT>
+    <MAX>10974</MAX>
+    <MIN>10271</MIN>
+    <SUM>94686</SUM>
+    <STDEV>257.12399732424819</STDEV>
+    <VAR>66112.7500000000000000000</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>12</COUNT>
+    <AVG>10691</AVG>
+    <FIRST>10885</FIRST>
+    <LAST>10930</LAST>
+    <CONCAT>10252, 10302, 10458, 10463, 10475, 10767, 10841, 10846, 10885, 10930, 11035, 11038</CONCAT>
+    <MAX>11038</MAX>
+    <MIN>10252</MIN>
+    <SUM>128292</SUM>
+    <STDEV>283.2881603918205</STDEV>
+    <VAR>80252.18181818181818181818182</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>4</COUNT>
+    <AVG>10703</AVG>
+    <FIRST>10708</FIRST>
+    <LAST>10310</LAST>
+    <CONCAT>10310, 10708, 10805, 10992</CONCAT>
+    <MAX>10992</MAX>
+    <MIN>10310</MIN>
+    <SUM>42815</SUM>
+    <STDEV>287.74800897081229</STDEV>
+    <VAR>82798.91666666666666666666667</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>3</COUNT>
+    <AVG>10800</AVG>
+    <FIRST>10775</FIRST>
+    <LAST>11003</LAST>
+    <CONCAT>10624, 10775, 11003</CONCAT>
+    <MAX>11003</MAX>
+    <MIN>10624</MIN>
+    <SUM>32402</SUM>
+    <STDEV>190.79919636448508</STDEV>
+    <VAR>36404.333333333333333333335</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>6</COUNT>
+    <AVG>10542</AVG>
+    <FIRST>10967</FIRST>
+    <LAST>10608</LAST>
+    <CONCAT>10249, 10438, 10446, 10548, 10608, 10967</CONCAT>
+    <MAX>10967</MAX>
+    <MIN>10249</MIN>
+    <SUM>63256</SUM>
+    <STDEV>241.20337200517463</STDEV>
+    <VAR>58179.066666666666666666666</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>10</COUNT>
+    <AVG>10578</AVG>
+    <FIRST>11069</FIRST>
+    <LAST>10276</LAST>
+    <CONCAT>10276, 10293, 10304, 10319, 10518, 10576, 10676, 10842, 10915, 11069</CONCAT>
+    <MAX>11069</MAX>
+    <MIN>10276</MIN>
+    <SUM>105788</SUM>
+    <STDEV>289.0854544939956</STDEV>
+    <VAR>83570.40</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>6</COUNT>
+    <AVG>10649</AVG>
+    <FIRST>10496</FIRST>
+    <LAST>10839</LAST>
+    <CONCAT>10292, 10496, 10606, 10830, 10834, 10839</CONCAT>
+    <MAX>10839</MAX>
+    <MIN>10292</MIN>
+    <SUM>63897</SUM>
+    <STDEV>226.18200635771186</STDEV>
+    <VAR>51158.30</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>3</COUNT>
+    <AVG>10657</AVG>
+    <FIRST>10822</FIRST>
+    <LAST>10574</LAST>
+    <CONCAT>10574, 10577, 10822</CONCAT>
+    <MAX>10822</MAX>
+    <MIN>10574</MIN>
+    <SUM>31973</SUM>
+    <STDEV>142.32474603291351</STDEV>
+    <VAR>20256.333333333333333333335</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>11</COUNT>
+    <AVG>10680</AVG>
+    <FIRST>10399</FIRST>
+    <LAST>10994</LAST>
+    <CONCAT>10367, 10399, 10465, 10591, 10602, 10688, 10744, 10769, 10921, 10946, 10994</CONCAT>
+    <MAX>10994</MAX>
+    <MIN>10367</MIN>
+    <SUM>117486</SUM>
+    <STDEV>218.32790185240347</STDEV>
+    <VAR>47667.07272727272727272727</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>10</COUNT>
+    <AVG>10583</AVG>
+    <FIRST>10334</FIRST>
+    <LAST>10806</LAST>
+    <CONCAT>10251, 10334, 10450, 10459, 10478, 10546, 10806, 10814, 10843, 10850</CONCAT>
+    <MAX>10850</MAX>
+    <MIN>10251</MIN>
+    <SUM>105831</SUM>
+    <STDEV>225.99481311648626</STDEV>
+    <VAR>51073.655555555555555555555556</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>5</COUNT>
+    <AVG>10458</AVG>
+    <FIRST>10295</FIRST>
+    <LAST>10248</LAST>
+    <CONCAT>10248, 10274, 10295, 10737, 10739</CONCAT>
+    <MAX>10739</MAX>
+    <MIN>10248</MIN>
+    <SUM>52293</SUM>
+    <STDEV>255.59988262908104</STDEV>
+    <VAR>65331.30</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>10</COUNT>
+    <AVG>10546</AVG>
+    <FIRST>10640</FIRST>
+    <LAST>10348</LAST>
+    <CONCAT>10301, 10312, 10348, 10356, 10513, 10632, 10640, 10651, 10668, 11046</CONCAT>
+    <MAX>11046</MAX>
+    <MIN>10301</MIN>
+    <SUM>105467</SUM>
+    <STDEV>231.73502588564858</STDEV>
+    <VAR>53701.122222222222222222222222</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>15</COUNT>
+    <AVG>10517</AVG>
+    <FIRST>10583</FIRST>
+    <LAST>10526</LAST>
+    <CONCAT>10266, 10270, 10320, 10333, 10412, 10416, 10437, 10455, 10526, 10553, 10583, 10636, 10750, 10781, 11025</CONCAT>
+    <MAX>11025</MAX>
+    <MIN>10266</MIN>
+    <SUM>157763</SUM>
+    <STDEV>212.14613112753423</STDEV>
+    <VAR>45005.980952380952380952385714</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>9</COUNT>
+    <AVG>10695</AVG>
+    <FIRST>10256</FIRST>
+    <LAST>10900</LAST>
+    <CONCAT>10256, 10420, 10585, 10644, 10803, 10809, 10900, 10905, 10935</CONCAT>
+    <MAX>10935</MAX>
+    <MIN>10256</MIN>
+    <SUM>96257</SUM>
+    <STDEV>237.5477729730263</STDEV>
+    <VAR>56428.94444444444444444445</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>14</COUNT>
+    <AVG>10670</AVG>
+    <FIRST>11032</FIRST>
+    <LAST>10344</LAST>
+    <CONCAT>10269, 10344, 10469, 10483, 10504, 10596, 10693, 10696, 10723, 10740, 10861, 10904, 11032, 11066</CONCAT>
+    <MAX>11066</MAX>
+    <MIN>10269</MIN>
+    <SUM>149380</SUM>
+    <STDEV>242.34273250914706</STDEV>
+    <VAR>58730</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>7</COUNT>
+    <AVG>10807</AVG>
+    <FIRST>10673</FIRST>
+    <LAST>10879</LAST>
+    <CONCAT>10615, 10673, 10695, 10873, 10879, 10910, 11005</CONCAT>
+    <MAX>11005</MAX>
+    <MIN>10615</MIN>
+    <SUM>75650</SUM>
+    <STDEV>145.32541481267546</STDEV>
+    <VAR>21119.476190476190476190483333</VAR>
+  </Table1>
+  <Table1>
+    <COUNT>7</COUNT>
+    <AVG>10799</AVG>
+    <FIRST>10792</FIRST>
+    <LAST>11044</LAST>
+    <CONCAT>10374, 10611, 10792, 10870, 10906, 10998, 11044</CONCAT>
+    <MAX>11044</MAX>
+    <MIN>10374</MIN>
+    <SUM>75595</SUM>
+    <STDEV>235.2776475328063</STDEV>
+    <VAR>55355.571428571428571428566667</VAR>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[00]" value="Expr1002 AS COUNT" />
+          <property name="Output List.[00].Column" value="Expr1002" />
+          <property name="Output List.[00].DataType" value="Int32" />
+          <property name="Output List.[00].Output Name" value="COUNT" />
+          <property name="Output List.[01]" value="Expr1003 AS AVG" />
+          <property name="Output List.[01].Column" value="Expr1003" />
+          <property name="Output List.[01].DataType" value="Int32" />
+          <property name="Output List.[01].Output Name" value="AVG" />
+          <property name="Output List.[02]" value="Expr1004 AS FIRST" />
+          <property name="Output List.[02].Column" value="Expr1004" />
+          <property name="Output List.[02].DataType" value="Int32" />
+          <property name="Output List.[02].Output Name" value="FIRST" />
+          <property name="Output List.[03]" value="Expr1005 AS LAST" />
+          <property name="Output List.[03].Column" value="Expr1005" />
+          <property name="Output List.[03].DataType" value="Int32" />
+          <property name="Output List.[03].Output Name" value="LAST" />
+          <property name="Output List.[04]" value="Expr1006 AS CONCAT" />
+          <property name="Output List.[04].Column" value="Expr1006" />
+          <property name="Output List.[04].DataType" value="String" />
+          <property name="Output List.[04].Output Name" value="CONCAT" />
+          <property name="Output List.[05]" value="Expr1007 AS MAX" />
+          <property name="Output List.[05].Column" value="Expr1007" />
+          <property name="Output List.[05].DataType" value="Int32" />
+          <property name="Output List.[05].Output Name" value="MAX" />
+          <property name="Output List.[06]" value="Expr1008 AS MIN" />
+          <property name="Output List.[06].Column" value="Expr1008" />
+          <property name="Output List.[06].DataType" value="Int32" />
+          <property name="Output List.[06].Output Name" value="MIN" />
+          <property name="Output List.[07]" value="Expr1009 AS SUM" />
+          <property name="Output List.[07].Column" value="Expr1009" />
+          <property name="Output List.[07].DataType" value="Int32" />
+          <property name="Output List.[07].Output Name" value="SUM" />
+          <property name="Output List.[08]" value="Expr1010 AS STDEV" />
+          <property name="Output List.[08].Column" value="Expr1010" />
+          <property name="Output List.[08].DataType" value="Double" />
+          <property name="Output List.[08].Output Name" value="STDEV" />
+          <property name="Output List.[09]" value="Expr1011 AS VAR" />
+          <property name="Output List.[09].Column" value="Expr1011" />
+          <property name="Output List.[09].DataType" value="Decimal" />
+          <property name="Output List.[09].Output Name" value="VAR" />
+        </properties>
+        <input>
+          <element operator="StreamAggregate">
+            <properties>
+              <property name="Output List.[00]" value="Expr1002" />
+              <property name="Output List.[00].Column" value="Expr1002" />
+              <property name="Output List.[00].DataType" value="Int32" />
+              <property name="Output List.[01]" value="Expr1003" />
+              <property name="Output List.[01].Column" value="Expr1003" />
+              <property name="Output List.[01].DataType" value="Int32" />
+              <property name="Output List.[02]" value="Expr1004" />
+              <property name="Output List.[02].Column" value="Expr1004" />
+              <property name="Output List.[02].DataType" value="Int32" />
+              <property name="Output List.[03]" value="Expr1005" />
+              <property name="Output List.[03].Column" value="Expr1005" />
+              <property name="Output List.[03].DataType" value="Int32" />
+              <property name="Output List.[04]" value="Expr1006" />
+              <property name="Output List.[04].Column" value="Expr1006" />
+              <property name="Output List.[04].DataType" value="String" />
+              <property name="Output List.[05]" value="Expr1007" />
+              <property name="Output List.[05].Column" value="Expr1007" />
+              <property name="Output List.[05].DataType" value="Int32" />
+              <property name="Output List.[06]" value="Expr1008" />
+              <property name="Output List.[06].Column" value="Expr1008" />
+              <property name="Output List.[06].DataType" value="Int32" />
+              <property name="Output List.[07]" value="Expr1009" />
+              <property name="Output List.[07].Column" value="Expr1009" />
+              <property name="Output List.[07].DataType" value="Int32" />
+              <property name="Output List.[08]" value="Expr1010" />
+              <property name="Output List.[08].Column" value="Expr1010" />
+              <property name="Output List.[08].DataType" value="Double" />
+              <property name="Output List.[09]" value="Expr1011" />
+              <property name="Output List.[09].Column" value="Expr1011" />
+              <property name="Output List.[09].DataType" value="Decimal" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="89" />
+              <property name="Statistics.Average Row Count" value="89" />
+              <property name="Defined Values.[00]" value="Expr1002 = COUNT(o.OrderID)" />
+              <property name="Defined Values.[00].Target" value="Expr1002" />
+              <property name="Defined Values.[00].DataType" value="Int32" />
+              <property name="Defined Values.[00].Source" value="COUNT(o.OrderID)" />
+              <property name="Defined Values.[01]" value="Expr1003 = AVG(o.OrderID)" />
+              <property name="Defined Values.[01].Target" value="Expr1003" />
+              <property name="Defined Values.[01].DataType" value="Int32" />
+              <property name="Defined Values.[01].Source" value="AVG(o.OrderID)" />
+              <property name="Defined Values.[02]" value="Expr1004 = FIRST(o.OrderID)" />
+              <property name="Defined Values.[02].Target" value="Expr1004" />
+              <property name="Defined Values.[02].DataType" value="Int32" />
+              <property name="Defined Values.[02].Source" value="FIRST(o.OrderID)" />
+              <property name="Defined Values.[03]" value="Expr1005 = LAST(o.OrderID)" />
+              <property name="Defined Values.[03].Target" value="Expr1005" />
+              <property name="Defined Values.[03].DataType" value="Int32" />
+              <property name="Defined Values.[03].Source" value="LAST(o.OrderID)" />
+              <property name="Defined Values.[04]" value="Expr1006 = CONCAT(o.OrderID)" />
+              <property name="Defined Values.[04].Target" value="Expr1006" />
+              <property name="Defined Values.[04].DataType" value="String" />
+              <property name="Defined Values.[04].Source" value="CONCAT(o.OrderID)" />
+              <property name="Defined Values.[05]" value="Expr1007 = MAX(o.OrderID)" />
+              <property name="Defined Values.[05].Target" value="Expr1007" />
+              <property name="Defined Values.[05].DataType" value="Int32" />
+              <property name="Defined Values.[05].Source" value="MAX(o.OrderID)" />
+              <property name="Defined Values.[06]" value="Expr1008 = MIN(o.OrderID)" />
+              <property name="Defined Values.[06].Target" value="Expr1008" />
+              <property name="Defined Values.[06].DataType" value="Int32" />
+              <property name="Defined Values.[06].Source" value="MIN(o.OrderID)" />
+              <property name="Defined Values.[07]" value="Expr1009 = SUM(o.OrderID)" />
+              <property name="Defined Values.[07].Target" value="Expr1009" />
+              <property name="Defined Values.[07].DataType" value="Int32" />
+              <property name="Defined Values.[07].Source" value="SUM(o.OrderID)" />
+              <property name="Defined Values.[08]" value="Expr1010 = STDEV(o.OrderID)" />
+              <property name="Defined Values.[08].Target" value="Expr1010" />
+              <property name="Defined Values.[08].DataType" value="Double" />
+              <property name="Defined Values.[08].Source" value="STDEV(o.OrderID)" />
+              <property name="Defined Values.[09]" value="Expr1011 = VAR(o.OrderID)" />
+              <property name="Defined Values.[09].Target" value="Expr1011" />
+              <property name="Defined Values.[09].DataType" value="Decimal" />
+              <property name="Defined Values.[09].Source" value="VAR(o.OrderID)" />
+              <property name="Group By.[0]" value="o.CustomerID" />
+              <property name="Group By.[0].Table" value="o" />
+              <property name="Group By.[0].Column" value="CustomerID" />
+              <property name="Group By.[0].DataType" value="String" />
+            </properties>
+            <input>
+              <element operator="Sort">
+                <properties>
+                  <property name="Output List.[0]" value="o.OrderID" />
+                  <property name="Output List.[0].Table" value="o" />
+                  <property name="Output List.[0].Column" value="OrderID" />
+                  <property name="Output List.[0].DataType" value="Int32" />
+                  <property name="Output List.[1]" value="o.CustomerID" />
+                  <property name="Output List.[1].Table" value="o" />
+                  <property name="Output List.[1].Column" value="CustomerID" />
+                  <property name="Output List.[1].DataType" value="String" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="830" />
+                  <property name="Statistics.Average Row Count" value="830" />
+                  <property name="Logical Operator" value="Sort" />
+                  <property name="Order By.[0]" value="o.CustomerID ASC" />
+                  <property name="Order By.[0].Table" value="o" />
+                  <property name="Order By.[0].Column" value="CustomerID" />
+                  <property name="Order By.[0].DataType" value="String" />
+                  <property name="Order By.[0].Order" value="ASC" />
+                </properties>
+                <input>
+                  <element operator="TableScan">
+                    <properties>
+                      <property name="Table" value="Orders AS o" />
+                      <property name="Output List.[0]" value="o.OrderID" />
+                      <property name="Output List.[0].Table" value="o" />
+                      <property name="Output List.[0].Column" value="OrderID" />
+                      <property name="Output List.[0].DataType" value="Int32" />
+                      <property name="Output List.[1]" value="o.CustomerID" />
+                      <property name="Output List.[1].Table" value="o" />
+                      <property name="Output List.[1].Column" value="CustomerID" />
+                      <property name="Output List.[1].DataType" value="String" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="830" />
+                      <property name="Statistics.Average Row Count" value="830" />
+                    </properties>
+                    <input />
+                  </element>
+                </input>
+              </element>
+            </input>
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

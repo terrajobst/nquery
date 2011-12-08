@@ -1,0 +1,52 @@
+<topic>
+	<head>
+		<title>REGEX_REPLACE</title>
+		<keywords>
+			<keyword term="functions, REGEX_REPLACE" />
+			<keyword term="string functions, REGEX_REPLACE" />
+			<keyword term="REGEX_REPLACE function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="String Functions.html">String Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Replaces all occurrences of a specified regular expression pattern with a replacement string, starting
+				at the first character in the input string.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">REGEX_REPLACE(text AS string, pattern AS string, replacementPattern AS string) RETURNS string</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="text">
+					<p>
+						The input string to be searched.
+					</p>
+				</param>
+				<param name="pattern">
+					<p>
+						The regular expression used to match <c>text</c>.
+					</p>
+				</param>
+				<param name="replacementPattern">
+					<p>
+						The replacement string.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The modified character string.
+			</p>
+		</returns>
+	</body>
+</topic>

@@ -1,0 +1,25 @@
+﻿<topic>
+	<head>
+		<title>Left Outer Join</title>
+		<keywords>
+			<keyword term="execution plan, left outer join"/>
+			<keyword term="logical operators, left outer join"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Left Outer Join</b> operator returns each row that satisfies the join of the first (top) input with the second (bottom)
+				input. It also returns any rows from the first input that had no matching rows in the second input. The nonmatching rows in the
+				second input are returned as <c>NULL</c>. If no join predicate exists in the <c>Predicate</c> property, each row is a matching
+				row.
+			</p>
+			<p>
+				<b>Left Outer Join</b> is a logical operator.
+			</p>
+		</summary>
+	</body>
+</topic>

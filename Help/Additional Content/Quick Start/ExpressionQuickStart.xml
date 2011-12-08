@@ -1,0 +1,47 @@
+﻿<topic>
+	<head>
+		<title>Expression Quick Start</title>
+		<toc index="3"/>
+		<keywords>
+			<keyword term="quick start, expression" />
+			<keyword term="Expression class, quick start" />
+			<keyword term="NQuery.Expression class, quick start" />
+		</keywords>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The following sample will show how the <see cref="T:NQuery.Expression`1">Expression</see> class can be used to execute
+				single expressions.
+			</p>
+		</summary>
+
+		<section title="Prerequisites">
+			<ol>
+				<li>Create a new C# Windows Application</li>
+				<li>Add a reference to the NQuery.dll assembly</li>
+				<li>
+					Add a reference to the NQuery namespace (<c>using NQuery;</c>)
+				</li>
+				<li>
+					Place a <see cref="T:System.Windows.Forms.DataGridView">DataGridView</see> component on the main form
+				</li>
+			</ol>
+			<p>
+				This sample will use a simple class, <c>Customer</c>, which is declared as follows:
+			</p>
+			<sampleCode lang="cs" title="Customer Class" source="..\Samples\Quick Starts\ExpressionQuickStart\Form1.cs" region="Customer" />
+		</section>
+
+		<section title="Using the Expression Class">
+			<p>
+				We will use the class <c>Customer</c> class to create a collection with some sample data and use two expressions to
+				<ol>
+					<li>Filter all customers that live in London.</li>
+					<li>Generate the full name of a customer.</li>
+				</ol>
+			</p>
+			<sampleCode lang="cs" title="Using an Expression" source="..\Samples\Quick Starts\ExpressionQuickStart\Form1.cs" region="Usage" />
+		</section>
+	</body>
+</topic>

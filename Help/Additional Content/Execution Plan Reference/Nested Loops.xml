@@ -1,0 +1,82 @@
+﻿<topic>
+	<head>
+		<title>Nested Loops</title>
+		<keywords>
+			<keyword term="execution plan, nested loops"/>
+			<keyword term="physical operators, nested loops"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Nested Loops</b> operator performs the cross join, inner join, left outer join, left semi join, and left anti semi
+				join logical operations.
+			</p>
+			<p>
+				Nested loops joins perform a search on the inner table for each row of the outer table.
+			</p>
+			<p>
+				Any rows that satisfy the (optional) predicate in the <c>Predicate</c> property are returned as applicable, based on the
+				logical operation being performed.
+			</p>
+			<p>
+				<b>Nested Loops</b> is a physical operator.
+			</p>
+		</summary>
+
+		<section title="Properties">
+			<table>
+				<tr>
+					<th>Property Name</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>Logical Operator</td>
+					<td>
+						Specfies whether the <b>Nested Loops</b> operators performs an inner join, left outer join, left semi join, or left anti semi
+						join logical operation.
+					</td>
+				</tr>
+				<tr>
+					<td>Predicate</td>
+					<td>
+						Specifies the join predicate.
+					</td>
+				</tr>
+				<tr>
+					<td>Outer References</td>
+					<td>
+						Specifies which values from the outer input are to be passed to the inner input as parameters.
+					</td>
+				</tr>
+				<tr>
+					<td>Probe Column</td>
+					<td>
+						Indicates whether the outer input is actually to be joined with the inner input. If this property is set, the join is not
+						actually performed. Instead, all rows from the outer input are returned and the probe column is set to a <c>BOOLEAN</c>
+						value indicating whether it had matches with the inner input. For example, using an <c>EXISTS</c> predicate directly in the
+						select list of a <c>SELECT</c> statement causes this property to be set.
+					</td>
+				</tr>
+				<tr>
+					<td>Passthru</td>
+					<td>
+						Specifies a predicate that, if evaluted to <c>TRUE</c>, does not perform the join operation. In this case, the
+						<b>Nested Loop</b> operator just passes the outer row without reading any row from the inner input. The columns
+						from the inner side are padded with <c>NULL</c> values.
+					</td>
+				</tr>
+				<tr>
+					<td>Warning</td>
+					<td>
+						If present, contains a warning such as an absence of the join predicate and outer reference. In this case it is
+						likely that a cross join is created accidentally.
+					</td>
+				</tr>
+			</table>
+		</section>
+	</body>
+</topic>

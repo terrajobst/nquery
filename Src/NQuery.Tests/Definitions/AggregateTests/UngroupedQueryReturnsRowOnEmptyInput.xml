@@ -1,0 +1,202 @@
+<test>
+  <sql>SELECT	COUNT(o.OrderID) AS [COUNT],
+		AVG(o.OrderID) AS [AVG],
+		FIRST(o.OrderID) AS [FIRST],
+		LAST(o.OrderID) AS [LAST],
+		CONCAT(o.OrderID) AS [CONCAT],
+		MAX(o.OrderID) AS [MAX],
+		MIN(o.OrderID) AS [MIN],
+		SUM(o.OrderID) AS [SUM],
+		STDEV(o.OrderID) AS [STDEV],
+		VAR(o.OrderID) AS [VAR]
+FROM	Orders o
+WHERE	o.OrderID &lt; 0</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="COUNT" type="xs:int" minOccurs="0" />
+                <xs:element name="AVG" type="xs:int" minOccurs="0" />
+                <xs:element name="FIRST" type="xs:int" minOccurs="0" />
+                <xs:element name="LAST" type="xs:int" minOccurs="0" />
+                <xs:element name="CONCAT" type="xs:string" minOccurs="0" />
+                <xs:element name="MAX" type="xs:int" minOccurs="0" />
+                <xs:element name="MIN" type="xs:int" minOccurs="0" />
+                <xs:element name="SUM" type="xs:int" minOccurs="0" />
+                <xs:element name="STDEV" type="xs:double" minOccurs="0" />
+                <xs:element name="VAR" type="xs:decimal" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1>
+    <COUNT>0</COUNT>
+    <CONCAT />
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[00]" value="Expr1001 AS COUNT" />
+          <property name="Output List.[00].Column" value="Expr1001" />
+          <property name="Output List.[00].DataType" value="Int32" />
+          <property name="Output List.[00].Output Name" value="COUNT" />
+          <property name="Output List.[01]" value="Expr1002 AS AVG" />
+          <property name="Output List.[01].Column" value="Expr1002" />
+          <property name="Output List.[01].DataType" value="Int32" />
+          <property name="Output List.[01].Output Name" value="AVG" />
+          <property name="Output List.[02]" value="Expr1003 AS FIRST" />
+          <property name="Output List.[02].Column" value="Expr1003" />
+          <property name="Output List.[02].DataType" value="Int32" />
+          <property name="Output List.[02].Output Name" value="FIRST" />
+          <property name="Output List.[03]" value="Expr1004 AS LAST" />
+          <property name="Output List.[03].Column" value="Expr1004" />
+          <property name="Output List.[03].DataType" value="Int32" />
+          <property name="Output List.[03].Output Name" value="LAST" />
+          <property name="Output List.[04]" value="Expr1005 AS CONCAT" />
+          <property name="Output List.[04].Column" value="Expr1005" />
+          <property name="Output List.[04].DataType" value="String" />
+          <property name="Output List.[04].Output Name" value="CONCAT" />
+          <property name="Output List.[05]" value="Expr1006 AS MAX" />
+          <property name="Output List.[05].Column" value="Expr1006" />
+          <property name="Output List.[05].DataType" value="Int32" />
+          <property name="Output List.[05].Output Name" value="MAX" />
+          <property name="Output List.[06]" value="Expr1007 AS MIN" />
+          <property name="Output List.[06].Column" value="Expr1007" />
+          <property name="Output List.[06].DataType" value="Int32" />
+          <property name="Output List.[06].Output Name" value="MIN" />
+          <property name="Output List.[07]" value="Expr1008 AS SUM" />
+          <property name="Output List.[07].Column" value="Expr1008" />
+          <property name="Output List.[07].DataType" value="Int32" />
+          <property name="Output List.[07].Output Name" value="SUM" />
+          <property name="Output List.[08]" value="Expr1009 AS STDEV" />
+          <property name="Output List.[08].Column" value="Expr1009" />
+          <property name="Output List.[08].DataType" value="Double" />
+          <property name="Output List.[08].Output Name" value="STDEV" />
+          <property name="Output List.[09]" value="Expr1010 AS VAR" />
+          <property name="Output List.[09].Column" value="Expr1010" />
+          <property name="Output List.[09].DataType" value="Decimal" />
+          <property name="Output List.[09].Output Name" value="VAR" />
+        </properties>
+        <input>
+          <element operator="StreamAggregate">
+            <properties>
+              <property name="Output List.[00]" value="Expr1001" />
+              <property name="Output List.[00].Column" value="Expr1001" />
+              <property name="Output List.[00].DataType" value="Int32" />
+              <property name="Output List.[01]" value="Expr1002" />
+              <property name="Output List.[01].Column" value="Expr1002" />
+              <property name="Output List.[01].DataType" value="Int32" />
+              <property name="Output List.[02]" value="Expr1003" />
+              <property name="Output List.[02].Column" value="Expr1003" />
+              <property name="Output List.[02].DataType" value="Int32" />
+              <property name="Output List.[03]" value="Expr1004" />
+              <property name="Output List.[03].Column" value="Expr1004" />
+              <property name="Output List.[03].DataType" value="Int32" />
+              <property name="Output List.[04]" value="Expr1005" />
+              <property name="Output List.[04].Column" value="Expr1005" />
+              <property name="Output List.[04].DataType" value="String" />
+              <property name="Output List.[05]" value="Expr1006" />
+              <property name="Output List.[05].Column" value="Expr1006" />
+              <property name="Output List.[05].DataType" value="Int32" />
+              <property name="Output List.[06]" value="Expr1007" />
+              <property name="Output List.[06].Column" value="Expr1007" />
+              <property name="Output List.[06].DataType" value="Int32" />
+              <property name="Output List.[07]" value="Expr1008" />
+              <property name="Output List.[07].Column" value="Expr1008" />
+              <property name="Output List.[07].DataType" value="Int32" />
+              <property name="Output List.[08]" value="Expr1009" />
+              <property name="Output List.[08].Column" value="Expr1009" />
+              <property name="Output List.[08].DataType" value="Double" />
+              <property name="Output List.[09]" value="Expr1010" />
+              <property name="Output List.[09].Column" value="Expr1010" />
+              <property name="Output List.[09].DataType" value="Decimal" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="1" />
+              <property name="Statistics.Average Row Count" value="1" />
+              <property name="Defined Values.[00]" value="Expr1001 = COUNT(o.OrderID)" />
+              <property name="Defined Values.[00].Target" value="Expr1001" />
+              <property name="Defined Values.[00].DataType" value="Int32" />
+              <property name="Defined Values.[00].Source" value="COUNT(o.OrderID)" />
+              <property name="Defined Values.[01]" value="Expr1002 = AVG(o.OrderID)" />
+              <property name="Defined Values.[01].Target" value="Expr1002" />
+              <property name="Defined Values.[01].DataType" value="Int32" />
+              <property name="Defined Values.[01].Source" value="AVG(o.OrderID)" />
+              <property name="Defined Values.[02]" value="Expr1003 = FIRST(o.OrderID)" />
+              <property name="Defined Values.[02].Target" value="Expr1003" />
+              <property name="Defined Values.[02].DataType" value="Int32" />
+              <property name="Defined Values.[02].Source" value="FIRST(o.OrderID)" />
+              <property name="Defined Values.[03]" value="Expr1004 = LAST(o.OrderID)" />
+              <property name="Defined Values.[03].Target" value="Expr1004" />
+              <property name="Defined Values.[03].DataType" value="Int32" />
+              <property name="Defined Values.[03].Source" value="LAST(o.OrderID)" />
+              <property name="Defined Values.[04]" value="Expr1005 = CONCAT(o.OrderID)" />
+              <property name="Defined Values.[04].Target" value="Expr1005" />
+              <property name="Defined Values.[04].DataType" value="String" />
+              <property name="Defined Values.[04].Source" value="CONCAT(o.OrderID)" />
+              <property name="Defined Values.[05]" value="Expr1006 = MAX(o.OrderID)" />
+              <property name="Defined Values.[05].Target" value="Expr1006" />
+              <property name="Defined Values.[05].DataType" value="Int32" />
+              <property name="Defined Values.[05].Source" value="MAX(o.OrderID)" />
+              <property name="Defined Values.[06]" value="Expr1007 = MIN(o.OrderID)" />
+              <property name="Defined Values.[06].Target" value="Expr1007" />
+              <property name="Defined Values.[06].DataType" value="Int32" />
+              <property name="Defined Values.[06].Source" value="MIN(o.OrderID)" />
+              <property name="Defined Values.[07]" value="Expr1008 = SUM(o.OrderID)" />
+              <property name="Defined Values.[07].Target" value="Expr1008" />
+              <property name="Defined Values.[07].DataType" value="Int32" />
+              <property name="Defined Values.[07].Source" value="SUM(o.OrderID)" />
+              <property name="Defined Values.[08]" value="Expr1009 = STDEV(o.OrderID)" />
+              <property name="Defined Values.[08].Target" value="Expr1009" />
+              <property name="Defined Values.[08].DataType" value="Double" />
+              <property name="Defined Values.[08].Source" value="STDEV(o.OrderID)" />
+              <property name="Defined Values.[09]" value="Expr1010 = VAR(o.OrderID)" />
+              <property name="Defined Values.[09].Target" value="Expr1010" />
+              <property name="Defined Values.[09].DataType" value="Decimal" />
+              <property name="Defined Values.[09].Source" value="VAR(o.OrderID)" />
+            </properties>
+            <input>
+              <element operator="Filter">
+                <properties>
+                  <property name="Output List.[0]" value="o.OrderID" />
+                  <property name="Output List.[0].Table" value="o" />
+                  <property name="Output List.[0].Column" value="OrderID" />
+                  <property name="Output List.[0].DataType" value="Int32" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="0" />
+                  <property name="Statistics.Average Row Count" value="0" />
+                  <property name="Predicate" value="o.OrderID &lt; 0" />
+                </properties>
+                <input>
+                  <element operator="TableScan">
+                    <properties>
+                      <property name="Table" value="Orders AS o" />
+                      <property name="Output List.[0]" value="o.OrderID" />
+                      <property name="Output List.[0].Table" value="o" />
+                      <property name="Output List.[0].Column" value="OrderID" />
+                      <property name="Output List.[0].DataType" value="Int32" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="830" />
+                      <property name="Statistics.Average Row Count" value="830" />
+                    </properties>
+                    <input />
+                  </element>
+                </input>
+              </element>
+            </input>
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

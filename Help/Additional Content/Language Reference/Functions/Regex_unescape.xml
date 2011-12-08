@@ -1,0 +1,49 @@
+<topic>
+	<head>
+		<title>REGEX_UNESCAPE</title>
+		<keywords>
+			<keyword term="functions, REGEX_UNESCAPE" />
+			<keyword term="string functions, REGEX_UNESCAPE" />
+			<keyword term="REGEX_UNESCAPE function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="String Functions.html">String Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Unescapes any escaped characters in the input string.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">REGEX_UNESCAPE(text AS string) RETURNS string</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="text">
+					<p>
+						The input string containing the text to convert.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				A string of characters with any escaped characters converted to their unescaped form.
+			</p>
+		</returns>
+
+		<remarks>
+			<p>
+				As an example, Unescape replaces \x61 with a and \n with a new-line character (ASCII 10). <c>REGEX_UNESCAPE</c> reverses the transformation done by
+				<c>REGEX_ESCAPE</c>. (Of course, <c>REGEX_ESCAPE</c> cannot perfectly reverse <c>REGEX_UNESCAPE</c> because it cannot deduce from an unescaped string
+				which characters may have been previously escaped.)
+			</p>
+		</remarks>
+	</body>
+</topic>

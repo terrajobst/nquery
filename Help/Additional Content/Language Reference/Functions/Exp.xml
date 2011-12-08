@@ -1,0 +1,51 @@
+<topic>
+	<head>
+		<title>EXP</title>
+		<keywords>
+			<keyword term="functions, EXP" />
+			<keyword term="mathematical functions, EXP" />
+			<keyword term="EXP function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Mathematical Functions.html">Mathematical Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns the exponential value of the specified float expression, that is <c>e</c> raised to the specified power.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">EXP(value AS double) RETURNS double</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						A number specifying a power.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The number <c>e</c> raised to the power <c>value</c>. If <c>value</c> equals <c>NaN</c> or <c>PositiveInfinity</c>,
+				that value is returned. If <c>value</c> equals <c>NegativeInfinity</c>, <c>0</c> is returned.
+			</p>
+		</returns>
+
+		<remarks>
+			<p>
+				Use the <c>POWER</c> function to calculate powers of other bases.
+			</p>
+			<p>
+				<c>EXP</c> is the inverse of <c>LOG</c>.
+			</p>
+		</remarks>
+	</body>
+</topic>

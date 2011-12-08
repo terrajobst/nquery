@@ -1,0 +1,8 @@
+<test>
+  <sql>SELECT	DISTINCT
+		*
+FROM	Employees</sql>
+  <expectedErrors>
+    <expectedError id="InvalidDataTypeInSelectDistinct" text="The data type 'Byte[]' cannot be used in SELECT DISTINCT since it cannot be compared or sorted." />
+  </expectedErrors>
+</test>

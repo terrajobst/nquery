@@ -1,0 +1,14 @@
+<test>
+  <sql>WITH EmployeeHierarchy AS
+(
+	SELECT	e.EmployeeId
+	FROM	Employees e
+				INNER JOIN EmployeeHierarchy eh ON e.ReportsTo = eh.EmployeeID
+)
+SELECT	*
+FROM	EmployeeHierarchy
+</sql>
+  <expectedErrors>
+    <expectedError id="CteDoesNotHaveUnionAll" text="Recursive common table expression 'EmployeeHierarchy' does not contain a top-level UNION ALL operator." />
+  </expectedErrors>
+</test>

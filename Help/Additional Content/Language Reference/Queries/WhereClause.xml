@@ -1,0 +1,35 @@
+<topic>
+	<head>
+		<title>WHERE Clause</title>
+		<toc index="4" />
+		<keywords>
+			<keyword term="SELECT statement, WHERE clause" />
+			<keyword term="WHERE clause, about" />
+		</keywords>
+		<links>
+			<link href="Queries.html">SELECT Syntax</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Specifies the search condition for the rows returned by the query.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">[ <b>WHERE</b> <i>search_condition</i> ]</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="search_condition">
+					<p>
+						Defines the condition to be met for the rows to be returned. There is no limit to the number of predicates that can be
+						included in a search condition.
+					</p>
+				</param>
+			</params>
+		</parameters>
+	</body>
+</topic>

@@ -1,0 +1,13 @@
+<test>
+  <sql>SELECT	SUM(
+			CASE
+				WHEN EXISTS (SELECT * FROM Orders o WHERE o.EmployeeID = e.EmployeeID)
+				THEN 0
+				ELSE 1
+			END
+		)
+FROM	Employees e</sql>
+  <expectedErrors>
+    <expectedError id="AggregateCannotContainAggregate" text="Cannot perform aggregate function on an expression containing a subquery: &quot;SUM&quot;(CASE WHEN EXISTS (   SELECT &quot;o&quot;.&quot;OrderID&quot; AS &quot;OrderID&quot;,&#xD;&#xA;           &quot;o&quot;.&quot;CustomerID&quot; AS &quot;CustomerID&quot;,&#xD;&#xA;           &quot;o&quot;.&quot;EmployeeID&quot; AS &quot;EmployeeID&quot;,&#xD;&#xA;           &quot;o&quot;.&quot;OrderDate&quot; AS &quot;OrderDate&quot;,&#xD;&#xA;           &quot;o&quot;.&quot;RequiredDate&quot; AS &quot;RequiredDate&quot;,&#xD;&#xA;           &quot;o&quot;.&quot;ShippedDate&quot; AS &quot;ShippedDate&quot;,&#xD;&#xA;           &quot;o&quot;.&quot;ShipVia&quot; AS &quot;ShipVia&quot;,&#xD;&#xA;           &quot;o&quot;.&quot;Freight&quot; AS &quot;Freight&quot;,&#xD;&#xA;           &quot;o&quot;.&quot;ShipName&quot; AS &quot;ShipName&quot;,&#xD;&#xA;           &quot;o&quot;.&quot;ShipAddress&quot; AS &quot;ShipAddress&quot;,&#xD;&#xA;           &quot;o&quot;.&quot;ShipCity&quot; AS &quot;ShipCity&quot;,&#xD;&#xA;           &quot;o&quot;.&quot;ShipRegion&quot; AS &quot;ShipRegion&quot;,&#xD;&#xA;           &quot;o&quot;.&quot;ShipPostalCode&quot; AS &quot;ShipPostalCode&quot;,&#xD;&#xA;           &quot;o&quot;.&quot;ShipCountry&quot; AS &quot;ShipCountry&quot;&#xD;&#xA;     FROM Orders AS o&#xD;&#xA;    WHERE &quot;o&quot;.&quot;EmployeeID&quot; = &quot;e&quot;.&quot;EmployeeID&quot;) THEN 0 ELSE 1 END)." />
+  </expectedErrors>
+</test>

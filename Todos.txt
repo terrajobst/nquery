@@ -1,0 +1,5 @@
+- Forward integrated changes to language branch.
+- Create new NQuery release.
+- Review XSD Doc build and check how we can further simplify the build process in NQuery.
+- Ensure all resource images are links to the icon folder.
+- Manually merge all language stuff to new branch. Be careful not to destroy any bug fixes.

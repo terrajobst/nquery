@@ -1,0 +1,24 @@
+﻿<topic>
+	<head>
+		<title>Right Anti Semi Join</title>
+		<keywords>
+			<keyword term="execution plan, right anti semi join"/>
+			<keyword term="logical operators, right anti semi join"/>
+		</keywords>
+		<links>
+			<link href="Execution Plan Reference.html">Execution Plan Reference</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				The <b>Right Anti Semi Join</b> operator outputs each row from the second (bottom) input when a matching row in the first
+				(top) input does not exist. A matching row is defined as a row that satisfies the predicate in the <c>Predicate</c> property
+				(if no predicate exists, each row is a matching row).
+			</p>
+			<p>
+				<b>Right Anti Semi Join</b> is a logical operator.
+			</p>
+		</summary>
+	</body>
+</topic>

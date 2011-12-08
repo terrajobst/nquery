@@ -1,0 +1,47 @@
+<topic>
+	<head>
+		<title>RPAD</title>
+		<keywords>
+			<keyword term="functions, RPAD" />
+			<keyword term="string functions, RPAD" />
+			<keyword term="RPAD function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="String Functions.html">String Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Right-aligns the characters in a specified string, padding on the left with spaces for a specified total length.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">RPAD(str AS string, totalWidth AS int) RETURNS string</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="str">
+					<p>
+						The string to be right-aligned.
+					</p>
+				</param>
+				<param name="totalWidth">
+					<p>
+						The number of characters in the resulting string, equal to the number of original characters plus any additional padding characters.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				A string that is equivalent to <c>str</c>, but right-aligned and padded on the left with as many spaces as needed to create a length
+				of <c>totalWidth</c>. Or, if <c>totalWidth</c> is less than the length of <c>str</c>, a string that is identical to <c>str</c>.
+			</p>
+		</returns>
+	</body>
+</topic>

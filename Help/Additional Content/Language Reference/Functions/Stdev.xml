@@ -1,0 +1,61 @@
+<topic>
+	<head>
+		<title>STDEV</title>
+		<keywords>
+			<keyword term="functions, STDEV" />
+			<keyword term="aggregates, STDEV" />
+			<keyword term="aggregate functions, STDEV" />
+			<keyword term="STDEV aggregate" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Aggregate Functions.html">Aggregate Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns the statistical standard deviation of the specified expression in a group. <c>NULL</c> values are ignored.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">STDEV ( expression )</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						An expression to determine the statistical standard deviation for.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The statistical standard deviation of all evaluated values of <c>expression</c> in a group. <c>NULL</c> values are ignored.
+			</p>
+		</returns>
+
+		<remarks>
+			<p>
+				The <c>STDEV</c> aggregate function is limited to the following data types:
+				<ul>
+					<li>byte</li>
+					<li>sbyte</li>
+					<li>short</li>
+					<li>ushort</li>
+					<li>int</li>
+					<li>uint</li>
+					<li>long</li>
+					<li>ulong</li>
+					<li>decimal</li>
+					<li>float</li>
+					<li>double</li>
+				</ul>
+			</p>
+		</remarks>
+	</body>
+</topic>

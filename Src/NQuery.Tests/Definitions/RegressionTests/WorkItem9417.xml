@@ -1,0 +1,123 @@
+<test>
+  <sql>SELECT  o.ShipName
+
+FROM    Orders o
+
+WHERE   1 = 0
+
+UNION   ALL
+
+SELECT  'Test'
+
+UNION   ALL
+
+SELECT  NULL
+
+ORDER BY 1
+</sql>
+  <expectedResults>
+    <NewDataSet>
+  <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Table1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ShipName" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <Table1 />
+  <Table1>
+    <ShipName>Test</ShipName>
+  </Table1>
+</NewDataSet>
+  </expectedResults>
+  <expectedPlan>
+    <executionPlan>
+      <element operator="Select">
+        <properties>
+          <property name="Output List.[0]" value="Union1002 AS ShipName" />
+          <property name="Output List.[0].Column" value="Union1002" />
+          <property name="Output List.[0].DataType" value="String" />
+          <property name="Output List.[0].Output Name" value="ShipName" />
+        </properties>
+        <input>
+          <element operator="Sort">
+            <properties>
+              <property name="Output List.[0]" value="Union1002" />
+              <property name="Output List.[0].Column" value="Union1002" />
+              <property name="Output List.[0].DataType" value="String" />
+              <property name="Statistics.Open Count" value="1" />
+              <property name="Statistics.Row Count" value="2" />
+              <property name="Statistics.Average Row Count" value="2" />
+              <property name="Logical Operator" value="Sort" />
+              <property name="Order By.[0]" value="Union1002 ASC" />
+              <property name="Order By.[0].Column" value="Union1002" />
+              <property name="Order By.[0].DataType" value="String" />
+              <property name="Order By.[0].Order" value="ASC" />
+            </properties>
+            <input>
+              <element operator="Concatenation">
+                <properties>
+                  <property name="Output List.[0]" value="Union1002" />
+                  <property name="Output List.[0].Column" value="Union1002" />
+                  <property name="Output List.[0].DataType" value="String" />
+                  <property name="Statistics.Open Count" value="1" />
+                  <property name="Statistics.Row Count" value="2" />
+                  <property name="Statistics.Average Row Count" value="2" />
+                  <property name="Defined Values.Union1002" value="Expr1000; Expr1001" />
+                  <property name="Defined Values.Union1002.[0]" value="Expr1000" />
+                  <property name="Defined Values.Union1002.[0].Column" value="Expr1000" />
+                  <property name="Defined Values.Union1002.[0].DataType" value="String" />
+                  <property name="Defined Values.Union1002.[1]" value="Expr1001" />
+                  <property name="Defined Values.Union1002.[1].Column" value="Expr1001" />
+                  <property name="Defined Values.Union1002.[1].DataType" value="String" />
+                </properties>
+                <input>
+                  <element operator="ConstantScan">
+                    <properties>
+                      <property name="Empty" value="False" />
+                      <property name="Output List.[0]" value="Expr1000" />
+                      <property name="Output List.[0].Column" value="Expr1000" />
+                      <property name="Output List.[0].DataType" value="String" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="1" />
+                      <property name="Statistics.Average Row Count" value="1" />
+                      <property name="Defined Values.[0]" value="Expr1000 = 'Test'" />
+                      <property name="Defined Values.[0].Target" value="Expr1000" />
+                      <property name="Defined Values.[0].DataType" value="String" />
+                      <property name="Defined Values.[0].Source" value="'Test'" />
+                    </properties>
+                    <input />
+                  </element>
+                  <element operator="ConstantScan">
+                    <properties>
+                      <property name="Empty" value="False" />
+                      <property name="Output List.[0]" value="Expr1001" />
+                      <property name="Output List.[0].Column" value="Expr1001" />
+                      <property name="Output List.[0].DataType" value="String" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="1" />
+                      <property name="Statistics.Average Row Count" value="1" />
+                      <property name="Defined Values.[0]" value="Expr1001 = NULL" />
+                      <property name="Defined Values.[0].Target" value="Expr1001" />
+                      <property name="Defined Values.[0].DataType" value="String" />
+                      <property name="Defined Values.[0].Source" value="NULL" />
+                    </properties>
+                    <input />
+                  </element>
+                </input>
+              </element>
+            </input>
+          </element>
+        </input>
+      </element>
+    </executionPlan>
+  </expectedPlan>
+</test>

@@ -1,0 +1,42 @@
+<topic>
+	<head>
+		<title>SINH</title>
+		<keywords>
+			<keyword term="functions, SINH" />
+			<keyword term="mathematical functions, SINH" />
+			<keyword term="SINH function" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Mathematical Functions.html">Mathematical Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				A mathematical function that returns the hyperbolic sine of the specified angle.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">SINH(value AS double) RETURNS double</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						An angle, measured in radians.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<returns>
+			<p>
+				The hyperbolic sine of <c>value</c>. If <c>value</c> is equal to <c>NegativeInfinity</c>, <c>PositiveInfinity</c>,
+				or <c>NaN</c>, this function returns <c>value</c>.
+			</p>
+		</returns>
+	</body>
+</topic>

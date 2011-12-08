@@ -1,0 +1,61 @@
+<topic>
+	<head>
+		<title>CONCAT</title>
+		<keywords>
+			<keyword term="functions, CONCAT" />
+			<keyword term="aggregates, CONCAT" />
+			<keyword term="aggregate functions, CONCAT" />
+			<keyword term="CONCAT aggregate" />
+		</keywords>
+		<links>
+			<link href="Functions.html">Functions</link>
+			<link href="Aggregate Functions.html">Aggregate Functions</link>
+		</links>
+	</head>
+	<body>
+		<summary>
+			<p>
+				Returns a comma separated list of the string representations of the values in a group. <c>NULL</c> values are ignored.
+			</p>
+		</summary>
+
+		<syntax>
+			<code xml:space="preserve">CONCAT ( expression )</code>
+		</syntax>
+
+		<parameters>
+			<params>
+				<param name="value">
+					<p>
+						An expression to produce a comma separated list of. <c>expression</c> can be of any data type.
+					</p>
+				</param>
+			</params>
+		</parameters>
+
+		<remarks>
+			<p>
+				The comma separated list returned by <c>CONCAT</c> is sorted and contains no duplicates.
+			</p>
+		</remarks>
+
+		<returns>
+			<p>
+				The comma separated list of the string representations of all evaluated values of <c>expression</c> in a group.
+				<c>NULL</c> values are ignored.
+			</p>
+		</returns>
+
+		<examples>
+			<p>
+				The following sample performs an aggregation of employees grouped by city. The <c>CONCAT</c> aggregate is used to create
+				a comma separated list of all employees living in the same city.
+			</p>
+			<sampleCode language="NQuery.SQL" xml:space="preserve">  SELECT e.City,
+         CONCAT(e.FirstName + ' ' + e.LastName) AS Employees
+    FROM Employees e
+GROUP BY e.City
+</sampleCode>
+		</examples>
+	</body>
+</topic>
