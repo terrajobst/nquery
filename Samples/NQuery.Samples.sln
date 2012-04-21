@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensibility", "Extensibility", "{CD226777-DBE5-46EE-A88F-1D330AC89DCD}"
@@ -26,48 +26,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParametersVsConstants", "Overview\ParametersVsConstants\ParametersVsConstants.csproj", "{3349E326-FB31-453B-8FEB-6EDC39C5B510}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 10
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs01.codeplex.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Extensibility\\CustomAggregate\\CustomAggregate.csproj
-		SccProjectTopLevelParentUniqueName1 = NQuery.Samples.sln
-		SccProjectName1 = Extensibility/CustomAggregate
-		SccLocalPath1 = Extensibility\\CustomAggregate
-		SccProjectUniqueName2 = Extensibility\\CustomComparer\\CustomComparer.csproj
-		SccProjectTopLevelParentUniqueName2 = NQuery.Samples.sln
-		SccProjectName2 = Extensibility/CustomComparer
-		SccLocalPath2 = Extensibility\\CustomComparer
-		SccProjectUniqueName3 = Extensibility\\CustomFunctions\\CustomFunctions.csproj
-		SccProjectTopLevelParentUniqueName3 = NQuery.Samples.sln
-		SccProjectName3 = Extensibility/CustomFunctions
-		SccLocalPath3 = Extensibility\\CustomFunctions
-		SccProjectUniqueName4 = Extensibility\\CustomMethodProvider\\CustomMethodProvider.csproj
-		SccProjectTopLevelParentUniqueName4 = NQuery.Samples.sln
-		SccProjectName4 = Extensibility/CustomMethodProvider
-		SccLocalPath4 = Extensibility\\CustomMethodProvider
-		SccProjectUniqueName5 = Extensibility\\CustomPropertyProvider\\CustomPropertyProvider.csproj
-		SccProjectTopLevelParentUniqueName5 = NQuery.Samples.sln
-		SccProjectName5 = Extensibility/CustomPropertyProvider
-		SccLocalPath5 = Extensibility\\CustomPropertyProvider
-		SccProjectUniqueName6 = Extensibility\\CustomTable\\CustomTable.csproj
-		SccProjectTopLevelParentUniqueName6 = NQuery.Samples.sln
-		SccProjectName6 = Extensibility/CustomTable
-		SccLocalPath6 = Extensibility\\CustomTable
-		SccProjectUniqueName7 = Quick\u0020Starts\\ExpressionQuickStart\\ExpressionQuickStart.csproj
-		SccProjectTopLevelParentUniqueName7 = NQuery.Samples.sln
-		SccProjectName7 = Quick\u0020Starts/ExpressionQuickStart
-		SccLocalPath7 = Quick\u0020Starts\\ExpressionQuickStart
-		SccProjectUniqueName8 = Quick\u0020Starts\\QueryQuickStart\\QueryQuickStart.csproj
-		SccProjectTopLevelParentUniqueName8 = NQuery.Samples.sln
-		SccProjectName8 = Quick\u0020Starts/QueryQuickStart
-		SccLocalPath8 = Quick\u0020Starts\\QueryQuickStart
-		SccProjectUniqueName9 = Overview\\ParametersVsConstants\\ParametersVsConstants.csproj
-		SccProjectTopLevelParentUniqueName9 = NQuery.Samples.sln
-		SccProjectName9 = Overview/ParametersVsConstants
-		SccLocalPath9 = Overview\\ParametersVsConstants
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU

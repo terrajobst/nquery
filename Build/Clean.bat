@@ -1,5 +1,5 @@
 @ECHO OFF
 
-"%SystemRoot%\Microsoft.NET\Framework\v3.5\MSBuild.exe" /nologo /t:Clean
+"%SystemRoot%\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe" /nologo /t:Clean
 
 PAUSE

@@ -1,2 +1,3 @@
 ActiproSoftware.SyntaxEditor.SyntaxEditor, ActiproSoftware.SyntaxEditor.Net20
-TD.SandDock.DockContainer, SandDockTD.SandDock.TabControl, SandDock
+TD.SandDock.DockContainer, SandDock
+TD.SandDock.TabControl, SandDock

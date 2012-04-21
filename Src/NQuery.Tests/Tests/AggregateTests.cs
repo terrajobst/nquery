@@ -122,12 +122,12 @@ namespace NQuery.Tests
 			
 			Assert.AreEqual(2, dataTable.Rows.Count);
 			Assert.AreEqual(1, dataTable.Rows[0]["Int32Sum"]);
-			Assert.AreEqual((short)9, dataTable.Rows[0]["Int16Sum"]);
-			Assert.AreEqual((long)9, dataTable.Rows[0]["Int64Sum"]);
+			Assert.AreEqual(4, dataTable.Rows[0]["Int16Sum"]);
+			Assert.AreEqual((long)4, dataTable.Rows[0]["Int64Sum"]);
 
-			Assert.AreEqual(4, dataTable.Rows[0]["Int32Sum"]);
-			Assert.AreEqual((short)11, dataTable.Rows[0]["Int16Sum"]);
-			Assert.AreEqual((long)11, dataTable.Rows[0]["Int64Sum"]);
+			Assert.AreEqual(4, dataTable.Rows[1]["Int32Sum"]);
+			Assert.AreEqual(11, dataTable.Rows[1]["Int16Sum"]);
+			Assert.AreEqual((long)11, dataTable.Rows[1]["Int64Sum"]);
 		}
 	}
 }

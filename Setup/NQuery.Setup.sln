@@ -1,17 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "NQuery.Setup", "NQuery.Setup.wixproj", "{887CB4AF-B7CE-46E8-88C8-22A7193E95D2}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 2
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs01.codeplex.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = NQuery.Setup.wixproj
-		SccLocalPath1 = .
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86

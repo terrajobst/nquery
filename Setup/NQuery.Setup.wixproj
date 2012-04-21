@@ -1,17 +1,14 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProductVersion>3.0</ProductVersion>
+    <ProductVersion>3.5</ProductVersion>
     <ProjectGuid>{887cb4af-b7ce-46e8-88c8-22a7193e95d2}</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
     <OutputName>NQuery</OutputName>
     <OutputType>Package</OutputType>
-    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.0\Wix.targets</WixTargetsPath>
-    <SccProjectName>SAK</SccProjectName>
-    <SccProvider>SAK</SccProvider>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccLocalPath>SAK</SccLocalPath>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
