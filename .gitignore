@@ -4,4 +4,4 @@ syntax: glob
 bin
 obj
 Output
-CustomTasks
+Custom Tasks
