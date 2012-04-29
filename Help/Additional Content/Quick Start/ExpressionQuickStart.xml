@@ -30,7 +30,7 @@
 			<p>
 				This sample will use a simple class, <c>Customer</c>, which is declared as follows:
 			</p>
-			<sampleCode lang="cs" title="Customer Class" source="..\Samples\Quick Starts\ExpressionQuickStart\Form1.cs" region="Customer" />
+			<sampleCode lang="cs" title="Customer Class" source="..\..\Samples\Quick Starts\ExpressionQuickStart\Form1.cs" region="Customer" />
 		</section>
 
 		<section title="Using the Expression Class">
@@ -41,7 +41,7 @@
 					<li>Generate the full name of a customer.</li>
 				</ol>
 			</p>
-			<sampleCode lang="cs" title="Using an Expression" source="..\Samples\Quick Starts\ExpressionQuickStart\Form1.cs" region="Usage" />
+			<sampleCode lang="cs" title="Using an Expression" source="..\..\Samples\Quick Starts\ExpressionQuickStart\Form1.cs" region="Usage" />
 		</section>
 	</body>
 </topic>

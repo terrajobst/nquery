@@ -26,7 +26,7 @@
 				declared as follows:
 			</p>
 			<sampleCode lang="cs" title="Table Data"
-						source="..\Samples\Extensibility\CustomTable\MyTableBinding.cs" region="MyTableData" />
+						source="..\..\Samples\Extensibility\CustomTable\MyTableBinding.cs" region="MyTableData" />
 			<p>
 				The structure of this object is very simple. It contains a list of <c>object</c> arrays representing the values of all rows
 				and two properties <c>ColumnNames</c> and <c>ColumnTypes</c> that define the columns of this table.
@@ -44,15 +44,15 @@
 				The implementation of both is given below:
 			</p>
 			<sampleCode lang="cs" title="Table Binding"
-						source="..\Samples\Extensibility\CustomTable\MyTableBinding.cs" region="MyTableBinding" />
+						source="..\..\Samples\Extensibility\CustomTable\MyTableBinding.cs" region="MyTableBinding" />
 
 			<sampleCode lang="cs" title="Column Binding"
-						source="..\Samples\Extensibility\CustomTable\MyTableBinding.cs" region="MyColumnBinding" />
+						source="..\..\Samples\Extensibility\CustomTable\MyTableBinding.cs" region="MyColumnBinding" />
 			<p>
 				To use a custom table binding it must registered with the <see cref="T:NQuery.DataContext">DataContext</see>:
 			</p>
 			<sampleCode lang="cs" title="Using a Custom Table Binding"
-						source="..\Samples\Extensibility\CustomTable\Form1.cs" region="Usage" />
+						source="..\..\Samples\Extensibility\CustomTable\Form1.cs" region="Usage" />
 		</section>
 	</body>
 </topic>

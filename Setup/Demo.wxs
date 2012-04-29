@@ -36,28 +36,22 @@
 				<File Id="Demo_NQuery.UI.Actipro40.dll" KeyPath="yes" Source="$(var.DemoFolder)NQuery.UI.Actipro40.dll" />
 			</Component>
 
-			<!-- NQuery Test Support (used for generating unit tests) -->
-
-			<Component Id="Demo_NQuery.Tests.dll" Guid="{2A2FB0AB-5B07-418A-B374-F6C8DB88A1D7}">
-				<File Id="Demo_NQuery.Tests.dll" KeyPath="yes" Source="$(var.DemoFolder)NQuery.Tests.dll" />
-			</Component>
-
 			<!-- Syntax Editor -->
 
 			<Component Id="Demo_ActiproSoftware.Shared.Net20.dll" Guid="{58FC6734-2380-4626-9238-555148E471ED}">
-				<File Id="Demo_ActiproSoftware.Shared.Net20.dll" KeyPath="yes" Source="$(env.WinDir)\assembly\GAC_MSIL\ActiproSoftware.Shared.Net20\1.0.101.0__36ff2196ab5654b9\ActiproSoftware.Shared.Net20.dll" />
+				<File Id="Demo_ActiproSoftware.Shared.Net20.dll" KeyPath="yes" Source="$(var.LibFolder)ActiproSoftware.Shared.Net20.dll" />
 			</Component>
 			<Component Id="Demo_ActiproSoftware.SyntaxEditor.Net20.dll" Guid="{ECC5534F-129A-4EB0-8181-EB0A5CD24AC7}">
-				<File Id="Demo_ActiproSoftware.SyntaxEditor.Net20.dll" KeyPath="yes" Source="$(env.WinDir)\assembly\GAC_MSIL\ActiproSoftware.SyntaxEditor.Net20\4.0.281.0__21a821480e210563\ActiproSoftware.SyntaxEditor.Net20.dll" />
+				<File Id="Demo_ActiproSoftware.SyntaxEditor.Net20.dll" KeyPath="yes" Source="$(var.LibFolder)ActiproSoftware.SyntaxEditor.Net20.dll" />
 			</Component>
 			<Component Id="Demo_ActiproSoftware.WinUICore.Net20.dll" Guid="{14F105DB-0215-4EF2-919D-90C98C278D0A}">
-				<File Id="Demo_ActiproSoftware.WinUICore.Net20.dll" KeyPath="yes" Source="$(env.WinDir)\assembly\GAC_MSIL\ActiproSoftware.WinUICore.Net20\1.0.101.0__1eba893a2bc55de5\ActiproSoftware.WinUICore.Net20.dll" />
+				<File Id="Demo_ActiproSoftware.WinUICore.Net20.dll" KeyPath="yes" Source="$(var.LibFolder)ActiproSoftware.WinUICore.Net20.dll" />
 			</Component>
 
 			<!-- Docking Support -->
 
 			<Component Id="Demo_SandDock.dll" Guid="{886460C4-36A8-4e64-A6C8-0EEFD1FDC367}">
-				<File Id="Demo_SandDock.dll" KeyPath="yes" Source="$(env.WinDir)\assembly\GAC_MSIL\SandDock\3.0.3.1__75b7ec17dd7c14c3\SandDock.dll" />
+				<File Id="Demo_SandDock.dll" KeyPath="yes" Source="$(var.LibFolder)SandDock.dll" />
 			</Component>
 
 			<!-- DataSet demo files -->
@@ -100,10 +94,6 @@
 			<ComponentRef Id="Demo_NQuery.UI.dll" />
 			<ComponentRef Id="Demo_NQuery.UI.Actipro40.dll" />
 			
-			<!-- NQuery Test Support (used for generating unit tests) -->
-			
-			<ComponentRef Id="Demo_NQuery.Tests.dll" />
-
 			<!-- Syntax Editor -->
 			
 			<ComponentRef Id="Demo_ActiproSoftware.Shared.Net20.dll" />

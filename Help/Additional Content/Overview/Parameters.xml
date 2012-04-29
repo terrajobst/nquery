@@ -44,7 +44,7 @@
 				the value never changes constants are performing better.
 			</p>
 			<sampleCode lang="cs" title="Scenario 1"
-						source="..\Samples\Overview\ParametersVsConstants\Program.cs" region="Constant Scenario" />
+						source="..\..\Samples\Overview\ParametersVsConstants\Program.cs" region="Constant Scenario" />
 
 			<p>
 				The console ouput is as follows:
@@ -66,7 +66,7 @@ Parameters
 				evaluated 10,000 times.
 			</p>
 			<sampleCode lang="cs" title="Scenario 2"
-						source="..\Samples\Overview\ParametersVsConstants\Program.cs" region="Parameter Scenario" />
+						source="..\..\Samples\Overview\ParametersVsConstants\Program.cs" region="Parameter Scenario" />
 
 			<p>
 				The console ouput is as follows:

@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <!-- The configuration and platform will be used to determine which
+         assemblies to include from solution and project documentation
+         sources -->
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{fc502f0c-6026-49e4-9e09-557403dc4c5d}</ProjectGuid>
+    <SHFBSchemaVersion>1.9.3.0</SHFBSchemaVersion>
+    <!-- AssemblyName, Name, and RootNamespace are not used by SHFB but Visual
+         Studio adds them anyway -->
+    <AssemblyName>Documentation</AssemblyName>
+    <RootNamespace>Documentation</RootNamespace>
+    <Name>Documentation</Name>
+    <!-- SHFB properties -->
+    <OutputPath>..\Output\Help\</OutputPath>
+    <HtmlHelpName>NQuery</HtmlHelpName>
+    <Language>en-US</Language>
+    <ProjectSummary />
+    <MissingTags>Summary, Parameter, AutoDocumentCtors, Namespace, TypeParameter</MissingTags>
+    <VisibleItems>Attributes, InheritedMembers, InheritedFrameworkMembers, Protected, SealedProtected</VisibleItems>
+    <HtmlHelp1xCompilerPath />
+    <HtmlHelp2xCompilerPath />
+    <SandcastlePath />
+    <WorkingPath />
+    <KeepLogFile>False</KeepLogFile>
+    <BuildLogFile />
+    <HelpFileFormat>HtmlHelp1</HelpFileFormat>
+    <FrameworkVersion>.NET 2.0.50727</FrameworkVersion>
+    <RootNamespaceContainer>True</RootNamespaceContainer>
+    <RootNamespaceTitle>Class Library Reference</RootNamespaceTitle>
+    <HelpTitle>NQuery Documentation</HelpTitle>
+    <CopyrightText>Copyright &amp;#169%3b 2005 - 2009 by Immo Landwerth</CopyrightText>
+    <FeedbackEMailAddress>terrajobst%40web.de</FeedbackEMailAddress>
+    <FeedbackEMailLinkText>Immo Landwerth</FeedbackEMailLinkText>
+    <WebsiteSdkLinkType>None</WebsiteSdkLinkType>
+    <HtmlSdkLinkType>None</HtmlSdkLinkType>
+    <MSHelp2SdkLinkType>Index</MSHelp2SdkLinkType>
+    <MSHelpViewerSdkLinkType>Id</MSHelpViewerSdkLinkType>
+    <PresentationStyle>vs2005</PresentationStyle>
+    <SyntaxFilters>CSharp</SyntaxFilters>
+    <HelpFileVersion>0.9.4.0</HelpFileVersion>
+    <DocumentationSources>
+      <DocumentationSource sourceFile="..\..\Output\Bin\NQuery.dll" xmlns="" />
+      <DocumentationSource sourceFile="..\..\Output\Bin\NQuery.xml" xmlns="" />
+      <DocumentationSource sourceFile="..\..\Output\Bin\NQuery.UI.Actipro40.dll" xmlns="" />
+      <DocumentationSource sourceFile="..\..\Output\Bin\NQuery.UI.Actipro40.xml" xmlns="" />
+      <DocumentationSource sourceFile="..\..\Output\Bin\NQuery.UI.dll" xmlns="" />
+      <DocumentationSource sourceFile="..\..\Output\Bin\NQuery.UI.xml" xmlns="" />
+    </DocumentationSources>
+    <HelpAttributes>
+      <HelpAttribute name="DocSet" value="NQuery" xmlns="" />
+    </HelpAttributes>
+    <NamespaceSummaries>
+      <NamespaceSummaryItem name="(global)" isDocumented="False" xmlns="" />
+      <NamespaceSummaryItem name="NQuery" isDocumented="True" xmlns="">Contains the most importantant NQuery classes.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="NQuery.CodeAssistance" isDocumented="False" xmlns="" />
+      <NamespaceSummaryItem name="NQuery.Compilation" isDocumented="False" xmlns="" />
+      <NamespaceSummaryItem name="NQuery.Runtime" isDocumented="True" xmlns="">Contains runtime support classes and classes used to extend NQuery.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="NQuery.Runtime.ExecutionPlan" isDocumented="False" xmlns="" />
+      <NamespaceSummaryItem name="NQuery.UI" isDocumented="True" xmlns="">Contains components used to simplify query authoring.</NamespaceSummaryItem>
+    </NamespaceSummaries>
+  </PropertyGroup>
+  <!-- There are no properties for these groups.  AnyCPU needs to appear in
+       order for Visual Studio to perform the build.  The others are optional
+       common platform types that may appear. -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Win32' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Win32' ">
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Features.html" />
+    <Content Include="Execution Plan Reference\Assert.html" />
+    <Content Include="Execution Plan Reference\Compute Scalar.html" />
+    <Content Include="Execution Plan Reference\Concatenation.html" />
+    <Content Include="Execution Plan Reference\Constant Scan.html" />
+    <Content Include="Execution Plan Reference\Cross Join.html" />
+    <Content Include="Execution Plan Reference\Distinct Sort.html" />
+    <Content Include="Execution Plan Reference\Execution Plan Reference.html" />
+    <Content Include="Execution Plan Reference\Filter.html" />
+    <Content Include="Execution Plan Reference\Full Outer Join.html" />
+    <Content Include="Execution Plan Reference\Hash Match.html" />
+    <Content Include="Execution Plan Reference\Index Spool.html" />
+    <Content Include="Execution Plan Reference\Left Anti Semi Join.html" />
+    <Content Include="Execution Plan Reference\Left Outer Join.html" />
+    <Content Include="Execution Plan Reference\Left Semi Join.html" />
+    <Content Include="Execution Plan Reference\Nested Loops.html" />
+    <Content Include="Execution Plan Reference\Right Anti Semi Join.html" />
+    <Content Include="Execution Plan Reference\Right Outer Join.html" />
+    <Content Include="Execution Plan Reference\Right Semi Join.html" />
+    <Content Include="Execution Plan Reference\Select.html" />
+    <Content Include="Execution Plan Reference\Sort.html" />
+    <Content Include="Execution Plan Reference\Stream Aggregate.html" />
+    <Content Include="Execution Plan Reference\Table Scan.html" />
+    <Content Include="Execution Plan Reference\Table Spool.html" />
+    <Content Include="Execution Plan Reference\Top.html" />
+    <Content Include="Execution Plan Reference\Union.html" />
+    <Content Include="Extensibility\CustomAggregates.html" />
+    <Content Include="Extensibility\CustomCodeAssistance.html" />
+    <Content Include="Extensibility\CustomComparers.html" />
+    <Content Include="Extensibility\CustomFunctions.html" />
+    <Content Include="Extensibility\CustomMethods.html" />
+    <Content Include="Extensibility\CustomProperties.html" />
+    <Content Include="Extensibility\CustomTables.html" />
+    <Content Include="Extensibility\Extensibility.html" />
+    <Content Include="Language Reference\Language Reference.html" />
+    <Content Include="Language Reference\Expressions\BinaryOperators.html" />
+    <Content Include="Language Reference\Expressions\Expressions.html" />
+    <Content Include="Language Reference\Expressions\UnaryOperators.html" />
+    <Content Include="Language Reference\Functions\Abs.html" />
+    <Content Include="Language Reference\Functions\Acos.html" />
+    <Content Include="Language Reference\Functions\Aggregate Functions.html" />
+    <Content Include="Language Reference\Functions\Asin.html" />
+    <Content Include="Language Reference\Functions\Atan.html" />
+    <Content Include="Language Reference\Functions\Avg.html" />
+    <Content Include="Language Reference\Functions\Case.html" />
+    <Content Include="Language Reference\Functions\Ceiling.html" />
+    <Content Include="Language Reference\Functions\Charindex.html" />
+    <Content Include="Language Reference\Functions\Coalesce.html" />
+    <Content Include="Language Reference\Functions\Concat.html" />
+    <Content Include="Language Reference\Functions\Conversion Functions.html" />
+    <Content Include="Language Reference\Functions\Cos.html" />
+    <Content Include="Language Reference\Functions\Cosh.html" />
+    <Content Include="Language Reference\Functions\Count.html" />
+    <Content Include="Language Reference\Functions\Date and Time Functions.html" />
+    <Content Include="Language Reference\Functions\Day.html" />
+    <Content Include="Language Reference\Functions\Exp.html" />
+    <Content Include="Language Reference\Functions\First.html" />
+    <Content Include="Language Reference\Functions\Floor.html" />
+    <Content Include="Language Reference\Functions\Format.html" />
+    <Content Include="Language Reference\Functions\Functions.html" />
+    <Content Include="Language Reference\Functions\Getdate.html" />
+    <Content Include="Language Reference\Functions\Getutcdate.html" />
+    <Content Include="Language Reference\Functions\Last.html" />
+    <Content Include="Language Reference\Functions\Left.html" />
+    <Content Include="Language Reference\Functions\Len.html" />
+    <Content Include="Language Reference\Functions\Log.html" />
+    <Content Include="Language Reference\Functions\Log10.html" />
+    <Content Include="Language Reference\Functions\Lower.html" />
+    <Content Include="Language Reference\Functions\Lpad.html" />
+    <Content Include="Language Reference\Functions\Ltrim.html" />
+    <Content Include="Language Reference\Functions\Mathematical Functions.html" />
+    <Content Include="Language Reference\Functions\Max.html" />
+    <Content Include="Language Reference\Functions\Min.html" />
+    <Content Include="Language Reference\Functions\Month.html" />
+    <Content Include="Language Reference\Functions\NullIf.html" />
+    <Content Include="Language Reference\Functions\Power.html" />
+    <Content Include="Language Reference\Functions\Regex_escape.html" />
+    <Content Include="Language Reference\Functions\Regex_match.html" />
+    <Content Include="Language Reference\Functions\Regex_replace.html" />
+    <Content Include="Language Reference\Functions\Regex_unescape.html" />
+    <Content Include="Language Reference\Functions\Replace.html" />
+    <Content Include="Language Reference\Functions\Replicate.html" />
+    <Content Include="Language Reference\Functions\Reverse.html" />
+    <Content Include="Language Reference\Functions\Right.html" />
+    <Content Include="Language Reference\Functions\Round.html" />
+    <Content Include="Language Reference\Functions\Rpad.html" />
+    <Content Include="Language Reference\Functions\Rtrim.html" />
+    <Content Include="Language Reference\Functions\Sign.html" />
+    <Content Include="Language Reference\Functions\Sin.html" />
+    <Content Include="Language Reference\Functions\Sinh.html" />
+    <Content Include="Language Reference\Functions\Soundex.html" />
+    <Content Include="Language Reference\Functions\Space.html" />
+    <Content Include="Language Reference\Functions\Sqrt.html" />
+    <Content Include="Language Reference\Functions\Stdev.html" />
+    <Content Include="Language Reference\Functions\String Functions.html" />
+    <Content Include="Language Reference\Functions\Substring.html" />
+    <Content Include="Language Reference\Functions\Sum.html" />
+    <Content Include="Language Reference\Functions\System Functions.html" />
+    <Content Include="Language Reference\Functions\Tan.html" />
+    <Content Include="Language Reference\Functions\Tanh.html" />
+    <Content Include="Language Reference\Functions\To_boolean.html" />
+    <Content Include="Language Reference\Functions\To_byte.html" />
+    <Content Include="Language Reference\Functions\To_char.html" />
+    <Content Include="Language Reference\Functions\To_datetime.html" />
+    <Content Include="Language Reference\Functions\To_decimal.html" />
+    <Content Include="Language Reference\Functions\To_double.html" />
+    <Content Include="Language Reference\Functions\To_int16.html" />
+    <Content Include="Language Reference\Functions\To_int32.html" />
+    <Content Include="Language Reference\Functions\To_int64.html" />
+    <Content Include="Language Reference\Functions\To_sbyte.html" />
+    <Content Include="Language Reference\Functions\To_single.html" />
+    <Content Include="Language Reference\Functions\To_string.html" />
+    <Content Include="Language Reference\Functions\To_uint16.html" />
+    <Content Include="Language Reference\Functions\To_uint32.html" />
+    <Content Include="Language Reference\Functions\To_uint64.html" />
+    <Content Include="Language Reference\Functions\Trim.html" />
+    <Content Include="Language Reference\Functions\Upper.html" />
+    <Content Include="Language Reference\Functions\Var.html" />
+    <Content Include="Language Reference\Functions\Year.html" />
+    <Content Include="Language Reference\Queries\CommonTableExpression.html" />
+    <Content Include="Language Reference\Queries\FromClause.html" />
+    <Content Include="Language Reference\Queries\GroupByClause.html" />
+    <Content Include="Language Reference\Queries\HavingClause.html" />
+    <Content Include="Language Reference\Queries\OrderByClause.html" />
+    <Content Include="Language Reference\Queries\Queries.html" />
+    <Content Include="Language Reference\Queries\SelectClause.html" />
+    <Content Include="Language Reference\Queries\TopClause.html" />
+    <Content Include="Language Reference\Queries\UnionExceptIntersect.html" />
+    <Content Include="Language Reference\Queries\WhereClause.html" />
+    <Content Include="Overview\CodeAssistance.html" />
+    <Content Include="Overview\DataContext.html" />
+    <Content Include="Overview\Expression.html" />
+    <Content Include="Overview\MetadataContext.html" />
+    <Content Include="Overview\Overview.html" />
+    <Content Include="Overview\Parameters.html" />
+    <Content Include="Overview\Query.html" />
+    <Content Include="Quick Start\Quick Start.html" />
+    <Content Include="Quick Start\QueryQuickStart.html" />
+    <Content Include="Quick Start\ExpressionQuickStart.html" />
+    <Content Include="Welcome.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Execution Plan Reference\Assert.png" />
+    <Content Include="Execution Plan Reference\Compute Scalar.png" />
+    <Content Include="Execution Plan Reference\Concatenation.png" />
+    <Content Include="Execution Plan Reference\Constant Scan.png" />
+    <Content Include="Execution Plan Reference\Filter.png" />
+    <Content Include="Execution Plan Reference\Hash Match.png" />
+    <Content Include="Execution Plan Reference\Index Spool.png" />
+    <Content Include="Execution Plan Reference\Merge Join.png" />
+    <Content Include="Execution Plan Reference\Nested Loops.png" />
+    <Content Include="Execution Plan Reference\Remote Scan.png" />
+    <Content Include="Execution Plan Reference\Result.png" />
+    <Content Include="Execution Plan Reference\Sort.png" />
+    <Content Include="Execution Plan Reference\Stream Aggregate.png" />
+    <Content Include="Execution Plan Reference\Table Scan.png" />
+    <Content Include="Execution Plan Reference\Table Spool.png" />
+    <Content Include="Execution Plan Reference\Top.png" />
+    <Content Include="Extensibility\CodeAssistanceAcceptors.png" />
+    <Content Include="Extensibility\CodeAssistanceOverview.png" />
+    <Content Include="Overview\MemberCompletionJoinCondition.png" />
+    <Content Include="Overview\MemberCompletionMethods.png" />
+    <Content Include="Overview\MemberCompletionSimple.png" />
+    <Content Include="Overview\MemberCompletionTable.png" />
+    <Content Include="Overview\Overview.png" />
+    <Content Include="Overview\ParameterInfo.png" />
+    <Content Include="Welcome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Execution Plan Reference\" />
+    <Folder Include="Extensibility\" />
+    <Folder Include="Language Reference\" />
+    <Folder Include="Language Reference\Expressions\" />
+    <Folder Include="Language Reference\Functions\" />
+    <Folder Include="Language Reference\Queries\" />
+    <Folder Include="Overview\" />
+    <Folder Include="Quick Start\" />
+  </ItemGroup>
+  <!-- Import the SHFB build targets -->
+  <Import Project="$(SHFBROOT)\SandcastleHelpFileBuilder.targets" />
+</Project>

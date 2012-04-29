@@ -56,16 +56,16 @@
 				The following example shows how a static and an instance container can be declared:
 			</p>
 			<sampleCode lang="cs" title="Creating a Static Function Container"
-						source="..\Samples\Extensibility\CustomFunctions\StaticFunctionContainer.cs" region="Declaration"  />
+						source="..\..\Samples\Extensibility\CustomFunctions\StaticFunctionContainer.cs" region="Declaration"  />
 			<sampleCode lang="cs" title="Creating an Instance Function Container"
-						source="..\Samples\Extensibility\CustomFunctions\InstanceFunctionContainer.cs" region="Declaration"  />
+						source="..\..\Samples\Extensibility\CustomFunctions\InstanceFunctionContainer.cs" region="Declaration"  />
 			<p>
 				To use the functions you must register them with the <see cref="T:NQuery.DataContext">DataContext</see>:
 			</p>
 			<sampleCode lang="cs" title="Registering a Static Function Container"
-						source="..\Samples\Extensibility\CustomFunctions\Form1.cs" region="Static Function Container Usage"  />
+						source="..\..\Samples\Extensibility\CustomFunctions\Form1.cs" region="Static Function Container Usage"  />
 			<sampleCode lang="cs" title="Registering an Instance Function Container"
-						source="..\Samples\Extensibility\CustomFunctions\Form1.cs" region="Instance Function Container Usage"  />
+						source="..\..\Samples\Extensibility\CustomFunctions\Form1.cs" region="Instance Function Container Usage"  />
 		</section>
 
 		<section title="Using Delegates">
@@ -75,12 +75,12 @@
 			<p>
 				The sample below assumes you have the following delegate and delegate implementation:
 			</p>
-			<sampleCode lang="cs" title="A Delegate Declaration" source="..\Samples\Extensibility\CustomFunctions\Form1.cs" region="Delegate Declaration" />
+			<sampleCode lang="cs" title="A Delegate Declaration" source="..\..\Samples\Extensibility\CustomFunctions\Form1.cs" region="Delegate Declaration" />
 			<p>
 				As it is with function containers you must register the delegate with the <see cref="T:NQuery.DataContext">DataContext</see>:
 			</p>
 			<sampleCode lang="cs" title="Registering a Delegate as Function"
-						source="..\Samples\Extensibility\CustomFunctions\Form1.cs" region="Delegate Function Usage"  />
+						source="..\..\Samples\Extensibility\CustomFunctions\Form1.cs" region="Delegate Function Usage"  />
 		</section>
 
 		<section title="Dynamically Creating Functions">
@@ -93,20 +93,20 @@
 				bodies.
 			</p>
 			<sampleCode lang="cs" title="Creating a Custom Function Binding"
-						source="..\Samples\Extensibility\CustomFunctions\MyFunctionBinding.cs" region="MyFunctionBinding"  />
+						source="..\..\Samples\Extensibility\CustomFunctions\MyFunctionBinding.cs" region="MyFunctionBinding"  />
 			<p>
 				The class <c>MyFunctionParameter</c> is derived from <see cref="T:NQuery.Runtime.InvokeParameter">InvokeParameter</see> and is declared as
 				follows:
 			</p>
 			<sampleCode lang="cs" title="Creating an Invoke Parameter"
-						source="..\Samples\Extensibility\CustomFunctions\MyFunctionBinding.cs" region="MyFunctionParameter"  />
+						source="..\..\Samples\Extensibility\CustomFunctions\MyFunctionBinding.cs" region="MyFunctionParameter"  />
 
 			<p>
 				To use our custom function binding we must instantiate an <see cref="T:NQuery.Expression`1">Expression</see> and pass it to our newly
 				created <c>MyFunctionBinding</c>. This instance can be directly added to the <see cref="T:NQuery.DataContext">DataContext</see>.
 			</p>
 			<sampleCode lang="cs" title="Registering a Dynamic Function"
-						source="..\Samples\Extensibility\CustomFunctions\Form1.cs" region="Dynamic Function Usage"  />
+						source="..\..\Samples\Extensibility\CustomFunctions\Form1.cs" region="Dynamic Function Usage"  />
 		</section>
 	</body>
 </topic>

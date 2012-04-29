@@ -1,5 +1,13 @@
 ﻿<topic>
 	<head>
-		<toc index="3" exclude="true" />
+		<title>Quick Start</title>
+		<toc index="3" />
 	</head>
+	<body>
+		<summary>
+			<p>
+				Please select a topic from the outline.
+			</p>
+		</summary>
+  </body>
 </topic>

@@ -32,7 +32,7 @@
 				The external data type looks like this:
 			</p>
 			<sampleCode lang="cs" title="The External Data Type"
-						source="..\Samples\Extensibility\CustomComparer\MyComparer.cs" region="ExternalPersonDataType"  />
+						source="..\..\Samples\Extensibility\CustomComparer\MyComparer.cs" region="ExternalPersonDataType"  />
 
 			<p>
 				In most cases we are not really interested in a specific ordering; all we want is that the data type supports any kind
@@ -46,13 +46,13 @@
 				</p>
 			</note>
 			<sampleCode lang="cs" title="Implementing IComparer"
-						source="..\Samples\Extensibility\CustomComparer\MyComparer.cs" region="MyComparer"  />
+						source="..\..\Samples\Extensibility\CustomComparer\MyComparer.cs" region="MyComparer"  />
 
 			<p>
 				To use the comparer it must be registered with the <see cref="T:NQuery.MetadataContext">MetadataContext</see>:
 			</p>
 			<sampleCode lang="cs" title="Using a Custom Comparer"
-						source="..\Samples\Extensibility\CustomComparer\Form1.cs" region="Usage"  />
+						source="..\..\Samples\Extensibility\CustomComparer\Form1.cs" region="Usage"  />
 		</section>
 	</body>
 </topic>

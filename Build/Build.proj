@@ -1,18 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
-
-	<!-- External Tools -->
-
-	<PropertyGroup>
-		<SandcastleHFBPath>C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder 1.7\</SandcastleHFBPath>
-	</PropertyGroup>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
 
 	<!-- Build Settings -->
 
 	<PropertyGroup>
 		<BuildDir>$(MSBuildProjectDirectory)\</BuildDir>
-		<CustomTasksDir>$(BuildDir)Custom Tasks\</CustomTasksDir>
+		<CustomTasksDir>$(BuildDir)CustomTasks\</CustomTasksDir>
 		<ProjectDir>$(BuildDir)..\</ProjectDir>
 		<SourceDir>$(ProjectDir)Src\</SourceDir>
 		<SetupDir>$(ProjectDir)Setup\</SetupDir>
@@ -229,7 +222,12 @@
 
 		<!-- Build Help files -->
 		<MakeDir Directories="$(GeneratedHelp)" Condition="!Exists('$(GeneratedHelp)')" />
-		<Exec Command="&quot;$(SandcastleHFBPath)SandcastleBuilderConsole.exe&quot; &quot;$(HelpDir)NQuery.shfb&quot;" />
+
+    <Copy SourceFiles="$(HelpDir)Help.shfbproj" DestinationFolder="$(GeneratedHelpTopics)" />
+    
+    <MSBuild Projects="$(GeneratedHelpTopics)Help.shfbproj"
+             Properties="OutputPath=$(GeneratedHelp)" />
+
 		<Copy SourceFiles="@(HtmlHelp2TemplateFiles)" DestinationFolder="$(GeneratedHelp)" />
 
 		<!-- Remove temporary additional content files -->

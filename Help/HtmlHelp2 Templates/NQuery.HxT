@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE HelpTOC>
-<HelpTOC DTDVersion="1.0" PluginStyle="Flat">
-	<HelpTOCNode NodeType="Regular" Title="NQuery" Url="/NQuery/Welcome.html">
-		<HelpTOCNode Id="NQuery" NodeType="TOC" Url="NQuery" />
-	</HelpTOCNode>
-</HelpTOC>

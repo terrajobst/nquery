@@ -37,11 +37,11 @@
 			<p>
 				The aggregate binding is declared as follows:
 			</p>
-			<sampleCode lang="cs" title="Creating an Aggregate Binding" source="..\Samples\Extensibility\CustomAggregate\CustomAggregate.cs" region="AggregateBinding" />
+			<sampleCode lang="cs" title="Creating an Aggregate Binding" source="..\..\Samples\Extensibility\CustomAggregate\CustomAggregate.cs" region="AggregateBinding" />
 			<p>
 				The aggregator for our sample aggregate function is declared as follows:
 			</p>
-			<sampleCode lang="cs" title="Implementing IAggregate" source="..\Samples\Extensibility\CustomAggregate\CustomAggregate.cs" region="Aggregator" />
+			<sampleCode lang="cs" title="Implementing IAggregate" source="..\..\Samples\Extensibility\CustomAggregate\CustomAggregate.cs" region="Aggregator" />
 		</section>
 
 		<section title="Using a Custom Aggregate">
@@ -52,11 +52,11 @@
 			<p>
 				The sample uses the following data type:
 			</p>
-			<sampleCode lang="cs" title="Data Type" source="..\Samples\Extensibility\CustomAggregate\Form1.cs" region="Employee" />
+			<sampleCode lang="cs" title="Data Type" source="..\..\Samples\Extensibility\CustomAggregate\Form1.cs" region="Employee" />
 			<p>
 				The following example shows how to use a custom aggregate.
 			</p>
-			<sampleCode lang="cs" title="Using a Custom Aggregate" source="..\Samples\Extensibility\CustomAggregate\Form1.cs" region="Usage" />
+			<sampleCode lang="cs" title="Using a Custom Aggregate" source="..\..\Samples\Extensibility\CustomAggregate\Form1.cs" region="Usage" />
 		</section>
 	</body>
 </topic>

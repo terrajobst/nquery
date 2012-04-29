@@ -64,7 +64,6 @@
 		<FeatureRef Id="Binaries"/>
 		<FeatureRef Id="Samples"/>
 		<FeatureRef Id="Demo"/>
-		<FeatureRef Id="HelpVS"/>
 		<FeatureRef Id="HelpCHM"/>
 
 		<!-- Install Sequences -->
