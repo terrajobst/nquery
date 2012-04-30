@@ -3,23 +3,23 @@
 	<?include Product.wxi ?>
 	<Fragment>
 		<DirectoryRef Id="NQuery.Bin">
-			<Component Id="NQuery.dll">
-				<File Id="NQuery.dll" Source="$(var.BinFolder)NQuery.dll" />
+			<Component>
+				<File Source="$(var.BinFolder)NQuery.dll" />
 			</Component>
-			<Component Id="NQuery.xml">
-				<File Id="NQuery.xml" Source="$(var.BinFolder)NQuery.xml" />
+			<Component>
+				<File Source="$(var.BinFolder)NQuery.xml" />
 			</Component>
-			<Component Id="NQuery.UI.dll">
-				<File Id="NQuery.UI.dll" Source="$(var.BinFolder)NQuery.UI.dll" />
+			<Component>
+				<File Source="$(var.BinFolder)NQuery.UI.dll" />
 			</Component>
-			<Component Id="NQuery.UI.xml">
-				<File Id="NQuery.UI.xml" Source="$(var.BinFolder)NQuery.UI.xml" />
+			<Component>
+				<File Source="$(var.BinFolder)NQuery.UI.xml" />
 			</Component>
-			<Component Id="NQuery.UI.Actipro40.dll">
-				<File Id="NQuery.UI.Actipro40.dll" Source="$(var.BinFolder)NQuery.UI.Actipro40.dll" />
+			<Component>
+				<File Source="$(var.BinFolder)NQuery.UI.Actipro40.dll" />
 			</Component>
-			<Component Id="NQuery.UI.Actipro40.xml">
-				<File Id="NQuery.UI.Actipro40.xml" Source="$(var.BinFolder)NQuery.UI.Actipro40.xml" />
+			<Component>
+				<File Source="$(var.BinFolder)NQuery.UI.Actipro40.xml" />
 			</Component>
 			<Component Id="VSAssemblyRegistration">
 				<RegistryValue Root="HKLM" Key="SOFTWARE\Microsoft\.NETFramework\AssemblyFolders\NQuery" Value="[NQuery.Bin]" Type="string"/>
