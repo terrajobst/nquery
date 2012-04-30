@@ -3,8 +3,8 @@
 	<?include Product.wxi ?>
 	<Fragment>
 		<DirectoryRef Id="NQuery.Help">
-			<Component Id="NQuery.chm" Guid="{AB8E724F-C991-472B-B90B-C2DFFEA0BB99}">
-				<File Id="NQuery.chm" Name="NQuery.chm" KeyPath="yes" Source="$(var.HelpFolder)NQuery.chm" />
+			<Component Id="NQuery.chm">
+				<File Id="NQuery.chm" Source="$(var.HelpFolder)NQuery.chm" />
 			</Component>
 		</DirectoryRef>
 

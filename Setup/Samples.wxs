@@ -3,323 +3,323 @@
 	<?include Product.wxi ?>
 	<Fragment>
 		<DirectoryRef Id="NQuery.Samples">
-			<Component Id="NQuery.Samples.sln" Guid="{B4660E7D-E3EE-447F-B724-02CDBD6555AC}">
-				<File Id="NQuery.Samples.sln" Name="NQuery.Samples.sln" KeyPath="yes" Source="$(var.SamplesFolder)NQuery.Samples.sln" />
+			<Component Id="NQuery.Samples.sln">
+				<File Id="NQuery.Samples.sln" Name="NQuery.Samples.sln" Source="$(var.SamplesFolder)NQuery.Samples.sln" />
 			</Component>
 			<Directory Id="Extensibility" Name="Extensibility">
 				<Directory Id="CustomAggregate" Name="CustomAggregate">
-					<Component Id="CustomAggregate.cs" Guid="{371879D6-8D9E-4ACE-B196-E8B0238E8747}">
-						<File Id="CustomAggregate.cs" Name="CustomAggregate.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\CustomAggregate.cs" />
+					<Component Id="CustomAggregate.cs">
+						<File Id="CustomAggregate.cs" Name="CustomAggregate.cs" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\CustomAggregate.cs" />
 					</Component>
-					<Component Id="CustomAggregate.csproj" Guid="{82A8593A-D1BF-4671-A092-A29774CEAA6B}">
-						<File Id="CustomAggregate.csproj" Name="CustomAggregate.csproj" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\CustomAggregate.csproj" />
+					<Component Id="CustomAggregate.csproj">
+						<File Id="CustomAggregate.csproj" Name="CustomAggregate.csproj" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\CustomAggregate.csproj" />
 					</Component>
-					<Component Id="Form1.cs_1" Guid="{FFDC4429-2997-48AF-9E7A-ABE162768FD6}">
-						<File Id="Form1.cs_1" Name="Form1.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\Form1.cs" />
+					<Component Id="Form1.cs_1">
+						<File Id="Form1.cs_1" Name="Form1.cs" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\Form1.cs" />
 					</Component>
-					<Component Id="Form1.Designer.cs_1" Guid="{1CCCD35E-489D-4FBB-87E9-96350B5451D2}">
-						<File Id="Form1.Designer.cs_1" Name="Form1.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\Form1.Designer.cs" />
+					<Component Id="Form1.Designer.cs_1">
+						<File Id="Form1.Designer.cs_1" Name="Form1.Designer.cs" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\Form1.Designer.cs" />
 					</Component>
-					<Component Id="Form1.resx_1" Guid="{9267A5AE-811A-45A8-8734-2503493B5F40}">
-						<File Id="Form1.resx_1" Name="Form1.resx" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\Form1.resx" />
+					<Component Id="Form1.resx_1">
+						<File Id="Form1.resx_1" Name="Form1.resx" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\Form1.resx" />
 					</Component>
-					<Component Id="Program.cs_1" Guid="{4AA18C67-E36E-4A31-885A-55FDFCC8CAAA}">
-						<File Id="Program.cs_1" Name="Program.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\Program.cs" />
+					<Component Id="Program.cs_1">
+						<File Id="Program.cs_1" Name="Program.cs" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\Program.cs" />
 					</Component>
 					<Directory Id="Properties_1" Name="Properties">
-						<Component Id="AssemblyInfo.cs_1" Guid="{BFD48096-565B-4199-BE11-014DA58D0CEE}">
-							<File Id="AssemblyInfo.cs_1" Name="AssemblyInfo.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\Properties\AssemblyInfo.cs" />
+						<Component Id="AssemblyInfo.cs_1">
+							<File Id="AssemblyInfo.cs_1" Name="AssemblyInfo.cs" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\Properties\AssemblyInfo.cs" />
 						</Component>
-						<Component Id="Resources.Designer.cs_1" Guid="{C9484EAD-D075-4CCC-AB7E-CDFF849E7320}">
-							<File Id="Resources.Designer.cs_1" Name="Resources.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\Properties\Resources.Designer.cs" />
+						<Component Id="Resources.Designer.cs_1">
+							<File Id="Resources.Designer.cs_1" Name="Resources.Designer.cs" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\Properties\Resources.Designer.cs" />
 						</Component>
-						<Component Id="Resources.resx_1" Guid="{C52AE06C-B6A8-4854-800F-2A2F6482BB73}">
-							<File Id="Resources.resx_1" Name="Resources.resx" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\Properties\Resources.resx" />
+						<Component Id="Resources.resx_1">
+							<File Id="Resources.resx_1" Name="Resources.resx" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\Properties\Resources.resx" />
 						</Component>
-						<Component Id="Settings.Designer.cs_1" Guid="{65FEE85A-84C1-4723-8E5A-EA231D65B054}">
-							<File Id="Settings.Designer.cs_1" Name="Settings.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\Properties\Settings.Designer.cs" />
+						<Component Id="Settings.Designer.cs_1">
+							<File Id="Settings.Designer.cs_1" Name="Settings.Designer.cs" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\Properties\Settings.Designer.cs" />
 						</Component>
-						<Component Id="Settings.settings_1" Guid="{160B509F-B1B2-46D1-B4EE-DABFBF1E564F}">
-							<File Id="Settings.settings_1" Name="Settings.settings" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\Properties\Settings.settings" />
+						<Component Id="Settings.settings_1">
+							<File Id="Settings.settings_1" Name="Settings.settings" Source="$(var.SamplesFolder)Extensibility\CustomAggregate\Properties\Settings.settings" />
 						</Component>
 					</Directory>
 				</Directory>
 				<Directory Id="CustomComparer" Name="CustomComparer">
-					<Component Id="CustomComparer.csproj" Guid="{DBAC8A97-611F-4BE4-AA07-FF3A0D7A332E}">
-						<File Id="CustomComparer.csproj" Name="CustomComparer.csproj" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomComparer\CustomComparer.csproj" />
+					<Component Id="CustomComparer.csproj">
+						<File Id="CustomComparer.csproj" Name="CustomComparer.csproj" Source="$(var.SamplesFolder)Extensibility\CustomComparer\CustomComparer.csproj" />
 					</Component>
-					<Component Id="Form1.cs_2" Guid="{5D738BF3-3A28-46F6-8EF8-8F70BFA0F9EA}">
-						<File Id="Form1.cs_2" Name="Form1.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomComparer\Form1.cs" />
+					<Component Id="Form1.cs_2">
+						<File Id="Form1.cs_2" Name="Form1.cs" Source="$(var.SamplesFolder)Extensibility\CustomComparer\Form1.cs" />
 					</Component>
-					<Component Id="Form1.Designer.cs_2" Guid="{8026437D-214B-48F1-BF35-31FDBAB53D60}">
-						<File Id="Form1.Designer.cs_2" Name="Form1.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomComparer\Form1.Designer.cs" />
+					<Component Id="Form1.Designer.cs_2">
+						<File Id="Form1.Designer.cs_2" Name="Form1.Designer.cs" Source="$(var.SamplesFolder)Extensibility\CustomComparer\Form1.Designer.cs" />
 					</Component>
-					<Component Id="Form1.resx_2" Guid="{08CD52EF-73B6-4CE2-9306-A62D7305E635}">
-						<File Id="Form1.resx_2" Name="Form1.resx" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomComparer\Form1.resx" />
+					<Component Id="Form1.resx_2">
+						<File Id="Form1.resx_2" Name="Form1.resx" Source="$(var.SamplesFolder)Extensibility\CustomComparer\Form1.resx" />
 					</Component>
-					<Component Id="MyComparer.cs" Guid="{A5F38988-53D1-45AB-8B88-61DDCD9843BC}">
-						<File Id="MyComparer.cs" Name="MyComparer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomComparer\MyComparer.cs" />
+					<Component Id="MyComparer.cs">
+						<File Id="MyComparer.cs" Name="MyComparer.cs" Source="$(var.SamplesFolder)Extensibility\CustomComparer\MyComparer.cs" />
 					</Component>
-					<Component Id="Program.cs_2" Guid="{E2C72F85-49FE-4D63-84F6-96355668030B}">
-						<File Id="Program.cs_2" Name="Program.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomComparer\Program.cs" />
+					<Component Id="Program.cs_2">
+						<File Id="Program.cs_2" Name="Program.cs" Source="$(var.SamplesFolder)Extensibility\CustomComparer\Program.cs" />
 					</Component>
 					<Directory Id="Properties_2" Name="Properties">
-						<Component Id="AssemblyInfo.cs_2" Guid="{20B9AC29-F2C7-4021-98EC-4750025A57AE}">
-							<File Id="AssemblyInfo.cs_2" Name="AssemblyInfo.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomComparer\Properties\AssemblyInfo.cs" />
+						<Component Id="AssemblyInfo.cs_2">
+							<File Id="AssemblyInfo.cs_2" Name="AssemblyInfo.cs" Source="$(var.SamplesFolder)Extensibility\CustomComparer\Properties\AssemblyInfo.cs" />
 						</Component>
-						<Component Id="Resources.Designer.cs_2" Guid="{05E67B5F-9FAB-4AB7-AECF-278571BE30F3}">
-							<File Id="Resources.Designer.cs_2" Name="Resources.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomComparer\Properties\Resources.Designer.cs" />
+						<Component Id="Resources.Designer.cs_2">
+							<File Id="Resources.Designer.cs_2" Name="Resources.Designer.cs" Source="$(var.SamplesFolder)Extensibility\CustomComparer\Properties\Resources.Designer.cs" />
 						</Component>
-						<Component Id="Resources.resx_2" Guid="{DB5363AD-FE2B-46B7-ACD0-1A7E32F89CFA}">
-							<File Id="Resources.resx_2" Name="Resources.resx" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomComparer\Properties\Resources.resx" />
+						<Component Id="Resources.resx_2">
+							<File Id="Resources.resx_2" Name="Resources.resx" Source="$(var.SamplesFolder)Extensibility\CustomComparer\Properties\Resources.resx" />
 						</Component>
-						<Component Id="Settings.Designer.cs_2" Guid="{0EF42EDB-1208-4A26-8DBB-5222D00DF50E}">
-							<File Id="Settings.Designer.cs_2" Name="Settings.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomComparer\Properties\Settings.Designer.cs" />
+						<Component Id="Settings.Designer.cs_2">
+							<File Id="Settings.Designer.cs_2" Name="Settings.Designer.cs" Source="$(var.SamplesFolder)Extensibility\CustomComparer\Properties\Settings.Designer.cs" />
 						</Component>
-						<Component Id="Settings.settings_2" Guid="{698A6E12-983A-42E6-87B9-D32A4085122A}">
-							<File Id="Settings.settings_2" Name="Settings.settings" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomComparer\Properties\Settings.settings" />
+						<Component Id="Settings.settings_2">
+							<File Id="Settings.settings_2" Name="Settings.settings" Source="$(var.SamplesFolder)Extensibility\CustomComparer\Properties\Settings.settings" />
 						</Component>
 					</Directory>
 				</Directory>
 				<Directory Id="CustomFunctions" Name="CustomFunctions">
-					<Component Id="CustomFunctions.csproj" Guid="{4DEE1BB7-17EA-4665-9DF2-BA491BCEDCF1}">
-						<File Id="CustomFunctions.csproj" Name="CustomFunctions.csproj" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\CustomFunctions.csproj" />
+					<Component Id="CustomFunctions.csproj">
+						<File Id="CustomFunctions.csproj" Name="CustomFunctions.csproj" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\CustomFunctions.csproj" />
 					</Component>
-					<Component Id="Form1.cs_3" Guid="{F082626C-D8C4-49F5-A5B6-59B7B4AD2F0B}">
-						<File Id="Form1.cs_3" Name="Form1.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\Form1.cs" />
+					<Component Id="Form1.cs_3">
+						<File Id="Form1.cs_3" Name="Form1.cs" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\Form1.cs" />
 					</Component>
-					<Component Id="Form1.Designer.cs_3" Guid="{E456303F-8335-4E02-8D53-26C44F8797C0}">
-						<File Id="Form1.Designer.cs_3" Name="Form1.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\Form1.Designer.cs" />
+					<Component Id="Form1.Designer.cs_3">
+						<File Id="Form1.Designer.cs_3" Name="Form1.Designer.cs" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\Form1.Designer.cs" />
 					</Component>
-					<Component Id="Form1.resx_3" Guid="{846A25A6-56B3-43B6-B8CD-D666D717B505}">
-						<File Id="Form1.resx_3" Name="Form1.resx" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\Form1.resx" />
+					<Component Id="Form1.resx_3">
+						<File Id="Form1.resx_3" Name="Form1.resx" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\Form1.resx" />
 					</Component>
-					<Component Id="InstanceFunctionContainer.cs" Guid="{9565C292-E7D2-4C47-BBFB-7437D65C9603}">
-						<File Id="InstanceFunctionContainer.cs" Name="InstanceFunctionContainer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\InstanceFunctionContainer.cs" />
+					<Component Id="InstanceFunctionContainer.cs">
+						<File Id="InstanceFunctionContainer.cs" Name="InstanceFunctionContainer.cs" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\InstanceFunctionContainer.cs" />
 					</Component>
-					<Component Id="MyFunctionBinding.cs" Guid="{71DC72FF-6F9D-4846-9E2B-CBF4E4DDECBB}">
-						<File Id="MyFunctionBinding.cs" Name="MyFunctionBinding.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\MyFunctionBinding.cs" />
+					<Component Id="MyFunctionBinding.cs">
+						<File Id="MyFunctionBinding.cs" Name="MyFunctionBinding.cs" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\MyFunctionBinding.cs" />
 					</Component>
-					<Component Id="Program.cs_3" Guid="{AEB5C7C8-92B8-4EF2-A3D3-8B38F15ED73B}">
-						<File Id="Program.cs_3" Name="Program.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\Program.cs" />
+					<Component Id="Program.cs_3">
+						<File Id="Program.cs_3" Name="Program.cs" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\Program.cs" />
 					</Component>
-					<Component Id="StaticFunctionContainer.cs" Guid="{4ACC8B52-F797-42D2-9177-BA3F0BEBEF1A}">
-						<File Id="StaticFunctionContainer.cs" Name="StaticFunctionContainer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\StaticFunctionContainer.cs" />
+					<Component Id="StaticFunctionContainer.cs">
+						<File Id="StaticFunctionContainer.cs" Name="StaticFunctionContainer.cs" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\StaticFunctionContainer.cs" />
 					</Component>
 					<Directory Id="Properties_3" Name="Properties">
-						<Component Id="AssemblyInfo.cs_3" Guid="{E34EDC9A-4B46-4D5F-98A2-0AF485FDE990}">
-							<File Id="AssemblyInfo.cs_3" Name="AssemblyInfo.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\Properties\AssemblyInfo.cs" />
+						<Component Id="AssemblyInfo.cs_3">
+							<File Id="AssemblyInfo.cs_3" Name="AssemblyInfo.cs" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\Properties\AssemblyInfo.cs" />
 						</Component>
-						<Component Id="Resources.Designer.cs_3" Guid="{E859FA09-1E74-4F90-A7BF-74644306145B}">
-							<File Id="Resources.Designer.cs_3" Name="Resources.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\Properties\Resources.Designer.cs" />
+						<Component Id="Resources.Designer.cs_3">
+							<File Id="Resources.Designer.cs_3" Name="Resources.Designer.cs" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\Properties\Resources.Designer.cs" />
 						</Component>
-						<Component Id="Resources.resx_3" Guid="{D5AF1228-288A-4ABB-8E0F-ABE70949971E}">
-							<File Id="Resources.resx_3" Name="Resources.resx" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\Properties\Resources.resx" />
+						<Component Id="Resources.resx_3">
+							<File Id="Resources.resx_3" Name="Resources.resx" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\Properties\Resources.resx" />
 						</Component>
-						<Component Id="Settings.Designer.cs_3" Guid="{2B08BCF4-5107-4770-A3F0-AF6AF6954BE8}">
-							<File Id="Settings.Designer.cs_3" Name="Settings.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\Properties\Settings.Designer.cs" />
+						<Component Id="Settings.Designer.cs_3">
+							<File Id="Settings.Designer.cs_3" Name="Settings.Designer.cs" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\Properties\Settings.Designer.cs" />
 						</Component>
-						<Component Id="Settings.settings_3" Guid="{6F2DFE72-9F29-4B72-82B8-ED143AA6B210}">
-							<File Id="Settings.settings_3" Name="Settings.settings" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\Properties\Settings.settings" />
+						<Component Id="Settings.settings_3">
+							<File Id="Settings.settings_3" Name="Settings.settings" Source="$(var.SamplesFolder)Extensibility\CustomFunctions\Properties\Settings.settings" />
 						</Component>
 					</Directory>
 				</Directory>
 				<Directory Id="CustomMethodProvider" Name="CustomMethodProvider">
-					<Component Id="CustomMethodProvider.csproj" Guid="{1DD507E1-5BF8-4AE6-BC39-D09F1C8F07A7}">
-						<File Id="CustomMethodProvider.csproj" Name="CustomMethodProvider.csproj" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\CustomMethodProvider.csproj" />
+					<Component Id="CustomMethodProvider.csproj">
+						<File Id="CustomMethodProvider.csproj" Name="CustomMethodProvider.csproj" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\CustomMethodProvider.csproj" />
 					</Component>
-					<Component Id="Form1.cs_4" Guid="{4B3B65B5-D088-4855-9A81-B46B46F7192B}">
-						<File Id="Form1.cs_4" Name="Form1.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\Form1.cs" />
+					<Component Id="Form1.cs_4">
+						<File Id="Form1.cs_4" Name="Form1.cs" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\Form1.cs" />
 					</Component>
-					<Component Id="Form1.Designer.cs_4" Guid="{E44A583F-9402-4902-AB82-C88A9F5DE88E}">
-						<File Id="Form1.Designer.cs_4" Name="Form1.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\Form1.Designer.cs" />
+					<Component Id="Form1.Designer.cs_4">
+						<File Id="Form1.Designer.cs_4" Name="Form1.Designer.cs" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\Form1.Designer.cs" />
 					</Component>
-					<Component Id="Form1.resx_4" Guid="{51156DC2-C818-4DFB-8C40-300992139A60}">
-						<File Id="Form1.resx_4" Name="Form1.resx" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\Form1.resx" />
+					<Component Id="Form1.resx_4">
+						<File Id="Form1.resx_4" Name="Form1.resx" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\Form1.resx" />
 					</Component>
-					<Component Id="MyReflectionProvider.cs_1" Guid="{140F2B94-90E6-4FF9-A011-7DA0C8EFC52B}">
-						<File Id="MyReflectionProvider.cs_1" Name="MyReflectionProvider.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\MyReflectionProvider.cs" />
+					<Component Id="MyReflectionProvider.cs_1">
+						<File Id="MyReflectionProvider.cs_1" Name="MyReflectionProvider.cs" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\MyReflectionProvider.cs" />
 					</Component>
-					<Component Id="Program.cs_4" Guid="{67A5D8C8-41D9-4EC8-BDC3-ECF4CEB2E8C5}">
-						<File Id="Program.cs_4" Name="Program.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\Program.cs" />
+					<Component Id="Program.cs_4">
+						<File Id="Program.cs_4" Name="Program.cs" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\Program.cs" />
 					</Component>
 					<Directory Id="Properties_4" Name="Properties">
-						<Component Id="AssemblyInfo.cs_4" Guid="{4C5178AF-C2A7-4E6D-995E-5F040730A510}">
-							<File Id="AssemblyInfo.cs_4" Name="AssemblyInfo.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\Properties\AssemblyInfo.cs" />
+						<Component Id="AssemblyInfo.cs_4">
+							<File Id="AssemblyInfo.cs_4" Name="AssemblyInfo.cs" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\Properties\AssemblyInfo.cs" />
 						</Component>
-						<Component Id="Resources.Designer.cs_4" Guid="{C74A0328-3CCA-4602-8A1D-93C5115AF794}">
-							<File Id="Resources.Designer.cs_4" Name="Resources.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\Properties\Resources.Designer.cs" />
+						<Component Id="Resources.Designer.cs_4">
+							<File Id="Resources.Designer.cs_4" Name="Resources.Designer.cs" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\Properties\Resources.Designer.cs" />
 						</Component>
-						<Component Id="Resources.resx_4" Guid="{1932021F-0A01-4CF9-B642-CA35CCC042F1}">
-							<File Id="Resources.resx_4" Name="Resources.resx" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\Properties\Resources.resx" />
+						<Component Id="Resources.resx_4">
+							<File Id="Resources.resx_4" Name="Resources.resx" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\Properties\Resources.resx" />
 						</Component>
-						<Component Id="Settings.Designer.cs_4" Guid="{7F9E722C-0793-40FF-87A1-C2434F6BC618}">
-							<File Id="Settings.Designer.cs_4" Name="Settings.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\Properties\Settings.Designer.cs" />
+						<Component Id="Settings.Designer.cs_4">
+							<File Id="Settings.Designer.cs_4" Name="Settings.Designer.cs" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\Properties\Settings.Designer.cs" />
 						</Component>
-						<Component Id="Settings.settings_4" Guid="{116E55BB-BC37-428D-A06D-AA0876524CFB}">
-							<File Id="Settings.settings_4" Name="Settings.settings" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\Properties\Settings.settings" />
+						<Component Id="Settings.settings_4">
+							<File Id="Settings.settings_4" Name="Settings.settings" Source="$(var.SamplesFolder)Extensibility\CustomMethodProvider\Properties\Settings.settings" />
 						</Component>
 					</Directory>
 				</Directory>
 				<Directory Id="CustomPropertyProvider" Name="CustomPropertyProvider">
-					<Component Id="CustomPropertyProvider.csproj" Guid="{AA97FE3D-A8A6-4A3F-A676-430543B6096D}">
-						<File Id="CustomPropertyProvider.csproj" Name="CustomPropertyProvider.csproj" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\CustomPropertyProvider.csproj" />
+					<Component Id="CustomPropertyProvider.csproj">
+						<File Id="CustomPropertyProvider.csproj" Name="CustomPropertyProvider.csproj" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\CustomPropertyProvider.csproj" />
 					</Component>
-					<Component Id="Form1.cs_5" Guid="{2F0D767B-8A6B-4AC9-92A6-766F860814DD}">
-						<File Id="Form1.cs_5" Name="Form1.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\Form1.cs" />
+					<Component Id="Form1.cs_5">
+						<File Id="Form1.cs_5" Name="Form1.cs" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\Form1.cs" />
 					</Component>
-					<Component Id="Form1.Designer.cs_5" Guid="{5FF0838D-07CD-4C4B-9ECB-37E520C19018}">
-						<File Id="Form1.Designer.cs_5" Name="Form1.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\Form1.Designer.cs" />
+					<Component Id="Form1.Designer.cs_5">
+						<File Id="Form1.Designer.cs_5" Name="Form1.Designer.cs" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\Form1.Designer.cs" />
 					</Component>
-					<Component Id="Form1.resx_5" Guid="{B9E7EB53-90EC-4494-8877-A45F0A21CC82}">
-						<File Id="Form1.resx_5" Name="Form1.resx" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\Form1.resx" />
+					<Component Id="Form1.resx_5">
+						<File Id="Form1.resx_5" Name="Form1.resx" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\Form1.resx" />
 					</Component>
-					<Component Id="MyPropertyProvider.cs" Guid="{D1EB166E-02E5-4457-9010-2C9762D1A5D7}">
-						<File Id="MyPropertyProvider.cs" Name="MyPropertyProvider.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\MyPropertyProvider.cs" />
+					<Component Id="MyPropertyProvider.cs">
+						<File Id="MyPropertyProvider.cs" Name="MyPropertyProvider.cs" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\MyPropertyProvider.cs" />
 					</Component>
-					<Component Id="MyReflectionProvider.cs_2" Guid="{6A541654-6865-4A8A-814A-775074C3C347}">
-						<File Id="MyReflectionProvider.cs_2" Name="MyReflectionProvider.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\MyReflectionProvider.cs" />
+					<Component Id="MyReflectionProvider.cs_2">
+						<File Id="MyReflectionProvider.cs_2" Name="MyReflectionProvider.cs" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\MyReflectionProvider.cs" />
 					</Component>
-					<Component Id="Program.cs_5" Guid="{53144BD0-73D9-4E52-9E42-8BA07C50ABEC}">
-						<File Id="Program.cs_5" Name="Program.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\Program.cs" />
+					<Component Id="Program.cs_5">
+						<File Id="Program.cs_5" Name="Program.cs" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\Program.cs" />
 					</Component>
 					<Directory Id="Properties_5" Name="Properties">
-						<Component Id="AssemblyInfo.cs_5" Guid="{7781A380-0AEA-4AAF-A9E1-0236BAAA9F73}">
-							<File Id="AssemblyInfo.cs_5" Name="AssemblyInfo.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\Properties\AssemblyInfo.cs" />
+						<Component Id="AssemblyInfo.cs_5">
+							<File Id="AssemblyInfo.cs_5" Name="AssemblyInfo.cs" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\Properties\AssemblyInfo.cs" />
 						</Component>
-						<Component Id="Resources.Designer.cs_5" Guid="{1D78966D-A79A-40B0-9DEF-B9B7EBD13A2F}">
-							<File Id="Resources.Designer.cs_5" Name="Resources.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\Properties\Resources.Designer.cs" />
+						<Component Id="Resources.Designer.cs_5">
+							<File Id="Resources.Designer.cs_5" Name="Resources.Designer.cs" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\Properties\Resources.Designer.cs" />
 						</Component>
-						<Component Id="Resources.resx_5" Guid="{7A2C99E0-8805-4097-9472-95E1079D8D10}">
-							<File Id="Resources.resx_5" Name="Resources.resx" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\Properties\Resources.resx" />
+						<Component Id="Resources.resx_5">
+							<File Id="Resources.resx_5" Name="Resources.resx" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\Properties\Resources.resx" />
 						</Component>
-						<Component Id="Settings.Designer.cs_5" Guid="{0A3951AD-0BF4-411F-BD59-606C2E553BB2}">
-							<File Id="Settings.Designer.cs_5" Name="Settings.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\Properties\Settings.Designer.cs" />
+						<Component Id="Settings.Designer.cs_5">
+							<File Id="Settings.Designer.cs_5" Name="Settings.Designer.cs" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\Properties\Settings.Designer.cs" />
 						</Component>
-						<Component Id="Settings.settings_5" Guid="{FBE31CDF-FF3F-4FBD-99EB-C09BFAF39BF0}">
-							<File Id="Settings.settings_5" Name="Settings.settings" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\Properties\Settings.settings" />
+						<Component Id="Settings.settings_5">
+							<File Id="Settings.settings_5" Name="Settings.settings" Source="$(var.SamplesFolder)Extensibility\CustomPropertyProvider\Properties\Settings.settings" />
 						</Component>
 					</Directory>
 				</Directory>
 				<Directory Id="CustomTable" Name="CustomTable">
-					<Component Id="CustomTable.csproj" Guid="{3E2A8A0C-CD72-472B-A75B-F7F923859F14}">
-						<File Id="CustomTable.csproj" Name="CustomTable.csproj" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomTable\CustomTable.csproj" />
+					<Component Id="CustomTable.csproj">
+						<File Id="CustomTable.csproj" Name="CustomTable.csproj" Source="$(var.SamplesFolder)Extensibility\CustomTable\CustomTable.csproj" />
 					</Component>
-					<Component Id="Form1.cs_6" Guid="{A2F2EB2A-220A-45D6-9C23-8B659E3E42CC}">
-						<File Id="Form1.cs_6" Name="Form1.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomTable\Form1.cs" />
+					<Component Id="Form1.cs_6">
+						<File Id="Form1.cs_6" Name="Form1.cs" Source="$(var.SamplesFolder)Extensibility\CustomTable\Form1.cs" />
 					</Component>
-					<Component Id="Form1.Designer.cs_6" Guid="{4483BB9F-C36C-43E0-AC2D-8B56273848C3}">
-						<File Id="Form1.Designer.cs_6" Name="Form1.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomTable\Form1.Designer.cs" />
+					<Component Id="Form1.Designer.cs_6">
+						<File Id="Form1.Designer.cs_6" Name="Form1.Designer.cs" Source="$(var.SamplesFolder)Extensibility\CustomTable\Form1.Designer.cs" />
 					</Component>
-					<Component Id="Form1.resx_6" Guid="{AEB08AE8-91E9-4DBA-8FB6-4FFDAE48E63A}">
-						<File Id="Form1.resx_6" Name="Form1.resx" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomTable\Form1.resx" />
+					<Component Id="Form1.resx_6">
+						<File Id="Form1.resx_6" Name="Form1.resx" Source="$(var.SamplesFolder)Extensibility\CustomTable\Form1.resx" />
 					</Component>
-					<Component Id="MyTableBinding.cs" Guid="{876A6890-3C2B-455A-B941-F8B65B100178}">
-						<File Id="MyTableBinding.cs" Name="MyTableBinding.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomTable\MyTableBinding.cs" />
+					<Component Id="MyTableBinding.cs">
+						<File Id="MyTableBinding.cs" Name="MyTableBinding.cs" Source="$(var.SamplesFolder)Extensibility\CustomTable\MyTableBinding.cs" />
 					</Component>
-					<Component Id="Program.cs_6" Guid="{F4FB81BF-30B9-416A-A803-14BBF5B621D7}">
-						<File Id="Program.cs_6" Name="Program.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomTable\Program.cs" />
+					<Component Id="Program.cs_6">
+						<File Id="Program.cs_6" Name="Program.cs" Source="$(var.SamplesFolder)Extensibility\CustomTable\Program.cs" />
 					</Component>
 					<Directory Id="Properties_6" Name="Properties">
-						<Component Id="AssemblyInfo.cs_6" Guid="{62829E68-1D11-4FD7-B9C5-FA8CBEEBE920}">
-							<File Id="AssemblyInfo.cs_6" Name="AssemblyInfo.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomTable\Properties\AssemblyInfo.cs" />
+						<Component Id="AssemblyInfo.cs_6">
+							<File Id="AssemblyInfo.cs_6" Name="AssemblyInfo.cs" Source="$(var.SamplesFolder)Extensibility\CustomTable\Properties\AssemblyInfo.cs" />
 						</Component>
-						<Component Id="Resources.Designer.cs_6" Guid="{047E4C80-BDA9-4A1D-AA27-54B484B61BE7}">
-							<File Id="Resources.Designer.cs_6" Name="Resources.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomTable\Properties\Resources.Designer.cs" />
+						<Component Id="Resources.Designer.cs_6">
+							<File Id="Resources.Designer.cs_6" Name="Resources.Designer.cs" Source="$(var.SamplesFolder)Extensibility\CustomTable\Properties\Resources.Designer.cs" />
 						</Component>
-						<Component Id="Resources.resx_6" Guid="{FDC8F456-332C-430A-BC9D-943079A74BE2}">
-							<File Id="Resources.resx_6" Name="Resources.resx" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomTable\Properties\Resources.resx" />
+						<Component Id="Resources.resx_6">
+							<File Id="Resources.resx_6" Name="Resources.resx" Source="$(var.SamplesFolder)Extensibility\CustomTable\Properties\Resources.resx" />
 						</Component>
-						<Component Id="Settings.Designer.cs_6" Guid="{B75A2E16-7707-4912-ACF1-0FB9160BEF46}">
-							<File Id="Settings.Designer.cs_6" Name="Settings.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomTable\Properties\Settings.Designer.cs" />
+						<Component Id="Settings.Designer.cs_6">
+							<File Id="Settings.Designer.cs_6" Name="Settings.Designer.cs" Source="$(var.SamplesFolder)Extensibility\CustomTable\Properties\Settings.Designer.cs" />
 						</Component>
-						<Component Id="Settings.settings_6" Guid="{21E874F6-DE54-46A1-A2A6-49DCFAC7CE2A}">
-							<File Id="Settings.settings_6" Name="Settings.settings" KeyPath="yes" Source="$(var.SamplesFolder)Extensibility\CustomTable\Properties\Settings.settings" />
+						<Component Id="Settings.settings_6">
+							<File Id="Settings.settings_6" Name="Settings.settings" Source="$(var.SamplesFolder)Extensibility\CustomTable\Properties\Settings.settings" />
 						</Component>
 					</Directory>
 				</Directory>
 			</Directory>
 			<Directory Id="Overview" Name="Overview">
 				<Directory Id="ParametersVsConstants" Name="ParametersVsConstants">
-					<Component Id="ParametersVsConstants.csproj" Guid="{D6853F4B-1C03-4F30-BF42-7CB9208F1FF5}">
-						<File Id="ParametersVsConstants.csproj" Name="ParametersVsConstants.csproj" KeyPath="yes" Source="$(var.SamplesFolder)Overview\ParametersVsConstants\ParametersVsConstants.csproj" />
+					<Component Id="ParametersVsConstants.csproj">
+						<File Id="ParametersVsConstants.csproj" Name="ParametersVsConstants.csproj" Source="$(var.SamplesFolder)Overview\ParametersVsConstants\ParametersVsConstants.csproj" />
 					</Component>
-					<Component Id="Program.cs_7" Guid="{64B93E24-7329-4403-9ECF-C905AF75C031}">
-						<File Id="Program.cs_7" Name="Program.cs" KeyPath="yes" Source="$(var.SamplesFolder)Overview\ParametersVsConstants\Program.cs" />
+					<Component Id="Program.cs_7">
+						<File Id="Program.cs_7" Name="Program.cs" Source="$(var.SamplesFolder)Overview\ParametersVsConstants\Program.cs" />
 					</Component>
 					<Directory Id="Properties_7" Name="Properties">
-						<Component Id="AssemblyInfo.cs_7" Guid="{432D281A-2465-4D6E-B0DF-77017E793FFD}">
-							<File Id="AssemblyInfo.cs_7" Name="AssemblyInfo.cs" KeyPath="yes" Source="$(var.SamplesFolder)Overview\ParametersVsConstants\Properties\AssemblyInfo.cs" />
+						<Component Id="AssemblyInfo.cs_7">
+							<File Id="AssemblyInfo.cs_7" Name="AssemblyInfo.cs" Source="$(var.SamplesFolder)Overview\ParametersVsConstants\Properties\AssemblyInfo.cs" />
 						</Component>
 					</Directory>
 				</Directory>
 			</Directory>
 			<Directory Id="QuickStarts" Name="Quick Starts">
 				<Directory Id="ExpressionQuickStart" Name="ExpressionQuickStart">
-					<Component Id="ExpressionQuickStart.csproj" Guid="{9A6E8C64-59BE-4DE9-99C4-A4D1F4CAFAB4}">
-						<File Id="ExpressionQuickStart.csproj" Name="ExpressionQuickStart.csproj" KeyPath="yes" Source="$(var.SamplesFolder)Quick Starts\ExpressionQuickStart\ExpressionQuickStart.csproj" />
+					<Component Id="ExpressionQuickStart.csproj">
+						<File Id="ExpressionQuickStart.csproj" Name="ExpressionQuickStart.csproj" Source="$(var.SamplesFolder)Quick Starts\ExpressionQuickStart\ExpressionQuickStart.csproj" />
 					</Component>
-					<Component Id="Form1.cs_7" Guid="{E11A0FD1-822F-45BB-99B8-42E214D3ED3A}">
-						<File Id="Form1.cs_7" Name="Form1.cs" KeyPath="yes" Source="$(var.SamplesFolder)Quick Starts\ExpressionQuickStart\Form1.cs" />
+					<Component Id="Form1.cs_7">
+						<File Id="Form1.cs_7" Name="Form1.cs" Source="$(var.SamplesFolder)Quick Starts\ExpressionQuickStart\Form1.cs" />
 					</Component>
-					<Component Id="Form1.Designer.cs_7" Guid="{D38543CA-6D0F-46B5-A10B-176271179205}">
-						<File Id="Form1.Designer.cs_7" Name="Form1.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Quick Starts\ExpressionQuickStart\Form1.Designer.cs" />
+					<Component Id="Form1.Designer.cs_7">
+						<File Id="Form1.Designer.cs_7" Name="Form1.Designer.cs" Source="$(var.SamplesFolder)Quick Starts\ExpressionQuickStart\Form1.Designer.cs" />
 					</Component>
-					<Component Id="Form1.resx_7" Guid="{E75EBBC5-383F-4050-9823-FEDA78847E93}">
-						<File Id="Form1.resx_7" Name="Form1.resx" KeyPath="yes" Source="$(var.SamplesFolder)Quick Starts\ExpressionQuickStart\Form1.resx" />
+					<Component Id="Form1.resx_7">
+						<File Id="Form1.resx_7" Name="Form1.resx" Source="$(var.SamplesFolder)Quick Starts\ExpressionQuickStart\Form1.resx" />
 					</Component>
-					<Component Id="Program.cs_8" Guid="{68D0D230-38FA-4F9A-8124-4A14E4B6A1A3}">
-						<File Id="Program.cs_8" Name="Program.cs" KeyPath="yes" Source="$(var.SamplesFolder)Quick Starts\ExpressionQuickStart\Program.cs" />
+					<Component Id="Program.cs_8">
+						<File Id="Program.cs_8" Name="Program.cs" Source="$(var.SamplesFolder)Quick Starts\ExpressionQuickStart\Program.cs" />
 					</Component>
 					<Directory Id="Properties_8" Name="Properties">
-						<Component Id="AssemblyInfo.cs_8" Guid="{7A3A6CC1-1616-4577-A631-586475D51016}">
-							<File Id="AssemblyInfo.cs_8" Name="AssemblyInfo.cs" KeyPath="yes" Source="$(var.SamplesFolder)Quick Starts\ExpressionQuickStart\Properties\AssemblyInfo.cs" />
+						<Component Id="AssemblyInfo.cs_8">
+							<File Id="AssemblyInfo.cs_8" Name="AssemblyInfo.cs" Source="$(var.SamplesFolder)Quick Starts\ExpressionQuickStart\Properties\AssemblyInfo.cs" />
 						</Component>
-						<Component Id="Resources.Designer.cs_7" Guid="{1B4B3979-EA4E-4107-90B1-998BC330CF27}">
-							<File Id="Resources.Designer.cs_7" Name="Resources.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Quick Starts\ExpressionQuickStart\Properties\Resources.Designer.cs" />
+						<Component Id="Resources.Designer.cs_7">
+							<File Id="Resources.Designer.cs_7" Name="Resources.Designer.cs" Source="$(var.SamplesFolder)Quick Starts\ExpressionQuickStart\Properties\Resources.Designer.cs" />
 						</Component>
-						<Component Id="Resources.resx_7" Guid="{F5724A0E-BEF4-4748-A92B-16E9397E1873}">
-							<File Id="Resources.resx_7" Name="Resources.resx" KeyPath="yes" Source="$(var.SamplesFolder)Quick Starts\ExpressionQuickStart\Properties\Resources.resx" />
+						<Component Id="Resources.resx_7">
+							<File Id="Resources.resx_7" Name="Resources.resx" Source="$(var.SamplesFolder)Quick Starts\ExpressionQuickStart\Properties\Resources.resx" />
 						</Component>
-						<Component Id="Settings.Designer.cs_7" Guid="{4F97ED15-95D2-4FA5-BD46-4A9B147885AD}">
-							<File Id="Settings.Designer.cs_7" Name="Settings.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Quick Starts\ExpressionQuickStart\Properties\Settings.Designer.cs" />
+						<Component Id="Settings.Designer.cs_7">
+							<File Id="Settings.Designer.cs_7" Name="Settings.Designer.cs" Source="$(var.SamplesFolder)Quick Starts\ExpressionQuickStart\Properties\Settings.Designer.cs" />
 						</Component>
-						<Component Id="Settings.settings_7" Guid="{D887A93E-1733-4CEB-B699-D9E4E459748E}">
-							<File Id="Settings.settings_7" Name="Settings.settings" KeyPath="yes" Source="$(var.SamplesFolder)Quick Starts\ExpressionQuickStart\Properties\Settings.settings" />
+						<Component Id="Settings.settings_7">
+							<File Id="Settings.settings_7" Name="Settings.settings" Source="$(var.SamplesFolder)Quick Starts\ExpressionQuickStart\Properties\Settings.settings" />
 						</Component>
 					</Directory>
 				</Directory>
 				<Directory Id="QueryQuickStart" Name="QueryQuickStart">
-					<Component Id="Form1.cs_8" Guid="{A1FA34D4-A449-442A-8084-44A2CDCF1F47}">
-						<File Id="Form1.cs_8" Name="Form1.cs" KeyPath="yes" Source="$(var.SamplesFolder)Quick Starts\QueryQuickStart\Form1.cs" />
+					<Component Id="Form1.cs_8">
+						<File Id="Form1.cs_8" Name="Form1.cs" Source="$(var.SamplesFolder)Quick Starts\QueryQuickStart\Form1.cs" />
 					</Component>
-					<Component Id="Form1.Designer.cs_8" Guid="{7F97382F-DB06-4760-85B0-5F1FEF51CA72}">
-						<File Id="Form1.Designer.cs_8" Name="Form1.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Quick Starts\QueryQuickStart\Form1.Designer.cs" />
+					<Component Id="Form1.Designer.cs_8">
+						<File Id="Form1.Designer.cs_8" Name="Form1.Designer.cs" Source="$(var.SamplesFolder)Quick Starts\QueryQuickStart\Form1.Designer.cs" />
 					</Component>
-					<Component Id="Form1.resx_8" Guid="{D1A1D8E1-C465-4ECF-A65F-DA6C15D7185A}">
-						<File Id="Form1.resx_8" Name="Form1.resx" KeyPath="yes" Source="$(var.SamplesFolder)Quick Starts\QueryQuickStart\Form1.resx" />
+					<Component Id="Form1.resx_8">
+						<File Id="Form1.resx_8" Name="Form1.resx" Source="$(var.SamplesFolder)Quick Starts\QueryQuickStart\Form1.resx" />
 					</Component>
-					<Component Id="Program.cs_9" Guid="{7798D807-3DF8-42CD-901B-0CEEEEAE7D4A}">
-						<File Id="Program.cs_9" Name="Program.cs" KeyPath="yes" Source="$(var.SamplesFolder)Quick Starts\QueryQuickStart\Program.cs" />
+					<Component Id="Program.cs_9">
+						<File Id="Program.cs_9" Name="Program.cs" Source="$(var.SamplesFolder)Quick Starts\QueryQuickStart\Program.cs" />
 					</Component>
-					<Component Id="QueryQuickStart.csproj" Guid="{AD06522F-ED2C-4029-B005-68B4132837D1}">
-						<File Id="QueryQuickStart.csproj" Name="QueryQuickStart.csproj" KeyPath="yes" Source="$(var.SamplesFolder)Quick Starts\QueryQuickStart\QueryQuickStart.csproj" />
+					<Component Id="QueryQuickStart.csproj">
+						<File Id="QueryQuickStart.csproj" Name="QueryQuickStart.csproj" Source="$(var.SamplesFolder)Quick Starts\QueryQuickStart\QueryQuickStart.csproj" />
 					</Component>
 					<Directory Id="Properties_9" Name="Properties">
-						<Component Id="AssemblyInfo.cs_9" Guid="{88A2DB7C-989E-4FFB-8513-B3EDCDCFDD71}">
-							<File Id="AssemblyInfo.cs_9" Name="AssemblyInfo.cs" KeyPath="yes" Source="$(var.SamplesFolder)Quick Starts\QueryQuickStart\Properties\AssemblyInfo.cs" />
+						<Component Id="AssemblyInfo.cs_9">
+							<File Id="AssemblyInfo.cs_9" Name="AssemblyInfo.cs" Source="$(var.SamplesFolder)Quick Starts\QueryQuickStart\Properties\AssemblyInfo.cs" />
 						</Component>
-						<Component Id="Resources.Designer.cs_8" Guid="{24E6442D-E4D8-41D9-85CF-1ECDCA8FF86A}">
-							<File Id="Resources.Designer.cs_8" Name="Resources.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Quick Starts\QueryQuickStart\Properties\Resources.Designer.cs" />
+						<Component Id="Resources.Designer.cs_8">
+							<File Id="Resources.Designer.cs_8" Name="Resources.Designer.cs" Source="$(var.SamplesFolder)Quick Starts\QueryQuickStart\Properties\Resources.Designer.cs" />
 						</Component>
-						<Component Id="Resources.resx_8" Guid="{9FA176F1-3252-4A59-A67B-97BA4FA17E90}">
-							<File Id="Resources.resx_8" Name="Resources.resx" KeyPath="yes" Source="$(var.SamplesFolder)Quick Starts\QueryQuickStart\Properties\Resources.resx" />
+						<Component Id="Resources.resx_8">
+							<File Id="Resources.resx_8" Name="Resources.resx" Source="$(var.SamplesFolder)Quick Starts\QueryQuickStart\Properties\Resources.resx" />
 						</Component>
-						<Component Id="Settings.Designer.cs_8" Guid="{40099D3E-E04F-47B1-80B2-B09472450C75}">
-							<File Id="Settings.Designer.cs_8" Name="Settings.Designer.cs" KeyPath="yes" Source="$(var.SamplesFolder)Quick Starts\QueryQuickStart\Properties\Settings.Designer.cs" />
+						<Component Id="Settings.Designer.cs_8">
+							<File Id="Settings.Designer.cs_8" Name="Settings.Designer.cs" Source="$(var.SamplesFolder)Quick Starts\QueryQuickStart\Properties\Settings.Designer.cs" />
 						</Component>
-						<Component Id="Settings.settings_8" Guid="{1E88BA5A-81D1-4F08-976F-95CD86CACAC6}">
-							<File Id="Settings.settings_8" Name="Settings.settings" KeyPath="yes" Source="$(var.SamplesFolder)Quick Starts\QueryQuickStart\Properties\Settings.settings" />
+						<Component Id="Settings.settings_8">
+							<File Id="Settings.settings_8" Name="Settings.settings" Source="$(var.SamplesFolder)Quick Starts\QueryQuickStart\Properties\Settings.settings" />
 						</Component>
 					</Directory>
 				</Directory>

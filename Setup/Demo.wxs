@@ -6,68 +6,68 @@
 
 			<!-- Main Demo App -->
 
-			<Component Id="Demo_NQueryDemo.exe" Guid="{0AF70540-6E50-47BE-A70B-05AA15321EE7}">
-				<File Id="Demo_NQueryDemo.exe" KeyPath="yes" Source="$(var.DemoFolder)NQueryDemo.exe" />
+			<Component Id="Demo_NQueryDemo.exe">
+				<File Id="Demo_NQueryDemo.exe" Source="$(var.DemoFolder)NQueryDemo.exe" />
 			</Component>
 
 			<!-- Demo App UI Addins -->
 
-			<Component Id="Demo_NQuery.Demo.AddIns.dll" Guid="{0C5B005D-A743-429F-BC21-A84DA0E2B132}">
-				<File Id="Demo_NQuery.Demo.AddIns.dll" KeyPath="yes" Source="$(var.DemoFolder)NQuery.Demo.AddIns.dll" />
+			<Component Id="Demo_NQuery.Demo.AddIns.dll">
+				<File Id="Demo_NQuery.Demo.AddIns.dll" Source="$(var.DemoFolder)NQuery.Demo.AddIns.dll" />
 			</Component>
 			<Directory Id="AddIns" Name="AddIns">
-				<Component Id="Demo_NQuery.Demo.DefaultAddIns.addin" Guid="{01EEA9E8-0910-4B77-B68E-F4800B8A527E}">
-					<File Id="Demo_NQuery.Demo.DefaultAddIns.addin" KeyPath="yes" Source="$(var.DemoFolder)AddIns\NQuery.Demo.DefaultAddIns.addin" />
+				<Component Id="Demo_NQuery.Demo.DefaultAddIns.addin">
+					<File Id="Demo_NQuery.Demo.DefaultAddIns.addin" Source="$(var.DemoFolder)AddIns\NQuery.Demo.DefaultAddIns.addin" />
 				</Component>
 			</Directory>
 
 			<!-- Main NQuery Lib -->
 
-			<Component Id="Demo_NQuery.dll" Guid="{1FAE6DD6-F628-4361-99F9-638B8A3B8346}">
-				<File Id="Demo_NQuery.dll" KeyPath="yes" Source="$(var.DemoFolder)NQuery.dll" />
+			<Component Id="Demo_NQuery.dll">
+				<File Id="Demo_NQuery.dll" Source="$(var.DemoFolder)NQuery.dll" />
 			</Component>
 
 			<!-- NQuery UI Support -->
 
-			<Component Id="Demo_NQuery.UI.dll" Guid="{E5516B15-91C4-4537-82C1-64772050E92F}">
-				<File Id="Demo_NQuery.UI.dll" KeyPath="yes" Source="$(var.DemoFolder)NQuery.UI.dll" />
+			<Component Id="Demo_NQuery.UI.dll">
+				<File Id="Demo_NQuery.UI.dll" Source="$(var.DemoFolder)NQuery.UI.dll" />
 			</Component>
-			<Component Id="Demo_NQuery.UI.Actipro40.dll" Guid="{022EC436-E705-459B-A169-EB323BAD93D4}">
-				<File Id="Demo_NQuery.UI.Actipro40.dll" KeyPath="yes" Source="$(var.DemoFolder)NQuery.UI.Actipro40.dll" />
+			<Component Id="Demo_NQuery.UI.Actipro40.dll">
+				<File Id="Demo_NQuery.UI.Actipro40.dll" Source="$(var.DemoFolder)NQuery.UI.Actipro40.dll" />
 			</Component>
 
 			<!-- Syntax Editor -->
 
-			<Component Id="Demo_ActiproSoftware.Shared.Net20.dll" Guid="{58FC6734-2380-4626-9238-555148E471ED}">
-				<File Id="Demo_ActiproSoftware.Shared.Net20.dll" KeyPath="yes" Source="$(var.LibFolder)ActiproSoftware.Shared.Net20.dll" />
+			<Component Id="Demo_ActiproSoftware.Shared.Net20.dll">
+				<File Id="Demo_ActiproSoftware.Shared.Net20.dll" Source="$(var.LibFolder)ActiproSoftware.Shared.Net20.dll" />
 			</Component>
-			<Component Id="Demo_ActiproSoftware.SyntaxEditor.Net20.dll" Guid="{ECC5534F-129A-4EB0-8181-EB0A5CD24AC7}">
-				<File Id="Demo_ActiproSoftware.SyntaxEditor.Net20.dll" KeyPath="yes" Source="$(var.LibFolder)ActiproSoftware.SyntaxEditor.Net20.dll" />
+			<Component Id="Demo_ActiproSoftware.SyntaxEditor.Net20.dll">
+				<File Id="Demo_ActiproSoftware.SyntaxEditor.Net20.dll" Source="$(var.LibFolder)ActiproSoftware.SyntaxEditor.Net20.dll" />
 			</Component>
-			<Component Id="Demo_ActiproSoftware.WinUICore.Net20.dll" Guid="{14F105DB-0215-4EF2-919D-90C98C278D0A}">
-				<File Id="Demo_ActiproSoftware.WinUICore.Net20.dll" KeyPath="yes" Source="$(var.LibFolder)ActiproSoftware.WinUICore.Net20.dll" />
+			<Component Id="Demo_ActiproSoftware.WinUICore.Net20.dll">
+				<File Id="Demo_ActiproSoftware.WinUICore.Net20.dll" Source="$(var.LibFolder)ActiproSoftware.WinUICore.Net20.dll" />
 			</Component>
 
 			<!-- Docking Support -->
 
-			<Component Id="Demo_SandDock.dll" Guid="{886460C4-36A8-4e64-A6C8-0EEFD1FDC367}">
-				<File Id="Demo_SandDock.dll" KeyPath="yes" Source="$(var.LibFolder)SandDock.dll" />
+			<Component Id="Demo_SandDock.dll">
+				<File Id="Demo_SandDock.dll" Source="$(var.LibFolder)SandDock.dll" />
 			</Component>
 
 			<!-- DataSet demo files -->
 
 			<Directory Id="Data" Name="Data">
-				<Component Id="Demo_AdventureWorks_Cinema.xml" Guid="{3DFDBF64-0264-4B15-B840-F282F4C40FD2}">
-					<File Id="Demo_AdventureWorks_Cinema.xml" KeyPath="yes" Source="$(var.DemoFolder)Data\AdventureWorks Cinema.xml" />
+				<Component Id="Demo_AdventureWorks_Cinema.xml">
+					<File Id="Demo_AdventureWorks_Cinema.xml" Source="$(var.DemoFolder)Data\AdventureWorks Cinema.xml" />
 				</Component>
-				<Component Id="Demo_JoinTables.xml" Guid="{14F10FC7-D852-4320-8662-21726BE8162E}">
-					<File Id="Demo_JoinTables.xml" KeyPath="yes" Source="$(var.DemoFolder)Data\JoinTables.xml" />
+				<Component Id="Demo_JoinTables.xml">
+					<File Id="Demo_JoinTables.xml" Source="$(var.DemoFolder)Data\JoinTables.xml" />
 				</Component>
-				<Component Id="Demo_Northwind.xml" Guid="{9B60ABE0-F5A0-4BD3-B223-89A46AA0B956}">
-					<File Id="Demo_Northwind.xml" KeyPath="yes" Source="$(var.DemoFolder)Data\Northwind.xml" />
+				<Component Id="Demo_Northwind.xml">
+					<File Id="Demo_Northwind.xml" Source="$(var.DemoFolder)Data\Northwind.xml" />
 				</Component>
-				<Component Id="Demo_Pubs.xml" Guid="{C41136CB-FD5A-494F-A7AA-A19B8053724D}">
-					<File Id="Demo_Pubs.xml" KeyPath="yes" Source="$(var.DemoFolder)Data\Pubs.xml" />
+				<Component Id="Demo_Pubs.xml">
+					<File Id="Demo_Pubs.xml" Source="$(var.DemoFolder)Data\Pubs.xml" />
 				</Component>
 			</Directory>
 		</DirectoryRef>
