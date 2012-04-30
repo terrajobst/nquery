@@ -28,7 +28,6 @@
 
 	<UsingTask AssemblyFile="$(CustomTasksDir)NQuery.Build.dll" TaskName="NQuery.Build.ApplyXslTransform" />
 	<UsingTask AssemblyFile="$(CustomTasksDir)NQuery.Build.dll" TaskName="NQuery.Build.RegexReplaceInFiles" />
-	<UsingTask AssemblyFile="$(CustomTasksDir)NQuery.Build.dll" TaskName="NQuery.Build.RemoveTfsBindings" />
 	<UsingTask AssemblyFile="$(CustomTasksDir)NQuery.Build.dll" TaskName="NQuery.Build.RunSampleCode" />
 
 	<!-- Project Files -->
@@ -244,8 +243,6 @@
 		</ItemGroup>
 
 		<Copy SourceFiles="@(SourceCodeFiles)" DestinationFolder="$(GeneratedSourceCode)%(RecursiveDir)" />
-		<Exec Command="attrib -r -h /s" WorkingDirectory="$(GeneratedSourceCode)" />
-		<RemoveTfsBindings SolutionFiles="$(GeneratedSourceCode)Src\NQuery.sln;$(GeneratedSourceCode)Samples\NQuery.Samples.sln" />
 	</Target>
 
 	<!-- Generate Setup -->
