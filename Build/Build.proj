@@ -239,7 +239,7 @@
 
 		<ItemGroup>
 			<SourceCodeFiles Include="$(ProjectDir)**\*.*"
-							 Exclude="$(OutputDir)**\*.*;$(TestResultsDir)**\*.*;$(CustomTasksDir)**\*.*;$(ProjectDir)**\bin\**\*.*;$(ProjectDir)**\obj\**\*.*;$(ProjectDir)**\*.scc;$(ProjectDir)**\*.vssscc;$(ProjectDir)**\*.vspscc;$(ProjectDir)**\*.suo;$(ProjectDir)**\*.user;$(ProjectDir)**\*.resharper" />
+							 Exclude="$(ProjectDir).hg\**\*.*;$(ProjectDir).hg*;$(OutputDir)**\*.*;$(TestResultsDir)**\*.*;$(CustomTasksDir)**\*.*;$(ProjectDir)**\bin\**\*.*;$(ProjectDir)**\obj\**\*.*;$(ProjectDir)**\*.scc;$(ProjectDir)**\*.vssscc;$(ProjectDir)**\*.vspscc;$(ProjectDir)**\*.suo;$(ProjectDir)**\*.user;$(ProjectDir)**\*.resharper" />
 		</ItemGroup>
 
 		<Copy SourceFiles="@(SourceCodeFiles)" DestinationFolder="$(GeneratedSourceCode)%(RecursiveDir)" />
