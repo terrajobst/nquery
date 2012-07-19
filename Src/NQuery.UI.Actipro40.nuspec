@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>NQuery.UI.Actipro40</id>
+    <version>0.0.0</version>
+    <authors>Immo Landwerth</authors>
+    <owners>Immo Landwerth</owners>
+    <licenseUrl>http://nquery.codeplex.com/license</licenseUrl>
+    <projectUrl>http://nquery.codeplex.com</projectUrl>
+    <iconUrl>http://download-codeplex.sec.s-msft.com/Download?ProjectName=nquery&amp;DownloadId=461219</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>
+      This package provides and integration with Actipro's SyntaxEditor.
+    </summary>
+    <description>
+      This package provides an integration with Actipro's SyntaxEditor so that you can author queries very easily.
+      This includes code completion, parameter info and syntax highlighting.
+    </description>
+    <tags>SQL Query IEnumerable Actipro Syntax</tags>
+    <dependencies>
+      <dependency id="NQuery" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="Bin\NQuery.UI.Actipro40.dll" target="lib\net20" /> 
+    <file src="Bin\NQuery.UI.Actipro40.pdb" target="lib\net20" /> 
+    <file src="Src\**\*.cs" target="src" />
+  </files>
+</package>

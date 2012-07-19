@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>NQuery.UI</id>
+    <version>0.0.0</version>
+    <authors>Immo Landwerth</authors>
+    <owners>Immo Landwerth</owners>
+    <licenseUrl>http://nquery.codeplex.com/license</licenseUrl>
+    <projectUrl>http://nquery.codeplex.com</projectUrl>
+    <iconUrl>http://download-codeplex.sec.s-msft.com/Download?ProjectName=nquery&amp;DownloadId=461219</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>
+      This package provides additional UI controls for query authoring.
+    </summary>
+    <description>
+      This package provides additional UI controls for query authoring including a show plan control to visualize
+      the execution plan similar to Microsoft SQL Server Management Studio as well as a browser control to explore
+      the scope of a query or expression.
+    </description>
+    <tags>SQL Query IEnumerable</tags>
+    <dependencies>
+      <dependency id="NQuery" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="Bin\NQuery.UI.dll" target="lib\net20" /> 
+    <file src="Bin\NQuery.UI.pdb" target="lib\net20" /> 
+    <file src="Src\**\*.cs" target="src" />
+  </files>
+</package>

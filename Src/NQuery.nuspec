@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>NQuery</id>
+    <version>0.0.0</version>
+    <authors>Immo Landwerth</authors>
+    <owners>Immo Landwerth</owners>
+    <licenseUrl>http://nquery.codeplex.com/license</licenseUrl>
+    <projectUrl>http://nquery.codeplex.com</projectUrl>
+    <iconUrl>http://download-codeplex.sec.s-msft.com/Download?ProjectName=nquery&amp;DownloadId=461219</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>
+      NQuery is a relational query engine that allows executing a SELECT query against in-memory objects.
+    </summary>
+    <description>
+      NQuery is a relational query engine that allows executing a SELECT query against in-memory objects. It can
+      use arrays, data sets, data tables or any other custom data source. NQuery is completely extensible so
+      that you can add custom functions, aggregates, constants and parameters.
+    </description>
+    <tags>SQL Query IEnumerable</tags>
+  </metadata>
+  <files>
+    <file src="Bin\NQuery.dll" target="lib\net20" /> 
+    <file src="Bin\NQuery.pdb" target="lib\net20" /> 
+    <file src="Src\**\*.cs" target="src" />
+  </files>
+</package>

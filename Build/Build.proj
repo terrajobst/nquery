@@ -29,6 +29,7 @@
   <UsingTask AssemblyFile="$(CustomTasksDir)NQuery.Build.dll" TaskName="NQuery.Build.ApplyXslTransform" />
   <UsingTask AssemblyFile="$(CustomTasksDir)NQuery.Build.dll" TaskName="NQuery.Build.RegexReplaceInFiles" />
   <UsingTask AssemblyFile="$(CustomTasksDir)NQuery.Build.dll" TaskName="NQuery.Build.RunSampleCode" />
+  <UsingTask AssemblyFile="$(CustomTasksDir)NQuery.Build.dll" TaskName="NQuery.Build.NuGetPack" />
 
   <!-- Project Files -->
 
@@ -136,6 +137,7 @@
     <CallTarget Targets="Compile" />
     <CallTarget Targets="GenerateHelp" />
     <CallTarget Targets="GenerateSourceCode" />
+    <CallTarget Targets="GeneratePackages" />
     <CallTarget Targets="GenerateSetup" />
   </Target>
 
@@ -288,13 +290,29 @@
 
   </Target>
 
+  <!-- Generate NuGet Packages-->
+
+  <Target Name="GeneratePackages" DependsOnTargets="CompileCustomBuildTasks">
+
+    <MakeDir Directories="$(OutputDir)Packages" />
+    <ItemGroup>
+      <_Packages Include="$(SourceDir)*.nuspec" />
+    </ItemGroup>
+    <NuGetPack Package="%(_Packages.Identity)"
+               Version="0.9.4-hotel"
+               BasePath="$(OutputDir)"
+               OutputDirectory="$(OutputDir)Packages"
+               Symbols="True" />
+
+  </Target>
+
   <!-- Generate Setup -->
 
   <Target Name="GenerateSetup">
 
     <MSBuild Projects="@(SetupProjects)"
              Properties="Configuration=$(Configuration);
-	                 OutDir=$(GeneratedSetup)" />
+                         OutDir=$(GeneratedSetup)" />
 
   </Target>
 
