@@ -25,6 +25,6 @@
   <files>
     <file src="Bin\NQuery.UI.dll" target="lib\net20" /> 
     <file src="Bin\NQuery.UI.pdb" target="lib\net20" /> 
-    <file src="Src\**\*.cs" target="src" />
+    <file src="Src\Src\**\*.cs" target="src" />
   </files>
 </package>

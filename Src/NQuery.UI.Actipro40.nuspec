@@ -24,6 +24,6 @@
   <files>
     <file src="Bin\NQuery.UI.Actipro40.dll" target="lib\net20" /> 
     <file src="Bin\NQuery.UI.Actipro40.pdb" target="lib\net20" /> 
-    <file src="Src\**\*.cs" target="src" />
+    <file src="Src\Src\**\*.cs" target="src" />
   </files>
 </package>
