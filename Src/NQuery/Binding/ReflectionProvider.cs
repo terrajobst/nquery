@@ -287,6 +287,7 @@ namespace NQuery.Runtime
 			List<MethodBinding> methodList = new List<MethodBinding>();
 
 			MethodInfo[] methodInfos = type.GetMethods(_bindingFlags);
+			Array.Sort(methodInfos, (x, y) => String.Compare(x.ToString(), y.ToString(), StringComparison.Ordinal));
 			
 			foreach (MethodInfo currentMethodInfo in methodInfos)
 			{

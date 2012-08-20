@@ -11,7 +11,7 @@ ORDER	BY r.RegionID, t.TerritoryID
     <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
-          <xs:element name="Table1">
+          <xs:element name="Table1" msdata:Locale="en-US">
             <xs:complexType>
               <xs:sequence>
                 <xs:element name="RegionID" type="xs:int" minOccurs="0" />
@@ -747,26 +747,26 @@ ORDER	BY r.RegionID, t.TerritoryID
         <input>
           <element operator="Sort">
             <properties>
-              <property name="Output List.[0]" value="r.RegionID" />
-              <property name="Output List.[0].Table" value="r" />
-              <property name="Output List.[0].Column" value="RegionID" />
-              <property name="Output List.[0].DataType" value="Int32" />
-              <property name="Output List.[1]" value="r.RegionDescription" />
-              <property name="Output List.[1].Table" value="r" />
-              <property name="Output List.[1].Column" value="RegionDescription" />
+              <property name="Output List.[0]" value="t.TerritoryID" />
+              <property name="Output List.[0].Table" value="t" />
+              <property name="Output List.[0].Column" value="TerritoryID" />
+              <property name="Output List.[0].DataType" value="String" />
+              <property name="Output List.[1]" value="t.TerritoryDescription" />
+              <property name="Output List.[1].Table" value="t" />
+              <property name="Output List.[1].Column" value="TerritoryDescription" />
               <property name="Output List.[1].DataType" value="String" />
-              <property name="Output List.[2]" value="t.TerritoryID" />
+              <property name="Output List.[2]" value="t.RegionID" />
               <property name="Output List.[2].Table" value="t" />
-              <property name="Output List.[2].Column" value="TerritoryID" />
-              <property name="Output List.[2].DataType" value="String" />
-              <property name="Output List.[3]" value="t.TerritoryDescription" />
-              <property name="Output List.[3].Table" value="t" />
-              <property name="Output List.[3].Column" value="TerritoryDescription" />
-              <property name="Output List.[3].DataType" value="String" />
-              <property name="Output List.[4]" value="t.RegionID" />
-              <property name="Output List.[4].Table" value="t" />
-              <property name="Output List.[4].Column" value="RegionID" />
-              <property name="Output List.[4].DataType" value="Int32" />
+              <property name="Output List.[2].Column" value="RegionID" />
+              <property name="Output List.[2].DataType" value="Int32" />
+              <property name="Output List.[3]" value="r.RegionID" />
+              <property name="Output List.[3].Table" value="r" />
+              <property name="Output List.[3].Column" value="RegionID" />
+              <property name="Output List.[3].DataType" value="Int32" />
+              <property name="Output List.[4]" value="r.RegionDescription" />
+              <property name="Output List.[4].Table" value="r" />
+              <property name="Output List.[4].Column" value="RegionDescription" />
+              <property name="Output List.[4].DataType" value="String" />
               <property name="Statistics.Open Count" value="1" />
               <property name="Statistics.Row Count" value="98" />
               <property name="Statistics.Average Row Count" value="98" />
@@ -785,26 +785,26 @@ ORDER	BY r.RegionID, t.TerritoryID
             <input>
               <element operator="NestedLoops">
                 <properties>
-                  <property name="Output List.[0]" value="r.RegionID" />
-                  <property name="Output List.[0].Table" value="r" />
-                  <property name="Output List.[0].Column" value="RegionID" />
-                  <property name="Output List.[0].DataType" value="Int32" />
-                  <property name="Output List.[1]" value="r.RegionDescription" />
-                  <property name="Output List.[1].Table" value="r" />
-                  <property name="Output List.[1].Column" value="RegionDescription" />
+                  <property name="Output List.[0]" value="t.TerritoryID" />
+                  <property name="Output List.[0].Table" value="t" />
+                  <property name="Output List.[0].Column" value="TerritoryID" />
+                  <property name="Output List.[0].DataType" value="String" />
+                  <property name="Output List.[1]" value="t.TerritoryDescription" />
+                  <property name="Output List.[1].Table" value="t" />
+                  <property name="Output List.[1].Column" value="TerritoryDescription" />
                   <property name="Output List.[1].DataType" value="String" />
-                  <property name="Output List.[2]" value="t.TerritoryID" />
+                  <property name="Output List.[2]" value="t.RegionID" />
                   <property name="Output List.[2].Table" value="t" />
-                  <property name="Output List.[2].Column" value="TerritoryID" />
-                  <property name="Output List.[2].DataType" value="String" />
-                  <property name="Output List.[3]" value="t.TerritoryDescription" />
-                  <property name="Output List.[3].Table" value="t" />
-                  <property name="Output List.[3].Column" value="TerritoryDescription" />
-                  <property name="Output List.[3].DataType" value="String" />
-                  <property name="Output List.[4]" value="t.RegionID" />
-                  <property name="Output List.[4].Table" value="t" />
-                  <property name="Output List.[4].Column" value="RegionID" />
-                  <property name="Output List.[4].DataType" value="Int32" />
+                  <property name="Output List.[2].Column" value="RegionID" />
+                  <property name="Output List.[2].DataType" value="Int32" />
+                  <property name="Output List.[3]" value="r.RegionID" />
+                  <property name="Output List.[3].Table" value="r" />
+                  <property name="Output List.[3].Column" value="RegionID" />
+                  <property name="Output List.[3].DataType" value="Int32" />
+                  <property name="Output List.[4]" value="r.RegionDescription" />
+                  <property name="Output List.[4].Table" value="r" />
+                  <property name="Output List.[4].Column" value="RegionDescription" />
+                  <property name="Output List.[4].DataType" value="String" />
                   <property name="Logical Operator" value="Inner Join" />
                   <property name="Statistics.Open Count" value="1" />
                   <property name="Statistics.Row Count" value="98" />
@@ -812,23 +812,6 @@ ORDER	BY r.RegionID, t.TerritoryID
                   <property name="Predicate" value="t.RegionID &lt; r.RegionID" />
                 </properties>
                 <input>
-                  <element operator="TableScan">
-                    <properties>
-                      <property name="Table" value="Region AS r" />
-                      <property name="Output List.[0]" value="r.RegionID" />
-                      <property name="Output List.[0].Table" value="r" />
-                      <property name="Output List.[0].Column" value="RegionID" />
-                      <property name="Output List.[0].DataType" value="Int32" />
-                      <property name="Output List.[1]" value="r.RegionDescription" />
-                      <property name="Output List.[1].Table" value="r" />
-                      <property name="Output List.[1].Column" value="RegionDescription" />
-                      <property name="Output List.[1].DataType" value="String" />
-                      <property name="Statistics.Open Count" value="1" />
-                      <property name="Statistics.Row Count" value="4" />
-                      <property name="Statistics.Average Row Count" value="4" />
-                    </properties>
-                    <input />
-                  </element>
                   <element operator="TableScan">
                     <properties>
                       <property name="Table" value="Territories AS t" />
@@ -844,9 +827,26 @@ ORDER	BY r.RegionID, t.TerritoryID
                       <property name="Output List.[2].Table" value="t" />
                       <property name="Output List.[2].Column" value="RegionID" />
                       <property name="Output List.[2].DataType" value="Int32" />
-                      <property name="Statistics.Open Count" value="4" />
-                      <property name="Statistics.Row Count" value="212" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="53" />
                       <property name="Statistics.Average Row Count" value="53" />
+                    </properties>
+                    <input />
+                  </element>
+                  <element operator="TableScan">
+                    <properties>
+                      <property name="Table" value="Region AS r" />
+                      <property name="Output List.[0]" value="r.RegionID" />
+                      <property name="Output List.[0].Table" value="r" />
+                      <property name="Output List.[0].Column" value="RegionID" />
+                      <property name="Output List.[0].DataType" value="Int32" />
+                      <property name="Output List.[1]" value="r.RegionDescription" />
+                      <property name="Output List.[1].Table" value="r" />
+                      <property name="Output List.[1].Column" value="RegionDescription" />
+                      <property name="Output List.[1].DataType" value="String" />
+                      <property name="Statistics.Open Count" value="53" />
+                      <property name="Statistics.Row Count" value="212" />
+                      <property name="Statistics.Average Row Count" value="4" />
                     </properties>
                     <input />
                   </element>

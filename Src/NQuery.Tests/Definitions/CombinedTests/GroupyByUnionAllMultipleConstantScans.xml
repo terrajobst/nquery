@@ -4,35 +4,34 @@
 FROM	Employees e
 GROUP	BY FORMAT(e.BirthDate, 'MMMM')
 UNION	ALL
-SELECT	'Januar', 0
+SELECT	'January', 0
 UNION	ALL
-SELECT	'Februar', 0
+SELECT	'February', 0
 UNION	ALL
-SELECT	'März', 0
+SELECT	'March', 0
 UNION	ALL
 SELECT	'April', 0
 UNION	ALL
-SELECT	'Juni', 0
+SELECT	'June', 0
 UNION	ALL
-SELECT	'Juli', 0
+SELECT	'July', 0
 UNION	ALL
 SELECT	'August', 0
 UNION	ALL
 SELECT	'September', 0
 UNION	ALL
-SELECT	'Oktober', 0
+SELECT	'October', 0
 UNION	ALL
 SELECT	'November', 0
 UNION	ALL
-SELECT	'Dezember', 0
-</sql>
+SELECT	'December', 0</sql>
   <expectedResults>
     <NewDataSet>
   <xs:schema id="NewDataSet" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
-          <xs:element name="Table1">
+          <xs:element name="Table1" msdata:Locale="en-US">
             <xs:complexType>
               <xs:sequence>
                 <xs:element name="Month" type="xs:string" minOccurs="0" />
@@ -49,27 +48,27 @@ SELECT	'Dezember', 0
     <Count>1</Count>
   </Table1>
   <Table1>
-    <Month>Dezember</Month>
+    <Month>December</Month>
     <Count>1</Count>
   </Table1>
   <Table1>
-    <Month>Februar</Month>
+    <Month>February</Month>
     <Count>1</Count>
   </Table1>
   <Table1>
-    <Month>Januar</Month>
+    <Month>January</Month>
     <Count>2</Count>
   </Table1>
   <Table1>
-    <Month>Juli</Month>
+    <Month>July</Month>
     <Count>1</Count>
   </Table1>
   <Table1>
-    <Month>Mai</Month>
+    <Month>March</Month>
     <Count>1</Count>
   </Table1>
   <Table1>
-    <Month>März</Month>
+    <Month>May</Month>
     <Count>1</Count>
   </Table1>
   <Table1>
@@ -77,15 +76,15 @@ SELECT	'Dezember', 0
     <Count>1</Count>
   </Table1>
   <Table1>
-    <Month>Januar</Month>
+    <Month>January</Month>
     <Count>0</Count>
   </Table1>
   <Table1>
-    <Month>Februar</Month>
+    <Month>February</Month>
     <Count>0</Count>
   </Table1>
   <Table1>
-    <Month>März</Month>
+    <Month>March</Month>
     <Count>0</Count>
   </Table1>
   <Table1>
@@ -93,11 +92,11 @@ SELECT	'Dezember', 0
     <Count>0</Count>
   </Table1>
   <Table1>
-    <Month>Juni</Month>
+    <Month>June</Month>
     <Count>0</Count>
   </Table1>
   <Table1>
-    <Month>Juli</Month>
+    <Month>July</Month>
     <Count>0</Count>
   </Table1>
   <Table1>
@@ -109,7 +108,7 @@ SELECT	'Dezember', 0
     <Count>0</Count>
   </Table1>
   <Table1>
-    <Month>Oktober</Month>
+    <Month>October</Month>
     <Count>0</Count>
   </Table1>
   <Table1>
@@ -117,7 +116,7 @@ SELECT	'Dezember', 0
     <Count>0</Count>
   </Table1>
   <Table1>
-    <Month>Dezember</Month>
+    <Month>December</Month>
     <Count>0</Count>
   </Table1>
 </NewDataSet>
@@ -303,10 +302,10 @@ SELECT	'Dezember', 0
                   <property name="Statistics.Open Count" value="1" />
                   <property name="Statistics.Row Count" value="1" />
                   <property name="Statistics.Average Row Count" value="1" />
-                  <property name="Defined Values.[0]" value="Expr1003 = 'Januar'" />
+                  <property name="Defined Values.[0]" value="Expr1003 = 'January'" />
                   <property name="Defined Values.[0].Target" value="Expr1003" />
                   <property name="Defined Values.[0].DataType" value="String" />
-                  <property name="Defined Values.[0].Source" value="'Januar'" />
+                  <property name="Defined Values.[0].Source" value="'January'" />
                   <property name="Defined Values.[1]" value="Expr1004 = 0" />
                   <property name="Defined Values.[1].Target" value="Expr1004" />
                   <property name="Defined Values.[1].DataType" value="Int32" />
@@ -326,10 +325,10 @@ SELECT	'Dezember', 0
                   <property name="Statistics.Open Count" value="1" />
                   <property name="Statistics.Row Count" value="1" />
                   <property name="Statistics.Average Row Count" value="1" />
-                  <property name="Defined Values.[0]" value="Expr1005 = 'Februar'" />
+                  <property name="Defined Values.[0]" value="Expr1005 = 'February'" />
                   <property name="Defined Values.[0].Target" value="Expr1005" />
                   <property name="Defined Values.[0].DataType" value="String" />
-                  <property name="Defined Values.[0].Source" value="'Februar'" />
+                  <property name="Defined Values.[0].Source" value="'February'" />
                   <property name="Defined Values.[1]" value="Expr1006 = 0" />
                   <property name="Defined Values.[1].Target" value="Expr1006" />
                   <property name="Defined Values.[1].DataType" value="Int32" />
@@ -349,10 +348,10 @@ SELECT	'Dezember', 0
                   <property name="Statistics.Open Count" value="1" />
                   <property name="Statistics.Row Count" value="1" />
                   <property name="Statistics.Average Row Count" value="1" />
-                  <property name="Defined Values.[0]" value="Expr1007 = 'März'" />
+                  <property name="Defined Values.[0]" value="Expr1007 = 'March'" />
                   <property name="Defined Values.[0].Target" value="Expr1007" />
                   <property name="Defined Values.[0].DataType" value="String" />
-                  <property name="Defined Values.[0].Source" value="'März'" />
+                  <property name="Defined Values.[0].Source" value="'March'" />
                   <property name="Defined Values.[1]" value="Expr1008 = 0" />
                   <property name="Defined Values.[1].Target" value="Expr1008" />
                   <property name="Defined Values.[1].DataType" value="Int32" />
@@ -395,10 +394,10 @@ SELECT	'Dezember', 0
                   <property name="Statistics.Open Count" value="1" />
                   <property name="Statistics.Row Count" value="1" />
                   <property name="Statistics.Average Row Count" value="1" />
-                  <property name="Defined Values.[0]" value="Expr1011 = 'Juni'" />
+                  <property name="Defined Values.[0]" value="Expr1011 = 'June'" />
                   <property name="Defined Values.[0].Target" value="Expr1011" />
                   <property name="Defined Values.[0].DataType" value="String" />
-                  <property name="Defined Values.[0].Source" value="'Juni'" />
+                  <property name="Defined Values.[0].Source" value="'June'" />
                   <property name="Defined Values.[1]" value="Expr1012 = 0" />
                   <property name="Defined Values.[1].Target" value="Expr1012" />
                   <property name="Defined Values.[1].DataType" value="Int32" />
@@ -418,10 +417,10 @@ SELECT	'Dezember', 0
                   <property name="Statistics.Open Count" value="1" />
                   <property name="Statistics.Row Count" value="1" />
                   <property name="Statistics.Average Row Count" value="1" />
-                  <property name="Defined Values.[0]" value="Expr1013 = 'Juli'" />
+                  <property name="Defined Values.[0]" value="Expr1013 = 'July'" />
                   <property name="Defined Values.[0].Target" value="Expr1013" />
                   <property name="Defined Values.[0].DataType" value="String" />
-                  <property name="Defined Values.[0].Source" value="'Juli'" />
+                  <property name="Defined Values.[0].Source" value="'July'" />
                   <property name="Defined Values.[1]" value="Expr1014 = 0" />
                   <property name="Defined Values.[1].Target" value="Expr1014" />
                   <property name="Defined Values.[1].DataType" value="Int32" />
@@ -487,10 +486,10 @@ SELECT	'Dezember', 0
                   <property name="Statistics.Open Count" value="1" />
                   <property name="Statistics.Row Count" value="1" />
                   <property name="Statistics.Average Row Count" value="1" />
-                  <property name="Defined Values.[0]" value="Expr1019 = 'Oktober'" />
+                  <property name="Defined Values.[0]" value="Expr1019 = 'October'" />
                   <property name="Defined Values.[0].Target" value="Expr1019" />
                   <property name="Defined Values.[0].DataType" value="String" />
-                  <property name="Defined Values.[0].Source" value="'Oktober'" />
+                  <property name="Defined Values.[0].Source" value="'October'" />
                   <property name="Defined Values.[1]" value="Expr1020 = 0" />
                   <property name="Defined Values.[1].Target" value="Expr1020" />
                   <property name="Defined Values.[1].DataType" value="Int32" />
@@ -533,10 +532,10 @@ SELECT	'Dezember', 0
                   <property name="Statistics.Open Count" value="1" />
                   <property name="Statistics.Row Count" value="1" />
                   <property name="Statistics.Average Row Count" value="1" />
-                  <property name="Defined Values.[0]" value="Expr1023 = 'Dezember'" />
+                  <property name="Defined Values.[0]" value="Expr1023 = 'December'" />
                   <property name="Defined Values.[0].Target" value="Expr1023" />
                   <property name="Defined Values.[0].DataType" value="String" />
-                  <property name="Defined Values.[0].Source" value="'Dezember'" />
+                  <property name="Defined Values.[0].Source" value="'December'" />
                   <property name="Defined Values.[1]" value="Expr1024 = 0" />
                   <property name="Defined Values.[1].Target" value="Expr1024" />
                   <property name="Defined Values.[1].DataType" value="Int32" />

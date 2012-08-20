@@ -10,7 +10,7 @@ WHERE   ((SELECT e.City FROM Employees e WHERE e.EmployeeId = o.EmployeeId)) = c
     <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
-          <xs:element name="Table1">
+          <xs:element name="Table1" msdata:Locale="en-US">
             <xs:complexType>
               <xs:sequence>
                 <xs:element name="OrderID" type="xs:int" minOccurs="0" />
@@ -46,64 +46,36 @@ WHERE   ((SELECT e.City FROM Employees e WHERE e.EmployeeId = o.EmployeeId)) = c
     </xs:element>
   </xs:schema>
   <Table1>
-    <OrderID>11016</OrderID>
-    <CustomerID>AROUT</CustomerID>
-    <EmployeeID>9</EmployeeID>
-    <OrderDate>1998-04-10T00:00:00+02:00</OrderDate>
-    <RequiredDate>1998-05-08T00:00:00+02:00</RequiredDate>
-    <ShippedDate>1998-04-13T00:00:00+02:00</ShippedDate>
-    <ShipVia>2</ShipVia>
-    <Freight>33.8</Freight>
-    <ShipName>Around the Horn</ShipName>
-    <ShipAddress>Brook Farm Stratford St. Mary</ShipAddress>
-    <ShipCity>Colchester</ShipCity>
-    <ShipRegion>Essex</ShipRegion>
-    <ShipPostalCode>CO7 6JX</ShipPostalCode>
+    <OrderID>10289</OrderID>
+    <CustomerID>BSBEV</CustomerID>
+    <EmployeeID>7</EmployeeID>
+    <OrderDate>1996-08-25T15:00:00-07:00</OrderDate>
+    <RequiredDate>1996-09-22T15:00:00-07:00</RequiredDate>
+    <ShippedDate>1996-08-27T15:00:00-07:00</ShippedDate>
+    <ShipVia>3</ShipVia>
+    <Freight>22.77</Freight>
+    <ShipName>B's Beverages</ShipName>
+    <ShipAddress>Fauntleroy Circus</ShipAddress>
+    <ShipCity>London</ShipCity>
+    <ShipPostalCode>EC2 5NT</ShipPostalCode>
     <ShipCountry>UK</ShipCountry>
-    <CustomerID1>AROUT</CustomerID1>
-    <CompanyName>Around the Horn</CompanyName>
-    <ContactName>Thomas Hardy</ContactName>
+    <CustomerID1>BSBEV</CustomerID1>
+    <CompanyName>B's Beverages</CompanyName>
+    <ContactName>Victoria Ashworth</ContactName>
     <ContactTitle>Sales Representative</ContactTitle>
-    <Address>120 Hanover Sq.</Address>
+    <Address>Fauntleroy Circus</Address>
     <City>London</City>
-    <PostalCode>WA1 1DP</PostalCode>
+    <PostalCode>EC2 5NT</PostalCode>
     <Country>UK</Country>
-    <Phone>(171) 555-7788</Phone>
-    <Fax>(171) 555-6750</Fax>
-  </Table1>
-  <Table1>
-    <OrderID>10953</OrderID>
-    <CustomerID>AROUT</CustomerID>
-    <EmployeeID>9</EmployeeID>
-    <OrderDate>1998-03-16T00:00:00+01:00</OrderDate>
-    <RequiredDate>1998-03-30T00:00:00+02:00</RequiredDate>
-    <ShippedDate>1998-03-25T00:00:00+01:00</ShippedDate>
-    <ShipVia>2</ShipVia>
-    <Freight>23.72</Freight>
-    <ShipName>Around the Horn</ShipName>
-    <ShipAddress>Brook Farm Stratford St. Mary</ShipAddress>
-    <ShipCity>Colchester</ShipCity>
-    <ShipRegion>Essex</ShipRegion>
-    <ShipPostalCode>CO7 6JX</ShipPostalCode>
-    <ShipCountry>UK</ShipCountry>
-    <CustomerID1>AROUT</CustomerID1>
-    <CompanyName>Around the Horn</CompanyName>
-    <ContactName>Thomas Hardy</ContactName>
-    <ContactTitle>Sales Representative</ContactTitle>
-    <Address>120 Hanover Sq.</Address>
-    <City>London</City>
-    <PostalCode>WA1 1DP</PostalCode>
-    <Country>UK</Country>
-    <Phone>(171) 555-7788</Phone>
-    <Fax>(171) 555-6750</Fax>
+    <Phone>(171) 555-1212</Phone>
   </Table1>
   <Table1>
     <OrderID>10355</OrderID>
     <CustomerID>AROUT</CustomerID>
     <EmployeeID>6</EmployeeID>
-    <OrderDate>1996-11-15T00:00:00+01:00</OrderDate>
-    <RequiredDate>1996-12-13T00:00:00+01:00</RequiredDate>
-    <ShippedDate>1996-11-20T00:00:00+01:00</ShippedDate>
+    <OrderDate>1996-11-14T15:00:00-08:00</OrderDate>
+    <RequiredDate>1996-12-12T15:00:00-08:00</RequiredDate>
+    <ShippedDate>1996-11-19T15:00:00-08:00</ShippedDate>
     <ShipVia>1</ShipVia>
     <Freight>41.95</Freight>
     <ShipName>Around the Horn</ShipName>
@@ -124,258 +96,12 @@ WHERE   ((SELECT e.City FROM Employees e WHERE e.EmployeeId = o.EmployeeId)) = c
     <Fax>(171) 555-6750</Fax>
   </Table1>
   <Table1>
-    <OrderID>10599</OrderID>
-    <CustomerID>BSBEV</CustomerID>
-    <EmployeeID>6</EmployeeID>
-    <OrderDate>1997-07-15T00:00:00+02:00</OrderDate>
-    <RequiredDate>1997-08-26T00:00:00+02:00</RequiredDate>
-    <ShippedDate>1997-07-21T00:00:00+02:00</ShippedDate>
-    <ShipVia>3</ShipVia>
-    <Freight>29.98</Freight>
-    <ShipName>B's Beverages</ShipName>
-    <ShipAddress>Fauntleroy Circus</ShipAddress>
-    <ShipCity>London</ShipCity>
-    <ShipPostalCode>EC2 5NT</ShipPostalCode>
-    <ShipCountry>UK</ShipCountry>
-    <CustomerID1>BSBEV</CustomerID1>
-    <CompanyName>B's Beverages</CompanyName>
-    <ContactName>Victoria Ashworth</ContactName>
-    <ContactTitle>Sales Representative</ContactTitle>
-    <Address>Fauntleroy Circus</Address>
-    <City>London</City>
-    <PostalCode>EC2 5NT</PostalCode>
-    <Country>UK</Country>
-    <Phone>(171) 555-1212</Phone>
-  </Table1>
-  <Table1>
-    <OrderID>10539</OrderID>
-    <CustomerID>BSBEV</CustomerID>
-    <EmployeeID>6</EmployeeID>
-    <OrderDate>1997-05-16T00:00:00+02:00</OrderDate>
-    <RequiredDate>1997-06-13T00:00:00+02:00</RequiredDate>
-    <ShippedDate>1997-05-23T00:00:00+02:00</ShippedDate>
-    <ShipVia>3</ShipVia>
-    <Freight>12.36</Freight>
-    <ShipName>B's Beverages</ShipName>
-    <ShipAddress>Fauntleroy Circus</ShipAddress>
-    <ShipCity>London</ShipCity>
-    <ShipPostalCode>EC2 5NT</ShipPostalCode>
-    <ShipCountry>UK</ShipCountry>
-    <CustomerID1>BSBEV</CustomerID1>
-    <CompanyName>B's Beverages</CompanyName>
-    <ContactName>Victoria Ashworth</ContactName>
-    <ContactTitle>Sales Representative</ContactTitle>
-    <Address>Fauntleroy Circus</Address>
-    <City>London</City>
-    <PostalCode>EC2 5NT</PostalCode>
-    <Country>UK</Country>
-    <Phone>(171) 555-1212</Phone>
-  </Table1>
-  <Table1>
-    <OrderID>10538</OrderID>
-    <CustomerID>BSBEV</CustomerID>
-    <EmployeeID>9</EmployeeID>
-    <OrderDate>1997-05-15T00:00:00+02:00</OrderDate>
-    <RequiredDate>1997-06-12T00:00:00+02:00</RequiredDate>
-    <ShippedDate>1997-05-16T00:00:00+02:00</ShippedDate>
-    <ShipVia>3</ShipVia>
-    <Freight>4.87</Freight>
-    <ShipName>B's Beverages</ShipName>
-    <ShipAddress>Fauntleroy Circus</ShipAddress>
-    <ShipCity>London</ShipCity>
-    <ShipPostalCode>EC2 5NT</ShipPostalCode>
-    <ShipCountry>UK</ShipCountry>
-    <CustomerID1>BSBEV</CustomerID1>
-    <CompanyName>B's Beverages</CompanyName>
-    <ContactName>Victoria Ashworth</ContactName>
-    <ContactTitle>Sales Representative</ContactTitle>
-    <Address>Fauntleroy Circus</Address>
-    <City>London</City>
-    <PostalCode>EC2 5NT</PostalCode>
-    <Country>UK</Country>
-    <Phone>(171) 555-1212</Phone>
-  </Table1>
-  <Table1>
-    <OrderID>10289</OrderID>
-    <CustomerID>BSBEV</CustomerID>
-    <EmployeeID>7</EmployeeID>
-    <OrderDate>1996-08-26T00:00:00+02:00</OrderDate>
-    <RequiredDate>1996-09-23T00:00:00+02:00</RequiredDate>
-    <ShippedDate>1996-08-28T00:00:00+02:00</ShippedDate>
-    <ShipVia>3</ShipVia>
-    <Freight>22.77</Freight>
-    <ShipName>B's Beverages</ShipName>
-    <ShipAddress>Fauntleroy Circus</ShipAddress>
-    <ShipCity>London</ShipCity>
-    <ShipPostalCode>EC2 5NT</ShipPostalCode>
-    <ShipCountry>UK</ShipCountry>
-    <CustomerID1>BSBEV</CustomerID1>
-    <CompanyName>B's Beverages</CompanyName>
-    <ContactName>Victoria Ashworth</ContactName>
-    <ContactTitle>Sales Representative</ContactTitle>
-    <Address>Fauntleroy Circus</Address>
-    <City>London</City>
-    <PostalCode>EC2 5NT</PostalCode>
-    <Country>UK</Country>
-    <Phone>(171) 555-1212</Phone>
-  </Table1>
-  <Table1>
-    <OrderID>10848</OrderID>
-    <CustomerID>CONSH</CustomerID>
-    <EmployeeID>7</EmployeeID>
-    <OrderDate>1998-01-23T00:00:00+01:00</OrderDate>
-    <RequiredDate>1998-02-20T00:00:00+01:00</RequiredDate>
-    <ShippedDate>1998-01-29T00:00:00+01:00</ShippedDate>
-    <ShipVia>2</ShipVia>
-    <Freight>38.24</Freight>
-    <ShipName>Consolidated Holdings</ShipName>
-    <ShipAddress>Berkeley Gardens 12  Brewery</ShipAddress>
-    <ShipCity>London</ShipCity>
-    <ShipPostalCode>WX1 6LT</ShipPostalCode>
-    <ShipCountry>UK</ShipCountry>
-    <CustomerID1>CONSH</CustomerID1>
-    <CompanyName>Consolidated Holdings</CompanyName>
-    <ContactName>Elizabeth Brown</ContactName>
-    <ContactTitle>Sales Representative</ContactTitle>
-    <Address>Berkeley Gardens 12  Brewery</Address>
-    <City>London</City>
-    <PostalCode>WX1 6LT</PostalCode>
-    <Country>UK</Country>
-    <Phone>(171) 555-2282</Phone>
-    <Fax>(171) 555-9199</Fax>
-  </Table1>
-  <Table1>
-    <OrderID>11047</OrderID>
-    <CustomerID>EASTC</CustomerID>
-    <EmployeeID>7</EmployeeID>
-    <OrderDate>1998-04-24T00:00:00+02:00</OrderDate>
-    <RequiredDate>1998-05-22T00:00:00+02:00</RequiredDate>
-    <ShippedDate>1998-05-01T00:00:00+02:00</ShippedDate>
-    <ShipVia>3</ShipVia>
-    <Freight>46.62</Freight>
-    <ShipName>Eastern Connection</ShipName>
-    <ShipAddress>35 King George</ShipAddress>
-    <ShipCity>London</ShipCity>
-    <ShipPostalCode>WX3 6FW</ShipPostalCode>
-    <ShipCountry>UK</ShipCountry>
-    <CustomerID1>EASTC</CustomerID1>
-    <CompanyName>Eastern Connection</CompanyName>
-    <ContactName>Ann Devon</ContactName>
-    <ContactTitle>Sales Agent</ContactTitle>
-    <Address>35 King George</Address>
-    <City>London</City>
-    <PostalCode>WX3 6FW</PostalCode>
-    <Country>UK</Country>
-    <Phone>(171) 555-0297</Phone>
-    <Fax>(171) 555-3373</Fax>
-  </Table1>
-  <Table1>
-    <OrderID>10532</OrderID>
-    <CustomerID>EASTC</CustomerID>
-    <EmployeeID>7</EmployeeID>
-    <OrderDate>1997-05-09T00:00:00+02:00</OrderDate>
-    <RequiredDate>1997-06-06T00:00:00+02:00</RequiredDate>
-    <ShippedDate>1997-05-12T00:00:00+02:00</ShippedDate>
-    <ShipVia>3</ShipVia>
-    <Freight>74.46</Freight>
-    <ShipName>Eastern Connection</ShipName>
-    <ShipAddress>35 King George</ShipAddress>
-    <ShipCity>London</ShipCity>
-    <ShipPostalCode>WX3 6FW</ShipPostalCode>
-    <ShipCountry>UK</ShipCountry>
-    <CustomerID1>EASTC</CustomerID1>
-    <CompanyName>Eastern Connection</CompanyName>
-    <ContactName>Ann Devon</ContactName>
-    <ContactTitle>Sales Agent</ContactTitle>
-    <Address>35 King George</Address>
-    <City>London</City>
-    <PostalCode>WX3 6FW</PostalCode>
-    <Country>UK</Country>
-    <Phone>(171) 555-0297</Phone>
-    <Fax>(171) 555-3373</Fax>
-  </Table1>
-  <Table1>
-    <OrderID>10869</OrderID>
-    <CustomerID>SEVES</CustomerID>
-    <EmployeeID>5</EmployeeID>
-    <OrderDate>1998-02-04T00:00:00+01:00</OrderDate>
-    <RequiredDate>1998-03-04T00:00:00+01:00</RequiredDate>
-    <ShippedDate>1998-02-09T00:00:00+01:00</ShippedDate>
-    <ShipVia>1</ShipVia>
-    <Freight>143.28</Freight>
-    <ShipName>Seven Seas Imports</ShipName>
-    <ShipAddress>90 Wadhurst Rd.</ShipAddress>
-    <ShipCity>London</ShipCity>
-    <ShipPostalCode>OX15 4NB</ShipPostalCode>
-    <ShipCountry>UK</ShipCountry>
-    <CustomerID1>SEVES</CustomerID1>
-    <CompanyName>Seven Seas Imports</CompanyName>
-    <ContactName>Hari Kumar</ContactName>
-    <ContactTitle>Sales Manager</ContactTitle>
-    <Address>90 Wadhurst Rd.</Address>
-    <City>London</City>
-    <PostalCode>OX15 4NB</PostalCode>
-    <Country>UK</Country>
-    <Phone>(171) 555-1717</Phone>
-    <Fax>(171) 555-5646</Fax>
-  </Table1>
-  <Table1>
-    <OrderID>10804</OrderID>
-    <CustomerID>SEVES</CustomerID>
-    <EmployeeID>6</EmployeeID>
-    <OrderDate>1997-12-30T00:00:00+01:00</OrderDate>
-    <RequiredDate>1998-01-27T00:00:00+01:00</RequiredDate>
-    <ShippedDate>1998-01-07T00:00:00+01:00</ShippedDate>
-    <ShipVia>2</ShipVia>
-    <Freight>27.33</Freight>
-    <ShipName>Seven Seas Imports</ShipName>
-    <ShipAddress>90 Wadhurst Rd.</ShipAddress>
-    <ShipCity>London</ShipCity>
-    <ShipPostalCode>OX15 4NB</ShipPostalCode>
-    <ShipCountry>UK</ShipCountry>
-    <CustomerID1>SEVES</CustomerID1>
-    <CompanyName>Seven Seas Imports</CompanyName>
-    <ContactName>Hari Kumar</ContactName>
-    <ContactTitle>Sales Manager</ContactTitle>
-    <Address>90 Wadhurst Rd.</Address>
-    <City>London</City>
-    <PostalCode>OX15 4NB</PostalCode>
-    <Country>UK</Country>
-    <Phone>(171) 555-1717</Phone>
-    <Fax>(171) 555-5646</Fax>
-  </Table1>
-  <Table1>
-    <OrderID>10523</OrderID>
-    <CustomerID>SEVES</CustomerID>
-    <EmployeeID>7</EmployeeID>
-    <OrderDate>1997-05-01T00:00:00+02:00</OrderDate>
-    <RequiredDate>1997-05-29T00:00:00+02:00</RequiredDate>
-    <ShippedDate>1997-05-30T00:00:00+02:00</ShippedDate>
-    <ShipVia>2</ShipVia>
-    <Freight>77.63</Freight>
-    <ShipName>Seven Seas Imports</ShipName>
-    <ShipAddress>90 Wadhurst Rd.</ShipAddress>
-    <ShipCity>London</ShipCity>
-    <ShipPostalCode>OX15 4NB</ShipPostalCode>
-    <ShipCountry>UK</ShipCountry>
-    <CustomerID1>SEVES</CustomerID1>
-    <CompanyName>Seven Seas Imports</CompanyName>
-    <ContactName>Hari Kumar</ContactName>
-    <ContactTitle>Sales Manager</ContactTitle>
-    <Address>90 Wadhurst Rd.</Address>
-    <City>London</City>
-    <PostalCode>OX15 4NB</PostalCode>
-    <Country>UK</Country>
-    <Phone>(171) 555-1717</Phone>
-    <Fax>(171) 555-5646</Fax>
-  </Table1>
-  <Table1>
     <OrderID>10359</OrderID>
     <CustomerID>SEVES</CustomerID>
     <EmployeeID>5</EmployeeID>
-    <OrderDate>1996-11-21T00:00:00+01:00</OrderDate>
-    <RequiredDate>1996-12-19T00:00:00+01:00</RequiredDate>
-    <ShippedDate>1996-11-26T00:00:00+01:00</ShippedDate>
+    <OrderDate>1996-11-20T15:00:00-08:00</OrderDate>
+    <RequiredDate>1996-12-18T15:00:00-08:00</RequiredDate>
+    <ShippedDate>1996-11-25T15:00:00-08:00</ShippedDate>
     <ShipVia>3</ShipVia>
     <Freight>288.43</Freight>
     <ShipName>Seven Seas Imports</ShipName>
@@ -395,14 +121,14 @@ WHERE   ((SELECT e.City FROM Employees e WHERE e.EmployeeId = o.EmployeeId)) = c
     <Fax>(171) 555-5646</Fax>
   </Table1>
   <Table1>
-    <OrderID>10696</OrderID>
+    <OrderID>10469</OrderID>
     <CustomerID>WHITC</CustomerID>
-    <EmployeeID>8</EmployeeID>
-    <OrderDate>1997-10-08T00:00:00+02:00</OrderDate>
-    <RequiredDate>1997-11-19T00:00:00+01:00</RequiredDate>
-    <ShippedDate>1997-10-14T00:00:00+02:00</ShippedDate>
-    <ShipVia>3</ShipVia>
-    <Freight>102.55</Freight>
+    <EmployeeID>1</EmployeeID>
+    <OrderDate>1997-03-09T15:00:00-08:00</OrderDate>
+    <RequiredDate>1997-04-06T15:00:00-07:00</RequiredDate>
+    <ShippedDate>1997-03-13T15:00:00-08:00</ShippedDate>
+    <ShipVia>1</ShipVia>
+    <Freight>60.18</Freight>
     <ShipName>White Clover Markets</ShipName>
     <ShipAddress>1029 - 12th Ave. S.</ShipAddress>
     <ShipCity>Seattle</ShipCity>
@@ -422,12 +148,110 @@ WHERE   ((SELECT e.City FROM Employees e WHERE e.EmployeeId = o.EmployeeId)) = c
     <Fax>(206) 555-4115</Fax>
   </Table1>
   <Table1>
+    <OrderID>10523</OrderID>
+    <CustomerID>SEVES</CustomerID>
+    <EmployeeID>7</EmployeeID>
+    <OrderDate>1997-04-30T15:00:00-07:00</OrderDate>
+    <RequiredDate>1997-05-28T15:00:00-07:00</RequiredDate>
+    <ShippedDate>1997-05-29T15:00:00-07:00</ShippedDate>
+    <ShipVia>2</ShipVia>
+    <Freight>77.63</Freight>
+    <ShipName>Seven Seas Imports</ShipName>
+    <ShipAddress>90 Wadhurst Rd.</ShipAddress>
+    <ShipCity>London</ShipCity>
+    <ShipPostalCode>OX15 4NB</ShipPostalCode>
+    <ShipCountry>UK</ShipCountry>
+    <CustomerID1>SEVES</CustomerID1>
+    <CompanyName>Seven Seas Imports</CompanyName>
+    <ContactName>Hari Kumar</ContactName>
+    <ContactTitle>Sales Manager</ContactTitle>
+    <Address>90 Wadhurst Rd.</Address>
+    <City>London</City>
+    <PostalCode>OX15 4NB</PostalCode>
+    <Country>UK</Country>
+    <Phone>(171) 555-1717</Phone>
+    <Fax>(171) 555-5646</Fax>
+  </Table1>
+  <Table1>
+    <OrderID>10532</OrderID>
+    <CustomerID>EASTC</CustomerID>
+    <EmployeeID>7</EmployeeID>
+    <OrderDate>1997-05-08T15:00:00-07:00</OrderDate>
+    <RequiredDate>1997-06-05T15:00:00-07:00</RequiredDate>
+    <ShippedDate>1997-05-11T15:00:00-07:00</ShippedDate>
+    <ShipVia>3</ShipVia>
+    <Freight>74.46</Freight>
+    <ShipName>Eastern Connection</ShipName>
+    <ShipAddress>35 King George</ShipAddress>
+    <ShipCity>London</ShipCity>
+    <ShipPostalCode>WX3 6FW</ShipPostalCode>
+    <ShipCountry>UK</ShipCountry>
+    <CustomerID1>EASTC</CustomerID1>
+    <CompanyName>Eastern Connection</CompanyName>
+    <ContactName>Ann Devon</ContactName>
+    <ContactTitle>Sales Agent</ContactTitle>
+    <Address>35 King George</Address>
+    <City>London</City>
+    <PostalCode>WX3 6FW</PostalCode>
+    <Country>UK</Country>
+    <Phone>(171) 555-0297</Phone>
+    <Fax>(171) 555-3373</Fax>
+  </Table1>
+  <Table1>
+    <OrderID>10538</OrderID>
+    <CustomerID>BSBEV</CustomerID>
+    <EmployeeID>9</EmployeeID>
+    <OrderDate>1997-05-14T15:00:00-07:00</OrderDate>
+    <RequiredDate>1997-06-11T15:00:00-07:00</RequiredDate>
+    <ShippedDate>1997-05-15T15:00:00-07:00</ShippedDate>
+    <ShipVia>3</ShipVia>
+    <Freight>4.87</Freight>
+    <ShipName>B's Beverages</ShipName>
+    <ShipAddress>Fauntleroy Circus</ShipAddress>
+    <ShipCity>London</ShipCity>
+    <ShipPostalCode>EC2 5NT</ShipPostalCode>
+    <ShipCountry>UK</ShipCountry>
+    <CustomerID1>BSBEV</CustomerID1>
+    <CompanyName>B's Beverages</CompanyName>
+    <ContactName>Victoria Ashworth</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+    <Address>Fauntleroy Circus</Address>
+    <City>London</City>
+    <PostalCode>EC2 5NT</PostalCode>
+    <Country>UK</Country>
+    <Phone>(171) 555-1212</Phone>
+  </Table1>
+  <Table1>
+    <OrderID>10539</OrderID>
+    <CustomerID>BSBEV</CustomerID>
+    <EmployeeID>6</EmployeeID>
+    <OrderDate>1997-05-15T15:00:00-07:00</OrderDate>
+    <RequiredDate>1997-06-12T15:00:00-07:00</RequiredDate>
+    <ShippedDate>1997-05-22T15:00:00-07:00</ShippedDate>
+    <ShipVia>3</ShipVia>
+    <Freight>12.36</Freight>
+    <ShipName>B's Beverages</ShipName>
+    <ShipAddress>Fauntleroy Circus</ShipAddress>
+    <ShipCity>London</ShipCity>
+    <ShipPostalCode>EC2 5NT</ShipPostalCode>
+    <ShipCountry>UK</ShipCountry>
+    <CustomerID1>BSBEV</CustomerID1>
+    <CompanyName>B's Beverages</CompanyName>
+    <ContactName>Victoria Ashworth</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+    <Address>Fauntleroy Circus</Address>
+    <City>London</City>
+    <PostalCode>EC2 5NT</PostalCode>
+    <Country>UK</Country>
+    <Phone>(171) 555-1212</Phone>
+  </Table1>
+  <Table1>
     <OrderID>10596</OrderID>
     <CustomerID>WHITC</CustomerID>
     <EmployeeID>8</EmployeeID>
-    <OrderDate>1997-07-11T00:00:00+02:00</OrderDate>
-    <RequiredDate>1997-08-08T00:00:00+02:00</RequiredDate>
-    <ShippedDate>1997-08-12T00:00:00+02:00</ShippedDate>
+    <OrderDate>1997-07-10T15:00:00-07:00</OrderDate>
+    <RequiredDate>1997-08-07T15:00:00-07:00</RequiredDate>
+    <ShippedDate>1997-08-11T15:00:00-07:00</ShippedDate>
     <ShipVia>1</ShipVia>
     <Freight>16.34</Freight>
     <ShipName>White Clover Markets</ShipName>
@@ -449,14 +273,38 @@ WHERE   ((SELECT e.City FROM Employees e WHERE e.EmployeeId = o.EmployeeId)) = c
     <Fax>(206) 555-4115</Fax>
   </Table1>
   <Table1>
-    <OrderID>10469</OrderID>
+    <OrderID>10599</OrderID>
+    <CustomerID>BSBEV</CustomerID>
+    <EmployeeID>6</EmployeeID>
+    <OrderDate>1997-07-14T15:00:00-07:00</OrderDate>
+    <RequiredDate>1997-08-25T15:00:00-07:00</RequiredDate>
+    <ShippedDate>1997-07-20T15:00:00-07:00</ShippedDate>
+    <ShipVia>3</ShipVia>
+    <Freight>29.98</Freight>
+    <ShipName>B's Beverages</ShipName>
+    <ShipAddress>Fauntleroy Circus</ShipAddress>
+    <ShipCity>London</ShipCity>
+    <ShipPostalCode>EC2 5NT</ShipPostalCode>
+    <ShipCountry>UK</ShipCountry>
+    <CustomerID1>BSBEV</CustomerID1>
+    <CompanyName>B's Beverages</CompanyName>
+    <ContactName>Victoria Ashworth</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+    <Address>Fauntleroy Circus</Address>
+    <City>London</City>
+    <PostalCode>EC2 5NT</PostalCode>
+    <Country>UK</Country>
+    <Phone>(171) 555-1212</Phone>
+  </Table1>
+  <Table1>
+    <OrderID>10696</OrderID>
     <CustomerID>WHITC</CustomerID>
-    <EmployeeID>1</EmployeeID>
-    <OrderDate>1997-03-10T00:00:00+01:00</OrderDate>
-    <RequiredDate>1997-04-07T00:00:00+02:00</RequiredDate>
-    <ShippedDate>1997-03-14T00:00:00+01:00</ShippedDate>
-    <ShipVia>1</ShipVia>
-    <Freight>60.18</Freight>
+    <EmployeeID>8</EmployeeID>
+    <OrderDate>1997-10-07T15:00:00-07:00</OrderDate>
+    <RequiredDate>1997-11-18T15:00:00-08:00</RequiredDate>
+    <ShippedDate>1997-10-13T15:00:00-07:00</ShippedDate>
+    <ShipVia>3</ShipVia>
+    <Freight>102.55</Freight>
     <ShipName>White Clover Markets</ShipName>
     <ShipAddress>1029 - 12th Ave. S.</ShipAddress>
     <ShipCity>Seattle</ShipCity>
@@ -474,6 +322,158 @@ WHERE   ((SELECT e.City FROM Employees e WHERE e.EmployeeId = o.EmployeeId)) = c
     <Country>USA</Country>
     <Phone>(206) 555-4112</Phone>
     <Fax>(206) 555-4115</Fax>
+  </Table1>
+  <Table1>
+    <OrderID>10804</OrderID>
+    <CustomerID>SEVES</CustomerID>
+    <EmployeeID>6</EmployeeID>
+    <OrderDate>1997-12-29T15:00:00-08:00</OrderDate>
+    <RequiredDate>1998-01-26T15:00:00-08:00</RequiredDate>
+    <ShippedDate>1998-01-06T15:00:00-08:00</ShippedDate>
+    <ShipVia>2</ShipVia>
+    <Freight>27.33</Freight>
+    <ShipName>Seven Seas Imports</ShipName>
+    <ShipAddress>90 Wadhurst Rd.</ShipAddress>
+    <ShipCity>London</ShipCity>
+    <ShipPostalCode>OX15 4NB</ShipPostalCode>
+    <ShipCountry>UK</ShipCountry>
+    <CustomerID1>SEVES</CustomerID1>
+    <CompanyName>Seven Seas Imports</CompanyName>
+    <ContactName>Hari Kumar</ContactName>
+    <ContactTitle>Sales Manager</ContactTitle>
+    <Address>90 Wadhurst Rd.</Address>
+    <City>London</City>
+    <PostalCode>OX15 4NB</PostalCode>
+    <Country>UK</Country>
+    <Phone>(171) 555-1717</Phone>
+    <Fax>(171) 555-5646</Fax>
+  </Table1>
+  <Table1>
+    <OrderID>10848</OrderID>
+    <CustomerID>CONSH</CustomerID>
+    <EmployeeID>7</EmployeeID>
+    <OrderDate>1998-01-22T15:00:00-08:00</OrderDate>
+    <RequiredDate>1998-02-19T15:00:00-08:00</RequiredDate>
+    <ShippedDate>1998-01-28T15:00:00-08:00</ShippedDate>
+    <ShipVia>2</ShipVia>
+    <Freight>38.24</Freight>
+    <ShipName>Consolidated Holdings</ShipName>
+    <ShipAddress>Berkeley Gardens 12  Brewery</ShipAddress>
+    <ShipCity>London</ShipCity>
+    <ShipPostalCode>WX1 6LT</ShipPostalCode>
+    <ShipCountry>UK</ShipCountry>
+    <CustomerID1>CONSH</CustomerID1>
+    <CompanyName>Consolidated Holdings</CompanyName>
+    <ContactName>Elizabeth Brown</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+    <Address>Berkeley Gardens 12  Brewery</Address>
+    <City>London</City>
+    <PostalCode>WX1 6LT</PostalCode>
+    <Country>UK</Country>
+    <Phone>(171) 555-2282</Phone>
+    <Fax>(171) 555-9199</Fax>
+  </Table1>
+  <Table1>
+    <OrderID>10869</OrderID>
+    <CustomerID>SEVES</CustomerID>
+    <EmployeeID>5</EmployeeID>
+    <OrderDate>1998-02-03T15:00:00-08:00</OrderDate>
+    <RequiredDate>1998-03-03T15:00:00-08:00</RequiredDate>
+    <ShippedDate>1998-02-08T15:00:00-08:00</ShippedDate>
+    <ShipVia>1</ShipVia>
+    <Freight>143.28</Freight>
+    <ShipName>Seven Seas Imports</ShipName>
+    <ShipAddress>90 Wadhurst Rd.</ShipAddress>
+    <ShipCity>London</ShipCity>
+    <ShipPostalCode>OX15 4NB</ShipPostalCode>
+    <ShipCountry>UK</ShipCountry>
+    <CustomerID1>SEVES</CustomerID1>
+    <CompanyName>Seven Seas Imports</CompanyName>
+    <ContactName>Hari Kumar</ContactName>
+    <ContactTitle>Sales Manager</ContactTitle>
+    <Address>90 Wadhurst Rd.</Address>
+    <City>London</City>
+    <PostalCode>OX15 4NB</PostalCode>
+    <Country>UK</Country>
+    <Phone>(171) 555-1717</Phone>
+    <Fax>(171) 555-5646</Fax>
+  </Table1>
+  <Table1>
+    <OrderID>10953</OrderID>
+    <CustomerID>AROUT</CustomerID>
+    <EmployeeID>9</EmployeeID>
+    <OrderDate>1998-03-15T15:00:00-08:00</OrderDate>
+    <RequiredDate>1998-03-29T14:00:00-08:00</RequiredDate>
+    <ShippedDate>1998-03-24T15:00:00-08:00</ShippedDate>
+    <ShipVia>2</ShipVia>
+    <Freight>23.72</Freight>
+    <ShipName>Around the Horn</ShipName>
+    <ShipAddress>Brook Farm Stratford St. Mary</ShipAddress>
+    <ShipCity>Colchester</ShipCity>
+    <ShipRegion>Essex</ShipRegion>
+    <ShipPostalCode>CO7 6JX</ShipPostalCode>
+    <ShipCountry>UK</ShipCountry>
+    <CustomerID1>AROUT</CustomerID1>
+    <CompanyName>Around the Horn</CompanyName>
+    <ContactName>Thomas Hardy</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+    <Address>120 Hanover Sq.</Address>
+    <City>London</City>
+    <PostalCode>WA1 1DP</PostalCode>
+    <Country>UK</Country>
+    <Phone>(171) 555-7788</Phone>
+    <Fax>(171) 555-6750</Fax>
+  </Table1>
+  <Table1>
+    <OrderID>11016</OrderID>
+    <CustomerID>AROUT</CustomerID>
+    <EmployeeID>9</EmployeeID>
+    <OrderDate>1998-04-09T15:00:00-07:00</OrderDate>
+    <RequiredDate>1998-05-07T15:00:00-07:00</RequiredDate>
+    <ShippedDate>1998-04-12T15:00:00-07:00</ShippedDate>
+    <ShipVia>2</ShipVia>
+    <Freight>33.8</Freight>
+    <ShipName>Around the Horn</ShipName>
+    <ShipAddress>Brook Farm Stratford St. Mary</ShipAddress>
+    <ShipCity>Colchester</ShipCity>
+    <ShipRegion>Essex</ShipRegion>
+    <ShipPostalCode>CO7 6JX</ShipPostalCode>
+    <ShipCountry>UK</ShipCountry>
+    <CustomerID1>AROUT</CustomerID1>
+    <CompanyName>Around the Horn</CompanyName>
+    <ContactName>Thomas Hardy</ContactName>
+    <ContactTitle>Sales Representative</ContactTitle>
+    <Address>120 Hanover Sq.</Address>
+    <City>London</City>
+    <PostalCode>WA1 1DP</PostalCode>
+    <Country>UK</Country>
+    <Phone>(171) 555-7788</Phone>
+    <Fax>(171) 555-6750</Fax>
+  </Table1>
+  <Table1>
+    <OrderID>11047</OrderID>
+    <CustomerID>EASTC</CustomerID>
+    <EmployeeID>7</EmployeeID>
+    <OrderDate>1998-04-23T15:00:00-07:00</OrderDate>
+    <RequiredDate>1998-05-21T15:00:00-07:00</RequiredDate>
+    <ShippedDate>1998-04-30T15:00:00-07:00</ShippedDate>
+    <ShipVia>3</ShipVia>
+    <Freight>46.62</Freight>
+    <ShipName>Eastern Connection</ShipName>
+    <ShipAddress>35 King George</ShipAddress>
+    <ShipCity>London</ShipCity>
+    <ShipPostalCode>WX3 6FW</ShipPostalCode>
+    <ShipCountry>UK</ShipCountry>
+    <CustomerID1>EASTC</CustomerID1>
+    <CompanyName>Eastern Connection</CompanyName>
+    <ContactName>Ann Devon</ContactName>
+    <ContactTitle>Sales Agent</ContactTitle>
+    <Address>35 King George</Address>
+    <City>London</City>
+    <PostalCode>WX3 6FW</PostalCode>
+    <Country>UK</Country>
+    <Phone>(171) 555-0297</Phone>
+    <Fax>(171) 555-3373</Fax>
   </Table1>
 </NewDataSet>
   </expectedResults>
@@ -610,105 +610,105 @@ WHERE   ((SELECT e.City FROM Employees e WHERE e.EmployeeId = o.EmployeeId)) = c
         <input>
           <element operator="NestedLoops">
             <properties>
-              <property name="Output List.[00]" value="o.OrderID" />
-              <property name="Output List.[00].Table" value="o" />
-              <property name="Output List.[00].Column" value="OrderID" />
-              <property name="Output List.[00].DataType" value="Int32" />
-              <property name="Output List.[01]" value="o.CustomerID" />
-              <property name="Output List.[01].Table" value="o" />
-              <property name="Output List.[01].Column" value="CustomerID" />
+              <property name="Output List.[00]" value="c.CustomerID" />
+              <property name="Output List.[00].Table" value="c" />
+              <property name="Output List.[00].Column" value="CustomerID" />
+              <property name="Output List.[00].DataType" value="String" />
+              <property name="Output List.[01]" value="c.CompanyName" />
+              <property name="Output List.[01].Table" value="c" />
+              <property name="Output List.[01].Column" value="CompanyName" />
               <property name="Output List.[01].DataType" value="String" />
-              <property name="Output List.[02]" value="o.EmployeeID" />
-              <property name="Output List.[02].Table" value="o" />
-              <property name="Output List.[02].Column" value="EmployeeID" />
-              <property name="Output List.[02].DataType" value="Int32" />
-              <property name="Output List.[03]" value="o.OrderDate" />
-              <property name="Output List.[03].Table" value="o" />
-              <property name="Output List.[03].Column" value="OrderDate" />
-              <property name="Output List.[03].DataType" value="DateTime" />
-              <property name="Output List.[04]" value="o.RequiredDate" />
-              <property name="Output List.[04].Table" value="o" />
-              <property name="Output List.[04].Column" value="RequiredDate" />
-              <property name="Output List.[04].DataType" value="DateTime" />
-              <property name="Output List.[05]" value="o.ShippedDate" />
-              <property name="Output List.[05].Table" value="o" />
-              <property name="Output List.[05].Column" value="ShippedDate" />
-              <property name="Output List.[05].DataType" value="DateTime" />
-              <property name="Output List.[06]" value="o.ShipVia" />
-              <property name="Output List.[06].Table" value="o" />
-              <property name="Output List.[06].Column" value="ShipVia" />
-              <property name="Output List.[06].DataType" value="Int32" />
-              <property name="Output List.[07]" value="o.Freight" />
-              <property name="Output List.[07].Table" value="o" />
-              <property name="Output List.[07].Column" value="Freight" />
-              <property name="Output List.[07].DataType" value="Decimal" />
-              <property name="Output List.[08]" value="o.ShipName" />
-              <property name="Output List.[08].Table" value="o" />
-              <property name="Output List.[08].Column" value="ShipName" />
+              <property name="Output List.[02]" value="c.ContactName" />
+              <property name="Output List.[02].Table" value="c" />
+              <property name="Output List.[02].Column" value="ContactName" />
+              <property name="Output List.[02].DataType" value="String" />
+              <property name="Output List.[03]" value="c.ContactTitle" />
+              <property name="Output List.[03].Table" value="c" />
+              <property name="Output List.[03].Column" value="ContactTitle" />
+              <property name="Output List.[03].DataType" value="String" />
+              <property name="Output List.[04]" value="c.Address" />
+              <property name="Output List.[04].Table" value="c" />
+              <property name="Output List.[04].Column" value="Address" />
+              <property name="Output List.[04].DataType" value="String" />
+              <property name="Output List.[05]" value="c.City" />
+              <property name="Output List.[05].Table" value="c" />
+              <property name="Output List.[05].Column" value="City" />
+              <property name="Output List.[05].DataType" value="String" />
+              <property name="Output List.[06]" value="c.Region" />
+              <property name="Output List.[06].Table" value="c" />
+              <property name="Output List.[06].Column" value="Region" />
+              <property name="Output List.[06].DataType" value="String" />
+              <property name="Output List.[07]" value="c.PostalCode" />
+              <property name="Output List.[07].Table" value="c" />
+              <property name="Output List.[07].Column" value="PostalCode" />
+              <property name="Output List.[07].DataType" value="String" />
+              <property name="Output List.[08]" value="c.Country" />
+              <property name="Output List.[08].Table" value="c" />
+              <property name="Output List.[08].Column" value="Country" />
               <property name="Output List.[08].DataType" value="String" />
-              <property name="Output List.[09]" value="o.ShipAddress" />
-              <property name="Output List.[09].Table" value="o" />
-              <property name="Output List.[09].Column" value="ShipAddress" />
+              <property name="Output List.[09]" value="c.Phone" />
+              <property name="Output List.[09].Table" value="c" />
+              <property name="Output List.[09].Column" value="Phone" />
               <property name="Output List.[09].DataType" value="String" />
-              <property name="Output List.[10]" value="o.ShipCity" />
-              <property name="Output List.[10].Table" value="o" />
-              <property name="Output List.[10].Column" value="ShipCity" />
+              <property name="Output List.[10]" value="c.Fax" />
+              <property name="Output List.[10].Table" value="c" />
+              <property name="Output List.[10].Column" value="Fax" />
               <property name="Output List.[10].DataType" value="String" />
-              <property name="Output List.[11]" value="o.ShipRegion" />
+              <property name="Output List.[11]" value="o.OrderID" />
               <property name="Output List.[11].Table" value="o" />
-              <property name="Output List.[11].Column" value="ShipRegion" />
-              <property name="Output List.[11].DataType" value="String" />
-              <property name="Output List.[12]" value="o.ShipPostalCode" />
+              <property name="Output List.[11].Column" value="OrderID" />
+              <property name="Output List.[11].DataType" value="Int32" />
+              <property name="Output List.[12]" value="o.CustomerID" />
               <property name="Output List.[12].Table" value="o" />
-              <property name="Output List.[12].Column" value="ShipPostalCode" />
+              <property name="Output List.[12].Column" value="CustomerID" />
               <property name="Output List.[12].DataType" value="String" />
-              <property name="Output List.[13]" value="o.ShipCountry" />
+              <property name="Output List.[13]" value="o.EmployeeID" />
               <property name="Output List.[13].Table" value="o" />
-              <property name="Output List.[13].Column" value="ShipCountry" />
-              <property name="Output List.[13].DataType" value="String" />
-              <property name="Output List.[14]" value="c.CustomerID" />
-              <property name="Output List.[14].Table" value="c" />
-              <property name="Output List.[14].Column" value="CustomerID" />
-              <property name="Output List.[14].DataType" value="String" />
-              <property name="Output List.[15]" value="c.CompanyName" />
-              <property name="Output List.[15].Table" value="c" />
-              <property name="Output List.[15].Column" value="CompanyName" />
-              <property name="Output List.[15].DataType" value="String" />
-              <property name="Output List.[16]" value="c.ContactName" />
-              <property name="Output List.[16].Table" value="c" />
-              <property name="Output List.[16].Column" value="ContactName" />
-              <property name="Output List.[16].DataType" value="String" />
-              <property name="Output List.[17]" value="c.ContactTitle" />
-              <property name="Output List.[17].Table" value="c" />
-              <property name="Output List.[17].Column" value="ContactTitle" />
-              <property name="Output List.[17].DataType" value="String" />
-              <property name="Output List.[18]" value="c.Address" />
-              <property name="Output List.[18].Table" value="c" />
-              <property name="Output List.[18].Column" value="Address" />
-              <property name="Output List.[18].DataType" value="String" />
-              <property name="Output List.[19]" value="c.City" />
-              <property name="Output List.[19].Table" value="c" />
-              <property name="Output List.[19].Column" value="City" />
+              <property name="Output List.[13].Column" value="EmployeeID" />
+              <property name="Output List.[13].DataType" value="Int32" />
+              <property name="Output List.[14]" value="o.OrderDate" />
+              <property name="Output List.[14].Table" value="o" />
+              <property name="Output List.[14].Column" value="OrderDate" />
+              <property name="Output List.[14].DataType" value="DateTime" />
+              <property name="Output List.[15]" value="o.RequiredDate" />
+              <property name="Output List.[15].Table" value="o" />
+              <property name="Output List.[15].Column" value="RequiredDate" />
+              <property name="Output List.[15].DataType" value="DateTime" />
+              <property name="Output List.[16]" value="o.ShippedDate" />
+              <property name="Output List.[16].Table" value="o" />
+              <property name="Output List.[16].Column" value="ShippedDate" />
+              <property name="Output List.[16].DataType" value="DateTime" />
+              <property name="Output List.[17]" value="o.ShipVia" />
+              <property name="Output List.[17].Table" value="o" />
+              <property name="Output List.[17].Column" value="ShipVia" />
+              <property name="Output List.[17].DataType" value="Int32" />
+              <property name="Output List.[18]" value="o.Freight" />
+              <property name="Output List.[18].Table" value="o" />
+              <property name="Output List.[18].Column" value="Freight" />
+              <property name="Output List.[18].DataType" value="Decimal" />
+              <property name="Output List.[19]" value="o.ShipName" />
+              <property name="Output List.[19].Table" value="o" />
+              <property name="Output List.[19].Column" value="ShipName" />
               <property name="Output List.[19].DataType" value="String" />
-              <property name="Output List.[20]" value="c.Region" />
-              <property name="Output List.[20].Table" value="c" />
-              <property name="Output List.[20].Column" value="Region" />
+              <property name="Output List.[20]" value="o.ShipAddress" />
+              <property name="Output List.[20].Table" value="o" />
+              <property name="Output List.[20].Column" value="ShipAddress" />
               <property name="Output List.[20].DataType" value="String" />
-              <property name="Output List.[21]" value="c.PostalCode" />
-              <property name="Output List.[21].Table" value="c" />
-              <property name="Output List.[21].Column" value="PostalCode" />
+              <property name="Output List.[21]" value="o.ShipCity" />
+              <property name="Output List.[21].Table" value="o" />
+              <property name="Output List.[21].Column" value="ShipCity" />
               <property name="Output List.[21].DataType" value="String" />
-              <property name="Output List.[22]" value="c.Country" />
-              <property name="Output List.[22].Table" value="c" />
-              <property name="Output List.[22].Column" value="Country" />
+              <property name="Output List.[22]" value="o.ShipRegion" />
+              <property name="Output List.[22].Table" value="o" />
+              <property name="Output List.[22].Column" value="ShipRegion" />
               <property name="Output List.[22].DataType" value="String" />
-              <property name="Output List.[23]" value="c.Phone" />
-              <property name="Output List.[23].Table" value="c" />
-              <property name="Output List.[23].Column" value="Phone" />
+              <property name="Output List.[23]" value="o.ShipPostalCode" />
+              <property name="Output List.[23].Table" value="o" />
+              <property name="Output List.[23].Column" value="ShipPostalCode" />
               <property name="Output List.[23].DataType" value="String" />
-              <property name="Output List.[24]" value="c.Fax" />
-              <property name="Output List.[24].Table" value="c" />
-              <property name="Output List.[24].Column" value="Fax" />
+              <property name="Output List.[24]" value="o.ShipCountry" />
+              <property name="Output List.[24].Table" value="o" />
+              <property name="Output List.[24].Column" value="ShipCountry" />
               <property name="Output List.[24].DataType" value="String" />
               <property name="Logical Operator" value="Inner Join" />
               <property name="Statistics.Open Count" value="1" />
@@ -723,120 +723,173 @@ WHERE   ((SELECT e.City FROM Employees e WHERE e.EmployeeId = o.EmployeeId)) = c
             <input>
               <element operator="HashMatch">
                 <properties>
-                  <property name="Output List.[00]" value="o.OrderID" />
-                  <property name="Output List.[00].Table" value="o" />
-                  <property name="Output List.[00].Column" value="OrderID" />
-                  <property name="Output List.[00].DataType" value="Int32" />
-                  <property name="Output List.[01]" value="o.CustomerID" />
-                  <property name="Output List.[01].Table" value="o" />
-                  <property name="Output List.[01].Column" value="CustomerID" />
+                  <property name="Output List.[00]" value="c.CustomerID" />
+                  <property name="Output List.[00].Table" value="c" />
+                  <property name="Output List.[00].Column" value="CustomerID" />
+                  <property name="Output List.[00].DataType" value="String" />
+                  <property name="Output List.[01]" value="c.CompanyName" />
+                  <property name="Output List.[01].Table" value="c" />
+                  <property name="Output List.[01].Column" value="CompanyName" />
                   <property name="Output List.[01].DataType" value="String" />
-                  <property name="Output List.[02]" value="o.EmployeeID" />
-                  <property name="Output List.[02].Table" value="o" />
-                  <property name="Output List.[02].Column" value="EmployeeID" />
-                  <property name="Output List.[02].DataType" value="Int32" />
-                  <property name="Output List.[03]" value="o.OrderDate" />
-                  <property name="Output List.[03].Table" value="o" />
-                  <property name="Output List.[03].Column" value="OrderDate" />
-                  <property name="Output List.[03].DataType" value="DateTime" />
-                  <property name="Output List.[04]" value="o.RequiredDate" />
-                  <property name="Output List.[04].Table" value="o" />
-                  <property name="Output List.[04].Column" value="RequiredDate" />
-                  <property name="Output List.[04].DataType" value="DateTime" />
-                  <property name="Output List.[05]" value="o.ShippedDate" />
-                  <property name="Output List.[05].Table" value="o" />
-                  <property name="Output List.[05].Column" value="ShippedDate" />
-                  <property name="Output List.[05].DataType" value="DateTime" />
-                  <property name="Output List.[06]" value="o.ShipVia" />
-                  <property name="Output List.[06].Table" value="o" />
-                  <property name="Output List.[06].Column" value="ShipVia" />
-                  <property name="Output List.[06].DataType" value="Int32" />
-                  <property name="Output List.[07]" value="o.Freight" />
-                  <property name="Output List.[07].Table" value="o" />
-                  <property name="Output List.[07].Column" value="Freight" />
-                  <property name="Output List.[07].DataType" value="Decimal" />
-                  <property name="Output List.[08]" value="o.ShipName" />
-                  <property name="Output List.[08].Table" value="o" />
-                  <property name="Output List.[08].Column" value="ShipName" />
+                  <property name="Output List.[02]" value="c.ContactName" />
+                  <property name="Output List.[02].Table" value="c" />
+                  <property name="Output List.[02].Column" value="ContactName" />
+                  <property name="Output List.[02].DataType" value="String" />
+                  <property name="Output List.[03]" value="c.ContactTitle" />
+                  <property name="Output List.[03].Table" value="c" />
+                  <property name="Output List.[03].Column" value="ContactTitle" />
+                  <property name="Output List.[03].DataType" value="String" />
+                  <property name="Output List.[04]" value="c.Address" />
+                  <property name="Output List.[04].Table" value="c" />
+                  <property name="Output List.[04].Column" value="Address" />
+                  <property name="Output List.[04].DataType" value="String" />
+                  <property name="Output List.[05]" value="c.City" />
+                  <property name="Output List.[05].Table" value="c" />
+                  <property name="Output List.[05].Column" value="City" />
+                  <property name="Output List.[05].DataType" value="String" />
+                  <property name="Output List.[06]" value="c.Region" />
+                  <property name="Output List.[06].Table" value="c" />
+                  <property name="Output List.[06].Column" value="Region" />
+                  <property name="Output List.[06].DataType" value="String" />
+                  <property name="Output List.[07]" value="c.PostalCode" />
+                  <property name="Output List.[07].Table" value="c" />
+                  <property name="Output List.[07].Column" value="PostalCode" />
+                  <property name="Output List.[07].DataType" value="String" />
+                  <property name="Output List.[08]" value="c.Country" />
+                  <property name="Output List.[08].Table" value="c" />
+                  <property name="Output List.[08].Column" value="Country" />
                   <property name="Output List.[08].DataType" value="String" />
-                  <property name="Output List.[09]" value="o.ShipAddress" />
-                  <property name="Output List.[09].Table" value="o" />
-                  <property name="Output List.[09].Column" value="ShipAddress" />
+                  <property name="Output List.[09]" value="c.Phone" />
+                  <property name="Output List.[09].Table" value="c" />
+                  <property name="Output List.[09].Column" value="Phone" />
                   <property name="Output List.[09].DataType" value="String" />
-                  <property name="Output List.[10]" value="o.ShipCity" />
-                  <property name="Output List.[10].Table" value="o" />
-                  <property name="Output List.[10].Column" value="ShipCity" />
+                  <property name="Output List.[10]" value="c.Fax" />
+                  <property name="Output List.[10].Table" value="c" />
+                  <property name="Output List.[10].Column" value="Fax" />
                   <property name="Output List.[10].DataType" value="String" />
-                  <property name="Output List.[11]" value="o.ShipRegion" />
+                  <property name="Output List.[11]" value="o.OrderID" />
                   <property name="Output List.[11].Table" value="o" />
-                  <property name="Output List.[11].Column" value="ShipRegion" />
-                  <property name="Output List.[11].DataType" value="String" />
-                  <property name="Output List.[12]" value="o.ShipPostalCode" />
+                  <property name="Output List.[11].Column" value="OrderID" />
+                  <property name="Output List.[11].DataType" value="Int32" />
+                  <property name="Output List.[12]" value="o.CustomerID" />
                   <property name="Output List.[12].Table" value="o" />
-                  <property name="Output List.[12].Column" value="ShipPostalCode" />
+                  <property name="Output List.[12].Column" value="CustomerID" />
                   <property name="Output List.[12].DataType" value="String" />
-                  <property name="Output List.[13]" value="o.ShipCountry" />
+                  <property name="Output List.[13]" value="o.EmployeeID" />
                   <property name="Output List.[13].Table" value="o" />
-                  <property name="Output List.[13].Column" value="ShipCountry" />
-                  <property name="Output List.[13].DataType" value="String" />
-                  <property name="Output List.[14]" value="c.CustomerID" />
-                  <property name="Output List.[14].Table" value="c" />
-                  <property name="Output List.[14].Column" value="CustomerID" />
-                  <property name="Output List.[14].DataType" value="String" />
-                  <property name="Output List.[15]" value="c.CompanyName" />
-                  <property name="Output List.[15].Table" value="c" />
-                  <property name="Output List.[15].Column" value="CompanyName" />
-                  <property name="Output List.[15].DataType" value="String" />
-                  <property name="Output List.[16]" value="c.ContactName" />
-                  <property name="Output List.[16].Table" value="c" />
-                  <property name="Output List.[16].Column" value="ContactName" />
-                  <property name="Output List.[16].DataType" value="String" />
-                  <property name="Output List.[17]" value="c.ContactTitle" />
-                  <property name="Output List.[17].Table" value="c" />
-                  <property name="Output List.[17].Column" value="ContactTitle" />
-                  <property name="Output List.[17].DataType" value="String" />
-                  <property name="Output List.[18]" value="c.Address" />
-                  <property name="Output List.[18].Table" value="c" />
-                  <property name="Output List.[18].Column" value="Address" />
-                  <property name="Output List.[18].DataType" value="String" />
-                  <property name="Output List.[19]" value="c.City" />
-                  <property name="Output List.[19].Table" value="c" />
-                  <property name="Output List.[19].Column" value="City" />
+                  <property name="Output List.[13].Column" value="EmployeeID" />
+                  <property name="Output List.[13].DataType" value="Int32" />
+                  <property name="Output List.[14]" value="o.OrderDate" />
+                  <property name="Output List.[14].Table" value="o" />
+                  <property name="Output List.[14].Column" value="OrderDate" />
+                  <property name="Output List.[14].DataType" value="DateTime" />
+                  <property name="Output List.[15]" value="o.RequiredDate" />
+                  <property name="Output List.[15].Table" value="o" />
+                  <property name="Output List.[15].Column" value="RequiredDate" />
+                  <property name="Output List.[15].DataType" value="DateTime" />
+                  <property name="Output List.[16]" value="o.ShippedDate" />
+                  <property name="Output List.[16].Table" value="o" />
+                  <property name="Output List.[16].Column" value="ShippedDate" />
+                  <property name="Output List.[16].DataType" value="DateTime" />
+                  <property name="Output List.[17]" value="o.ShipVia" />
+                  <property name="Output List.[17].Table" value="o" />
+                  <property name="Output List.[17].Column" value="ShipVia" />
+                  <property name="Output List.[17].DataType" value="Int32" />
+                  <property name="Output List.[18]" value="o.Freight" />
+                  <property name="Output List.[18].Table" value="o" />
+                  <property name="Output List.[18].Column" value="Freight" />
+                  <property name="Output List.[18].DataType" value="Decimal" />
+                  <property name="Output List.[19]" value="o.ShipName" />
+                  <property name="Output List.[19].Table" value="o" />
+                  <property name="Output List.[19].Column" value="ShipName" />
                   <property name="Output List.[19].DataType" value="String" />
-                  <property name="Output List.[20]" value="c.Region" />
-                  <property name="Output List.[20].Table" value="c" />
-                  <property name="Output List.[20].Column" value="Region" />
+                  <property name="Output List.[20]" value="o.ShipAddress" />
+                  <property name="Output List.[20].Table" value="o" />
+                  <property name="Output List.[20].Column" value="ShipAddress" />
                   <property name="Output List.[20].DataType" value="String" />
-                  <property name="Output List.[21]" value="c.PostalCode" />
-                  <property name="Output List.[21].Table" value="c" />
-                  <property name="Output List.[21].Column" value="PostalCode" />
+                  <property name="Output List.[21]" value="o.ShipCity" />
+                  <property name="Output List.[21].Table" value="o" />
+                  <property name="Output List.[21].Column" value="ShipCity" />
                   <property name="Output List.[21].DataType" value="String" />
-                  <property name="Output List.[22]" value="c.Country" />
-                  <property name="Output List.[22].Table" value="c" />
-                  <property name="Output List.[22].Column" value="Country" />
+                  <property name="Output List.[22]" value="o.ShipRegion" />
+                  <property name="Output List.[22].Table" value="o" />
+                  <property name="Output List.[22].Column" value="ShipRegion" />
                   <property name="Output List.[22].DataType" value="String" />
-                  <property name="Output List.[23]" value="c.Phone" />
-                  <property name="Output List.[23].Table" value="c" />
-                  <property name="Output List.[23].Column" value="Phone" />
+                  <property name="Output List.[23]" value="o.ShipPostalCode" />
+                  <property name="Output List.[23].Table" value="o" />
+                  <property name="Output List.[23].Column" value="ShipPostalCode" />
                   <property name="Output List.[23].DataType" value="String" />
-                  <property name="Output List.[24]" value="c.Fax" />
-                  <property name="Output List.[24].Table" value="c" />
-                  <property name="Output List.[24].Column" value="Fax" />
+                  <property name="Output List.[24]" value="o.ShipCountry" />
+                  <property name="Output List.[24].Table" value="o" />
+                  <property name="Output List.[24].Column" value="ShipCountry" />
                   <property name="Output List.[24].DataType" value="String" />
                   <property name="Statistics.Open Count" value="1" />
                   <property name="Statistics.Row Count" value="830" />
                   <property name="Statistics.Average Row Count" value="830" />
-                  <property name="Hash Keys Build" value="o.CustomerID" />
-                  <property name="Hash Keys Build.Table" value="o" />
+                  <property name="Hash Keys Build" value="c.CustomerID" />
+                  <property name="Hash Keys Build.Table" value="c" />
                   <property name="Hash Keys Build.Column" value="CustomerID" />
                   <property name="Hash Keys Build.DataType" value="String" />
-                  <property name="Hash Keys Probe" value="c.CustomerID" />
-                  <property name="Hash Keys Probe.Table" value="c" />
+                  <property name="Hash Keys Probe" value="o.CustomerID" />
+                  <property name="Hash Keys Probe.Table" value="o" />
                   <property name="Hash Keys Probe.Column" value="CustomerID" />
                   <property name="Hash Keys Probe.DataType" value="String" />
                   <property name="Logical Operator" value="Inner Join" />
                 </properties>
                 <input>
+                  <element operator="TableScan">
+                    <properties>
+                      <property name="Table" value="Customers AS c" />
+                      <property name="Output List.[00]" value="c.CustomerID" />
+                      <property name="Output List.[00].Table" value="c" />
+                      <property name="Output List.[00].Column" value="CustomerID" />
+                      <property name="Output List.[00].DataType" value="String" />
+                      <property name="Output List.[01]" value="c.CompanyName" />
+                      <property name="Output List.[01].Table" value="c" />
+                      <property name="Output List.[01].Column" value="CompanyName" />
+                      <property name="Output List.[01].DataType" value="String" />
+                      <property name="Output List.[02]" value="c.ContactName" />
+                      <property name="Output List.[02].Table" value="c" />
+                      <property name="Output List.[02].Column" value="ContactName" />
+                      <property name="Output List.[02].DataType" value="String" />
+                      <property name="Output List.[03]" value="c.ContactTitle" />
+                      <property name="Output List.[03].Table" value="c" />
+                      <property name="Output List.[03].Column" value="ContactTitle" />
+                      <property name="Output List.[03].DataType" value="String" />
+                      <property name="Output List.[04]" value="c.Address" />
+                      <property name="Output List.[04].Table" value="c" />
+                      <property name="Output List.[04].Column" value="Address" />
+                      <property name="Output List.[04].DataType" value="String" />
+                      <property name="Output List.[05]" value="c.City" />
+                      <property name="Output List.[05].Table" value="c" />
+                      <property name="Output List.[05].Column" value="City" />
+                      <property name="Output List.[05].DataType" value="String" />
+                      <property name="Output List.[06]" value="c.Region" />
+                      <property name="Output List.[06].Table" value="c" />
+                      <property name="Output List.[06].Column" value="Region" />
+                      <property name="Output List.[06].DataType" value="String" />
+                      <property name="Output List.[07]" value="c.PostalCode" />
+                      <property name="Output List.[07].Table" value="c" />
+                      <property name="Output List.[07].Column" value="PostalCode" />
+                      <property name="Output List.[07].DataType" value="String" />
+                      <property name="Output List.[08]" value="c.Country" />
+                      <property name="Output List.[08].Table" value="c" />
+                      <property name="Output List.[08].Column" value="Country" />
+                      <property name="Output List.[08].DataType" value="String" />
+                      <property name="Output List.[09]" value="c.Phone" />
+                      <property name="Output List.[09].Table" value="c" />
+                      <property name="Output List.[09].Column" value="Phone" />
+                      <property name="Output List.[09].DataType" value="String" />
+                      <property name="Output List.[10]" value="c.Fax" />
+                      <property name="Output List.[10].Table" value="c" />
+                      <property name="Output List.[10].Column" value="Fax" />
+                      <property name="Output List.[10].DataType" value="String" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="91" />
+                      <property name="Statistics.Average Row Count" value="91" />
+                    </properties>
+                    <input />
+                  </element>
                   <element operator="TableScan">
                     <properties>
                       <property name="Table" value="Orders AS o" />
@@ -899,59 +952,6 @@ WHERE   ((SELECT e.City FROM Employees e WHERE e.EmployeeId = o.EmployeeId)) = c
                       <property name="Statistics.Open Count" value="1" />
                       <property name="Statistics.Row Count" value="830" />
                       <property name="Statistics.Average Row Count" value="830" />
-                    </properties>
-                    <input />
-                  </element>
-                  <element operator="TableScan">
-                    <properties>
-                      <property name="Table" value="Customers AS c" />
-                      <property name="Output List.[00]" value="c.CustomerID" />
-                      <property name="Output List.[00].Table" value="c" />
-                      <property name="Output List.[00].Column" value="CustomerID" />
-                      <property name="Output List.[00].DataType" value="String" />
-                      <property name="Output List.[01]" value="c.CompanyName" />
-                      <property name="Output List.[01].Table" value="c" />
-                      <property name="Output List.[01].Column" value="CompanyName" />
-                      <property name="Output List.[01].DataType" value="String" />
-                      <property name="Output List.[02]" value="c.ContactName" />
-                      <property name="Output List.[02].Table" value="c" />
-                      <property name="Output List.[02].Column" value="ContactName" />
-                      <property name="Output List.[02].DataType" value="String" />
-                      <property name="Output List.[03]" value="c.ContactTitle" />
-                      <property name="Output List.[03].Table" value="c" />
-                      <property name="Output List.[03].Column" value="ContactTitle" />
-                      <property name="Output List.[03].DataType" value="String" />
-                      <property name="Output List.[04]" value="c.Address" />
-                      <property name="Output List.[04].Table" value="c" />
-                      <property name="Output List.[04].Column" value="Address" />
-                      <property name="Output List.[04].DataType" value="String" />
-                      <property name="Output List.[05]" value="c.City" />
-                      <property name="Output List.[05].Table" value="c" />
-                      <property name="Output List.[05].Column" value="City" />
-                      <property name="Output List.[05].DataType" value="String" />
-                      <property name="Output List.[06]" value="c.Region" />
-                      <property name="Output List.[06].Table" value="c" />
-                      <property name="Output List.[06].Column" value="Region" />
-                      <property name="Output List.[06].DataType" value="String" />
-                      <property name="Output List.[07]" value="c.PostalCode" />
-                      <property name="Output List.[07].Table" value="c" />
-                      <property name="Output List.[07].Column" value="PostalCode" />
-                      <property name="Output List.[07].DataType" value="String" />
-                      <property name="Output List.[08]" value="c.Country" />
-                      <property name="Output List.[08].Table" value="c" />
-                      <property name="Output List.[08].Column" value="Country" />
-                      <property name="Output List.[08].DataType" value="String" />
-                      <property name="Output List.[09]" value="c.Phone" />
-                      <property name="Output List.[09].Table" value="c" />
-                      <property name="Output List.[09].Column" value="Phone" />
-                      <property name="Output List.[09].DataType" value="String" />
-                      <property name="Output List.[10]" value="c.Fax" />
-                      <property name="Output List.[10].Table" value="c" />
-                      <property name="Output List.[10].Column" value="Fax" />
-                      <property name="Output List.[10].DataType" value="String" />
-                      <property name="Statistics.Open Count" value="1" />
-                      <property name="Statistics.Row Count" value="91" />
-                      <property name="Statistics.Average Row Count" value="91" />
                     </properties>
                     <input />
                   </element>

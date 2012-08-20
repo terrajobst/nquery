@@ -19,7 +19,7 @@ SELECT	'Immo' FirstName, 'Landwerth' LastName, 'Bayern' Region, 'Munich' Territo
     <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
-          <xs:element name="Table1">
+          <xs:element name="Table1" msdata:Locale="en-US">
             <xs:complexType>
               <xs:sequence>
                 <xs:element name="LastName" type="xs:string" minOccurs="0" />
@@ -37,43 +37,19 @@ SELECT	'Immo' FirstName, 'Landwerth' LastName, 'Bayern' Region, 'Munich' Territo
     <LastName>Davolio</LastName>
     <FirstName>Nancy</FirstName>
     <RegionDescription>Eastern                                           </RegionDescription>
-    <TerritoryDescription>Wilton                                            </TerritoryDescription>
+    <TerritoryDescription>Neward                                            </TerritoryDescription>
   </Table1>
   <Table1>
     <LastName>Davolio</LastName>
     <FirstName>Nancy</FirstName>
     <RegionDescription>Eastern                                           </RegionDescription>
-    <TerritoryDescription>Neward                                            </TerritoryDescription>
+    <TerritoryDescription>Wilton                                            </TerritoryDescription>
   </Table1>
   <Table1>
     <LastName>Fuller</LastName>
     <FirstName>Andrew</FirstName>
     <RegionDescription>Eastern                                           </RegionDescription>
-    <TerritoryDescription>Westboro                                          </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>Fuller</LastName>
-    <FirstName>Andrew</FirstName>
-    <RegionDescription>Eastern                                           </RegionDescription>
-    <TerritoryDescription>Bedford                                           </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>Fuller</LastName>
-    <FirstName>Andrew</FirstName>
-    <RegionDescription>Eastern                                           </RegionDescription>
-    <TerritoryDescription>Georgetow                                         </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>Fuller</LastName>
-    <FirstName>Andrew</FirstName>
-    <RegionDescription>Eastern                                           </RegionDescription>
-    <TerritoryDescription>Boston                                            </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>Fuller</LastName>
-    <FirstName>Andrew</FirstName>
-    <RegionDescription>Eastern                                           </RegionDescription>
-    <TerritoryDescription>Cambridge                                         </TerritoryDescription>
+    <TerritoryDescription>Louisville                                        </TerritoryDescription>
   </Table1>
   <Table1>
     <LastName>Fuller</LastName>
@@ -85,19 +61,37 @@ SELECT	'Immo' FirstName, 'Landwerth' LastName, 'Bayern' Region, 'Munich' Territo
     <LastName>Fuller</LastName>
     <FirstName>Andrew</FirstName>
     <RegionDescription>Eastern                                           </RegionDescription>
-    <TerritoryDescription>Louisville                                        </TerritoryDescription>
+    <TerritoryDescription>Cambridge                                         </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>Fuller</LastName>
+    <FirstName>Andrew</FirstName>
+    <RegionDescription>Eastern                                           </RegionDescription>
+    <TerritoryDescription>Boston                                            </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>Fuller</LastName>
+    <FirstName>Andrew</FirstName>
+    <RegionDescription>Eastern                                           </RegionDescription>
+    <TerritoryDescription>Georgetow                                         </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>Fuller</LastName>
+    <FirstName>Andrew</FirstName>
+    <RegionDescription>Eastern                                           </RegionDescription>
+    <TerritoryDescription>Bedford                                           </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>Fuller</LastName>
+    <FirstName>Andrew</FirstName>
+    <RegionDescription>Eastern                                           </RegionDescription>
+    <TerritoryDescription>Westboro                                          </TerritoryDescription>
   </Table1>
   <Table1>
     <LastName>Leverling</LastName>
     <FirstName>Janet</FirstName>
     <RegionDescription>Southern                                          </RegionDescription>
-    <TerritoryDescription>Atlanta                                           </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>Leverling</LastName>
-    <FirstName>Janet</FirstName>
-    <RegionDescription>Southern                                          </RegionDescription>
-    <TerritoryDescription>Savannah                                          </TerritoryDescription>
+    <TerritoryDescription>Tampa                                             </TerritoryDescription>
   </Table1>
   <Table1>
     <LastName>Leverling</LastName>
@@ -109,13 +103,19 @@ SELECT	'Immo' FirstName, 'Landwerth' LastName, 'Bayern' Region, 'Munich' Territo
     <LastName>Leverling</LastName>
     <FirstName>Janet</FirstName>
     <RegionDescription>Southern                                          </RegionDescription>
-    <TerritoryDescription>Tampa                                             </TerritoryDescription>
+    <TerritoryDescription>Savannah                                          </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>Leverling</LastName>
+    <FirstName>Janet</FirstName>
+    <RegionDescription>Southern                                          </RegionDescription>
+    <TerritoryDescription>Atlanta                                           </TerritoryDescription>
   </Table1>
   <Table1>
     <LastName>Peacock</LastName>
     <FirstName>Margaret</FirstName>
     <RegionDescription>Eastern                                           </RegionDescription>
-    <TerritoryDescription>Rockville                                         </TerritoryDescription>
+    <TerritoryDescription>Cary                                              </TerritoryDescription>
   </Table1>
   <Table1>
     <LastName>Peacock</LastName>
@@ -127,37 +127,13 @@ SELECT	'Immo' FirstName, 'Landwerth' LastName, 'Bayern' Region, 'Munich' Territo
     <LastName>Peacock</LastName>
     <FirstName>Margaret</FirstName>
     <RegionDescription>Eastern                                           </RegionDescription>
-    <TerritoryDescription>Cary                                              </TerritoryDescription>
+    <TerritoryDescription>Rockville                                         </TerritoryDescription>
   </Table1>
   <Table1>
     <LastName>Buchanan</LastName>
     <FirstName>Steven</FirstName>
     <RegionDescription>Eastern                                           </RegionDescription>
-    <TerritoryDescription>Providence                                        </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>Buchanan</LastName>
-    <FirstName>Steven</FirstName>
-    <RegionDescription>Eastern                                           </RegionDescription>
-    <TerritoryDescription>Morristown                                        </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>Buchanan</LastName>
-    <FirstName>Steven</FirstName>
-    <RegionDescription>Eastern                                           </RegionDescription>
-    <TerritoryDescription>Edison                                            </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>Buchanan</LastName>
-    <FirstName>Steven</FirstName>
-    <RegionDescription>Eastern                                           </RegionDescription>
-    <TerritoryDescription>New York                                          </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>Buchanan</LastName>
-    <FirstName>Steven</FirstName>
-    <RegionDescription>Eastern                                           </RegionDescription>
-    <TerritoryDescription>New York                                          </TerritoryDescription>
+    <TerritoryDescription>Fairport                                          </TerritoryDescription>
   </Table1>
   <Table1>
     <LastName>Buchanan</LastName>
@@ -169,25 +145,37 @@ SELECT	'Immo' FirstName, 'Landwerth' LastName, 'Bayern' Region, 'Munich' Territo
     <LastName>Buchanan</LastName>
     <FirstName>Steven</FirstName>
     <RegionDescription>Eastern                                           </RegionDescription>
-    <TerritoryDescription>Fairport                                          </TerritoryDescription>
+    <TerritoryDescription>New York                                          </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>Buchanan</LastName>
+    <FirstName>Steven</FirstName>
+    <RegionDescription>Eastern                                           </RegionDescription>
+    <TerritoryDescription>New York                                          </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>Buchanan</LastName>
+    <FirstName>Steven</FirstName>
+    <RegionDescription>Eastern                                           </RegionDescription>
+    <TerritoryDescription>Edison                                            </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>Buchanan</LastName>
+    <FirstName>Steven</FirstName>
+    <RegionDescription>Eastern                                           </RegionDescription>
+    <TerritoryDescription>Morristown                                        </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>Buchanan</LastName>
+    <FirstName>Steven</FirstName>
+    <RegionDescription>Eastern                                           </RegionDescription>
+    <TerritoryDescription>Providence                                        </TerritoryDescription>
   </Table1>
   <Table1>
     <LastName>Suyama</LastName>
     <FirstName>Michael</FirstName>
     <RegionDescription>Western                                           </RegionDescription>
-    <TerritoryDescription>Phoenix                                           </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>Suyama</LastName>
-    <FirstName>Michael</FirstName>
-    <RegionDescription>Western                                           </RegionDescription>
-    <TerritoryDescription>Scottsdale                                        </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>Suyama</LastName>
-    <FirstName>Michael</FirstName>
-    <RegionDescription>Western                                           </RegionDescription>
-    <TerritoryDescription>Bellevue                                          </TerritoryDescription>
+    <TerritoryDescription>Seattle                                           </TerritoryDescription>
   </Table1>
   <Table1>
     <LastName>Suyama</LastName>
@@ -199,55 +187,25 @@ SELECT	'Immo' FirstName, 'Landwerth' LastName, 'Bayern' Region, 'Munich' Territo
     <LastName>Suyama</LastName>
     <FirstName>Michael</FirstName>
     <RegionDescription>Western                                           </RegionDescription>
-    <TerritoryDescription>Seattle                                           </TerritoryDescription>
+    <TerritoryDescription>Bellevue                                          </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>Suyama</LastName>
+    <FirstName>Michael</FirstName>
+    <RegionDescription>Western                                           </RegionDescription>
+    <TerritoryDescription>Scottsdale                                        </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>Suyama</LastName>
+    <FirstName>Michael</FirstName>
+    <RegionDescription>Western                                           </RegionDescription>
+    <TerritoryDescription>Phoenix                                           </TerritoryDescription>
   </Table1>
   <Table1>
     <LastName>King</LastName>
     <FirstName>Robert</FirstName>
     <RegionDescription>Western                                           </RegionDescription>
-    <TerritoryDescription>Hoffman Estates                                   </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>King</LastName>
-    <FirstName>Robert</FirstName>
-    <RegionDescription>Western                                           </RegionDescription>
-    <TerritoryDescription>Chicago                                           </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>King</LastName>
-    <FirstName>Robert</FirstName>
-    <RegionDescription>Western                                           </RegionDescription>
-    <TerritoryDescription>Denver                                            </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>King</LastName>
-    <FirstName>Robert</FirstName>
-    <RegionDescription>Western                                           </RegionDescription>
-    <TerritoryDescription>Colorado Springs                                  </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>King</LastName>
-    <FirstName>Robert</FirstName>
-    <RegionDescription>Western                                           </RegionDescription>
-    <TerritoryDescription>Santa Monica                                      </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>King</LastName>
-    <FirstName>Robert</FirstName>
-    <RegionDescription>Western                                           </RegionDescription>
-    <TerritoryDescription>Menlo Park                                        </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>King</LastName>
-    <FirstName>Robert</FirstName>
-    <RegionDescription>Western                                           </RegionDescription>
-    <TerritoryDescription>San Francisco                                     </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>King</LastName>
-    <FirstName>Robert</FirstName>
-    <RegionDescription>Western                                           </RegionDescription>
-    <TerritoryDescription>Campbell                                          </TerritoryDescription>
+    <TerritoryDescription>Santa Cruz                                        </TerritoryDescription>
   </Table1>
   <Table1>
     <LastName>King</LastName>
@@ -259,19 +217,55 @@ SELECT	'Immo' FirstName, 'Landwerth' LastName, 'Bayern' Region, 'Munich' Territo
     <LastName>King</LastName>
     <FirstName>Robert</FirstName>
     <RegionDescription>Western                                           </RegionDescription>
-    <TerritoryDescription>Santa Cruz                                        </TerritoryDescription>
+    <TerritoryDescription>Campbell                                          </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>King</LastName>
+    <FirstName>Robert</FirstName>
+    <RegionDescription>Western                                           </RegionDescription>
+    <TerritoryDescription>San Francisco                                     </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>King</LastName>
+    <FirstName>Robert</FirstName>
+    <RegionDescription>Western                                           </RegionDescription>
+    <TerritoryDescription>Menlo Park                                        </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>King</LastName>
+    <FirstName>Robert</FirstName>
+    <RegionDescription>Western                                           </RegionDescription>
+    <TerritoryDescription>Santa Monica                                      </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>King</LastName>
+    <FirstName>Robert</FirstName>
+    <RegionDescription>Western                                           </RegionDescription>
+    <TerritoryDescription>Colorado Springs                                  </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>King</LastName>
+    <FirstName>Robert</FirstName>
+    <RegionDescription>Western                                           </RegionDescription>
+    <TerritoryDescription>Denver                                            </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>King</LastName>
+    <FirstName>Robert</FirstName>
+    <RegionDescription>Western                                           </RegionDescription>
+    <TerritoryDescription>Chicago                                           </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>King</LastName>
+    <FirstName>Robert</FirstName>
+    <RegionDescription>Western                                           </RegionDescription>
+    <TerritoryDescription>Hoffman Estates                                   </TerritoryDescription>
   </Table1>
   <Table1>
     <LastName>Callahan</LastName>
     <FirstName>Laura</FirstName>
     <RegionDescription>Northern                                          </RegionDescription>
-    <TerritoryDescription>Philadelphia                                      </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>Callahan</LastName>
-    <FirstName>Laura</FirstName>
-    <RegionDescription>Northern                                          </RegionDescription>
-    <TerritoryDescription>Beachwood                                         </TerritoryDescription>
+    <TerritoryDescription>Racine                                            </TerritoryDescription>
   </Table1>
   <Table1>
     <LastName>Callahan</LastName>
@@ -283,37 +277,19 @@ SELECT	'Immo' FirstName, 'Landwerth' LastName, 'Bayern' Region, 'Munich' Territo
     <LastName>Callahan</LastName>
     <FirstName>Laura</FirstName>
     <RegionDescription>Northern                                          </RegionDescription>
-    <TerritoryDescription>Racine                                            </TerritoryDescription>
+    <TerritoryDescription>Beachwood                                         </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>Callahan</LastName>
+    <FirstName>Laura</FirstName>
+    <RegionDescription>Northern                                          </RegionDescription>
+    <TerritoryDescription>Philadelphia                                      </TerritoryDescription>
   </Table1>
   <Table1>
     <LastName>Dodsworth</LastName>
     <FirstName>Anne</FirstName>
     <RegionDescription>Northern                                          </RegionDescription>
-    <TerritoryDescription>Hollis                                            </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>Dodsworth</LastName>
-    <FirstName>Anne</FirstName>
-    <RegionDescription>Northern                                          </RegionDescription>
-    <TerritoryDescription>Portsmouth                                        </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>Dodsworth</LastName>
-    <FirstName>Anne</FirstName>
-    <RegionDescription>Northern                                          </RegionDescription>
-    <TerritoryDescription>Southfield                                        </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>Dodsworth</LastName>
-    <FirstName>Anne</FirstName>
-    <RegionDescription>Northern                                          </RegionDescription>
-    <TerritoryDescription>Troy                                              </TerritoryDescription>
-  </Table1>
-  <Table1>
-    <LastName>Dodsworth</LastName>
-    <FirstName>Anne</FirstName>
-    <RegionDescription>Northern                                          </RegionDescription>
-    <TerritoryDescription>Bloomfield Hills                                  </TerritoryDescription>
+    <TerritoryDescription>Minneapolis                                       </TerritoryDescription>
   </Table1>
   <Table1>
     <LastName>Dodsworth</LastName>
@@ -325,7 +301,31 @@ SELECT	'Immo' FirstName, 'Landwerth' LastName, 'Bayern' Region, 'Munich' Territo
     <LastName>Dodsworth</LastName>
     <FirstName>Anne</FirstName>
     <RegionDescription>Northern                                          </RegionDescription>
-    <TerritoryDescription>Minneapolis                                       </TerritoryDescription>
+    <TerritoryDescription>Bloomfield Hills                                  </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>Dodsworth</LastName>
+    <FirstName>Anne</FirstName>
+    <RegionDescription>Northern                                          </RegionDescription>
+    <TerritoryDescription>Troy                                              </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>Dodsworth</LastName>
+    <FirstName>Anne</FirstName>
+    <RegionDescription>Northern                                          </RegionDescription>
+    <TerritoryDescription>Southfield                                        </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>Dodsworth</LastName>
+    <FirstName>Anne</FirstName>
+    <RegionDescription>Northern                                          </RegionDescription>
+    <TerritoryDescription>Portsmouth                                        </TerritoryDescription>
+  </Table1>
+  <Table1>
+    <LastName>Dodsworth</LastName>
+    <FirstName>Anne</FirstName>
+    <RegionDescription>Northern                                          </RegionDescription>
+    <TerritoryDescription>Hollis                                            </TerritoryDescription>
   </Table1>
   <Table1>
     <LastName>Immo</LastName>
@@ -410,13 +410,13 @@ SELECT	'Immo' FirstName, 'Landwerth' LastName, 'Bayern' Region, 'Munich' Territo
             <input>
               <element operator="HashMatch">
                 <properties>
-                  <property name="Output List.[0]" value="t.TerritoryDescription" />
-                  <property name="Output List.[0].Table" value="t" />
-                  <property name="Output List.[0].Column" value="TerritoryDescription" />
+                  <property name="Output List.[0]" value="r.RegionDescription" />
+                  <property name="Output List.[0].Table" value="r" />
+                  <property name="Output List.[0].Column" value="RegionDescription" />
                   <property name="Output List.[0].DataType" value="String" />
-                  <property name="Output List.[1]" value="r.RegionDescription" />
-                  <property name="Output List.[1].Table" value="r" />
-                  <property name="Output List.[1].Column" value="RegionDescription" />
+                  <property name="Output List.[1]" value="t.TerritoryDescription" />
+                  <property name="Output List.[1].Table" value="t" />
+                  <property name="Output List.[1].Column" value="TerritoryDescription" />
                   <property name="Output List.[1].DataType" value="String" />
                   <property name="Output List.[2]" value="e.LastName" />
                   <property name="Output List.[2].Table" value="e" />
@@ -442,74 +442,74 @@ SELECT	'Immo' FirstName, 'Landwerth' LastName, 'Bayern' Region, 'Munich' Territo
                 <input>
                   <element operator="HashMatch">
                     <properties>
-                      <property name="Output List.[0]" value="et.EmployeeID" />
-                      <property name="Output List.[0].Table" value="et" />
-                      <property name="Output List.[0].Column" value="EmployeeID" />
-                      <property name="Output List.[0].DataType" value="Int32" />
+                      <property name="Output List.[0]" value="r.RegionDescription" />
+                      <property name="Output List.[0].Table" value="r" />
+                      <property name="Output List.[0].Column" value="RegionDescription" />
+                      <property name="Output List.[0].DataType" value="String" />
                       <property name="Output List.[1]" value="t.TerritoryDescription" />
                       <property name="Output List.[1].Table" value="t" />
                       <property name="Output List.[1].Column" value="TerritoryDescription" />
                       <property name="Output List.[1].DataType" value="String" />
-                      <property name="Output List.[2]" value="r.RegionDescription" />
-                      <property name="Output List.[2].Table" value="r" />
-                      <property name="Output List.[2].Column" value="RegionDescription" />
-                      <property name="Output List.[2].DataType" value="String" />
+                      <property name="Output List.[2]" value="et.EmployeeID" />
+                      <property name="Output List.[2].Table" value="et" />
+                      <property name="Output List.[2].Column" value="EmployeeID" />
+                      <property name="Output List.[2].DataType" value="Int32" />
                       <property name="Statistics.Open Count" value="1" />
                       <property name="Statistics.Row Count" value="49" />
                       <property name="Statistics.Average Row Count" value="49" />
-                      <property name="Hash Keys Build" value="t.RegionID" />
+                      <property name="Hash Keys Build" value="t.TerritoryID" />
                       <property name="Hash Keys Build.Table" value="t" />
-                      <property name="Hash Keys Build.Column" value="RegionID" />
-                      <property name="Hash Keys Build.DataType" value="Int32" />
-                      <property name="Hash Keys Probe" value="r.RegionID" />
-                      <property name="Hash Keys Probe.Table" value="r" />
-                      <property name="Hash Keys Probe.Column" value="RegionID" />
-                      <property name="Hash Keys Probe.DataType" value="Int32" />
+                      <property name="Hash Keys Build.Column" value="TerritoryID" />
+                      <property name="Hash Keys Build.DataType" value="String" />
+                      <property name="Hash Keys Probe" value="et.TerritoryID" />
+                      <property name="Hash Keys Probe.Table" value="et" />
+                      <property name="Hash Keys Probe.Column" value="TerritoryID" />
+                      <property name="Hash Keys Probe.DataType" value="String" />
                       <property name="Logical Operator" value="Inner Join" />
                     </properties>
                     <input>
                       <element operator="HashMatch">
                         <properties>
-                          <property name="Output List.[0]" value="et.EmployeeID" />
-                          <property name="Output List.[0].Table" value="et" />
-                          <property name="Output List.[0].Column" value="EmployeeID" />
-                          <property name="Output List.[0].DataType" value="Int32" />
-                          <property name="Output List.[1]" value="t.TerritoryDescription" />
+                          <property name="Output List.[0]" value="r.RegionDescription" />
+                          <property name="Output List.[0].Table" value="r" />
+                          <property name="Output List.[0].Column" value="RegionDescription" />
+                          <property name="Output List.[0].DataType" value="String" />
+                          <property name="Output List.[1]" value="t.TerritoryID" />
                           <property name="Output List.[1].Table" value="t" />
-                          <property name="Output List.[1].Column" value="TerritoryDescription" />
+                          <property name="Output List.[1].Column" value="TerritoryID" />
                           <property name="Output List.[1].DataType" value="String" />
-                          <property name="Output List.[2]" value="t.RegionID" />
+                          <property name="Output List.[2]" value="t.TerritoryDescription" />
                           <property name="Output List.[2].Table" value="t" />
-                          <property name="Output List.[2].Column" value="RegionID" />
-                          <property name="Output List.[2].DataType" value="Int32" />
+                          <property name="Output List.[2].Column" value="TerritoryDescription" />
+                          <property name="Output List.[2].DataType" value="String" />
                           <property name="Statistics.Open Count" value="1" />
-                          <property name="Statistics.Row Count" value="49" />
-                          <property name="Statistics.Average Row Count" value="49" />
-                          <property name="Hash Keys Build" value="et.TerritoryID" />
-                          <property name="Hash Keys Build.Table" value="et" />
-                          <property name="Hash Keys Build.Column" value="TerritoryID" />
-                          <property name="Hash Keys Build.DataType" value="String" />
-                          <property name="Hash Keys Probe" value="t.TerritoryID" />
+                          <property name="Statistics.Row Count" value="53" />
+                          <property name="Statistics.Average Row Count" value="53" />
+                          <property name="Hash Keys Build" value="r.RegionID" />
+                          <property name="Hash Keys Build.Table" value="r" />
+                          <property name="Hash Keys Build.Column" value="RegionID" />
+                          <property name="Hash Keys Build.DataType" value="Int32" />
+                          <property name="Hash Keys Probe" value="t.RegionID" />
                           <property name="Hash Keys Probe.Table" value="t" />
-                          <property name="Hash Keys Probe.Column" value="TerritoryID" />
-                          <property name="Hash Keys Probe.DataType" value="String" />
+                          <property name="Hash Keys Probe.Column" value="RegionID" />
+                          <property name="Hash Keys Probe.DataType" value="Int32" />
                           <property name="Logical Operator" value="Inner Join" />
                         </properties>
                         <input>
                           <element operator="TableScan">
                             <properties>
-                              <property name="Table" value="EmployeeTerritories AS et" />
-                              <property name="Output List.[0]" value="et.EmployeeID" />
-                              <property name="Output List.[0].Table" value="et" />
-                              <property name="Output List.[0].Column" value="EmployeeID" />
+                              <property name="Table" value="Region AS r" />
+                              <property name="Output List.[0]" value="r.RegionID" />
+                              <property name="Output List.[0].Table" value="r" />
+                              <property name="Output List.[0].Column" value="RegionID" />
                               <property name="Output List.[0].DataType" value="Int32" />
-                              <property name="Output List.[1]" value="et.TerritoryID" />
-                              <property name="Output List.[1].Table" value="et" />
-                              <property name="Output List.[1].Column" value="TerritoryID" />
+                              <property name="Output List.[1]" value="r.RegionDescription" />
+                              <property name="Output List.[1].Table" value="r" />
+                              <property name="Output List.[1].Column" value="RegionDescription" />
                               <property name="Output List.[1].DataType" value="String" />
                               <property name="Statistics.Open Count" value="1" />
-                              <property name="Statistics.Row Count" value="49" />
-                              <property name="Statistics.Average Row Count" value="49" />
+                              <property name="Statistics.Row Count" value="4" />
+                              <property name="Statistics.Average Row Count" value="4" />
                             </properties>
                             <input />
                           </element>
@@ -538,18 +538,18 @@ SELECT	'Immo' FirstName, 'Landwerth' LastName, 'Bayern' Region, 'Munich' Territo
                       </element>
                       <element operator="TableScan">
                         <properties>
-                          <property name="Table" value="Region AS r" />
-                          <property name="Output List.[0]" value="r.RegionID" />
-                          <property name="Output List.[0].Table" value="r" />
-                          <property name="Output List.[0].Column" value="RegionID" />
+                          <property name="Table" value="EmployeeTerritories AS et" />
+                          <property name="Output List.[0]" value="et.EmployeeID" />
+                          <property name="Output List.[0].Table" value="et" />
+                          <property name="Output List.[0].Column" value="EmployeeID" />
                           <property name="Output List.[0].DataType" value="Int32" />
-                          <property name="Output List.[1]" value="r.RegionDescription" />
-                          <property name="Output List.[1].Table" value="r" />
-                          <property name="Output List.[1].Column" value="RegionDescription" />
+                          <property name="Output List.[1]" value="et.TerritoryID" />
+                          <property name="Output List.[1].Table" value="et" />
+                          <property name="Output List.[1].Column" value="TerritoryID" />
                           <property name="Output List.[1].DataType" value="String" />
                           <property name="Statistics.Open Count" value="1" />
-                          <property name="Statistics.Row Count" value="4" />
-                          <property name="Statistics.Average Row Count" value="4" />
+                          <property name="Statistics.Row Count" value="49" />
+                          <property name="Statistics.Average Row Count" value="49" />
                         </properties>
                         <input />
                       </element>

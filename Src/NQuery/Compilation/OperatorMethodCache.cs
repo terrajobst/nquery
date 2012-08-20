@@ -66,7 +66,10 @@ namespace NQuery.Compilation
                         result = new OperatorEntry();
                     	result.OperatorMethods = new Dictionary<string, List<MethodInfo>>();
 
-                        foreach (MethodInfo methodInfo in type.GetMethods(BindingFlags.FlattenHierarchy | BindingFlags.Public | BindingFlags.Static))
+                        MethodInfo[] methodInfos = type.GetMethods(BindingFlags.FlattenHierarchy | BindingFlags.Public | BindingFlags.Static);
+                        Array.Sort(methodInfos, (x, y) => String.Compare(x.ToString(), y.ToString(), StringComparison.Ordinal));
+
+                        foreach (MethodInfo methodInfo in methodInfos)
                         {
                             Operator op = GetOverloadableOperator(methodInfo.Name);
 

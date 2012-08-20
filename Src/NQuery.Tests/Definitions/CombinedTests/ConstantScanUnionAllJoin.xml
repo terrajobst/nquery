@@ -18,7 +18,7 @@ FROM	EmployeeTerritories et
     <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
-          <xs:element name="Table1">
+          <xs:element name="Table1" msdata:Locale="en-US">
             <xs:complexType>
               <xs:sequence>
                 <xs:element name="FirstName" type="xs:string" minOccurs="0" />
@@ -42,43 +42,19 @@ FROM	EmployeeTerritories et
     <FirstName>Davolio</FirstName>
     <LastName>Nancy</LastName>
     <Region>Eastern                                           </Region>
-    <Territory>Wilton                                            </Territory>
+    <Territory>Neward                                            </Territory>
   </Table1>
   <Table1>
     <FirstName>Davolio</FirstName>
     <LastName>Nancy</LastName>
     <Region>Eastern                                           </Region>
-    <Territory>Neward                                            </Territory>
+    <Territory>Wilton                                            </Territory>
   </Table1>
   <Table1>
     <FirstName>Fuller</FirstName>
     <LastName>Andrew</LastName>
     <Region>Eastern                                           </Region>
-    <Territory>Westboro                                          </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>Fuller</FirstName>
-    <LastName>Andrew</LastName>
-    <Region>Eastern                                           </Region>
-    <Territory>Bedford                                           </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>Fuller</FirstName>
-    <LastName>Andrew</LastName>
-    <Region>Eastern                                           </Region>
-    <Territory>Georgetow                                         </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>Fuller</FirstName>
-    <LastName>Andrew</LastName>
-    <Region>Eastern                                           </Region>
-    <Territory>Boston                                            </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>Fuller</FirstName>
-    <LastName>Andrew</LastName>
-    <Region>Eastern                                           </Region>
-    <Territory>Cambridge                                         </Territory>
+    <Territory>Louisville                                        </Territory>
   </Table1>
   <Table1>
     <FirstName>Fuller</FirstName>
@@ -90,19 +66,37 @@ FROM	EmployeeTerritories et
     <FirstName>Fuller</FirstName>
     <LastName>Andrew</LastName>
     <Region>Eastern                                           </Region>
-    <Territory>Louisville                                        </Territory>
+    <Territory>Cambridge                                         </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Fuller</FirstName>
+    <LastName>Andrew</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Boston                                            </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Fuller</FirstName>
+    <LastName>Andrew</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Georgetow                                         </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Fuller</FirstName>
+    <LastName>Andrew</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Bedford                                           </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Fuller</FirstName>
+    <LastName>Andrew</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Westboro                                          </Territory>
   </Table1>
   <Table1>
     <FirstName>Leverling</FirstName>
     <LastName>Janet</LastName>
     <Region>Southern                                          </Region>
-    <Territory>Atlanta                                           </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>Leverling</FirstName>
-    <LastName>Janet</LastName>
-    <Region>Southern                                          </Region>
-    <Territory>Savannah                                          </Territory>
+    <Territory>Tampa                                             </Territory>
   </Table1>
   <Table1>
     <FirstName>Leverling</FirstName>
@@ -114,13 +108,19 @@ FROM	EmployeeTerritories et
     <FirstName>Leverling</FirstName>
     <LastName>Janet</LastName>
     <Region>Southern                                          </Region>
-    <Territory>Tampa                                             </Territory>
+    <Territory>Savannah                                          </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Leverling</FirstName>
+    <LastName>Janet</LastName>
+    <Region>Southern                                          </Region>
+    <Territory>Atlanta                                           </Territory>
   </Table1>
   <Table1>
     <FirstName>Peacock</FirstName>
     <LastName>Margaret</LastName>
     <Region>Eastern                                           </Region>
-    <Territory>Rockville                                         </Territory>
+    <Territory>Cary                                              </Territory>
   </Table1>
   <Table1>
     <FirstName>Peacock</FirstName>
@@ -132,37 +132,13 @@ FROM	EmployeeTerritories et
     <FirstName>Peacock</FirstName>
     <LastName>Margaret</LastName>
     <Region>Eastern                                           </Region>
-    <Territory>Cary                                              </Territory>
+    <Territory>Rockville                                         </Territory>
   </Table1>
   <Table1>
     <FirstName>Buchanan</FirstName>
     <LastName>Steven</LastName>
     <Region>Eastern                                           </Region>
-    <Territory>Providence                                        </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>Buchanan</FirstName>
-    <LastName>Steven</LastName>
-    <Region>Eastern                                           </Region>
-    <Territory>Morristown                                        </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>Buchanan</FirstName>
-    <LastName>Steven</LastName>
-    <Region>Eastern                                           </Region>
-    <Territory>Edison                                            </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>Buchanan</FirstName>
-    <LastName>Steven</LastName>
-    <Region>Eastern                                           </Region>
-    <Territory>New York                                          </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>Buchanan</FirstName>
-    <LastName>Steven</LastName>
-    <Region>Eastern                                           </Region>
-    <Territory>New York                                          </Territory>
+    <Territory>Fairport                                          </Territory>
   </Table1>
   <Table1>
     <FirstName>Buchanan</FirstName>
@@ -174,25 +150,37 @@ FROM	EmployeeTerritories et
     <FirstName>Buchanan</FirstName>
     <LastName>Steven</LastName>
     <Region>Eastern                                           </Region>
-    <Territory>Fairport                                          </Territory>
+    <Territory>New York                                          </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Buchanan</FirstName>
+    <LastName>Steven</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>New York                                          </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Buchanan</FirstName>
+    <LastName>Steven</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Edison                                            </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Buchanan</FirstName>
+    <LastName>Steven</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Morristown                                        </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Buchanan</FirstName>
+    <LastName>Steven</LastName>
+    <Region>Eastern                                           </Region>
+    <Territory>Providence                                        </Territory>
   </Table1>
   <Table1>
     <FirstName>Suyama</FirstName>
     <LastName>Michael</LastName>
     <Region>Western                                           </Region>
-    <Territory>Phoenix                                           </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>Suyama</FirstName>
-    <LastName>Michael</LastName>
-    <Region>Western                                           </Region>
-    <Territory>Scottsdale                                        </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>Suyama</FirstName>
-    <LastName>Michael</LastName>
-    <Region>Western                                           </Region>
-    <Territory>Bellevue                                          </Territory>
+    <Territory>Seattle                                           </Territory>
   </Table1>
   <Table1>
     <FirstName>Suyama</FirstName>
@@ -204,55 +192,25 @@ FROM	EmployeeTerritories et
     <FirstName>Suyama</FirstName>
     <LastName>Michael</LastName>
     <Region>Western                                           </Region>
-    <Territory>Seattle                                           </Territory>
+    <Territory>Bellevue                                          </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Suyama</FirstName>
+    <LastName>Michael</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Scottsdale                                        </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Suyama</FirstName>
+    <LastName>Michael</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Phoenix                                           </Territory>
   </Table1>
   <Table1>
     <FirstName>King</FirstName>
     <LastName>Robert</LastName>
     <Region>Western                                           </Region>
-    <Territory>Hoffman Estates                                   </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>King</FirstName>
-    <LastName>Robert</LastName>
-    <Region>Western                                           </Region>
-    <Territory>Chicago                                           </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>King</FirstName>
-    <LastName>Robert</LastName>
-    <Region>Western                                           </Region>
-    <Territory>Denver                                            </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>King</FirstName>
-    <LastName>Robert</LastName>
-    <Region>Western                                           </Region>
-    <Territory>Colorado Springs                                  </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>King</FirstName>
-    <LastName>Robert</LastName>
-    <Region>Western                                           </Region>
-    <Territory>Santa Monica                                      </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>King</FirstName>
-    <LastName>Robert</LastName>
-    <Region>Western                                           </Region>
-    <Territory>Menlo Park                                        </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>King</FirstName>
-    <LastName>Robert</LastName>
-    <Region>Western                                           </Region>
-    <Territory>San Francisco                                     </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>King</FirstName>
-    <LastName>Robert</LastName>
-    <Region>Western                                           </Region>
-    <Territory>Campbell                                          </Territory>
+    <Territory>Santa Cruz                                        </Territory>
   </Table1>
   <Table1>
     <FirstName>King</FirstName>
@@ -264,19 +222,55 @@ FROM	EmployeeTerritories et
     <FirstName>King</FirstName>
     <LastName>Robert</LastName>
     <Region>Western                                           </Region>
-    <Territory>Santa Cruz                                        </Territory>
+    <Territory>Campbell                                          </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>King</FirstName>
+    <LastName>Robert</LastName>
+    <Region>Western                                           </Region>
+    <Territory>San Francisco                                     </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>King</FirstName>
+    <LastName>Robert</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Menlo Park                                        </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>King</FirstName>
+    <LastName>Robert</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Santa Monica                                      </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>King</FirstName>
+    <LastName>Robert</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Colorado Springs                                  </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>King</FirstName>
+    <LastName>Robert</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Denver                                            </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>King</FirstName>
+    <LastName>Robert</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Chicago                                           </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>King</FirstName>
+    <LastName>Robert</LastName>
+    <Region>Western                                           </Region>
+    <Territory>Hoffman Estates                                   </Territory>
   </Table1>
   <Table1>
     <FirstName>Callahan</FirstName>
     <LastName>Laura</LastName>
     <Region>Northern                                          </Region>
-    <Territory>Philadelphia                                      </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>Callahan</FirstName>
-    <LastName>Laura</LastName>
-    <Region>Northern                                          </Region>
-    <Territory>Beachwood                                         </Territory>
+    <Territory>Racine                                            </Territory>
   </Table1>
   <Table1>
     <FirstName>Callahan</FirstName>
@@ -288,37 +282,19 @@ FROM	EmployeeTerritories et
     <FirstName>Callahan</FirstName>
     <LastName>Laura</LastName>
     <Region>Northern                                          </Region>
-    <Territory>Racine                                            </Territory>
+    <Territory>Beachwood                                         </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Callahan</FirstName>
+    <LastName>Laura</LastName>
+    <Region>Northern                                          </Region>
+    <Territory>Philadelphia                                      </Territory>
   </Table1>
   <Table1>
     <FirstName>Dodsworth</FirstName>
     <LastName>Anne</LastName>
     <Region>Northern                                          </Region>
-    <Territory>Hollis                                            </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>Dodsworth</FirstName>
-    <LastName>Anne</LastName>
-    <Region>Northern                                          </Region>
-    <Territory>Portsmouth                                        </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>Dodsworth</FirstName>
-    <LastName>Anne</LastName>
-    <Region>Northern                                          </Region>
-    <Territory>Southfield                                        </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>Dodsworth</FirstName>
-    <LastName>Anne</LastName>
-    <Region>Northern                                          </Region>
-    <Territory>Troy                                              </Territory>
-  </Table1>
-  <Table1>
-    <FirstName>Dodsworth</FirstName>
-    <LastName>Anne</LastName>
-    <Region>Northern                                          </Region>
-    <Territory>Bloomfield Hills                                  </Territory>
+    <Territory>Minneapolis                                       </Territory>
   </Table1>
   <Table1>
     <FirstName>Dodsworth</FirstName>
@@ -330,7 +306,31 @@ FROM	EmployeeTerritories et
     <FirstName>Dodsworth</FirstName>
     <LastName>Anne</LastName>
     <Region>Northern                                          </Region>
-    <Territory>Minneapolis                                       </Territory>
+    <Territory>Bloomfield Hills                                  </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Dodsworth</FirstName>
+    <LastName>Anne</LastName>
+    <Region>Northern                                          </Region>
+    <Territory>Troy                                              </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Dodsworth</FirstName>
+    <LastName>Anne</LastName>
+    <Region>Northern                                          </Region>
+    <Territory>Southfield                                        </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Dodsworth</FirstName>
+    <LastName>Anne</LastName>
+    <Region>Northern                                          </Region>
+    <Territory>Portsmouth                                        </Territory>
+  </Table1>
+  <Table1>
+    <FirstName>Dodsworth</FirstName>
+    <LastName>Anne</LastName>
+    <Region>Northern                                          </Region>
+    <Territory>Hollis                                            </Territory>
   </Table1>
 </NewDataSet>
   </expectedResults>
@@ -446,13 +446,13 @@ FROM	EmployeeTerritories et
               </element>
               <element operator="HashMatch">
                 <properties>
-                  <property name="Output List.[0]" value="t.TerritoryDescription" />
-                  <property name="Output List.[0].Table" value="t" />
-                  <property name="Output List.[0].Column" value="TerritoryDescription" />
+                  <property name="Output List.[0]" value="r.RegionDescription" />
+                  <property name="Output List.[0].Table" value="r" />
+                  <property name="Output List.[0].Column" value="RegionDescription" />
                   <property name="Output List.[0].DataType" value="String" />
-                  <property name="Output List.[1]" value="r.RegionDescription" />
-                  <property name="Output List.[1].Table" value="r" />
-                  <property name="Output List.[1].Column" value="RegionDescription" />
+                  <property name="Output List.[1]" value="t.TerritoryDescription" />
+                  <property name="Output List.[1].Table" value="t" />
+                  <property name="Output List.[1].Column" value="TerritoryDescription" />
                   <property name="Output List.[1].DataType" value="String" />
                   <property name="Output List.[2]" value="e.LastName" />
                   <property name="Output List.[2].Table" value="e" />
@@ -478,74 +478,74 @@ FROM	EmployeeTerritories et
                 <input>
                   <element operator="HashMatch">
                     <properties>
-                      <property name="Output List.[0]" value="et.EmployeeID" />
-                      <property name="Output List.[0].Table" value="et" />
-                      <property name="Output List.[0].Column" value="EmployeeID" />
-                      <property name="Output List.[0].DataType" value="Int32" />
+                      <property name="Output List.[0]" value="r.RegionDescription" />
+                      <property name="Output List.[0].Table" value="r" />
+                      <property name="Output List.[0].Column" value="RegionDescription" />
+                      <property name="Output List.[0].DataType" value="String" />
                       <property name="Output List.[1]" value="t.TerritoryDescription" />
                       <property name="Output List.[1].Table" value="t" />
                       <property name="Output List.[1].Column" value="TerritoryDescription" />
                       <property name="Output List.[1].DataType" value="String" />
-                      <property name="Output List.[2]" value="r.RegionDescription" />
-                      <property name="Output List.[2].Table" value="r" />
-                      <property name="Output List.[2].Column" value="RegionDescription" />
-                      <property name="Output List.[2].DataType" value="String" />
+                      <property name="Output List.[2]" value="et.EmployeeID" />
+                      <property name="Output List.[2].Table" value="et" />
+                      <property name="Output List.[2].Column" value="EmployeeID" />
+                      <property name="Output List.[2].DataType" value="Int32" />
                       <property name="Statistics.Open Count" value="1" />
                       <property name="Statistics.Row Count" value="49" />
                       <property name="Statistics.Average Row Count" value="49" />
-                      <property name="Hash Keys Build" value="t.RegionID" />
+                      <property name="Hash Keys Build" value="t.TerritoryID" />
                       <property name="Hash Keys Build.Table" value="t" />
-                      <property name="Hash Keys Build.Column" value="RegionID" />
-                      <property name="Hash Keys Build.DataType" value="Int32" />
-                      <property name="Hash Keys Probe" value="r.RegionID" />
-                      <property name="Hash Keys Probe.Table" value="r" />
-                      <property name="Hash Keys Probe.Column" value="RegionID" />
-                      <property name="Hash Keys Probe.DataType" value="Int32" />
+                      <property name="Hash Keys Build.Column" value="TerritoryID" />
+                      <property name="Hash Keys Build.DataType" value="String" />
+                      <property name="Hash Keys Probe" value="et.TerritoryID" />
+                      <property name="Hash Keys Probe.Table" value="et" />
+                      <property name="Hash Keys Probe.Column" value="TerritoryID" />
+                      <property name="Hash Keys Probe.DataType" value="String" />
                       <property name="Logical Operator" value="Inner Join" />
                     </properties>
                     <input>
                       <element operator="HashMatch">
                         <properties>
-                          <property name="Output List.[0]" value="et.EmployeeID" />
-                          <property name="Output List.[0].Table" value="et" />
-                          <property name="Output List.[0].Column" value="EmployeeID" />
-                          <property name="Output List.[0].DataType" value="Int32" />
-                          <property name="Output List.[1]" value="t.TerritoryDescription" />
+                          <property name="Output List.[0]" value="r.RegionDescription" />
+                          <property name="Output List.[0].Table" value="r" />
+                          <property name="Output List.[0].Column" value="RegionDescription" />
+                          <property name="Output List.[0].DataType" value="String" />
+                          <property name="Output List.[1]" value="t.TerritoryID" />
                           <property name="Output List.[1].Table" value="t" />
-                          <property name="Output List.[1].Column" value="TerritoryDescription" />
+                          <property name="Output List.[1].Column" value="TerritoryID" />
                           <property name="Output List.[1].DataType" value="String" />
-                          <property name="Output List.[2]" value="t.RegionID" />
+                          <property name="Output List.[2]" value="t.TerritoryDescription" />
                           <property name="Output List.[2].Table" value="t" />
-                          <property name="Output List.[2].Column" value="RegionID" />
-                          <property name="Output List.[2].DataType" value="Int32" />
+                          <property name="Output List.[2].Column" value="TerritoryDescription" />
+                          <property name="Output List.[2].DataType" value="String" />
                           <property name="Statistics.Open Count" value="1" />
-                          <property name="Statistics.Row Count" value="49" />
-                          <property name="Statistics.Average Row Count" value="49" />
-                          <property name="Hash Keys Build" value="et.TerritoryID" />
-                          <property name="Hash Keys Build.Table" value="et" />
-                          <property name="Hash Keys Build.Column" value="TerritoryID" />
-                          <property name="Hash Keys Build.DataType" value="String" />
-                          <property name="Hash Keys Probe" value="t.TerritoryID" />
+                          <property name="Statistics.Row Count" value="53" />
+                          <property name="Statistics.Average Row Count" value="53" />
+                          <property name="Hash Keys Build" value="r.RegionID" />
+                          <property name="Hash Keys Build.Table" value="r" />
+                          <property name="Hash Keys Build.Column" value="RegionID" />
+                          <property name="Hash Keys Build.DataType" value="Int32" />
+                          <property name="Hash Keys Probe" value="t.RegionID" />
                           <property name="Hash Keys Probe.Table" value="t" />
-                          <property name="Hash Keys Probe.Column" value="TerritoryID" />
-                          <property name="Hash Keys Probe.DataType" value="String" />
+                          <property name="Hash Keys Probe.Column" value="RegionID" />
+                          <property name="Hash Keys Probe.DataType" value="Int32" />
                           <property name="Logical Operator" value="Inner Join" />
                         </properties>
                         <input>
                           <element operator="TableScan">
                             <properties>
-                              <property name="Table" value="EmployeeTerritories AS et" />
-                              <property name="Output List.[0]" value="et.EmployeeID" />
-                              <property name="Output List.[0].Table" value="et" />
-                              <property name="Output List.[0].Column" value="EmployeeID" />
+                              <property name="Table" value="Region AS r" />
+                              <property name="Output List.[0]" value="r.RegionID" />
+                              <property name="Output List.[0].Table" value="r" />
+                              <property name="Output List.[0].Column" value="RegionID" />
                               <property name="Output List.[0].DataType" value="Int32" />
-                              <property name="Output List.[1]" value="et.TerritoryID" />
-                              <property name="Output List.[1].Table" value="et" />
-                              <property name="Output List.[1].Column" value="TerritoryID" />
+                              <property name="Output List.[1]" value="r.RegionDescription" />
+                              <property name="Output List.[1].Table" value="r" />
+                              <property name="Output List.[1].Column" value="RegionDescription" />
                               <property name="Output List.[1].DataType" value="String" />
                               <property name="Statistics.Open Count" value="1" />
-                              <property name="Statistics.Row Count" value="49" />
-                              <property name="Statistics.Average Row Count" value="49" />
+                              <property name="Statistics.Row Count" value="4" />
+                              <property name="Statistics.Average Row Count" value="4" />
                             </properties>
                             <input />
                           </element>
@@ -574,18 +574,18 @@ FROM	EmployeeTerritories et
                       </element>
                       <element operator="TableScan">
                         <properties>
-                          <property name="Table" value="Region AS r" />
-                          <property name="Output List.[0]" value="r.RegionID" />
-                          <property name="Output List.[0].Table" value="r" />
-                          <property name="Output List.[0].Column" value="RegionID" />
+                          <property name="Table" value="EmployeeTerritories AS et" />
+                          <property name="Output List.[0]" value="et.EmployeeID" />
+                          <property name="Output List.[0].Table" value="et" />
+                          <property name="Output List.[0].Column" value="EmployeeID" />
                           <property name="Output List.[0].DataType" value="Int32" />
-                          <property name="Output List.[1]" value="r.RegionDescription" />
-                          <property name="Output List.[1].Table" value="r" />
-                          <property name="Output List.[1].Column" value="RegionDescription" />
+                          <property name="Output List.[1]" value="et.TerritoryID" />
+                          <property name="Output List.[1].Table" value="et" />
+                          <property name="Output List.[1].Column" value="TerritoryID" />
                           <property name="Output List.[1].DataType" value="String" />
                           <property name="Statistics.Open Count" value="1" />
-                          <property name="Statistics.Row Count" value="4" />
-                          <property name="Statistics.Average Row Count" value="4" />
+                          <property name="Statistics.Row Count" value="49" />
+                          <property name="Statistics.Average Row Count" value="49" />
                         </properties>
                         <input />
                       </element>

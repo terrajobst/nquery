@@ -9,7 +9,7 @@ FROM	Employees e1, [Order Details] od</sql>
     <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
-          <xs:element name="Table1">
+          <xs:element name="Table1" msdata:Locale="en-US">
             <xs:complexType>
               <xs:sequence>
                 <xs:element name="FirstName" type="xs:string" minOccurs="0" />
@@ -120,6 +120,15 @@ FROM	Employees e1, [Order Details] od</sql>
                 <input>
                   <element operator="TableScan">
                     <properties>
+                      <property name="Table" value="Order Details AS od" />
+                      <property name="Statistics.Open Count" value="1" />
+                      <property name="Statistics.Row Count" value="2,155" />
+                      <property name="Statistics.Average Row Count" value="2,155" />
+                    </properties>
+                    <input />
+                  </element>
+                  <element operator="TableScan">
+                    <properties>
                       <property name="Table" value="Employees AS e1" />
                       <property name="Output List.[0]" value="e1.LastName" />
                       <property name="Output List.[0].Table" value="e1" />
@@ -129,18 +138,9 @@ FROM	Employees e1, [Order Details] od</sql>
                       <property name="Output List.[1].Table" value="e1" />
                       <property name="Output List.[1].Column" value="FirstName" />
                       <property name="Output List.[1].DataType" value="String" />
-                      <property name="Statistics.Open Count" value="1" />
-                      <property name="Statistics.Row Count" value="9" />
-                      <property name="Statistics.Average Row Count" value="9" />
-                    </properties>
-                    <input />
-                  </element>
-                  <element operator="TableScan">
-                    <properties>
-                      <property name="Table" value="Order Details AS od" />
-                      <property name="Statistics.Open Count" value="9" />
+                      <property name="Statistics.Open Count" value="2,155" />
                       <property name="Statistics.Row Count" value="19,395" />
-                      <property name="Statistics.Average Row Count" value="2,155" />
+                      <property name="Statistics.Average Row Count" value="9" />
                     </properties>
                     <input />
                   </element>

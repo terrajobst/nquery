@@ -36,6 +36,7 @@ namespace NQuery.Runtime
 			                            BindingFlags.DeclaredOnly;
 
 			MethodInfo[] methods = type.GetMethods(bindingFlags);
+			Array.Sort(methods, (x, y) => String.Compare(x.ToString(), y.ToString(), StringComparison.Ordinal));
 
 			foreach (MethodInfo methodInfo in methods)
 			{

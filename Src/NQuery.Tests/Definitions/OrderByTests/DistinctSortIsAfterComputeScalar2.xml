@@ -9,7 +9,7 @@ WHERE	od.quantity * od.unitprice &gt;= od.OrderID</sql>
     <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
-          <xs:element name="Table1">
+          <xs:element name="Table1" msdata:Locale="en-US">
             <xs:complexType>
               <xs:sequence>
                 <xs:element name="Column" msdata:Caption="" type="xs:string" minOccurs="0" />
@@ -21,10 +21,10 @@ WHERE	od.quantity * od.unitprice &gt;= od.OrderID</sql>
     </xs:element>
   </xs:schema>
   <Table1>
-    <Column>10.540,00 €</Column>
+    <Column>$10,540.00</Column>
   </Table1>
   <Table1>
-    <Column>15.810,00 €</Column>
+    <Column>$15,810.00</Column>
   </Table1>
 </NewDataSet>
   </expectedResults>

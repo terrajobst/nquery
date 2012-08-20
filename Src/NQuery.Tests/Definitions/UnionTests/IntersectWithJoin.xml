@@ -17,7 +17,7 @@ ORDER	BY 1, 2</sql>
     <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
-          <xs:element name="Table1">
+          <xs:element name="Table1" msdata:Locale="en-US">
             <xs:complexType>
               <xs:sequence>
                 <xs:element name="FirstName" type="xs:string" minOccurs="0" />
@@ -65,13 +65,13 @@ ORDER	BY 1, 2</sql>
         <input>
           <element operator="Sort">
             <properties>
-              <property name="Output List.[0]" value="e1.FirstName" />
-              <property name="Output List.[0].Table" value="e1" />
-              <property name="Output List.[0].Column" value="FirstName" />
+              <property name="Output List.[0]" value="e2.LastName" />
+              <property name="Output List.[0].Table" value="e2" />
+              <property name="Output List.[0].Column" value="LastName" />
               <property name="Output List.[0].DataType" value="String" />
-              <property name="Output List.[1]" value="e2.LastName" />
-              <property name="Output List.[1].Table" value="e2" />
-              <property name="Output List.[1].Column" value="LastName" />
+              <property name="Output List.[1]" value="e1.FirstName" />
+              <property name="Output List.[1].Table" value="e1" />
+              <property name="Output List.[1].Column" value="FirstName" />
               <property name="Output List.[1].DataType" value="String" />
               <property name="Statistics.Open Count" value="1" />
               <property name="Statistics.Row Count" value="4" />
@@ -91,13 +91,13 @@ ORDER	BY 1, 2</sql>
             <input>
               <element operator="NestedLoops">
                 <properties>
-                  <property name="Output List.[0]" value="e1.FirstName" />
-                  <property name="Output List.[0].Table" value="e1" />
-                  <property name="Output List.[0].Column" value="FirstName" />
+                  <property name="Output List.[0]" value="e2.LastName" />
+                  <property name="Output List.[0].Table" value="e2" />
+                  <property name="Output List.[0].Column" value="LastName" />
                   <property name="Output List.[0].DataType" value="String" />
-                  <property name="Output List.[1]" value="e2.LastName" />
-                  <property name="Output List.[1].Table" value="e2" />
-                  <property name="Output List.[1].Column" value="LastName" />
+                  <property name="Output List.[1]" value="e1.FirstName" />
+                  <property name="Output List.[1].Table" value="e1" />
+                  <property name="Output List.[1].Column" value="FirstName" />
                   <property name="Output List.[1].DataType" value="String" />
                   <property name="Logical Operator" value="Left Semi Join" />
                   <property name="Statistics.Open Count" value="1" />
@@ -108,13 +108,13 @@ ORDER	BY 1, 2</sql>
                 <input>
                   <element operator="Sort">
                     <properties>
-                      <property name="Output List.[0]" value="e1.FirstName" />
-                      <property name="Output List.[0].Table" value="e1" />
-                      <property name="Output List.[0].Column" value="FirstName" />
+                      <property name="Output List.[0]" value="e2.LastName" />
+                      <property name="Output List.[0].Table" value="e2" />
+                      <property name="Output List.[0].Column" value="LastName" />
                       <property name="Output List.[0].DataType" value="String" />
-                      <property name="Output List.[1]" value="e2.LastName" />
-                      <property name="Output List.[1].Table" value="e2" />
-                      <property name="Output List.[1].Column" value="LastName" />
+                      <property name="Output List.[1]" value="e1.FirstName" />
+                      <property name="Output List.[1].Table" value="e1" />
+                      <property name="Output List.[1].Column" value="FirstName" />
                       <property name="Output List.[1].DataType" value="String" />
                       <property name="Statistics.Open Count" value="1" />
                       <property name="Statistics.Row Count" value="81" />
@@ -134,13 +134,13 @@ ORDER	BY 1, 2</sql>
                     <input>
                       <element operator="NestedLoops">
                         <properties>
-                          <property name="Output List.[0]" value="e1.FirstName" />
-                          <property name="Output List.[0].Table" value="e1" />
-                          <property name="Output List.[0].Column" value="FirstName" />
+                          <property name="Output List.[0]" value="e2.LastName" />
+                          <property name="Output List.[0].Table" value="e2" />
+                          <property name="Output List.[0].Column" value="LastName" />
                           <property name="Output List.[0].DataType" value="String" />
-                          <property name="Output List.[1]" value="e2.LastName" />
-                          <property name="Output List.[1].Table" value="e2" />
-                          <property name="Output List.[1].Column" value="LastName" />
+                          <property name="Output List.[1]" value="e1.FirstName" />
+                          <property name="Output List.[1].Table" value="e1" />
+                          <property name="Output List.[1].Column" value="FirstName" />
                           <property name="Output List.[1].DataType" value="String" />
                           <property name="Logical Operator" value="Inner Join" />
                           <property name="Statistics.Open Count" value="1" />
@@ -151,10 +151,10 @@ ORDER	BY 1, 2</sql>
                         <input>
                           <element operator="TableScan">
                             <properties>
-                              <property name="Table" value="Employees AS e1" />
-                              <property name="Output List.[0]" value="e1.FirstName" />
-                              <property name="Output List.[0].Table" value="e1" />
-                              <property name="Output List.[0].Column" value="FirstName" />
+                              <property name="Table" value="Employees AS e2" />
+                              <property name="Output List.[0]" value="e2.LastName" />
+                              <property name="Output List.[0].Table" value="e2" />
+                              <property name="Output List.[0].Column" value="LastName" />
                               <property name="Output List.[0].DataType" value="String" />
                               <property name="Statistics.Open Count" value="1" />
                               <property name="Statistics.Row Count" value="9" />
@@ -164,10 +164,10 @@ ORDER	BY 1, 2</sql>
                           </element>
                           <element operator="TableScan">
                             <properties>
-                              <property name="Table" value="Employees AS e2" />
-                              <property name="Output List.[0]" value="e2.LastName" />
-                              <property name="Output List.[0].Table" value="e2" />
-                              <property name="Output List.[0].Column" value="LastName" />
+                              <property name="Table" value="Employees AS e1" />
+                              <property name="Output List.[0]" value="e1.FirstName" />
+                              <property name="Output List.[0].Table" value="e1" />
+                              <property name="Output List.[0].Column" value="FirstName" />
                               <property name="Output List.[0].DataType" value="String" />
                               <property name="Statistics.Open Count" value="9" />
                               <property name="Statistics.Row Count" value="81" />

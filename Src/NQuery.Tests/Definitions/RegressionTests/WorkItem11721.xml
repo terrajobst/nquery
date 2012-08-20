@@ -12,7 +12,7 @@ ORDER	BY 1, 2</sql>
     <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
-          <xs:element name="Table1">
+          <xs:element name="Table1" msdata:Locale="en-US">
             <xs:complexType>
               <xs:sequence>
                 <xs:element name="OrderID" type="xs:int" minOccurs="0" />
@@ -244,14 +244,14 @@ ORDER	BY 1, 2</sql>
         <input>
           <element operator="Top">
             <properties>
-              <property name="Output List.[0]" value="o.OrderID" />
-              <property name="Output List.[0].Table" value="o" />
-              <property name="Output List.[0].Column" value="OrderID" />
-              <property name="Output List.[0].DataType" value="Int32" />
-              <property name="Output List.[1]" value="c.ContactName" />
-              <property name="Output List.[1].Table" value="c" />
-              <property name="Output List.[1].Column" value="ContactName" />
-              <property name="Output List.[1].DataType" value="String" />
+              <property name="Output List.[0]" value="c.ContactName" />
+              <property name="Output List.[0].Table" value="c" />
+              <property name="Output List.[0].Column" value="ContactName" />
+              <property name="Output List.[0].DataType" value="String" />
+              <property name="Output List.[1]" value="o.OrderID" />
+              <property name="Output List.[1].Table" value="o" />
+              <property name="Output List.[1].Column" value="OrderID" />
+              <property name="Output List.[1].DataType" value="Int32" />
               <property name="Statistics.Open Count" value="1" />
               <property name="Statistics.Row Count" value="50" />
               <property name="Statistics.Average Row Count" value="50" />
@@ -261,14 +261,14 @@ ORDER	BY 1, 2</sql>
             <input>
               <element operator="Sort">
                 <properties>
-                  <property name="Output List.[0]" value="o.OrderID" />
-                  <property name="Output List.[0].Table" value="o" />
-                  <property name="Output List.[0].Column" value="OrderID" />
-                  <property name="Output List.[0].DataType" value="Int32" />
-                  <property name="Output List.[1]" value="c.ContactName" />
-                  <property name="Output List.[1].Table" value="c" />
-                  <property name="Output List.[1].Column" value="ContactName" />
-                  <property name="Output List.[1].DataType" value="String" />
+                  <property name="Output List.[0]" value="c.ContactName" />
+                  <property name="Output List.[0].Table" value="c" />
+                  <property name="Output List.[0].Column" value="ContactName" />
+                  <property name="Output List.[0].DataType" value="String" />
+                  <property name="Output List.[1]" value="o.OrderID" />
+                  <property name="Output List.[1].Table" value="o" />
+                  <property name="Output List.[1].Column" value="OrderID" />
+                  <property name="Output List.[1].DataType" value="Int32" />
                   <property name="Statistics.Open Count" value="1" />
                   <property name="Statistics.Row Count" value="51" />
                   <property name="Statistics.Average Row Count" value="51" />
@@ -287,14 +287,14 @@ ORDER	BY 1, 2</sql>
                 <input>
                   <element operator="HashMatch">
                     <properties>
-                      <property name="Output List.[0]" value="o.OrderID" />
-                      <property name="Output List.[0].Table" value="o" />
-                      <property name="Output List.[0].Column" value="OrderID" />
-                      <property name="Output List.[0].DataType" value="Int32" />
-                      <property name="Output List.[1]" value="c.ContactName" />
-                      <property name="Output List.[1].Table" value="c" />
-                      <property name="Output List.[1].Column" value="ContactName" />
-                      <property name="Output List.[1].DataType" value="String" />
+                      <property name="Output List.[0]" value="c.ContactName" />
+                      <property name="Output List.[0].Table" value="c" />
+                      <property name="Output List.[0].Column" value="ContactName" />
+                      <property name="Output List.[0].DataType" value="String" />
+                      <property name="Output List.[1]" value="o.OrderID" />
+                      <property name="Output List.[1].Table" value="o" />
+                      <property name="Output List.[1].Column" value="OrderID" />
+                      <property name="Output List.[1].DataType" value="Int32" />
                       <property name="Statistics.Open Count" value="1" />
                       <property name="Statistics.Row Count" value="75,530" />
                       <property name="Statistics.Average Row Count" value="75,530" />
@@ -309,55 +309,18 @@ ORDER	BY 1, 2</sql>
                     <input>
                       <element operator="ComputeScalar">
                         <properties>
-                          <property name="Output List.[0]" value="o.OrderID" />
-                          <property name="Output List.[0].Table" value="o" />
-                          <property name="Output List.[0].Column" value="OrderID" />
-                          <property name="Output List.[0].DataType" value="Int32" />
-                          <property name="Output List.[1]" value="Expr1002" />
-                          <property name="Output List.[1].Column" value="Expr1002" />
-                          <property name="Output List.[1].DataType" value="Int32" />
-                          <property name="Statistics.Open Count" value="1" />
-                          <property name="Statistics.Row Count" value="830" />
-                          <property name="Statistics.Average Row Count" value="830" />
-                          <property name="Defined Values.[0]" value="Expr1002 = o.CustomerID.Length" />
-                          <property name="Defined Values.[0].Target" value="Expr1002" />
-                          <property name="Defined Values.[0].DataType" value="Int32" />
-                          <property name="Defined Values.[0].Source" value="o.CustomerID.Length" />
-                        </properties>
-                        <input>
-                          <element operator="TableScan">
-                            <properties>
-                              <property name="Table" value="Orders AS o" />
-                              <property name="Output List.[0]" value="o.OrderID" />
-                              <property name="Output List.[0].Table" value="o" />
-                              <property name="Output List.[0].Column" value="OrderID" />
-                              <property name="Output List.[0].DataType" value="Int32" />
-                              <property name="Output List.[1]" value="o.CustomerID" />
-                              <property name="Output List.[1].Table" value="o" />
-                              <property name="Output List.[1].Column" value="CustomerID" />
-                              <property name="Output List.[1].DataType" value="String" />
-                              <property name="Statistics.Open Count" value="1" />
-                              <property name="Statistics.Row Count" value="830" />
-                              <property name="Statistics.Average Row Count" value="830" />
-                            </properties>
-                            <input />
-                          </element>
-                        </input>
-                      </element>
-                      <element operator="ComputeScalar">
-                        <properties>
                           <property name="Output List.[0]" value="c.ContactName" />
                           <property name="Output List.[0].Table" value="c" />
                           <property name="Output List.[0].Column" value="ContactName" />
                           <property name="Output List.[0].DataType" value="String" />
-                          <property name="Output List.[1]" value="Expr1005" />
-                          <property name="Output List.[1].Column" value="Expr1005" />
+                          <property name="Output List.[1]" value="Expr1002" />
+                          <property name="Output List.[1].Column" value="Expr1002" />
                           <property name="Output List.[1].DataType" value="Int32" />
                           <property name="Statistics.Open Count" value="1" />
                           <property name="Statistics.Row Count" value="91" />
                           <property name="Statistics.Average Row Count" value="91" />
-                          <property name="Defined Values.[0]" value="Expr1005 = c.CustomerID.Length" />
-                          <property name="Defined Values.[0].Target" value="Expr1005" />
+                          <property name="Defined Values.[0]" value="Expr1002 = c.CustomerID.Length" />
+                          <property name="Defined Values.[0].Target" value="Expr1002" />
                           <property name="Defined Values.[0].DataType" value="Int32" />
                           <property name="Defined Values.[0].Source" value="c.CustomerID.Length" />
                         </properties>
@@ -376,6 +339,43 @@ ORDER	BY 1, 2</sql>
                               <property name="Statistics.Open Count" value="1" />
                               <property name="Statistics.Row Count" value="91" />
                               <property name="Statistics.Average Row Count" value="91" />
+                            </properties>
+                            <input />
+                          </element>
+                        </input>
+                      </element>
+                      <element operator="ComputeScalar">
+                        <properties>
+                          <property name="Output List.[0]" value="o.OrderID" />
+                          <property name="Output List.[0].Table" value="o" />
+                          <property name="Output List.[0].Column" value="OrderID" />
+                          <property name="Output List.[0].DataType" value="Int32" />
+                          <property name="Output List.[1]" value="Expr1005" />
+                          <property name="Output List.[1].Column" value="Expr1005" />
+                          <property name="Output List.[1].DataType" value="Int32" />
+                          <property name="Statistics.Open Count" value="1" />
+                          <property name="Statistics.Row Count" value="830" />
+                          <property name="Statistics.Average Row Count" value="830" />
+                          <property name="Defined Values.[0]" value="Expr1005 = o.CustomerID.Length" />
+                          <property name="Defined Values.[0].Target" value="Expr1005" />
+                          <property name="Defined Values.[0].DataType" value="Int32" />
+                          <property name="Defined Values.[0].Source" value="o.CustomerID.Length" />
+                        </properties>
+                        <input>
+                          <element operator="TableScan">
+                            <properties>
+                              <property name="Table" value="Orders AS o" />
+                              <property name="Output List.[0]" value="o.OrderID" />
+                              <property name="Output List.[0].Table" value="o" />
+                              <property name="Output List.[0].Column" value="OrderID" />
+                              <property name="Output List.[0].DataType" value="Int32" />
+                              <property name="Output List.[1]" value="o.CustomerID" />
+                              <property name="Output List.[1].Table" value="o" />
+                              <property name="Output List.[1].Column" value="CustomerID" />
+                              <property name="Output List.[1].DataType" value="String" />
+                              <property name="Statistics.Open Count" value="1" />
+                              <property name="Statistics.Row Count" value="830" />
+                              <property name="Statistics.Average Row Count" value="830" />
                             </properties>
                             <input />
                           </element>

@@ -18,7 +18,7 @@ ORDER	BY SUM(od.Quantity * UnitPrice * (1.0 - od.Discount)) DESC</sql>
     <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
-          <xs:element name="Table1">
+          <xs:element name="Table1" msdata:Locale="en-US">
             <xs:complexType>
               <xs:sequence>
                 <xs:element name="ContactName" type="xs:string" minOccurs="0" />
@@ -169,22 +169,22 @@ ORDER	BY SUM(od.Quantity * UnitPrice * (1.0 - od.Discount)) DESC</sql>
                         <input>
                           <element operator="Sort">
                             <properties>
-                              <property name="Output List.[0]" value="c.ContactName" />
-                              <property name="Output List.[0].Table" value="c" />
-                              <property name="Output List.[0].Column" value="ContactName" />
-                              <property name="Output List.[0].DataType" value="String" />
-                              <property name="Output List.[1]" value="od.UnitPrice" />
+                              <property name="Output List.[0]" value="od.UnitPrice" />
+                              <property name="Output List.[0].Table" value="od" />
+                              <property name="Output List.[0].Column" value="UnitPrice" />
+                              <property name="Output List.[0].DataType" value="Decimal" />
+                              <property name="Output List.[1]" value="od.Quantity" />
                               <property name="Output List.[1].Table" value="od" />
-                              <property name="Output List.[1].Column" value="UnitPrice" />
-                              <property name="Output List.[1].DataType" value="Decimal" />
-                              <property name="Output List.[2]" value="od.Quantity" />
+                              <property name="Output List.[1].Column" value="Quantity" />
+                              <property name="Output List.[1].DataType" value="Int16" />
+                              <property name="Output List.[2]" value="od.Discount" />
                               <property name="Output List.[2].Table" value="od" />
-                              <property name="Output List.[2].Column" value="Quantity" />
-                              <property name="Output List.[2].DataType" value="Int16" />
-                              <property name="Output List.[3]" value="od.Discount" />
-                              <property name="Output List.[3].Table" value="od" />
-                              <property name="Output List.[3].Column" value="Discount" />
-                              <property name="Output List.[3].DataType" value="Single" />
+                              <property name="Output List.[2].Column" value="Discount" />
+                              <property name="Output List.[2].DataType" value="Single" />
+                              <property name="Output List.[3]" value="c.ContactName" />
+                              <property name="Output List.[3].Table" value="c" />
+                              <property name="Output List.[3].Column" value="ContactName" />
+                              <property name="Output List.[3].DataType" value="String" />
                               <property name="Statistics.Open Count" value="1" />
                               <property name="Statistics.Row Count" value="2,155" />
                               <property name="Statistics.Average Row Count" value="2,155" />
@@ -198,60 +198,93 @@ ORDER	BY SUM(od.Quantity * UnitPrice * (1.0 - od.Discount)) DESC</sql>
                             <input>
                               <element operator="HashMatch">
                                 <properties>
-                                  <property name="Output List.[0]" value="c.ContactName" />
-                                  <property name="Output List.[0].Table" value="c" />
-                                  <property name="Output List.[0].Column" value="ContactName" />
-                                  <property name="Output List.[0].DataType" value="String" />
-                                  <property name="Output List.[1]" value="od.UnitPrice" />
+                                  <property name="Output List.[0]" value="od.UnitPrice" />
+                                  <property name="Output List.[0].Table" value="od" />
+                                  <property name="Output List.[0].Column" value="UnitPrice" />
+                                  <property name="Output List.[0].DataType" value="Decimal" />
+                                  <property name="Output List.[1]" value="od.Quantity" />
                                   <property name="Output List.[1].Table" value="od" />
-                                  <property name="Output List.[1].Column" value="UnitPrice" />
-                                  <property name="Output List.[1].DataType" value="Decimal" />
-                                  <property name="Output List.[2]" value="od.Quantity" />
+                                  <property name="Output List.[1].Column" value="Quantity" />
+                                  <property name="Output List.[1].DataType" value="Int16" />
+                                  <property name="Output List.[2]" value="od.Discount" />
                                   <property name="Output List.[2].Table" value="od" />
-                                  <property name="Output List.[2].Column" value="Quantity" />
-                                  <property name="Output List.[2].DataType" value="Int16" />
-                                  <property name="Output List.[3]" value="od.Discount" />
-                                  <property name="Output List.[3].Table" value="od" />
-                                  <property name="Output List.[3].Column" value="Discount" />
-                                  <property name="Output List.[3].DataType" value="Single" />
+                                  <property name="Output List.[2].Column" value="Discount" />
+                                  <property name="Output List.[2].DataType" value="Single" />
+                                  <property name="Output List.[3]" value="c.ContactName" />
+                                  <property name="Output List.[3].Table" value="c" />
+                                  <property name="Output List.[3].Column" value="ContactName" />
+                                  <property name="Output List.[3].DataType" value="String" />
                                   <property name="Statistics.Open Count" value="1" />
                                   <property name="Statistics.Row Count" value="2,155" />
                                   <property name="Statistics.Average Row Count" value="2,155" />
-                                  <property name="Hash Keys Build" value="o.OrderID" />
+                                  <property name="Hash Keys Build" value="o.CustomerID" />
                                   <property name="Hash Keys Build.Table" value="o" />
-                                  <property name="Hash Keys Build.Column" value="OrderID" />
-                                  <property name="Hash Keys Build.DataType" value="Int32" />
-                                  <property name="Hash Keys Probe" value="od.OrderID" />
-                                  <property name="Hash Keys Probe.Table" value="od" />
-                                  <property name="Hash Keys Probe.Column" value="OrderID" />
-                                  <property name="Hash Keys Probe.DataType" value="Int32" />
+                                  <property name="Hash Keys Build.Column" value="CustomerID" />
+                                  <property name="Hash Keys Build.DataType" value="String" />
+                                  <property name="Hash Keys Probe" value="c.CustomerID" />
+                                  <property name="Hash Keys Probe.Table" value="c" />
+                                  <property name="Hash Keys Probe.Column" value="CustomerID" />
+                                  <property name="Hash Keys Probe.DataType" value="String" />
                                   <property name="Logical Operator" value="Inner Join" />
                                 </properties>
                                 <input>
                                   <element operator="HashMatch">
                                     <properties>
-                                      <property name="Output List.[0]" value="o.OrderID" />
-                                      <property name="Output List.[0].Table" value="o" />
-                                      <property name="Output List.[0].Column" value="OrderID" />
-                                      <property name="Output List.[0].DataType" value="Int32" />
-                                      <property name="Output List.[1]" value="c.ContactName" />
-                                      <property name="Output List.[1].Table" value="c" />
-                                      <property name="Output List.[1].Column" value="ContactName" />
-                                      <property name="Output List.[1].DataType" value="String" />
+                                      <property name="Output List.[0]" value="od.UnitPrice" />
+                                      <property name="Output List.[0].Table" value="od" />
+                                      <property name="Output List.[0].Column" value="UnitPrice" />
+                                      <property name="Output List.[0].DataType" value="Decimal" />
+                                      <property name="Output List.[1]" value="od.Quantity" />
+                                      <property name="Output List.[1].Table" value="od" />
+                                      <property name="Output List.[1].Column" value="Quantity" />
+                                      <property name="Output List.[1].DataType" value="Int16" />
+                                      <property name="Output List.[2]" value="od.Discount" />
+                                      <property name="Output List.[2].Table" value="od" />
+                                      <property name="Output List.[2].Column" value="Discount" />
+                                      <property name="Output List.[2].DataType" value="Single" />
+                                      <property name="Output List.[3]" value="o.CustomerID" />
+                                      <property name="Output List.[3].Table" value="o" />
+                                      <property name="Output List.[3].Column" value="CustomerID" />
+                                      <property name="Output List.[3].DataType" value="String" />
                                       <property name="Statistics.Open Count" value="1" />
-                                      <property name="Statistics.Row Count" value="830" />
-                                      <property name="Statistics.Average Row Count" value="830" />
-                                      <property name="Hash Keys Build" value="o.CustomerID" />
-                                      <property name="Hash Keys Build.Table" value="o" />
-                                      <property name="Hash Keys Build.Column" value="CustomerID" />
-                                      <property name="Hash Keys Build.DataType" value="String" />
-                                      <property name="Hash Keys Probe" value="c.CustomerID" />
-                                      <property name="Hash Keys Probe.Table" value="c" />
-                                      <property name="Hash Keys Probe.Column" value="CustomerID" />
-                                      <property name="Hash Keys Probe.DataType" value="String" />
+                                      <property name="Statistics.Row Count" value="2,155" />
+                                      <property name="Statistics.Average Row Count" value="2,155" />
+                                      <property name="Hash Keys Build" value="od.OrderID" />
+                                      <property name="Hash Keys Build.Table" value="od" />
+                                      <property name="Hash Keys Build.Column" value="OrderID" />
+                                      <property name="Hash Keys Build.DataType" value="Int32" />
+                                      <property name="Hash Keys Probe" value="o.OrderID" />
+                                      <property name="Hash Keys Probe.Table" value="o" />
+                                      <property name="Hash Keys Probe.Column" value="OrderID" />
+                                      <property name="Hash Keys Probe.DataType" value="Int32" />
                                       <property name="Logical Operator" value="Inner Join" />
                                     </properties>
                                     <input>
+                                      <element operator="TableScan">
+                                        <properties>
+                                          <property name="Table" value="Order Details AS od" />
+                                          <property name="Output List.[0]" value="od.OrderID" />
+                                          <property name="Output List.[0].Table" value="od" />
+                                          <property name="Output List.[0].Column" value="OrderID" />
+                                          <property name="Output List.[0].DataType" value="Int32" />
+                                          <property name="Output List.[1]" value="od.UnitPrice" />
+                                          <property name="Output List.[1].Table" value="od" />
+                                          <property name="Output List.[1].Column" value="UnitPrice" />
+                                          <property name="Output List.[1].DataType" value="Decimal" />
+                                          <property name="Output List.[2]" value="od.Quantity" />
+                                          <property name="Output List.[2].Table" value="od" />
+                                          <property name="Output List.[2].Column" value="Quantity" />
+                                          <property name="Output List.[2].DataType" value="Int16" />
+                                          <property name="Output List.[3]" value="od.Discount" />
+                                          <property name="Output List.[3].Table" value="od" />
+                                          <property name="Output List.[3].Column" value="Discount" />
+                                          <property name="Output List.[3].DataType" value="Single" />
+                                          <property name="Statistics.Open Count" value="1" />
+                                          <property name="Statistics.Row Count" value="2,155" />
+                                          <property name="Statistics.Average Row Count" value="2,155" />
+                                        </properties>
+                                        <input />
+                                      </element>
                                       <element operator="TableScan">
                                         <properties>
                                           <property name="Table" value="Orders AS o" />
@@ -269,47 +302,22 @@ ORDER	BY SUM(od.Quantity * UnitPrice * (1.0 - od.Discount)) DESC</sql>
                                         </properties>
                                         <input />
                                       </element>
-                                      <element operator="TableScan">
-                                        <properties>
-                                          <property name="Table" value="Customers AS c" />
-                                          <property name="Output List.[0]" value="c.CustomerID" />
-                                          <property name="Output List.[0].Table" value="c" />
-                                          <property name="Output List.[0].Column" value="CustomerID" />
-                                          <property name="Output List.[0].DataType" value="String" />
-                                          <property name="Output List.[1]" value="c.ContactName" />
-                                          <property name="Output List.[1].Table" value="c" />
-                                          <property name="Output List.[1].Column" value="ContactName" />
-                                          <property name="Output List.[1].DataType" value="String" />
-                                          <property name="Statistics.Open Count" value="1" />
-                                          <property name="Statistics.Row Count" value="91" />
-                                          <property name="Statistics.Average Row Count" value="91" />
-                                        </properties>
-                                        <input />
-                                      </element>
                                     </input>
                                   </element>
                                   <element operator="TableScan">
                                     <properties>
-                                      <property name="Table" value="Order Details AS od" />
-                                      <property name="Output List.[0]" value="od.OrderID" />
-                                      <property name="Output List.[0].Table" value="od" />
-                                      <property name="Output List.[0].Column" value="OrderID" />
-                                      <property name="Output List.[0].DataType" value="Int32" />
-                                      <property name="Output List.[1]" value="od.UnitPrice" />
-                                      <property name="Output List.[1].Table" value="od" />
-                                      <property name="Output List.[1].Column" value="UnitPrice" />
-                                      <property name="Output List.[1].DataType" value="Decimal" />
-                                      <property name="Output List.[2]" value="od.Quantity" />
-                                      <property name="Output List.[2].Table" value="od" />
-                                      <property name="Output List.[2].Column" value="Quantity" />
-                                      <property name="Output List.[2].DataType" value="Int16" />
-                                      <property name="Output List.[3]" value="od.Discount" />
-                                      <property name="Output List.[3].Table" value="od" />
-                                      <property name="Output List.[3].Column" value="Discount" />
-                                      <property name="Output List.[3].DataType" value="Single" />
+                                      <property name="Table" value="Customers AS c" />
+                                      <property name="Output List.[0]" value="c.CustomerID" />
+                                      <property name="Output List.[0].Table" value="c" />
+                                      <property name="Output List.[0].Column" value="CustomerID" />
+                                      <property name="Output List.[0].DataType" value="String" />
+                                      <property name="Output List.[1]" value="c.ContactName" />
+                                      <property name="Output List.[1].Table" value="c" />
+                                      <property name="Output List.[1].Column" value="ContactName" />
+                                      <property name="Output List.[1].DataType" value="String" />
                                       <property name="Statistics.Open Count" value="1" />
-                                      <property name="Statistics.Row Count" value="2,155" />
-                                      <property name="Statistics.Average Row Count" value="2,155" />
+                                      <property name="Statistics.Row Count" value="91" />
+                                      <property name="Statistics.Average Row Count" value="91" />
                                     </properties>
                                     <input />
                                   </element>

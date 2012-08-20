@@ -35,7 +35,7 @@ ORDER	BY 1 DESC</sql>
     <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
-          <xs:element name="Table1">
+          <xs:element name="Table1" msdata:Locale="en-US">
             <xs:complexType>
               <xs:sequence>
                 <xs:element name="Check" type="xs:string" minOccurs="0" />
@@ -392,7 +392,7 @@ ORDER	BY 1 DESC</sql>
                       <property name="Output List.[0].Column" value="OrderDate" />
                       <property name="Output List.[0].DataType" value="DateTime" />
                       <property name="Statistics.Open Count" value="11" />
-                      <property name="Statistics.Row Count" value="7,355" />
+                      <property name="Statistics.Row Count" value="7,360" />
                       <property name="Statistics.Average Row Count" value="669" />
                     </properties>
                     <input />

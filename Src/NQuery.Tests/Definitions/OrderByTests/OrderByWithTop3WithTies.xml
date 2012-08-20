@@ -12,7 +12,7 @@ ORDER	BY COUNT(*) DESC</sql>
     <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
       <xs:complexType>
         <xs:choice minOccurs="0" maxOccurs="unbounded">
-          <xs:element name="Table1">
+          <xs:element name="Table1" msdata:Locale="en-US">
             <xs:complexType>
               <xs:sequence>
                 <xs:element name="Employee" type="xs:string" minOccurs="0" />
@@ -29,7 +29,7 @@ ORDER	BY COUNT(*) DESC</sql>
     <Territory_x0020_Count>10</Territory_x0020_Count>
   </Table1>
   <Table1>
-    <Employee>Steven Buchanan</Employee>
+    <Employee>Andrew Fuller</Employee>
     <Territory_x0020_Count>7</Territory_x0020_Count>
   </Table1>
   <Table1>
@@ -37,7 +37,7 @@ ORDER	BY COUNT(*) DESC</sql>
     <Territory_x0020_Count>7</Territory_x0020_Count>
   </Table1>
   <Table1>
-    <Employee>Andrew Fuller</Employee>
+    <Employee>Steven Buchanan</Employee>
     <Territory_x0020_Count>7</Territory_x0020_Count>
   </Table1>
 </NewDataSet>
@@ -46,8 +46,8 @@ ORDER	BY COUNT(*) DESC</sql>
     <executionPlan>
       <element operator="Select">
         <properties>
-          <property name="Output List.[0]" value="Expr1003 AS Employee" />
-          <property name="Output List.[0].Column" value="Expr1003" />
+          <property name="Output List.[0]" value="Expr1004 AS Employee" />
+          <property name="Output List.[0].Column" value="Expr1004" />
           <property name="Output List.[0].DataType" value="String" />
           <property name="Output List.[0].Output Name" value="Employee" />
           <property name="Output List.[1]" value="Expr1005 AS Territory Count" />
@@ -58,8 +58,8 @@ ORDER	BY COUNT(*) DESC</sql>
         <input>
           <element operator="Top">
             <properties>
-              <property name="Output List.[0]" value="Expr1003" />
-              <property name="Output List.[0].Column" value="Expr1003" />
+              <property name="Output List.[0]" value="Expr1004" />
+              <property name="Output List.[0].Column" value="Expr1004" />
               <property name="Output List.[0].DataType" value="String" />
               <property name="Output List.[1]" value="Expr1005" />
               <property name="Output List.[1].Column" value="Expr1005" />
@@ -76,8 +76,8 @@ ORDER	BY COUNT(*) DESC</sql>
             <input>
               <element operator="Sort">
                 <properties>
-                  <property name="Output List.[0]" value="Expr1003" />
-                  <property name="Output List.[0].Column" value="Expr1003" />
+                  <property name="Output List.[0]" value="Expr1004" />
+                  <property name="Output List.[0].Column" value="Expr1004" />
                   <property name="Output List.[0].DataType" value="String" />
                   <property name="Output List.[1]" value="Expr1005" />
                   <property name="Output List.[1].Column" value="Expr1005" />
@@ -94,8 +94,8 @@ ORDER	BY COUNT(*) DESC</sql>
                 <input>
                   <element operator="StreamAggregate">
                     <properties>
-                      <property name="Output List.[0]" value="Expr1003" />
-                      <property name="Output List.[0].Column" value="Expr1003" />
+                      <property name="Output List.[0]" value="Expr1004" />
+                      <property name="Output List.[0].Column" value="Expr1004" />
                       <property name="Output List.[0].DataType" value="String" />
                       <property name="Output List.[1]" value="Expr1005" />
                       <property name="Output List.[1].Column" value="Expr1005" />
@@ -107,59 +107,72 @@ ORDER	BY COUNT(*) DESC</sql>
                       <property name="Defined Values.[0].Target" value="Expr1005" />
                       <property name="Defined Values.[0].DataType" value="Int32" />
                       <property name="Defined Values.[0].Source" value="COUNT(0)" />
-                      <property name="Group By.[0]" value="Expr1003" />
-                      <property name="Group By.[0].Column" value="Expr1003" />
+                      <property name="Group By.[0]" value="Expr1004" />
+                      <property name="Group By.[0].Column" value="Expr1004" />
                       <property name="Group By.[0].DataType" value="String" />
                     </properties>
                     <input>
                       <element operator="Sort">
                         <properties>
-                          <property name="Output List.[0]" value="Expr1003" />
-                          <property name="Output List.[0].Column" value="Expr1003" />
+                          <property name="Output List.[0]" value="Expr1004" />
+                          <property name="Output List.[0].Column" value="Expr1004" />
                           <property name="Output List.[0].DataType" value="String" />
                           <property name="Statistics.Open Count" value="1" />
                           <property name="Statistics.Row Count" value="49" />
                           <property name="Statistics.Average Row Count" value="49" />
                           <property name="Logical Operator" value="Sort" />
-                          <property name="Order By.[0]" value="Expr1003 ASC" />
-                          <property name="Order By.[0].Column" value="Expr1003" />
+                          <property name="Order By.[0]" value="Expr1004 ASC" />
+                          <property name="Order By.[0].Column" value="Expr1004" />
                           <property name="Order By.[0].DataType" value="String" />
                           <property name="Order By.[0].Order" value="ASC" />
                         </properties>
                         <input>
                           <element operator="HashMatch">
                             <properties>
-                              <property name="Output List.[0]" value="Expr1003" />
-                              <property name="Output List.[0].Column" value="Expr1003" />
+                              <property name="Output List.[0]" value="Expr1004" />
+                              <property name="Output List.[0].Column" value="Expr1004" />
                               <property name="Output List.[0].DataType" value="String" />
                               <property name="Statistics.Open Count" value="1" />
                               <property name="Statistics.Row Count" value="49" />
                               <property name="Statistics.Average Row Count" value="49" />
-                              <property name="Hash Keys Build" value="e.EmployeeID" />
-                              <property name="Hash Keys Build.Table" value="e" />
+                              <property name="Hash Keys Build" value="et.EmployeeID" />
+                              <property name="Hash Keys Build.Table" value="et" />
                               <property name="Hash Keys Build.Column" value="EmployeeID" />
                               <property name="Hash Keys Build.DataType" value="Int32" />
-                              <property name="Hash Keys Probe" value="et.EmployeeID" />
-                              <property name="Hash Keys Probe.Table" value="et" />
+                              <property name="Hash Keys Probe" value="e.EmployeeID" />
+                              <property name="Hash Keys Probe.Table" value="e" />
                               <property name="Hash Keys Probe.Column" value="EmployeeID" />
                               <property name="Hash Keys Probe.DataType" value="Int32" />
                               <property name="Logical Operator" value="Inner Join" />
                             </properties>
                             <input>
+                              <element operator="TableScan">
+                                <properties>
+                                  <property name="Table" value="EmployeeTerritories AS et" />
+                                  <property name="Output List.[0]" value="et.EmployeeID" />
+                                  <property name="Output List.[0].Table" value="et" />
+                                  <property name="Output List.[0].Column" value="EmployeeID" />
+                                  <property name="Output List.[0].DataType" value="Int32" />
+                                  <property name="Statistics.Open Count" value="1" />
+                                  <property name="Statistics.Row Count" value="49" />
+                                  <property name="Statistics.Average Row Count" value="49" />
+                                </properties>
+                                <input />
+                              </element>
                               <element operator="ComputeScalar">
                                 <properties>
                                   <property name="Output List.[0]" value="e.EmployeeID" />
                                   <property name="Output List.[0].Table" value="e" />
                                   <property name="Output List.[0].Column" value="EmployeeID" />
                                   <property name="Output List.[0].DataType" value="Int32" />
-                                  <property name="Output List.[1]" value="Expr1003" />
-                                  <property name="Output List.[1].Column" value="Expr1003" />
+                                  <property name="Output List.[1]" value="Expr1004" />
+                                  <property name="Output List.[1].Column" value="Expr1004" />
                                   <property name="Output List.[1].DataType" value="String" />
                                   <property name="Statistics.Open Count" value="1" />
                                   <property name="Statistics.Row Count" value="9" />
                                   <property name="Statistics.Average Row Count" value="9" />
-                                  <property name="Defined Values.[0]" value="Expr1003 = e.FirstName + ' ' + e.LastName" />
-                                  <property name="Defined Values.[0].Target" value="Expr1003" />
+                                  <property name="Defined Values.[0]" value="Expr1004 = e.FirstName + ' ' + e.LastName" />
+                                  <property name="Defined Values.[0].Target" value="Expr1004" />
                                   <property name="Defined Values.[0].DataType" value="String" />
                                   <property name="Defined Values.[0].Source" value="e.FirstName + ' ' + e.LastName" />
                                 </properties>
@@ -186,19 +199,6 @@ ORDER	BY COUNT(*) DESC</sql>
                                     <input />
                                   </element>
                                 </input>
-                              </element>
-                              <element operator="TableScan">
-                                <properties>
-                                  <property name="Table" value="EmployeeTerritories AS et" />
-                                  <property name="Output List.[0]" value="et.EmployeeID" />
-                                  <property name="Output List.[0].Table" value="et" />
-                                  <property name="Output List.[0].Column" value="EmployeeID" />
-                                  <property name="Output List.[0].DataType" value="Int32" />
-                                  <property name="Statistics.Open Count" value="1" />
-                                  <property name="Statistics.Row Count" value="49" />
-                                  <property name="Statistics.Average Row Count" value="49" />
-                                </properties>
-                                <input />
                               </element>
                             </input>
                           </element>
