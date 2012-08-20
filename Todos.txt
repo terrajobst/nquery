@@ -1,5 +1,8 @@
-- Forward integrated changes to language branch.
-- Create new NQuery release.
-- Review XSD Doc build and check how we can further simplify the build process in NQuery.
+- Ensure setup works
+- Ensure documentation works
+- Create a .nuget package for NQuery
+- Create a .nuget package for NQuery.UI
+- Create a .nuget package for NQuery.UI.Actipro
+- Drop source and symbols to http://www.symbolsource.org
+
 - Ensure all resource images are links to the icon folder.
-- Manually merge all language stuff to new branch. Be careful not to destroy any bug fixes.
