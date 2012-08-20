@@ -1,8 +1,4 @@
-- Ensure setup works
-- Ensure documentation works
-- Create a .nuget package for NQuery
-- Create a .nuget package for NQuery.UI
-- Create a .nuget package for NQuery.UI.Actipro
-- Drop source and symbols to http://www.symbolsource.org
-
+- Make sure all tests pass
+- Ensure demo app is properly licensed
+- Ensure packages work
 - Ensure all resource images are links to the icon folder.
