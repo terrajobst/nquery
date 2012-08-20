@@ -1,4 +1,6 @@
-- Make sure all tests pass
 - Ensure demo app is properly licensed
 - Ensure packages work
 - Ensure all resource images are links to the icon folder.
+- Ensure no API changes
+- Ensure dropped sources are clean
+- Change copyright in help file to "NQuery <Vesrsion> (c) Immo Landwerth"
