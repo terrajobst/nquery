@@ -299,7 +299,7 @@
       <_Packages Include="$(SourceDir)*.nuspec" />
     </ItemGroup>
     <NuGetPack Package="%(_Packages.Identity)"
-               Version="0.9.4-hotel"
+               Version="0.9.5-beta"
                BasePath="$(OutputDir)"
                OutputDirectory="$(OutputDir)Packages"
                Symbols="True" />
