@@ -35,7 +35,7 @@
       </Link>
     </Compile>
     <Compile Include="Demo.wxs" />
-    <Compile Include="HelpCHM.wxs" />
+    <Compile Include="Help.wxs" />
     <Compile Include="Product.wxs" />
     <Compile Include="Samples.wxs">
       <Link>

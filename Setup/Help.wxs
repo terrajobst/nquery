@@ -9,8 +9,8 @@
 		</DirectoryRef>
 
 		<Feature Id="HelpCHM" Level="1" AllowAdvertise="no"
-				 Title="Help (Local)"
-				 Description="Installs a simple CHM file that can be browsed without Visual Studio.">
+				 Title="Help"
+				 Description="Installs a CHM-based help file that can be browsed without Visual Studio.">
 			<ComponentRef Id="NQuery.chm"/>
 		</Feature>
 	</Fragment>
