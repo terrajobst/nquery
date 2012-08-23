@@ -52,6 +52,7 @@
     </Compile>
     <Compile Include="Tasks\ApplyXslTransform.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\GetFileVersionInfo.cs" />
     <Compile Include="Tasks\NuGetPack.cs" />
     <Compile Include="Tasks\RegexReplaceInFiles.cs" />
     <Compile Include="Tasks\RunSampleCode.cs" />

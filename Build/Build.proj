@@ -30,6 +30,7 @@
   <UsingTask AssemblyFile="$(CustomTasksDir)NQuery.Build.dll" TaskName="NQuery.Build.RegexReplaceInFiles" />
   <UsingTask AssemblyFile="$(CustomTasksDir)NQuery.Build.dll" TaskName="NQuery.Build.RunSampleCode" />
   <UsingTask AssemblyFile="$(CustomTasksDir)NQuery.Build.dll" TaskName="NQuery.Build.NuGetPack" />
+  <UsingTask AssemblyFile="$(CustomTasksDir)NQuery.Build.dll" TaskName="NQuery.Build.GetFileVersionInfo" />
 
   <!-- Project Files -->
 
@@ -241,7 +242,22 @@
 
   </Target>
 
-  <Target Name="GenerateHelp" DependsOnTargets="Compile;GenerateAdditionalContent">
+  <!-- Get Version -->
+
+  <Target Name="GetVersion" DependsOnTargets="CompileCustomBuildTasks">
+
+    <GetFileVersionInfo File="$(GeneratedBinaries)NQuery.dll">
+      <Output TaskParameter="FileVersion"
+              PropertyName="NQueryVersion" />
+      <Output TaskParameter="LegalCopyright"
+              PropertyName="NQueryCopyright"/>
+    </GetFileVersionInfo>
+
+  </Target>
+
+  <!-- Generate Help -->
+
+  <Target Name="GenerateHelp" DependsOnTargets="Compile;GetVersion;GenerateAdditionalContent">
   
     <Error Text="Documentation can only be generated for release builds."
            Condition="'$(Configuration)' != 'Release'" />
@@ -256,9 +272,9 @@
 
     <Copy SourceFiles="$(HelpDir)Help.shfbproj"
           DestinationFolder="$(GeneratedHelpTopics)" />
-    
+
     <MSBuild Projects="$(GeneratedHelpTopics)Help.shfbproj"
-             Properties="OutputPath=$(GeneratedHelp)" />
+             Properties="OutputPath=$(GeneratedHelp);HelpFileVersion=$(NQueryVersion);CopyrightText=[$(NQueryVersion)] $(NQueryCopyright)" />
 
     <Copy SourceFiles="@(HtmlHelp2TemplateFiles)"
           DestinationFolder="$(GeneratedHelp)" />

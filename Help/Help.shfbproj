@@ -32,7 +32,7 @@
     <RootNamespaceContainer>True</RootNamespaceContainer>
     <RootNamespaceTitle>Class Library Reference</RootNamespaceTitle>
     <HelpTitle>NQuery Documentation</HelpTitle>
-    <CopyrightText>Copyright &amp;#169%3b 2005 - 2009 by Immo Landwerth</CopyrightText>
+    <CopyrightText>Copyright &amp;#169%3b Immo Landwerth</CopyrightText>
     <FeedbackEMailAddress>terrajobst%40web.de</FeedbackEMailAddress>
     <FeedbackEMailLinkText>Immo Landwerth</FeedbackEMailLinkText>
     <WebsiteSdkLinkType>None</WebsiteSdkLinkType>

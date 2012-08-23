@@ -1,4 +1,3 @@
 - Ensure packages work
 - Ensure all resource images are links to the icon folder.
 - Ensure dropped sources are clean
-- Change copyright in help file to "NQuery <Vesrsion> (c) Immo Landwerth"
