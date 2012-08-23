@@ -296,7 +296,7 @@
 
     <MakeDir Directories="$(OutputDir)Packages" />
     <ItemGroup>
-      <_Packages Include="$(SourceDir)*.nuspec" />
+      <_Packages Include="$(SourceDir)NuGet\*.nuspec" />
     </ItemGroup>
     <NuGetPack Package="%(_Packages.Identity)"
                Version="0.9.5-beta"
