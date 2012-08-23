@@ -1,6 +1,5 @@
-
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensibility", "Extensibility", "{CD226777-DBE5-46EE-A88F-1D330AC89DCD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Quick Starts", "Quick Starts", "{D8308D52-FAE1-4D6E-9994-8AB49CC646CF}"
