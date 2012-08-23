@@ -289,11 +289,11 @@
 
     <ItemGroup>
       <SourceCodeFiles Include="$(ProjectDir)**\*.*"
-                       Exclude="$(ProjectDir).hg\**\*.*;
-                                $(ProjectDir).hg*;
-                                $(OutputDir)**\*.*;
-                                $(TestResultsDir)**\*.*;
-                                $(CustomTasksDir)**\*.*;
+                       Exclude="$(OutputDir)**\*.*;
+                                $(ProjectDir).hg\**\*.*;
+                                $(ProjectDir)**\.hg*;
+                                $(ProjectDir)**\CustomTasks\**\*.*;
+                                $(ProjectDir)**\TestResults\**\*.*;
                                 $(ProjectDir)**\bin\**\*.*;
                                 $(ProjectDir)**\obj\**\*.*;
                                 $(ProjectDir)**\*.suo;
