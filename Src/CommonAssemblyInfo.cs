@@ -2,7 +2,7 @@ using System;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly : AssemblyCopyright("Copyright © 2005 - 2012 by Immo Landwerth")]
+[assembly : AssemblyCopyright("Copyright © Immo Landwerth")]
 [assembly : AssemblyCompany("NQuery")]
 [assembly : AssemblyProduct("NQuery")]
 
